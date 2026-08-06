@@ -2,9 +2,13 @@
 
 Via Github pages, this repo serves the manually collected candidate data for the Ontario municipalities being studied in the CMB's 2026 Ontario municipal election study.
 
-`header.html`: The Qualtrics header ("Survey" -> "Look and Feel" -> "General" -> "Header")
+## Branches
 
-- Paste this in as plain text: "Edit" -> Source button: "<>"
+`main` is the production branch used to publish to Github Pages.
+
+`dev` is used to track development before a change is ready to be put into production.
+
+## Key Files and Locations
 
 `data/candidate-data-versions/`: The candidate data that is loaded via the header from this repository's Github pages.
 
