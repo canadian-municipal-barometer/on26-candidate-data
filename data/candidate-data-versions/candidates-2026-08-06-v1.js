@@ -44,15 +44,15 @@ papastew,1,council,Edmonton,HILLMAN,Mark
 papastew,1,council,Edmonton,HOLGERSON,Terrie
 papastew,1,council,Edmonton,JANISZEWSKA,Rozalia
 papastew,1,council,Edmonton,JANZ,Michael
-O-day'min,1,council,Edmonton,AARON,David
-O-day'min,1,council,Edmonton,HAMMERSCHMIDT,Stephen
-O-day'min,1,council,Edmonton,MILLER,James
-O-day'min,1,council,Edmonton,PERMANN,Lee
-O-day'min,1,council,Edmonton,PIRBHAI,Adil
-O-day'min,1,council,Edmonton,PYE,Anand Benjamin
-O-day'min,1,council,Edmonton,STEVENSON,Anne
-O-day'min,1,council,Edmonton,STEWART,Patrick
-O-day'min,1,council,Edmonton,TESFAY,Mulugeta (Mully)
+O-day\'min,1,council,Edmonton,AARON,David
+O-day\'min,1,council,Edmonton,HAMMERSCHMIDT,Stephen
+O-day\'min,1,council,Edmonton,MILLER,James
+O-day\'min,1,council,Edmonton,PERMANN,Lee
+O-day\'min,1,council,Edmonton,PIRBHAI,Adil
+O-day\'min,1,council,Edmonton,PYE,Anand Benjamin
+O-day\'min,1,council,Edmonton,STEVENSON,Anne
+O-day\'min,1,council,Edmonton,STEWART,Patrick
+O-day\'min,1,council,Edmonton,TESFAY,Mulugeta \\(Mully\\)
 Nakota Isga,1,council,Edmonton,CLARKE,Reed
 Nakota Isga,1,council,Edmonton,GOCUAN,Nicky
 Nakota Isga,1,council,Edmonton,MAGGAY,Rajah
@@ -132,7 +132,7 @@ Métis,1,council,Edmonton,THOMAS,Justin
 99,8,council,Medicine Hat,COCKS,Bill
 99,8,council,Medicine Hat,COWAN,Gordon Edward
 99,8,council,Medicine Hat,DUMANOWSKI,Robert
-99,8,council,Medicine Hat,ELLIS,Christien (C.K.)
+99,8,council,Medicine Hat,ELLIS,Christien \\(C.K.\\)
 99,8,council,Medicine Hat,FAITH,Jodi
 99,8,council,Medicine Hat,FEDORUK,Don
 99,8,council,Medicine Hat,FODE,Ron
@@ -165,7 +165,7 @@ Métis,1,council,Edmonton,THOMAS,Justin
 99,1,mayor,Medicine Hat,BARNES,Drew Allan Roy
 99,1,mayor,Medicine Hat,CLARK,Linnsie
 99,1,mayor,Medicine Hat,FISHER,Mark
-99,1,mayor,Medicine Hat,MCGROGAN,Thomas Andrew (Andy)
+99,1,mayor,Medicine Hat,MCGROGAN,Thomas Andrew \\(Andy\\)
 99,1,mayor,Medicine Hat,ROSE,Alan
 99,1,mayor,Medicine Hat,SAMRAJ,Kris
 99,1,mayor,Lethbridge,CARLSON,Quentin
@@ -181,7 +181,7 @@ Métis,1,council,Edmonton,THOMAS,Justin
 99,8,council,Lethbridge,DORIA,Rufa
 99,8,council,Lethbridge,JAMES,Robin
 99,8,council,Lethbridge,LEGGE,Tevi
-99,8,council,Lethbridge,MATULIC,Margaret (Magie)
+99,8,council,Lethbridge,MATULIC,Margaret \\(Magie\\)
 99,8,council,Lethbridge,MIDDLETON-HOPE,John
 99,8,council,Lethbridge,PARKER,Ryan
 99,8,council,Lethbridge,ROULSTON,Tom
@@ -244,7 +244,7 @@ Métis,1,council,Edmonton,THOMAS,Justin
 2,2,council,Wood Buffalo,CARDINAL,Kendrick
 2,2,council,Wood Buffalo,GIRARD,Kurtis
 2,2,council,Wood Buffalo,KASKAMIN,Russell
-2,2,council,Wood Buffalo,MARCEL,Greg (Cowboy)
+2,2,council,Wood Buffalo,MARCEL,Greg \\(Cowboy\\)
 2,2,council,Wood Buffalo,QUINTAL,Ron
 2,2,council,Wood Buffalo,VOYAGEUR,Claris
 3,1,council,Wood Buffalo,HOLLANDS,Sarah
@@ -264,7 +264,7 @@ Métis,1,council,Edmonton,THOMAS,Justin
 99,6,council,Spruce Grove,BOROS,Joseph
 99,6,council,Spruce Grove,MASTALER,Brad
 1,1,council,Calgary,FRITZ,Matthew
-1,1,council,Calgary,JACOBS,Cathy (Angel)
+1,1,council,Calgary,JACOBS,Cathy \\(Angel\\)
 1,1,council,Calgary,NOWAK,Joey
 1,1,council,Calgary,OLESEN,Dan
 1,1,council,Calgary,OONWALA,Ali
@@ -282,13 +282,13 @@ Métis,1,council,Edmonton,THOMAS,Justin
 3,1,council,Calgary,NG,Danny
 3,1,council,Calgary,SHAH,Siraaj
 3,1,council,Calgary,YULE,Andrew
-4,1,council,Calgary,KELLY,Daniel James (DJ)
+4,1,council,Calgary,KELLY,Daniel James \\(DJ\\)
 4,1,council,Calgary,WONG,Jeremy
 4,1,council,Calgary,YAKIWCHUK,Sheldon
 5,1,council,Calgary,DHALIWAL,Raj
 5,1,council,Calgary,DHILLON,Gurpreet
 5,1,council,Calgary,KHAN,Tariq
-5,1,council,Calgary,MUSHIANA,Harneet (Reet)
+5,1,council,Calgary,MUSHIANA,Harneet \\(Reet\\)
 5,1,council,Calgary,PATEL,Jigar
 5,1,council,Calgary,PURBA,Harry Singh
 5,1,council,Calgary,SADAT,Aryan

@@ -71,6 +71,12 @@ if (is.na(version) || version == "") {
 
 csv <- readLines(csv_path, encoding = "UTF-8")
 
+# Escape characters that would otherwise be mangled downstream: parentheses get
+# a double backslash, apostrophes a single one.
+csv <- gsub("(", "\\\\(", csv, fixed = TRUE)
+csv <- gsub(")", "\\\\)", csv, fixed = TRUE)
+csv <- gsub("'", "\\'", csv, fixed = TRUE)
+
 out_path <- file.path(
   root,
   "data",
