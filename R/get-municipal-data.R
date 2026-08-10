@@ -167,13 +167,11 @@ if (length(missing_races) > 0 || length(extra_races) > 0) {
   )
 }
 
-# Integrity check: councillor seats implied by council-races.csv should equal
-# council_size - 1 (i.e. excluding the mayor) in the master list. Every known
-# deviation is listed here with its cause; anything else is a data error.
+# Integrity check: council seats implied by council-races.csv should equal
+# council_size - 1 (i.e. every seat but the mayor's) in the master list. Every
+# known deviation is listed here with its cause; anything else is a data error.
 seat_exceptions <- tibble::tribble(
   ~census_id, ~reason,
-  3543014, "Bradford West Gwillimbury: at-large deputy mayor, out of scope",
-  3543017, "Innisfil: at-large deputy mayor, out of scope",
   3530010, "Cambridge: 2 regional councillors sit on Region, not city council",
   3530013, "Kitchener: 4 regional councillors sit on Region, not city council",
   3530016, "Waterloo: 2 regional councillors sit on Region, not city council",
@@ -221,3 +219,65 @@ for (col in c("provider", "pop_2021")) {
 }
 
 readr::write_csv(final, notes("election-type-ward-type.csv"))
+
+# ---------------------------------------------------------------------------
+# Combined sheet
+# ---------------------------------------------------------------------------
+# One row per race, with the municipality's attributes repeated across every
+# row belonging to that municipality. Generated from `final` and `races`, so
+# it cannot drift from either.
+
+mun_cols <- c("provider", "pop_2021", "election_type", "ward_type",
+              "block_vote", "max_votes_max", "revised", "revision_source")
+race_cols <- c("office", "deputy_mayor", "district_scope", "districts",
+               "n_districts", "seats_per_district", "max_votes", "source_url")
+
+# csdname lives in both files; joining on census_id alone would silently accept
+# a disagreement between them, so check it rather than assume it.
+name_check <- races |>
+  distinct(census_id, race_name = csdname) |>
+  inner_join(select(final, census_id, main_name = csdname), by = "census_id") |>
+  filter(race_name != main_name)
+if (nrow(name_check) > 0) {
+  stop(
+    "csdname disagrees between council-races.csv and the municipality list for: ",
+    paste0(name_check$census_id, " ('", name_check$race_name, "' vs '",
+           name_check$main_name, "')", collapse = ", ")
+  )
+}
+
+combined <- races |>
+  select(census_id, csdname, all_of(race_cols)) |>
+  left_join(select(final, census_id, all_of(mun_cols)), by = "census_id") |>
+  # Municipalities in the same order as the main sheet; races keep their
+  # council-races.csv order within each (arrange is stable).
+  mutate(.csd = match(census_id, final$census_id)) |>
+  arrange(.csd) |>
+  select(-.csd) |>
+  relocate(all_of(mun_cols), .after = csdname)
+
+# Safety. Denormalising has two failure modes worth guarding: the join fanning
+# out or dropping rows, and the repeated municipality values disagreeing with
+# each other within a municipality. Both would be easy to miss by eye.
+if (nrow(combined) != nrow(races)) {
+  stop("Combined sheet has ", nrow(combined), " rows, expected ", nrow(races),
+       " (one per race). The join fanned out or dropped rows.")
+}
+
+back_race <- select(combined, census_id, csdname, all_of(race_cols))
+src_race <- select(races, census_id, csdname, all_of(race_cols))
+if (nrow(anti_join(back_race, src_race, by = names(back_race))) > 0) {
+  stop("Race columns in the combined sheet do not match council-races.csv.")
+}
+
+# Collapsing the repeated columns must give back exactly the 38-row sheet. If
+# the repetition were inconsistent anywhere, this would yield extra rows.
+back_mun <- combined |> select(census_id, all_of(mun_cols)) |> distinct()
+src_mun <- select(final, census_id, all_of(mun_cols))
+if (nrow(back_mun) != nrow(src_mun) ||
+      nrow(anti_join(back_mun, src_mun, by = names(back_mun))) > 0) {
+  stop("Municipality columns in the combined sheet do not collapse back to ",
+       "election-type-ward-type.csv; the repeated values disagree.")
+}
+
+readr::write_csv(combined, notes("municipal-election-structure.csv"))

@@ -13,12 +13,40 @@ script that reads and writes them at `R/get-municipal-data.R`.
 - **Usage:** `Rscript R/get-municipal-data.R`. Like `R/parse-js.R`, it locates the repo
   root from its own path, so it runs from any working directory.
 - `council-races.csv` and `classification-overrides.csv` are hand-maintained and never
-  generated. `election-type-ward-type.csv` **is** generated — do not hand-edit it; every
-  run overwrites it.
+  generated. `election-type-ward-type.csv` and `municipal-election-structure.csv` **are**
+  generated — do not hand-edit either; every run overwrites them.
 - The script reads one file from outside the repo: the master municipality list at
   `CMB Data/auxiliary-data/Master Municipality List/cmb_muns.csv`, by absolute path. It
   also reads the Google Sheet that selects which municipalities are in the study, so it
   needs `googlesheets4` auth.
+
+### The two generated outputs
+
+`election-type-ward-type.csv` — one row per municipality, 38 rows. The municipality-level
+summary.
+
+`municipal-election-structure.csv` — **everything in one sheet**: one row per race, 59 rows,
+with each municipality's attributes repeated across all of its rows. Municipality columns
+first (`census_id`, `csdname`, `provider`, `pop_2021`, `election_type`, `ward_type`,
+`block_vote`, `max_votes_max`, `revised`, `revision_source`), then the race columns
+(`office`, `deputy_mayor`, `district_scope`, `districts`, `n_districts`,
+`seats_per_district`, `max_votes`, `source_url`). Municipalities appear in the same order as
+the main sheet, and races keep their `council-races.csv` order within each.
+
+One row is one race, so the sheet is directly usable for analysis — group or filter on
+`census_id` to work at the municipality level. Remember that municipality-level values are
+**repeated, not per-race**: summing `pop_2021` over rows double-counts, and any
+municipality-level tally needs a `distinct()` or a `group_by(census_id) |> slice(1)` first.
+
+Repetition is the thing that can go wrong quietly, so the script asserts on every run:
+
+- exactly one row per race — catches a join that fanned out or dropped rows;
+- the race columns still match `council-races.csv` value for value;
+- collapsing the repeated municipality columns with `distinct()` gives back exactly the
+  38-row sheet — this is what catches repeated values disagreeing within a municipality,
+  which is the failure mode denormalising invites and the hardest to spot by eye;
+- `csdname` agrees between the two source files, since the join is on `census_id` alone and
+  would otherwise accept a silent disagreement.
 
 ### Columns in `election-type-ward-type.csv`, and where each comes from
 
@@ -85,19 +113,28 @@ districts overlap (Clarington), magnitude varies within a municipality (Chatham-
 Bay). Any such check would fire on all three without a real error. Instead
 `get-municipal-data.R` verifies that councillor seats implied by `council-races.csv` equal
 `council_size - 1` in the master list, which is unambiguous and catches the same class of
-typo. Seven municipalities deviate for known reasons and are listed as documented
-exceptions in the script — at-large deputy mayors (Bradford West Gwillimbury, Innisfil),
-regional councillors who sit on regional rather than city council (Cambridge, Kitchener,
-Waterloo), and stale `council_size` values (Chatham-Kent, Haldimand County).
+typo. Five municipalities deviate for known reasons and are listed as documented
+exceptions in the script — regional councillors who sit on regional rather than city
+council (Cambridge, Kitchener, Waterloo), and stale `council_size` values (Chatham-Kent,
+Haldimand County). Bradford West Gwillimbury and Innisfil were exceptions until their
+deputy mayor races were added; modelling those seats made both reconcile exactly.
 
 The same reasoning applies to Milton, Oakville, Oshawa, Pickering, Clarington and Ajax: all
 are genuinely multi-member in seats and genuinely vote-for-one on the ballot.
 
 ## Scope
 
-`council-races.csv` covers **councillor** offices only. Mayoral races and the separately
-elected at-large deputy mayor seats in Bradford West Gwillimbury and Innisfil are excluded:
-all are single-seat and would not change `block_vote` for any municipality.
+`council-races.csv` covers **every elected council seat except the mayor's**. That is one
+race per councillor office, plus the two directly elected deputy mayors. Mayoral races are
+excluded, which is what makes the seat check compare against `council_size - 1`.
+
+The `deputy_mayor` column flags those two rows. It is a real column rather than a
+string match on `office`, because matching on office names is fragile — an earlier
+`grepl("Regional|County")` filter silently missed Oakville, whose office is spelled
+"Councillor, Town and Region of Halton".
+
+Both deputy mayor races are single-seat, so they do not affect `block_vote` or
+`max_votes_max` for either municipality.
 
 Rows are collapsed across districts that share a structure, so Toronto is one row and
 Chatham-Kent is two. `n_districts` says how many districts a row covers.
@@ -309,8 +346,9 @@ explicitly for a separately elected upper-tier race:
   - *Aurora* — no separate seat; the mayor holds Aurora's York Region seat.
   - *Niagara Falls, St. Catharines* — abolished for 2026, see above.
   - *Bradford West Gwillimbury, Innisfil* — Simcoe County council is the mayors and deputy
-    mayors of its 16 member municipalities, ex officio. The deputy mayor is elected
-    at-large as a single seat, which is out of scope and would not change `block_vote`.
+    mayors of its 16 member municipalities, ex officio. There is no separate county
+    councillor race; the county seat is the directly elected deputy mayor, which is
+    recorded in `council-races.csv` with `deputy_mayor = TRUE`.
 - **Single-tier, no upper tier at all**: Barrie, Brantford, Chatham-Kent, Greater Sudbury,
   Guelph, Haldimand County, Hamilton, Kingston, London, Ottawa, Peterborough, Thunder Bay,
   Timmins, Toronto, Windsor.
