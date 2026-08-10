@@ -1,0 +1,58 @@
+census_id,csdname,provider,pop_2021,election_type,ward_type,block_vote,max_votes_max,revised,revision_source,office,deputy_mayor,district_scope,districts,n_districts,seats_per_district,max_votes,source_url
+3518005,Ajax,Leger,126666,Ward,MMD,FALSE,1,FALSE,,"Councillor, Regional",FALSE,Ward,Wards 1-3,3,1,1,https://elections.ajax.ca/voters
+3518005,Ajax,Leger,126666,Ward,MMD,FALSE,1,FALSE,,"Councillor, Local",FALSE,Ward,Wards 1-3,3,1,1,https://elections.ajax.ca/voters
+3519046,Aurora,EveryAnswer,62057,Ward,SMD,FALSE,1,FALSE,,"Councillor, Ward",FALSE,Ward,Wards 1-6,6,1,1,https://www.aurora.ca/your-government/elections-2026/auroras-ward-system/; https://www.aurora.ca/your-government/council-members/
+3543042,Barrie,Leger,147829,Ward,SMD,FALSE,1,FALSE,,Councillor,FALSE,Ward,Wards 1-10,10,1,1,https://www.barrie.ca/government-news/mayor-council-committees/city-council
+3543014,Bradford West Gwillimbury,EveryAnswer,42880,Ward,SMD,FALSE,1,FALSE,,Councillor,FALSE,Ward,Wards 1-7,7,1,1,https://www.townofbwg.com/town-hall/council/council-members/
+3543014,Bradford West Gwillimbury,EveryAnswer,42880,Ward,SMD,FALSE,1,FALSE,,Deputy Mayor,TRUE,At-large,At-large,1,1,1,https://www.townofbwg.com/town-hall/council/council-members/
+3521010,Brampton,Leger,656480,Ward,MMD,FALSE,1,FALSE,,"Councillor, Regional",FALSE,Ward-pair,1&5;2&6;3&4;7&8;9&10,5,1,1,https://elections2022.amo.on.ca/web/en/municipal/10108; https://www.brampton.ca/EN/City-Hall/Election
+3521010,Brampton,Leger,656480,Ward,MMD,FALSE,1,FALSE,,"Councillor, City",FALSE,Ward-pair,1&5;2&6;3&4;7&8;9&10,5,1,1,https://www.brampton.ca/EN/City-Hall/election/Documents/2022%20Brampton%20Municipal%20Election%20-%20Official%20Results.pdf
+3529006,Brantford,Leger,104688,Ward,MMD,TRUE,2,FALSE,,Councillor,FALSE,Ward,Wards 1-5,5,2,2,https://www.brantford.ca/your-government/city-council/
+3524002,Burlington,Leger,186948,Ward,SMD,FALSE,1,FALSE,,"Councillor, City and Regional",FALSE,Ward,Wards 1-6,6,1,1,https://www.burlington.ca/en/council-and-city-administration/council-members-and-wards.aspx
+3530010,Cambridge,Leger,138479,Ward,SMD,FALSE,1,FALSE,,"Councillor, Ward",FALSE,Ward,Wards 1-8,8,1,1,https://www.cambridge.ca/mayor-city-council-government/elections/nominations-candidate-profiles/#RegionalCouncillors(Cambridge)
+3536020,Chatham-Kent,Leger,103988,Ward,MMD,TRUE,2,FALSE,,Councillor,FALSE,Ward,Wards 1;2;5;6;7;8,6,2,2,https://www.chatham-kent.ca/localgovernment/elections/Pages/2026-Municipal-Election.aspx
+3536020,Chatham-Kent,Leger,103988,Ward,MMD,TRUE,2,FALSE,,Councillor,FALSE,Ward,Wards 3;4,2,1,1,https://www.chatham-kent.ca/localgovernment/elections/Pages/2026-Municipal-Election.aspx
+3518017,Clarington,Leger,101427,Ward,Mixed,FALSE,1,FALSE,,"Councillor, Local",FALSE,Ward,Wards 1-4,4,1,1,https://www.clarington.net/clarington-elections/voters/whos-running/
+3518017,Clarington,Leger,101427,Ward,Mixed,FALSE,1,FALSE,,"Councillor, Regional",FALSE,Ward-pair,1&2;3&4,2,1,1,https://www.clarington.net/clarington-elections/voters/whos-running/
+3519070,Georgina,EveryAnswer,47642,Hybrid,Mixed,FALSE,1,FALSE,,"Councillor, Regional",FALSE,At-large,At-large,1,1,1,https://www.georgina.ca/municipal-government/2026-election
+3519070,Georgina,EveryAnswer,47642,Hybrid,Mixed,FALSE,1,FALSE,,"Councillor, Ward",FALSE,Ward,Wards 1-5,5,1,1,https://www.georgina.ca/municipal-government/2026-election
+3553005,Greater Sudbury / Grand Sudbury,Leger,166004,Ward,SMD,FALSE,1,FALSE,,Councillor,FALSE,Ward,Wards 1-12,12,1,1,https://www.greatersudbury.ca/city-hall/municipal-schoolboard-elections/for-voters/registered-candidates/
+3523008,Guelph,Leger,143740,Ward,MMD,TRUE,2,FALSE,,Councillor,FALSE,Ward,Wards 1-6,6,2,2,https://guelph.ca/city-government/mayor-and-council/council-composition-and-ward-boundary-review/city-council-composition/
+3528018,Haldimand County,EveryAnswer,49216,Ward,SMD,FALSE,1,FALSE,,Councillor,FALSE,Ward,Wards 1-7,7,1,1,https://www.haldimandcounty.ca/news/posts/haldimand-county-adopting-seven-ward-model-for-2026-municipal-election/
+3525005,Hamilton,Leger,569353,Ward,SMD,FALSE,1,FALSE,,Councillor,FALSE,Ward,Wards 1-15,15,1,1,https://www.hamilton.ca/city-council/council-committee/city-council-members
+3543017,Innisfil,EveryAnswer,43326,Ward,SMD,FALSE,1,FALSE,,Councillor,FALSE,Ward,Wards 1-7,7,1,1,https://www.innisfil.ca/government-administration/elections
+3543017,Innisfil,EveryAnswer,43326,Ward,SMD,FALSE,1,FALSE,,Deputy Mayor,TRUE,At-large,At-large,1,1,1,https://www.innisfil.ca/government-administration/elections
+3510010,Kingston,Leger,132485,Ward,SMD,FALSE,1,FALSE,,Councillor,FALSE,Ward,Districts 1-12,12,1,1,https://www.cityofkingston.ca/council-and-city-administration/elections/candidates/candidate-list/
+3530013,Kitchener,Leger,256885,Ward,SMD,FALSE,1,FALSE,,"Councillor, Ward",FALSE,Ward,Wards 1-10,10,1,1,https://app2.kitchener.ca/election/candidates.aspx
+3539036,London,Leger,422324,Ward,SMD,FALSE,1,FALSE,,Councillor,FALSE,Ward,Wards 1-14,14,1,1,https://london.ca/government/council-civic-administration/elections/list-candidates
+3519036,Markham,Leger,338503,Ward,Mixed,TRUE,4,FALSE,,"Councillor, Regional",FALSE,At-large,At-large,1,4,4,https://www.electionsmarkham.ca/en/about-us/about-local-government/
+3519036,Markham,Leger,338503,Ward,Mixed,TRUE,4,FALSE,,"Councillor, Ward",FALSE,Ward,Wards 1-8,8,1,1,https://www.markham.ca/about-the-city-of-markham/city-hall/regional-ward-councillors
+3524009,Milton,Leger,132979,Ward,MMD,FALSE,1,FALSE,,"Councillor, Regional",FALSE,Ward,Wards 1-4,4,1,1,https://www.milton.ca/en/news/nominations-for-the-2026-municipal-election-open-may-1.aspx
+3524009,Milton,Leger,132979,Ward,MMD,FALSE,1,FALSE,,"Councillor, Town",FALSE,Ward,Wards 1-4,4,1,1,https://www.milton.ca/en/news/nominations-for-the-2026-municipal-election-open-may-1.aspx
+3521005,Mississauga,Leger,717961,Ward,SMD,FALSE,1,FALSE,,Councillor,FALSE,Ward,Wards 1-11,11,1,1,https://mississaugavotes.ca/2026-municipal-election/for-voters/whos-running/
+3526043,Niagara Falls,EveryAnswer,94415,At-Large,N/A,TRUE,8,FALSE,,Councillor,FALSE,At-large,At-large,1,8,8,https://niagarafalls.ca/city-government/elections/2026-municipal-election/
+3524001,Oakville,Leger,213759,Ward,MMD,FALSE,1,FALSE,,"Councillor, Town",FALSE,Ward,Wards 1-7,7,1,1,https://www.oakville.ca/town-hall/elections/voters/offices-to-be-elected/
+3524001,Oakville,Leger,213759,Ward,MMD,FALSE,1,FALSE,,"Councillor, Town and Region of Halton",FALSE,Ward,Wards 1-7,7,1,1,https://www.oakville.ca/town-hall/elections/voters/offices-to-be-elected/
+3518013,Oshawa,Leger,175383,Ward,MMD,FALSE,1,FALSE,,"Councillor, Regional and City",FALSE,Ward,Wards 1-5,5,1,1,https://www.oshawa.ca/city-hall/elections/registered-candidates/
+3518013,Oshawa,Leger,175383,Ward,MMD,FALSE,1,FALSE,,"Councillor, City",FALSE,Ward,Wards 1-5,5,1,1,https://www.oshawa.ca/city-hall/elections/registered-candidates/
+3506008,Ottawa,Leger,1017449,Ward,SMD,FALSE,1,FALSE,,Councillor,FALSE,Ward,Wards 1-24,24,1,1,https://ottawa.ca/en/city-hall/elections/voters/voting-mayor-and-city-councillor
+3515014,Peterborough,EveryAnswer,83651,Ward,MMD,TRUE,2,FALSE,,Councillor,FALSE,Ward,Otonabee;Monaghan;Town;Ashburnham;Northcrest,5,2,2,https://www.peterborough.ca/news/posts/municipal-election-nominations-open-may-1/
+3518001,Pickering,EveryAnswer,99186,Ward,MMD,FALSE,1,FALSE,,"Councillor, Regional",FALSE,Ward,Wards 1-3,3,1,1,https://www.pickering.ca/council-city-administration/elections/offices-to-be-elected/
+3518001,Pickering,EveryAnswer,99186,Ward,MMD,FALSE,1,FALSE,,"Councillor, City",FALSE,Ward,Wards 1-3,3,1,1,https://www.pickering.ca/council-city-administration/elections/offices-to-be-elected/
+3519038,Richmond Hill,Leger,202022,Hybrid,Mixed,TRUE,2,FALSE,,"Councillor, Regional and Local",FALSE,At-large,At-large,1,2,2,https://www.richmondhill.ca/en/living-here/election-candidates.aspx
+3519038,Richmond Hill,Leger,202022,Hybrid,Mixed,TRUE,2,FALSE,,"Councillor, Ward",FALSE,Ward,Wards 1-6,6,1,1,https://www.richmondhill.ca/en/living-here/election-candidates.aspx
+3538030,Sarnia,EveryAnswer,72047,At-Large,N/A,TRUE,4,FALSE,,"Councillor, City",FALSE,At-large,At-large,1,4,4,https://www.sarnia.ca/city-government/elections/2026-election/unofficial-list-of-candidates/
+3538030,Sarnia,EveryAnswer,72047,At-Large,N/A,TRUE,4,FALSE,,"Councillor, City-County",FALSE,At-large,At-large,1,4,4,https://www.sarnia.ca/city-government/elections/2026-election/unofficial-list-of-candidates/
+3526053,St. Catharines,Leger,136803,Hybrid,MMD,TRUE,2,FALSE,,"Councillor, City",FALSE,Ward,Wards 1-6,6,2,2,https://www.stcatharines.ca/council-and-administration/mayor-and-council/ward-councillors/
+3558004,Thunder Bay,Leger,108843,Hybrid,Mixed,TRUE,5,FALSE,,"Councillor, At-Large",FALSE,At-large,At-large,1,5,5,https://www.thunderbay.ca/en/city-hall/2026-municipal-election.aspx#At-Large-Councillor-Five-5-to-be-elected
+3558004,Thunder Bay,Leger,108843,Hybrid,Mixed,TRUE,5,FALSE,,"Councillor, Ward",FALSE,Ward,Current River;McIntyre;McKellar;Neebing;Northwood;Red River;Westfort,7,1,1,https://www.thunderbay.ca/en/city-hall/2026-municipal-election.aspx#At-Large-Councillor-Five-5-to-be-elected
+3556027,Timmins,EveryAnswer,41145,Ward,Mixed,TRUE,4,FALSE,,Councillor,FALSE,Ward,Ward 5,1,4,4,https://timmins.civicweb.net/filepro/documents/26043/?preview=216073
+3556027,Timmins,EveryAnswer,41145,Ward,Mixed,TRUE,4,FALSE,,Councillor,FALSE,Ward,Wards 1-4,4,1,1,https://timmins.civicweb.net/filepro/documents/26043/?preview=216073
+3520005,Toronto,Leger,2794356,Ward,SMD,FALSE,1,FALSE,,Councillor,FALSE,Ward,Wards 1-25,25,1,1,https://www.toronto.ca/city-government/elections/candidate-list/
+3519028,Vaughan,Leger,323103,Hybrid,Mixed,TRUE,4,FALSE,,"Councillor, Local and Regional",FALSE,At-large,At-large,1,4,4,https://www.vaughan.ca/news/what-you-need-know-about-2026-municipal-election
+3519028,Vaughan,Leger,323103,Hybrid,Mixed,TRUE,4,FALSE,,"Councillor, Ward",FALSE,Ward,Wards 1-5,5,1,1,https://www.vaughan.ca/news/what-you-need-know-about-2026-municipal-election
+3530016,Waterloo,Leger,121436,Ward,SMD,TRUE,2,FALSE,,"Councillor, Ward",FALSE,Ward,Wards 1-7,7,1,1,https://www.waterloo.ca/council-and-committees/municipal-elections/find-election-candidates/
+3530016,Waterloo,Leger,121436,Ward,SMD,TRUE,2,FALSE,,"Councillor, Regional",FALSE,At-large,At-large,1,2,2,https://www.waterloo.ca/council-and-committees/municipal-elections/find-election-candidates/
+3518009,Whitby,Leger,138501,Ward,SMD,FALSE,1,TRUE,https://www.whitby.ca/news/posts/whitby-council-votes-to-elect-regional-councillors-by-ward/,"Councillor, Regional",FALSE,Ward,Wards 1-4,4,1,1,https://www.whitby.ca/news/posts/whitby-council-votes-to-elect-regional-councillors-by-ward/; https://planyourvote.voterview.ca/candidate-list
+3518009,Whitby,Leger,138501,Ward,SMD,FALSE,1,TRUE,https://www.whitby.ca/news/posts/whitby-council-votes-to-elect-regional-councillors-by-ward/,"Councillor, Local",FALSE,Ward,Wards 1-4,4,1,1,https://www.whitby.ca/news/posts/whitby-council-votes-to-elect-regional-councillors-by-ward/; https://planyourvote.voterview.ca/candidate-list
+3537039,Windsor,Leger,229660,Ward,SMD,FALSE,1,FALSE,,Councillor,FALSE,Ward,Wards 1-10,10,1,1,https://citywindsor.ca/city-hall/municipal-election/who-is-running/councillor-ward-2

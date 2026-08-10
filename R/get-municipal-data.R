@@ -18,6 +18,48 @@ mun_path <- "https://docs.google.com/spreadsheets/d/1QuW7-3GA6_Gbrohr-mUZUH7rhAj
 
 muns <- googlesheets4::read_sheet(mun_path)
 
+# The sheet supplies the municipality list plus two attributes carried straight
+# through to the output. Fail loudly if a column is renamed, rather than
+# silently emitting a column of NA.
+sheet_cols <- c("census_id", "provider", "pop_2021")
+if (length(setdiff(sheet_cols, names(muns))) > 0) {
+  stop(
+    "Municipality sheet is missing column(s): ",
+    paste(setdiff(sheet_cols, names(muns)), collapse = ", "),
+    ". Sheet has: ", paste(names(muns), collapse = ", ")
+  )
+}
+
+# read_sheet() returns a list-column whenever a column holds mixed types (one
+# stray text cell in a numeric column is enough). Flatten to plain vectors so
+# the join below cannot produce a list-column in the CSV.
+flatten_col <- function(x) {
+  if (!is.list(x)) {
+    return(x)
+  }
+  x[lengths(x) != 1] <- list(NA)
+  unlist(x, use.names = FALSE)
+}
+
+muns <- muns |>
+  transmute(
+    census_id = as.numeric(flatten_col(census_id)),
+    provider = as.character(flatten_col(provider)),
+    pop_2021 = as.numeric(flatten_col(pop_2021))
+  )
+
+if (any(is.na(muns$census_id))) {
+  stop("Municipality sheet has ", sum(is.na(muns$census_id)),
+       " row(s) with no census_id.")
+}
+if (anyDuplicated(muns$census_id) > 0) {
+  stop(
+    "Duplicate census_id in the municipality sheet: ",
+    paste(unique(muns$census_id[duplicated(muns$census_id)]), collapse = ", "),
+    ". A duplicate would fan out the join and produce extra output rows."
+  )
+}
+
 mun_data_path <- "/Users/reed/Can. Mun. Barometer Dropbox/Reed Merrill/cmb_main/CMB Data/auxiliary-data/Master Municipality List/cmb_muns.csv" # nolint
 
 mun_data <- readr::read_csv(mun_data_path)
@@ -35,12 +77,14 @@ id_remap <- overrides |> filter(column == "census_id")
 value_overrides <- overrides |> filter(column != "census_id")
 
 # Point the sheet's IDs at the intended municipalities before filtering, so the
-# correct master-list row is picked up with all of its attributes.
-target_ids <- muns$census_id
+# correct master-list row is picked up with all of its attributes. Rewriting
+# muns itself (rather than a copy of the ids) keeps provider and pop_2021
+# attached to the corrected census_id for the join at the end.
 for (i in seq_len(nrow(id_remap))) {
-  target_ids[target_ids == as.numeric(id_remap$old_value[i])] <-
+  muns$census_id[muns$census_id == as.numeric(id_remap$old_value[i])] <-
     as.numeric(id_remap$new_value[i])
 }
+target_ids <- muns$census_id
 
 out <- mun_data |>
   filter(census_id %in% target_ids) |>
@@ -154,11 +198,26 @@ if (nrow(seat_check) > 0) {
   )
 }
 
-out |>
+final <- out |>
+  left_join(muns, by = "census_id") |>
   left_join(ballot, by = "census_id") |>
   left_join(revisions, by = "census_id") |>
   mutate(
     revised = tidyr::replace_na(revised, FALSE),
     revision_source = tidyr::replace_na(revision_source, "")
   ) |>
-  readr::write_csv(notes("election-type-ward-type.csv"))
+  relocate(provider, pop_2021, .after = csdname)
+
+# Blanks here are a half-filled sheet rather than a broken join, so warn
+# instead of aborting -- but say which municipalities, so it is actionable.
+for (col in c("provider", "pop_2021")) {
+  blank <- final$csdname[is.na(final[[col]])]
+  if (length(blank) > 0) {
+    warning(
+      "No ", col, " in the sheet for: ", paste(blank, collapse = ", "),
+      call. = FALSE
+    )
+  }
+}
+
+readr::write_csv(final, notes("election-type-ward-type.csv"))

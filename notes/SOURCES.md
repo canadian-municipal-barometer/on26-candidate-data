@@ -20,6 +20,23 @@ script that reads and writes them at `R/get-municipal-data.R`.
   also reads the Google Sheet that selects which municipalities are in the study, so it
   needs `googlesheets4` auth.
 
+### Columns in `election-type-ward-type.csv`, and where each comes from
+
+| Column | Source |
+|---|---|
+| `census_id`, `csdname` | `cmb_muns.csv` |
+| `provider`, `pop_2021` | **the Google Sheet**, carried through unchanged |
+| `election_type`, `ward_type` | `cmb_muns.csv`, after `classification-overrides.csv` |
+| `block_vote`, `max_votes_max` | derived from `council-races.csv` |
+| `revised`, `revision_source` | derived from `classification-overrides.csv` |
+
+`provider` and `pop_2021` are pass-through: the script never edits them, and the overrides
+mechanism does not apply to them — correct them in the Sheet. A renamed or missing column
+aborts the run rather than emitting a column of `NA`; a duplicate or blank `census_id` in
+the Sheet also aborts, since a duplicate would fan out the join and add output rows. Blank
+`provider` or `pop_2021` values only warn, naming the municipalities, on the assumption
+that a partly filled sheet is normal while a broken join is not.
+
 ## Why this file exists
 
 `election-type-ward-type.csv` codes municipalities as SMD / MMD / Mixed / N/A. That coding
