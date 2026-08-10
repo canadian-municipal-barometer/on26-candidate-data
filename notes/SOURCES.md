@@ -7,17 +7,18 @@ material was not yet published, the 2022 structure is used and flagged as such b
 
 ## Where these files live
 
-This `notes/` directory sits in the **`on26-candidate-data` repo**, but the script that
-reads and writes these files — `get-municipal-data.R` — lives one level up in the
-**`on26-election-study`** repo, which nests this one as a gitlink. So:
+Everything is in the **`on26-candidate-data`** repo: these notes in `notes/`, and the
+script that reads and writes them at `R/get-municipal-data.R`.
 
-- Run `get-municipal-data.R` from `main/`, not from here. It resolves everything through
-  its `notes_dir <- "on26-candidate-data/notes"` variable.
-- Running it regenerates `election-type-ward-type.csv` **in this repo**, leaving the
-  election-study repo clean. Commit the CSV here first, then bump the gitlink there.
+- **Usage:** `Rscript R/get-municipal-data.R`. Like `R/parse-js.R`, it locates the repo
+  root from its own path, so it runs from any working directory.
 - `council-races.csv` and `classification-overrides.csv` are hand-maintained and never
-  generated. `election-type-ward-type.csv` is generated — do not hand-edit it; it is
-  overwritten on every run.
+  generated. `election-type-ward-type.csv` **is** generated — do not hand-edit it; every
+  run overwrites it.
+- The script reads one file from outside the repo: the master municipality list at
+  `CMB Data/auxiliary-data/Master Municipality List/cmb_muns.csv`, by absolute path. It
+  also reads the Google Sheet that selects which municipalities are in the study, so it
+  needs `googlesheets4` auth.
 
 ## Why this file exists
 
@@ -181,7 +182,7 @@ Milton, Oakville and Brampton all have this structure and are coded `MMD`; Ajax 
 `SMD` with master `magnitude` 1. `SMD` → `MMD`. `block_vote` stays `FALSE` — both offices
 are vote-for-one.
 
-Fixed in `cmb_muns.csv` (commit `6577e2a`, "Correct Ajax's election type"), so **no
+Fixed in `cmb_muns.csv` (commit `1b8c16f`, "Correct Ajax's election type"), so **no
 override remains for this either**. Note `magnitude` is still `1` upstream while
 `ward_type` is now `MMD` — those two disagree and `magnitude` should be `2`.
 
@@ -204,7 +205,17 @@ on regional council *only* and are therefore excluded from the seat-count check 
 Burlington is *not* the same case and stays `SMD`: its six wards each elect a single "City
 and Regional Councillor", one person holding both roles, so magnitude really is 1.
 
-### Active override 1: Whitby is no longer MMD as of 2026
+### Resolved upstream: Sarnia's blank `ward_type`
+
+The master list had an empty `ward_type` cell for Sarnia, which `readr` wrote out as a bare
+`NA` instead of the `N/A` literal every other at-large row uses. An omission rather than a
+cycle-specific fact, so it belonged upstream — fixed in `cmb_muns.csv` (commit `86ec3c6`,
+"Correct Sarnia ward_type"), and **no override remains for this**.
+
+The staleness guard is what caught it: the override's blank `old_value` no longer matched
+the upstream `N/A`, so the next run aborted rather than silently continuing to overwrite.
+
+### The one active override: Whitby is no longer MMD as of 2026
 
 Whitby's four Regional Councillors were elected at-large through 2022 — a genuine vote-for-4
 block race. Council voted to elect them by ward starting with the October 2026 election, so
@@ -220,29 +231,21 @@ and the master stays true to today. It is parked here on the second reading. Rev
 the October 2026 election, when the new structure simply becomes the current one and the
 override should move upstream.
 
-### Active override 2: Sarnia's blank `ward_type`
-
-The master list has an empty cell, which `readr` writes as a bare `NA`. Normalized to the
-`N/A` literal every other at-large row uses. This is an omission rather than a
-cycle-specific fact, so by the rule above it belongs upstream in `cmb_muns.csv`; it sits
-here only until that happens.
-
 ### When this file empties
 
-Once both rows are gone — Sarnia moved upstream, Whitby folded in after the 2026 election —
-delete `classification-overrides.csv` outright, along with the `revised` and
-`revision_source` columns it feeds and the override block in `get-municipal-data.R`.
-Provenance is better served by the master repo's git history than by a `reason` column;
-commit `6577e2a` on `cmb_muns.csv` is the model. `council-races.csv` is unaffected and
-stays hand-maintained either way.
+Whitby is the last row. Once it is folded upstream after the October 2026 election, delete
+`classification-overrides.csv` outright, along with the `revised` and `revision_source`
+columns it feeds and the override block in `get-municipal-data.R`. Provenance is better
+served by the master repo's git history than by a `reason` column; commits `1b8c16f` and
+`86ec3c6` on `cmb_muns.csv` are the model. `council-races.csv` is unaffected and stays
+hand-maintained either way.
 
 ## Known staleness in the upstream master list
 
-All of these are fixable at source now. None affects `election_type` / `ward_type`, so none
-is overridden here — noted so they are not rediscovered later:
+Still outstanding. None affects `election_type` / `ward_type`, so none is overridden here —
+noted so they are not rediscovered later. (Ajax `magnitude` was on this list and has since
+been corrected to `2`.)
 
-- **Ajax `magnitude` is `1` but `ward_type` is now `MMD`** — internally inconsistent after
-  commit `6577e2a`; `magnitude` should be `2` (three wards returning two councillors each).
 - **`cmb_muns.csv` `council_size` for Chatham-Kent is 18**, reflecting the pre-2026 six-ward
   structure. The 2026 structure is 8 wards and 14 councillors plus the mayor.
 - **`cmb_muns.csv` has a `magnitude` column** that is close to `seats_per_district`, but it
@@ -251,7 +254,8 @@ is overridden here — noted so they are not rediscovered later:
   `council-races.csv` resolves those cases rather than duplicating the column.
 - **Aurora and Haldimand County both changed structure for 2026** — Aurora to a six-ward
   system, Haldimand from six wards to seven. Both remain one councillor per ward, so
-  `ward_type` stays correct either way.
+  `ward_type` stays correct either way, but Haldimand's `council_size` of 7 still reflects
+  six wards; for 2026 it is 8 (mayor plus seven).
 
 ## Confidence notes
 
