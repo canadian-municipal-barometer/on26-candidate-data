@@ -44,7 +44,6 @@ census_id,csdname,office,district_scope,districts,n_districts,seats_per_district
 3538030,Sarnia,"Councillor, City",At-large,At-large,1,4,4,https://en.wikipedia.org/wiki/2022_Lambton_County_municipal_elections
 3538030,Sarnia,"Councillor, City-County",At-large,At-large,1,4,4,https://en.wikipedia.org/wiki/2022_Lambton_County_municipal_elections
 3526053,St. Catharines,"Councillor, City",Ward,Wards 1-6,6,2,2,https://www.stcatharines.ca/council-and-administration/mayor-and-council/ward-councillors/
-3526053,St. Catharines,"Councillor, Regional",At-large,At-large,1,6,6,https://en.wikipedia.org/wiki/St._Catharines_City_Council
 3558004,Thunder Bay,"Councillor, At-Large",At-large,At-large,1,5,5,https://www.cbc.ca/news/canada/thunder-bay/election-day-guide-1.6625475
 3558004,Thunder Bay,"Councillor, Ward",Ward,Current River;McIntyre;McKellar;Neebing;Northwood;Red River;Westfort,7,1,1,https://www.cbc.ca/news/canada/thunder-bay/election-day-guide-1.6625475
 3556027,Timmins,Councillor,Ward,Ward 5,1,4,4,https://en.wikipedia.org/wiki/2022_Cochrane_District_municipal_elections

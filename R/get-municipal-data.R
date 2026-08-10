@@ -133,7 +133,6 @@ seat_exceptions <- tibble::tribble(
   3530010, "Cambridge: 2 regional councillors sit on Region, not city council",
   3530013, "Kitchener: 4 regional councillors sit on Region, not city council",
   3530016, "Waterloo: 2 regional councillors sit on Region, not city council",
-  3526053, "St. Catharines: 6 regional councillors sit on Region, not city council",
   3536020, "Chatham-Kent: master council_size is the stale pre-2026 structure",
   3528018, "Haldimand County: master has 6 wards, 2026 uses 7"
 )

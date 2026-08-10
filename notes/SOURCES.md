@@ -68,10 +68,10 @@ districts overlap (Clarington), magnitude varies within a municipality (Chatham-
 Bay). Any such check would fire on all three without a real error. Instead
 `get-municipal-data.R` verifies that councillor seats implied by `council-races.csv` equal
 `council_size - 1` in the master list, which is unambiguous and catches the same class of
-typo. Eight municipalities deviate for known reasons and are listed as documented
+typo. Seven municipalities deviate for known reasons and are listed as documented
 exceptions in the script — at-large deputy mayors (Bradford West Gwillimbury, Innisfil),
 regional councillors who sit on regional rather than city council (Cambridge, Kitchener,
-Waterloo, St. Catharines), and stale `council_size` values (Chatham-Kent, Haldimand County).
+Waterloo), and stale `council_size` values (Chatham-Kent, Haldimand County).
 
 The same reasoning applies to Milton, Oakville, Oshawa, Pickering, Clarington and Ajax: all
 are genuinely multi-member in seats and genuinely vote-for-one on the ballot.
@@ -103,7 +103,6 @@ Chatham-Kent is two. `n_districts` says how many districts a row covers.
 | Municipality | Structure | Votes |
 |---|---|---|
 | Niagara Falls | 8 councillors, whole council, one contest | 8 |
-| St. Catharines | 6 Regional Councillors at-large | 6 |
 | Thunder Bay | 5 at-large councillors + 7 single-member wards | 5 |
 | Sarnia | two separate at-large contests: 4 City Councillors, 4 City-County Councillors | 4 in each |
 | Kitchener | 4 Regional Councillors at-large + 10 wards | 4 |
@@ -113,8 +112,27 @@ Chatham-Kent is two. `n_districts` says how many districts a row covers.
 | Waterloo | 2 Regional Councillors at-large + 7 wards | 2 |
 | Richmond Hill | 2 Regional & Local Councillors at-large + 6 wards | 2 |
 
-St. Catharines is the only municipality with a multiple-vote race at **both** levels
-(2 in-ward + 6 at-large).
+No municipality has a multiple-vote race at both levels. St. Catharines did until the
+2026 Niagara governance change removed its at-large regional race — see below.
+
+### Niagara abolished its elected regional councillors for 2026
+
+Provincial change, effective **with the October 2026 election**: "the independently elected
+Regional Councillors will be eliminated. Regional Council will be made up of the 12 mayors
+plus the Regional Chair." Council drops from 31 members to 13.
+
+This removes two races that existed in 2022:
+
+- **St. Catharines** — its 6 at-large Regional Councillors are gone. St. Catharines was
+  previously the only municipality with a multiple-vote race at both levels; it is now
+  in-ward only, `max_votes_max` 2 rather than 6. Its registered-candidate list for 2026
+  shows only Mayor, City Councillor by ward, and school board trustees.
+- **Niagara Falls** — its 3 at-large Regional Councillors are gone. Its 8 at-large *city*
+  councillors are unaffected, so nothing changes in this data.
+
+Because these seats never counted toward city `council_size`, the seat-count check cannot
+detect their presence or absence — St. Catharines reconciled either way. They have to be
+confirmed from election material, not arithmetic.
 
 ### Two things worth knowing about this list
 
@@ -199,8 +217,8 @@ Three independent confirmations, since this is the row most easily misread:
    from four wards to three for 2018 specifically to gain a Durham Regional Council seat,
    which only works under double-direct.
 
-Contrast Cambridge, Kitchener, Waterloo and St. Catharines, whose regional councillors sit
-on regional council *only* and are therefore excluded from the seat-count check above.
+Contrast Cambridge, Kitchener and Waterloo, whose regional councillors sit on regional
+council *only* and are therefore excluded from the seat-count check above.
 
 Burlington is *not* the same case and stays `SMD`: its six wards each elect a single "City
 and Regional Councillor", one person holding both roles, so magnitude really is 1.
@@ -257,6 +275,29 @@ been corrected to `2`.)
   `ward_type` stays correct either way, but Haldimand's `council_size` of 7 still reflects
   six wards; for 2026 it is 8 (mayor plus seven).
 
+## Upper-tier coverage: verified complete
+
+Regional/county seats are easy to miss because they do not count toward city `council_size`,
+so the seat check is blind to them. Every two-tier municipality in the file was checked
+explicitly for a separately elected upper-tier race:
+
+- **Has one, and its holders also sit on local council** (14): Ajax, Brampton, Burlington,
+  Clarington, Georgina, Markham, Milton, Oakville, Oshawa, Pickering, Richmond Hill,
+  Sarnia, Vaughan, Whitby. Seats reconcile exactly to `council_size - 1`.
+- **Has one, holders sit on the upper tier only** (3): Cambridge, Kitchener, Waterloo.
+  These are the seat-count exceptions.
+- **Has none** — confirmed, not assumed:
+  - *Mississauga* — every member of city council is simultaneously a Peel regional
+    councillor; same people, one race, no separate ballot line.
+  - *Aurora* — no separate seat; the mayor holds Aurora's York Region seat.
+  - *Niagara Falls, St. Catharines* — abolished for 2026, see above.
+  - *Bradford West Gwillimbury, Innisfil* — Simcoe County council is the mayors and deputy
+    mayors of its 16 member municipalities, ex officio. The deputy mayor is elected
+    at-large as a single seat, which is out of scope and would not change `block_vote`.
+- **Single-tier, no upper tier at all**: Barrie, Brantford, Chatham-Kent, Greater Sudbury,
+  Guelph, Haldimand County, Hamilton, Kingston, London, Ottawa, Peterborough, Thunder Bay,
+  Timmins, Toronto, Windsor.
+
 ## Confidence notes
 
 Two rows rest on 2022 sources because no 2026 equivalent is published yet:
@@ -281,6 +322,9 @@ Everything else is from a 2026-cycle municipal or regional page.
 
 ### At-large block vote
 - Niagara Falls — [2026 Municipal Election](https://niagarafalls.ca/city-government/elections/2026-municipal-election/) · [Niagara Falls City Council (Wikipedia)](https://en.wikipedia.org/wiki/Niagara_Falls_City_Council)
+- Niagara regional councillors abolished for 2026 — [Niagara Region, Governance Changes](https://www.niagararegion.ca/government/council/governance-changes.aspx) ("Starting with the October 2026 election, the independently elected Regional Councillors will be eliminated") · [2026 Niagara Region municipal elections (Wikipedia)](https://en.wikipedia.org/wiki/2026_Niagara_Region_municipal_elections) · [St. Catharines Registered Candidates](https://www.stcatharines.ca/council-and-administration/elections/registered-candidates/) (no Regional Councillor office)
+- Mississauga upper-tier — [Peel Regional Council (Wikipedia)](https://en.wikipedia.org/wiki/Peel_Regional_Council) · [Guide to Peel Region Council](https://peelregion.ca/sites/default/files/2026-04/guide-to-peel-regional-council.pdf) (all Mississauga councillors are also regional councillors)
+- Simcoe County upper-tier — [2022 Simcoe County municipal elections (Wikipedia)](https://en.wikipedia.org/wiki/2022_Simcoe_County_municipal_elections) (county council is the mayors and deputy mayors, ex officio)
 - Sarnia — [2026 Election](https://www.sarnia.ca/city-government/elections/2026-election/) · [2022 Lambton County elections (Wikipedia)](https://en.wikipedia.org/wiki/2022_Lambton_County_municipal_elections) (two separate "Four to be elected" races) · [Sarnia City Council (Wikipedia)](https://en.wikipedia.org/wiki/Sarnia_City_Council)
 - Thunder Bay — [CBC election day guide](https://www.cbc.ca/news/canada/thunder-bay/election-day-guide-1.6625475) · [Thunder Bay City Council (Wikipedia)](https://en.wikipedia.org/wiki/Thunder_Bay_City_Council)
 - Kitchener / Cambridge / Waterloo regional councillors — [2026 Waterloo Region municipal elections (Wikipedia)](https://en.wikipedia.org/wiki/2026_Waterloo_Region_municipal_elections) (Kitchener 4, Cambridge 2, Waterloo 2) · [Global News, voting in the Kitchener municipal election](https://globalnews.ca/news/9217224/kitchener-municipal-election-everything-need-to-know/) ("you can vote for four regional councillor candidates") · [Region of Waterloo 2026 election](https://www.regionofwaterloo.ca/government-and-council/elections/2026-municipal-election/)

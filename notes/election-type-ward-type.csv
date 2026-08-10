@@ -29,7 +29,7 @@ census_id,csdname,election_type,ward_type,block_vote,max_votes_max,revised,revis
 3518001,Pickering,Ward,MMD,FALSE,1,FALSE,
 3519038,Richmond Hill,Hybrid,Mixed,TRUE,2,FALSE,
 3538030,Sarnia,At-Large,N/A,TRUE,4,FALSE,
-3526053,St. Catharines,Hybrid,MMD,TRUE,6,FALSE,
+3526053,St. Catharines,Hybrid,MMD,TRUE,2,FALSE,
 3558004,Thunder Bay,Hybrid,Mixed,TRUE,5,FALSE,
 3556027,Timmins,Ward,Mixed,TRUE,4,FALSE,
 3520005,Toronto,Ward,SMD,FALSE,1,FALSE,
