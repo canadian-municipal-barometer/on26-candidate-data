@@ -218,7 +218,9 @@ for (col in c("provider", "pop_2021")) {
   }
 }
 
-readr::write_csv(final, notes("election-type-ward-type.csv"))
+# Nothing is written until every check below has passed -- see the end of the
+# script. A partial write would leave the two generated files disagreeing with
+# each other, which is worse than not writing at all.
 
 # ---------------------------------------------------------------------------
 # Combined sheet
@@ -280,4 +282,8 @@ if (nrow(back_mun) != nrow(src_mun) ||
        "election-type-ward-type.csv; the repeated values disagree.")
 }
 
+# ---------------------------------------------------------------------------
+# Write, only now that everything has been validated
+# ---------------------------------------------------------------------------
+readr::write_csv(final, notes("election-type-ward-type.csv"))
 readr::write_csv(combined, notes("municipal-election-structure.csv"))
