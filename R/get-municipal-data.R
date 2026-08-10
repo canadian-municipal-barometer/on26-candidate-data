@@ -26,7 +26,8 @@ if (length(setdiff(sheet_cols, names(muns))) > 0) {
   stop(
     "Municipality sheet is missing column(s): ",
     paste(setdiff(sheet_cols, names(muns)), collapse = ", "),
-    ". Sheet has: ", paste(names(muns), collapse = ", ")
+    ". Sheet has: ",
+    paste(names(muns), collapse = ", ")
   )
 }
 
@@ -49,8 +50,11 @@ muns <- muns |>
   )
 
 if (any(is.na(muns$census_id))) {
-  stop("Municipality sheet has ", sum(is.na(muns$census_id)),
-       " row(s) with no census_id.")
+  stop(
+    "Municipality sheet has ",
+    sum(is.na(muns$census_id)),
+    " row(s) with no census_id."
+  )
 }
 if (anyDuplicated(muns$census_id) > 0) {
   stop(
@@ -93,7 +97,10 @@ out <- mun_data |>
 
 if (nrow(out) != length(target_ids)) {
   stop(
-    "Expected ", length(target_ids), " municipalities, matched ", nrow(out),
+    "Expected ",
+    length(target_ids),
+    " municipalities, matched ",
+    nrow(out),
     ". Unmatched IDs: ",
     paste(setdiff(target_ids, out$census_id), collapse = ", ")
   )
@@ -118,9 +125,15 @@ for (i in seq_len(nrow(value_overrides))) {
 
   if (!matched) {
     stop(
-      "Stale override: ", value_overrides$census_id[i], " ", column,
-      " expects old_value '", expected, "' but cmb_muns.csv now has '",
-      current, "'. If upstream is already fixed, delete the row from ",
+      "Stale override: ",
+      value_overrides$census_id[i],
+      " ",
+      column,
+      " expects old_value '",
+      expected,
+      "' but cmb_muns.csv now has '",
+      current,
+      "'. If upstream is already fixed, delete the row from ",
       "classification-overrides.csv; if upstream changed some other way, ",
       "update old_value after rechecking the source."
     )
@@ -160,10 +173,14 @@ if (length(missing_races) > 0 || length(extra_races) > 0) {
     "council-races.csv is out of sync with the municipality list.",
     if (length(missing_races) > 0) {
       paste0(" Missing: ", paste(missing_races, collapse = ", "), ".")
-    } else "",
+    } else {
+      ""
+    },
     if (length(extra_races) > 0) {
       paste0(" Unexpected: ", paste(extra_races, collapse = ", "), ".")
-    } else ""
+    } else {
+      ""
+    }
   )
 }
 
@@ -171,18 +188,20 @@ if (length(missing_races) > 0 || length(extra_races) > 0) {
 # council_size - 1 (i.e. every seat but the mayor's) in the master list. Every
 # known deviation is listed here with its cause; anything else is a data error.
 seat_exceptions <- tibble::tribble(
-  ~census_id, ~reason,
-  3530010, "Cambridge: 2 regional councillors sit on Region, not city council",
-  3530013, "Kitchener: 4 regional councillors sit on Region, not city council",
-  3530016, "Waterloo: 2 regional councillors sit on Region, not city council",
-  3536020, "Chatham-Kent: master council_size is the stale pre-2026 structure",
-  3528018, "Haldimand County: master has 6 wards, 2026 uses 7"
+  ~census_id , ~reason                                                             ,
+     3530010 , "Cambridge: 2 regional councillors sit on Region, not city council" ,
+     3530013 , "Kitchener: 4 regional councillors sit on Region, not city council" ,
+     3530016 , "Waterloo: 2 regional councillors sit on Region, not city council"  ,
+     3536020 , "Chatham-Kent: master council_size is the stale pre-2026 structure" ,
+     3528018 , "Haldimand County: master has 6 wards, 2026 uses 7"
 )
 
 seat_check <- races |>
   group_by(census_id) |>
-  summarise(derived_seats = sum(n_districts * seats_per_district),
-            .groups = "drop") |>
+  summarise(
+    derived_seats = sum(n_districts * seats_per_district),
+    .groups = "drop"
+  ) |>
   inner_join(select(mun_data, census_id, council_size), by = "census_id") |>
   mutate(delta = derived_seats - (council_size - 1)) |>
   filter(delta != 0, !census_id %in% seat_exceptions$census_id)
@@ -190,8 +209,15 @@ seat_check <- races |>
 if (nrow(seat_check) > 0) {
   stop(
     "Councillor seats in council-races.csv disagree with council_size for: ",
-    paste0(seat_check$census_id, " (", seat_check$derived_seats, " vs ",
-           seat_check$council_size - 1, ")", collapse = ", "),
+    paste0(
+      seat_check$census_id,
+      " (",
+      seat_check$derived_seats,
+      " vs ",
+      seat_check$council_size - 1,
+      ")",
+      collapse = ", "
+    ),
     ". Fix the race rows, or add a documented seat_exceptions entry."
   )
 }
@@ -212,7 +238,10 @@ for (col in c("provider", "pop_2021")) {
   blank <- final$csdname[is.na(final[[col]])]
   if (length(blank) > 0) {
     warning(
-      "No ", col, " in the sheet for: ", paste(blank, collapse = ", "),
+      "No ",
+      col,
+      " in the sheet for: ",
+      paste(blank, collapse = ", "),
       call. = FALSE
     )
   }
@@ -229,10 +258,26 @@ for (col in c("provider", "pop_2021")) {
 # row belonging to that municipality. Generated from `final` and `races`, so
 # it cannot drift from either.
 
-mun_cols <- c("provider", "pop_2021", "election_type", "ward_type",
-              "block_vote", "max_votes_max", "revised", "revision_source")
-race_cols <- c("office", "deputy_mayor", "district_scope", "districts",
-               "n_districts", "seats_per_district", "max_votes", "source_url")
+mun_cols <- c(
+  "provider",
+  "pop_2021",
+  "election_type",
+  "ward_type",
+  "block_vote",
+  "max_votes_max",
+  "revised",
+  "revision_source"
+)
+race_cols <- c(
+  "office",
+  "deputy_mayor",
+  "district_scope",
+  "districts",
+  "n_districts",
+  "seats_per_district",
+  "max_votes",
+  "source_url"
+)
 
 # csdname lives in both files; joining on census_id alone would silently accept
 # a disagreement between them, so check it rather than assume it.
@@ -243,8 +288,15 @@ name_check <- races |>
 if (nrow(name_check) > 0) {
   stop(
     "csdname disagrees between council-races.csv and the municipality list for: ",
-    paste0(name_check$census_id, " ('", name_check$race_name, "' vs '",
-           name_check$main_name, "')", collapse = ", ")
+    paste0(
+      name_check$census_id,
+      " ('",
+      name_check$race_name,
+      "' vs '",
+      name_check$main_name,
+      "')",
+      collapse = ", "
+    )
   )
 }
 
@@ -262,8 +314,13 @@ combined <- races |>
 # out or dropping rows, and the repeated municipality values disagreeing with
 # each other within a municipality. Both would be easy to miss by eye.
 if (nrow(combined) != nrow(races)) {
-  stop("Combined sheet has ", nrow(combined), " rows, expected ", nrow(races),
-       " (one per race). The join fanned out or dropped rows.")
+  stop(
+    "Combined sheet has ",
+    nrow(combined),
+    " rows, expected ",
+    nrow(races),
+    " (one per race). The join fanned out or dropped rows."
+  )
 }
 
 back_race <- select(combined, census_id, csdname, all_of(race_cols))
@@ -276,14 +333,29 @@ if (nrow(anti_join(back_race, src_race, by = names(back_race))) > 0) {
 # the repetition were inconsistent anywhere, this would yield extra rows.
 back_mun <- combined |> select(census_id, all_of(mun_cols)) |> distinct()
 src_mun <- select(final, census_id, all_of(mun_cols))
-if (nrow(back_mun) != nrow(src_mun) ||
-      nrow(anti_join(back_mun, src_mun, by = names(back_mun))) > 0) {
-  stop("Municipality columns in the combined sheet do not collapse back to ",
-       "election-type-ward-type.csv; the repeated values disagree.")
+if (
+  nrow(back_mun) != nrow(src_mun) ||
+    nrow(anti_join(back_mun, src_mun, by = names(back_mun))) > 0
+) {
+  stop(
+    "Municipality columns in the combined sheet do not collapse back to ",
+    "election-type-ward-type.csv; the repeated values disagree."
+  )
 }
+
+# Clean up columns
+combined <- combined |>
+  select(-all_of(c("max_votes_max", "deputy_mayor"))) |>
+  rename(district_source_url = source_url) |>
+  mutate(max_votes_source = "") |>
+  relocate(block_vote, .before = max_votes) |>
+  relocate(office, .before = election_type) |>
+  relocate(revised, revision_source, .before = 1) |>
+  relocate(max_votes_source, .after = max_votes) |>
+  relocate(district_source_url, .after = seats_per_district)
 
 # ---------------------------------------------------------------------------
 # Write, only now that everything has been validated
 # ---------------------------------------------------------------------------
 readr::write_csv(final, notes("election-type-ward-type.csv"))
-readr::write_csv(combined, notes("municipal-election-structure.csv"))
+readr::write_csv(combined, notes("councillor-election-structure.csv"))
