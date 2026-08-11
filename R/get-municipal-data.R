@@ -158,6 +158,24 @@ races <- readr::read_csv(notes("council-races.csv"), show_col_types = FALSE)
 # than silently truncating a field if that quoting is ever lost.
 readr::stop_for_problems(races)
 
+# max_votes_source is blank for most races, which read_csv gives back as NA and
+# write_csv would then emit as the literal "NA". Normalise once, here, so the
+# column round-trips as an empty cell.
+races <- races |>
+  mutate(max_votes_source = tidyr::replace_na(max_votes_source, ""))
+
+# A race where the voter marks more than one name needs a citation for how many
+# -- that number is the whole point of this file and cannot be re-derived from
+# seats alone. Single-vote races need none.
+uncited <- races |> filter(max_votes > 1, max_votes_source == "")
+if (nrow(uncited) > 0) {
+  stop(
+    "council-races.csv has multiple-vote race(s) with no max_votes_source: ",
+    paste0(uncited$csdname, " (", uncited$office, ")", collapse = ", "),
+    "."
+  )
+}
+
 ballot <- races |>
   group_by(census_id) |>
   summarise(
@@ -276,6 +294,7 @@ race_cols <- c(
   "n_districts",
   "seats_per_district",
   "max_votes",
+  "max_votes_source",
   "source_url"
 )
 
@@ -347,7 +366,6 @@ if (
 combined <- combined |>
   select(-all_of(c("max_votes_max", "deputy_mayor"))) |>
   rename(district_source_url = source_url) |>
-  mutate(max_votes_source = "") |>
   relocate(block_vote, .before = max_votes) |>
   relocate(office, .before = election_type) |>
   relocate(revised, revision_source, .before = 1) |>

@@ -13,8 +13,10 @@ script that reads and writes them at `R/get-municipal-data.R`.
 - **Usage:** `Rscript R/get-municipal-data.R`. Like `R/parse-js.R`, it locates the repo
   root from its own path, so it runs from any working directory.
 - `council-races.csv` and `classification-overrides.csv` are hand-maintained and never
-  generated. `election-type-ward-type.csv` and `municipal-election-structure.csv` **are**
-  generated — do not hand-edit either; every run overwrites them.
+  generated. `election-type-ward-type.csv` and `councillor-election-structure.csv` **are**
+  generated — do not hand-edit either; every run overwrites them. Both source columns,
+  `source_url` and `max_votes_source`, live in `council-races.csv`; typing a citation into
+  the generated sheet loses it on the next run.
 - The script reads one file from outside the repo: the master municipality list at
   `CMB Data/auxiliary-data/Master Municipality List/cmb_muns.csv`, by absolute path. It
   also reads the Google Sheet that selects which municipalities are in the study, so it
@@ -25,13 +27,14 @@ script that reads and writes them at `R/get-municipal-data.R`.
 `election-type-ward-type.csv` — one row per municipality, 38 rows. The municipality-level
 summary.
 
-`municipal-election-structure.csv` — **everything in one sheet**: one row per race, 59 rows,
+`councillor-election-structure.csv` — **everything in one sheet**: one row per race, 59 rows,
 with each municipality's attributes repeated across all of its rows. Municipality columns
 first (`census_id`, `csdname`, `provider`, `pop_2021`, `election_type`, `ward_type`,
 `block_vote`, `max_votes_max`, `revised`, `revision_source`), then the race columns
 (`office`, `deputy_mayor`, `district_scope`, `districts`, `n_districts`,
-`seats_per_district`, `max_votes`, `source_url`). Municipalities appear in the same order as
-the main sheet, and races keep their `council-races.csv` order within each.
+`seats_per_district`, `max_votes`, `max_votes_source`, `source_url`). Municipalities appear
+in the same order as the main sheet, and races keep their `council-races.csv` order within
+each.
 
 One row is one race, so the sheet is directly usable for analysis — group or filter on
 `census_id` to work at the municipality level. Remember that municipality-level values are
@@ -46,7 +49,8 @@ Repetition is the thing that can go wrong quietly, so the script asserts on ever
   38-row sheet — this is what catches repeated values disagreeing within a municipality,
   which is the failure mode denormalising invites and the hardest to spot by eye;
 - `csdname` agrees between the two source files, since the join is on `census_id` alone and
-  would otherwise accept a silent disagreement.
+  would otherwise accept a silent disagreement;
+- every race with `max_votes > 1` cites a `max_votes_source` — see below.
 
 ### Columns in `election-type-ward-type.csv`, and where each comes from
 
@@ -96,8 +100,9 @@ AMO lists the office as regional-and-city. So each district returns two seats: m
 correctly coded `MMD`. But they are two separate offices on the ballot, each vote-for-one,
 so `block_vote = FALSE`. Council is the mayor plus five regional and five city councillors.
 
-Both facts live in `council-races.csv`. Votes per contest is `max_votes`. District magnitude
-is derivable by grouping on `districts` and summing seats:
+Both facts live in `council-races.csv`. Votes per contest is `max_votes`, cited row by row in
+`max_votes_source`. District magnitude is derivable by grouping on `districts` and summing
+seats:
 
 ```r
 races |>
@@ -138,6 +143,40 @@ Both deputy mayor races are single-seat, so they do not affect `block_vote` or
 
 Rows are collapsed across districts that share a structure, so Toronto is one row and
 Chatham-Kent is two. `n_districts` says how many districts a row covers.
+
+## `max_votes` is cited per race, in `max_votes_source`
+
+`source_url` documents the *districts* — how many wards, drawn how. It often says nothing
+about the ballot, so `max_votes` gets its own citation in `max_votes_source`, `;`-separated
+when it takes more than one. Both columns are hand-maintained in `council-races.csv` and
+carried through to the combined sheet unchanged; `max_votes_source` used to be emitted blank
+by `get-municipal-data.R`, so anything typed into the generated sheet was erased on the next
+run.
+
+`get-municipal-data.R` **aborts if any race with `max_votes > 1` has no
+`max_votes_source`.** Single-vote races need none: `max_votes = 1` is the default reading of
+a district that returns one seat, while a multiple-vote race is exactly the claim this file
+exists to make, and it cannot be re-derived from seat counts. Adding a block-vote race
+without a citation now fails the run rather than passing quietly.
+
+Two standards of evidence are in use, in this order of preference:
+
+1. **Direct** — the source states the elector's limit. Seven rows: Brantford ("2 (Councillors
+   in your ward)"), Guelph ("Each voter selects up to two candidates when voting"), Richmond
+   Hill ("up to two Regional Councillors" / "a local Councillor"), Waterloo ("You can vote
+   for 1 councillor to represent your ward" / "up to 2 regional councillors"), Thunder Bay
+   at-large ("voters have the option of selecting five candidates"), and Markham's regional
+   race ("Electors can vote for up to four candidates on their ballots").
+2. **Inferred from two sources** — an official statement of how many are elected in the
+   contest, plus a second source corroborating it, where no clerk publishes the ballot
+   instruction. Fourteen rows, all of them plurality-at-large contests where votes equal
+   seats: Chatham-Kent, Peterborough, Niagara Falls, Sarnia, St. Catharines, Timmins,
+   Vaughan, and the single-seat ward rows of the mixed systems.
+
+Because seats and votes coincide under block voting, `max_votes_source` and `source_url`
+are sometimes the same URL. That is not redundancy to clean up — the row stays readable on
+its own, and the two columns can diverge the moment a municipality publishes ballot
+instructions that its ward page does not.
 
 ## Result: 15 of 38 municipalities have at least one multiple-vote race
 
@@ -355,37 +394,47 @@ explicitly for a separately elected upper-tier race:
 
 ## Confidence notes
 
-Two rows rest on 2022 sources because no 2026 equivalent is published yet:
+Two rows rest partly on 2022 sources because no 2026 equivalent is published yet:
 
 - **Timmins Ward 5** — the 2022 results table states "4 to be elected" under plurality block
   voting. A referendum on changing the ward system is on the 2026 ballot, but it could not
-  take effect before 2030.
-- **Sarnia** — the two four-seat at-large contests are documented for 2022; the City's 2026
-  page lists both offices but not the seat counts.
+  take effect before 2030. The four-councillor ward is confirmed for the sitting council by
+  the City's own roster.
+- **Thunder Bay at-large** — the City's 2026 page gives "Five (5) to be elected", but the
+  statement that an elector marks five names is from CBC's 2022 coverage. Structure
+  unchanged between the two cycles.
+
+**Sarnia is no longer on this list.** Its 2026 Notice of Nomination gives the seat counts
+directly — "CITY COUNCILLOR (4)" and "CITY AND COUNTY COUNCILLOR (4)" — so the 2022 Lambton
+County record is now corroboration rather than the only evidence.
 
 Everything else is from a 2026-cycle municipal or regional page.
 
 ## Sources
 
 ### Multi-member wards
-- Brantford — [Brantford City Council (Wikipedia)](https://en.wikipedia.org/wiki/Brantford_City_Council) · [Election FAQ](https://www.brantford.ca/your-government/municipal-election/frequently-asked-questions/)
-- Guelph — [Council composition](https://guelph.ca/city-government/mayor-and-council/council-composition-and-ward-boundary-review/city-council-composition/) · [2022 Guelph municipal election (Wikipedia)](https://en.wikipedia.org/wiki/2022_Guelph_municipal_election)
-- Peterborough — [Nominations open May 1](https://www.peterborough.ca/news/posts/municipal-election-nominations-open-may-1/)
-- St. Catharines — [Ward Councillors](https://www.stcatharines.ca/council-and-administration/mayor-and-council/ward-councillors/) · [St. Catharines City Council (Wikipedia)](https://en.wikipedia.org/wiki/St._Catharines_City_Council)
-- Chatham-Kent — [2026 Municipal Election](https://www.chatham-kent.ca/localgovernment/elections/Pages/2026-Municipal-Election.aspx) (per-ward counts quoted directly) · [Ward boundary review](https://www.letstalkchatham-kent.ca/council-composition-and-ward-boundary-review) (8 wards, 14 councillors) · [Chatham Voice](https://chathamvoice.com/2025/02/11/c-k-council-votes-to-shrink/)
-- Timmins — [City Council](https://www.timmins.ca/our_services/city_hall/mayor_and_council/city_council) · [2022 Cochrane District elections (Wikipedia)](https://en.wikipedia.org/wiki/2022_Cochrane_District_municipal_elections) · [Timmins City Council (Wikipedia)](https://en.wikipedia.org/wiki/Timmins_City_Council)
+Votes-per-ballot sources are marked **[votes]**; they are the ones in `max_votes_source`.
+
+- Brantford — [Brantford City Council (Wikipedia)](https://en.wikipedia.org/wiki/Brantford_City_Council) · **[votes]** [Election FAQ](https://www.brantford.ca/your-government/municipal-election/frequently-asked-questions/) ("2 (Councillors in your ward (10 will be elected in total across all wards)")
+- Guelph — [Council composition](https://guelph.ca/city-government/mayor-and-council/council-composition-and-ward-boundary-review/city-council-composition/) · [2022 Guelph municipal election (Wikipedia)](https://en.wikipedia.org/wiki/2022_Guelph_municipal_election) · **[votes]** [Information for Voters](https://guelph.ca/city-government/mayor-and-council/municipal-elections/information-for-voters/) ("Each voter selects up to two candidates when voting")
+- Peterborough — [Nominations open May 1](https://www.peterborough.ca/news/posts/municipal-election-nominations-open-may-1/) · **[votes]** [2026 Candidate Guide Part B](https://www.peterborough.ca/media/05bjtmf3/2026-candidates-guide-part-b.pdf) ("Two to be elected for Ward 1 (Otonabee)", and so on for all five)
+- St. Catharines — [Ward Councillors](https://www.stcatharines.ca/council-and-administration/mayor-and-council/ward-councillors/) · [St. Catharines City Council (Wikipedia)](https://en.wikipedia.org/wiki/St._Catharines_City_Council) · **[votes]** [2026 Niagara Region municipal elections (Wikipedia)](https://en.wikipedia.org/wiki/2026_Niagara_Region_municipal_elections) ("Two to be elected in each ward")
+- Chatham-Kent — [2026 Municipal Election](https://www.chatham-kent.ca/localgovernment/elections/Pages/2026-Municipal-Election.aspx) (per-ward counts quoted directly) · [Ward boundary review](https://www.letstalkchatham-kent.ca/council-composition-and-ward-boundary-review) (8 wards, 14 councillors) · [Chatham Voice](https://chathamvoice.com/2025/02/11/c-k-council-votes-to-shrink/) · **[votes]** [2026 Election Procedures](https://www.chatham-kent.ca/localgovernment/elections/Documents/2026%20Resource%20Documents/Chatham-Kent%20Municipal%20Election%20Procedures.pdf) ("Councillor, Ward 1 – 2 positions" … "Ward 3 – 1 position")
+- Timmins — **[votes]** [City Council](https://www.timmins.ca/our_services/city_hall/mayor_and_council/city_council) (four councillors listed under Ward 5) · [2022 Cochrane District elections (Wikipedia)](https://en.wikipedia.org/wiki/2022_Cochrane_District_municipal_elections) · **[votes]** [Timmins City Council (Wikipedia)](https://en.wikipedia.org/wiki/Timmins_City_Council) ("Four councillors represent Ward 5, while the other wards are represented by a single councillor each")
 
 ### At-large block vote
-- Niagara Falls — [2026 Municipal Election](https://niagarafalls.ca/city-government/elections/2026-municipal-election/) · [Niagara Falls City Council (Wikipedia)](https://en.wikipedia.org/wiki/Niagara_Falls_City_Council)
+- Niagara Falls — [2026 Municipal Election](https://niagarafalls.ca/city-government/elections/2026-municipal-election/) ("To be elected: 8") · [Niagara Falls City Council (Wikipedia)](https://en.wikipedia.org/wiki/Niagara_Falls_City_Council) · **[votes]** [2026 Voting Methods, Let's Talk Niagara Falls](https://letstalk.niagarafalls.ca/voting-2026) ("City Councillors: Eight (8) to be elected at large") · **[votes]** [2026 Niagara Region municipal elections (Wikipedia)](https://en.wikipedia.org/wiki/2026_Niagara_Region_municipal_elections)
 - Niagara regional councillors abolished for 2026 — [Niagara Region, Governance Changes](https://www.niagararegion.ca/government/council/governance-changes.aspx) ("Starting with the October 2026 election, the independently elected Regional Councillors will be eliminated") · [2026 Niagara Region municipal elections (Wikipedia)](https://en.wikipedia.org/wiki/2026_Niagara_Region_municipal_elections) · [St. Catharines Registered Candidates](https://www.stcatharines.ca/council-and-administration/elections/registered-candidates/) (no Regional Councillor office)
 - Mississauga upper-tier — [Peel Regional Council (Wikipedia)](https://en.wikipedia.org/wiki/Peel_Regional_Council) · [Guide to Peel Region Council](https://peelregion.ca/sites/default/files/2026-04/guide-to-peel-regional-council.pdf) (all Mississauga councillors are also regional councillors)
 - Simcoe County upper-tier — [2022 Simcoe County municipal elections (Wikipedia)](https://en.wikipedia.org/wiki/2022_Simcoe_County_municipal_elections) (county council is the mayors and deputy mayors, ex officio)
-- Sarnia — [2026 Election](https://www.sarnia.ca/city-government/elections/2026-election/) · [2022 Lambton County elections (Wikipedia)](https://en.wikipedia.org/wiki/2022_Lambton_County_municipal_elections) (two separate "Four to be elected" races) · [Sarnia City Council (Wikipedia)](https://en.wikipedia.org/wiki/Sarnia_City_Council)
-- Thunder Bay — [CBC election day guide](https://www.cbc.ca/news/canada/thunder-bay/election-day-guide-1.6625475) · [Thunder Bay City Council (Wikipedia)](https://en.wikipedia.org/wiki/Thunder_Bay_City_Council)
-- Kitchener / Cambridge / Waterloo regional councillors — [2026 Waterloo Region municipal elections (Wikipedia)](https://en.wikipedia.org/wiki/2026_Waterloo_Region_municipal_elections) (Kitchener 4, Cambridge 2, Waterloo 2) · [Global News, voting in the Kitchener municipal election](https://globalnews.ca/news/9217224/kitchener-municipal-election-everything-need-to-know/) ("you can vote for four regional councillor candidates") · [Region of Waterloo 2026 election](https://www.regionofwaterloo.ca/government-and-council/elections/2026-municipal-election/)
-- Markham — [About Local Government](https://www.electionsmarkham.ca/en/about-us/about-local-government/) · [Markham City Council (Wikipedia)](https://en.wikipedia.org/wiki/Markham_City_Council)
-- Vaughan — [Vaughan City Council (Wikipedia)](https://en.wikipedia.org/wiki/Vaughan_City_Council) · [NewmarketToday, York Region winners](https://www.newmarkettoday.ca/2022-municipal-election-news/heres-a-look-at-municipal-election-winners-around-york-region-6004844)
-- Richmond Hill — [Voter Information](https://www.richmondhill.ca/en/living-here/voter-information.aspx) ("up to two" Regional Councillors) · [Richmond Hill City Council (Wikipedia)](https://en.wikipedia.org/wiki/Richmond_Hill_City_Council)
+- Sarnia — [2026 Election](https://www.sarnia.ca/city-government/elections/2026-election/) · **[votes]** [2026 Notice of Nomination](https://www.sarnia.ca/public-notices/notice-of-nomination-avis-de-candidature-au-poste-2026-municipal-election/) ("CITY COUNCILLOR (4)", "CITY AND COUNTY COUNCILLOR (4)") · **[votes]** [2022 Lambton County elections (Wikipedia)](https://en.wikipedia.org/wiki/2022_Lambton_County_municipal_elections) (two separate "Four to be elected" races) · [Sarnia City Council (Wikipedia)](https://en.wikipedia.org/wiki/Sarnia_City_Council)
+- Thunder Bay — **[votes]** [2026 Municipal Election](https://www.thunderbay.ca/en/city-hall/2026-municipal-election.aspx) ("Five (5) to be elected" at large; one per ward) · **[votes]** [CBC, at-large candidates forum](https://www.cbc.ca/news/canada/thunder-bay/thunder-bay-at-large-candidates-forum-1.6609355) ("In the at-large contest, voters have the option of selecting five candidates") · [CBC election day guide](https://www.cbc.ca/news/canada/thunder-bay/election-day-guide-1.6625475) · **[votes]** [Thunder Bay City Council (Wikipedia)](https://en.wikipedia.org/wiki/Thunder_Bay_City_Council) (one councillor per ward)
+- Kitchener / Cambridge / Waterloo regional councillors — [2026 Waterloo Region municipal elections (Wikipedia)](https://en.wikipedia.org/wiki/2026_Waterloo_Region_municipal_elections) (Kitchener 4, Cambridge 2, Waterloo 2) · [Global News, voting in the Kitchener municipal election](https://globalnews.ca/news/9217224/kitchener-municipal-election-everything-need-to-know/) ("you can vote for four regional councillor candidates") · [Region of Waterloo 2026 election](https://www.regionofwaterloo.ca/government-and-council/elections/2026-municipal-election/) · **[votes]** [Waterloo, Find election candidates](https://www.waterloo.ca/council-and-committees/municipal-elections/find-election-candidates/) ("You can vote for 1 councillor to represent your ward"; "up to 2 regional councillors")
+- Markham — [Regional & Ward Councillors](https://www.markham.ca/about-the-city-of-markham/city-hall/regional-ward-councillors) ("The Mayor and 4 Regional Councillors are elected by the community"; 8 ward councillors) · [Markham City Council (Wikipedia)](https://en.wikipedia.org/wiki/Markham_City_Council) · **[votes]** [2026 York Region municipal elections (Wikipedia)](https://en.wikipedia.org/wiki/2026_York_Region_municipal_elections) ("Electors can vote for up to four candidates on their ballots, equal to the total number that may be elected")
+  - The old citation, `electionsmarkham.ca/en/about-us/about-local-government/`, now redirects to `markham.ca/elections`, which does not carry the structure. It was the `source_url` for the regional race and has been replaced there too.
+- Vaughan — **[votes]** [What you need to know about the 2026 Municipal Election](https://www.vaughan.ca/news/what-you-need-know-about-2026-municipal-election) ("Local and Regional Councillor (four elected at large)", then one councillor for each of Wards 1–5) · [Vaughan City Council (Wikipedia)](https://en.wikipedia.org/wiki/Vaughan_City_Council) · **[votes]** [2026 York Region municipal elections (Wikipedia)](https://en.wikipedia.org/wiki/2026_York_Region_municipal_elections) ("Four to be elected") · [NewmarketToday, York Region winners](https://www.newmarkettoday.ca/2022-municipal-election-news/heres-a-look-at-municipal-election-winners-around-york-region-6004844)
+  - vaughan.ca returns 403 to scripted fetches; the page was read in a browser.
+- Richmond Hill — **[votes]** [Voter Information](https://www.richmondhill.ca/en/living-here/voter-information.aspx) ("up to two Regional Councillors"; "a local Councillor") · [Richmond Hill City Council (Wikipedia)](https://en.wikipedia.org/wiki/Richmond_Hill_City_Council)
 
 ### Vote-for-one despite MMD / Mixed coding
 - Ajax — [Ajax Elections, Voters](https://elections.ajax.ca/voters) (3 wards) · [Meet Your Mayor & Council](https://ajax.ca/town-hall/leadership-council/mayor-council/meet-your-mayor-council) (7 members; regional councillors sit on Town Council) · [2016 Council Composition and Ward Boundary Review](https://www.ajax.ca/en/inside-townhall/resources/Documents/GGC-Jun-13-2016-Report---Ajax-Council-Composition-and-Ward-Boundary-Review.pdf)
