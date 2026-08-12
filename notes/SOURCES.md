@@ -8,10 +8,10 @@ material was not yet published, the 2022 structure is used and flagged as such b
 ## Where these files live
 
 Everything is in the **`on26-candidate-data`** repo: these notes in `notes/`, and the
-script that reads and writes them at `R/get-municipal-data.R`.
+script that reads and writes them at `scripts/get-municipal-data.R`.
 
-- **Usage:** `Rscript R/get-municipal-data.R`. Like `R/parse-js.R`, it locates the repo
-  root from its own path, so it runs from any working directory.
+- **Usage:** `Rscript scripts/get-municipal-data.R`. Like `scripts/parse-js.R`, it locates
+  the repo root from its own path, so it runs from any working directory.
 - `council-races.csv` and `classification-overrides.csv` are hand-maintained and never
   generated. `election-type-ward-type.csv` and `councillor-election-structure.csv` **are**
   generated — do not hand-edit either; every run overwrites them. Both source columns,
@@ -27,7 +27,7 @@ script that reads and writes them at `R/get-municipal-data.R`.
 `election-type-ward-type.csv` — one row per municipality, 38 rows. The municipality-level
 summary.
 
-`councillor-election-structure.csv` — **everything in one sheet**: one row per race, 59 rows,
+`councillor-election-structure.csv` — **everything in one sheet**: one row per race, 56 rows,
 with each municipality's attributes repeated across all of its rows. Municipality columns
 first (`census_id`, `csdname`, `provider`, `pop_2021`, `election_type`, `ward_type`,
 `block_vote`, `max_votes_max`, `revised`, `revision_source`), then the race columns
@@ -118,11 +118,11 @@ districts overlap (Clarington), magnitude varies within a municipality (Chatham-
 Bay). Any such check would fire on all three without a real error. Instead
 `get-municipal-data.R` verifies that councillor seats implied by `council-races.csv` equal
 `council_size - 1` in the master list, which is unambiguous and catches the same class of
-typo. Five municipalities deviate for known reasons and are listed as documented
+typo. Six municipalities deviate for known reasons and are listed as documented
 exceptions in the script — regional councillors who sit on regional rather than city
 council (Cambridge, Kitchener, Waterloo), and stale `council_size` values (Chatham-Kent,
-Haldimand County). Bradford West Gwillimbury and Innisfil were exceptions until their
-deputy mayor races were added; modelling those seats made both reconcile exactly.
+Haldimand County, New Tecumseth). Innisfil was an exception until its deputy mayor race
+was added; modelling that seat made it reconcile exactly.
 
 The same reasoning applies to Milton, Oakville, Oshawa, Pickering, Clarington and Ajax: all
 are genuinely multi-member in seats and genuinely vote-for-one on the ballot.
@@ -169,8 +169,8 @@ Two standards of evidence are in use, in this order of preference:
    race ("Electors can vote for up to four candidates on their ballots").
 2. **Inferred from two sources** — an official statement of how many are elected in the
    contest, plus a second source corroborating it, where no clerk publishes the ballot
-   instruction. Fourteen rows, all of them plurality-at-large contests where votes equal
-   seats: Chatham-Kent, Peterborough, Niagara Falls, Sarnia, St. Catharines, Timmins,
+   instruction. Thirteen rows, all of them plurality-at-large contests where votes equal
+   seats: Chatham-Kent, Peterborough, Niagara Falls, North Bay, Sarnia, St. Catharines,
    Vaughan, and the single-seat ward rows of the mixed systems.
 
 Because seats and votes coincide under block voting, `max_votes_source` and `source_url`
@@ -189,12 +189,12 @@ instructions that its ward page does not.
 | Peterborough | 5 wards × 2 councillors | 2 |
 | St. Catharines | 6 wards × 2 city councillors | 2 |
 | Chatham-Kent | 8 wards for 2026; Wards 1, 2, 5, 6, 7, 8 elect 2, Wards 3 & 4 elect 1 | 1 or 2 by ward |
-| Timmins | Ward 5 elects 4 by plurality block vote; Wards 1–4 elect 1 each | 4 in Ward 5 only |
 
 ### At-large block vote
 
 | Municipality | Structure | Votes |
 |---|---|---|
+| North Bay | 10 councillors, whole council, one contest, no wards at all | 10 |
 | Niagara Falls | 8 councillors, whole council, one contest | 8 |
 | Thunder Bay | 5 at-large councillors + 7 single-member wards | 5 |
 | Sarnia | two separate at-large contests: 4 City Councillors, 4 City-County Councillors | 4 in each |
@@ -360,13 +360,17 @@ been corrected to `2`.)
 - **`cmb_muns.csv` `council_size` for Chatham-Kent is 18**, reflecting the pre-2026 six-ward
   structure. The 2026 structure is 8 wards and 14 councillors plus the mayor.
 - **`cmb_muns.csv` has a `magnitude` column** that is close to `seats_per_district`, but it
-  reads `Mixed` for exactly the municipalities that matter (Chatham-Kent, Timmins, Markham,
+  reads `Mixed` for exactly the municipalities that matter (Chatham-Kent, Markham,
   Vaughan, Richmond Hill, Thunder Bay) and never distinguishes seats from votes.
   `council-races.csv` resolves those cases rather than duplicating the column.
 - **Aurora and Haldimand County both changed structure for 2026** — Aurora to a six-ward
   system, Haldimand from six wards to seven. Both remain one councillor per ward, so
   `ward_type` stays correct either way, but Haldimand's `council_size` of 7 still reflects
   six wards; for 2026 it is 8 (mayor plus seven).
+- **New Tecumseth cut its wards from eight to seven for 2026** (Ward Boundary By-law
+  2025-052, adopted 2025-06-16), so master `council_size` of 10 is the old structure. For
+  2026 it is 9: mayor, directly elected deputy mayor, and one councillor in each of seven
+  wards. One councillor per ward either way, so `ward_type` is unaffected.
 
 ## Upper-tier coverage: verified complete
 
@@ -384,22 +388,19 @@ explicitly for a separately elected upper-tier race:
     councillor; same people, one race, no separate ballot line.
   - *Aurora* — no separate seat; the mayor holds Aurora's York Region seat.
   - *Niagara Falls, St. Catharines* — abolished for 2026, see above.
-  - *Bradford West Gwillimbury, Innisfil* — Simcoe County council is the mayors and deputy
+  - *Innisfil, New Tecumseth* — Simcoe County council is the mayors and deputy
     mayors of its 16 member municipalities, ex officio. There is no separate county
     councillor race; the county seat is the directly elected deputy mayor, which is
     recorded in `council-races.csv` with `deputy_mayor = TRUE`.
 - **Single-tier, no upper tier at all**: Barrie, Brantford, Chatham-Kent, Greater Sudbury,
-  Guelph, Haldimand County, Hamilton, Kingston, London, Ottawa, Peterborough, Thunder Bay,
-  Timmins, Toronto, Windsor.
+  Guelph, Haldimand County, Hamilton, Kingston, London, North Bay, Ottawa, Peterborough,
+  Thunder Bay, Toronto, Windsor. North Bay is in Nipissing District, which is a geographic
+  district rather than a municipal upper tier, so there is no district council to elect to.
 
 ## Confidence notes
 
-Two rows rest partly on 2022 sources because no 2026 equivalent is published yet:
+One row rests partly on a 2022 source because no 2026 equivalent is published yet:
 
-- **Timmins Ward 5** — the 2022 results table states "4 to be elected" under plurality block
-  voting. A referendum on changing the ward system is on the 2026 ballot, but it could not
-  take effect before 2030. The four-councillor ward is confirmed for the sitting council by
-  the City's own roster.
 - **Thunder Bay at-large** — the City's 2026 page gives "Five (5) to be elected", but the
   statement that an elector marks five names is from CBC's 2022 coverage. Structure
   unchanged between the two cycles.
@@ -420,9 +421,10 @@ Votes-per-ballot sources are marked **[votes]**; they are the ones in `max_votes
 - Peterborough — [Nominations open May 1](https://www.peterborough.ca/news/posts/municipal-election-nominations-open-may-1/) · **[votes]** [2026 Candidate Guide Part B](https://www.peterborough.ca/media/05bjtmf3/2026-candidates-guide-part-b.pdf) ("Two to be elected for Ward 1 (Otonabee)", and so on for all five)
 - St. Catharines — [Ward Councillors](https://www.stcatharines.ca/council-and-administration/mayor-and-council/ward-councillors/) · [St. Catharines City Council (Wikipedia)](https://en.wikipedia.org/wiki/St._Catharines_City_Council) · **[votes]** [2026 Niagara Region municipal elections (Wikipedia)](https://en.wikipedia.org/wiki/2026_Niagara_Region_municipal_elections) ("Two to be elected in each ward")
 - Chatham-Kent — [2026 Municipal Election](https://www.chatham-kent.ca/localgovernment/elections/Pages/2026-Municipal-Election.aspx) (per-ward counts quoted directly) · [Ward boundary review](https://www.letstalkchatham-kent.ca/council-composition-and-ward-boundary-review) (8 wards, 14 councillors) · [Chatham Voice](https://chathamvoice.com/2025/02/11/c-k-council-votes-to-shrink/) · **[votes]** [2026 Election Procedures](https://www.chatham-kent.ca/localgovernment/elections/Documents/2026%20Resource%20Documents/Chatham-Kent%20Municipal%20Election%20Procedures.pdf) ("Councillor, Ward 1 – 2 positions" … "Ward 3 – 1 position")
-- Timmins — **[votes]** [City Council](https://www.timmins.ca/our_services/city_hall/mayor_and_council/city_council) (four councillors listed under Ward 5) · [2022 Cochrane District elections (Wikipedia)](https://en.wikipedia.org/wiki/2022_Cochrane_District_municipal_elections) · **[votes]** [Timmins City Council (Wikipedia)](https://en.wikipedia.org/wiki/Timmins_City_Council) ("Four councillors represent Ward 5, while the other wards are represented by a single councillor each")
 
 ### At-large block vote
+- North Bay — **[votes]** [Municipal Elections](https://northbay.ca/city-government/municipal-elections/) ("Voters elect: One Mayor, Ten City Councillors, School Board Trustees") · **[votes]** [North Bay City Council (Wikipedia)](https://en.wikipedia.org/wiki/North_Bay_City_Council) ("North Bay does not elect its council on a ward system. Instead, all councillors are elected at-large, and the ten candidates with the most votes are declared elected to council") · [2026 Nipissing District municipal elections (Wikipedia)](https://en.wikipedia.org/wiki/2026_Nipissing_District_municipal_elections) ("10 to be elected", one council race for the whole city)
+  - North Bay's deputy mayor is not a ballot line: the councillor with the most votes takes the role, so the only council contest is the ten-seat at-large race.
 - Niagara Falls — [2026 Municipal Election](https://niagarafalls.ca/city-government/elections/2026-municipal-election/) ("To be elected: 8") · [Niagara Falls City Council (Wikipedia)](https://en.wikipedia.org/wiki/Niagara_Falls_City_Council) · **[votes]** [2026 Voting Methods, Let's Talk Niagara Falls](https://letstalk.niagarafalls.ca/voting-2026) ("City Councillors: Eight (8) to be elected at large") · **[votes]** [2026 Niagara Region municipal elections (Wikipedia)](https://en.wikipedia.org/wiki/2026_Niagara_Region_municipal_elections)
 - Niagara regional councillors abolished for 2026 — [Niagara Region, Governance Changes](https://www.niagararegion.ca/government/council/governance-changes.aspx) ("Starting with the October 2026 election, the independently elected Regional Councillors will be eliminated") · [2026 Niagara Region municipal elections (Wikipedia)](https://en.wikipedia.org/wiki/2026_Niagara_Region_municipal_elections) · [St. Catharines Registered Candidates](https://www.stcatharines.ca/council-and-administration/elections/registered-candidates/) (no Regional Councillor office)
 - Mississauga upper-tier — [Peel Regional Council (Wikipedia)](https://en.wikipedia.org/wiki/Peel_Regional_Council) · [Guide to Peel Region Council](https://peelregion.ca/sites/default/files/2026-04/guide-to-peel-regional-council.pdf) (all Mississauga councillors are also regional councillors)
@@ -451,7 +453,6 @@ Votes-per-ballot sources are marked **[votes]**; they are the ones in `max_votes
 (Ajax is listed above — it is MMD, not SMD.)
 - Aurora — [Aurora's Ward System](https://www.aurora.ca/your-government/elections-2026/auroras-ward-system/) (6 wards) · [York Regional Council (Wikipedia)](https://en.wikipedia.org/wiki/York_Regional_Council) (no separate regional seat)
 - Barrie — [City Council](https://www.barrie.ca/government-news/mayor-council-committees/city-council) (10)
-- Bradford West Gwillimbury — [Council Members](https://www.townofbwg.com/town-hall/council/council-members/) (7)
 - Burlington — [Council Members and Wards](https://www.burlington.ca/en/council-and-city-administration/council-members-and-wards.aspx) (6)
 - Cambridge — [Cambridge City Council (Wikipedia)](https://en.wikipedia.org/wiki/Cambridge_City_Council_(Ontario)) (8)
 - Greater Sudbury — [City Council](https://www.greatersudbury.ca/city-hall/mayor-and-council/city-council/) (12)
@@ -462,6 +463,7 @@ Votes-per-ballot sources are marked **[votes]**; they are the ones in `max_votes
 - Kitchener — [Kitchener City Council (Wikipedia)](https://en.wikipedia.org/wiki/Kitchener_City_Council) (10)
 - London — [2026 London municipal election (Wikipedia)](https://en.wikipedia.org/wiki/2026_London,_Ontario,_municipal_election) (14)
 - Mississauga — [Mississauga City Council (Wikipedia)](https://en.wikipedia.org/wiki/Mississauga_City_Council) (11)
+- New Tecumseth — [2026 Notice of Nomination for Office](https://www.newtecumseth.ca/en/news/2026-notice-of-nomination-for-office.aspx) ("Ward Councillor – One (1) to be elected in each of the seven (7) wards"; "Deputy Mayor – One (1) to be elected at large") · [New Tecumseth Votes](https://www.newtecumseth.ca/government/new-tecumseth-votes/) (Ward Boundary By-law 2025-052 established the seven-ward configuration for 2026, down from eight)
 - Ottawa — [Voting for Mayor and City Councillor](https://ottawa.ca/en/city-hall/elections/voters/voting-mayor-and-city-councillor) (24)
 - Toronto — [2026 Toronto municipal election (Wikipedia)](https://en.wikipedia.org/wiki/2026_Toronto_municipal_election) (25)
 - Waterloo — [Find your councillor and ward](https://www.waterloo.ca/council-and-committees/mayor-and-city-council/find-your-councillor-and-ward/) (7)

@@ -3,8 +3,6 @@ census_id,csdname,office,deputy_mayor,district_scope,districts,n_districts,seats
 3518005,Ajax,"Councillor, Local",FALSE,Ward,Wards 1-3,3,1,1,https://elections.ajax.ca/voters,
 3519046,Aurora,"Councillor, Ward",FALSE,Ward,Wards 1-6,6,1,1,https://www.aurora.ca/your-government/elections-2026/auroras-ward-system/; https://www.aurora.ca/your-government/council-members/,
 3543042,Barrie,Councillor,FALSE,Ward,Wards 1-10,10,1,1,https://www.barrie.ca/government-news/mayor-council-committees/city-council,
-3543014,Bradford West Gwillimbury,Councillor,FALSE,Ward,Wards 1-7,7,1,1,https://www.townofbwg.com/town-hall/council/council-members/,
-3543014,Bradford West Gwillimbury,Deputy Mayor,TRUE,At-large,At-large,1,1,1,https://www.townofbwg.com/town-hall/council/council-members/,
 3521010,Brampton,"Councillor, Regional",FALSE,Ward-pair,1&5;2&6;3&4;7&8;9&10,5,1,1,https://elections2022.amo.on.ca/web/en/municipal/10108; https://www.brampton.ca/EN/City-Hall/Election,
 3521010,Brampton,"Councillor, City",FALSE,Ward-pair,1&5;2&6;3&4;7&8;9&10,5,1,1,https://www.brampton.ca/EN/City-Hall/election/Documents/2022%20Brampton%20Municipal%20Election%20-%20Official%20Results.pdf,
 3529006,Brantford,Councillor,FALSE,Ward,Wards 1-5,5,2,2,https://www.brantford.ca/your-government/city-council/,https://www.brantford.ca/your-government/municipal-election/frequently-asked-questions/
@@ -30,7 +28,10 @@ census_id,csdname,office,deputy_mayor,district_scope,districts,n_districts,seats
 3524009,Milton,"Councillor, Regional",FALSE,Ward,Wards 1-4,4,1,1,https://www.milton.ca/en/news/nominations-for-the-2026-municipal-election-open-may-1.aspx,
 3524009,Milton,"Councillor, Town",FALSE,Ward,Wards 1-4,4,1,1,https://www.milton.ca/en/news/nominations-for-the-2026-municipal-election-open-may-1.aspx,
 3521005,Mississauga,Councillor,FALSE,Ward,Wards 1-11,11,1,1,https://mississaugavotes.ca/2026-municipal-election/for-voters/whos-running/,
+3543007,New Tecumseth,Councillor,FALSE,Ward,Wards 1-7,7,1,1,https://www.newtecumseth.ca/en/news/2026-notice-of-nomination-for-office.aspx; https://www.newtecumseth.ca/government/new-tecumseth-votes/,
+3543007,New Tecumseth,Deputy Mayor,TRUE,At-large,At-large,1,1,1,https://www.newtecumseth.ca/en/news/2026-notice-of-nomination-for-office.aspx,
 3526043,Niagara Falls,Councillor,FALSE,At-large,At-large,1,8,8,https://niagarafalls.ca/city-government/elections/2026-municipal-election/,https://letstalk.niagarafalls.ca/voting-2026; https://en.wikipedia.org/wiki/2026_Niagara_Region_municipal_elections
+3548044,North Bay,Councillor,FALSE,At-large,At-large,1,10,10,https://northbay.ca/city-government/municipal-elections/,https://northbay.ca/city-government/municipal-elections/; https://en.wikipedia.org/wiki/North_Bay_City_Council
 3524001,Oakville,"Councillor, Town",FALSE,Ward,Wards 1-7,7,1,1,https://www.oakville.ca/town-hall/elections/voters/offices-to-be-elected/,
 3524001,Oakville,"Councillor, Town and Region of Halton",FALSE,Ward,Wards 1-7,7,1,1,https://www.oakville.ca/town-hall/elections/voters/offices-to-be-elected/,
 3518013,Oshawa,"Councillor, Regional and City",FALSE,Ward,Wards 1-5,5,1,1,https://www.oshawa.ca/city-hall/elections/registered-candidates/,
@@ -46,8 +47,6 @@ census_id,csdname,office,deputy_mayor,district_scope,districts,n_districts,seats
 3526053,St. Catharines,"Councillor, City",FALSE,Ward,Wards 1-6,6,2,2,https://www.stcatharines.ca/council-and-administration/mayor-and-council/ward-councillors/,https://en.wikipedia.org/wiki/2026_Niagara_Region_municipal_elections; https://www.stcatharines.ca/council-and-administration/mayor-and-council/ward-councillors/
 3558004,Thunder Bay,"Councillor, At-Large",FALSE,At-large,At-large,1,5,5,https://www.thunderbay.ca/en/city-hall/2026-municipal-election.aspx#At-Large-Councillor-Five-5-to-be-elected,https://www.thunderbay.ca/en/city-hall/2026-municipal-election.aspx; https://www.cbc.ca/news/canada/thunder-bay/thunder-bay-at-large-candidates-forum-1.6609355
 3558004,Thunder Bay,"Councillor, Ward",FALSE,Ward,Current River;McIntyre;McKellar;Neebing;Northwood;Red River;Westfort,7,1,1,https://www.thunderbay.ca/en/city-hall/2026-municipal-election.aspx#At-Large-Councillor-Five-5-to-be-elected,https://www.thunderbay.ca/en/city-hall/2026-municipal-election.aspx; https://en.wikipedia.org/wiki/Thunder_Bay_City_Council
-3556027,Timmins,Councillor,FALSE,Ward,Ward 5,1,4,4,https://timmins.civicweb.net/filepro/documents/26043/?preview=216073,https://www.timmins.ca/our_services/city_hall/mayor_and_council/city_council; https://en.wikipedia.org/wiki/Timmins_City_Council
-3556027,Timmins,Councillor,FALSE,Ward,Wards 1-4,4,1,1,https://timmins.civicweb.net/filepro/documents/26043/?preview=216073,https://www.timmins.ca/our_services/city_hall/mayor_and_council/city_council; https://en.wikipedia.org/wiki/Timmins_City_Council
 3520005,Toronto,Councillor,FALSE,Ward,Wards 1-25,25,1,1,https://www.toronto.ca/city-government/elections/candidate-list/,
 3519028,Vaughan,"Councillor, Local and Regional",FALSE,At-large,At-large,1,4,4,https://www.vaughan.ca/news/what-you-need-know-about-2026-municipal-election,https://www.vaughan.ca/news/what-you-need-know-about-2026-municipal-election; https://en.wikipedia.org/wiki/2026_York_Region_municipal_elections
 3519028,Vaughan,"Councillor, Ward",FALSE,Ward,Wards 1-5,5,1,1,https://www.vaughan.ca/news/what-you-need-know-about-2026-municipal-election,https://www.vaughan.ca/news/what-you-need-know-about-2026-municipal-election; https://en.wikipedia.org/wiki/2026_York_Region_municipal_elections
