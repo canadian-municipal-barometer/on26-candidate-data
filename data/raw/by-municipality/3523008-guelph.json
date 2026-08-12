@@ -1,0 +1,94 @@
+{
+  "census_id": "3523008",
+  "csdname": "Guelph",
+  "name_format": "last_first",
+  "candidate_list_url": "https://guelph.ca/city-government/mayor-and-council/municipal-elections/candidates-of-the-2026-municipal-and-school-board-election/",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url is the council-composition page; the candidate list sits under the Municipal Elections section.",
+    "name_quirk": "One mayoral candidate is published as 'Ramos, Jr., Evaristo' - the suffix carries its own comma, so the surname is 'Ramos, Jr.' and the given name 'Evaristo'.",
+    "structure_match": "6 ward tables published, matching n_districts=6 in the structure CSV (2 seats per ward, vote-for-2)."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Caron, Leanne",
+            "Chew, Ken Yee",
+            "Meunier, Ryan",
+            "Ramos, Jr., Evaristo"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 6,
+        "seats": 2,
+        "max_votes": 2,
+        "block_vote": true,
+        "districts": {
+          "Ward 1": [
+            "Gibson, Dan",
+            "Kaufmann, Daniel",
+            "Lambert, Marcel Dion",
+            "Martens, Owen",
+            "Silva, Evan",
+            "Williams, Dave",
+            "Zuberi, Mustafa"
+          ],
+          "Ward 2": [
+            "Bowman, Michelle",
+            "Bridgeman, Troy",
+            "Cox, Greg",
+            "Dandie, Morgan",
+            "Fry, Kim",
+            "Goller, Rodrigo",
+            "Mann, Barbara",
+            "Purves, Alec"
+          ],
+          "Ward 3": [
+            "Allt, Phil",
+            "Bowman, Kevin",
+            "Jennings, Ross",
+            "Maldonado, Annika",
+            "Williams, Marty"
+          ],
+          "Ward 4": [
+            "Busuttil, Linda",
+            "Clark, Brendan",
+            "Guite, Jesse",
+            "Malik, Ali",
+            "McCaughan, Derek"
+          ],
+          "Ward 5": [
+            "Agueci, Michael",
+            "Arnott, Xandine",
+            "Cawsey, Greg",
+            "Cherry, Dakota",
+            "Christensen, Jon",
+            "Doran, James",
+            "Downer, Cathy",
+            "Harris, Wesley"
+          ],
+          "Ward 6": [
+            "Adam, Rebecca",
+            "Coulis, Shane",
+            "Devos, Luke",
+            "Hauser, Katherine",
+            "McQuillen, Laura"
+          ]
+        }
+      }
+    ]
+  }
+}

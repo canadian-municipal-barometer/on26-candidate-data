@@ -1,0 +1,93 @@
+{
+  "census_id": "3558004",
+  "csdname": "Thunder Bay",
+  "name_format": "first_last",
+  "candidate_list_url": "https://www.thunderbay.ca/en/city-hall/2026-municipal-election.aspx",
+  "notes": {
+    "list_status": "The page states outright that those listed 'are not official candidates until their nomination has been certified by the City Clerk', before 16:00 on 2026-08-24.",
+    "source_note": "district_source_url is itself the candidate list; races are accordions.",
+    "parse_check": "Some names are split across nested tags (e.g. 'Stéphane Léonard Kuziora', 'Volker Kromm'), so a <strong>-based parse fragmented them and overcounted the mayoral race as 9. Names were rebuilt by walking child nodes and flushing at each phone/email boundary, giving 8 mayoral candidates.",
+    "structure_match": "The page's own headings read 'At Large Councillor - Five (5) to be elected' and name seven single-member wards (Current River, McIntyre, McKellar, Neebing, Northwood, Red River, Westfort). This independently confirms both structure-CSV rows, including max_votes=5 for the at-large race, which SOURCES.md had flagged as resting partly on 2022 sources."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Trevor Giertuga",
+            "Maureen (Moe) Comuzzi",
+            "Volker Kromm",
+            "Peter Mark John Diedrich",
+            "Clinton Harris",
+            "Donald Baxter",
+            "Shane Judge",
+            "Aldo Ruberto"
+          ]
+        }
+      }
+    ],
+    "atlarge": [
+      {
+        "office": "Councillor, At-Large",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 5,
+        "max_votes": 5,
+        "block_vote": true,
+        "districts": {
+          "At-large": [
+            "Kasey Taylor Etreni",
+            "Robert Trevisan",
+            "Peng You",
+            "Dino Menei",
+            "Mark Bentz",
+            "Gary Christian",
+            "Jamie Nichols"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor, Ward",
+        "scope": "Ward",
+        "n_districts": 7,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": true,
+        "districts": {
+          "Current River": [
+            "Andrew Foulds",
+            "Stéphane Léonard Kuziora"
+          ],
+          "McIntyre": [
+            "Albert Aiello"
+          ],
+          "McKellar": [
+            "Donna Lee Morettin",
+            "Brian Hamilton"
+          ],
+          "Neebing": [
+            "Greg Johnsen"
+          ],
+          "Northwood": [
+            "André Gagné",
+            "Syed Kabir"
+          ],
+          "Red River": [
+            "Cory Bagdon"
+          ],
+          "Westfort": [
+            "Stephen Margarit"
+          ]
+        }
+      }
+    ]
+  }
+}

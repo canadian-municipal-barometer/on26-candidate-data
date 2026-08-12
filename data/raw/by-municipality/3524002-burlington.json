@@ -1,0 +1,77 @@
+{
+  "census_id": "3524002",
+  "csdname": "Burlington",
+  "name_format": "first_last",
+  "candidate_list_url": "https://myvote.burlington.ca/for-voters/list-of-candidates/",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url is the council-members-and-wards page. Burlington moved all 2026 election content to a separate site, myvote.burlington.ca; the list of candidates lives there. The city's own elections.aspx page no longer links a candidate list directly.",
+    "race_type_choice": "Burlington's single councillor race is 'City and Regional Councillor' - one ward-based contest whose winners sit on both councils. It is filed under 'ward' because it is the municipality's only ward council race, not under 'regional councillor'.",
+    "structure_match": "6 ward tables published, matching n_districts=6 in the structure CSV."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Keith Demoe",
+            "Lisa Kearns",
+            "Marianne Meed Ward",
+            "Rory Nisan"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor, City and Regional",
+        "scope": "Ward",
+        "n_districts": 6,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Kelvin Galbraith",
+            "Cheryl Hurst",
+            "Robert Radway"
+          ],
+          "Ward 2": [
+            "Masha Brar",
+            "Sean Campbell",
+            "Gary Carr",
+            "Jeremy Gaetan"
+          ],
+          "Ward 3": [
+            "Tony Brecknock",
+            "Mark Carr",
+            "Kyle Hutton",
+            "Katy Moore"
+          ],
+          "Ward 4": [
+            "Chris Carter",
+            "Olivia Duke"
+          ],
+          "Ward 5": [
+            "Kristy Dickinson",
+            "Alex Don",
+            "Paul Sharman"
+          ],
+          "Ward 6": [
+            "Osob Adus",
+            "Angelo Bentivegna",
+            "Chris Bouchard",
+            "Frank Domenic",
+            "Rowen Fraser"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "census_id": "3526043",
+  "csdname": "Niagara Falls",
+  "name_format": "caps_surname",
+  "candidate_list_url": "https://niagarafalls.ca/city-government/elections/municipal-election-candidates/",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00. Names are published 'as it is to appear on the ballot'.",
+    "source_note": "district_source_url redirects to the Municipal Election Candidates page, which is the candidate list.",
+    "name_format_note": "Surnames are printed in CAPS and given names in mixed case, so the surname boundary is unambiguous even for multi-word surnames such as 'Lilian LUM MBAH'. Splitting uses the capitalisation, not token position.",
+    "structure_match": "A single at-large 'Candidates for City Councillor' list with no ward breakdown, matching the structure CSV's at-large row (8 seats, vote-for-8). No elected Regional Councillor race appears, consistent with SOURCES.md noting Niagara abolished elected regional councillors for 2026."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Jim DIODATI",
+            "Kevin MARTINEAU",
+            "Gary BAKER",
+            "Paul MANNING"
+          ]
+        }
+      }
+    ],
+    "atlarge": [
+      {
+        "office": "Councillor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 8,
+        "max_votes": 8,
+        "block_vote": true,
+        "districts": {
+          "At-large": [
+            "Lori LOCOCO",
+            "Mona PATEL",
+            "Sheila DELUCA",
+            "Brad (Brado) PINE",
+            "Jitto TOM",
+            "Brian (Winnie) WINROW",
+            "Darlene CANE",
+            "Celia TAYLOR",
+            "Joedy BURDETT",
+            "Dan MOODY",
+            "Lilian LUM MBAH",
+            "Ruth-Ann NIEUWESTEEG",
+            "Tony BALDINELLI",
+            "Dan GIANCOLA"
+          ]
+        }
+      }
+    ]
+  }
+}

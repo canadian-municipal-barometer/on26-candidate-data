@@ -1,0 +1,71 @@
+{
+  "census_id": "3519046",
+  "csdname": "Aurora",
+  "name_format": "last_first",
+  "candidate_list_url": "https://www.aurora.ca/your-government/elections-2026/candidate-information/",
+  "notes": {
+    "list_status": "unofficial; nominations open until 2026-08-21 14:00",
+    "source_note": "district_source_url in councillor-election-structure.csv points to the ward-system and council-members pages, which carry no candidates. Candidates were taken from the town's 'Unofficial List of Candidates' accordion on the Candidate Information page, reached by a link from the ward-system page.",
+    "structure_match": "6 ward tables published, matching n_districts=6 in the structure CSV."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Deane, Shawn",
+            "Gallo, John",
+            "Mrakas, Tom"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor, Ward",
+        "scope": "Ward",
+        "n_districts": 6,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Hanna, Lauren",
+            "Morsillo, Rocco"
+          ],
+          "Ward 2": [
+            "Daust, Angela",
+            "Di Girolamo, Marco",
+            "Durrant, Phiona",
+            "Lansdown, Brynn"
+          ],
+          "Ward 3": [
+            "Alber, Nikki",
+            "Bonham, Alexandra",
+            "Fraser, Robert James"
+          ],
+          "Ward 4": [
+            "Moledina, Shaheen",
+            "Thompson, Michael"
+          ],
+          "Ward 5": [
+            "Dela Cruz-Toupin, Charity",
+            "Fraser, Jessie",
+            "Hart, Milton",
+            "Thandi, Harbinder (Binda)"
+          ],
+          "Ward 6": [
+            "Khan, Jibraan",
+            "Kim, Harold"
+          ]
+        }
+      }
+    ]
+  }
+}

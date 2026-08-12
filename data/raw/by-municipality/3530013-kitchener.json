@@ -1,0 +1,121 @@
+{
+  "census_id": "3530013",
+  "csdname": "Kitchener",
+  "name_format": "last_first",
+  "candidate_list_url": "https://app2.kitchener.ca/election/candidates.aspx",
+  "notes": {
+    "list_status": "unofficial; page states the list is updated until the 2026-08-21 14:00 deadline",
+    "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
+    "structure_gap": "The city publishes an at-large Regional Councillor race (11 candidates) that has no row in councillor-election-structure.csv or council-races.csv. SOURCES.md lists Kitchener under at-large block vote (vote-for-4) but the row is absent from council-races.csv, so it is missing downstream. Recorded here under 'regional councillor' and flagged; seats/max_votes left null pending a verified source.",
+    "other": "The Regional Chair no longer appears on the ballot: under the Better Regional Governance Act, 2026 (2026-05-07) it became a provincially appointed position and no nominations for it may be filed or accepted."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Alton, David",
+            "Frogh, Wazhma",
+            "Trihenea, George",
+            "Vrbanovic, Berry"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor, Ward",
+        "scope": "Ward",
+        "n_districts": 10,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Davey, Scott"
+          ],
+          "Ward 2": [
+            "Ibrahim, Soran",
+            "Rabethge, Derrick",
+            "Schnider, Dave"
+          ],
+          "Ward 3": [
+            "Delaney-Fraser, Joanne",
+            "Deneault, Jason",
+            "Jordao, Lurdes",
+            "Mohamed, Ismail",
+            "Parker, Matt"
+          ],
+          "Ward 4": [
+            "Kappaya, Ibraheem",
+            "Michaud, Christine",
+            "Poirier, Vikki",
+            "Scanlan, Harry"
+          ],
+          "Ward 5": [
+            "Birdee, Dimple",
+            "Hudda, Muhammad Miqdad",
+            "Massimi, Jon",
+            "Nair, Nitin",
+            "Peers, Rich",
+            "Rose, Danielle",
+            "Sehli, Sumit",
+            "Vanderpool, Fitz",
+            "Weiler, Tracey"
+          ],
+          "Ward 6": [
+            "Singh, Paul",
+            "Wallis, Brooklin"
+          ],
+          "Ward 7": [
+            "Ioannidis, Bil",
+            "Rollick, Nikki"
+          ],
+          "Ward 8": [
+            "Johnston, Margaret",
+            "Pettinger, Carly"
+          ],
+          "Ward 9": [
+            "Chapman, Debbie",
+            "Willcox, Tim"
+          ],
+          "Ward 10": [
+            "Nabi, Sam",
+            "Stretch, Stephanie"
+          ]
+        }
+      }
+    ],
+    "regional councillor": [
+      {
+        "office": "Councillor, Regional",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": null,
+        "max_votes": null,
+        "block_vote": null,
+        "districts": {
+          "At-large": [
+            "Gowing, Joe",
+            "Graham, Mac",
+            "Guthrie, Simon",
+            "Harris, Michael",
+            "Huxted, Kim",
+            "James, Colleen",
+            "Kolsawala, Sajid",
+            "Meksavanh, Anna",
+            "Rodrigues, Matt",
+            "Simson, Eve",
+            "Wisniewski, Michael"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "census_id": "3521010",
+  "csdname": "Brampton",
+  "name_format": "last_first",
+  "candidate_list_url": "https://www.brampton.ca/EN/City-Hall/Election/Candidates/Pages/candidateListing.aspx",
+  "notes": {
+    "list_status": "unofficial; page says it is updated as nominations are received. Nominations close 2026-08-21 14:00.",
+    "source_note": "district_source_url points to an AMO 2022 page and the 2022 official-results PDF; neither lists 2026 candidates. The city's own 'List of Candidates' page was used. That page renders its list from JavaScript, so it was read in the browser rather than by plain fetch.",
+    "name_quirk": "One mayoral candidate is published as 'Gursimranjit Singh, -' with a placeholder given name; recorded as published, with first_name left empty.",
+    "structure_match": "Both City and Regional councillors are elected from the five ward pairs 1&5, 2&6, 3&4, 7&8, 9&10, matching both structure-CSV rows."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Bhatt, Jagruti",
+            "Brown, Patrick",
+            "Dhaliwal, Avi",
+            "Gautam, Vidya Sagar",
+            "Gill, Prabh",
+            "Gursimranjit Singh, -",
+            "Patel, Tirth Vinodkumar",
+            "Somal, Sandeep",
+            "Walia, Gaurav"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor, City",
+        "scope": "Ward-pair",
+        "n_districts": 5,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Wards 1, 5": [
+            "Brooks, Staceyann",
+            "Dutta, Amit",
+            "Pepe, Tracy Ann",
+            "Santos, Rowena",
+            "Tantalo, Romolo",
+            "Williams, Khimani"
+          ],
+          "Wards 2, 6": [
+            "Brar, Navjit Kaur",
+            "Chambers, Jermaine",
+            "Deswal, Yadvinder",
+            "Dhir, Raghav",
+            "Shah, Keval",
+            "Wilson, Carmen"
+          ],
+          "Wards 3, 4": [
+            "Dawadi Dhakal, Gita Devi",
+            "Keenan, Dennis",
+            "Khinda, Jugraj Singh",
+            "Mujinga, Kaniki Karine",
+            "Randhawa, Santokh"
+          ],
+          "Wards 7, 8": [
+            "Brahmbhatt, Nayan",
+            "Kahlon, Ayanna",
+            "Power, Rod",
+            "Sharma, Rakesh Singh",
+            "Soares, Monica"
+          ],
+          "Wards 9, 10": [
+            "Gordon-Daniels, Janice",
+            "Goyat, Azad",
+            "Grewal, Jagdish Singh",
+            "Hassan, Kamran",
+            "Kumar, Sandeep",
+            "Singh, Harkirat"
+          ]
+        }
+      }
+    ],
+    "regional councillor": [
+      {
+        "office": "Councillor, Regional",
+        "scope": "Ward-pair",
+        "n_districts": 5,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Wards 1, 5": [
+            "Lee, Steven",
+            "Orughu, Idris",
+            "Vicente, Paul"
+          ],
+          "Wards 2, 6": [
+            "Dogra, Romy",
+            "Gill, Prempal",
+            "Palleschi, Michael Paul",
+            "Sharma, Parth",
+            "Sran, Ajaib Singh",
+            "Tandon, Sameer"
+          ],
+          "Wards 3, 4": [
+            "Goel, Sandeep Kumar",
+            "Medeiros, Martin"
+          ],
+          "Wards 7, 8": [
+            "Dhillon, Ripudaman Singh",
+            "Fortini, Pat",
+            "Sahajpal, Anil",
+            "Sharma, Aman",
+            "Soranno, Christopher",
+            "Vyas, Vedaant"
+          ],
+          "Wards 9, 10": [
+            "Dancy, Michael",
+            "Dhillon, Gurpreet Singh",
+            "Johal, Satpaul Singh",
+            "Madhu, Nirmala Devi",
+            "Sangha, Sukhman"
+          ]
+        }
+      }
+    ]
+  }
+}

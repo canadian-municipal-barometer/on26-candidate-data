@@ -1,0 +1,86 @@
+{
+  "census_id": "3538030",
+  "csdname": "Sarnia",
+  "name_format": "first_last",
+  "candidate_list_url": "https://www.sarnia.ca/city-government/elections/2026-election/unofficial-list-of-candidates/",
+  "notes": {
+    "list_status": "explicitly labelled 'Unofficial List of Candidates'; nominations open until 2026-08-21 14:00",
+    "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
+    "schema_note": "Sarnia has two distinct at-large races, so 'atlarge' holds two race objects: 'Councillor, City' and 'Councillor, City-County'.",
+    "name_format": "Published as 'First Last', unlike most sources; name_raw preserves the published form."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Bill Dennis",
+            "Chrissy McRoberts",
+            "Scott Molson",
+            "Carrie McEachran"
+          ]
+        }
+      }
+    ],
+    "atlarge": [
+      {
+        "office": "Councillor, City",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 4,
+        "max_votes": 4,
+        "block_vote": true,
+        "districts": {
+          "At-large": [
+            "Stevie Devlin",
+            "Christopher Pettit",
+            "Josh Coutts-Smith",
+            "Jonathon Walker",
+            "Andrew Stokley",
+            "Ellen Marie Alonzo",
+            "Richard C (Dick) Felton",
+            "Scott Spinks Jr.",
+            "Clara James",
+            "Briana Reid",
+            "Hari Srinivasan",
+            "Terry Burrell",
+            "Honie Chumko",
+            "Ray McMaster",
+            "Lo-Anne Chan"
+          ]
+        }
+      },
+      {
+        "office": "Councillor, City-County",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 4,
+        "max_votes": 4,
+        "block_vote": true,
+        "districts": {
+          "At-large": [
+            "Mark Lamore",
+            "Patrick Coutu",
+            "Paul Wiersma",
+            "George Vandenberg",
+            "John Richardson",
+            "Peter Goodman",
+            "Ed Gresham",
+            "Margaret Bird",
+            "Mario Fazio",
+            "Brian White",
+            "Andy Bruziewicz",
+            "Adam Kilner",
+            "Bill Anning"
+          ]
+        }
+      }
+    ]
+  }
+}

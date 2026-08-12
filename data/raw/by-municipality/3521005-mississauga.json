@@ -1,0 +1,129 @@
+{
+  "census_id": "3521005",
+  "csdname": "Mississauga",
+  "name_format": "first_last",
+  "candidate_list_url": "https://ovs.voterview.ca/candidatelist/2105",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "name_case": "VoterView publishes names in ALL CAPS with no comma, so the surname boundary cannot be read from capitalisation. Splitting takes the final token as the surname, which is unreliable for multi-word surnames such as 'ANA LUISA VASQUEZ DE ESPINAL' and 'ROSEMARIE SANCHEZ SANCHEZ'. name_raw preserves the published form.",
+    "structure_match": "11 ward sections published, matching n_districts=11 in the structure CSV.",
+    "source_note": "district_source_url (mississaugavotes.ca 'Who's running') carries no candidate names in its own HTML. The live candidate list is served from a VoterView iframe at https://ovs.voterview.ca/candidatelist/2105, which is where these names come from."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "BONNIE CROMBIE",
+            "DIPIKA DAMERLA",
+            "FRANK FANG",
+            "AMJAD JILANI",
+            "MIKE MATULEWICZ",
+            "FADI NAAMI",
+            "CAROLYN PARRISH",
+            "DAVID SHAW",
+            "ALVIN TEDJO",
+            "ANA LUISA VASQUEZ DE ESPINAL"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 11,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "STEPHEN DASKO",
+            "OLIVIA GANNON"
+          ],
+          "Ward 2": [
+            "FAWZI SAMER ALGHOUL",
+            "RONNIE AMYOTTE",
+            "MICHELLE BAKER",
+            "MICHAEL CARROLL",
+            "LEEANN COLE",
+            "SYED JAFFERY",
+            "ROSS KUTISKER-JACOBSON",
+            "ANANYA MAJUMDER",
+            "ALEX RAGOZZINO",
+            "SUE SHANLY"
+          ],
+          "Ward 3": [
+            "CHRIS FONSECA",
+            "MENDI KABASHI",
+            "KIM PINES",
+            "STJEPAN VUKOVIC"
+          ],
+          "Ward 4": [
+            "ZULFIQAR ALI",
+            "JOHN KOVAC"
+          ],
+          "Ward 5": [
+            "ARUNA ANAND",
+            "ISMAIL BAWA",
+            "RAGHAVAN BABU BHOGAIAH",
+            "MANDEEP SINGH DHALIWAL",
+            "JAMIE DOOKIE",
+            "NATALIE HART",
+            "VIPAN MEHTA",
+            "ROSEMARIE SANCHEZ SANCHEZ",
+            "DANNY SINGH"
+          ],
+          "Ward 6": [
+            "GURCHARAN GULERIA",
+            "JOE HORNECK"
+          ],
+          "Ward 7": [
+            "GERALD ADAD",
+            "AMIR ALI",
+            "LUCAS ALVES",
+            "JOEL BINDA",
+            "ASHA FALINSKI",
+            "AHSAN KHOKHAR",
+            "KESHAV MANDADI",
+            "LOUROZ MERCADER",
+            "NAILA SAEED",
+            "MAISA SALHIA",
+            "AMITABH SRIVASTAVA",
+            "TASSAWAR SYED",
+            "GEORGE TAVARES",
+            "PETER TOLIAS",
+            "HAZRA WADE",
+            "LESLIE ZUREK-SILVESTRI"
+          ],
+          "Ward 8": [
+            "MATT MAHONEY",
+            "VIKTORIA MANZAR",
+            "RAHUL MEHTA"
+          ],
+          "Ward 9": [
+            "RAMSHA HAQ",
+            "ANWAR KNIGHT",
+            "MARTIN REID",
+            "MOHAMMAD SHABBEER"
+          ],
+          "Ward 10": [
+            "SUHA HASHIM",
+            "AATISH JAMAL",
+            "SUE MCFADDEN"
+          ],
+          "Ward 11": [
+            "BRAD BUTT",
+            "DEV VASHI"
+          ]
+        }
+      }
+    ]
+  }
+}

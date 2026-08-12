@@ -1,0 +1,88 @@
+{
+  "census_id": "3519038",
+  "csdname": "Richmond Hill",
+  "name_format": "last_first",
+  "candidate_list_url": "https://www.richmondhill.ca/en/living-here/election-candidates.aspx",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url is itself the Registered Candidates page; no extra hop needed.",
+    "structure_match": "The at-large race is captioned 'Regional and Local Councillor (two to be elected)', independently confirming max_votes=2 for that row, alongside Ward 1-6 Councillor tables."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Devnani, Holo",
+            "West, David"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor, Ward",
+        "scope": "Ward",
+        "n_districts": 6,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": true,
+        "districts": {
+          "Ward 1": [
+            "Davidson, Carol",
+            "Nardone, Giovanni"
+          ],
+          "Ward 2": [
+            "Kermalli, Muhammad",
+            "Kheirkhah Ghehi, Hamidreza",
+            "Lee, Sigmund",
+            "Muench, Tom"
+          ],
+          "Ward 3": [
+            "Liu, Castro",
+            "Yeung, Juni"
+          ],
+          "Ward 4": [
+            "Chisholm, Sharon",
+            "Cui, Simon",
+            "Weinberg, Rose",
+            "Yoon, Danny"
+          ],
+          "Ward 5": [
+            "Behroozian, Ray",
+            "Cilevitz, Karen",
+            "Paulin, Marty",
+            "Rupp, Richard"
+          ],
+          "Ward 6": [
+            "Anasory, Hasti",
+            "Shiu, Michael"
+          ]
+        }
+      }
+    ],
+    "regional councillor": [
+      {
+        "office": "Councillor, Regional and Local",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 2,
+        "max_votes": 2,
+        "block_vote": true,
+        "districts": {
+          "At-large": [
+            "Chan, Godwin",
+            "Coletta, Marco",
+            "DiPaola, Joe"
+          ]
+        }
+      }
+    ]
+  }
+}

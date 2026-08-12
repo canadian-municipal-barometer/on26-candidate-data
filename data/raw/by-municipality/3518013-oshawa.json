@@ -1,0 +1,113 @@
+{
+  "census_id": "3518013",
+  "csdname": "Oshawa",
+  "name_format": "first_last",
+  "candidate_list_url": "https://www.oshawa.ca/city-hall/elections/registered-candidates/",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url is itself the candidate list; race labels come from each table's <caption>.",
+    "structure_match": "'Regional and City Councillor' and 'City Councillor' each have Ward 1-5 tables, matching both structure-CSV rows."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Michael Coons",
+            "Derek Giberson",
+            "Jim Lee",
+            "Tito-Dante Marimpietri",
+            "Henry Onwuachu",
+            "Joseph Tomlins",
+            "Dave Westlake"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor, City",
+        "scope": "Ward",
+        "n_districts": 5,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Danjeza Danglli",
+            "Rosemary McConkey",
+            "Olaleye Afolabi Oluwaolorunlanke",
+            "A. Salam Shinwary",
+            "Omar Wisdom"
+          ],
+          "Ward 2": [
+            "Sarah Chiapparro",
+            "Jane Hurst",
+            "John R.E. Sturdy"
+          ],
+          "Ward 3": [
+            "Roger Bouma",
+            "Sylwia Lesner",
+            "Matthew Schaffer"
+          ],
+          "Ward 4": [
+            "Theresa Grant",
+            "Eric Guernsey",
+            "Jose Morales",
+            "Edouard Nwaha Gwet",
+            "Deb Oldfield",
+            "Don Rockbrune",
+            "Dave Thompson",
+            "Domenic Albis"
+          ],
+          "Ward 5": [
+            "Todd Forbes",
+            "Siddharth (Sid) Goyal",
+            "John Gray",
+            "Adedeji Ibinayo",
+            "Christeen Elizabeth Thornton"
+          ]
+        }
+      }
+    ],
+    "regional councillor": [
+      {
+        "office": "Councillor, Regional and City",
+        "scope": "Ward",
+        "n_districts": 5,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Christopher Biancaniello",
+            "Martin Franseen"
+          ],
+          "Ward 2": [
+            "Cameron Anderson",
+            "Bradley Marks"
+          ],
+          "Ward 3": [
+            "Robert (Bob) Chapman"
+          ],
+          "Ward 4": [
+            "Jeff Davis",
+            "Rick Kerr",
+            "Jack O'Donnell",
+            "Doug Sanders"
+          ],
+          "Ward 5": [
+            "Kristen McKinnon",
+            "Brian Charles Nicholson"
+          ]
+        }
+      }
+    ]
+  }
+}

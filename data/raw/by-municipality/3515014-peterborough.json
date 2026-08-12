@@ -1,0 +1,79 @@
+{
+  "census_id": "3515014",
+  "csdname": "Peterborough",
+  "name_format": "first_last",
+  "candidate_list_url": "https://www.peterborough.ca/council-city-hall/elections/voters/",
+  "notes": {
+    "list_status": "published as 'List of Uncertified Candidates'; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url is the news post announcing nominations opening. The city's Candidates page says the list of uncertified candidates lives on the Voters page, which is where these names come from.",
+    "structure_match": "Five named wards published - Otonabee, Monaghan, Town, Ashburnham, Northcrest - matching the districts listed in the structure CSV (5 districts, 2 seats each, vote-for-2)."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Michael Eamon",
+            "Brian Lumsden",
+            "Jacob Méthot",
+            "Neil Morton",
+            "Keith Riel",
+            "Rebecca Schillemat"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 5,
+        "seats": 2,
+        "max_votes": 2,
+        "block_vote": true,
+        "districts": {
+          "Otonabee": [
+            "Jessica Correa",
+            "Kevin Duguay",
+            "Lesley Parnell",
+            "Chris Potter"
+          ],
+          "Monaghan": [
+            "Matt Crowley",
+            "Ashley Flynn",
+            "Rose Kitney",
+            "Jen Lacey",
+            "AJ Shearer"
+          ],
+          "Town": [
+            "Alex Bierk",
+            "Jenni Cathcart",
+            "Jessica Kuhlmorgen-Hille",
+            "Joy Lachica"
+          ],
+          "Ashburnham": [
+            "Gary Baldwin",
+            "Ashley Bonner",
+            "Andrew MacGregor",
+            "Jason Stabler"
+          ],
+          "Northcrest": [
+            "Andrew Beamer",
+            "Debbie Halstead",
+            "Phil Jolicoeur",
+            "Paul Lawton",
+            "Charmaine Magumbe",
+            "Gavin Muir",
+            "Jim Wasson"
+          ]
+        }
+      }
+    ]
+  }
+}

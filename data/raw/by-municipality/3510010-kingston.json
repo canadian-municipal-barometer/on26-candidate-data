@@ -1,0 +1,100 @@
+{
+  "census_id": "3510010",
+  "csdname": "Kingston",
+  "name_format": "first_last",
+  "candidate_list_url": "https://www.cityofkingston.ca/council-and-city-administration/elections/candidates/candidate-list/",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
+    "district_names": "Kingston's wards are called districts and carry names; recorded here as published, e.g. 'District 1 - Countryside'.",
+    "structure_match": "12 district tables published, matching n_districts=12 in the structure CSV."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Conny Glenn",
+            "Vanessa Mensah",
+            "Bryan Paterson",
+            "Grant William Bedard"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 12,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "District 1 - Countryside": [
+            "Joseph Abreu",
+            "Vic Sahai",
+            "Jeff Scott"
+          ],
+          "District 2 - Loyalist-Cataraqui": [
+            "Paul Chaves",
+            "Dorian Hartley",
+            "Jeff Pearce",
+            "Charanjeev Sekhon"
+          ],
+          "District 3 - Collins-Bayridge": [
+            "Joel Anthony Bruce",
+            "Lisa Osanic"
+          ],
+          "District 4 - Lakeside": [
+            "Stephen Cuthbertson",
+            "Wendy Stephen"
+          ],
+          "District 5 - Portsmouth": [
+            "Don Amos"
+          ],
+          "District 6 - Trillium": [
+            "Jamshed Hassan"
+          ],
+          "District 7 - Kingscourt-Rideau": [
+            "Michael Judd",
+            "Kevin Smith",
+            "Brandon Tozzo"
+          ],
+          "District 8 - Meadowbrook-Strathcona": [
+            "Daria Juudi-Hope",
+            "Jeff McLaren",
+            "Roger Dennis"
+          ],
+          "District 9 - Williamsville": [
+            "Vincent Cinanni"
+          ],
+          "District 10 - Sydenham": [
+            "Andrew DaCosta",
+            "Jago Garrett",
+            "Rajesh Kumar",
+            "John Meligrana",
+            "Annie Palone"
+          ],
+          "District 11 - King's Town": [
+            "Aba Mortley",
+            "Melissa Reid",
+            "Greg Ridge"
+          ],
+          "District 12 - Pittsburgh": [
+            "Ryan Boehme",
+            "Matt McTaggart",
+            "Chelsea Rae",
+            "Zachary Typhair"
+          ]
+        }
+      }
+    ]
+  }
+}

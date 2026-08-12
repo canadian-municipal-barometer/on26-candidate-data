@@ -1,0 +1,139 @@
+{
+  "census_id": "3539036",
+  "csdname": "London",
+  "name_format": "first_last",
+  "candidate_list_url": "https://london.ca/government/council-civic-administration/elections/list-candidates",
+  "notes": {
+    "list_status": "unofficial; page says it is updated each business day by 16:30 and that the certified list follows before 16:00 on 2026-08-24",
+    "source_note": "district_source_url is itself the candidate list; each race is a <details>/<summary> accordion.",
+    "parse_check": "Candidate names are wrapped in <strong>. Two mayoral candidates (Lawrence-Zachary Howe and Josh Morgan) share a paragraph with the candidate above them, so a paragraph-based parse dropped them; the <strong>-based parse recovers all 10. Ward counts agreed between both methods.",
+    "structure_match": "14 ward accordions published, matching n_districts=14 in the structure CSV."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "John Feher",
+            "Lawrence-Zachary Howe",
+            "Kirsten Krose",
+            "Dan Lenart",
+            "Bronagh Joyce Morgan",
+            "Josh Morgan",
+            "Christine Rosehart",
+            "Susan Stevenson",
+            "Jeff Yam",
+            "Mustafa Zeboon"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 14,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Janette Larocque",
+            "Hadleigh McAlister",
+            "Roger Caranci"
+          ],
+          "Ward 2": [
+            "Shawn Lewis",
+            "Zack Ramsey"
+          ],
+          "Ward 3": [
+            "Peter Cuddy",
+            "Ben Durham",
+            "Harkirat Kaur",
+            "Leroy Osbourne",
+            "Riya Philip"
+          ],
+          "Ward 4": [
+            "Bonnie Baleck",
+            "Elivis Birindwa",
+            "Alicia Caskey",
+            "Tom Cull",
+            "Mario Jozic",
+            "Stephen Orser (Ors)",
+            "Randi Prunner",
+            "Bob Wright",
+            "Alan Lieknins"
+          ],
+          "Ward 5": [
+            "Corrine Rahman",
+            "Abid Raza",
+            "Mary Blake Rose",
+            "Simon Sabeesh Karikassery"
+          ],
+          "Ward 6": [
+            "Ian Sterling Leishman",
+            "Stephanie Marentette",
+            "Naomi Nadea",
+            "Sam Trosow"
+          ],
+          "Ward 7": [
+            "Kamrul Ahsan (Kam)",
+            "German Gutierrez",
+            "Sam Hajar",
+            "Waseem Kazzah",
+            "Bensy Mathew",
+            "Dan Meinen",
+            "Djuma Moïse Sharifu",
+            "Jonathan Sher",
+            "Praveen Varkey"
+          ],
+          "Ward 8": [
+            "Steve Lehman",
+            "Coralia Esterra Tudor"
+          ],
+          "Ward 9": [
+            "Tammy Abi-Khalil",
+            "Anna Hopkins",
+            "Dino Jose",
+            "Matt Millar",
+            "Luke Thomas"
+          ],
+          "Ward 10": [
+            "Juman Al-Jumaili",
+            "Steven Edwards",
+            "Alexander Moore",
+            "Paul Van Meerbergen",
+            "Lois Margaret Ward"
+          ],
+          "Ward 11": [
+            "Skylar Franke",
+            "Harinder Kumar (Harry)"
+          ],
+          "Ward 12": [
+            "Alexander Main",
+            "Elizabeth Peloza",
+            "Ribal Zebian"
+          ],
+          "Ward 13": [
+            "Schelley Bisson",
+            "Christopher (Tony) Biviano",
+            "Andrew Joseph Crook",
+            "Stephen D’Amelio",
+            "David Ferreira",
+            "Nicholas Saika-Voivod"
+          ],
+          "Ward 14": [
+            "Jason King",
+            "Sarah Lehman"
+          ]
+        }
+      }
+    ]
+  }
+}

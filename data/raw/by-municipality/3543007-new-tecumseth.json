@@ -1,0 +1,87 @@
+{
+  "census_id": "3543007",
+  "csdname": "New Tecumseth",
+  "name_format": "first_last",
+  "candidate_list_url": "https://www.newtecumseth.ca/government/new-tecumseth-votes/",
+  "notes": {
+    "retrieved": "2026-08-12",
+    "list_status": "the page calls it 'an unofficial list of Registered Candidates who have filed nomination papers, but have not yet been certified to run for office', updated daily at 16:00; certification by 2026-08-24.",
+    "source_note": "The Notice of Nomination gives the offices; the names are on the New Tecumseth Votes page, which is the other district_source_url. Both are in the structure CSV.",
+    "structure_match": "Headings run Mayor, Deputy Mayor, and Councillor Ward 1 through Councillor Ward 7, matching the two structure-CSV rows (Wards 1-7, and Deputy Mayor at-large). Seven ward headings rather than the master list's eight independently confirms Ward Boundary By-law 2025-052, which is why New Tecumseth is a documented seat-check exception.",
+    "name_split": "Names are published 'First Last' and the splitter takes the final token as the surname, which is wrong for 'Shira Harrison McIntyre' (surname 'Harrison McIntyre') and 'Dianna Del Bianco' (surname 'Del Bianco'). name_raw preserves the published form."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Stephanie MacLellan",
+            "Richard Norcross"
+          ]
+        }
+      }
+    ],
+    "deputy mayor": [
+      {
+        "office": "Deputy Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Marc Biss",
+            "Steven Dollmaier"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 7,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Chris Rapin"
+          ],
+          "Ward 2": [
+            "Wendy Gabrek",
+            "Jason Shand"
+          ],
+          "Ward 3": [
+            "Tony Phekoo",
+            "Laurie Mortimer"
+          ],
+          "Ward 4": [
+            "Alan Masters"
+          ],
+          "Ward 5": [
+            "Nicole Cox",
+            "Peter Barbati"
+          ],
+          "Ward 6": [
+            "Shira Harrison McIntyre",
+            "Kyle Warren",
+            "Joseph Castellano"
+          ],
+          "Ward 7": [
+            "Dianna Del Bianco",
+            "Andrea Jacks",
+            "Stefano Mercuri"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "name_format": "last_first",
+  "candidate_list_url": "https://www.hamilton.ca/city-council/municipal-election/candidates-third-party-advertisers/candidates",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url is the city council members page; the candidate list sits under the Municipal Election section. The page is a tab widget (Mayor / Councillor / Trustee) with one accordion per ward, so labels come from the accordion buttons rather than headings.",
+    "name_quirk": "Ward 2 lists 'Tompkins, Bernard-' with a trailing hyphen in the source; recorded as published.",
+    "structure_match": "15 ward accordions published, matching n_districts=15 in the structure CSV."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Austin, Sasha",
+            "Butt, Ejaz",
+            "Cooper, Rob",
+            "Fromm, Paul",
+            "Gillespie, Scarlett",
+            "Loomis, Keanin",
+            "Mitchell, Pamela",
+            "Yan, Nathalie Xian Yi"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 15,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Savelli, Nathan",
+            "Wilson, Maureen"
+          ],
+          "Ward 2": [
+            "Abdulkarim, Eisham",
+            "Greene, Daniel",
+            "Houston, Bill",
+            "Kroetsch, Cameron",
+            "Lewis, Brian",
+            "Myles, Dan",
+            "Oucharek, Kelly",
+            "Sciara, Tony",
+            "Tompkins, Bernard-"
+          ],
+          "Ward 3": [
+            "Campbell, Wade",
+            "Cayuga, Christine",
+            "DeMelo, Christopher",
+            "Nann, Nrinder",
+            "Selman, Andrew",
+            "Schreiber, Graham",
+            "Sprague, Kristeen"
+          ],
+          "Ward 4": [
+            "Anderson, Todd",
+            "Douglas, Rod",
+            "Farr, Jason",
+            "Hwang, Tammy",
+            "Mamone, Tony"
+          ],
+          "Ward 5": [
+            "Francis, Matt"
+          ],
+          "Ward 6": [
+            "Debicki, Melissa",
+            "Jackson, Tom",
+            "Werhun, Peter"
+          ],
+          "Ward 7": [
+            "Beale, Heather",
+            "Daly, Mark",
+            "Leslie, Gordon",
+            "Pauls, Esther"
+          ],
+          "Ward 8": [
+            "Tenbrinke, Jacob",
+            "Danko, Dawn"
+          ],
+          "Ward 9": [
+            "Clark, Brad",
+            "Gill, Abhijeet",
+            "Stapleton, Brad",
+            "Stathakos, Jonathan",
+            "Walker, Eileen"
+          ],
+          "Ward 10": [
+            "DiFalco, Cal",
+            "Fung, Olivia",
+            "Gamble, Sam",
+            "Grewal, Akash",
+            "Loomans, Michael T.",
+            "Nijjar, Tanjoban",
+            "Trombetta, Nicole"
+          ],
+          "Ward 11": [
+            "Mombourquette, Damon",
+            "Tadeson, Mark"
+          ],
+          "Ward 12": [
+            "Bennink, Fred",
+            "Cassar, Craig"
+          ],
+          "Ward 13": [
+            "Kunc, Rick",
+            "Lieberman, Loren"
+          ],
+          "Ward 14": [
+            "Damptey, Kojo",
+            "Spadafora, Mike"
+          ],
+          "Ward 15": [
+            "Alford, Chase",
+            "McMeekin, Ted",
+            "Stewart, Colleen",
+            "Wrobel, Zac",
+            "Yaeger, Jeff"
+          ]
+        }
+      }
+    ]
+  }
+}

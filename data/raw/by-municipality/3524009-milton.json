@@ -1,0 +1,107 @@
+{
+  "census_id": "3524009",
+  "csdname": "Milton",
+  "name_format": "first_last",
+  "candidate_list_url": "https://www.milton.ca/en/2026-election-candidates.aspx",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url is the news post announcing nominations opening; the candidate list is at /en/2026-election-candidates.aspx, reached via the 2026 Municipal Election page.",
+    "structure_match": "Regional Councillor and Town Councillor each have Ward 1-4 tables, matching both structure-CSV rows."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Maliha K. Ahmed",
+            "Nadeem Akbar",
+            "Abdulkareem Akbik",
+            "Sameera Ali",
+            "Zainab Azim",
+            "Gord Krantz",
+            "George Minakakis",
+            "Mohammad Tariq"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor, Town",
+        "scope": "Ward",
+        "n_districts": 4,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Nabil Ahmed",
+            "Donna Danielli",
+            "Owen Gray",
+            "Gourav Suri"
+          ],
+          "Ward 2": [
+            "Arthur Amadi",
+            "Melissa Cassells",
+            "Lori Foster",
+            "Ahmad Jamal",
+            "Shan Jayatilake",
+            "Patrick Murphy",
+            "Tanya Sethi"
+          ],
+          "Ward 3": [
+            "Sanjay Gupta",
+            "Adil Khalqi"
+          ],
+          "Ward 4": [
+            "Naveed Ahmed",
+            "Tahira Haroon",
+            "Ginni Malik",
+            "Ada Nwosu",
+            "Giles Vanderholt"
+          ]
+        }
+      }
+    ],
+    "regional councillor": [
+      {
+        "office": "Councillor, Regional",
+        "scope": "Ward",
+        "n_districts": 4,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Colin Best"
+          ],
+          "Ward 2": [
+            "John Challinor",
+            "Galen Naidoo Harris",
+            "Syed Naqvi",
+            "Yagya Paudel"
+          ],
+          "Ward 3": [
+            "Rick Di Lorenzo",
+            "Sammy Ijaz",
+            "Haris Iqbal",
+            "Salman Zafar"
+          ],
+          "Ward 4": [
+            "Adejisola Atiba",
+            "Khurshid Khan",
+            "Sarah Marshall",
+            "Syed Raza",
+            "Youssef Roshdy"
+          ]
+        }
+      }
+    ]
+  }
+}

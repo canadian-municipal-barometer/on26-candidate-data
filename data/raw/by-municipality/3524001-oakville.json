@@ -1,0 +1,120 @@
+{
+  "census_id": "3524001",
+  "csdname": "Oakville",
+  "name_format": "first_last",
+  "candidate_list_url": "https://www.oakville.ca/town-hall/elections/candidates/registered-candidates/",
+  "notes": {
+    "list_status": "unofficial; page stamped 'Updated: August 10, 2026 at 3 p.m.' and states nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url is the Offices to be Elected page, which confirms the structure but lists no candidates; it links to Registered Candidates, used here.",
+    "race_type_choice": "Oakville runs two ward races. 'Councillor for the Town of Oakville' is filed under 'ward'; 'Councillor for the Town of Oakville and the Region of Halton' is filed under 'regional councillor', since it is the seat that also sits on Halton Region. Both are ward-based, so they would otherwise collide on one key.",
+    "structure_match": "The Offices to be Elected page states 'Seven to be elected, one in each ward' for each of the two councillor offices, matching both structure-CSV rows."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Arvind Choudhary",
+            "Julia Hanna",
+            "Jeff Knoll",
+            "Sean O'Meara"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor, Town",
+        "scope": "Ward",
+        "n_districts": 7,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Alexandra Caldwell",
+            "Amir Henry",
+            "Nancy Ortenburg"
+          ],
+          "Ward 2": [
+            "Ray Chisholm",
+            "Ayesha Khawaja",
+            "Sana Waqar"
+          ],
+          "Ward 3": [
+            "Morgan Elliott"
+          ],
+          "Ward 4": [
+            "Peter Longo",
+            "Syed Hasan Tahir"
+          ],
+          "Ward 5": [
+            "Jerome Adamo",
+            "Sue Heddle",
+            "Thane Mitches",
+            "Matt Ray Smith",
+            "Audrey Wubbenhorst"
+          ],
+          "Ward 6": [
+            "Natalia Lishchyna"
+          ],
+          "Ward 7": [
+            "Ali Hosny",
+            "Zulfi Malik",
+            "Scott Xie"
+          ]
+        }
+      }
+    ],
+    "regional councillor": [
+      {
+        "office": "Councillor, Town and Region of Halton",
+        "scope": "Ward",
+        "n_districts": 7,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Jonathan McNeice"
+          ],
+          "Ward 2": [
+            "Desmond Jordan",
+            "Sarah Perkin",
+            "Stacey Saunders"
+          ],
+          "Ward 3": [
+            "Janet Haslett-Theall"
+          ],
+          "Ward 4": [
+            "Kashif Chaudry",
+            "Suzan Chong",
+            "Lee Hutchison",
+            "Farah Shamim"
+          ],
+          "Ward 5": [
+            "Mackenzie Grant",
+            "Orla Johnston",
+            "Michael Reid"
+          ],
+          "Ward 6": [
+            "Tom Adams",
+            "Zena Al-Mudaris"
+          ],
+          "Ward 7": [
+            "Gaganpreet Darar",
+            "Nav Nanda",
+            "Riaz Ahmad Sinawan",
+            "Vick Walia"
+          ]
+        }
+      }
+    ]
+  }
+}

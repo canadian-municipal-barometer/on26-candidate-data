@@ -1,0 +1,94 @@
+{
+  "census_id": "3553005",
+  "csdname": "Greater Sudbury / Grand Sudbury",
+  "name_format": "first_last",
+  "candidate_list_url": "https://www.greatersudbury.ca/city-hall/municipal-schoolboard-elections/for-voters/registered-candidates/",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
+    "structure_match": "12 ward sections published, matching n_districts=12 in the structure CSV."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Bob Johnston",
+            "Bill Leduc",
+            "Paul Lefebvre",
+            "Rodney Newton",
+            "Joseph Boutros",
+            "Keenan Menard",
+            "Miranda Rocca-Circelli"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 12,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Mark Signoretti"
+          ],
+          "Ward 2": [
+            "Eric Benoit",
+            "Christel Brandle",
+            "Glen Duffy",
+            "Dan Xilon"
+          ],
+          "Ward 3": [
+            "Michel Brabant",
+            "Devin White"
+          ],
+          "Ward 4": [
+            "Pauline Fortin",
+            "Vincent Bolt"
+          ],
+          "Ward 5": [
+            "Mike Parent"
+          ],
+          "Ward 6": [
+            "René Lapierre",
+            "Dan Boulard"
+          ],
+          "Ward 7": [
+            "Natalie Labbée"
+          ],
+          "Ward 8": [
+            "George Lalonde",
+            "Shawn Rossi",
+            "Karanbir Badhesha"
+          ],
+          "Ward 9": [
+            "Carly Gasparini"
+          ],
+          "Ward 10": [
+            "Tay Butt",
+            "Suzanne Seiling",
+            "Cora Demarco"
+          ],
+          "Ward 11": [
+            "Daniel Larocque",
+            "Shawn Ouimet"
+          ],
+          "Ward 12": [
+            "Jeff MacIntyre",
+            "Ron Goswell"
+          ]
+        }
+      }
+    ]
+  }
+}

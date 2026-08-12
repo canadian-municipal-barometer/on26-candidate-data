@@ -1,0 +1,93 @@
+{
+  "census_id": "3543042",
+  "csdname": "Barrie",
+  "name_format": "first_last",
+  "candidate_list_url": "https://www.barrie.ca/government-news/2026-municipal-election/candidates-list",
+  "notes": {
+    "list_status": "unofficial; nominations open until 2026-08-21 14:00",
+    "source_note": "district_source_url is the city council page, which carries no candidates; it links to the 2026 Municipal Election section whose 'Candidates List' page was used.",
+    "name_quirk": "One Ward 4 candidate is published as 'Lori Galeazza, she/her'; the pronoun suffix is stripped for name splitting and the published form is kept in name_raw.",
+    "structure_match": "10 ward tables published, matching n_districts=10 in the structure CSV."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Alex Nuttall",
+            "Tanya Saari",
+            "Kay Sayer"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 10,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Stefano Agostino",
+            "Shaughna Ainsworth",
+            "Brent Bowser",
+            "Christian Cadera",
+            "Hafiz Rahman",
+            "Pauline Stevenson"
+          ],
+          "Ward 2": [
+            "Shanicka Edwards",
+            "Craig Nixon",
+            "Ajmal Noushahi",
+            "Tracy Strohm"
+          ],
+          "Ward 3": [
+            "Amy Courser",
+            "Ben Hughes",
+            "Bryan Jones",
+            "Ryan Rijo"
+          ],
+          "Ward 4": [
+            "Iradat Ahmad",
+            "Matthew Corbett",
+            "Lori Galeazza, she/her",
+            "Patrick Harriott-Stewart",
+            "Arif Khan"
+          ],
+          "Ward 5": [
+            "Duarte Da Silva",
+            "Robert Thomson"
+          ],
+          "Ward 6": [
+            "Nigussie Nigussie"
+          ],
+          "Ward 7": [
+            "Gary Harvey"
+          ],
+          "Ward 8": [
+            "Amanda Fellows",
+            "Jim Harris"
+          ],
+          "Ward 9": [
+            "Norm Costello",
+            "Sergio Morales",
+            "Dave Weingarten"
+          ],
+          "Ward 10": [
+            "Bryn Hamilton",
+            "Georgy Kapustin"
+          ]
+        }
+      }
+    ]
+  }
+}

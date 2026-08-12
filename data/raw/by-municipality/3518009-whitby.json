@@ -1,0 +1,97 @@
+{
+  "census_id": "3518009",
+  "csdname": "Whitby",
+  "name_format": "pre_split",
+  "candidate_list_url": "https://planyourvote.voterview.ca/candidate-list",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url includes planyourvote.voterview.ca/candidate-list, which is a JavaScript app and returns nothing to a plain fetch. Read in the browser. The widget exposes surname and given name in separate DOM fields, so names here are not parsed - they are taken as published.",
+    "structure_match": "Both Town Councillor and Regional Councillor appear for all four wards (North 1, West 2, Centre 3, East 4), each 'one to be elected'. This independently confirms the classification-overrides.csv revision for Whitby: regional councillors are elected by ward (Ward/SMD) for 2026, not at large.",
+    "district_names": "Whitby's wards carry compass names; recorded as published, e.g. 'North Ward 1'."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Leahy, Chris",
+            "Rajmohan, Harshini",
+            "Roy, Elizabeth"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor, Local",
+        "scope": "Ward",
+        "n_districts": 4,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "North Ward 1": [
+            "Brown, Anastasia",
+            "Lee, Steve",
+            "White, Jay"
+          ],
+          "West Ward 2": [
+            "Cardwell, Matt",
+            "Kohistani, Mehmood",
+            "Lopes, Lori",
+            "Naeme, Yar.M",
+            "Tait, Judith"
+          ],
+          "Centre Ward 3": [
+            "Baker, Bob",
+            "Frempong, Akuah",
+            "McCarney, Laura",
+            "Rinella, John",
+            "Sansom, Dave",
+            "Templeton, Scott"
+          ],
+          "East Ward 4": [
+            "Bozinovski, Victoria",
+            "Hosein, Shah",
+            "Perdigao, Walter"
+          ]
+        }
+      }
+    ],
+    "regional councillor": [
+      {
+        "office": "Councillor, Regional",
+        "scope": "Ward",
+        "n_districts": 4,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "North Ward 1": [
+            "Brown, Tracy",
+            "Mohhy-Ud-Din, Ikramah",
+            "Mulcahy, Rhonda"
+          ],
+          "West Ward 2": [
+            "Lewis, Debbie",
+            "Newman, Deidre"
+          ],
+          "Centre Ward 3": [
+            "Heckbert, Melissa",
+            "Lundquist, Niki"
+          ],
+          "East Ward 4": [
+            "Shahid, Maleeha",
+            "Yamada, Steve"
+          ]
+        }
+      }
+    ]
+  }
+}

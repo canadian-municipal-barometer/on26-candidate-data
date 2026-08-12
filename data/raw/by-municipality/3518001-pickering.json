@@ -1,0 +1,86 @@
+{
+  "census_id": "3518001",
+  "csdname": "Pickering",
+  "name_format": "caps_surname",
+  "candidate_list_url": "https://www.pickering.ca/council-city-administration/elections/who-is-running/",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url is the Offices to be Elected page, which confirms the six council offices but lists no candidates; the 'Who is Running?' page was used.",
+    "name_format_note": "Surnames are printed in CAPS, so the surname boundary is usually unambiguous. One mayoral candidate, 'Andrea Wood', is published in mixed case; splitting falls back to the final token for that name.",
+    "structure_match": "Regional Councillor and City Councillor each have Ward 1-3 entries, matching both structure-CSV rows."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Kevin ASHE",
+            "Doug CORNELL",
+            "Shaun RICKARD",
+            "Lisa ROBINSON",
+            "Andrea Wood"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor, City",
+        "scope": "Ward",
+        "n_districts": 3,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "James BLAIR",
+            "Abdullah MIR",
+            "Jamie NYE",
+            "Michael SAMLALSINGH",
+            "Jeremy STEINHAUSEN",
+            "Priya VADIVEL"
+          ],
+          "Ward 2": [
+            "Stacey LEPINE-FISHER",
+            "John MELOCHE",
+            "Mara NAGY",
+            "Sam SNYDERS",
+            "Vince VIAPIANA"
+          ],
+          "Ward 3": [
+            "Shaheen BUTT",
+            "Rajkumar NADA"
+          ]
+        }
+      }
+    ],
+    "regional councillor": [
+      {
+        "office": "Councillor, Regional",
+        "scope": "Ward",
+        "n_districts": 3,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Maurice BRENNER"
+          ],
+          "Ward 2": [
+            "Linda COOK",
+            "Nancy VAN ROOY"
+          ],
+          "Ward 3": [
+            "David PICKLES"
+          ]
+        }
+      }
+    ]
+  }
+}

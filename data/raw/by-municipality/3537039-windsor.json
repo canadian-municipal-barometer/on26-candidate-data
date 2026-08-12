@@ -1,0 +1,87 @@
+{
+  "census_id": "3537039",
+  "csdname": "Windsor",
+  "name_format": "first_last",
+  "candidate_list_url": "https://citywindsor.ca/city-hall/municipal-election/who-is-running",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url points at the Ward 2 page specifically. Windsor publishes one page per office under /who-is-running/; all eleven (mayor plus wards 1-10) were fetched.",
+    "structure_match": "Each ward page states 'For this office, you are entitled to vote for 1 (one) candidate', independently confirming max_votes=1 across all 10 wards in the structure CSV."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Benjamin Danyluk",
+            "Fred Francis",
+            "Tara Grayer",
+            "Kat Pasquach",
+            "Patrick Sutherland"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 10,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Darcie Renaud"
+          ],
+          "Ward 2": [
+            "Frazier Fathers",
+            "Anthony Jabbour",
+            "Nick Markham"
+          ],
+          "Ward 3": [
+            "Renaldo Agostino",
+            "Rabia Kirma"
+          ],
+          "Ward 4": [
+            "Chris Holt",
+            "Rasha Zaid"
+          ],
+          "Ward 5": [
+            "Ken Acton",
+            "Alessandro Didone",
+            "Natasha Elizabeth Feghali",
+            "Shane Potvin"
+          ],
+          "Ward 6": [
+            "Nick Jirgens",
+            "Hiral Munim",
+            "Jeremy Renaud",
+            "Owen Smith"
+          ],
+          "Ward 7": [
+            "Angelo Marignani",
+            "Victoria Soluade"
+          ],
+          "Ward 8": [
+            "Gary Kaschak",
+            "Kevin Racine"
+          ],
+          "Ward 9": [
+            "Kieran McKenzie"
+          ],
+          "Ward 10": [
+            "Adam Ibrahim",
+            "Jim Morrison"
+          ]
+        }
+      }
+    ]
+  }
+}

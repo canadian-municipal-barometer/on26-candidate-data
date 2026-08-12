@@ -1,0 +1,85 @@
+{
+  "census_id": "3519070",
+  "csdname": "Georgina",
+  "name_format": "first_last",
+  "candidate_list_url": "https://www.georgina.ca/municipal-government/elections/2026-candidate-information",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url is the 2026 Election landing page; the 'Registered Candidates' tables live on the 2026 Candidate Information page (node/11536), reached from it.",
+    "structure_match": "One at-large Regional Councillor table plus Councillor Ward 1-5 tables, matching both structure-CSV rows."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Dale Kerr Genge",
+            "Margaret Quirk"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor, Ward",
+        "scope": "Ward",
+        "n_districts": 5,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Charlene Biggerstaff",
+            "Duncan MacCallum"
+          ],
+          "Ward 2": [
+            "Natalie Floyd",
+            "Mike Gurr",
+            "Shannon DeLenardo",
+            "Dan Fellini",
+            "Stephen Faudemer"
+          ],
+          "Ward 3": [
+            "Andrew Edge",
+            "Billy Hadden",
+            "Nicholas Watts",
+            "Danielle Cohen",
+            "Dave Neeson"
+          ],
+          "Ward 4": [
+            "Antonio Romans",
+            "Casey Sellers",
+            "Mike Anderson",
+            "Ivy Henriksen"
+          ],
+          "Ward 5": [
+            "Karen Wolfe",
+            "Lee Dale"
+          ]
+        }
+      }
+    ],
+    "regional councillor": [
+      {
+        "office": "Councillor, Regional",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Naomi Davison",
+            "Geoff Fardy"
+          ]
+        }
+      }
+    ]
+  }
+}

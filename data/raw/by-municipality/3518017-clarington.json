@@ -1,0 +1,78 @@
+{
+  "census_id": "3518017",
+  "csdname": "Clarington",
+  "name_format": "first_last",
+  "candidate_list_url": "https://www.clarington.net/clarington-elections/voters/whos-running/",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url is itself the candidate list; a single table with an 'Electoral Position' column gives each candidate's race.",
+    "structure_match": "Local Councillor appears for Wards 1-4 and Regional Councillor for the pairs 'Wards 1 and 2' and 'Wards 3 and 4', matching both structure-CSV rows."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Adrian Foster",
+            "Tom Dingwall"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor, Local",
+        "scope": "Ward",
+        "n_districts": 4,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Sami Elhajjeh",
+            "Joe Neal"
+          ],
+          "Ward 2": [
+            "Chris Aucoin",
+            "Bernard Sanchez",
+            "Jason Kay"
+          ],
+          "Ward 3": [
+            "Mike Mokhtar",
+            "Kyle Templeton"
+          ],
+          "Ward 4": [
+            "Denise Robinson",
+            "Andrew McVey"
+          ]
+        }
+      }
+    ],
+    "regional councillor": [
+      {
+        "office": "Councillor, Regional",
+        "scope": "Ward-pair",
+        "n_districts": 2,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Wards 1 and 2": [
+            "Granville Anderson",
+            "Melissa Whitefield"
+          ],
+          "Wards 3 and 4": [
+            "Kannan Nair",
+            "Kevin Taylor"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "census_id": "3519028",
+  "csdname": "Vaughan",
+  "name_format": "first_last",
+  "candidate_list_url": "https://www.vaughan.ca/council/elections",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url is the news post; the 'Nominated Candidates' accordion on vaughan.ca/council/elections is the list. SOURCES.md records that vaughan.ca returns 403 to scripted fetches, and that held here too - the page was read in the browser. Tables carry no captions, so races were matched to tables by document order against the accordion headings.",
+    "incomplete_warning": "Only one mayoral candidate (incumbent Steven Del Duca) had filed as of 2026-08-11 - another illustration that these lists are incomplete before the deadline.",
+    "structure_match": "One 'Local and Regional Councillor' at-large table plus Ward 1-5 Councillor tables, matching both structure-CSV rows (at-large vote-for-4, 5 single-member wards)."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Steven Del Duca"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor, Ward",
+        "scope": "Ward",
+        "n_districts": 5,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": true,
+        "districts": {
+          "Ward 1": [
+            "Vince Scaramuzzo",
+            "Angela Saggese",
+            "Marilyn Iafrate",
+            "Nadeem Mahmood"
+          ],
+          "Ward 2": [
+            "Adriano Volpentesta"
+          ],
+          "Ward 3": [
+            "Rosanna DeFrancesca"
+          ],
+          "Ward 4": [
+            "Chris Ainsworth"
+          ],
+          "Ward 5": [
+            "Gila Martow"
+          ]
+        }
+      }
+    ],
+    "regional councillor": [
+      {
+        "office": "Councillor, Local and Regional",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 4,
+        "max_votes": 4,
+        "block_vote": true,
+        "districts": {
+          "At-large": [
+            "Mario G. Racco",
+            "Linda D. Jackson",
+            "Gino Rosati",
+            "Mario Ferri",
+            "Fitz-Roy Gordon",
+            "Alex Nascimben"
+          ]
+        }
+      }
+    ]
+  }
+}

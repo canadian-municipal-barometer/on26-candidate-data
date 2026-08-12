@@ -1,0 +1,91 @@
+{
+  "census_id": "3543017",
+  "csdname": "Innisfil",
+  "name_format": "last_first",
+  "candidate_list_url": "https://www.innisfil.ca/government-administration/elections",
+  "notes": {
+    "list_status": "page states the Unofficial List of Candidates is updated daily by end of day; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url is itself the candidate list. Race labels are in each table's <caption>, not in headings.",
+    "structure_match": "Ward 1-7 tables plus a Deputy Mayor table, matching the two structure-CSV rows (Wards 1-7, and Deputy Mayor at-large).",
+    "duplicate_filings": "Tricia Tyrell appears in both Ward 3 Councillor and Ward 4 Councillor on the source page. Recorded as published; worth re-checking against the certified list after 2026-08-24."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Dollin, Lynn",
+            "Fowler, Kenneth"
+          ]
+        }
+      }
+    ],
+    "deputy mayor": [
+      {
+        "office": "Deputy Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Cockburn, Dave",
+            "Letichever, Fillip",
+            "Nicol, Rob"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 7,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Eisses, Kevin",
+            "Newman, Scott",
+            "Veloso, Paul"
+          ],
+          "Ward 2": [
+            "Bennett, Susan",
+            "Constantine, Grace",
+            "Griffith, Carol"
+          ],
+          "Ward 3": [
+            "Jacks, Alison",
+            "La Costa, Nina",
+            "Richardson, Jennifer",
+            "Tyrell, Tricia"
+          ],
+          "Ward 4": [
+            "Faria, Melissa",
+            "Tyrell, Tricia"
+          ],
+          "Ward 5": [
+            "Brown, Karen",
+            "Zanella, Linda"
+          ],
+          "Ward 6": [
+            "Knibbs, Keisha",
+            "O'Neill, Deborah",
+            "Saunders, Robert"
+          ],
+          "Ward 7": [
+            "Drodge, Fred"
+          ]
+        }
+      }
+    ]
+  }
+}

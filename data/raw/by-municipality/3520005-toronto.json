@@ -1,0 +1,267 @@
+{
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "name_format": "last_first",
+  "candidate_list_url": "https://www.toronto.ca/data/elections/candidate_list/",
+  "notes": {
+    "list_status": "unofficial; nominations open until 2026-08-21 14:00. Every record carried status 'Active'.",
+    "source_note": "The candidate-list page renders from JavaScript and yields no names to a plain fetch. Names were read from the JSON the page itself loads: mayorCandidates_2026.json and councilorCandidates_2026.json under https://www.toronto.ca/data/elections/candidate_list/ (endpoint discovered in the page's own script, main1.1.4.js).",
+    "name_split": "first_name/last_name come from the feed's own firstName/lastName fields, not from parsing.",
+    "structure_match": "25 wards returned, matching n_districts=25 in the structure CSV."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Abdulsalam, Bahira",
+            "Alexander, Chris",
+            "Atkinson, Jamie",
+            "Bradford, Brad",
+            "Brown, Darrell",
+            "Chow, Braeden",
+            "Chow, Olivia",
+            "Curto, Roberto",
+            "Dean, Laura",
+            "Deville, Cory",
+            "Ellis, Laura",
+            "Fraser, Martin",
+            "Gong, Edward",
+            "Haider, Faizan",
+            "Hall, Thomas",
+            "Handjis, Peter",
+            "He, Heather",
+            "Kaaki, Mohamad",
+            "Kalkounis, Georgios",
+            "Kyrlangitses, Isidoros",
+            "Lamoureux, Michael",
+            "Lee, Rick",
+            "Mayanja, Eddie",
+            "McVie, Sarah",
+            "Osuji, Joseph",
+            "Parker, Odessa Paloma",
+            "Razi, Faisal",
+            "Rosen, Amy",
+            "Sanders, Lyall",
+            "Sayers, Naomi",
+            "Shusterman, Robert",
+            "S'ree Jr, Kannan",
+            "Tang, Weizhen",
+            "Tunney, Jeffery",
+            "Weenen, Jack",
+            "Yohannes, Leila",
+            "Zandkarimi, Mostafa"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 25,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Abbey, Abraham",
+            "Adib, Ala'a",
+            "Babar, Saima",
+            "Brown, Chloe",
+            "Crisanti, Vincent",
+            "Hamilton, Norman"
+          ],
+          "Ward 2": [
+            "Alexander, Jennifer",
+            "Holyday, Stephen"
+          ],
+          "Ward 3": [
+            "Internicola, Anthony",
+            "MacRae, Cody",
+            "Morley, Amber",
+            "Opitz, Ted"
+          ],
+          "Ward 4": [
+            "Corcoran, Michael",
+            "Guerrera, Nadia",
+            "King, Debbie",
+            "McNally, Diana Chan",
+            "Ogundipe, Bridget",
+            "Pham, Adam",
+            "Raponi, Vanessa",
+            "Traiforos, Lloyd",
+            "Weber, Holly"
+          ],
+          "Ward 5": [
+            "Ali, Sharmarke",
+            "Di Giorgio, Daniel",
+            "Nunziata, Frances",
+            "Obasogie, Nekpen",
+            "Padovani, Chiara",
+            "Phillips, Sileen"
+          ],
+          "Ward 6": [
+            "Irving, Conroy",
+            "Pasternak, James"
+          ],
+          "Ward 7": [
+            "Antwi, Lorna",
+            "Coombs, Amanda",
+            "Perruzza, Anthony"
+          ],
+          "Ward 8": [
+            "Colle, Mike",
+            "Grade, Liz",
+            "McDonald, Jason",
+            "Torrone, Enzo",
+            "Trayes, Daniel"
+          ],
+          "Ward 9": [
+            "Bravo, Alejandra",
+            "Jansen, Ashley",
+            "Martins, Marco",
+            "Simon, Neil"
+          ],
+          "Ward 10": [
+            "Cunningham, Ian",
+            "Ding, Xue",
+            "Hoàng-Lefranc, Andi",
+            "Kassir, Bashar",
+            "Malik, Ausma",
+            "Nash, Paul",
+            "Neemuchwala, Husain",
+            "Vashistha, Aanchal"
+          ],
+          "Ward 11": [
+            "Blanc, Gabe",
+            "Courtis, Keenan",
+            "Fisher, Dana",
+            "Hawkes, Terri",
+            "Lemke, Karina",
+            "Li, Alice",
+            "Lieu, Huy",
+            "Pileri, Gian",
+            "Saxe, Dianne",
+            "Yoon, Diana"
+          ],
+          "Ward 12": [
+            "Cottrell, David",
+            "Kalimbet, Jenny",
+            "Kamal, Ahmed",
+            "Kishner, Joshua",
+            "Matlow, Josh",
+            "Nadimi, Mina"
+          ],
+          "Ward 13": [
+            "Cadeau, Joe",
+            "Cai, Tom",
+            "Davis, Victoria",
+            "Khogali Ali, Walied",
+            "MacLeod, Norman",
+            "Moise, Chris",
+            "Stikuts, Curran",
+            "Tate, Daniel",
+            "Ward, Nicki"
+          ],
+          "Ward 14": [
+            "Chapelle, Susan",
+            "Stevens, Jason"
+          ],
+          "Ward 15": [
+            "Chernos Lin, Rachel",
+            "Sharp, Sheena"
+          ],
+          "Ward 16": [
+            "Burnside, Jon",
+            "Erdemir, Sinan",
+            "Moffatt, Stacey"
+          ],
+          "Ward 17": [
+            "Adamson, Jeffery",
+            "Carroll, Shelley",
+            "Kavod, Jethro Adir",
+            "Noor Mohamed, Hassan Mubarak",
+            "Samathanam, Roy",
+            "Zuniga, Sabrina"
+          ],
+          "Ward 18": [
+            "Cheng, Lily",
+            "Magazzinich, David",
+            "Yusifov, Nathan",
+            "Zarezade, Ardeshir"
+          ],
+          "Ward 19": [
+            "Ali, Syeda Jaana",
+            "Dann, James",
+            "Johnson, Natalie",
+            "Legg, Tycen",
+            "Morrison, Kevin",
+            "Smith, Adam",
+            "Vieira, Austin",
+            "Wahl, Jeff",
+            "Wilkins, Devin",
+            "Worden, Jennie"
+          ],
+          "Ward 20": [
+            "Ahmad, Malik",
+            "Choudhury, Laikul",
+            "Kaid, Naser",
+            "Kandavel, Parthi",
+            "Karokis, Ariel-Rachel",
+            "Lisciandro, Luigi",
+            "Mills, Philip",
+            "Nasrin, Sharmina",
+            "Reza, Mohammad Ali",
+            "Rupasinghe, Kevin"
+          ],
+          "Ward 21": [
+            "Ahmed, Taiba",
+            "Barahmand, Bahareh",
+            "Evbagharu, Patience",
+            "Ganesh, Uthish",
+            "Kargiannakis, Stella",
+            "Lalla, Akina",
+            "Reodica, Willie",
+            "Shanmugaratnam, Madura",
+            "Thompson, Michael",
+            "Veerasingam, Krissan"
+          ],
+          "Ward 22": [
+            "Azad, Madhuri",
+            "Chan, Bill",
+            "Ho, Jackson",
+            "Kotecha, Rakhee",
+            "Lovell, Dan",
+            "Mantas, Nick",
+            "Morgan, Donny"
+          ],
+          "Ward 23": [
+            "Dong, Han",
+            "Javed, Sajawal",
+            "Li, Kevin",
+            "Myers, Jamaal",
+            "Oleh, John-Mark"
+          ],
+          "Ward 24": [
+            "Ainslie, Paul",
+            "Lall, Rajinder"
+          ],
+          "Ward 25": [
+            "Allen, Shawn",
+            "Fernando, Ashan",
+            "Lumley, Jannette",
+            "Patel, Zakir",
+            "Shan, Neethan"
+          ]
+        }
+      }
+    ]
+  }
+}

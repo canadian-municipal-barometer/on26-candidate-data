@@ -1,0 +1,95 @@
+{
+  "census_id": "3518005",
+  "csdname": "Ajax",
+  "name_format": "first_last",
+  "candidate_list_url": "https://elections.ajax.ca/voters#candidates",
+  "notes": {
+    "list_status": "unofficial; page states the Clerk will provide a certified list after nominations close 2026-08-21",
+    "source_note": "district_source_url (https://elections.ajax.ca/voters) hosts an 'Offices to be Elected' section that links each race to its own page under /voters/offices-to-be-elected-*; candidates were read from those per-race pages."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Marilyn Crawford",
+            "Richard Hinds",
+            "Ashmeed Khan",
+            "Sajid Raza Rehman"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor, Local",
+        "scope": "Ward",
+        "n_districts": 3,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Malcolm Andre Barrington",
+            "Sadiq Boodoo",
+            "Nabeel Ilyas Choudhry",
+            "Rob Ford",
+            "Kristy McDonald",
+            "Kelly Miller",
+            "Jai Sahak"
+          ],
+          "Ward 2": [
+            "Andras Adaikkalam",
+            "Sajid Dogar",
+            "Jay Hayles",
+            "Nancy Henry",
+            "Azhar Khan"
+          ],
+          "Ward 3": [
+            "Bosh Bope",
+            "Nick Papalambropoulos",
+            "Lisa Patel",
+            "Santosh Gaddam",
+            "Bhanuteja Somarouthu"
+          ]
+        }
+      }
+    ],
+    "regional councillor": [
+      {
+        "office": "Councillor, Regional",
+        "scope": "Ward",
+        "n_districts": 3,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Aqsa Asif Malik",
+            "Rob Tyler Morin"
+          ],
+          "Ward 2": [
+            "Asad Ali",
+            "Sterling Lee",
+            "M. Asif Malik",
+            "Ranjith Paranivasagam"
+          ],
+          "Ward 3": [
+            "Stephanie Ashton",
+            "Rob Chopowick",
+            "Donna Edwards",
+            "Lynn MacDonald",
+            "Errol Massiah",
+            "Angie Papas"
+          ]
+        }
+      }
+    ]
+  }
+}

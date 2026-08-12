@@ -1,0 +1,84 @@
+{
+  "census_id": "3528018",
+  "csdname": "Haldimand County",
+  "name_format": "last_first",
+  "candidate_list_url": "https://www.haldimandcounty.ca/government-administration/elections/2026-municipal-election/registered-candidates/",
+  "notes": {
+    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "source_note": "district_source_url is the news post announcing the seven-ward model; the candidate list is on the Registered Candidates page under the 2026 Municipal Election section.",
+    "structure_match": "Ward 1-7 tables published, matching n_districts=7 in the structure CSV - the seven-ward model the district_source_url announces."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Bentley, Shelley Ann",
+            "Griffin, Andy",
+            "Little, Jesse",
+            "Vandendool, Jake"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 7,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1": [
+            "Doyle, Brian",
+            "McKeen, Debera"
+          ],
+          "Ward 2": [
+            "Allen, William",
+            "Beauvais, Paul",
+            "Mehlenbacher, Bruce F.",
+            "Metcalfe, John"
+          ],
+          "Ward 3": [
+            "Lawrence, Dan",
+            "Mastromatteo, Ryan"
+          ],
+          "Ward 4": [
+            "Dalimonte, Tony",
+            "Harnett, Jason",
+            "Mroz, Anna"
+          ],
+          "Ward 5": [
+            "Case, Cathy",
+            "Chevrier, Dave",
+            "Tucci, Ben"
+          ],
+          "Ward 6": [
+            "Cowan, Ian",
+            "Edie, Geoff",
+            "Reinink, Earl",
+            "Ricker, John",
+            "Shirton, Rob",
+            "Simmons, Veronika",
+            "Taylor, Lisa",
+            "Turnbull, Patti"
+          ],
+          "Ward 7": [
+            "Azeez, Rabiya",
+            "Duncan, Rob",
+            "Jones Shaw, Kelly",
+            "McTear, Russ",
+            "Stewart, Rebecca"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -40,6 +40,8 @@ import os
 import re
 import sys
 
+# Default collection date, used for every municipality file that does not carry its own
+# notes.retrieved.
 RETRIEVED = "2026-08-11"
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -133,8 +135,8 @@ def urls(cell):
 def find_row(cid, office, n_districts, max_votes):
     """Match a race to its structure-CSV row.
 
-    Chatham-Kent and Timmins each have two rows sharing an office, distinguished only by
-    how many districts they cover and how many names the ballot allows.
+    Chatham-Kent has two rows sharing an office, distinguished only by how many districts
+    they cover and how many names the ballot allows.
     """
     rows = [r for r in struct.get(cid, []) if r["office"] == office]
     if len(rows) <= 1:
@@ -202,7 +204,9 @@ for path in sorted(glob.glob(os.path.join(SRC, "*.json"))):
         if key not in RACE_KEYS:
             problems.append(f"{cid}: unexpected race key {key!r}")
     notes = dict(m.get("notes", {}))
-    notes["retrieved"] = RETRIEVED
+    # A municipality collected on a different day states its own date; RETRIEVED is the
+    # default for the rest, so the two cannot silently disagree.
+    notes.setdefault("retrieved", RETRIEVED)
     races = {
         key: [build_race(cid, r, fmt, m.get("candidate_list_url")) for r in m["races"][key]]
         for key in RACE_KEYS
@@ -246,15 +250,17 @@ doc = {
         "provisional": (
             "Ontario nominations for the 2026 cycle close 2026-08-21 at 14:00, and the clerk's "
             "certified list follows by 16:00 on 2026-08-24. Every list here is an unofficial "
-            "snapshot taken on 2026-08-11 and is therefore incomplete - candidates may still "
-            "file. Markham, Vaughan and Waterloo each had only one mayoral candidate on file. "
-            "Re-collect after certification for a final list."
+            "snapshot and is therefore incomplete - candidates may still file. Each "
+            "municipality's collection date is its notes.retrieved: 2026-08-11 for all but "
+            "North Bay and New Tecumseth, which joined the study on 2026-08-12. Markham, "
+            "Vaughan and Waterloo each had only one mayoral candidate on file. Re-collect "
+            "after certification for a final list."
         ),
         "schema": (
             "<census_id> -> {csdname, notes, races}. Each key under 'races' holds an ARRAY of "
             "race objects so a municipality with two races of the same type does not collapse: "
-            "Sarnia has two at-large councillor races, and Chatham-Kent and Timmins each have "
-            "two ward tiers with different max_votes. Race keys: mayor, atlarge, ward, "
+            "Sarnia has two at-large councillor races, and Chatham-Kent has two ward tiers "
+            "with different max_votes. Race keys: mayor, atlarge, ward, "
             "'regional councillor', 'deputy mayor'."
         ),
         "candidate_fields": (

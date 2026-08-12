@@ -1,0 +1,57 @@
+{
+  "census_id": "3548044",
+  "csdname": "North Bay",
+  "name_format": "last_first",
+  "candidate_list_url": "https://northbay.ca/city-government/2026-elections/registered-candidates-and-third-party-advertisers/",
+  "notes": {
+    "retrieved": "2026-08-12",
+    "list_status": "unofficial; the page states 'Candidate nominations are not final until certified after August 24' and that nominations are 'updated regularly as they are received'. Nominations close 2026-08-21 14:00.",
+    "source_note": "district_source_url is the City's Municipal Elections page, which gives the offices but no names; the names are one hop away on the Registered Candidates and Third-Party Advertisers page. Names are published as 'SURNAME, First', so the split is unambiguous.",
+    "structure_match": "One undifferentiated Councillor list under a single heading, with no wards anywhere on the page - which is the structure itself: North Bay elects its whole council in one at-large contest, matching the single structure-CSV row (n_districts 1, 10 seats, 10 votes).",
+    "deputy_mayor": "North Bay has a deputy mayor but no deputy mayor race: the councillor with the most votes takes the role, so there is no ballot line to collect."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "CURRIE, Connor",
+            "HORSFIELD, Maggie",
+            "LOWERY, Jamie"
+          ]
+        }
+      }
+    ],
+    "atlarge": [
+      {
+        "office": "Councillor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 10,
+        "max_votes": 10,
+        "block_vote": true,
+        "districts": {
+          "At-large": [
+            "CORBETT, Caroline",
+            "DALE, Dave",
+            "DASS, Rahul",
+            "HENEBERRY, Myles",
+            "INCH, Sara",
+            "LANGLOIS, Glen",
+            "MALLAH, Justine",
+            "MAYNE, Chris",
+            "SKINNER, Darryl",
+            "TILANDER, Randall",
+            "VREBOSCH, Bill"
+          ]
+        }
+      }
+    ]
+  }
+}

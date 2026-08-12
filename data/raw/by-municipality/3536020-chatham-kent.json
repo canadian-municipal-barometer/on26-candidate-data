@@ -1,0 +1,141 @@
+{
+  "census_id": "3536020",
+  "csdname": "Chatham-Kent",
+  "name_format": "last_first",
+  "candidate_list_url": "https://www.chatham-kent.ca/localgovernment/elections/Pages/Candidates.aspx",
+  "notes": {
+    "list_status": "unofficial; page states it is updated daily through the nomination period (2026-05-01 to 2026-08-21)",
+    "source_note": "district_source_url is the election landing page; candidates live one hop away on Pages/Candidates.aspx.",
+    "structure_match": "Candidate page prints '(Number to be elected - N)' per ward: 2 for wards 1,2,5,6,7,8 and 1 for wards 3,4. This independently confirms both structure-CSV rows (max_votes 2 and 1).",
+    "ward_names": "Ward numbers carry local names on the source page; recorded here as 'Ward N - Name'."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Anderson, Lauren",
+            "Bondy, Michael",
+            "Burm, Nelson",
+            "Canniff, Darrin",
+            "Gow, Ryan",
+            "Hope, Randy"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 6,
+        "seats": 2,
+        "max_votes": 2,
+        "block_vote": true,
+        "districts": {
+          "Ward 1 - South West Kent": [
+            "Askew, Tom",
+            "Authier, Mark",
+            "Bond, Michael",
+            "Harrigan, Melissa",
+            "Palmer, Andréa",
+            "Taves, Gerhard"
+          ],
+          "Ward 2 - South East Kent": [
+            "Carnie, Chad",
+            "Ceccacci, Anthony",
+            "Giffin, Matthew",
+            "Hooper, Fred",
+            "Lamarche, Matt",
+            "Maynard, Denise",
+            "Pilbeam, Albert",
+            "Snobelen, Brad",
+            "Stinson, Spencer",
+            "Tariq, Hassan"
+          ],
+          "Ward 5 - Wallaceburg & Area": [
+            "Authier, Brendan",
+            "Bailey, Loree",
+            "Blake, Jim",
+            "Brundritt, Dave",
+            "Burritt, Steven",
+            "Childs, Mark",
+            "Debuck, Jason",
+            "DeNure, Brent",
+            "Hyatt, David",
+            "Nicholson, Zac",
+            "Young, Chris"
+          ],
+          "Ward 6 - North West Chatham": [
+            "Comiskey, Jeff",
+            "Labadie, Ben",
+            "Machado, F. Brian",
+            "Moir-Martin, Sheila",
+            "Montgomery, Karen",
+            "Storey, Alysson",
+            "Westerman, Marc"
+          ],
+          "Ward 7 - North East Chatham": [
+            "Adkins, Steve",
+            "Crew, Marjorie",
+            "Fife, Michael",
+            "Finn, Amy",
+            "Gawne, Dustin (Duddee)",
+            "Gibbons, Michael",
+            "Hutchins, Larry",
+            "Kenney, Steve",
+            "King, Marc",
+            "Reynolds, Jason",
+            "Robbins, Doug",
+            "Robinet, Karen",
+            "Ryan, Dustin"
+          ],
+          "Ward 8 - South Chatham": [
+            "Allin, Conor",
+            "Dorner, Sandra",
+            "Drouillard, Ryan",
+            "Duquette, John",
+            "Fisher, Andy",
+            "Graciano, Paulo",
+            "Martin, Deb",
+            "McGregor, Brock",
+            "Nicholls, Rick",
+            "Shill, Stephani",
+            "Thompson, Scott",
+            "Van Der Vliet, Luke"
+          ]
+        }
+      },
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 2,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": true,
+        "districts": {
+          "Ward 3 - North East Kent": [
+            "Aziz, Lauren",
+            "Carter, Kyle",
+            "Couture, Cory",
+            "Huston, Mark",
+            "Huszka, Emery",
+            "Pietens, Matthew",
+            "Plunkett, James"
+          ],
+          "Ward 4 - North West Kent": [
+            "Cummings, John",
+            "Hooker, Kirk",
+            "Jubenville, Rhonda"
+          ]
+        }
+      }
+    ]
+  }
+}

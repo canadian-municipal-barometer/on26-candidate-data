@@ -1,0 +1,163 @@
+{
+  "census_id": "3506008",
+  "csdname": "Ottawa",
+  "name_format": "first_last",
+  "candidate_list_url": "https://ottawa.ca/en/city-hall/elections/candidates/nominated-candidates",
+  "notes": {
+    "source_note": "district_source_url is the 'Voting for Mayor and City Councillor' page. Ottawa publishes one page per ward under /candidates/nominated-candidates/candidates-city-councillor/, plus a separate mayor page; all 24 ward pages were fetched.",
+    "ward_names": "Ottawa wards carry names; recorded as published, e.g. 'Ward 1 Orléans East-Cumberland'.",
+    "structure_match": "24 ward pages published, matching n_districts=24 in the structure CSV.",
+    "list_status": "unofficial; the city updates its candidate lists regularly through the nomination period. Nominations close 2026-08-21 14:00."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Jeff Leiper",
+            "Alex Lawson",
+            "Neil Saravanamuttoo",
+            "Mark Sutcliffe",
+            "Zed Chebib",
+            "Peter Westaway",
+            "Suraj Harish"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 24,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "Ward 1 Orléans East-Cumberland": [
+            "Barbara Daniela Gandolfo",
+            "Sherif Rizk",
+            "Bob Bell",
+            "Tammie Trellert",
+            "Matt Luloff",
+            "Mazhar Choudhry",
+            "Yvette Ashiri"
+          ],
+          "Ward 2 Orléans West-Innes": [
+            "Laura Dudas",
+            "Jenna Jessop"
+          ],
+          "Ward 3 Barrhaven West": [
+            "David Hill",
+            "Donna Blackburn"
+          ],
+          "Ward 4 Kanata North": [
+            "Cathy Curry"
+          ],
+          "Ward 5 West Carleton": [
+            "Christine Harrison",
+            "Clarke Kelly"
+          ],
+          "Ward 6 Stittsville": [
+            "Chelsea Walton",
+            "Mani Sharma",
+            "Sheetal Narwal",
+            "Tanya Hein",
+            "Theresa Qadri",
+            "Kevin Hua",
+            "Marie-Ange Yindaki Ahinful",
+            "Paul Meek"
+          ],
+          "Ward 7 Bay": [
+            "Theresa Kavanagh",
+            "Spencer Radford",
+            "Butch Moore"
+          ],
+          "Ward 8 College": [
+            "Laine Johnson"
+          ],
+          "Ward 9 Knoxdale-Merivale": [
+            "Cole Fraser Jones",
+            "Brandon Ly",
+            "Anna Ielo-Tal",
+            "Sean Devine"
+          ],
+          "Ward 10 Gloucester-Southgate": [
+            "John Redins",
+            "Donna Dickson",
+            "Jessica Bradley"
+          ],
+          "Ward 11 Beacon Hill- Cyrville": [
+            "Cathryne Milburn",
+            "Tim Tierney"
+          ],
+          "Ward 12 Rideau-Vanier": [
+            "Lyra Evans",
+            "Stéphanie Plante"
+          ],
+          "Ward 13 Rideau-Rockcliffe": [
+            "Peter J. Karwacki",
+            "Rawlson King"
+          ],
+          "Ward 14 Somerset": [
+            "Robert Dekker",
+            "Ariel Troster",
+            "Dillon Anderson",
+            "Michael Tay",
+            "Nicholas Gollé"
+          ],
+          "Ward 15 Kitchissippi": [
+            "Joanne Chianello",
+            "Subhir Uppal",
+            "Brian Innes"
+          ],
+          "Ward 16 River": [
+            "Riley Brockington"
+          ],
+          "Ward 17 Capital": [
+            "Farah Gulzar",
+            "Shawn Menard",
+            "Jaac Doduck"
+          ],
+          "Ward 18 Alta Vista": [
+            "Tressy El-Hawi",
+            "Marty Carr",
+            "Derek McSweeney"
+          ],
+          "Ward 19 Orléans South- Navan": [
+            "Jason Wing",
+            "Catherine Kitts"
+          ],
+          "Ward 20 Osgoode": [
+            "Isabelle Skalski"
+          ],
+          "Ward 21 Rideau-Jock": [
+            "David Brown"
+          ],
+          "Ward 22 Riverside South-Findlay Creek": [
+            "Muyiwa Ojo",
+            "Steve Desroches"
+          ],
+          "Ward 23 Kanata South": [
+            "Erin Coffin",
+            "Allan Hubley",
+            "Megan Strazds-Esenbergs",
+            "Sam Bhalesar"
+          ],
+          "Ward 24 Barrhaven East": [
+            "Wilson Lo",
+            "Zahy A Adam",
+            "Jules Ruhinda",
+            "Yoosaf Melparamba"
+          ]
+        }
+      }
+    ]
+  }
+}

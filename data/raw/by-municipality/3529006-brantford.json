@@ -1,0 +1,80 @@
+{
+  "census_id": "3529006",
+  "csdname": "Brantford",
+  "name_format": "first_last",
+  "candidate_list_url": "https://www.brantford.ca/your-government/municipal-election/candidates/",
+  "notes": {
+    "list_status": "unofficial; page states eligible candidates will be officially certified 2026-08-24",
+    "source_note": "district_source_url is the city council page; the candidate list sits under the Municipal Election section.",
+    "structure_match": "Page prints 'Ward N (2 Councillors elected per ward)' for all 5 wards, independently confirming seats_per_district=2 and max_votes=2 in the structure CSV.",
+    "parse_check": "Extracted name count equals the count of 'Email:' entries in every section."
+  },
+  "races": {
+    "mayor": [
+      {
+        "office": "Mayor",
+        "scope": "At-large",
+        "n_districts": 1,
+        "seats": 1,
+        "max_votes": 1,
+        "block_vote": false,
+        "districts": {
+          "At-large": [
+            "Dan McCreary",
+            "Mandy Samwell",
+            "Richard Carpenter",
+            "Rose Sicoli",
+            "Ricky Willdy",
+            "Leslie Bory"
+          ]
+        }
+      }
+    ],
+    "ward": [
+      {
+        "office": "Councillor",
+        "scope": "Ward",
+        "n_districts": 5,
+        "seats": 2,
+        "max_votes": 2,
+        "block_vote": true,
+        "districts": {
+          "Ward 1": [
+            "Darryl Casey",
+            "Michael Sullivan",
+            "Bob Sproul",
+            "Michael Boucher"
+          ],
+          "Ward 2": [
+            "Erica James",
+            "Dave Malcolm",
+            "Mark Littell",
+            "Gino Caputo"
+          ],
+          "Ward 3": [
+            "Andrew Davis",
+            "Rod Philpot",
+            "Arron Jeavons",
+            "Trevor J Cherewka",
+            "Jay Goldberg",
+            "Mike Clancy"
+          ],
+          "Ward 4": [
+            "Nicole Callander",
+            "Linda Hunt",
+            "Nicole Durnford",
+            "Colleen Goupil",
+            "Al Moscoe"
+          ],
+          "Ward 5": [
+            "Karleigh Csordas",
+            "Mandy Stelling",
+            "Dan Thompson",
+            "Robert Stanley Harland",
+            "Brian Van Tilborg"
+          ]
+        }
+      }
+    ]
+  }
+}
