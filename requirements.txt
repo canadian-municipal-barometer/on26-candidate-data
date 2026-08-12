@@ -1,0 +1,14 @@
+# Dependencies for scripts/build-candidates-raw.py.
+#
+# Both are used for one job: finding the surname boundary in names published as
+# "First Last", which is the only shape where it cannot simply be read off. See
+# split_first_last() in the build script.
+#
+# nameparser supplies the structure - parenthesised nicknames, suffixes, and the
+# particles that begin a surname ("Del Duca", "Van Meerbergen").
+nameparser>=1.1
+# names-dataset supplies the corpus of given names and surnames used to decide
+# whether a leftover middle token belongs to the surname. It is a large download
+# (~50 MB installed) and loading it costs well over a gigabyte of memory, so the
+# build only loads it when a name actually needs deciding.
+names-dataset>=3.1

@@ -6,7 +6,7 @@
     "municipalities": 38,
     "provisional": "Ontario nominations for the 2026 cycle close 2026-08-21 at 14:00, and the clerk's certified list follows by 16:00 on 2026-08-24. Every list here is an unofficial snapshot and is therefore incomplete - candidates may still file. Each municipality's collection date is its notes.retrieved: 2026-08-11 for all but North Bay and New Tecumseth, which joined the study on 2026-08-12. Markham, Vaughan and Waterloo each had only one mayoral candidate on file. Re-collect after certification for a final list.",
     "schema": "<census_id> -> {csdname, notes, races}. Each key under 'races' holds an ARRAY of race objects so a municipality with two races of the same type does not collapse: Sarnia has two at-large councillor races, and Chatham-Kent has two ward tiers with different max_votes. Race keys: mayor, atlarge, ward, 'regional councillor', 'deputy mayor'.",
-    "candidate_fields": "name_raw is the name exactly as published. last_name is upper-cased and first_name mixed case, following data/csv/TEST_ab-cands.csv. Sources publish names in three different shapes ('Last, First', 'First Last', and mixed-case given name with a CAPS surname); the shape used for each municipality is its name_format in data/raw/by-municipality/.",
+    "candidate_fields": "name_raw is the name exactly as published. last_name is upper-cased and first_name mixed case, following data/csv/TEST_ab-cands.csv, so a middle name stays with the given name. Sources publish names in three different shapes ('Last, First', 'First Last', and mixed-case given name with a CAPS surname); the shape used for each municipality is its name_format in data/raw/by-municipality/. Only the 'First Last' shape has to be guessed at: there the surname boundary is found with nameparser plus a name corpus (names-dataset), which is what keeps multi-token surnames such as 'Del Duca' and 'Meed Ward' whole. Tokens that are common as both a given name and a surname are inherently undecidable and stay with the given name; the build lists those for review.",
     "sources": "district_source_url and max_votes_source are copied from notes/councillor-election-structure.csv for the matching race. candidate_list_url is the page the names were actually read from, which for many municipalities is one hop from district_source_url because that URL points at a ward-boundary or council-composition page rather than a candidate list.",
     "withdrawn": "Withdrawn nominations are excluded from this dataset.",
     "known_gaps": "Kitchener and Cambridge each publish an at-large Regional Councillor race with no row in council-races.csv, so it is absent from councillor-election-structure.csv too. Both are included here with seats/max_votes null and not_in_structure_csv true, since SOURCES.md lists both municipalities under at-large block vote."
@@ -1284,8 +1284,8 @@
                 },
                 {
                   "name_raw": "Sajid Raza Rehman",
-                  "last_name": "REHMAN",
-                  "first_name": "Sajid Raza"
+                  "last_name": "RAZA REHMAN",
+                  "first_name": "Sajid"
                 }
               ]
             }
@@ -1918,8 +1918,8 @@
                 },
                 {
                   "name_raw": "Edouard Nwaha Gwet",
-                  "last_name": "GWET",
-                  "first_name": "Edouard Nwaha"
+                  "last_name": "NWAHA GWET",
+                  "first_name": "Edouard"
                 },
                 {
                   "name_raw": "Deb Oldfield",
@@ -2268,8 +2268,8 @@
               "candidates": [
                 {
                   "name_raw": "Steven Del Duca",
-                  "last_name": "DUCA",
-                  "first_name": "Steven Del"
+                  "last_name": "DEL DUCA",
+                  "first_name": "Steven"
                 }
               ]
             }
@@ -3094,8 +3094,8 @@
               "candidates": [
                 {
                   "name_raw": "Dale Kerr Genge",
-                  "last_name": "GENGE",
-                  "first_name": "Dale Kerr"
+                  "last_name": "KERR GENGE",
+                  "first_name": "Dale"
                 },
                 {
                   "name_raw": "Margaret Quirk",
@@ -4381,8 +4381,8 @@
                 },
                 {
                   "name_raw": "ANA LUISA VASQUEZ DE ESPINAL",
-                  "last_name": "ESPINAL",
-                  "first_name": "ANA LUISA VASQUEZ DE"
+                  "last_name": "VASQUEZ DE ESPINAL",
+                  "first_name": "ANA LUISA"
                 }
               ]
             }
@@ -4550,8 +4550,8 @@
                 },
                 {
                   "name_raw": "ROSEMARIE SANCHEZ SANCHEZ",
-                  "last_name": "SANCHEZ",
-                  "first_name": "ROSEMARIE SANCHEZ"
+                  "last_name": "SANCHEZ SANCHEZ",
+                  "first_name": "ROSEMARIE"
                 },
                 {
                   "name_raw": "DANNY SINGH",
@@ -5799,8 +5799,8 @@
                 },
                 {
                   "name_raw": "Marianne Meed Ward",
-                  "last_name": "WARD",
-                  "first_name": "Marianne Meed"
+                  "last_name": "MEED WARD",
+                  "first_name": "Marianne"
                 },
                 {
                   "name_raw": "Rory Nisan",
@@ -6191,8 +6191,8 @@
                 },
                 {
                   "name_raw": "Galen Naidoo Harris",
-                  "last_name": "HARRIS",
-                  "first_name": "Galen Naidoo"
+                  "last_name": "NAIDOO HARRIS",
+                  "first_name": "Galen"
                 },
                 {
                   "name_raw": "Syed Naqvi",
@@ -6210,8 +6210,8 @@
               "candidates": [
                 {
                   "name_raw": "Rick Di Lorenzo",
-                  "last_name": "LORENZO",
-                  "first_name": "Rick Di"
+                  "last_name": "DI LORENZO",
+                  "first_name": "Rick"
                 },
                 {
                   "name_raw": "Sammy Ijaz",
@@ -7531,8 +7531,8 @@
                 },
                 {
                   "name_raw": "Brian Van Tilborg",
-                  "last_name": "TILBORG",
-                  "first_name": "Brian Van"
+                  "last_name": "VAN TILBORG",
+                  "first_name": "Brian"
                 }
               ]
             }
@@ -9520,8 +9520,8 @@
                 },
                 {
                   "name_raw": "Stephen Orser (Ors)",
-                  "last_name": "(ORS)",
-                  "first_name": "Stephen Orser"
+                  "last_name": "ORSER",
+                  "first_name": "Stephen (Ors)"
                 },
                 {
                   "name_raw": "Randi Prunner",
@@ -9554,13 +9554,13 @@
                 },
                 {
                   "name_raw": "Mary Blake Rose",
-                  "last_name": "ROSE",
-                  "first_name": "Mary Blake"
+                  "last_name": "BLAKE ROSE",
+                  "first_name": "Mary"
                 },
                 {
                   "name_raw": "Simon Sabeesh Karikassery",
-                  "last_name": "KARIKASSERY",
-                  "first_name": "Simon Sabeesh"
+                  "last_name": "SABEESH KARIKASSERY",
+                  "first_name": "Simon"
                 }
               ]
             },
@@ -9568,8 +9568,8 @@
               "candidates": [
                 {
                   "name_raw": "Ian Sterling Leishman",
-                  "last_name": "LEISHMAN",
-                  "first_name": "Ian Sterling"
+                  "last_name": "STERLING LEISHMAN",
+                  "first_name": "Ian"
                 },
                 {
                   "name_raw": "Stephanie Marentette",
@@ -9592,8 +9592,8 @@
               "candidates": [
                 {
                   "name_raw": "Kamrul Ahsan (Kam)",
-                  "last_name": "(KAM)",
-                  "first_name": "Kamrul Ahsan"
+                  "last_name": "AHSAN",
+                  "first_name": "Kamrul (Kam)"
                 },
                 {
                   "name_raw": "German Gutierrez",
@@ -9622,8 +9622,8 @@
                 },
                 {
                   "name_raw": "Djuma Moïse Sharifu",
-                  "last_name": "SHARIFU",
-                  "first_name": "Djuma Moïse"
+                  "last_name": "MOÏSE SHARIFU",
+                  "first_name": "Djuma"
                 },
                 {
                   "name_raw": "Jonathan Sher",
@@ -9699,8 +9699,8 @@
                 },
                 {
                   "name_raw": "Paul Van Meerbergen",
-                  "last_name": "MEERBERGEN",
-                  "first_name": "Paul Van"
+                  "last_name": "VAN MEERBERGEN",
+                  "first_name": "Paul"
                 },
                 {
                   "name_raw": "Lois Margaret Ward",
@@ -9718,8 +9718,8 @@
                 },
                 {
                   "name_raw": "Harinder Kumar (Harry)",
-                  "last_name": "(HARRY)",
-                  "first_name": "Harinder Kumar"
+                  "last_name": "KUMAR",
+                  "first_name": "Harinder (Harry)"
                 }
               ]
             },
@@ -9917,8 +9917,8 @@
               "candidates": [
                 {
                   "name_raw": "Shira Harrison McIntyre",
-                  "last_name": "MCINTYRE",
-                  "first_name": "Shira Harrison"
+                  "last_name": "HARRISON MCINTYRE",
+                  "first_name": "Shira"
                 },
                 {
                   "name_raw": "Kyle Warren",
@@ -9936,8 +9936,8 @@
               "candidates": [
                 {
                   "name_raw": "Dianna Del Bianco",
-                  "last_name": "BIANCO",
-                  "first_name": "Dianna Del"
+                  "last_name": "DEL BIANCO",
+                  "first_name": "Dianna"
                 },
                 {
                   "name_raw": "Andrea Jacks",
@@ -10384,8 +10384,8 @@
               "candidates": [
                 {
                   "name_raw": "Duarte Da Silva",
-                  "last_name": "SILVA",
-                  "first_name": "Duarte Da"
+                  "last_name": "DA SILVA",
+                  "first_name": "Duarte"
                 },
                 {
                   "name_raw": "Robert Thomson",

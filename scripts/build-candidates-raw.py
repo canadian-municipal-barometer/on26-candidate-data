@@ -6,6 +6,11 @@ Usage: python3 scripts/build-candidates-raw.py
 Takes no arguments and, like the R scripts, resolves the repo root from its own path so it
 can be run from any working directory.
 
+Requires the packages in requirements.txt: pip install -r requirements.txt. They are used
+only to split names published as 'First Last', where the surname boundary has to be worked
+out rather than read off - see split_first_last(). The corpus is loaded lazily, so a run
+over sources that all publish 'Last, First' never touches it.
+
 Inputs
   data/raw/by-municipality/<census_id>-<slug>.json
       Hand-maintained. One file per municipality, holding candidate names exactly as the
@@ -39,6 +44,14 @@ import json
 import os
 import re
 import sys
+
+try:
+    from nameparser import HumanName
+except ImportError:
+    sys.exit(
+        "missing dependency: nameparser. Install this script's requirements with\n"
+        "  python3 -m pip install -r requirements.txt"
+    )
 
 # Default collection date, used for every municipality file that does not carry its own
 # notes.retrieved.
@@ -77,17 +90,129 @@ def split_last_first(raw):
     return parts[0], ", ".join(parts[1:])
 
 
+_names_db = None
+
+
+def names_db():
+    """The name corpus, loaded on first use.
+
+    Loading costs a few seconds and well over a gigabyte of memory, so it happens only
+    when a name actually needs deciding - a source that publishes 'First Last' with no
+    three-token names never pays for it.
+    """
+    global _names_db
+    if _names_db is None:
+        try:
+            from names_dataset import NameDataset
+        except ImportError:
+            sys.exit(
+                "missing dependency: names-dataset. Install this script's requirements with\n"
+                "  python3 -m pip install -r requirements.txt"
+            )
+        _names_db = NameDataset()
+    return _names_db
+
+
+def name_ranks(tok):
+    """(best given-name rank, best surname rank) for a token, either possibly None.
+
+    Ranks are per-country and sparse - 'Sanchez' has no Canadian rank at all - so the
+    best rank across countries is used rather than the Canadian one. Lower is commoner;
+    None means the corpus does not know the token in that role.
+    """
+    hit = names_db().search(re.sub(r"[^\w'-]", "", tok))
+
+    def best(entry):
+        if not entry:
+            return None
+        ranked = [v for v in entry["rank"].values() if v]
+        return min(ranked) if ranked else None
+
+    return best(hit["first_name"]), best(hit["last_name"])
+
+
+# A middle token joins the surname only on positive evidence, because leaving a middle
+# name on the given name is what the sources themselves do and what the Alberta file this
+# format follows does. Three ways to earn it: the corpus does not know the token as a
+# given name at all, it barely knows it (RARE_GIVEN), or the token is both an uncommon
+# given name (COMMON_GIVEN) and decisively commoner as a surname (SURNAME_EDGE times).
+#
+# The COMMON_GIVEN floor is doing real work, not padding the ratio. 'Taylor' (given 98,
+# surname 5) and 'Singh' (given 227, surname 1) both clear the ratio easily and are both
+# middle names here; 'Harrison' (given 372, surname 48) clears it by less and is half of
+# 'Harrison McIntyre'. Only the floor tells those apart, and it is why 'Kasey Taylor
+# Etreni' and 'MANDEEP SINGH DHALIWAL' keep their one-token surnames.
+#
+# What no threshold can settle is a token common in both roles - Lee, Charles, Blake.
+# Those fall through to the given name and are printed for review at the end of a run.
+RARE_GIVEN = 1000
+COMMON_GIVEN = 300
+SURNAME_EDGE = 6
+
+# 'J.', 'C', 'R.E.' - initials are never a surname, whatever the corpus says about the
+# letters as a word.
+INITIAL = re.compile(r"[A-Za-zÀ-ÿ]\.?(?:[A-Za-zÀ-ÿ]\.)*$")
+
+reviews = []
+
+
+def surname_like(tok):
+    """Does this middle token read as part of the surname? Returns (verdict, why, close).
+
+    `close` marks a call worth a human glance: the token joined the surname, or it stayed
+    with the given name even though the corpus knows it at least as well as a surname.
+    """
+    if INITIAL.fullmatch(tok):
+        return False, "initial", False
+    given, surname = name_ranks(tok)
+    if surname is None:
+        return False, f"not a known surname (given rank {given})", False
+    if given is None:
+        return True, f"known only as a surname (rank {surname})", True
+    if given > RARE_GIVEN:
+        return True, f"barely a given name (given {given}, surname {surname})", True
+    if given > COMMON_GIVEN and surname * SURNAME_EDGE < given:
+        return True, f"uncommon given name, common surname (given {given}, surname {surname})", True
+    return (
+        False,
+        f"reads as a given name (given {given}, surname {surname})",
+        surname <= given,
+    )
+
+
 def split_first_last(raw):
-    """'First Last'. A trailing suffix stays with the surname."""
-    toks = raw.split()
-    if not toks:
+    """'First Last', where the surname may be more than one token.
+
+    Structure comes from nameparser: it strips a parenthesised nickname, keeps a trailing
+    suffix with the surname, and attaches the particles that begin a surname ('Del Duca',
+    'Van Meerbergen'). What it cannot know is whether a leftover middle token is a middle
+    name or the first half of a double-barrelled surname - 'Marianne Meed Ward' and
+    'Christeen Elizabeth Thornton' are the same shape. The corpus decides that, one token
+    at a time from the right, stopping at the first token that reads as a given name.
+    """
+    parsed = HumanName(raw)
+    last, first, suffix = parsed.last, parsed.first, parsed.suffix
+    if not last:
         return raw, ""
-    if len(toks) == 1:
-        return toks[0], ""
-    suffix = toks.pop() if len(toks) > 2 and is_suffix(toks[-1]) else ""
-    last = toks[-1]
-    first = " ".join(toks[:-1])
-    return (f"{last} {suffix}" if suffix else last), first
+
+    middles = parsed.middle.split()
+    while middles:
+        verdict, why, close = surname_like(middles[-1])
+        if close:
+            action = "joined the surname" if verdict else "kept with the given name"
+            reviews.append((raw, middles[-1], action, why))
+        if not verdict:
+            break
+        last = f"{middles.pop()} {last}"
+
+    first = " ".join([first] + middles).strip()
+    # The nickname is how many of these candidates are actually known, so it stays on the
+    # given name rather than being dropped.
+    if parsed.nickname:
+        first = f"{first} ({parsed.nickname})".strip()
+    if suffix:
+        last = f"{last} {suffix}"
+    return last.strip(), first
 
 
 def split_caps_surname(raw):
@@ -265,10 +390,15 @@ doc = {
         ),
         "candidate_fields": (
             "name_raw is the name exactly as published. last_name is upper-cased and first_name "
-            "mixed case, following data/csv/TEST_ab-cands.csv. Sources publish names in three "
-            "different shapes ('Last, First', 'First Last', and mixed-case given name with a "
-            "CAPS surname); the shape used for each municipality is its name_format in "
-            "data/raw/by-municipality/."
+            "mixed case, following data/csv/TEST_ab-cands.csv, so a middle name stays with the "
+            "given name. Sources publish names in three different shapes ('Last, First', "
+            "'First Last', and mixed-case given name with a CAPS surname); the shape used for "
+            "each municipality is its name_format in data/raw/by-municipality/. Only the "
+            "'First Last' shape has to be guessed at: there the surname boundary is found with "
+            "nameparser plus a name corpus (names-dataset), which is what keeps multi-token "
+            "surnames such as 'Del Duca' and 'Meed Ward' whole. Tokens that are common as both "
+            "a given name and a surname are inherently undecidable and stay with the given "
+            "name; the build lists those for review."
         ),
         "sources": (
             "district_source_url and max_votes_source are copied from "
@@ -302,3 +432,11 @@ total = sum(
 races_n = sum(len(rs) for m in out.values() for rs in m["races"].values())
 print(f"wrote {os.path.relpath(DEST, REPO)}")
 print(f"  municipalities {len(out)}  races {races_n}  candidates {total}")
+
+# The judgement calls, so they stay visible instead of disappearing into 1,400 rows.
+# Names split on an unambiguous signal - a comma, a CAPS surname, an obvious given name -
+# are not listed; these are the ones where the corpus was deciding something close.
+if reviews:
+    print(f"\n  surname boundary was a judgement call for {len(reviews)} name(s):")
+    for raw, tok, action, why in reviews:
+        print(f"    {raw!r}: {tok!r} {action} - {why}")
