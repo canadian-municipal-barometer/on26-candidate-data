@@ -62,3 +62,8 @@ The date and version number are in the file name and in the file's contents as s
 - Coarser tables are a group-by away: by `census_id` + `office` for the race grain of `notes/councillor-election-structure.csv`, by `census_id` for the municipality.
 - A row is keyed by `census_id` + `office` + `district`, and the build aborts if that is ever not unique. The parent race's ballot structure — its district count, seats and `max_votes` — is not repeated here; it is one join on `census_id` + `office` away in the structure CSV.
 - The counts are a snapshot and a lower bound until nominations close (2026-08-21) and the certified lists follow (2026-08-24). Each row carries the `retrieved` date of the municipality's list.
+
+`tests/`: Checks on the generated data that the build scripts cannot make themselves, because they hold across files or across columns that are filled in separately.
+
+- Usage: `node --test` from the repo root. No dependencies and no `package.json`; it uses Node's built-in runner. `node --test <dir>` is not supported — pass a file if you want to run just one.
+- `tests/structure-csv.test.js` asserts that `seats_per_district` equals `max_votes` for every race in `notes/councillor-election-structure.csv`. The two are separate measures — seats filled vs. names a voter may mark — that happen to coincide while every contest in the study is single-seat or plurality-at-large. It is a tripwire: a failure is either a typo or a municipality adopting limited or cumulative voting, and the fix belongs in `notes/council-races.csv` followed by a rerun of `scripts/get-municipal-data.R`.
