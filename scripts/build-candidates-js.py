@@ -36,6 +36,7 @@ Shape
               districts: {
                 "<ward label>"|"99": {
                   seats: 1,                  // null where the seat count is unverified
+                  max_votes: 1,              // names a voter may mark; null likewise
                   n: 7,                      // candidates on file
                   accl: 0|1|null,            // n <= seats; null when seats is null
                   pair: "Wards 1, 5",        // only on a district split out of a ward pair
@@ -172,6 +173,11 @@ for census_id in sorted(k for k in raw if k != "_meta"):
         for race in race_list:
             at_large = race.get("district_scope") == "At-large"
             seats = race.get("seats_per_district")
+            # Seats filled and names a voter may mark are two different measures that
+            # happen to coincide in every race in the study today - tests/structure-csv.
+            # test.js is the tripwire for that changing. Both are carried so the survey
+            # never has to stand one in for the other.
+            max_votes = race.get("max_votes")
             districts = {}
 
             for label, district in race["districts"].items():
@@ -185,6 +191,7 @@ for census_id in sorted(k for k in raw if k != "_meta"):
                 n = len(candidates)
                 record = {
                     "seats": seats,
+                    "max_votes": max_votes,
                     "n": n,
                     "accl": None if seats is None else int(n <= seats),
                     "candidates": candidates,
@@ -346,10 +353,12 @@ doc = {
         "schema": (
             "municipalities[census_id].races[mayor|coun|reg_coun|dep_mayor] is an ARRAY of "
             "races; each race's districts are keyed by ward label, or \"99\" when the race "
-            "is at-large. seats sits on the district because Chatham-Kent's two ward tiers "
-            "differ. accl is n <= seats, or null where seats is unverified. A district "
-            "carrying `pair` was split out of a ward pair and its candidates are also "
-            "stored under the pair's other ward(s)."
+            "is at-large. seats and max_votes sit on the district because Chatham-Kent's "
+            "two ward tiers differ; they are separate measures - seats filled vs names a "
+            "voter may mark - that coincide in every race here today. accl is n <= seats, "
+            "or null where seats is unverified. A district carrying `pair` was split out "
+            "of a ward pair and its candidates are also stored under the pair's other "
+            "ward(s)."
         ),
         "max_names_note": (
             "The largest list a single respondent can be served for each stem, summed over "

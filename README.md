@@ -19,7 +19,7 @@ The date and version number are in the file name and in the file's contents, und
 Each file assigns a nested object to `window.CMB_CANDIDATES`, keyed by `census_id`, and is read by `code/survey/parse-candidates.js` in the survey repo. `meta.schema` in the file itself describes the shape; `scripts/build-candidates-js.py` documents why it is that shape.
 
 - The four race stems — `mayor`, `coun`, `reg_coun`, `dep_mayor` — are the four families of embedded fields the survey writes. Each holds an **array** of races, so Sarnia's two at-large councillor contests and Chatham-Kent's two ward tiers stay apart.
-- `seats` sits on the district rather than the race, because Chatham-Kent elects two councillors in six of its wards and one in the other two.
+- `seats` and `max_votes` sit on the district rather than the race, because Chatham-Kent elects two councillors in six of its wards and one in the other two. Both are carried: they are separate measures — seats filled vs names a voter may mark — that coincide in every race in the study today, and `tests/structure-csv.test.js` is the tripwire for that changing.
 - Ward pairs are stored under each ward they are drawn from, so a respondent's single-ward answer finds them; the pair label is kept in `pair`. Brampton and Clarington are the two.
 - The file is pure ASCII, non-ASCII written as `\uXXXX`. It is loaded by a `<script src>` with no charset attribute, and a wrong encoding guess would stop `Ward 1 Orléans East-Cumberland` matching the ward the survey embedded.
 

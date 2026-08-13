@@ -23,7 +23,7 @@ window.CMB_CANDIDATES = {
       "dep_mayor": 3
     },
     "provisional": "Ontario nominations for the 2026 cycle close 2026-08-21 at 14:00, and the clerk's certified list follows by 16:00 on 2026-08-24. Every list here is an unofficial snapshot and is therefore incomplete - candidates may still file. Each municipality's collection date is its notes.retrieved: 2026-08-11 for all but North Bay and New Tecumseth, which joined the study on 2026-08-12. Markham, Vaughan and Waterloo each had only one mayoral candidate on file. Re-collect after certification for a final list.",
-    "schema": "municipalities[census_id].races[mayor|coun|reg_coun|dep_mayor] is an ARRAY of races; each race's districts are keyed by ward label, or \"99\" when the race is at-large. seats sits on the district because Chatham-Kent's two ward tiers differ. accl is n <= seats, or null where seats is unverified. A district carrying `pair` was split out of a ward pair and its candidates are also stored under the pair's other ward(s).",
+    "schema": "municipalities[census_id].races[mayor|coun|reg_coun|dep_mayor] is an ARRAY of races; each race's districts are keyed by ward label, or \"99\" when the race is at-large. seats and max_votes sit on the district because Chatham-Kent's two ward tiers differ; they are separate measures - seats filled vs names a voter may mark - that coincide in every race here today. accl is n <= seats, or null where seats is unverified. A district carrying `pair` was split out of a ward pair and its candidates are also stored under the pair's other ward(s).",
     "max_names_note": "The largest list a single respondent can be served for each stem, summed over every race they would see: mayor 37 (Toronto), coun 28 (Sarnia), reg_coun 11 (Kitchener), dep_mayor 3 (Innisfil). The survey flow declares that many embedded fields per stem by hand, so adding a municipality with a longer list means adding fields to the flow.",
     "unverified_seats": "Races whose seat count is not yet verified upstream, so accl is null and the survey leaves the acclamation field blank rather than guessing: Cambridge regional councillor (5 candidates); Kitchener regional councillor (11 candidates). See the structure_gap notes in data/raw/by-municipality/."
   },
@@ -38,6 +38,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 7,
                 "accl": 0,
                 "candidates": [
@@ -60,6 +61,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1 Orl\u00e9ans East-Cumberland": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 7,
                 "accl": 0,
                 "candidates": [
@@ -74,6 +76,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2 Orl\u00e9ans West-Innes": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -83,6 +86,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3 Barrhaven West": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -92,6 +96,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4 Kanata North": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -100,6 +105,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5 West Carleton": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -109,6 +115,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6 Stittsville": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 8,
                 "accl": 0,
                 "candidates": [
@@ -124,6 +131,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7 Bay": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -134,6 +142,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 8 College": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -142,6 +151,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 9 Knoxdale-Merivale": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -153,6 +163,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 10 Gloucester-Southgate": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -163,6 +174,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 11 Beacon Hill- Cyrville": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -172,6 +184,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 12 Rideau-Vanier": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -181,6 +194,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 13 Rideau-Rockcliffe": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -190,6 +204,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 14 Somerset": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -202,6 +217,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 15 Kitchissippi": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -212,6 +228,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 16 River": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -220,6 +237,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 17 Capital": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -230,6 +248,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 18 Alta Vista": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -240,6 +259,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 19 Orl\u00e9ans South- Navan": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -249,6 +269,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 20 Osgoode": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -257,6 +278,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 21 Rideau-Jock": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -265,6 +287,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 22 Riverside South-Findlay Creek": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -274,6 +297,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 23 Kanata South": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -285,6 +309,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 24 Barrhaven East": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -309,6 +334,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -328,6 +354,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "District 1 - Countryside": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -338,6 +365,7 @@ window.CMB_CANDIDATES = {
               },
               "District 2 - Loyalist-Cataraqui": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -349,6 +377,7 @@ window.CMB_CANDIDATES = {
               },
               "District 3 - Collins-Bayridge": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -358,6 +387,7 @@ window.CMB_CANDIDATES = {
               },
               "District 4 - Lakeside": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -367,6 +397,7 @@ window.CMB_CANDIDATES = {
               },
               "District 5 - Portsmouth": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -375,6 +406,7 @@ window.CMB_CANDIDATES = {
               },
               "District 6 - Trillium": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -383,6 +415,7 @@ window.CMB_CANDIDATES = {
               },
               "District 7 - Kingscourt-Rideau": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -393,6 +426,7 @@ window.CMB_CANDIDATES = {
               },
               "District 8 - Meadowbrook-Strathcona": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -403,6 +437,7 @@ window.CMB_CANDIDATES = {
               },
               "District 9 - Williamsville": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -411,6 +446,7 @@ window.CMB_CANDIDATES = {
               },
               "District 10 - Sydenham": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -423,6 +459,7 @@ window.CMB_CANDIDATES = {
               },
               "District 11 - King's Town": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -433,6 +470,7 @@ window.CMB_CANDIDATES = {
               },
               "District 12 - Pittsburgh": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -457,6 +495,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -478,6 +517,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Otonabee": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -489,6 +529,7 @@ window.CMB_CANDIDATES = {
               },
               "Monaghan": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -501,6 +542,7 @@ window.CMB_CANDIDATES = {
               },
               "Town": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -512,6 +554,7 @@ window.CMB_CANDIDATES = {
               },
               "Ashburnham": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -523,6 +566,7 @@ window.CMB_CANDIDATES = {
               },
               "Northcrest": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 7,
                 "accl": 0,
                 "candidates": [
@@ -550,6 +594,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -570,6 +615,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -583,6 +629,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -595,6 +642,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -612,6 +660,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -620,6 +669,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -629,6 +679,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -650,6 +701,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -669,6 +721,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 7,
                 "accl": 0,
                 "candidates": [
@@ -683,6 +736,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -695,6 +749,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -715,6 +770,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -724,6 +780,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -735,6 +792,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -761,6 +819,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -779,6 +838,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "North Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -789,6 +849,7 @@ window.CMB_CANDIDATES = {
               },
               "West Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -801,6 +862,7 @@ window.CMB_CANDIDATES = {
               },
               "Centre Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -814,6 +876,7 @@ window.CMB_CANDIDATES = {
               },
               "East Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -832,6 +895,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "North Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -842,6 +906,7 @@ window.CMB_CANDIDATES = {
               },
               "West Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -851,6 +916,7 @@ window.CMB_CANDIDATES = {
               },
               "Centre Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -860,6 +926,7 @@ window.CMB_CANDIDATES = {
               },
               "East Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -882,6 +949,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 7,
                 "accl": 0,
                 "candidates": [
@@ -904,6 +972,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -916,6 +985,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -926,6 +996,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -936,6 +1007,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 8,
                 "accl": 0,
                 "candidates": [
@@ -951,6 +1023,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -971,6 +1044,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -980,6 +1054,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -989,6 +1064,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -997,6 +1073,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -1008,6 +1085,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1030,6 +1108,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1047,6 +1126,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1056,6 +1136,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -1066,6 +1147,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1075,6 +1157,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1092,6 +1175,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1102,6 +1186,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1112,6 +1197,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1122,6 +1208,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1145,6 +1232,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -1161,6 +1249,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -1172,6 +1261,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -1180,6 +1270,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -1188,6 +1279,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -1196,6 +1288,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -1212,6 +1305,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 4,
+                "max_votes": 4,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -1238,6 +1332,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -1254,6 +1349,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1263,6 +1359,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -1273,6 +1370,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -1286,6 +1384,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -1294,6 +1393,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -1304,6 +1404,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -1312,6 +1413,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -1323,6 +1425,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 8": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1340,6 +1443,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 4,
+                "max_votes": 4,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -1366,6 +1470,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1383,6 +1488,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1392,6 +1498,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -1403,6 +1510,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1412,6 +1520,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -1423,6 +1532,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -1434,6 +1544,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1451,6 +1562,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -1474,6 +1586,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -1492,6 +1605,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1501,6 +1615,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -1512,6 +1627,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -1522,6 +1638,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1531,6 +1648,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -1542,6 +1660,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1564,6 +1683,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1581,6 +1701,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1590,6 +1711,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -1602,6 +1724,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -1614,6 +1737,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -1625,6 +1749,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1642,6 +1767,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1664,6 +1790,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 37,
                 "accl": 0,
                 "candidates": [
@@ -1716,6 +1843,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -1729,6 +1857,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1738,6 +1867,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -1749,6 +1879,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 9,
                 "accl": 0,
                 "candidates": [
@@ -1765,6 +1896,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -1778,6 +1910,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1787,6 +1920,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -1797,6 +1931,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 8": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -1809,6 +1944,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 9": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -1820,6 +1956,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 10": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 8,
                 "accl": 0,
                 "candidates": [
@@ -1835,6 +1972,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 11": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 10,
                 "accl": 0,
                 "candidates": [
@@ -1852,6 +1990,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 12": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -1865,6 +2004,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 13": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 9,
                 "accl": 0,
                 "candidates": [
@@ -1881,6 +2021,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 14": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1890,6 +2031,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 15": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -1899,6 +2041,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 16": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -1909,6 +2052,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 17": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -1922,6 +2066,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 18": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -1933,6 +2078,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 19": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 10,
                 "accl": 0,
                 "candidates": [
@@ -1950,6 +2096,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 20": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 10,
                 "accl": 0,
                 "candidates": [
@@ -1967,6 +2114,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 21": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 10,
                 "accl": 0,
                 "candidates": [
@@ -1984,6 +2132,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 22": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 7,
                 "accl": 0,
                 "candidates": [
@@ -1998,6 +2147,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 23": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -2010,6 +2160,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 24": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -2019,6 +2170,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 25": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -2044,6 +2196,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 10,
                 "accl": 0,
                 "candidates": [
@@ -2069,6 +2222,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -2078,6 +2232,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 10,
                 "accl": 0,
                 "candidates": [
@@ -2095,6 +2250,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -2106,6 +2262,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -2115,6 +2272,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 9,
                 "accl": 0,
                 "candidates": [
@@ -2131,6 +2289,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -2140,6 +2299,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 16,
                 "accl": 0,
                 "candidates": [
@@ -2163,6 +2323,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 8": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -2173,6 +2334,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 9": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -2184,6 +2346,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 10": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -2194,6 +2357,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 11": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -2216,6 +2380,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 9,
                 "accl": 0,
                 "candidates": [
@@ -2240,6 +2405,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -2254,6 +2420,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -2268,6 +2435,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -2282,6 +2450,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -2296,6 +2465,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -2309,6 +2479,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -2322,6 +2493,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -2335,6 +2507,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 8": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -2348,6 +2521,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 9": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -2362,6 +2536,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 10": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -2384,6 +2559,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -2395,6 +2571,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -2406,6 +2583,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -2420,6 +2598,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -2434,6 +2613,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -2444,6 +2624,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -2454,6 +2635,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -2468,6 +2650,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 8": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -2482,6 +2665,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 9": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -2495,6 +2679,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 10": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -2521,6 +2706,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -2540,6 +2726,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 7,
                 "accl": 0,
                 "candidates": [
@@ -2554,6 +2741,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 8,
                 "accl": 0,
                 "candidates": [
@@ -2569,6 +2757,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -2581,6 +2770,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -2593,6 +2783,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 8,
                 "accl": 0,
                 "candidates": [
@@ -2608,6 +2799,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -2633,6 +2825,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -2652,6 +2845,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -2662,6 +2856,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -2672,6 +2867,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -2680,6 +2876,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -2689,6 +2886,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -2701,6 +2899,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -2709,6 +2908,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -2727,6 +2927,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -2735,6 +2936,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -2745,6 +2947,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -2753,6 +2956,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -2764,6 +2968,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -2774,6 +2979,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -2783,6 +2989,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -2807,6 +3014,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -2826,6 +3034,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -2836,6 +3045,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -2847,6 +3057,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -2858,6 +3069,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -2867,6 +3079,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -2877,6 +3090,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -2902,6 +3116,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 8,
                 "accl": 0,
                 "candidates": [
@@ -2925,6 +3140,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -2936,6 +3152,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 7,
                 "accl": 0,
                 "candidates": [
@@ -2950,6 +3167,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -2959,6 +3177,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -2979,6 +3198,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -2987,6 +3207,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -2998,6 +3219,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -3009,6 +3231,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -3034,6 +3257,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 8,
                 "accl": 0,
                 "candidates": [
@@ -3057,6 +3281,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3066,6 +3291,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 9,
                 "accl": 0,
                 "candidates": [
@@ -3082,6 +3308,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 7,
                 "accl": 0,
                 "candidates": [
@@ -3096,6 +3323,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -3108,6 +3336,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -3116,6 +3345,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -3126,6 +3356,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -3137,6 +3368,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 8": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3146,6 +3378,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 9": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -3158,6 +3391,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 10": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 7,
                 "accl": 0,
                 "candidates": [
@@ -3172,6 +3406,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 11": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3181,6 +3416,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 12": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3190,6 +3426,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 13": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3199,6 +3436,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 14": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3208,6 +3446,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 15": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -3233,6 +3472,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -3252,6 +3492,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 8,
+                "max_votes": 8,
                 "n": 14,
                 "accl": 0,
                 "candidates": [
@@ -3286,6 +3527,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -3305,6 +3547,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -3315,6 +3558,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -3327,6 +3571,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -3339,6 +3584,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -3352,6 +3598,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -3363,6 +3610,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -3386,6 +3634,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -3405,6 +3654,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3414,6 +3664,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -3425,6 +3676,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3434,6 +3686,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -3444,6 +3697,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -3454,6 +3708,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 8,
                 "accl": 0,
                 "candidates": [
@@ -3469,6 +3724,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -3494,6 +3750,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -3515,6 +3772,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -3526,6 +3784,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -3537,6 +3796,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -3550,6 +3810,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -3562,6 +3823,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -3587,6 +3849,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -3607,6 +3870,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3616,6 +3880,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3625,6 +3890,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -3633,6 +3899,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -3643,6 +3910,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3652,6 +3920,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -3663,6 +3932,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -3675,6 +3945,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 8": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3692,6 +3963,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": null,
+                "max_votes": null,
                 "n": 5,
                 "accl": null,
                 "candidates": [
@@ -3717,6 +3989,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -3736,6 +4009,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -3744,6 +4018,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -3754,6 +4029,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -3766,6 +4042,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -3777,6 +4054,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 9,
                 "accl": 0,
                 "candidates": [
@@ -3793,6 +4071,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3802,6 +4081,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3811,6 +4091,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 8": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3820,6 +4101,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 9": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3829,6 +4111,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 10": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3846,6 +4129,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": null,
+                "max_votes": null,
                 "n": 11,
                 "accl": null,
                 "candidates": [
@@ -3877,6 +4161,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -3893,6 +4178,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -3901,6 +4187,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -3913,6 +4200,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3922,6 +4210,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3931,6 +4220,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -3943,6 +4233,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -3952,6 +4243,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -3968,6 +4260,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -3992,6 +4285,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -4013,6 +4307,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1 - South West Kent": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -4026,6 +4321,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2 - South East Kent": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 10,
                 "accl": 0,
                 "candidates": [
@@ -4043,6 +4339,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5 - Wallaceburg & Area": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 11,
                 "accl": 0,
                 "candidates": [
@@ -4061,6 +4358,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6 - North West Chatham": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 7,
                 "accl": 0,
                 "candidates": [
@@ -4075,6 +4373,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7 - North East Chatham": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 13,
                 "accl": 0,
                 "candidates": [
@@ -4095,6 +4394,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 8 - South Chatham": {
                 "seats": 2,
+                "max_votes": 2,
                 "n": 12,
                 "accl": 0,
                 "candidates": [
@@ -4120,6 +4420,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 3 - North East Kent": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 7,
                 "accl": 0,
                 "candidates": [
@@ -4134,6 +4435,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4 - North West Kent": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -4157,6 +4459,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -4177,6 +4480,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -4185,6 +4489,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -4195,6 +4500,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4204,6 +4510,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4213,6 +4520,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -4224,6 +4532,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -4235,6 +4544,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4244,6 +4554,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 8": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4253,6 +4564,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 9": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -4261,6 +4573,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 10": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4283,6 +4596,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -4302,6 +4616,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 4,
+                "max_votes": 4,
                 "n": 15,
                 "accl": 0,
                 "candidates": [
@@ -4330,6 +4645,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 4,
+                "max_votes": 4,
                 "n": 13,
                 "accl": 0,
                 "candidates": [
@@ -4363,6 +4679,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 10,
                 "accl": 0,
                 "candidates": [
@@ -4388,6 +4705,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -4398,6 +4716,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4407,6 +4726,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -4419,6 +4739,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 9,
                 "accl": 0,
                 "candidates": [
@@ -4435,6 +4756,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -4446,6 +4768,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -4457,6 +4780,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 9,
                 "accl": 0,
                 "candidates": [
@@ -4473,6 +4797,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 8": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4482,6 +4807,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 9": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -4494,6 +4820,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 10": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -4506,6 +4833,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 11": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4515,6 +4843,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 12": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -4525,6 +4854,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 13": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -4538,6 +4868,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 14": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4560,6 +4891,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4577,6 +4909,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -4585,6 +4918,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4594,6 +4928,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4603,6 +4938,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -4611,6 +4947,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4620,6 +4957,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -4630,6 +4968,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -4648,6 +4987,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4670,6 +5010,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4687,6 +5028,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -4697,6 +5039,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -4707,6 +5050,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -4718,6 +5062,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4727,6 +5072,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4736,6 +5082,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -4746,6 +5093,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -4762,6 +5110,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -4785,6 +5134,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -4803,6 +5153,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 6,
                 "accl": 0,
                 "candidates": [
@@ -4816,6 +5167,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -4827,6 +5179,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -4838,6 +5191,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 5,
                 "accl": 0,
                 "candidates": [
@@ -4850,6 +5204,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4859,6 +5214,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -4867,6 +5223,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -4875,6 +5232,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 8": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4884,6 +5242,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 9": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -4894,6 +5253,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 10": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -4916,6 +5276,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -4934,6 +5295,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 10,
+                "max_votes": 10,
                 "n": 11,
                 "accl": 0,
                 "candidates": [
@@ -4965,6 +5327,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 7,
                 "accl": 0,
                 "candidates": [
@@ -4987,6 +5350,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Ward 1": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -4995,6 +5359,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 2": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 4,
                 "accl": 0,
                 "candidates": [
@@ -5006,6 +5371,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 3": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -5015,6 +5381,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 4": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -5024,6 +5391,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 5": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -5032,6 +5400,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 6": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -5041,6 +5410,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 7": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -5049,6 +5419,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 8": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -5059,6 +5430,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 9": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -5067,6 +5439,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 10": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 3,
                 "accl": 0,
                 "candidates": [
@@ -5077,6 +5450,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 11": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -5086,6 +5460,7 @@ window.CMB_CANDIDATES = {
               },
               "Ward 12": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -5108,6 +5483,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 8,
                 "accl": 0,
                 "candidates": [
@@ -5131,6 +5507,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "99": {
                 "seats": 5,
+                "max_votes": 5,
                 "n": 7,
                 "accl": 0,
                 "candidates": [
@@ -5151,6 +5528,7 @@ window.CMB_CANDIDATES = {
             "districts": {
               "Current River": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -5160,6 +5538,7 @@ window.CMB_CANDIDATES = {
               },
               "McIntyre": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -5168,6 +5547,7 @@ window.CMB_CANDIDATES = {
               },
               "McKellar": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -5177,6 +5557,7 @@ window.CMB_CANDIDATES = {
               },
               "Neebing": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -5185,6 +5566,7 @@ window.CMB_CANDIDATES = {
               },
               "Northwood": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 2,
                 "accl": 0,
                 "candidates": [
@@ -5194,6 +5576,7 @@ window.CMB_CANDIDATES = {
               },
               "Red River": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
@@ -5202,6 +5585,7 @@ window.CMB_CANDIDATES = {
               },
               "Westfort": {
                 "seats": 1,
+                "max_votes": 1,
                 "n": 1,
                 "accl": 1,
                 "candidates": [
