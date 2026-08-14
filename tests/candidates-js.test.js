@@ -180,6 +180,63 @@ test("Sarnia's two at-large contests both reach every voter", () => {
   assert.equal(sarnia.wards[AT_LARGE].names.coun.length, 28);
 });
 
+test("PUNCT_ORDER is the order localeCompare actually puts that punctuation in", () => {
+  // The build reproduces localeCompare in Python, and this constant is the part of it
+  // that had to be found by experiment rather than reasoned out: localeCompare does not
+  // order punctuation by code point. Re-derived here, so the constant is checked rather
+  // than trusted — the test below only exercises the pairs today's names happen to
+  // produce, which would not catch a wrong rank for a pair that never occurs.
+  const script = readFileSync(
+    path.join(ROOT, "scripts", "build-candidates-js.py"),
+    "utf8",
+  );
+  const match = script.match(/^PUNCT_ORDER = "(.*)"$/m);
+  assert.ok(match, "cannot find PUNCT_ORDER in build-candidates-js.py");
+  const declared = [...match[1]];
+
+  // Sorted in a letter context, the way the characters are actually met in a name.
+  const derived = [...declared].sort((a, b) =>
+    ("A" + a + "A").localeCompare("A" + b + "A"),
+  );
+  assert.deepEqual(
+    declared,
+    derived,
+    "PUNCT_ORDER disagrees with localeCompare: " +
+      JSON.stringify(declared.join("")) +
+      " vs " +
+      JSON.stringify(derived.join("")),
+  );
+
+  // The ranks only work because every one of these sorts below any letter; a character
+  // that did not would need a rank among the letters instead.
+  for (const c of declared) {
+    assert.ok(
+      ("A" + c + "A").localeCompare("AAA") < 0,
+      JSON.stringify(c) + " does not sort below a letter",
+    );
+  }
+
+  // And the set has to cover the data: the build already fails on a name containing
+  // punctuation with no rank, but this says so against the file rather than at build time.
+  const used = new Set();
+  for (const mun of Object.values(DATA.municipalities)) {
+    for (const entry of Object.values(mun.wards)) {
+      for (const list of Object.values(entry.names)) {
+        for (const name of list) {
+          for (const ch of name) {
+            if (!/[\p{L}\p{N}]/u.test(ch)) used.add(ch);
+          }
+        }
+      }
+    }
+  }
+  assert.deepEqual(
+    [...used].filter((c) => !declared.includes(c)),
+    [],
+    "punctuation in the names with no rank in PUNCT_ORDER",
+  );
+});
+
 test("names are in the order JavaScript's localeCompare produces", () => {
   // The build reproduces localeCompare in Python (see NAME_SORT_KEY). This is the check
   // that the reproduction still holds: a name introducing a character the build has no
