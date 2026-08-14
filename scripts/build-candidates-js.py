@@ -17,58 +17,68 @@ Output
       Assigns a nested object to window.CMB_CANDIDATES. Loaded by the survey header and
       read by code/survey/parse-candidates.js in the survey repo.
 
-This replaces scripts/parse-js.R, which wrapped a flat CSV in a template literal. The CSV
-could not survive this data: `position` had room for only `mayor` and `council`, but 20 of
-the 38 municipalities run more than one council race, and two of the values that would have
-to go in it - Brampton's "Wards 1, 5" and Guelph's "RAMOS, JR." - contain the delimiter.
+The file is a lookup table, not a description of the elections: everything the survey
+writes is worked out here, once, and stored under the municipality and ward that produce
+it. The survey then reads one entry and writes it out. Anything that has to be *decided* -
+which races a respondent is served, how their names merge and sort, whether a race is
+acclaimed, how many names they may mark, what shape their ballot is - is decided here.
 
-Shape
   window.CMB_CANDIDATES = {
     meta: {...},
     municipalities: {
       "<census_id>": {
         name: "Ottawa",
-        races: {
-          mayor|coun|reg_coun|dep_mayor: [
-            {
-              office: "Councillor",          // as published
-              scope: "ward"|"at-large",
-              districts: {
-                "<ward label>"|"99": {
-                  seats: 1,                  // null where the seat count is unverified
-                  max_votes: 1,              // names a voter may mark; null likewise
-                  n: 7,                      // candidates on file
-                  accl: 0|1|null,            // n <= seats; null when seats is null
-                  pair: "Wards 1, 5",        // only on a district split out of a ward pair
-                  candidates: [{last, first}, ...]
-                }
-              }
-            }
-          ]
+        wards: {
+          "<ward label>"|"99": {
+            names:  { mayor: [...], coun: [...], reg_coun: [...], dep_mayor: [...] },
+            fields: { mayor_accl: 0, coun_max_votes: 1, smd: 1, ... }
+          }
         }
       }
     }
   };
 
-Four race stems, because the survey writes four families of embedded fields. `ward` and
-`atlarge` both become `coun`: they are the same question to a respondent - who represents
-you on council - and Thunder Bay, which runs both, gives its voters two councillor ballots
-rather than two kinds of councillor. The stems stay arrays so a municipality with two
-races of one kind keeps them apart: Sarnia elects City and City-County councillors in
-separate at-large contests, and Chatham-Kent runs two ward tiers with different magnitudes.
+`names` holds "LAST, First" in the order they should appear. `fields` holds every scalar
+the survey writes, already in its final form - a number, or "" where there is nothing to
+say. Every ward entry carries the same `fields` keys, so nothing can go stale.
 
-`seats` sits on the district, not the race, for that Chatham-Kent reason - six of its wards
-elect two councillors and two elect one.
+Every municipality has a "99" ward entry as well as its real wards. It holds whatever is
+decided at large - the mayor, and any at-large regional or deputy mayor race - with empty
+council lists, and is what a respondent gets if they reach the question without a ward.
+For the three municipalities that elect entirely at large it is the only entry.
 
-At-large districts are keyed "99", the code data/csv/TEST_ab-cands.csv used for "this
-municipality has no wards"; the survey passes "99" when the ward question was skipped, so
-the lookup is the same one either way.
+WHY IT IS SHAPED THIS WAY, rather than mirroring the races
 
-Ward pairs are split into the wards they are drawn from, so the survey can look a district
-up by the ward the respondent actually answered. Brampton elects both its City and its
-Regional councillors from five pairs, and Clarington its Regional councillors from two;
-both keep the pair label in `pair`. The rule is the one ward-links.test.js already uses:
-take the numbers out of the label.
+  Four race stems, because the survey writes four families of embedded fields: mayor,
+  coun, reg_coun, dep_mayor. The raw data's `ward` and `atlarge` keys both feed `coun` -
+  the same question to a respondent, and Thunder Bay, which runs both, gives its voters
+  two councillor ballots rather than two kinds of councillor.
+
+  A respondent is served an at-large race, plus the one district of each ward race that
+  they live in - never the municipality's other wards. So Thunder Bay's councillor entry
+  merges 5 at-large candidates with the 1 in their own ward, and its max_votes is 6, not
+  the 12 its seven wards would total. Sarnia has no wards and two at-large contests of
+  four, so every Sarnia voter really does mark all eight.
+
+  A race is acclaimed when it has no more candidates than seats, which is not the same as
+  having exactly one: thirteen races here fill more than one seat. Where a respondent is
+  served several races under one stem, all of them must be decided before there is nothing
+  left to ask.
+
+  Seats filled and names a voter may mark are separate measures that coincide in every
+  race in the study today - tests/structure-csv.test.js is the tripwire for that changing -
+  so max_votes is read from max_votes and never stood in for by seats.
+
+  Ward pairs are stored under each ward they are drawn from, so a respondent's single-ward
+  answer finds their ballot. Brampton elects both its City and its Regional councillors
+  from five pairs, and Clarington its Regional councillors from two. The rule is the one
+  ward-links.test.js already uses: take the numbers out of the label.
+
+NAME ORDER is settled here, so the survey does not have to sort. The order is the one
+JavaScript's localeCompare produces, reproduced by NAME_SORT_KEY below, because that is
+what the survey used to call and what the ward and municipality lists elsewhere follow.
+parse-candidates.test.js re-checks every emitted list against localeCompare itself, so the
+two cannot drift apart silently.
 
 The output is pure ASCII: non-ASCII characters are written as \\uXXXX escapes. The file is
 served from GitHub Pages and loaded by a <script src> with no charset attribute, so the
@@ -79,6 +89,7 @@ import json
 import os
 import re
 import sys
+import unicodedata
 from datetime import date
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -96,14 +107,40 @@ STEM = {
 }
 STEMS = ["mayor", "coun", "reg_coun", "dep_mayor"]
 
-# The key for "no ward" - both an at-large district here and the value the survey sends
-# when it never asked the ward question.
+# The key for "no ward" - both an at-large race's only district and the ward value sent
+# when the ward question was skipped.
 AT_LARGE = "99"
 
 # ward-links.js is the survey-facing name list and calls 3553005 "Greater Sudbury"; the
 # census calls it "Greater Sudbury / Grand Sudbury". Matching is on census_id, so this is
 # cosmetic - it keeps the console logs from the two scripts reading the same.
 NAME_OVERRIDE = {"3553005": "Greater Sudbury"}
+
+# The punctuation that appears in these names, in the order JavaScript's localeCompare
+# puts it in, which is not the order their code points are in: it sorts hyphen before
+# comma, and the typographic apostrophe next to the ASCII one rather than up above the
+# letters. Derived by asking localeCompare to sort "A<p>A" for each character present.
+# All of it sorts below any letter.
+PUNCT_ORDER = " -,.'’()"
+PUNCT_RANK = {c: i for i, c in enumerate(PUNCT_ORDER)}
+
+
+def name_sort_key(name):
+    """Sort a "LAST, First" string the way JavaScript's localeCompare would.
+
+    Accents fold onto the base letter, so GOLLÉ sits beside GOLLER rather than after Z;
+    case folds away; punctuation keeps its own low ranks, so "ADAM, Rebecca" precedes
+    "ADAMO, Jerome" and "GORDON-DANIELS" precedes "GORDON, Fitz-Roy". Verified against
+    localeCompare over every name in the data, and re-checked by parse-candidates.test.js.
+    """
+    stripped = "".join(
+        c for c in unicodedata.normalize("NFKD", name) if not unicodedata.combining(c)
+    )
+    weights = [
+        (0, PUNCT_RANK[c]) if c in PUNCT_RANK else (1, c.upper()) for c in stripped
+    ]
+    # The raw string breaks ties the folding created, so the order is total.
+    return (weights, name)
 
 
 def die(*msgs):
@@ -119,10 +156,9 @@ def split_ward_pair(label):
 
 # --- serialisation ------------------------------------------------------------------
 #
-# json.dumps(indent=2) would put every candidate's two fields on two lines of their own,
-# which turns 1,467 candidates into several thousand lines of scrollback. Candidates are
-# dumped compactly instead and spliced back in, so the file stays readable: one candidate
-# per line, everything above them indented.
+# json.dumps(indent=2) would give every name a line of its own, several thousand of them.
+# Name lists are dumped compactly instead and spliced back in, so the file stays readable:
+# one ward's list per line, the structure above it indented.
 _COMPACT = {}
 
 
@@ -139,7 +175,7 @@ def dump(obj):
     return text
 
 
-# --- build --------------------------------------------------------------------------
+# --- read inputs --------------------------------------------------------------------
 
 if not os.path.exists(SRC):
     die(f"no such file: {SRC}", "run scripts/build-candidates-raw.py first")
@@ -158,10 +194,18 @@ if not version:
 
 problems = []
 unverified = []
-municipalities = {}
+
+# --- assemble the races, keyed by stem and district ---------------------------------
+#
+# An intermediate structure, not the output: it is what the projection below reads, and
+# what the checks are easiest to state against.
+
+races_by_mun = {}
+mun_names = {}
 
 for census_id in sorted(k for k in raw if k != "_meta"):
     entry = raw[census_id]
+    mun_names[census_id] = NAME_OVERRIDE.get(census_id, entry["csdname"])
     races = {}
 
     for race_key, race_list in entry["races"].items():
@@ -173,60 +217,58 @@ for census_id in sorted(k for k in raw if k != "_meta"):
         for race in race_list:
             at_large = race.get("district_scope") == "At-large"
             seats = race.get("seats_per_district")
-            # Seats filled and names a voter may mark are two different measures that
-            # happen to coincide in every race in the study today - tests/structure-csv.
-            # test.js is the tripwire for that changing. Both are carried so the survey
-            # never has to stand one in for the other.
+            # Seats filled and names a voter may mark are two different measures. See the
+            # module docstring; both are carried so neither stands in for the other.
             max_votes = race.get("max_votes")
             districts = {}
 
             for label, district in race["districts"].items():
-                candidates = [
-                    compact({"last": c["last_name"], "first": c["first_name"]})
-                    for c in sorted(
-                        district["candidates"],
-                        key=lambda c: (c["last_name"], c["first_name"]),
-                    )
-                ]
-                n = len(candidates)
+                names = sorted(
+                    (c["last_name"] + ", " + c["first_name"] for c in district["candidates"]),
+                    key=name_sort_key,
+                )
+                for name in names:
+                    for ch in name:
+                        if not ch.isalnum() and ch not in PUNCT_RANK:
+                            problems.append(
+                                f"{census_id}: {name!r} contains {ch!r} (U+{ord(ch):04X}), "
+                                "which has no rank in PUNCT_ORDER, so its sort position "
+                                "would not match localeCompare"
+                            )
                 record = {
                     "seats": seats,
                     "max_votes": max_votes,
-                    "n": n,
-                    "accl": None if seats is None else int(n <= seats),
-                    "candidates": candidates,
+                    "names": names,
                 }
                 if seats is None:
-                    unverified.append(f"{entry['csdname']} {race_key} ({n} candidates)")
+                    unverified.append(f"{mun_names[census_id]} {race_key} ({len(names)} candidates)")
 
                 # A ward pair is stored under each ward it is drawn from: a respondent
                 # answers with the one they live in, and both look up the same ballot.
                 if race.get("district_scope") == "Ward-pair":
                     wards = split_ward_pair(label)
                     if not wards:
-                        problems.append(
-                            f"{census_id}: cannot split ward pair {label!r}"
-                        )
+                        problems.append(f"{census_id}: cannot split ward pair {label!r}")
                         continue
                     for ward in wards:
                         if ward in districts:
                             problems.append(
-                                f"{census_id}: {race_key} district {ward!r} "
-                                f"claimed twice (from {label!r})"
+                                f"{census_id}: {race_key} district {ward!r} claimed twice "
+                                f"(from {label!r})"
                             )
-                        districts[ward] = dict(record, pair=label)
+                        districts[ward] = record
                 else:
                     key = AT_LARGE if at_large else label
                     if key in districts:
                         problems.append(
                             f"{census_id}: {race_key} district {key!r} claimed twice"
                         )
-                    districts[key] = dict(record)
+                    districts[key] = record
 
             races.setdefault(stem, []).append(
                 {
                     "office": race["office"],
-                    "scope": "at-large" if at_large else "ward",
+                    "at_large": at_large,
                     "districts": districts,
                 }
             )
@@ -236,48 +278,27 @@ for census_id in sorted(k for k in raw if k != "_meta"):
     if "coun" not in races:
         problems.append(f"{census_id}: no council race")
 
-    municipalities[census_id] = {
-        "name": NAME_OVERRIDE.get(census_id, entry["csdname"]),
-        "races": {stem: races[stem] for stem in STEMS if stem in races},
-    }
+    races_by_mun[census_id] = races
 
 # --- checks -------------------------------------------------------------------------
 #
-# Two at-large races under one stem would be merged by the survey into a single list, which
-# is right for Sarnia (two councillor contests on one ballot) but would silently hide a
-# municipality whose data had been double-counted. Ward-scoped districts must not collide
-# across the races of a stem for the same reason.
-for census_id, mun in municipalities.items():
-    for stem, race_list in mun["races"].items():
+# Two at-large races under one stem are merged into a single list, which is right for
+# Sarnia (two councillor contests on one ballot) but would silently double a municipality
+# whose data had been entered twice. Two ward-scoped races must never both claim a ward:
+# Chatham-Kent's two tiers are disjoint by design, each ward sitting in exactly one.
+for census_id, races in races_by_mun.items():
+    for stem, race_list in races.items():
         seen = {}
         for race in race_list:
             for label in race["districts"]:
-                if label in seen and label != AT_LARGE:
+                if label == AT_LARGE:
+                    continue
+                if label in seen:
                     problems.append(
                         f"{census_id}: two {stem} races both cover {label!r} "
                         f"({seen[label]!r} and {race['office']!r})"
                     )
                 seen[label] = race["office"]
-
-# Every district must be reachable: a ward-scoped race and an at-large race under the same
-# stem are both served to a respondent, but two ward-scoped races must divide the
-# municipality the same way or a ward would get one race's candidates and not the other's.
-for census_id, mun in municipalities.items():
-    for stem, race_list in mun["races"].items():
-        ward_races = [r for r in race_list if r["scope"] == "ward"]
-        if len(ward_races) < 2:
-            continue
-        # Chatham-Kent's two ward tiers are disjoint by design - each ward sits in exactly
-        # one tier - so the check is that no ward is in two tiers, not that they match.
-        counts = {}
-        for race in ward_races:
-            for label in race["districts"]:
-                counts[label] = counts.get(label, 0) + 1
-        for label, count in counts.items():
-            if count > 1:
-                problems.append(
-                    f"{census_id}: ward {label!r} appears in {count} {stem} races"
-                )
 
 if problems:
     print(f"{len(problems)} problem(s); nothing written:", file=sys.stderr)
@@ -286,50 +307,129 @@ if problems:
     sys.exit(1)
 
 
-# --- how many fields the survey flow has to declare ---------------------------------
-#
-# The flow declares mayor1..N, coun1..N and so on by hand, so the build states the N it
-# would take. Counted the way the survey counts: every race under a stem that a respondent
-# in that ward would be served, at-large races included, summed.
-def wards_of(mun):
+# --- project onto what a respondent is served ---------------------------------------
+
+
+def wards_of(census_id):
+    """Every ward a respondent can answer with, plus "99" for no ward at all."""
     labels = set()
-    for race_list in mun["races"].values():
+    for race_list in races_by_mun[census_id].values():
         for race in race_list:
-            if race["scope"] == "ward":
+            if not race["at_large"]:
                 labels.update(race["districts"])
-    return sorted(labels) or [AT_LARGE]
+    return sorted(labels, key=name_sort_key) + [AT_LARGE]
 
 
-def served(mun, stem, ward):
-    """The districts a respondent in `ward` is served under `stem`."""
+def served(census_id, stem, ward):
+    """The districts a respondent in `ward` is served under `stem`.
+
+    An at-large race, plus the one ward district they live in. Never another ward.
+    """
     out = []
-    for race in mun["races"].get(stem, []):
-        district = race["districts"].get(AT_LARGE if race["scope"] == "at-large" else ward)
+    for race in races_by_mun[census_id].get(stem, []):
+        district = race["districts"].get(AT_LARGE if race["at_large"] else ward)
         if district is not None:
-            out.append(district)
+            out.append((race, district))
     return out
 
 
+def entry_for(census_id, ward):
+    names = {}
+    fields = {}
+
+    for stem in STEMS:
+        got = served(census_id, stem, ward)
+        merged = [name for _, district in got for name in district["names"]]
+        # Sorted across the merge, so a Sarnia respondent gets one alphabetical list
+        # rather than two runs of names that restart halfway down.
+        names[stem] = sorted(merged, key=name_sort_key)
+
+        # Blank, not 0, where there is no race to call or no verified seat count: it keeps
+        # "no such race here" distinguishable from "contested" in the export.
+        seats = [district["seats"] for _, district in got]
+        votes = [district["max_votes"] for _, district in got]
+        counts = [len(district["names"]) for _, district in got]
+
+        if not got or any(s is None for s in seats):
+            fields[stem + "_accl"] = ""
+        else:
+            fields[stem + "_accl"] = int(
+                all(n <= s for n, s in zip(counts, seats))
+            )
+
+        if not got or any(v is None for v in votes):
+            fields[stem + "_max_votes"] = ""
+        else:
+            fields[stem + "_max_votes"] = sum(votes)
+
+    # smd, mmd and atlarge describe one thing three ways - the councillor ballot this
+    # respondent faces - so they are read off the coun races they are actually served.
+    # Chatham-Kent differs by ward, and Thunder Bay is both at-large and single-member.
+    # A regional councillor elected at large does not make the councillor ballot
+    # at-large; that race has its own flag.
+    shape = {"smd": 0, "mmd": 0, "atlarge": 0}
+    for race, district in served(census_id, "coun", ward):
+        if race["at_large"]:
+            shape["atlarge"] = 1
+        elif district["seats"] == 1:
+            shape["smd"] = 1
+        elif district["seats"] and district["seats"] > 1:
+            shape["mmd"] = 1
+    fields.update(shape)
+
+    # Whether the municipality holds the race at all, so the flow can skip its question
+    # everywhere else.
+    fields["deputy_mayor"] = 1 if served(census_id, "dep_mayor", ward) else 0
+    fields["reg_coun"] = 1 if served(census_id, "reg_coun", ward) else 0
+
+    return {
+        "names": {stem: compact(names[stem]) for stem in STEMS},
+        "fields": compact(fields),
+    }
+
+
+municipalities = {}
 max_names = {stem: 0 for stem in STEMS}
 widest = {}
-for census_id, mun in municipalities.items():
-    for ward in wards_of(mun):
+field_keys = None
+
+for census_id in sorted(races_by_mun):
+    wards = {}
+    for ward in wards_of(census_id):
+        # Built before compaction so the numbers below can still see the lists.
+        got = {stem: served(census_id, stem, ward) for stem in STEMS}
         for stem in STEMS:
-            races = mun["races"].get(stem, [])
-            n = sum(d["n"] for d in served(mun, stem, ward))
+            n = sum(len(d["names"]) for _, d in got[stem])
             if n > max_names[stem]:
                 max_names[stem] = n
                 # Name the ward only where the stem is decided by it; a mayoral list is
-                # the same in every ward, so "Toronto Ward 1" would read as a coincidence.
-                by_ward = any(r["scope"] == "ward" for r in races)
+                # the same in every ward, so "Toronto Ward 1" would read as coincidence.
+                by_ward = any(not r["at_large"] for r in races_by_mun[census_id].get(stem, []))
                 widest[stem] = (
-                    f"{mun['name']} {ward}"
+                    f"{mun_names[census_id]} {ward}"
                     if by_ward and ward != AT_LARGE
-                    else mun["name"]
+                    else mun_names[census_id]
                 )
+        wards[ward] = entry_for(census_id, ward)
+
+    municipalities[census_id] = {"name": mun_names[census_id], "wards": wards}
+
+# Every ward entry must carry the same scalar fields, or a respondent who switched
+# municipality would keep one the new entry never overwrites.
+for census_id, mun in municipalities.items():
+    for ward, entry in mun["wards"].items():
+        keys = tuple(sorted(json.loads(_COMPACT[entry["fields"]])))
+        if field_keys is None:
+            field_keys = keys
+        elif keys != field_keys:
+            die(
+                f"{census_id} {ward!r} writes a different set of fields than the rest: "
+                f"{set(keys) ^ set(field_keys)}"
+            )
 
 # Counted from the input, not the output: a ward pair is stored once per ward it is drawn
-# from, so counting the output would report Brampton's and Clarington's candidates twice.
+# from, and every at-large list is repeated under each ward, so counting the output would
+# report a much larger number than there are candidates.
 distinct = sum(
     len(d["candidates"])
     for census_id, entry in raw.items()
@@ -349,20 +449,21 @@ doc = {
         "municipalities": len(municipalities),
         "candidates": distinct,
         "max_names": max_names,
+        "fields": compact(list(field_keys)),
         "provisional": raw["_meta"]["provisional"],
         "schema": (
-            "municipalities[census_id].races[mayor|coun|reg_coun|dep_mayor] is an ARRAY of "
-            "races; each race's districts are keyed by ward label, or \"99\" when the race "
-            "is at-large. seats and max_votes sit on the district because Chatham-Kent's "
-            "two ward tiers differ; they are separate measures - seats filled vs names a "
-            "voter may mark - that coincide in every race here today. accl is n <= seats, "
-            "or null where seats is unverified. A district carrying `pair` was split out "
-            "of a ward pair and its candidates are also stored under the pair's other "
-            "ward(s)."
+            "A lookup table, not a description of the elections: "
+            "municipalities[census_id].wards[ward label|\"99\"] holds everything the "
+            "survey writes for a respondent who gave that municipality and ward. `names` "
+            "is the four field families, \"LAST, First\", already merged across the races "
+            "they are served and in localeCompare order. `fields` is every scalar, "
+            "already final - a number, or \"\" where there is nothing to say. Every ward "
+            "entry carries the same `fields` keys. \"99\" is the entry for a respondent "
+            "with no ward, and the only entry for a municipality that elects at large."
         ),
         "max_names_note": (
-            "The largest list a single respondent can be served for each stem, summed over "
-            "every race they would see: "
+            "The longest list each field family can reach, and the municipality that sets "
+            "it: "
             + ", ".join(f"{stem} {max_names[stem]} ({widest.get(stem, '-')})" for stem in STEMS)
             + ". The survey flow declares that many embedded fields per stem by hand, so "
             "adding a municipality with a longer list means adding fields to the flow."
@@ -373,8 +474,8 @@ doc = {
 
 if unverified:
     doc["meta"]["unverified_seats"] = (
-        "Races whose seat count is not yet verified upstream, so accl is null and the "
-        "survey leaves the acclamation field blank rather than guessing: "
+        "Races whose seat count is not yet verified upstream, so their acclamation and "
+        "max_votes fields are blank rather than guessed at: "
         + "; ".join(sorted(set(unverified)))
         + ". See the structure_gap notes in data/raw/by-municipality/."
     )
@@ -387,8 +488,11 @@ header = f"""// Candidate data for the CMB 2026 Ontario municipal election study
 // Served from GitHub Pages, loaded by the survey header, and read by
 // code/survey/parse-candidates.js in the survey repo.
 //
+// A lookup table: everything the survey writes is worked out at build time and stored
+// under the municipality and ward that produce it, so the survey reads one entry and
+// writes it out. See meta.schema below, and the build script for why it is shaped so.
+//
 // Version {version}, built {built}, candidate lists retrieved {raw["_meta"]["retrieved"]}.
-// See meta.schema below for the shape and meta.provisional for what the lists are worth.
 """
 
 dest = os.path.join(VERSIONS, f"candidates-{built}-v{version}.js")
@@ -398,16 +502,21 @@ with open(dest, "w", encoding="ascii") as fh:
     fh.write(dump(doc))
     fh.write(";\n")
 
+ward_entries = sum(len(m["wards"]) for m in municipalities.values())
 print(f"wrote {os.path.relpath(dest, REPO)}")
-print(f"  municipalities {len(municipalities)}  candidates {distinct}")
+print(
+    f"  municipalities {len(municipalities)}  candidates {distinct}  "
+    f"ward entries {ward_entries}  {os.path.getsize(dest) // 1024} KiB"
+)
 print(
     "  fields the flow must declare: "
     + "  ".join(f"{stem}1..{max_names[stem]}" for stem in STEMS)
 )
 for stem in STEMS:
     print(f"    {stem:<10} widest: {widest.get(stem, '-')}")
+print("  plus the scalars: " + " ".join(field_keys))
 
 if unverified:
-    print(f"\n  seat count unverified for {len(set(unverified))} race(s); accl left null:")
+    print(f"\n  seat count unverified for {len(set(unverified))} race(s); fields left blank:")
     for u in sorted(set(unverified)):
         print(f"    {u}")

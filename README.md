@@ -16,12 +16,23 @@ Via Github pages, this repo serves the manually collected candidate data for the
 
 The date and version number are in the file name and in the file's contents, under `meta`. Versioning the filename allows for easy downstream access to different versions of the data, which will be useful if the data needs to be updated mid-field. The version in `meta` makes it easy to extract that information into the final response data, which tracks the version of the data that each respondent saw. `version.txt` holds the number the next build will stamp; bump it whenever the served file changes.
 
-Each file assigns a nested object to `window.CMB_CANDIDATES`, keyed by `census_id`, and is read by `code/survey/parse-candidates.js` in the survey repo. `meta.schema` in the file itself describes the shape; `scripts/build-candidates-js.py` documents why it is that shape.
+Each file assigns a **lookup table** to `window.CMB_CANDIDATES`, read by `code/survey/parse-candidates.js` in the survey repo. It is not a description of the elections — that is `data/raw/candidates-raw.json`. Everything the survey writes is worked out at build time and stored under the municipality and ward that produce it, so the survey reads one entry and writes it out:
 
-- The four race stems — `mayor`, `coun`, `reg_coun`, `dep_mayor` — are the four families of embedded fields the survey writes. Each holds an **array** of races, so Sarnia's two at-large councillor contests and Chatham-Kent's two ward tiers stay apart.
-- `seats` and `max_votes` sit on the district rather than the race, because Chatham-Kent elects two councillors in six of its wards and one in the other two. Both are carried: they are separate measures — seats filled vs names a voter may mark — that coincide in every race in the study today, and `tests/structure-csv.test.js` is the tripwire for that changing.
-- Ward pairs are stored under each ward they are drawn from, so a respondent's single-ward answer finds them; the pair label is kept in `pair`. Brampton and Clarington are the two.
+```js
+municipalities["3558004"].wards["McIntyre"] = {
+  names:  { mayor: [...], coun: [...], reg_coun: [], dep_mayor: [] },
+  fields: { coun_accl: 0, coun_max_votes: 6, smd: 1, atlarge: 1, ... }
+}
+```
+
+- `names` holds `"LAST, First"` in the order the survey should show them, already merged across every race that respondent is served. The four families — `mayor`, `coun`, `reg_coun`, `dep_mayor` — are the four sets of embedded fields the survey writes.
+- `fields` holds every scalar in final form: a number, or `""` where there is nothing to say. Every ward entry carries the same keys, so nothing can go stale between respondents.
+- Every municipality has a `"99"` ward entry as well as its real wards, holding whatever is decided at large. It is what a respondent gets if they reach the question without a ward, and the only entry for the three municipalities that elect entirely at large.
+- Ward pairs are stored under each ward they are drawn from, so a respondent's single-ward answer finds their ballot. Brampton and Clarington are the two.
+- Name order is the one JavaScript's `localeCompare` produces, reproduced in Python so the survey does not have to sort. `tests/candidates-js.test.js` re-checks every list against `localeCompare` itself, so the two cannot drift apart silently.
 - The file is pure ASCII, non-ASCII written as `\uXXXX`. It is loaded by a `<script src>` with no charset attribute, and a wrong encoding guess would stop `Ward 1 Orléans East-Cumberland` matching the ward the survey embedded.
+
+Because at-large lists repeat under each ward, the file is about 25% larger than storing the races once would make it. That is the trade for a survey-side script that only reads and writes.
 
 `data/csv/`: Mock candidate data for testing, from the CMB's 2025 Alberta election study. `TEST_ab-cands.csv` is the file the surname convention here follows (`BILLINGSLEY JR.` | `Ronald Stewart`).
 
@@ -49,7 +60,7 @@ Each file assigns a nested object to `window.CMB_CANDIDATES`, keyed by `census_i
 - The thresholds are named constants at the top of `split_first_last()`'s section, with the reasoning for each. They are deliberately conservative: a middle token joins the surname only on positive evidence, since leaving it with the given name is what the sources themselves do.
 - Some tokens are genuinely common as both — `Taylor`, `Lee`, `Blake`, `Singh` — and no rule separates a middle name from half a double-barrelled surname. Every close call is printed at the end of a run (22 of 1467 names in the current data), so the judgement calls can be eyeballed instead of being buried.
 
-`scripts/build-candidates-js.py`: Builds the served file in `data/candidate-data-versions/` from `data/raw/candidates-raw.json`, folding the five raw race keys into the four stems the survey writes fields for, splitting ward pairs, and computing each district's acclamation from its seat count.
+`scripts/build-candidates-js.py`: Builds the served file in `data/candidate-data-versions/` from `data/raw/candidates-raw.json`. Folds the five raw race keys into the four stems the survey writes fields for, splits ward pairs, then projects the result onto every municipality-and-ward a respondent can answer with — merging and sorting the names they are served, and settling their acclamation, vote counts and ballot shape. All the judgement lives here so the survey-side script does not have to make any; its header comment carries the reasoning.
 
 - Usage: `python3 scripts/build-candidates-js.py`. No arguments, no dependencies, runnable from any working directory. Rerun it after `scripts/build-candidates-raw.py`, and bump `data/candidate-data-versions/version.txt` first if the served file is changing.
 - A new build writes a new filename, so the survey's `code/survey/header.html` has to be repointed at it or respondents keep getting the old data. `parse-candidates.test.js` in the survey repo loads whichever file the header names, so a forgotten repoint fails there rather than in the field.
@@ -79,4 +90,5 @@ Each file assigns a nested object to `window.CMB_CANDIDATES`, keyed by `census_i
 `tests/`: Checks on the generated data that the build scripts cannot make themselves, because they hold across files or across columns that are filled in separately.
 
 - Usage: `node --test` from the repo root. No dependencies and no `package.json`; it uses Node's built-in runner. `node --test <dir>` is not supported — pass a file if you want to run just one.
+- `tests/candidates-js.test.js` checks the newest built file in `data/candidate-data-versions/` against `data/raw/candidates-raw.json`: that no candidate was lost or invented, that each respondent was served their own ward and no other, that the names are in `localeCompare` order, and that the acclamation, vote-count and ballot-shape fields follow from the raw numbers. That is where the survey's values are verified, since the build is what decides them.
 - `tests/structure-csv.test.js` asserts that `seats_per_district` equals `max_votes` for every race in `notes/councillor-election-structure.csv`. The two are separate measures — seats filled vs. names a voter may mark — that happen to coincide while every contest in the study is single-seat or plurality-at-large. It is a tripwire: a failure is either a typo or a municipality adopting limited or cumulative voting, and the fix belongs in `notes/council-races.csv` followed by a rerun of `scripts/get-municipal-data.R`.
