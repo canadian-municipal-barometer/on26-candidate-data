@@ -158,6 +158,40 @@ races <- readr::read_csv(notes("council-races.csv"), show_col_types = FALSE)
 # than silently truncating a field if that quoting is ever lost.
 readr::stop_for_problems(races)
 
+# Contests deliberately kept out of the study, hand-maintained in
+# excluded-races.csv. Today all three are upper-tier-only seats: Cambridge,
+# Kitchener and Waterloo each elect regional councillors who sit on Regional
+# Council and not on city council, so they are neither a seat this file covers
+# nor a ballot line the survey asks about. See SOURCES.md, "Upper-tier
+# coverage".
+excluded <- readr::read_csv(notes("excluded-races.csv"), show_col_types = FALSE)
+readr::stop_for_problems(excluded)
+
+if (anyDuplicated(excluded[c("census_id", "office")]) > 0) {
+  stop(
+    "excluded-races.csv has duplicate census_id + office rows; that pair is ",
+    "the key every consumer matches on."
+  )
+}
+
+# council-races.csv covers "every elected council seat except the mayor's", so
+# an excluded upper-tier seat must not appear in it -- it is not a seat on that
+# council. A row in both files would double-count in the seat check below and
+# would put the excluded contest's max_votes into block_vote and
+# max_votes_max, which is how Waterloo came to read block_vote = TRUE off a
+# race its ward voters never see.
+overlap <- races |>
+  inner_join(select(excluded, census_id, office), by = c("census_id", "office"))
+if (nrow(overlap) > 0) {
+  stop(
+    "Race(s) in both council-races.csv and excluded-races.csv: ",
+    paste0(overlap$csdname, " (", overlap$office, ")", collapse = ", "),
+    ". An excluded contest is not a seat on that council -- drop the row from ",
+    "council-races.csv, or drop it from excluded-races.csv if it belongs in ",
+    "the study after all."
+  )
+}
+
 # max_votes_source is blank for most races, which read_csv gives back as NA and
 # write_csv would then emit as the literal "NA". Normalise once, here, so the
 # column round-trips as an empty cell.
@@ -205,11 +239,15 @@ if (length(missing_races) > 0 || length(extra_races) > 0) {
 # Integrity check: council seats implied by council-races.csv should equal
 # council_size - 1 (i.e. every seat but the mayor's) in the master list. Every
 # known deviation is listed here with its cause; anything else is a data error.
+#
+# Cambridge, Kitchener and Waterloo were exceptions here until their
+# upper-tier-only regional races moved to excluded-races.csv. Their master
+# council_size never counted those seats, so with the races gone from
+# council-races.csv all three reconcile exactly and need no exception. What is
+# left is three stale council_size values, which is a different problem with a
+# different fix -- upstream, in cmb_muns.csv.
 seat_exceptions <- tibble::tribble(
   ~census_id , ~reason                                                             ,
-     3530010 , "Cambridge: 2 regional councillors sit on Region, not city council" ,
-     3530013 , "Kitchener: 4 regional councillors sit on Region, not city council" ,
-     3530016 , "Waterloo: 2 regional councillors sit on Region, not city council"  ,
      3536020 , "Chatham-Kent: master council_size is the stale pre-2026 structure" ,
      3528018 , "Haldimand County: master has 6 wards, 2026 uses 7"                 ,
      3543007 , "New Tecumseth: master has 8 wards, 2026 uses 7 (By-law 2025-052)"

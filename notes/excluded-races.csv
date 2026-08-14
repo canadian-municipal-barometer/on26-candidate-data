@@ -1,0 +1,4 @@
+census_id,csdname,office,race_key,seats,upper_tier_council,reason,source_url
+3530010,Cambridge,"Councillor, Regional",regional councillor,2,Region of Waterloo,upper_tier_only,https://en.wikipedia.org/wiki/2026_Waterloo_Region_municipal_elections; https://www.cambridge.ca/mayor-city-council-government/elections/nominations-candidate-profiles/
+3530013,Kitchener,"Councillor, Regional",regional councillor,4,Region of Waterloo,upper_tier_only,https://en.wikipedia.org/wiki/2026_Waterloo_Region_municipal_elections; https://app2.kitchener.ca/election/candidates.aspx
+3530016,Waterloo,"Councillor, Regional",regional councillor,2,Region of Waterloo,upper_tier_only,https://en.wikipedia.org/wiki/2026_Waterloo_Region_municipal_elections; https://www.waterloo.ca/council-and-committees/municipal-elections/find-election-candidates/

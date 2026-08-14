@@ -150,11 +150,16 @@ company by design at Clarington and Georgina (`Mixed`, magnitude 1 throughout) a
 Chatham-Kent (`MMD`, magnitude 1 in two of its eight wards), so any such check would fire on
 all three without a real error. Instead `get-municipal-data.R` verifies that councillor seats implied by `council-races.csv` equal
 `council_size - 1` in the master list, which is unambiguous and catches the same class of
-typo. Six municipalities deviate for known reasons and are listed as documented
-exceptions in the script — regional councillors who sit on regional rather than city
-council (Cambridge, Kitchener, Waterloo), and stale `council_size` values (Chatham-Kent,
+typo. Three municipalities deviate for known reasons and are listed as documented
+exceptions in the script, all of them stale `council_size` values (Chatham-Kent,
 Haldimand County, New Tecumseth). Innisfil was an exception until its deputy mayor race
 was added; modelling that seat made it reconcile exactly.
+
+Cambridge, Kitchener and Waterloo were exceptions here too, for the opposite reason —
+regional councillors who sit on regional rather than city council. They are no longer
+exceptions: those races moved to `excluded-races.csv` and out of `council-races.csv`, and
+since master `council_size` never counted those seats either, all three now reconcile
+exactly. See "Upper-tier coverage" below.
 
 The same reasoning applies to Milton, Oakville, Oshawa, Pickering, Clarington and Ajax: all
 are genuinely multi-member in seats and genuinely vote-for-one on the ballot.
@@ -425,7 +430,7 @@ explicitly for a separately elected upper-tier race:
   Clarington, Georgina, Markham, Milton, Oakville, Oshawa, Pickering, Richmond Hill,
   Sarnia, Vaughan, Whitby. Seats reconcile exactly to `council_size - 1`.
 - **Has one, holders sit on the upper tier only** (3): Cambridge, Kitchener, Waterloo.
-  These are the seat-count exceptions.
+  **These three contests are excluded from the study** — see below.
 - **Has none** — confirmed, not assumed:
   - *Mississauga* — every member of city council is simultaneously a Peel regional
     councillor; same people, one race, no separate ballot line.
@@ -439,6 +444,46 @@ explicitly for a separately elected upper-tier race:
   Guelph, Haldimand County, Hamilton, Kingston, London, North Bay, Ottawa, Peterborough,
   Thunder Bay, Toronto, Windsor. North Bay is in Nipissing District, which is a geographic
   district rather than a municipal upper tier, so there is no district council to elect to.
+
+### The three upper-tier-only contests are excluded from the study
+
+Recorded in **`notes/excluded-races.csv`**, one row per contest, keyed by `census_id` +
+`office`:
+
+| Municipality | Office | Seats | Sits on |
+|---|---|---|---|
+| Cambridge | Councillor, Regional | 2 | Region of Waterloo |
+| Kitchener | Councillor, Regional | 4 | Region of Waterloo |
+| Waterloo | Councillor, Regional | 2 | Region of Waterloo |
+
+Everything else in the study is a seat on the respondent's own council. These three are
+not: their holders sit on Regional Council and never on city council, so a respondent
+asked about them would be answering about a different body than every other respondent
+in the data. That is a different question, not a harder version of the same one.
+
+**The list is data, not prose, because three separate consumers act on it.**
+`get-municipal-data.R` refuses to emit a `council-races.csv` row for an excluded contest —
+that file covers seats on *this* council, so an excluded seat has no row, and the guard is
+what keeps the two files from disagreeing. `build-candidates-raw.py` drops the contest and
+its candidates, so nothing downstream of `candidates-raw.json` — the served file, the
+contest counts — has to know the exclusion exists. `candidates-js.test.js` reads the CSV
+and checks that no ward of any listed municipality serves the race.
+
+Two consequences worth knowing, both correct:
+
+- **Waterloo's `block_vote` is now `FALSE` and its `max_votes_max` is `1`.** Its only
+  vote-for-more-than-one contest was the regional race. A Waterloo elector marks one name
+  for mayor and one for their ward councillor, which is what the survey should now say.
+- **Cambridge and Kitchener no longer have an unverified seat count.** Their regional
+  races were the only two in the data with `seats` null, which is why acclamation was
+  blank for them. With the races gone, every race in the file has a verified seat count,
+  and `meta.unverified_seats` is absent from the served file. The machinery that produces
+  it stays — it is a general guard, not a Kitchener-and-Cambridge one.
+
+The candidate names are **not** deleted from `data/raw/by-municipality/`. Those files are
+the record of what each city published, and each of the three carries an `excluded_race`
+note saying what was collected and why it goes no further. The exclusion is applied at
+build time, so it is reversible by deleting a row.
 
 ## Confidence notes
 

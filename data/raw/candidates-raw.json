@@ -9,7 +9,7 @@
     "candidate_fields": "name_raw is the name exactly as published. last_name is upper-cased and first_name mixed case, following data/csv/TEST_ab-cands.csv, so a middle name stays with the given name. Sources publish names in three different shapes ('Last, First', 'First Last', and mixed-case given name with a CAPS surname); the shape used for each municipality is its name_format in data/raw/by-municipality/. Only the 'First Last' shape has to be guessed at: there the surname boundary is found with nameparser plus a name corpus (names-dataset), which is what keeps multi-token surnames such as 'Del Duca' and 'Meed Ward' whole. Tokens that are common as both a given name and a surname are inherently undecidable and stay with the given name; the build lists those for review.",
     "sources": "district_source_url and max_votes_source are copied from notes/councillor-election-structure.csv for the matching race. candidate_list_url is the page the names were actually read from, which for many municipalities is one hop from district_source_url because that URL points at a ward-boundary or council-composition page rather than a candidate list.",
     "withdrawn": "Withdrawn nominations are excluded from this dataset.",
-    "known_gaps": "Kitchener and Cambridge each publish an at-large Regional Councillor race with no row in council-races.csv, so it is absent from councillor-election-structure.csv too. Both are included here with seats/max_votes null and not_in_structure_csv true, since SOURCES.md lists both municipalities under at-large block vote."
+    "excluded": "Contests kept out of the study are listed in notes/excluded-races.csv and are absent from this file, candidates and all: Cambridge Councillor, Regional (5 candidates, upper_tier_only); Kitchener Councillor, Regional (11 candidates, upper_tier_only); Waterloo Councillor, Regional (4 candidates, upper_tier_only). 'upper_tier_only' means the seat sits on an upper-tier council rather than on that municipality's own, so it is not a race the study asks about; excluded-races.csv names the council in each case. The candidates are still collected in data/raw/by-municipality/, which stays a faithful record of what each city published."
   },
   "3506008": {
     "csdname": "Ottawa",
@@ -7546,7 +7546,7 @@
     "notes": {
       "list_status": "unofficial; page's own key dates give nominations closing 2026-08-21 and certification 2026-08-24",
       "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
-      "structure_gap": "The city publishes a 'Regional Councillors (Cambridge)' race (5 candidates) that has no row in councillor-election-structure.csv or council-races.csv. This is the same gap as Kitchener: SOURCES.md lists Cambridge under at-large block vote (vote-for-2) but the row is absent from council-races.csv. Recorded here under 'regional councillor' with seats/max_votes null pending a verified source.",
+      "excluded_race": "The city publishes a 'Regional Councillors (Cambridge)' race (5 candidates, 2 seats). Excluded from the study: its Regional Councillors sit on Regional Council and not on city council, so the seat is not one the survey asks about. The race is listed in notes/excluded-races.csv and dropped by scripts/build-candidates-raw.py, so it reaches neither candidates-raw.json nor the served file. The names stay here because this file is the record of what the city published.",
       "structure_match": "8 ward tables published, matching n_districts=8 in the structure CSV.",
       "other": "The page also lists a Regional Chair race (1 candidate, Nina Deeb), which is not a Cambridge council seat and is not recorded here.",
       "retrieved": "2026-08-11"
@@ -7753,53 +7753,6 @@
             }
           }
         }
-      ],
-      "regional councillor": [
-        {
-          "office": "Councillor, Regional",
-          "district_scope": "At-large",
-          "n_districts": 1,
-          "seats_per_district": null,
-          "max_votes": null,
-          "block_vote": null,
-          "sources": {
-            "district_source_url": [],
-            "max_votes_source": [],
-            "candidate_list_url": "https://www.cambridge.ca/mayor-city-council-government/elections/nominations-candidate-profiles/"
-          },
-          "districts": {
-            "At-large": {
-              "candidates": [
-                {
-                  "name_raw": "AREFIN, Salman",
-                  "last_name": "AREFIN",
-                  "first_name": "Salman"
-                },
-                {
-                  "name_raw": "CAUSARANO-BOLTON, Bryan",
-                  "last_name": "CAUSARANO-BOLTON",
-                  "first_name": "Bryan"
-                },
-                {
-                  "name_raw": "CRAIG, Doug",
-                  "last_name": "CRAIG",
-                  "first_name": "Doug"
-                },
-                {
-                  "name_raw": "VENKATARAMAN, Prakash",
-                  "last_name": "VENKATARAMAN",
-                  "first_name": "Prakash"
-                },
-                {
-                  "name_raw": "WOLF, Pam",
-                  "last_name": "WOLF",
-                  "first_name": "Pam"
-                }
-              ]
-            }
-          },
-          "not_in_structure_csv": true
-        }
       ]
     }
   },
@@ -7808,7 +7761,7 @@
     "notes": {
       "list_status": "unofficial; page states the list is updated until the 2026-08-21 14:00 deadline",
       "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
-      "structure_gap": "The city publishes an at-large Regional Councillor race (11 candidates) that has no row in councillor-election-structure.csv or council-races.csv. SOURCES.md lists Kitchener under at-large block vote (vote-for-4) but the row is absent from council-races.csv, so it is missing downstream. Recorded here under 'regional councillor' and flagged; seats/max_votes left null pending a verified source.",
+      "excluded_race": "The city publishes an at-large Regional Councillor race (11 candidates, 4 seats). Excluded from the study: its Regional Councillors sit on Regional Council and not on city council, so the seat is not one the survey asks about. The race is listed in notes/excluded-races.csv and dropped by scripts/build-candidates-raw.py, so it reaches neither candidates-raw.json nor the served file. The names stay here because this file is the record of what the city published.",
       "other": "The Regional Chair no longer appears on the ballot: under the Better Regional Governance Act, 2026 (2026-05-07) it became a provincially appointed position and no nominations for it may be filed or accepted.",
       "retrieved": "2026-08-11"
     },
@@ -8072,83 +8025,6 @@
             }
           }
         }
-      ],
-      "regional councillor": [
-        {
-          "office": "Councillor, Regional",
-          "district_scope": "At-large",
-          "n_districts": 1,
-          "seats_per_district": null,
-          "max_votes": null,
-          "block_vote": null,
-          "sources": {
-            "district_source_url": [],
-            "max_votes_source": [],
-            "candidate_list_url": "https://app2.kitchener.ca/election/candidates.aspx"
-          },
-          "districts": {
-            "At-large": {
-              "candidates": [
-                {
-                  "name_raw": "Gowing, Joe",
-                  "last_name": "GOWING",
-                  "first_name": "Joe"
-                },
-                {
-                  "name_raw": "Graham, Mac",
-                  "last_name": "GRAHAM",
-                  "first_name": "Mac"
-                },
-                {
-                  "name_raw": "Guthrie, Simon",
-                  "last_name": "GUTHRIE",
-                  "first_name": "Simon"
-                },
-                {
-                  "name_raw": "Harris, Michael",
-                  "last_name": "HARRIS",
-                  "first_name": "Michael"
-                },
-                {
-                  "name_raw": "Huxted, Kim",
-                  "last_name": "HUXTED",
-                  "first_name": "Kim"
-                },
-                {
-                  "name_raw": "James, Colleen",
-                  "last_name": "JAMES",
-                  "first_name": "Colleen"
-                },
-                {
-                  "name_raw": "Kolsawala, Sajid",
-                  "last_name": "KOLSAWALA",
-                  "first_name": "Sajid"
-                },
-                {
-                  "name_raw": "Meksavanh, Anna",
-                  "last_name": "MEKSAVANH",
-                  "first_name": "Anna"
-                },
-                {
-                  "name_raw": "Rodrigues, Matt",
-                  "last_name": "RODRIGUES",
-                  "first_name": "Matt"
-                },
-                {
-                  "name_raw": "Simson, Eve",
-                  "last_name": "SIMSON",
-                  "first_name": "Eve"
-                },
-                {
-                  "name_raw": "Wisniewski, Michael",
-                  "last_name": "WISNIEWSKI",
-                  "first_name": "Michael"
-                }
-              ]
-            }
-          },
-          "not_in_structure_csv": true
-        }
       ]
     }
   },
@@ -8159,7 +8035,8 @@
       "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
       "name_format_note": "Surnames are printed in CAPS and given names in mixed case, so multi-word names such as 'Ying Susan JIANG' and 'Sarvesh Pratap SINGH' split unambiguously.",
       "incomplete_warning": "Only one mayoral candidate (Dorothy McCabe) and one Ward 1 and Ward 7 candidate each had filed as of 2026-08-11.",
-      "structure_match": "Ward 1-7 councillor tables plus a single at-large Regional Councillor table, matching both structure-CSV rows (7 wards vote-for-1, regional at-large vote-for-2).",
+      "structure_match": "Ward 1-7 councillor tables, matching n_districts=7 in the structure CSV. The page's at-large Regional Councillor table is the excluded race below.",
+      "excluded_race": "The page also carries an at-large Regional Councillor race (4 candidates, 2 seats). Excluded from the study: its Regional Councillors sit on Regional Council and not on city council, so the seat is not one the survey asks about. The race is listed in notes/excluded-races.csv and dropped by scripts/build-candidates-raw.py, so it reaches neither candidates-raw.json nor the served file. The names stay here because this file is the record of what the city published.",
       "other": "The page also lists a Regional Chair race (Nina Deeb), which is not a Waterloo council seat and is not recorded here.",
       "retrieved": "2026-08-11"
     },
@@ -8323,51 +8200,6 @@
                   "name_raw": "Julie WRIGHT",
                   "last_name": "WRIGHT",
                   "first_name": "Julie"
-                }
-              ]
-            }
-          }
-        }
-      ],
-      "regional councillor": [
-        {
-          "office": "Councillor, Regional",
-          "district_scope": "At-large",
-          "n_districts": 1,
-          "seats_per_district": 2,
-          "max_votes": 2,
-          "block_vote": true,
-          "sources": {
-            "district_source_url": [
-              "https://www.waterloo.ca/council-and-committees/municipal-elections/find-election-candidates/"
-            ],
-            "max_votes_source": [
-              "https://www.waterloo.ca/council-and-committees/municipal-elections/find-election-candidates/"
-            ],
-            "candidate_list_url": "https://www.waterloo.ca/council-and-committees/municipal-elections/find-election-candidates/"
-          },
-          "districts": {
-            "At-large": {
-              "candidates": [
-                {
-                  "name_raw": "Jim ERB",
-                  "last_name": "ERB",
-                  "first_name": "Jim"
-                },
-                {
-                  "name_raw": "Chantal HUININK",
-                  "last_name": "HUININK",
-                  "first_name": "Chantal"
-                },
-                {
-                  "name_raw": "Chris MOSER",
-                  "last_name": "MOSER",
-                  "first_name": "Chris"
-                },
-                {
-                  "name_raw": "Sarvesh Pratap SINGH",
-                  "last_name": "SINGH",
-                  "first_name": "Sarvesh Pratap"
                 }
               ]
             }

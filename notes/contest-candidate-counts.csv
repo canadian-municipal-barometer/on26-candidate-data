@@ -4,10 +4,9 @@ census_id,csdname,race,office,district_scope,district,n_candidates,retrieved
 3538030,Sarnia,atlarge,"Councillor, City",At-large,At-large,15,2026-08-11
 3526043,Niagara Falls,atlarge,Councillor,At-large,At-large,14,2026-08-11
 3536020,Chatham-Kent,ward,Councillor,Ward,Ward 7 - North East Chatham,13,2026-08-11
-3538030,Sarnia,atlarge,"Councillor, City-County",At-large,At-large,13,2026-08-11
+3538030,Sarnia,regional councillor,"Councillor, City-County",At-large,At-large,13,2026-08-11
 3536020,Chatham-Kent,ward,Councillor,Ward,Ward 8 - South Chatham,12,2026-08-11
 3536020,Chatham-Kent,ward,Councillor,Ward,Ward 5 - Wallaceburg & Area,11,2026-08-11
-3530013,Kitchener,regional councillor,"Councillor, Regional",At-large,At-large,11,2026-08-11
 3548044,North Bay,atlarge,Councillor,At-large,At-large,11,2026-08-12
 3536020,Chatham-Kent,ward,Councillor,Ward,Ward 2 - South East Kent,10,2026-08-11
 3539036,London,mayor,Mayor,At-large,At-large,10,2026-08-11
@@ -81,7 +80,6 @@ census_id,csdname,race,office,district_scope,district,n_candidates,retrieved
 3529006,Brantford,ward,Councillor,Ward,Ward 5,5,2026-08-11
 3524002,Burlington,ward,"Councillor, City and Regional",Ward,Ward 6,5,2026-08-11
 3530010,Cambridge,mayor,Mayor,At-large,At-large,5,2026-08-11
-3530010,Cambridge,regional councillor,"Councillor, Regional",At-large,At-large,5,2026-08-11
 3530010,Cambridge,ward,"Councillor, Ward",Ward,Ward 7,5,2026-08-11
 3519070,Georgina,ward,"Councillor, Ward",Ward,Ward 2,5,2026-08-11
 3519070,Georgina,ward,"Councillor, Ward",Ward,Ward 3,5,2026-08-11
@@ -168,7 +166,6 @@ census_id,csdname,race,office,district_scope,district,n_candidates,retrieved
 3520005,Toronto,ward,Councillor,Ward,Ward 9,4,2026-08-11
 3520005,Toronto,ward,Councillor,Ward,Ward 18,4,2026-08-11
 3519028,Vaughan,ward,"Councillor, Ward",Ward,Ward 1,4,2026-08-11
-3530016,Waterloo,regional councillor,"Councillor, Regional",At-large,At-large,4,2026-08-11
 3537039,Windsor,ward,Councillor,Ward,Ward 5,4,2026-08-11
 3537039,Windsor,ward,Councillor,Ward,Ward 6,4,2026-08-11
 3519046,Aurora,mayor,Mayor,At-large,At-large,3,2026-08-11

@@ -6,7 +6,7 @@
   "notes": {
     "list_status": "unofficial; page's own key dates give nominations closing 2026-08-21 and certification 2026-08-24",
     "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
-    "structure_gap": "The city publishes a 'Regional Councillors (Cambridge)' race (5 candidates) that has no row in councillor-election-structure.csv or council-races.csv. This is the same gap as Kitchener: SOURCES.md lists Cambridge under at-large block vote (vote-for-2) but the row is absent from council-races.csv. Recorded here under 'regional councillor' with seats/max_votes null pending a verified source.",
+    "excluded_race": "The city publishes a 'Regional Councillors (Cambridge)' race (5 candidates, 2 seats). Excluded from the study: its Regional Councillors sit on Regional Council and not on city council, so the seat is not one the survey asks about. The race is listed in notes/excluded-races.csv and dropped by scripts/build-candidates-raw.py, so it reaches neither candidates-raw.json nor the served file. The names stay here because this file is the record of what the city published.",
     "structure_match": "8 ward tables published, matching n_districts=8 in the structure CSV.",
     "other": "The page also lists a Regional Chair race (1 candidate, Nina Deeb), which is not a Cambridge council seat and is not recorded here."
   },
@@ -87,7 +87,6 @@
         "seats": null,
         "max_votes": null,
         "block_vote": null,
-        "not_in_structure_csv": true,
         "districts": {
           "At-large": [
             "AREFIN, Salman",

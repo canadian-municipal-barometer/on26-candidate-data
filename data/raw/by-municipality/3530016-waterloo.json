@@ -8,7 +8,8 @@
     "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
     "name_format_note": "Surnames are printed in CAPS and given names in mixed case, so multi-word names such as 'Ying Susan JIANG' and 'Sarvesh Pratap SINGH' split unambiguously.",
     "incomplete_warning": "Only one mayoral candidate (Dorothy McCabe) and one Ward 1 and Ward 7 candidate each had filed as of 2026-08-11.",
-    "structure_match": "Ward 1-7 councillor tables plus a single at-large Regional Councillor table, matching both structure-CSV rows (7 wards vote-for-1, regional at-large vote-for-2).",
+    "structure_match": "Ward 1-7 councillor tables, matching n_districts=7 in the structure CSV. The page's at-large Regional Councillor table is the excluded race below.",
+    "excluded_race": "The page also carries an at-large Regional Councillor race (4 candidates, 2 seats). Excluded from the study: its Regional Councillors sit on Regional Council and not on city council, so the seat is not one the survey asks about. The race is listed in notes/excluded-races.csv and dropped by scripts/build-candidates-raw.py, so it reaches neither candidates-raw.json nor the served file. The names stay here because this file is the record of what the city published.",
     "other": "The page also lists a Regional Chair race (Nina Deeb), which is not a Waterloo council seat and is not recorded here."
   },
   "races": {

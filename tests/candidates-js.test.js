@@ -74,6 +74,46 @@ function splitWardPair(label) {
   return (label.match(/\d+/g) || []).map((n) => "Ward " + n);
 }
 
+// Minimal RFC 4180 reader, returning one object per row keyed by column name. Needed
+// because `office` values are quoted and contain a comma ("Councillor, Regional"), which
+// naive splitting would shift every later column past. Same splitter as
+// structure-csv.test.js; the two files share no module, having no package.json.
+function parseCsv(text) {
+  const parseLine = (line) => {
+    const fields = [];
+    let field = "";
+    let in_quotes = false;
+    for (let i = 0; i < line.length; i++) {
+      const ch = line[i];
+      if (in_quotes) {
+        if (ch !== '"') {
+          field += ch;
+        } else if (line[i + 1] === '"') {
+          field += '"';
+          i++;
+        } else {
+          in_quotes = false;
+        }
+      } else if (ch === '"') {
+        in_quotes = true;
+      } else if (ch === ",") {
+        fields.push(field);
+        field = "";
+      } else {
+        field += ch;
+      }
+    }
+    fields.push(field);
+    return fields;
+  };
+
+  const lines = text.split(/\r?\n/).filter((line) => line.trim() !== "");
+  const header = parseLine(lines[0]);
+  return lines
+    .slice(1)
+    .map((line) => Object.fromEntries(parseLine(line).map((v, i) => [header[i], v])));
+}
+
 // Every (stem, ward) a raw race contributes to, with that race's numbers. Mirrors what a
 // respondent is served: an at-large race reaches every ward, a ward race only its own.
 function rawRaces(census_id) {
@@ -426,14 +466,49 @@ test("max_votes is summed from max_votes, never from seats", () => {
   }
 });
 
-test("an unverified seat count leaves the fields blank rather than guessing", () => {
-  // Kitchener and Cambridge each publish an at-large regional race with no verified seat
-  // count upstream; see the structure_gap notes in data/raw/by-municipality/.
-  for (const census_id of ["3530013", "3530010"]) {
-    const entry = DATA.municipalities[census_id].wards["Ward 1"];
-    assert.equal(entry.fields.reg_coun_accl, "");
-    assert.equal(entry.fields.reg_coun_max_votes, "");
-    assert.ok(entry.names.coun_reg.length > 0, "but the candidates are still listed");
+test("an excluded contest reaches no respondent, in any ward", () => {
+  // notes/excluded-races.csv is the record of what the study leaves out; this is the check
+  // that it took effect all the way to the served file. Read from the CSV rather than
+  // listed here, so adding a row is covered without editing this test.
+  //
+  // The drop happens in scripts/build-candidates-raw.py, so the raw file is already clear
+  // of these races and the "no candidate was lost" test above cannot see them. Cambridge,
+  // Kitchener and Waterloo elect regional councillors who sit on Regional Council rather
+  // than city council — not a ballot line the survey asks about.
+  const rows = parseCsv(
+    readFileSync(path.join(ROOT, "notes", "excluded-races.csv"), "utf8"),
+  );
+  assert.ok(rows.length, "excluded-races.csv has no rows");
+
+  for (const row of rows) {
+    const mun = DATA.municipalities[row.census_id];
+    assert.ok(mun, `${row.csdname} is not in the served file at all`);
+
+    const stem = STEM[row.race_key];
+    assert.ok(stem, `unknown race_key ${row.race_key} in excluded-races.csv`);
+
+    for (const [ward, entry] of Object.entries(mun.wards)) {
+      assert.deepEqual(
+        entry.names[NAME_FIELD[stem]],
+        [],
+        `${row.csdname} ${ward} still serves the excluded ${row.office}`,
+      );
+      assert.equal(entry.fields[stem], 0, `${row.csdname} ${ward} ${stem}`);
+      assert.equal(entry.fields[stem + "_accl"], "");
+      assert.equal(entry.fields[stem + "_max_votes"], "");
+    }
+
+    // The raw file is where the drop happened, so nothing downstream can reintroduce it.
+    const raw = RAW[row.census_id];
+    for (const races of Object.values(raw.races)) {
+      for (const race of races) {
+        assert.notEqual(
+          race.office,
+          row.office,
+          `${row.csdname} ${row.office} is still in candidates-raw.json`,
+        );
+      }
+    }
   }
 });
 
