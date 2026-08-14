@@ -35,5 +35,5 @@ census_id,csdname,provider,pop_2021,election_type,ward_type,block_vote,max_votes
 3520005,Toronto,Leger,2794356,Ward,SMD,FALSE,1,FALSE,
 3519028,Vaughan,Leger,323103,Hybrid,Mixed,TRUE,4,FALSE,
 3530016,Waterloo,Leger,121436,Ward,SMD,TRUE,2,FALSE,
-3518009,Whitby,Leger,138501,Ward,SMD,FALSE,1,TRUE,https://www.whitby.ca/news/posts/whitby-council-votes-to-elect-regional-councillors-by-ward/
+3518009,Whitby,Leger,138501,Ward,MMD,FALSE,1,TRUE,https://www.whitby.ca/news/posts/whitby-council-votes-to-elect-regional-councillors-by-ward/
 3537039,Windsor,Leger,229660,Ward,SMD,FALSE,1,FALSE,

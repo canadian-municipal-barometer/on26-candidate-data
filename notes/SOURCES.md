@@ -89,9 +89,41 @@ single contest?** `MMD` turns out to cover two very different ballot experiences
 
 They are orthogonal, and a municipality can be MMD with `block_vote = FALSE`:
 
-- **`ward_type`** is about **district magnitude** — how many council seats a district
-  returns.
+- **`ward_type`** is about **district structure** — what kinds of district a council's seats
+  are drawn from.
 - **`block_vote`** is about **the ballot** — how many names a voter marks in one contest.
+
+### What the four `ward_type` values mean
+
+Count only the seats on **that municipality's own council**. Directly elected deputy mayors,
+and regional councillors who sit on an upper-tier council instead, are not part of the
+picture:
+
+| Value | Condition |
+|---|---|
+| `SMD` | Every seat comes from a ward, and every ward returns one |
+| `MMD` | Every seat comes from a ward, and some ward returns two or more |
+| `Mixed` | Seats are drawn from **more than one kind of district** — at-large plus ward, or ward plus ward-pair |
+| `N/A` | No wards at all; the whole council is elected at-large |
+
+**`Mixed` is about the kind of district, not the seat count.** Clarington and Georgina are
+both `Mixed` while every one of their districts returns exactly one seat — Clarington elects
+local councillors by ward and regional councillors by ward-pair, Georgina elects its regional
+councillor at-large alongside five ward councillors. Two kinds of district, so `Mixed`,
+despite uniform magnitude 1. Read `Mixed` as "mixed magnitude" and both look miscoded.
+
+**Chatham-Kent is the case that looks wrong and is not.** All eight of its wards return
+councillors — one kind of district — but Wards 1, 2, 5, 6, 7 and 8 return two each while
+Wards 3 and 4 return one. A uniform structure with a multi-seat ward in it is `MMD`, so the
+Wards 3&4 row of `councillor-election-structure.csv` carries `ward_type = MMD` even though
+its own `seats_per_district` is 1. That row's magnitude is `seats_per_district`; `ward_type`
+describes Chatham-Kent as a whole. It is the only municipality in the file whose magnitude
+varies without its district structure varying.
+
+An `At-large` + `Ward` split in `district_scope` therefore does not on its own imply `Mixed`.
+Innisfil and New Tecumseth show that split because of a directly elected deputy mayor, and
+Waterloo because its regional councillors sit on Regional Council. All three are correctly
+`SMD`.
 
 **Brampton is the worked example.** Its ten wards are paired (1&5, 2&6, 3&4, 7&8, 9&10).
 Each pairing elects a Regional Councillor *and* a City Councillor, and **both sit on
@@ -112,11 +144,11 @@ races |>
 
 For Brampton that returns 2 for every ward pairing.
 
-A general derived-magnitude-vs-`ward_type` check is *not* implemented: ward and ward-pair
-districts overlap (Clarington), magnitude varies within a municipality (Chatham-Kent), and
-`Mixed` sometimes means at-large-plus-ward rather than mixed magnitude (Markham, Thunder
-Bay). Any such check would fire on all three without a real error. Instead
-`get-municipal-data.R` verifies that councillor seats implied by `council-races.csv` equal
+A derived-magnitude-vs-`ward_type` check is *not* implemented, because the two do not measure
+the same thing: magnitude counts seats, `ward_type` reports district structure. They part
+company by design at Clarington and Georgina (`Mixed`, magnitude 1 throughout) and at
+Chatham-Kent (`MMD`, magnitude 1 in two of its eight wards), so any such check would fire on
+all three without a real error. Instead `get-municipal-data.R` verifies that councillor seats implied by `council-races.csv` equal
 `council_size - 1` in the master list, which is unambiguous and catches the same class of
 typo. Six municipalities deviate for known reasons and are listed as documented
 exceptions in the script — regional councillors who sit on regional rather than city
@@ -237,11 +269,12 @@ their regional councillors by ward or ward-pair, except Markham, Vaughan, Richmo
 Georgina, which are already flagged. Aurora has no separate regional seat at all; its mayor
 holds the York Region seat.
 
-**Eight municipalities coded `MMD`/`Mixed` have no multiple-vote race.** Ajax, Brampton,
-Clarington, Georgina, Milton, Oakville, Oshawa and Pickering are all double-direct or
-paired-ward. These are the rows most likely to be misread as block vote. (Whitby was a
-ninth until its 2026 change; it is now `SMD`. Ajax joined the list when `cmb_muns.csv`
-was corrected to `MMD`.)
+**Nine municipalities coded `MMD`/`Mixed` have no multiple-vote race.** Ajax, Brampton,
+Clarington, Georgina, Milton, Oakville, Oshawa, Pickering and Whitby are all double-direct or
+paired-ward. These are the rows most likely to be misread as block vote. (Ajax joined the
+list when `cmb_muns.csv` was corrected to `MMD`; Whitby rejoined it when the `ward_type` half
+of its override was withdrawn — its 2026 change ends the at-large race but still leaves two
+seats in every ward.)
 
 ## Corrections
 
@@ -326,16 +359,26 @@ cycle-specific fact, so it belonged upstream — fixed in `cmb_muns.csv` (commit
 The staleness guard is what caught it: the override's blank `old_value` no longer matched
 the upstream `N/A`, so the next run aborted rather than silently continuing to overwrite.
 
-### The one active override: Whitby is no longer MMD as of 2026
+### The one active override: Whitby's at-large regional race ends in 2026
 
 Whitby's four Regional Councillors were elected at-large through 2022 — a genuine vote-for-4
 block race. Council voted to elect them by ward starting with the October 2026 election, so
 an elector now casts one vote each for mayor, local ward councillor, and regional ward
-councillor. `Hybrid`/`MMD` → `Ward`/`SMD`.
+councillor. `Hybrid` → `Ward`, and that is the whole override.
+
+**`ward_type` is deliberately left alone at `MMD`.** Each Whitby ward returned a local and a
+regional councillor before the change and still does after it — only the geography the
+regional seat is drawn from moved, from at-large to those same four wards. Two seats per
+ward, one kind of district: `MMD` under both cycles. An earlier `MMD` → `SMD` row here read
+the change as making Whitby single-member, but that conflated magnitude with the ballot —
+every *race* is single-seat, which is exactly what `block_vote = FALSE` already records. It
+also put Whitby in direct conflict with Ajax, whose three wards each return a Regional and a
+Local Councillor and which is coded `MMD` for that very reason (see "Ajax was coded SMD"
+above).
 
 **This is the one genuinely cycle-specific row, and the reason the override layer exists.**
-It is not an error: `Hybrid`/`MMD` correctly describes the council sitting today, elected in
-2022 under the at-large structure. `Ward`/`SMD` describes the term beginning November 2026.
+It is not an error: `Hybrid` correctly describes the council sitting today, elected in
+2022 under the at-large structure. `Ward` describes the term beginning November 2026.
 `cmb_muns.csv` has no vintage column, so it cannot hold both — push this upstream and the
 master describes the upcoming term while misdescribing the sitting council; leave it here
 and the master stays true to today. It is parked here on the second reading. Revisit after

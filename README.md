@@ -20,12 +20,16 @@ Each file assigns a **lookup table** to `window.CMB_CANDIDATES`, read by `code/s
 
 ```js
 municipalities["3558004"].wards["McIntyre"] = {
-  names:  { mayor: [...], coun: [...], reg_coun: [], dep_mayor: [] },
-  fields: { coun_accl: 0, coun_max_votes: 6, smd: 1, atlarge: 1, ... }
+  names:  { mayor: [...], coun_ward: [...], coun_atlarge: [...],
+            coun_reg: [], dep_mayor: [] },
+  fields: { coun: 1, coun_accl: 1, coun_max_votes: 1,
+            atlarge: 1, atlarge_accl: 0, atlarge_max_votes: 5, smd: 1, ... }
 }
 ```
 
-- `names` holds `"LAST, First"` in the order the survey should show them, already merged across every race that respondent is served. The four families — `mayor`, `coun`, `reg_coun`, `dep_mayor` — are the four sets of embedded fields the survey writes.
+- `names` holds `"LAST, First"` in the order the survey should show them, keyed by the field the survey writes them out as: `mayor1..`, `coun_ward1..`, `coun_atlarge1..`, `coun_reg1..`, `dep_mayor1..`. The three councillor lists share a prefix so they sort together in the export.
+- Each is one contest as a voter meets it. A ward councillor race and an at-large one are never merged: Thunder Bay's respondents mark one name for their ward's seat and five for the city's, and the fields say so separately. Every at-large councillor race is `coun_atlarge`, including in the three municipalities that hold no ward race at all. `coun_reg` is the upper-tier seat however it is elected — Sarnia's second city-wide slate sits on Lambton County council, so it goes there rather than being a second at-large contest.
+- `fields` is keyed by **stem** rather than by name field: each of `mayor`, `coun`, `atlarge`, `reg_coun`, `dep_mayor` writes three scalars and no more — `<stem>` (is this respondent served the race), `<stem>_accl`, `<stem>_max_votes`. `smd`/`mmd` — the ward councillor race's shape — are the only scalars not named for a stem. **`meta.stems` maps stem to name field**; nothing can infer one from the other.
 - `fields` holds every scalar in final form: a number, or `""` where there is nothing to say. Every ward entry carries the same keys, so nothing can go stale between respondents.
 - Every municipality has a `"99"` ward entry as well as its real wards, holding whatever is decided at large. It is what a respondent gets if they reach the question without a ward, and the only entry for the three municipalities that elect entirely at large.
 - Ward pairs are stored under each ward they are drawn from, so a respondent's single-ward answer finds their ballot. Brampton and Clarington are the two.
@@ -65,7 +69,7 @@ Because at-large lists repeat under each ward, the file is about 25% larger than
 - Usage: `python3 scripts/build-candidates-js.py`. No arguments, no dependencies, runnable from any working directory. Rerun it after `scripts/build-candidates-raw.py`, and bump `data/candidate-data-versions/version.txt` first if the served file is changing.
 - A new build writes a new filename, so the survey's `code/survey/header.html` has to be repointed at it or respondents keep getting the old data. `parse-candidates.test.js` in the survey repo loads whichever file the header names, so a forgotten repoint fails there rather than in the field.
 - Writes only after every check passes. It aborts if a race key is unknown, if a municipality has no mayoral or council race, if two races under one stem both claim a ward, or if a ward pair cannot be split.
-- Prints the number of embedded data fields the Qualtrics flow has to declare per stem (`mayor1..37 coun1..28 reg_coun1..11 dep_mayor1..3` as the data stands), and which municipality sets each maximum. The flow declares these by hand, so a longer list than any here means adding fields to the flow.
+- Prints the number of embedded data fields the Qualtrics flow has to declare per family (`mayor1..37 coun_ward1..16 coun_atlarge1..15 coun_reg1..13 dep_mayor1..3` as the data stands), and which municipality sets each maximum. The flow declares these by hand — under the survey's own `__js_` prefix, as `__js_mayor1` — so a longer list than any here means adding fields to the flow.
 - Prints any race whose seat count is unverified upstream. Acclamation cannot be computed for those, so `accl` is null and the survey leaves the field blank rather than guessing. Kitchener's and Cambridge's at-large regional races are the two — see the `structure_gap` notes in `data/raw/by-municipality/`.
 
 `notes/`: Ballot structure data for the municipalities in the study — which of them let a voter mark more than one name in a single race, and why the SMD/MMD coding alone cannot answer that. See `notes/SOURCES.md` for the reasoning and a source URL for every finding.

@@ -30,8 +30,9 @@ acclaimed, how many names they may mark, what shape their ballot is - is decided
         name: "Ottawa",
         wards: {
           "<ward label>"|"99": {
-            names:  { mayor: [...], coun: [...], reg_coun: [...], dep_mayor: [...] },
-            fields: { mayor_accl: 0, coun_max_votes: 1, smd: 1, ... }
+            names:  { mayor: [...], coun: [...], atlarge: [...],
+                      reg_coun: [...], dep_mayor: [...] },
+            fields: { coun: 1, coun_accl: 0, coun_max_votes: 1, smd: 1, ... }
           }
         }
       }
@@ -40,25 +41,39 @@ acclaimed, how many names they may mark, what shape their ballot is - is decided
 
 `names` holds "LAST, First" in the order they should appear. `fields` holds every scalar
 the survey writes, already in its final form - a number, or "" where there is nothing to
-say. Every ward entry carries the same `fields` keys, so nothing can go stale.
+say. Every ward entry carries the same `fields` keys, so nothing can go stale. Every stem
+produces the same four things: `<stem>` (is this respondent served the race at all),
+`<stem>_accl`, `<stem>_max_votes`, and the numbered name fields the survey writes from
+`names`. Add a stem and the fields follow; there is no list of field names anywhere.
 
 Every municipality has a "99" ward entry as well as its real wards. It holds whatever is
-decided at large - the mayor, and any at-large regional or deputy mayor race - with empty
-council lists, and is what a respondent gets if they reach the question without a ward.
-For the three municipalities that elect entirely at large it is the only entry.
+decided at large - the mayor, the at-large councillors, and any at-large regional or
+deputy mayor race - with an empty ward-councillor list, and is what a respondent gets if
+they reach the question without a ward. For the three municipalities that elect entirely
+at large it is the only entry, and `coun` is empty in it.
 
 WHY IT IS SHAPED THIS WAY, rather than mirroring the races
 
-  Four race stems, because the survey writes four families of embedded fields: mayor,
-  coun, reg_coun, dep_mayor. The raw data's `ward` and `atlarge` keys both feed `coun` -
-  the same question to a respondent, and Thunder Bay, which runs both, gives its voters
-  two councillor ballots rather than two kinds of councillor.
+  Five race stems, because the survey writes five families of embedded fields: mayor,
+  coun, atlarge, reg_coun, dep_mayor. One stem is one contest as a voter meets it, so
+  a ward councillor race and an at-large councillor race are never merged: they are
+  different contests with their own candidates, their own max_votes and their own
+  acclamation. See STEM below for the rule and what it costs.
 
   A respondent is served an at-large race, plus the one district of each ward race that
-  they live in - never the municipality's other wards. So Thunder Bay's councillor entry
-  merges 5 at-large candidates with the 1 in their own ward, and its max_votes is 6, not
-  the 12 its seven wards would total. Sarnia has no wards and two at-large contests of
-  four, so every Sarnia voter really does mark all eight.
+  they live in - never the municipality's other wards. So a Thunder Bay respondent gets
+  their ward's single councillor under coun and the city's 5 at-large seats under
+  atlarge, rather than one merged race for 6; not the 12 its seven wards would total
+  either way. Sarnia has no wards and elects two city-wide slates of four, which are two
+  contests and not one: its City councillors are atlarge, and its City-County
+  councillors sit on Lambton County council as well and are reg_coun, the same stem every
+  other upper-tier seat in the study uses.
+
+  As the data stands every respondent is served at most one race per stem, so nothing is
+  actually merged. The merge is still what a stem means - Chatham-Kent's two ward tiers
+  are one stem, and a municipality that split its at-large council seats into two same-tier
+  contests would be another - but a stem that starts merging different offices is a sign
+  the office belongs in a stem of its own.
 
   A race is acclaimed when it has no more candidates than seats, which is not the same as
   having exactly one: thirteen races here fill more than one seat. Where a respondent is
@@ -72,7 +87,7 @@ WHY IT IS SHAPED THIS WAY, rather than mirroring the races
   Ward pairs are stored under each ward they are drawn from, so a respondent's single-ward
   answer finds their ballot. Brampton elects both its City and its Regional councillors
   from five pairs, and Clarington its Regional councillors from two. The rule is the one
-  ward-links.test.js already uses: take the numbers out of the label.
+  parse-wards.test.js already uses: take the numbers out of the label.
 
 NAME ORDER is settled here, so the survey does not have to sort. The order is the one
 JavaScript's localeCompare produces, reproduced by NAME_SORT_KEY below, because that is
@@ -98,20 +113,44 @@ VERSIONS = os.path.join(REPO, "data", "candidate-data-versions")
 VERSION_FILE = os.path.join(VERSIONS, "version.txt")
 
 # Raw race key -> the embedded-field stem the survey writes for it.
+#
+# A councillor elected at large is its own stem, never folded into `coun`, because the two
+# are separate contests: max_votes, acclamation and the candidate list are all scoped to
+# the contest, and `coun` is scoped to one ward. Thunder Bay is the municipality that makes
+# the difference visible - it runs both, and a respondent there marks 1 ward councillor and
+# 5 at-large ones - but the split does not depend on that overlap. Niagara Falls, North Bay
+# and Sarnia elect councillors only at large, and their lists are atlarge too, with
+# `coun` empty. One rule, no municipality-shaped exceptions.
+#
+# A regional councillor keeps its own stem whether or not it is elected at large: it is a
+# different office (upper-tier), not the same office on a wider ballot.
 STEM = {
     "mayor": "mayor",
     "ward": "coun",
-    "atlarge": "coun",
+    "atlarge": "atlarge",
     "regional councillor": "reg_coun",
     "deputy mayor": "dep_mayor",
 }
-STEMS = ["mayor", "coun", "reg_coun", "dep_mayor"]
+STEMS = ["mayor", "coun", "atlarge", "reg_coun", "dep_mayor"]
+
+# The stem names the scalars; this names the numbered candidate fields, and for the three
+# councillor races the two differ. The survey groups every councillor list under one
+# prefix - coun_ward1, coun_atlarge1, coun_reg1 - so the three read as one office split
+# three ways and sort together in the export, while the scalars stay short: coun,
+# atlarge, reg_coun. meta.stems carries this map, since nothing downstream can infer it.
+NAME_FIELD = {
+    "mayor": "mayor",
+    "coun": "coun_ward",
+    "atlarge": "coun_atlarge",
+    "reg_coun": "coun_reg",
+    "dep_mayor": "dep_mayor",
+}
 
 # The key for "no ward" - both an at-large race's only district and the ward value sent
 # when the ward question was skipped.
 AT_LARGE = "99"
 
-# ward-links.js is the survey-facing name list and calls 3553005 "Greater Sudbury"; the
+# parse-wards.js is the survey-facing name list and calls 3553005 "Greater Sudbury"; the
 # census calls it "Greater Sudbury / Grand Sudbury". Matching is on census_id, so this is
 # cosmetic - it keeps the console logs from the two scripts reading the same.
 NAME_OVERRIDE = {"3553005": "Greater Sudbury"}
@@ -150,7 +189,7 @@ def die(*msgs):
 
 
 def split_ward_pair(label):
-    """"Wards 1, 5" -> ["Ward 1", "Ward 5"]. Same rule as ward-links.test.js."""
+    """"Wards 1, 5" -> ["Ward 1", "Ward 5"]. Same rule as parse-wards.test.js."""
     return ["Ward " + n for n in re.findall(r"\d+", label)]
 
 
@@ -275,17 +314,29 @@ for census_id in sorted(k for k in raw if k != "_meta"):
 
     if "mayor" not in races:
         problems.append(f"{census_id}: no mayoral race")
-    if "coun" not in races:
-        problems.append(f"{census_id}: no council race")
+    # Either kind of councillor race satisfies this: a municipality that elects entirely at
+    # large has no `coun` race at all, and one with wards need not elect any at large.
+    if "coun" not in races and "atlarge" not in races:
+        problems.append(f"{census_id}: no council race of either kind")
+    # The stems are the scopes, so a race that arrived under the wrong key would put an
+    # at-large contest into a ward-scoped field and go unnoticed in the output.
+    for stem, scoped_at_large in (("coun", False), ("atlarge", True)):
+        for race in races.get(stem, []):
+            if race["at_large"] != scoped_at_large:
+                problems.append(
+                    f"{census_id}: {race['office']!r} is under {stem} but is "
+                    f"{'at-large' if race['at_large'] else 'ward'}-scoped"
+                )
 
     races_by_mun[census_id] = races
 
 # --- checks -------------------------------------------------------------------------
 #
-# Two at-large races under one stem are merged into a single list, which is right for
-# Sarnia (two councillor contests on one ballot) but would silently double a municipality
-# whose data had been entered twice. Two ward-scoped races must never both claim a ward:
-# Chatham-Kent's two tiers are disjoint by design, each ward sitting in exactly one.
+# Two at-large races under one stem would be merged into a single list, which no
+# municipality here does any more - Sarnia's second city-wide slate is an upper-tier seat
+# and sits in reg_coun - and which would silently double a municipality whose data had
+# been entered twice. Two ward-scoped races must never both claim a ward: Chatham-Kent's
+# two tiers are disjoint by design, each ward sitting in exactly one.
 for census_id, races in races_by_mun.items():
     for stem, race_list in races.items():
         seen = {}
@@ -341,8 +392,16 @@ def entry_for(census_id, ward):
         got = served(census_id, stem, ward)
         merged = [name for _, district in got for name in district["names"]]
         # Sorted across the merge, so a Sarnia respondent gets one alphabetical list
-        # rather than two runs of names that restart halfway down.
-        names[stem] = sorted(merged, key=name_sort_key)
+        # rather than two runs of names that restart halfway down. Keyed by the name field
+        # rather than the stem: the survey writes these out as <key>1, <key>2, ...
+        names[NAME_FIELD[stem]] = sorted(merged, key=name_sort_key)
+
+        # Whether this respondent is served the race at all, so the flow can skip its
+        # question everywhere else. Every stem carries one, named for the stem: nothing to
+        # keep in step with STEMS by hand, and no field that means something other than
+        # what its name says. `mayor` is 1 throughout this study; a study where some
+        # municipality elects no mayor gets its 0 without anyone having to remember.
+        fields[stem] = 1 if got else 0
 
         # Blank, not 0, where there is no race to call or no verified seat count: it keeps
         # "no such race here" distinguishable from "contested" in the export.
@@ -362,34 +421,32 @@ def entry_for(census_id, ward):
         else:
             fields[stem + "_max_votes"] = sum(votes)
 
-    # smd, mmd and atlarge describe one thing three ways - the councillor ballot this
-    # respondent faces - so they are read off the coun races they are actually served.
-    # Chatham-Kent differs by ward, and Thunder Bay is both at-large and single-member.
-    # A regional councillor elected at large does not make the councillor ballot
-    # at-large; that race has its own flag.
-    shape = {"smd": 0, "mmd": 0, "atlarge": 0}
-    for race, district in served(census_id, "coun", ward):
-        if race["at_large"]:
-            shape["atlarge"] = 1
-        elif district["seats"] == 1:
+    # smd and mmd are the shape of this respondent's ward councillor race, which differs by
+    # ward in Chatham-Kent: two councillors in six wards, one in the other two. Both are 0
+    # where there is no ward race to describe, which is now a real case - Sarnia and the
+    # other at-large municipalities have none.
+    #
+    # `atlarge` used to be a third flag here, describing the same ballot as smd and mmd,
+    # because at-large councillors shared the `coun` stem and the shape was the only thing
+    # that said so. It is a stem now, so the field of that name is written above with the
+    # other stems' - same name, same value, but it belongs to a race rather than to a
+    # shape, and it comes with a candidate list, an acclamation and a max_votes.
+    shape = {"smd": 0, "mmd": 0}
+    for _, district in served(census_id, "coun", ward):
+        if district["seats"] == 1:
             shape["smd"] = 1
         elif district["seats"] and district["seats"] > 1:
             shape["mmd"] = 1
     fields.update(shape)
 
-    # Whether the municipality holds the race at all, so the flow can skip its question
-    # everywhere else.
-    fields["deputy_mayor"] = 1 if served(census_id, "dep_mayor", ward) else 0
-    fields["reg_coun"] = 1 if served(census_id, "reg_coun", ward) else 0
-
     return {
-        "names": {stem: compact(names[stem]) for stem in STEMS},
+        "names": {NAME_FIELD[stem]: compact(names[NAME_FIELD[stem]]) for stem in STEMS},
         "fields": compact(fields),
     }
 
 
 municipalities = {}
-max_names = {stem: 0 for stem in STEMS}
+max_names = {NAME_FIELD[stem]: 0 for stem in STEMS}
 widest = {}
 field_keys = None
 
@@ -399,13 +456,14 @@ for census_id in sorted(races_by_mun):
         # Built before compaction so the numbers below can still see the lists.
         got = {stem: served(census_id, stem, ward) for stem in STEMS}
         for stem in STEMS:
+            field = NAME_FIELD[stem]
             n = sum(len(d["names"]) for _, d in got[stem])
-            if n > max_names[stem]:
-                max_names[stem] = n
+            if n > max_names[field]:
+                max_names[field] = n
                 # Name the ward only where the stem is decided by it; a mayoral list is
                 # the same in every ward, so "Toronto Ward 1" would read as coincidence.
                 by_ward = any(not r["at_large"] for r in races_by_mun[census_id].get(stem, []))
-                widest[stem] = (
+                widest[field] = (
                     f"{mun_names[census_id]} {ward}"
                     if by_ward and ward != AT_LARGE
                     else mun_names[census_id]
@@ -448,6 +506,11 @@ doc = {
         "generated_by": "scripts/build-candidates-js.py - do not hand-edit",
         "municipalities": len(municipalities),
         "candidates": distinct,
+        # stem -> the name field its candidates are written under. The two differ for the
+        # councillor races: the scalars are coun/atlarge/reg_coun, the lists are
+        # coun_ward1.., coun_atlarge1.., coun_reg1... Read this rather than assuming a
+        # stem names both.
+        "stems": compact(NAME_FIELD),
         "max_names": max_names,
         "fields": compact(list(field_keys)),
         "provisional": raw["_meta"]["provisional"],
@@ -455,17 +518,28 @@ doc = {
             "A lookup table, not a description of the elections: "
             "municipalities[census_id].wards[ward label|\"99\"] holds everything the "
             "survey writes for a respondent who gave that municipality and ward. `names` "
-            "is the four field families, \"LAST, First\", already merged across the races "
-            "they are served and in localeCompare order. `fields` is every scalar, "
-            "already final - a number, or \"\" where there is nothing to say. Every ward "
-            "entry carries the same `fields` keys. \"99\" is the entry for a respondent "
-            "with no ward, and the only entry for a municipality that elects at large."
+            "is the five candidate lists, \"LAST, First\", already merged across the races "
+            "they are served and in localeCompare order, keyed by the field the survey "
+            "writes them out as: mayor1.., coun_ward1.., coun_atlarge1.., coun_reg1.., "
+            "dep_mayor1... One list is one contest - the ward councillor race and the "
+            "at-large one are never merged, since their candidates, max_votes and "
+            "acclamation are all their own. `fields` is every scalar, already final - a "
+            "number, or \"\" where there is nothing to say - and is keyed by stem instead: "
+            "`<stem>` (served this race at all), `<stem>_accl` and `<stem>_max_votes` for "
+            "each of mayor, coun, atlarge, reg_coun, dep_mayor, plus smd/mmd for the ward "
+            "councillor race's shape. meta.stems maps one to the other. Every ward entry "
+            "carries the same `fields` keys. \"99\" is the entry for a respondent with no "
+            "ward, and the only entry for a municipality that elects at large."
         ),
         "max_names_note": (
             "The longest list each field family can reach, and the municipality that sets "
             "it: "
-            + ", ".join(f"{stem} {max_names[stem]} ({widest.get(stem, '-')})" for stem in STEMS)
-            + ". The survey flow declares that many embedded fields per stem by hand, so "
+            + ", ".join(
+                f"{NAME_FIELD[stem]} {max_names[NAME_FIELD[stem]]} "
+                f"({widest.get(NAME_FIELD[stem], '-')})"
+                for stem in STEMS
+            )
+            + ". The survey flow declares that many embedded fields per family by hand, so "
             "adding a municipality with a longer list means adding fields to the flow."
         ),
     },
@@ -510,10 +584,11 @@ print(
 )
 print(
     "  fields the flow must declare: "
-    + "  ".join(f"{stem}1..{max_names[stem]}" for stem in STEMS)
+    + "  ".join(f"{NAME_FIELD[stem]}1..{max_names[NAME_FIELD[stem]]}" for stem in STEMS)
 )
 for stem in STEMS:
-    print(f"    {stem:<10} widest: {widest.get(stem, '-')}")
+    field = NAME_FIELD[stem]
+    print(f"    {field:<13} widest: {widest.get(field, '-')}")
 print("  plus the scalars: " + " ".join(field_keys))
 
 if unverified:

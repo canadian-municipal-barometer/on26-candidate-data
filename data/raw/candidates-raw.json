@@ -9094,7 +9094,7 @@
     "notes": {
       "list_status": "explicitly labelled 'Unofficial List of Candidates'; nominations open until 2026-08-21 14:00",
       "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
-      "schema_note": "Sarnia has two distinct at-large races, so 'atlarge' holds two race objects: 'Councillor, City' and 'Councillor, City-County'.",
+      "schema_note": "Sarnia elects two distinct slates of four councillors city-wide, on separate ballot lines: 'Councillor, City' sits on city council only and is keyed 'atlarge'; 'Councillor, City-County' sits on Lambton County council as well and is keyed 'regional councillor', the same key every other upper-tier seat in the study uses. Both are At-large scope - the key is the office's tier, not its geography - so the survey asks them as two questions and the export keeps a Sarnia respondent's county vote in the same columns as a Waterloo or York respondent's.",
       "name_format": "Published as 'First Last', unlike most sources; name_raw preserves the published form.",
       "retrieved": "2026-08-11"
     },
@@ -9239,7 +9239,9 @@
               ]
             }
           }
-        },
+        }
+      ],
+      "regional councillor": [
         {
           "office": "Councillor, City-County",
           "district_scope": "At-large",
