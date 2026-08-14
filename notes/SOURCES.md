@@ -476,9 +476,12 @@ Two consequences worth knowing, both correct:
   for mayor and one for their ward councillor, which is what the survey should now say.
 - **Cambridge and Kitchener no longer have an unverified seat count.** Their regional
   races were the only two in the data with `seats` null, which is why acclamation was
-  blank for them. With the races gone, every race in the file has a verified seat count,
-  and `meta.unverified_seats` is absent from the served file. The machinery that produces
-  it stays — it is a general guard, not a Kitchener-and-Cambridge one.
+  blank for them. With the races gone, every race in the file has a verified seat count.
+  That is now a requirement rather than a convenience: since the survey flow reads a blank
+  `_accl` as "this respondent has no such race", `build-candidates-js.py` **aborts** on a
+  served race whose seats or `max_votes` are null, instead of serving it with blanks and
+  reporting it. Verify the count in `data/raw/by-municipality/`, or add the race to
+  `notes/excluded-races.csv`.
 
 The candidate names are **not** deleted from `data/raw/by-municipality/`. Those files are
 the record of what each city published, and each of the three carries an `excluded_race`

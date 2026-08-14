@@ -4,7 +4,7 @@
 // respondent is served and stores it, so the survey does not have to. That moves all the
 // judgement into the build, and this is where it is checked — that the projection kept
 // every candidate, served each respondent their own ward and no one else's, and got the
-// acclamation, the vote counts and the ballot shape right.
+// acclamation and the vote counts right.
 //
 // The newest built file is used, so a rebuild is covered without editing this file.
 //
@@ -28,7 +28,7 @@ const AT_LARGE = "99";
 // apart. Mirrors STEM in scripts/build-candidates-js.py.
 const STEM = {
   mayor: "mayor",
-  ward: "coun",
+  ward: "ward",
   atlarge: "atlarge",
   "regional councillor": "reg_coun",
   "deputy mayor": "dep_mayor",
@@ -61,7 +61,7 @@ const RAW = JSON.parse(readFileSync(RAW_PATH, "utf8"));
 
 // stem -> the field its candidate list is written under. The two are the same word for
 // mayor and dep_mayor and differ for all three councillor races, which the survey groups
-// under one prefix: coun -> coun_ward, atlarge -> coun_atlarge, reg_coun -> coun_reg. So
+// under one prefix: ward -> coun_ward, atlarge -> coun_atlarge, reg_coun -> coun_reg. So
 // `fields` is keyed by stem and `names` by name field, and this is the map between them —
 // read from the data rather than repeated here, and pinned by the test below.
 const NAME_FIELD = DATA.meta.stems;
@@ -163,7 +163,7 @@ test("every municipality has a 99 entry for a respondent with no ward", () => {
 });
 
 test("meta.stems maps every stem to the field its candidates are written under", () => {
-  // Two naming schemes meet here: the scalars are named for the race (coun, atlarge,
+  // Two naming schemes meet here: the scalars are named for the race (ward, atlarge,
   // reg_coun), and the candidate lists are grouped under one councillor prefix so the
   // three sort together in the export (coun_ward1, coun_atlarge1, coun_reg1). Nothing
   // downstream can derive one from the other, so the file carries the map and this pins
@@ -171,14 +171,14 @@ test("meta.stems maps every stem to the field its candidates are written under",
   // question with no candidates in it.
   assert.deepEqual(DATA.meta.stems, {
     mayor: "mayor",
-    coun: "coun_ward",
+    ward: "coun_ward",
     atlarge: "coun_atlarge",
     reg_coun: "coun_reg",
     dep_mayor: "dep_mayor",
   });
 
-  // Both halves are real: every stem has its three scalars, every name field has a list
-  // in every entry, and max_names sizes the name fields.
+  // Both halves are real: every stem has its scalars, every name field has a list in every
+  // entry, and max_names sizes the name fields.
   assert.deepEqual(Object.keys(DATA.meta.max_names).sort(), Object.values(NAME_FIELD).sort());
   for (const mun of Object.values(DATA.municipalities)) {
     for (const [ward, entry] of Object.entries(mun.wards)) {
@@ -188,7 +188,10 @@ test("meta.stems maps every stem to the field its candidates are written under",
         mun.name + " " + ward,
       );
       for (const stem of STEMS) {
-        assert.ok(stem in entry.fields, `${mun.name} ${ward}: no ${stem} field`);
+        assert.ok(
+          stem + "_accl" in entry.fields,
+          `${mun.name} ${ward}: no ${stem}_accl field`,
+        );
       }
     }
   }
@@ -208,24 +211,101 @@ test("every ward entry carries the same scalar fields", () => {
 });
 
 // Every scalar is named for the stem it belongs to, so a family reads the same all the
-// way through: dep_mayor, dep_mayor_accl, dep_mayor_max_votes, dep_mayor1..3. The survey
-// writes these names straight out under its own __js_ prefix and renames nothing, so a
-// name that drifts here is a column that drifts in the export and a field the Qualtrics
-// flow declares under the old spelling. Adding a stem should add its three scalars and
-// nothing else — no field list to edit, and none of the one-off names a new stem tempts
-// (`has_atlarge`, `coun2_max_votes`, a bare `accl` for whichever race seemed the main one).
+// way through: ward, ward_accl, ward_max_votes, coun_ward1..16. The survey writes these
+// names straight out under its own __js_ prefix and renames nothing, so a name that drifts
+// here is a column that drifts in the export and a field the Qualtrics flow declares under
+// the old spelling. Adding a stem should add its scalars and nothing else — no field list
+// to edit, and none of the one-off names a new stem tempts (`has_atlarge`,
+// `coun2_max_votes`, a bare `accl` for whichever race seemed the main one).
+//
+// mayor and dep_mayor are the exception, and the reason they are listed here by hand: both
+// are single-seat wherever they appear, so a max_votes for them would be 1 in every row of
+// the export and would suggest it might not be. See SINGLE_VOTE_STEMS in the build script.
+const SINGLE_VOTE_STEMS = ["mayor", "dep_mayor"];
+
 test("every scalar field is named for its stem", () => {
   const stems = STEMS;
   const expected = [
-    ...stems, // served this race at all
     ...stems.map((stem) => stem + "_accl"),
-    ...stems.map((stem) => stem + "_max_votes"),
-    // the ward councillor race's shape, the one pair that belongs to no stem by name
-    "smd",
-    "mmd",
+    ...stems
+      .filter((stem) => !SINGLE_VOTE_STEMS.includes(stem))
+      .map((stem) => stem + "_max_votes"),
+    // the one bare served-flag kept, completing the ward stem's family
+    "ward",
   ].sort();
 
   assert.deepEqual([...DATA.meta.fields].sort(), expected);
+});
+
+// `coun`, `smd` and `mmd` were dropped once the flow moved to filtering on the accl and
+// max_votes families directly, along with the bare served-flags of every stem but `ward`.
+// Each was exactly derivable from what remains, and a second spelling of one fact is a
+// second thing to keep in step. This pins the derivations that replaced them, so a flow
+// written against them stays correct: if any stops holding, the field was carrying
+// something after all.
+//
+// `ward` is the one served-flag kept, so it is the one stem exempt from the first check.
+test("the dropped flags are still derivable from what remains", () => {
+  for (const census_id of censusIds) {
+    const mun = DATA.municipalities[census_id];
+    for (const [ward, entry] of Object.entries(mun.wards)) {
+      const f = entry.fields;
+      const where = `${mun.name} ${ward}`;
+
+      for (const stem of STEMS) {
+        if (stem !== "ward") {
+          assert.ok(!(stem in f), `${where}: bare ${stem} flag should be gone`);
+        }
+        // What `<stem>` used to say: served the race at all.
+        const served = expectedFor(census_id, stem, ward).length > 0;
+        assert.equal(
+          f[stem + "_accl"] !== "",
+          served,
+          `${where}: ${stem}_accl blankness no longer tracks served`,
+        );
+      }
+
+      for (const gone of ["coun", "coun_accl", "coun_max_votes", "smd", "mmd"]) {
+        assert.ok(!(gone in f), `${where}: ${gone} should be gone`);
+      }
+      // What `smd`/`mmd` used to say: the ward race's shape.
+      const wardRaces = expectedFor(census_id, "ward", ward);
+      assert.equal(f.ward, Number(wardRaces.length > 0), `${where}: ward`);
+      assert.equal(
+        f.ward_max_votes === "" ? 0 : Number(f.ward_max_votes > 1),
+        Number(wardRaces.some((r) => r.seats > 1)),
+        `${where}: ward_max_votes no longer distinguishes mmd from smd`,
+      );
+    }
+  }
+});
+
+// The other half of the claim above: the two stems write no max_votes anywhere, and the
+// races behind them really are single-seat. If a municipality ever runs a multi-seat race
+// under either, this fails here rather than silently losing the number in the export.
+test("mayor and dep_mayor write no max_votes, and never need one", () => {
+  for (const stem of SINGLE_VOTE_STEMS) {
+    assert.ok(
+      !DATA.meta.fields.includes(stem + "_max_votes"),
+      `${stem}_max_votes should not be declared`,
+    );
+    for (const census_id of censusIds) {
+      const mun = DATA.municipalities[census_id];
+      for (const [ward, entry] of Object.entries(mun.wards)) {
+        assert.ok(
+          !(stem + "_max_votes" in entry.fields),
+          `${mun.name} ${ward}: ${stem}_max_votes should not be written`,
+        );
+        for (const race of expectedFor(census_id, stem, ward)) {
+          assert.equal(
+            race.max_votes,
+            1,
+            `${mun.name} ${ward}: ${stem} race is not single-vote`,
+          );
+        }
+      }
+    }
+  }
 });
 
 test("no candidate is lost, and none is invented", () => {
@@ -251,7 +331,7 @@ test("a respondent is served their own ward and no other", () => {
   // Bay is the case that would show it: its own ward's councillor, never the other six
   // wards', which would total 7 marks rather than 1.
   const tb = DATA.municipalities["3558004"];
-  assert.equal(tb.wards["McIntyre"].fields.coun_max_votes, 1);
+  assert.equal(tb.wards["McIntyre"].fields.ward_max_votes, 1);
   assert.equal(tb.wards["McIntyre"].names.coun_ward.length, 1);
 
   // Every ward of every municipality: neither councillor list may carry a name from a
@@ -260,7 +340,7 @@ test("a respondent is served their own ward and no other", () => {
     const races = rawRaces(census_id);
     const mun = DATA.municipalities[census_id];
     for (const [ward, entry] of Object.entries(mun.wards)) {
-      for (const stem of ["coun", "atlarge"]) {
+      for (const stem of ["ward", "atlarge"]) {
         const allowed = new Set(
           races
             .filter((r) => r.stem === stem && (r.at_large || r.ward === ward))
@@ -306,9 +386,8 @@ test("a ward councillor race and an at-large one stay separate contests", () => 
   // the only municipality here that runs both, so it is the only place the two could be
   // conflated — but the stems are split for every municipality, not for this one.
   const tb = DATA.municipalities["3558004"].wards["McIntyre"].fields;
-  assert.equal(tb.coun, 1);
-  assert.equal(tb.coun_max_votes, 1);
-  assert.equal(tb.atlarge, 1);
+  assert.equal(tb.ward, 1);
+  assert.equal(tb.ward_max_votes, 1);
   assert.equal(tb.atlarge_max_votes, 5);
 
   // And the two lists are disjoint everywhere: a name is on one ballot line or the other.
@@ -324,9 +403,9 @@ test("a ward councillor race and an at-large one stay separate contests", () => 
 
 test("at-large councillors are atlarge even with no ward race to collide with", () => {
   // The rule is about scope, not about overlap: Niagara Falls, North Bay and Sarnia elect
-  // councillors only at large, and their lists go to atlarge with `coun` left empty,
+  // councillors only at large, and their lists go to atlarge with `ward` left empty,
   // the same as Thunder Bay's at-large seats. A build that special-cased the collision
-  // would leave these three under `coun` and put the same office in two different columns
+  // would leave these three under `ward` and put the same office in two different columns
   // depending on whether the municipality happened to have wards.
   for (const [census_id, marks, listed] of [
     ["3526043", 8, null], // Niagara Falls
@@ -337,18 +416,17 @@ test("at-large councillors are atlarge even with no ward race to collide with", 
     assert.deepEqual(Object.keys(mun.wards), [AT_LARGE], mun.name);
     const entry = mun.wards[AT_LARGE];
 
-    assert.equal(entry.fields.atlarge, 1, mun.name);
+    assert.notEqual(entry.fields.atlarge_accl, "", mun.name);
     assert.equal(entry.fields.atlarge_max_votes, marks, mun.name);
     if (listed !== null) {
       assert.equal(entry.names.coun_atlarge.length, listed, mun.name);
     }
 
-    // No ward councillor race at all: blank, not 0, and no shape to report.
-    assert.equal(entry.fields.coun, 0, mun.name);
+    // No ward councillor race at all: blank, not 0, and no ward to report.
+    assert.equal(entry.fields.ward, 0, mun.name);
     assert.deepEqual(entry.names.coun_ward, [], mun.name);
-    assert.equal(entry.fields.coun_max_votes, "", mun.name);
-    assert.equal(entry.fields.coun_accl, "", mun.name);
-    assert.equal(entry.fields.smd + entry.fields.mmd, 0, mun.name);
+    assert.equal(entry.fields.ward_max_votes, "", mun.name);
+    assert.equal(entry.fields.ward_accl, "", mun.name);
   }
 });
 
@@ -451,6 +529,7 @@ test("max_votes is summed from max_votes, never from seats", () => {
     const mun = DATA.municipalities[census_id];
     for (const [ward, entry] of Object.entries(mun.wards)) {
       for (const stem of STEMS) {
+        if (SINGLE_VOTE_STEMS.includes(stem)) continue; // writes no max_votes
         const races = expectedFor(census_id, stem, ward);
         const expected =
           races.length === 0 || races.some((r) => r.max_votes === null)
@@ -493,9 +572,10 @@ test("an excluded contest reaches no respondent, in any ward", () => {
         [],
         `${row.csdname} ${ward} still serves the excluded ${row.office}`,
       );
-      assert.equal(entry.fields[stem], 0, `${row.csdname} ${ward} ${stem}`);
-      assert.equal(entry.fields[stem + "_accl"], "");
-      assert.equal(entry.fields[stem + "_max_votes"], "");
+      assert.equal(entry.fields[stem + "_accl"], "", `${row.csdname} ${ward} ${stem}`);
+      if (!SINGLE_VOTE_STEMS.includes(stem)) {
+        assert.equal(entry.fields[stem + "_max_votes"], "");
+      }
     }
 
     // The raw file is where the drop happened, so nothing downstream can reintroduce it.
@@ -512,22 +592,20 @@ test("an excluded contest reaches no respondent, in any ward", () => {
   }
 });
 
-test("the ballot shape flags describe the ward councillor race actually served", () => {
-  // smd and mmd describe the `coun` race only. Whether there is an at-large councillor
-  // race is atlarge's own flag, not a third shape — see the stem split above.
+test("the ward flag describes the ward councillor race actually served", () => {
+  // The flag describes the ward councillor race only. Whether there is an at-large race is
+  // read off atlarge_accl, not from here — see the stem split above.
   for (const census_id of censusIds) {
     const mun = DATA.municipalities[census_id];
     for (const [ward, entry] of Object.entries(mun.wards)) {
-      const races = expectedFor(census_id, "coun", ward);
+      const races = expectedFor(census_id, "ward", ward);
       const f = entry.fields;
-      assert.equal(f.smd, Number(races.some((r) => r.seats === 1)), mun.name + " " + ward);
-      assert.equal(f.mmd, Number(races.some((r) => r.seats > 1)), mun.name + " " + ward);
-      assert.ok(f.smd + f.mmd <= 1, mun.name + " " + ward + ": two shapes at once");
+      assert.equal(f.ward, Number(races.length > 0), mun.name + " " + ward);
 
       // Every respondent has a councillor ballot of some kind: their ward's, the
       // municipality's at-large one, or both.
       assert.ok(
-        f.coun + f.atlarge >= 1 || ward === AT_LARGE,
+        f.ward === 1 || f.atlarge_accl !== "" || ward === AT_LARGE,
         mun.name + " " + ward + ": no councillor race at all",
       );
     }
@@ -535,19 +613,22 @@ test("the ballot shape flags describe the ward councillor race actually served",
 });
 
 test("Chatham-Kent's two ward tiers differ, and Thunder Bay runs both races", () => {
+  // The two tiers are told apart by ward_max_votes now that mmd is gone: six wards elect
+  // two councillors on one ballot, the other two elect one.
   const ck = DATA.municipalities["3536020"].wards;
-  assert.equal(ck["Ward 1 - South West Kent"].fields.mmd, 1);
-  assert.equal(ck["Ward 1 - South West Kent"].fields.smd, 0);
-  assert.equal(ck["Ward 3 - North East Kent"].fields.smd, 1);
-  assert.equal(ck["Ward 3 - North East Kent"].fields.mmd, 0);
+  assert.equal(ck["Ward 1 - South West Kent"].fields.ward_max_votes, 2);
+  assert.equal(ck["Ward 3 - North East Kent"].fields.ward_max_votes, 1);
+  assert.equal(ck["Ward 1 - South West Kent"].fields.ward, 1);
+  assert.equal(ck["Ward 3 - North East Kent"].fields.ward, 1);
 
   const tb = DATA.municipalities["3558004"].wards["McIntyre"].fields;
-  assert.equal(tb.smd, 1);
-  assert.equal(tb.atlarge, 1);
+  assert.equal(tb.ward, 1);
+  assert.equal(tb.ward_max_votes, 1);
+  assert.notEqual(tb.atlarge_accl, "");
   // Acclamation is per contest now, which is the point of splitting them: this ward's
   // councillor is in unopposed, while the at-large race is contested. Merged, the ward
   // seat's acclamation was invisible — the combined field read 0.
-  assert.equal(tb.coun_accl, 1);
+  assert.equal(tb.ward_accl, 1);
   assert.equal(tb.atlarge_accl, 0);
 });
 
