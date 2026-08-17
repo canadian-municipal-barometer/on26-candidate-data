@@ -223,6 +223,13 @@ test("every ward entry carries the same scalar fields", () => {
 // the export and would suggest it might not be. See SINGLE_VOTE_STEMS in the build script.
 const SINGLE_VOTE_STEMS = ["mayor", "dep_mayor"];
 
+// The stems that carry a bare `<stem>` served-flag as well as their scalars. The three
+// councillor races, because the flow picks between them per respondent and a piped
+// `__js_atlarge` says what it means where `__js_atlarge_accl != ""` needs the README. Not
+// mayor, which every municipality elects, and not dep_mayor, which is one question rather
+// than one of a set. See SERVED_FLAG_STEMS in the build script.
+const SERVED_FLAG_STEMS = ["ward", "atlarge", "reg_coun"];
+
 test("every scalar field is named for its stem", () => {
   const stems = STEMS;
   const expected = [
@@ -230,22 +237,20 @@ test("every scalar field is named for its stem", () => {
     ...stems
       .filter((stem) => !SINGLE_VOTE_STEMS.includes(stem))
       .map((stem) => stem + "_max_votes"),
-    // the one bare served-flag kept, completing the ward stem's family
-    "ward",
+    // the bare served-flags, each completing its own stem's family
+    ...SERVED_FLAG_STEMS,
   ].sort();
 
   assert.deepEqual([...DATA.meta.fields].sort(), expected);
 });
 
 // `coun`, `smd` and `mmd` were dropped once the flow moved to filtering on the accl and
-// max_votes families directly, along with the bare served-flags of every stem but `ward`.
-// Each was exactly derivable from what remains, and a second spelling of one fact is a
-// second thing to keep in step. This pins the derivations that replaced them, so a flow
-// written against them stays correct: if any stops holding, the field was carrying
-// something after all.
-//
-// `ward` is the one served-flag kept, so it is the one stem exempt from the first check.
-test("the dropped flags are still derivable from what remains", () => {
+// max_votes families directly, and so were the bare served-flags — until the three
+// councillor ones came back for the flow's sake. Each was exactly derivable from what
+// remains, and that is the point of this test either way: a flag that is kept has to keep
+// agreeing with the accl it duplicates, or the flow and the export start disagreeing about
+// who was served what, and a flag that is gone has to stay gone.
+test("the served-flags agree with the accl family, and the dropped flags are derivable", () => {
   for (const census_id of censusIds) {
     const mun = DATA.municipalities[census_id];
     for (const [ward, entry] of Object.entries(mun.wards)) {
@@ -253,11 +258,13 @@ test("the dropped flags are still derivable from what remains", () => {
       const where = `${mun.name} ${ward}`;
 
       for (const stem of STEMS) {
-        if (stem !== "ward") {
+        // What `<stem>` says, and what a non-blank `<stem>_accl` says: served the race.
+        const served = expectedFor(census_id, stem, ward).length > 0;
+        if (SERVED_FLAG_STEMS.includes(stem)) {
+          assert.equal(f[stem], Number(served), `${where}: ${stem} flag`);
+        } else {
           assert.ok(!(stem in f), `${where}: bare ${stem} flag should be gone`);
         }
-        // What `<stem>` used to say: served the race at all.
-        const served = expectedFor(census_id, stem, ward).length > 0;
         assert.equal(
           f[stem + "_accl"] !== "",
           served,
@@ -268,9 +275,9 @@ test("the dropped flags are still derivable from what remains", () => {
       for (const gone of ["coun", "coun_accl", "coun_max_votes", "smd", "mmd"]) {
         assert.ok(!(gone in f), `${where}: ${gone} should be gone`);
       }
-      // What `smd`/`mmd` used to say: the ward race's shape.
+      // What `smd`/`mmd` used to say: the ward race's shape. The `ward` flag itself is
+      // checked in the loop above, with the other two.
       const wardRaces = expectedFor(census_id, "ward", ward);
-      assert.equal(f.ward, Number(wardRaces.length > 0), `${where}: ward`);
       assert.equal(
         f.ward_max_votes === "" ? 0 : Number(f.ward_max_votes > 1),
         Number(wardRaces.some((r) => r.seats > 1)),

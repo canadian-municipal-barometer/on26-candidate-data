@@ -10,16 +10,16 @@
 // under the municipality and ward that produce it, so the survey reads one entry and
 // writes it out. See meta.schema below, and the build script for why it is shaped so.
 //
-// Version 7, built 2026-08-14, candidate lists retrieved 2026-08-11.
+// Version 9, built 2026-08-17, candidate lists retrieved 2026-08-11.
 window.CMB_CANDIDATES = {
   "meta": {
-    "version": "7",
-    "built": "2026-08-14",
+    "version": "9",
+    "built": "2026-08-17",
     "retrieved": "2026-08-11",
     "generated_by": "scripts/build-candidates-js.py - do not hand-edit",
     "municipalities": 38,
     "candidates": 1447,
-    "stems": {"mayor": "mayor", "coun": "coun_ward", "atlarge": "coun_atlarge", "reg_coun": "coun_reg", "dep_mayor": "dep_mayor"},
+    "stems": {"mayor": "mayor", "ward": "coun_ward", "atlarge": "coun_atlarge", "reg_coun": "coun_reg", "dep_mayor": "dep_mayor"},
     "max_names": {
       "mayor": 37,
       "coun_ward": 16,
@@ -27,9 +27,9 @@ window.CMB_CANDIDATES = {
       "coun_reg": 13,
       "dep_mayor": 3
     },
-    "fields": ["atlarge_accl", "atlarge_max_votes", "coun_accl", "coun_max_votes", "dep_mayor_accl", "mayor_accl", "reg_coun_accl", "reg_coun_max_votes", "ward"],
+    "fields": ["atlarge", "atlarge_accl", "atlarge_max_votes", "dep_mayor_accl", "mayor_accl", "reg_coun", "reg_coun_accl", "reg_coun_max_votes", "ward", "ward_accl", "ward_max_votes"],
     "provisional": "Ontario nominations for the 2026 cycle close 2026-08-21 at 14:00, and the clerk's certified list follows by 16:00 on 2026-08-24. Every list here is an unofficial snapshot and is therefore incomplete - candidates may still file. Each municipality's collection date is its notes.retrieved: 2026-08-11 for all but North Bay and New Tecumseth, which joined the study on 2026-08-12. Markham, Vaughan and Waterloo each had only one mayoral candidate on file. Re-collect after certification for a final list.",
-    "schema": "A lookup table, not a description of the elections: municipalities[census_id].wards[ward label|\"99\"] holds everything the survey writes for a respondent who gave that municipality and ward. `names` is the five candidate lists, \"LAST, First\", already merged across the races they are served and in localeCompare order, keyed by the field the survey writes them out as: mayor1.., coun_ward1.., coun_atlarge1.., coun_reg1.., dep_mayor1... One list is one contest - the ward councillor race and the at-large one are never merged, since their candidates, max_votes and acclamation are all their own. `fields` is every scalar, already final - a number, or \"\" where there is nothing to say - and is keyed by stem instead: `<stem>` (served this race at all) and `<stem>_accl` for each of mayor, coun, atlarge, reg_coun, dep_mayor, plus `<stem>_max_votes` for coun, atlarge and reg_coun only - mayor and dep_mayor are single-seat everywhere, so a max_votes for them would read 1 in every row. Plus smd/mmd for the ward councillor race's shape. meta.stems maps one to the other. Every ward entry carries the same `fields` keys. \"99\" is the entry for a respondent with no ward, and the only entry for a municipality that elects at large.",
+    "schema": "A lookup table, not a description of the elections: municipalities[census_id].wards[ward label|\"99\"] holds everything the survey writes for a respondent who gave that municipality and ward. `names` is the five candidate lists, \"LAST, First\", already merged across the races they are served and in localeCompare order, keyed by the field the survey writes them out as: mayor1.., coun_ward1.., coun_atlarge1.., coun_reg1.., dep_mayor1... One list is one contest - the ward councillor race and the at-large one are never merged, since their candidates, max_votes and acclamation are all their own. `fields` is every scalar, already final - a number, or \"\" where there is nothing to say - and is keyed by stem instead: `<stem>_accl` for each of mayor, ward, atlarge, reg_coun, dep_mayor, plus `<stem>_max_votes` for ward, atlarge and reg_coun only - mayor and dep_mayor are single-seat everywhere, so a max_votes for them would read 1 in every row. A blank in either family means the respondent has no such race, and is what the survey flow filters the question on; a served race never writes one, since an unverified seat count aborts the build. The three councillor stems - ward, atlarge, reg_coun - each also carry a bare `<stem>` served-flag: 1 where the respondent is served that race, 0 where they are not, which is the same fact as a non-blank accl in a form a survey flow can pipe. mayor and dep_mayor have no such flag. meta.stems maps one to the other, and is worth reading rather than guessing - the ward stem's candidate list is coun_ward1.., not ward1... Every ward entry carries the same `fields` keys. \"99\" is the entry for a respondent with no ward, and the only entry for a municipality that elects at large.",
     "max_names_note": "The longest list each field family can reach, and the municipality that sets it: mayor 37 (Toronto), coun_ward 16 (Mississauga Ward 7), coun_atlarge 15 (Sarnia), coun_reg 13 (Sarnia), dep_mayor 3 (Innisfil). The survey flow declares that many embedded fields per family by hand, so adding a municipality with a longer list means adding fields to the flow."
   },
   "municipalities": {
@@ -44,7 +44,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 10 Gloucester-Southgate": {
           "names": {
@@ -54,7 +54,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 11 Beacon Hill- Cyrville": {
           "names": {
@@ -64,7 +64,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 12 Rideau-Vanier": {
           "names": {
@@ -74,7 +74,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 13 Rideau-Rockcliffe": {
           "names": {
@@ -84,7 +84,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 14 Somerset": {
           "names": {
@@ -94,7 +94,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 15 Kitchissippi": {
           "names": {
@@ -104,7 +104,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 16 River": {
           "names": {
@@ -114,7 +114,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 17 Capital": {
           "names": {
@@ -124,7 +124,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 18 Alta Vista": {
           "names": {
@@ -134,7 +134,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 19 Orl\u00e9ans South- Navan": {
           "names": {
@@ -144,7 +144,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2 Orl\u00e9ans West-Innes": {
           "names": {
@@ -154,7 +154,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 20 Osgoode": {
           "names": {
@@ -164,7 +164,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 21 Rideau-Jock": {
           "names": {
@@ -174,7 +174,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 22 Riverside South-Findlay Creek": {
           "names": {
@@ -184,7 +184,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 23 Kanata South": {
           "names": {
@@ -194,7 +194,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 24 Barrhaven East": {
           "names": {
@@ -204,7 +204,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3 Barrhaven West": {
           "names": {
@@ -214,7 +214,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4 Kanata North": {
           "names": {
@@ -224,7 +224,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5 West Carleton": {
           "names": {
@@ -234,7 +234,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6 Stittsville": {
           "names": {
@@ -244,7 +244,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 7 Bay": {
           "names": {
@@ -254,7 +254,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 8 College": {
           "names": {
@@ -264,7 +264,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 9 Knoxdale-Merivale": {
           "names": {
@@ -274,7 +274,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -284,7 +284,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -299,7 +299,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "District 10 - Sydenham": {
           "names": {
@@ -309,7 +309,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "District 11 - King's Town": {
           "names": {
@@ -319,7 +319,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "District 12 - Pittsburgh": {
           "names": {
@@ -329,7 +329,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "District 2 - Loyalist-Cataraqui": {
           "names": {
@@ -339,7 +339,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "District 3 - Collins-Bayridge": {
           "names": {
@@ -349,7 +349,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "District 4 - Lakeside": {
           "names": {
@@ -359,7 +359,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "District 5 - Portsmouth": {
           "names": {
@@ -369,7 +369,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "District 6 - Trillium": {
           "names": {
@@ -379,7 +379,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "District 7 - Kingscourt-Rideau": {
           "names": {
@@ -389,7 +389,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "District 8 - Meadowbrook-Strathcona": {
           "names": {
@@ -399,7 +399,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "District 9 - Williamsville": {
           "names": {
@@ -409,7 +409,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -419,7 +419,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -434,7 +434,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Monaghan": {
           "names": {
@@ -444,7 +444,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Northcrest": {
           "names": {
@@ -454,7 +454,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Otonabee": {
           "names": {
@@ -464,7 +464,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Town": {
           "names": {
@@ -474,7 +474,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -484,7 +484,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -499,7 +499,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["BRENNER, Maurice"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 1, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 1, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -509,7 +509,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["COOK, Linda", "VAN ROOY, Nancy"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -519,7 +519,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["PICKLES, David"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 1, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 1, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -529,7 +529,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -544,7 +544,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["MALIK, Aqsa Asif", "MORIN, Rob Tyler"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -554,7 +554,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["ALI, Asad", "LEE, Sterling", "MALIK, M. Asif", "PARANIVASAGAM, Ranjith"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -564,7 +564,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["ASHTON, Stephanie", "CHOPOWICK, Rob", "EDWARDS, Donna", "MACDONALD, Lynn", "MASSIAH, Errol", "PAPAS, Angie"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -574,7 +574,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -589,7 +589,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["HECKBERT, Melissa", "LUNDQUIST, Niki"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "East Ward 4": {
           "names": {
@@ -599,7 +599,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["SHAHID, Maleeha", "YAMADA, Steve"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "North Ward 1": {
           "names": {
@@ -609,7 +609,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["BROWN, Tracy", "MOHHY-UD-DIN, Ikramah", "MULCAHY, Rhonda"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "West Ward 2": {
           "names": {
@@ -619,7 +619,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["LEWIS, Debbie", "NEWMAN, Deidre"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -629,7 +629,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -644,7 +644,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["BIANCANIELLO, Christopher", "FRANSEEN, Martin"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -654,7 +654,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["ANDERSON, Cameron", "MARKS, Bradley"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -664,7 +664,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAPMAN, Robert (Bob)"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 1, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 1, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -674,7 +674,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["DAVIS, Jeff", "KERR, Rick", "O'DONNELL, Jack", "SANDERS, Doug"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -684,7 +684,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["MCKINNON, Kristen", "NICHOLSON, Brian Charles"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -694,7 +694,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -709,7 +709,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["ANDERSON, Granville", "WHITEFIELD, Melissa"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -719,7 +719,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["ANDERSON, Granville", "WHITEFIELD, Melissa"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -729,7 +729,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["NAIR, Kannan", "TAYLOR, Kevin"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -739,7 +739,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["NAIR, Kannan", "TAYLOR, Kevin"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -749,7 +749,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -764,7 +764,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["FERRI, Mario", "GORDON, Fitz-Roy", "JACKSON, Linda D.", "NASCIMBEN, Alex", "RACCO, Mario G.", "ROSATI, Gino"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -774,7 +774,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["FERRI, Mario", "GORDON, Fitz-Roy", "JACKSON, Linda D.", "NASCIMBEN, Alex", "RACCO, Mario G.", "ROSATI, Gino"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -784,7 +784,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["FERRI, Mario", "GORDON, Fitz-Roy", "JACKSON, Linda D.", "NASCIMBEN, Alex", "RACCO, Mario G.", "ROSATI, Gino"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -794,7 +794,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["FERRI, Mario", "GORDON, Fitz-Roy", "JACKSON, Linda D.", "NASCIMBEN, Alex", "RACCO, Mario G.", "ROSATI, Gino"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -804,7 +804,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["FERRI, Mario", "GORDON, Fitz-Roy", "JACKSON, Linda D.", "NASCIMBEN, Alex", "RACCO, Mario G.", "ROSATI, Gino"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -814,7 +814,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["FERRI, Mario", "GORDON, Fitz-Roy", "JACKSON, Linda D.", "NASCIMBEN, Alex", "RACCO, Mario G.", "ROSATI, Gino"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 1, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": ""}
         }
       }
     },
@@ -829,7 +829,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAN, Kristian", "CHIANG, Paul", "HO, Alan", "JONES, Jim", "LI, Joe", "TAY, Joe"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -839,7 +839,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAN, Kristian", "CHIANG, Paul", "HO, Alan", "JONES, Jim", "LI, Joe", "TAY, Joe"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -849,7 +849,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAN, Kristian", "CHIANG, Paul", "HO, Alan", "JONES, Jim", "LI, Joe", "TAY, Joe"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -859,7 +859,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAN, Kristian", "CHIANG, Paul", "HO, Alan", "JONES, Jim", "LI, Joe", "TAY, Joe"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -869,7 +869,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAN, Kristian", "CHIANG, Paul", "HO, Alan", "JONES, Jim", "LI, Joe", "TAY, Joe"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -879,7 +879,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAN, Kristian", "CHIANG, Paul", "HO, Alan", "JONES, Jim", "LI, Joe", "TAY, Joe"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": ""}
         },
         "Ward 7": {
           "names": {
@@ -889,7 +889,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAN, Kristian", "CHIANG, Paul", "HO, Alan", "JONES, Jim", "LI, Joe", "TAY, Joe"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": ""}
         },
         "Ward 8": {
           "names": {
@@ -899,7 +899,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAN, Kristian", "CHIANG, Paul", "HO, Alan", "JONES, Jim", "LI, Joe", "TAY, Joe"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -909,7 +909,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAN, Kristian", "CHIANG, Paul", "HO, Alan", "JONES, Jim", "LI, Joe", "TAY, Joe"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 1, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": ""}
         }
       }
     },
@@ -924,7 +924,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAN, Godwin", "COLETTA, Marco", "DIPAOLA, Joe"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 2, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 2, "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -934,7 +934,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAN, Godwin", "COLETTA, Marco", "DIPAOLA, Joe"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 2, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 2, "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -944,7 +944,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAN, Godwin", "COLETTA, Marco", "DIPAOLA, Joe"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 2, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 2, "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -954,7 +954,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAN, Godwin", "COLETTA, Marco", "DIPAOLA, Joe"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 2, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 2, "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -964,7 +964,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAN, Godwin", "COLETTA, Marco", "DIPAOLA, Joe"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 2, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 2, "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -974,7 +974,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAN, Godwin", "COLETTA, Marco", "DIPAOLA, Joe"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 2, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 2, "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -984,7 +984,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAN, Godwin", "COLETTA, Marco", "DIPAOLA, Joe"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 2, "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 2, "dep_mayor_accl": ""}
         }
       }
     },
@@ -999,7 +999,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -1009,7 +1009,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -1019,7 +1019,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -1029,7 +1029,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -1039,7 +1039,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -1049,7 +1049,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -1059,7 +1059,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -1074,7 +1074,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["DAVISON, Naomi", "FARDY, Geoff"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -1084,7 +1084,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["DAVISON, Naomi", "FARDY, Geoff"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -1094,7 +1094,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["DAVISON, Naomi", "FARDY, Geoff"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -1104,7 +1104,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["DAVISON, Naomi", "FARDY, Geoff"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -1114,7 +1114,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["DAVISON, Naomi", "FARDY, Geoff"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -1124,7 +1124,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["DAVISON, Naomi", "FARDY, Geoff"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         }
       }
     },
@@ -1139,7 +1139,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 10": {
           "names": {
@@ -1149,7 +1149,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 11": {
           "names": {
@@ -1159,7 +1159,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 12": {
           "names": {
@@ -1169,7 +1169,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 13": {
           "names": {
@@ -1179,7 +1179,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 14": {
           "names": {
@@ -1189,7 +1189,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 15": {
           "names": {
@@ -1199,7 +1199,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 16": {
           "names": {
@@ -1209,7 +1209,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 17": {
           "names": {
@@ -1219,7 +1219,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 18": {
           "names": {
@@ -1229,7 +1229,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 19": {
           "names": {
@@ -1239,7 +1239,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -1249,7 +1249,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 20": {
           "names": {
@@ -1259,7 +1259,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 21": {
           "names": {
@@ -1269,7 +1269,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 22": {
           "names": {
@@ -1279,7 +1279,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 23": {
           "names": {
@@ -1289,7 +1289,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 24": {
           "names": {
@@ -1299,7 +1299,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 25": {
           "names": {
@@ -1309,7 +1309,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -1319,7 +1319,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -1329,7 +1329,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -1339,7 +1339,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -1349,7 +1349,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 7": {
           "names": {
@@ -1359,7 +1359,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 8": {
           "names": {
@@ -1369,7 +1369,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 9": {
           "names": {
@@ -1379,7 +1379,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -1389,7 +1389,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -1404,7 +1404,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 10": {
           "names": {
@@ -1414,7 +1414,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 11": {
           "names": {
@@ -1424,7 +1424,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -1434,7 +1434,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -1444,7 +1444,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -1454,7 +1454,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -1464,7 +1464,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -1474,7 +1474,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 7": {
           "names": {
@@ -1484,7 +1484,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 8": {
           "names": {
@@ -1494,7 +1494,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 9": {
           "names": {
@@ -1504,7 +1504,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -1514,7 +1514,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -1529,7 +1529,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["LEE, Steven", "ORUGHU, Idris", "VICENTE, Paul"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 10": {
           "names": {
@@ -1539,7 +1539,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["DANCY, Michael", "DHILLON, Gurpreet Singh", "JOHAL, Satpaul Singh", "MADHU, Nirmala Devi", "SANGHA, Sukhman"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -1549,7 +1549,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["DOGRA, Romy", "GILL, Prempal", "PALLESCHI, Michael Paul", "SHARMA, Parth", "SRAN, Ajaib Singh", "TANDON, Sameer"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -1559,7 +1559,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["GOEL, Sandeep Kumar", "MEDEIROS, Martin"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -1569,7 +1569,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["GOEL, Sandeep Kumar", "MEDEIROS, Martin"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -1579,7 +1579,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["LEE, Steven", "ORUGHU, Idris", "VICENTE, Paul"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -1589,7 +1589,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["DOGRA, Romy", "GILL, Prempal", "PALLESCHI, Michael Paul", "SHARMA, Parth", "SRAN, Ajaib Singh", "TANDON, Sameer"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 7": {
           "names": {
@@ -1599,7 +1599,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["DHILLON, Ripudaman Singh", "FORTINI, Pat", "SAHAJPAL, Anil", "SHARMA, Aman", "SORANNO, Christopher", "VYAS, Vedaant"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 8": {
           "names": {
@@ -1609,7 +1609,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["DHILLON, Ripudaman Singh", "FORTINI, Pat", "SAHAJPAL, Anil", "SHARMA, Aman", "SORANNO, Christopher", "VYAS, Vedaant"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 9": {
           "names": {
@@ -1619,7 +1619,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["DANCY, Michael", "DHILLON, Gurpreet Singh", "JOHAL, Satpaul Singh", "MADHU, Nirmala Devi", "SANGHA, Sukhman"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -1629,7 +1629,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -1644,7 +1644,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -1654,7 +1654,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -1664,7 +1664,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -1674,7 +1674,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -1684,7 +1684,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -1694,7 +1694,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -1704,7 +1704,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -1719,7 +1719,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["MCNEICE, Jonathan"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 1, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 1, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -1729,7 +1729,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["JORDAN, Desmond", "PERKIN, Sarah", "SAUNDERS, Stacey"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -1739,7 +1739,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["HASLETT-THEALL, Janet"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 1, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 1, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -1749,7 +1749,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHAUDRY, Kashif", "CHONG, Suzan", "HUTCHISON, Lee", "SHAMIM, Farah"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -1759,7 +1759,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["GRANT, Mackenzie", "JOHNSTON, Orla", "REID, Michael"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -1769,7 +1769,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["ADAMS, Tom", "AL-MUDARIS, Zena"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 7": {
           "names": {
@@ -1779,7 +1779,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["DARAR, Gaganpreet", "NANDA, Nav", "SINAWAN, Riaz Ahmad", "WALIA, Vick"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -1789,7 +1789,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -1804,7 +1804,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -1814,7 +1814,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -1824,7 +1824,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -1834,7 +1834,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -1844,7 +1844,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -1854,7 +1854,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -1864,7 +1864,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -1879,7 +1879,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["BEST, Colin"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 1, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 1, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -1889,7 +1889,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["CHALLINOR, John", "NAIDOO HARRIS, Galen", "NAQVI, Syed", "PAUDEL, Yagya"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -1899,7 +1899,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["DI LORENZO, Rick", "IJAZ, Sammy", "IQBAL, Haris", "ZAFAR, Salman"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -1909,7 +1909,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["ATIBA, Adejisola", "KHAN, Khurshid", "MARSHALL, Sarah", "RAZA, Syed", "ROSHDY, Youssef"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 1, "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -1919,7 +1919,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -1934,7 +1934,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 10": {
           "names": {
@@ -1944,7 +1944,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 11": {
           "names": {
@@ -1954,7 +1954,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 12": {
           "names": {
@@ -1964,7 +1964,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 13": {
           "names": {
@@ -1974,7 +1974,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 14": {
           "names": {
@@ -1984,7 +1984,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 15": {
           "names": {
@@ -1994,7 +1994,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -2004,7 +2004,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -2014,7 +2014,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -2024,7 +2024,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -2034,7 +2034,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -2044,7 +2044,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 7": {
           "names": {
@@ -2054,7 +2054,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 8": {
           "names": {
@@ -2064,7 +2064,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 9": {
           "names": {
@@ -2074,7 +2074,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -2084,7 +2084,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -2099,7 +2099,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": 0, "atlarge_max_votes": 8, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 1, "atlarge_accl": 0, "atlarge_max_votes": 8, "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -2114,7 +2114,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -2124,7 +2124,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -2134,7 +2134,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -2144,7 +2144,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -2154,7 +2154,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -2164,7 +2164,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -2174,7 +2174,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -2189,7 +2189,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -2199,7 +2199,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -2209,7 +2209,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -2219,7 +2219,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -2229,7 +2229,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -2239,7 +2239,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 7": {
           "names": {
@@ -2249,7 +2249,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -2259,7 +2259,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -2274,7 +2274,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -2284,7 +2284,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -2294,7 +2294,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -2304,7 +2304,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -2314,7 +2314,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -2324,7 +2324,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -2339,7 +2339,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -2349,7 +2349,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -2359,7 +2359,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -2369,7 +2369,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -2379,7 +2379,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -2389,7 +2389,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 7": {
           "names": {
@@ -2399,7 +2399,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 8": {
           "names": {
@@ -2409,7 +2409,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -2419,7 +2419,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -2434,7 +2434,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 10": {
           "names": {
@@ -2444,7 +2444,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -2454,7 +2454,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -2464,7 +2464,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -2474,7 +2474,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -2484,7 +2484,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -2494,7 +2494,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 7": {
           "names": {
@@ -2504,7 +2504,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 8": {
           "names": {
@@ -2514,7 +2514,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 9": {
           "names": {
@@ -2524,7 +2524,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -2534,7 +2534,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -2549,7 +2549,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -2559,7 +2559,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -2569,7 +2569,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -2579,7 +2579,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -2589,7 +2589,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -2599,7 +2599,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 7": {
           "names": {
@@ -2609,7 +2609,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 1, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -2619,7 +2619,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 1, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 1, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -2634,7 +2634,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2 - South East Kent": {
           "names": {
@@ -2644,7 +2644,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3 - North East Kent": {
           "names": {
@@ -2654,7 +2654,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4 - North West Kent": {
           "names": {
@@ -2664,7 +2664,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5 - Wallaceburg & Area": {
           "names": {
@@ -2674,7 +2674,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6 - North West Chatham": {
           "names": {
@@ -2684,7 +2684,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 7 - North East Chatham": {
           "names": {
@@ -2694,7 +2694,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 8 - South Chatham": {
           "names": {
@@ -2704,7 +2704,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 2, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 2, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -2714,7 +2714,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -2729,7 +2729,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 10": {
           "names": {
@@ -2739,7 +2739,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -2749,7 +2749,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -2759,7 +2759,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -2769,7 +2769,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -2779,7 +2779,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -2789,7 +2789,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 7": {
           "names": {
@@ -2799,7 +2799,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 8": {
           "names": {
@@ -2809,7 +2809,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 9": {
           "names": {
@@ -2819,7 +2819,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -2829,7 +2829,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -2844,7 +2844,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": ["ANNING, Bill", "BIRD, Margaret", "BRUZIEWICZ, Andy", "COUTU, Patrick", "FAZIO, Mario", "GOODMAN, Peter", "GRESHAM, Ed", "KILNER, Adam", "LAMORE, Mark", "RICHARDSON, John", "VANDENBERG, George", "WHITE, Brian", "WIERSMA, Paul"],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": 0, "atlarge_max_votes": 4, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 1, "atlarge_accl": 0, "atlarge_max_votes": 4, "reg_coun": 1, "reg_coun_accl": 0, "reg_coun_max_votes": 4, "dep_mayor_accl": ""}
         }
       }
     },
@@ -2859,7 +2859,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 10": {
           "names": {
@@ -2869,7 +2869,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 11": {
           "names": {
@@ -2879,7 +2879,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 12": {
           "names": {
@@ -2889,7 +2889,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 13": {
           "names": {
@@ -2899,7 +2899,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 14": {
           "names": {
@@ -2909,7 +2909,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -2919,7 +2919,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -2929,7 +2929,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -2939,7 +2939,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -2949,7 +2949,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -2959,7 +2959,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 7": {
           "names": {
@@ -2969,7 +2969,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 8": {
           "names": {
@@ -2979,7 +2979,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 9": {
           "names": {
@@ -2989,7 +2989,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -2999,7 +2999,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -3014,7 +3014,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": ["BISS, Marc", "DOLLMAIER, Steven"]
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0, "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0}
         },
         "Ward 2": {
           "names": {
@@ -3024,7 +3024,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": ["BISS, Marc", "DOLLMAIER, Steven"]
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0, "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0}
         },
         "Ward 3": {
           "names": {
@@ -3034,7 +3034,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": ["BISS, Marc", "DOLLMAIER, Steven"]
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0, "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0}
         },
         "Ward 4": {
           "names": {
@@ -3044,7 +3044,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": ["BISS, Marc", "DOLLMAIER, Steven"]
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0, "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0}
         },
         "Ward 5": {
           "names": {
@@ -3054,7 +3054,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": ["BISS, Marc", "DOLLMAIER, Steven"]
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0, "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0}
         },
         "Ward 6": {
           "names": {
@@ -3064,7 +3064,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": ["BISS, Marc", "DOLLMAIER, Steven"]
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0, "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0}
         },
         "Ward 7": {
           "names": {
@@ -3074,7 +3074,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": ["BISS, Marc", "DOLLMAIER, Steven"]
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0, "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0}
         },
         "99": {
           "names": {
@@ -3084,7 +3084,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": ["BISS, Marc", "DOLLMAIER, Steven"]
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0, "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0}
         }
       }
     },
@@ -3099,7 +3099,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": ["COCKBURN, Dave", "LETICHEVER, Fillip", "NICOL, Rob"]
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0, "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0}
         },
         "Ward 2": {
           "names": {
@@ -3109,7 +3109,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": ["COCKBURN, Dave", "LETICHEVER, Fillip", "NICOL, Rob"]
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0, "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0}
         },
         "Ward 3": {
           "names": {
@@ -3119,7 +3119,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": ["COCKBURN, Dave", "LETICHEVER, Fillip", "NICOL, Rob"]
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0, "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0}
         },
         "Ward 4": {
           "names": {
@@ -3129,7 +3129,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": ["COCKBURN, Dave", "LETICHEVER, Fillip", "NICOL, Rob"]
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0, "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0}
         },
         "Ward 5": {
           "names": {
@@ -3139,7 +3139,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": ["COCKBURN, Dave", "LETICHEVER, Fillip", "NICOL, Rob"]
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0, "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0}
         },
         "Ward 6": {
           "names": {
@@ -3149,7 +3149,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": ["COCKBURN, Dave", "LETICHEVER, Fillip", "NICOL, Rob"]
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0, "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0}
         },
         "Ward 7": {
           "names": {
@@ -3159,7 +3159,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": ["COCKBURN, Dave", "LETICHEVER, Fillip", "NICOL, Rob"]
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0, "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0}
         },
         "99": {
           "names": {
@@ -3169,7 +3169,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": ["COCKBURN, Dave", "LETICHEVER, Fillip", "NICOL, Rob"]
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0, "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": 0}
         }
       }
     },
@@ -3184,7 +3184,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 10": {
           "names": {
@@ -3194,7 +3194,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -3204,7 +3204,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -3214,7 +3214,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -3224,7 +3224,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -3234,7 +3234,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -3244,7 +3244,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 7": {
           "names": {
@@ -3254,7 +3254,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 8": {
           "names": {
@@ -3264,7 +3264,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 9": {
           "names": {
@@ -3274,7 +3274,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -3284,7 +3284,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -3299,7 +3299,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": 0, "atlarge_max_votes": 10, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 1, "atlarge_accl": 0, "atlarge_max_votes": 10, "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -3314,7 +3314,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 10": {
           "names": {
@@ -3324,7 +3324,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 11": {
           "names": {
@@ -3334,7 +3334,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 12": {
           "names": {
@@ -3344,7 +3344,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 2": {
           "names": {
@@ -3354,7 +3354,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 3": {
           "names": {
@@ -3364,7 +3364,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 4": {
           "names": {
@@ -3374,7 +3374,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 5": {
           "names": {
@@ -3384,7 +3384,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 6": {
           "names": {
@@ -3394,7 +3394,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 7": {
           "names": {
@@ -3404,7 +3404,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 8": {
           "names": {
@@ -3414,7 +3414,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Ward 9": {
           "names": {
@@ -3424,7 +3424,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -3434,7 +3434,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 0, "atlarge_accl": "", "atlarge_max_votes": "", "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     },
@@ -3449,7 +3449,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": 0, "atlarge_max_votes": 5, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 1, "atlarge_accl": 0, "atlarge_max_votes": 5, "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "McIntyre": {
           "names": {
@@ -3459,7 +3459,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": 0, "atlarge_max_votes": 5, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 1, "atlarge_accl": 0, "atlarge_max_votes": 5, "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "McKellar": {
           "names": {
@@ -3469,7 +3469,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": 0, "atlarge_max_votes": 5, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 1, "atlarge_accl": 0, "atlarge_max_votes": 5, "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Neebing": {
           "names": {
@@ -3479,7 +3479,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": 0, "atlarge_max_votes": 5, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 1, "atlarge_accl": 0, "atlarge_max_votes": 5, "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Northwood": {
           "names": {
@@ -3489,7 +3489,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 0, "coun_max_votes": 1, "atlarge_accl": 0, "atlarge_max_votes": 5, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 0, "ward_max_votes": 1, "atlarge": 1, "atlarge_accl": 0, "atlarge_max_votes": 5, "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Red River": {
           "names": {
@@ -3499,7 +3499,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": 0, "atlarge_max_votes": 5, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 1, "atlarge_accl": 0, "atlarge_max_votes": 5, "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "Westfort": {
           "names": {
@@ -3509,7 +3509,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": 1, "coun_max_votes": 1, "atlarge_accl": 0, "atlarge_max_votes": 5, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 1}
+          "fields": {"mayor_accl": 0, "ward": 1, "ward_accl": 1, "ward_max_votes": 1, "atlarge": 1, "atlarge_accl": 0, "atlarge_max_votes": 5, "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         },
         "99": {
           "names": {
@@ -3519,7 +3519,7 @@ window.CMB_CANDIDATES = {
             "coun_reg": [],
             "dep_mayor": []
           },
-          "fields": {"mayor_accl": 0, "coun_accl": "", "coun_max_votes": "", "atlarge_accl": 0, "atlarge_max_votes": 5, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": "", "ward": 0}
+          "fields": {"mayor_accl": 0, "ward": 0, "ward_accl": "", "ward_max_votes": "", "atlarge": 1, "atlarge_accl": 0, "atlarge_max_votes": 5, "reg_coun": 0, "reg_coun_accl": "", "reg_coun_max_votes": "", "dep_mayor_accl": ""}
         }
       }
     }
