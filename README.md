@@ -19,25 +19,39 @@ The date and version number are in the file name and in the file's contents, und
 Each file assigns a **lookup table** to `window.CMB_CANDIDATES`, read by `code/survey/parse-candidates.js` in the survey repo. It is not a description of the elections — that is `data/raw/candidates-raw.json`. Everything the survey writes is worked out at build time and stored under the municipality and ward that produce it, so the survey reads one entry and writes it out:
 
 ```js
+municipalities["3558004"].shared = {
+  names:  { mayor: [...], coun_atlarge: [...], dep_mayor: [] },
+  fields: { mayor_accl: 0, atlarge: 1, atlarge_accl: 0,
+            atlarge_max_votes: 5, dep_mayor_accl: "" }
+}
 municipalities["3558004"].wards["McIntyre"] = {
-  names:  { mayor: [...], coun_ward: [...], coun_atlarge: [...],
-            coun_reg: [], dep_mayor: [] },
+  names:  { coun_ward: [...], coun_reg: [] },
   fields: { ward: 1, ward_accl: 1, ward_max_votes: 1,
-            atlarge_accl: 0, atlarge_max_votes: 5, ... }
+            reg_coun: 0, reg_coun_accl: "", reg_coun_max_votes: "" }
 }
 ```
 
-- `names` holds `"LAST, First"` in the order the survey should show them, keyed by the field the survey writes them out as: `mayor1..`, `coun_ward1..`, `coun_atlarge1..`, `coun_reg1..`, `dep_mayor1..`. The three councillor lists share a prefix so they sort together in the export.
+An entry comes in **two halves, and the survey reads their union**. `shared` is what the
+municipality decides for every ward alike — the mayoral, at-large councillor and deputy
+mayor races — held once instead of repeated in each of Toronto's 26 ward entries; the ward
+entry holds the rest. The two are disjoint, so `parse-candidates.js` writes both and each
+field lands exactly once, and which half a field falls in changes nothing about the export.
+`meta.fields` is split the same way and says which scalars fall where. `SHARED_STEMS` in the
+build script is where the split is decided, and the build aborts if two wards ever disagree
+about something it holds is municipality-wide. `reg_coun` is the near miss and stays per
+ward: it is elected at large in 30 of the 38 municipalities and by ward in the other 8.
+
+- `names` holds `"LAST, First"` in the order the survey should show them, keyed by the field the survey writes them out as: `mayor1..`, `coun_ward1..`, `coun_atlarge1..`, `coun_reg1..`, `dep_mayor1..`. The three councillor lists share a prefix so they sort together in the export. A source that published no given name — Brampton's `Gursimranjit Singh, -` is the only one — gives a bare `"LAST"`, with no separator left dangling: the survey pipes these strings as choice text and `parse-recognition.js` matches them back verbatim, so a trailing `", "` both shows as a stray comma and drops the name from `__js_recog_*`. `display_name()` in the build script is where that is decided, and the build aborts on any name carrying an edge space or a dangling separator.
 - Each is one contest as a voter meets it. A ward councillor race and an at-large one are never merged: Thunder Bay's respondents mark one name for their ward's seat and five for the city's, and the fields say so separately. Every at-large councillor race is `coun_atlarge`, including in the three municipalities that hold no ward race at all. `coun_reg` is the upper-tier seat however it is elected — Sarnia's second city-wide slate sits on Lambton County council, so it goes there rather than being a second at-large contest.
 - `fields` is keyed by **stem** rather than by name field: each of `mayor`, `ward`, `atlarge`, `reg_coun`, `dep_mayor` writes `<stem>_accl`, and `ward`, `atlarge` and `reg_coun` add `<stem>_max_votes`. `mayor` and `dep_mayor` do not — both races are single-seat wherever they appear, so the field would read 1 in every row while implying it might not; `SINGLE_VOTE_STEMS` in the build script is where that is decided, and the build aborts if such a race ever wants more than one vote. The three councillor stems — `ward`, `atlarge`, `reg_coun` — each also carry a bare `<stem>` served-flag, 1 where the respondent is served that race and 0 where they are not; `SERVED_FLAG_STEMS` is where that is decided, and its comment is the case for keeping a field that says what a non-blank `_accl` already says. `mayor` and `dep_mayor` have none. **`meta.stems` maps stem to name field**, and is worth reading rather than guessing: the ward stem's candidate list is `coun_ward1..`, not `ward1..`.
 - **A blank `_accl` or `_max_votes` means "this respondent has no such race"**, and is what the survey flow filters each question on. It means nothing else: a race whose seat count is unverified upstream would write the same blank for a contest the respondent should be asked about, so it aborts the build rather than being served. Verify it in `data/raw/by-municipality/`, or exclude the race in `notes/excluded-races.csv`. The bare `<stem>` flags say it a second way on purpose, for a survey flow that is easier to read for it, and the tests pin each to `<stem>_accl != ""` so the two cannot drift. `smd` and `mmd` said the ward race's shape a second way and were dropped for good: `ward_max_votes` gives it directly (1 single-member, 2 block vote).
-- `fields` holds every scalar in final form: a number, or `""` where there is nothing to say. Every ward entry carries the same keys, so nothing can go stale between respondents.
+- `fields` holds every scalar in final form: a number, or `""` where there is nothing to say. Every ward entry carries the same keys, as does every `shared`, so nothing can go stale between respondents.
 - Every municipality has a `"99"` ward entry as well as its real wards, holding whatever is decided at large. It is what a respondent gets if they reach the question without a ward, and the only entry for the three municipalities that elect entirely at large.
 - Ward pairs are stored under each ward they are drawn from, so a respondent's single-ward answer finds their ballot. Brampton and Clarington are the two.
 - Name order is the one JavaScript's `localeCompare` produces, reproduced in Python so the survey does not have to sort. `tests/candidates-js.test.js` re-checks every list against `localeCompare` itself, so the two cannot drift apart silently.
 - The file is pure ASCII, non-ASCII written as `\uXXXX`. It is loaded by a `<script src>` with no charset attribute, and a wrong encoding guess would stop `Ward 1 Orléans East-Cumberland` matching the ward the survey embedded.
 
-Because at-large lists repeat under each ward, the file is about 25% larger than storing the races once would make it. That is the trade for a survey-side script that only reads and writes.
+The ward-invariant races used to repeat under every ward, which cost about 40% of the file; `shared` is what stopped that. What remains repeated is `coun_reg` in the 30 municipalities that elect it at large, kept per ward so the stem is not split across the two halves. That is the residual trade for a survey-side script that only reads and writes.
 
 `data/csv/`: Mock candidate data for testing, from the CMB's 2025 Alberta election study. `TEST_ab-cands.csv` is the file the surname convention here follows (`BILLINGSLEY JR.` | `Ronald Stewart`).
 

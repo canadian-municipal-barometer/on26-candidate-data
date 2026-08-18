@@ -28,16 +28,25 @@ acclaimed, how many names they may mark, what shape their ballot is - is decided
     municipalities: {
       "<census_id>": {
         name: "Ottawa",
+        shared: {
+          names:  { mayor: [...], coun_atlarge: [...], dep_mayor: [...] },
+          fields: { mayor_accl: 0, atlarge: 1, atlarge_accl: 0, ... }
+        },
         wards: {
           "<ward label>"|"99": {
-            names:  { mayor: [...], coun_ward: [...], coun_atlarge: [...],
-                      coun_reg: [...], dep_mayor: [...] },
+            names:  { coun_ward: [...], coun_reg: [...] },
             fields: { ward: 1, ward_accl: 0, ward_max_votes: 1, ... }
           }
         }
       }
     }
   };
+
+An entry comes in two halves. `shared` is what the municipality decides for every ward
+alike - the mayoral, at-large councillor and deputy mayor races - held once instead of
+repeated in each of Toronto's 26 entries; the ward entry holds the rest. The two are
+disjoint, so the survey writes both and each field lands exactly once, and which half a
+field falls in changes nothing about the export. See SHARED_STEMS.
 
 `names` holds "LAST, First" in the order they should appear. `fields` holds every scalar
 the survey writes, already in its final form - a number, or "" where there is nothing to
@@ -195,6 +204,28 @@ SINGLE_VOTE_STEMS = {"mayor", "dep_mayor"}
 # stem to this set adds its flag and nothing else.
 SERVED_FLAG_STEMS = {"ward", "atlarge", "reg_coun"}
 
+# The stems a municipality decides once for all of its wards, and which are therefore
+# stored once under `shared` rather than repeated in every ward entry. Toronto's mayoral
+# list was held 26 times over; the at-large councillor lists were the larger half of the
+# same duplication, and Sarnia's fifteen names sat in every one of its entries.
+#
+# What makes a stem shareable is that its lists and scalars do not vary by ward, and every
+# race under these three is elected municipality-wide: one mayor, one deputy mayor where
+# the office exists, and at-large councillors in the municipalities that elect them. The
+# assumption is checked rather than trusted - the projection below builds the shared half
+# from each ward in turn and aborts if any two disagree, because storing it once would
+# otherwise quietly serve one ward's answer to all of them.
+#
+# `reg_coun` is the near miss and stays per-ward: it is elected at large in 30 of the 38
+# municipalities and by ward or ward-pair in the other 8, so the stem as a whole is not
+# ward-invariant even though most of its races are. Splitting a stem across the two halves
+# would break the one property parse-candidates.js relies on - that the halves are disjoint,
+# so writing both in either order writes each field exactly once.
+#
+# Nothing about the export changes: the survey writes the union of the two halves, under
+# the same field names as before. What changes is the size of the file the header loads.
+SHARED_STEMS = {"mayor", "atlarge", "dep_mayor"}
+
 # The key for "no ward" - both an at-large race's only district and the ward value sent
 # when the ward question was skipped.
 AT_LARGE = "99"
@@ -211,6 +242,24 @@ NAME_OVERRIDE = {"3553005": "Greater Sudbury"}
 # All of it sorts below any letter.
 PUNCT_ORDER = " -,.'’()"
 PUNCT_RANK = {c: i for i, c in enumerate(PUNCT_ORDER)}
+
+
+def display_name(candidate):
+    """"LAST, First" - or bare "LAST" where the source published no given name.
+
+    Brampton lists one mayoral candidate as `Gursimranjit Singh, -`, a placeholder that
+    make_candidate() in build-candidates-raw.py records as an empty first_name. Joining on
+    ", " unconditionally turns that into "GURSIMRANJIT SINGH, ", and the separator then
+    outlives the name it was meant to separate: the survey pipes these strings as choice
+    text, so the respondent is shown a dangling comma, and parse-recognition.js matches the
+    captured selections back against these same strings VERBATIM after trimming the
+    capture - so the trailing space is trimmed off the last selection and the name no
+    longer matches. It is dropped from `__js_recog_mayor*`, the count is one short, and the
+    only sign is a console error no export ever carries. Hence: no first name, no comma.
+    """
+    last = candidate["last_name"]
+    first = candidate["first_name"]
+    return last + ", " + first if first else last
 
 
 def name_sort_key(name):
@@ -317,10 +366,21 @@ for census_id in sorted(k for k in raw if k != "_meta"):
 
             for label, district in race["districts"].items():
                 names = sorted(
-                    (c["last_name"] + ", " + c["first_name"] for c in district["candidates"]),
+                    (display_name(c) for c in district["candidates"]),
                     key=name_sort_key,
                 )
                 for name in names:
+                    # A name the survey can show and read back. These strings are the
+                    # recognition questions' choice text and are matched back verbatim, so
+                    # an edge space or a separator with nothing after it is both a visible
+                    # blemish and a silent parse failure - see display_name().
+                    if name != name.strip() or name.startswith(",") or name.endswith(","):
+                        problems.append(
+                            f"{census_id}: {name!r} is not a well-formed display name - it "
+                            "carries an edge space or a separator with no name after it. "
+                            "The survey shows these strings to respondents and matches "
+                            "them back verbatim; see display_name()."
+                        )
                     for ch in name:
                         if not ch.isalnum() and ch not in PUNCT_RANK:
                             problems.append(
@@ -451,10 +511,19 @@ def served(census_id, stem, ward):
 
 
 def entry_for(census_id, ward):
-    names = {}
-    fields = {}
+    """This respondent's entry, already cut into its shared half and its ward half.
+
+    Both halves are built stem by stem in the one pass, and each stem writes into exactly
+    one of them - which is what makes the two disjoint by construction rather than by a
+    second rule that could drift from the first. See SHARED_STEMS.
+    """
+    shared = {"names": {}, "fields": {}}  # decided municipality-wide
+    own = {"names": {}, "fields": {}}  # decided by this ward
 
     for stem in STEMS:
+        half = shared if stem in SHARED_STEMS else own
+        names = half["names"]
+        fields = half["fields"]
         got = served(census_id, stem, ward)
         merged = [name for _, district in got for name in district["names"]]
         # Sorted across the merge, so a Sarnia respondent gets one alphabetical list
@@ -507,19 +576,29 @@ def entry_for(census_id, ward):
     # Not to be confused with __js_ward_name1.. in parse-wards.js, which are the ward
     # question's choices. That collision is why those were renamed: a flow that pipes
     # __js_ward next to __js_ward1 is one prefix-match away from a silent wrong answer.
+    #
+    # Uncompacted: the checks below read these dicts, and compaction turns them into
+    # placeholder handles that only the serialiser can see through.
+    return shared, own
+
+
+def compact_entry(entry):
+    """One half, with its name lists and its scalars folded onto single output lines."""
     return {
-        "names": {NAME_FIELD[stem]: compact(names[NAME_FIELD[stem]]) for stem in STEMS},
-        "fields": compact(fields),
+        "names": {field: compact(lst) for field, lst in entry["names"].items()},
+        "fields": compact(entry["fields"]),
     }
 
 
 municipalities = {}
 max_names = {NAME_FIELD[stem]: 0 for stem in STEMS}
 widest = {}
-field_keys = None
+shared_field_keys = None
+ward_field_keys = None
 
 for census_id in sorted(races_by_mun):
     wards = {}
+    shared = None
     for ward in wards_of(census_id):
         # Built before compaction so the numbers below can still see the lists.
         got = {stem: served(census_id, stem, ward) for stem in STEMS}
@@ -536,22 +615,62 @@ for census_id in sorted(races_by_mun):
                     if by_ward and ward != AT_LARGE
                     else mun_names[census_id]
                 )
-        wards[ward] = entry_for(census_id, ward)
+        mun_shared, wards[ward] = entry_for(census_id, ward)
 
-    municipalities[census_id] = {"name": mun_names[census_id], "wards": wards}
+        # The whole premise of storing the shared half once: every ward has to agree on
+        # it. If two ever disagreed, one ward's answer would be served to all of them and
+        # nothing downstream could tell - see SHARED_STEMS, where the assumption is made.
+        if shared is None:
+            shared = mun_shared
+        elif mun_shared != shared:
+            die(
+                f"{census_id}: ward {ward!r} disagrees with the other wards about a race "
+                "that SHARED_STEMS holds is decided municipality-wide, so it cannot be "
+                "stored once for the municipality. Move its stem out of SHARED_STEMS, or "
+                "fix the race in data/raw/by-municipality/."
+            )
+
+    # Uncompacted for now; the checks below read these, and compaction is the last step.
+    municipalities[census_id] = {
+        "name": mun_names[census_id],
+        "shared": shared,
+        "wards": wards,
+    }
 
 # Every ward entry must carry the same scalar fields, or a respondent who switched
-# municipality would keep one the new entry never overwrites.
+# municipality would keep one the new entry never overwrites. The shared halves have to
+# agree with each other for the same reason, and the two halves have to stay disjoint:
+# parse-candidates.js writes both out, so a field appearing in each would be written twice
+# and the second value would silently win.
 for census_id, mun in municipalities.items():
+    shared_keys = tuple(sorted(mun["shared"]["fields"]))
+    if shared_field_keys is None:
+        shared_field_keys = shared_keys
+    elif shared_keys != shared_field_keys:
+        die(
+            f"{census_id} writes a different set of shared fields than the rest: "
+            f"{set(shared_keys) ^ set(shared_field_keys)}"
+        )
+
     for ward, entry in mun["wards"].items():
-        keys = tuple(sorted(json.loads(_COMPACT[entry["fields"]])))
-        if field_keys is None:
-            field_keys = keys
-        elif keys != field_keys:
+        keys = tuple(sorted(entry["fields"]))
+        if ward_field_keys is None:
+            ward_field_keys = keys
+        elif keys != ward_field_keys:
             die(
                 f"{census_id} {ward!r} writes a different set of fields than the rest: "
-                f"{set(keys) ^ set(field_keys)}"
+                f"{set(keys) ^ set(ward_field_keys)}"
             )
+        both = set(shared_keys) & set(keys)
+        if both:
+            die(f"{census_id} {ward!r} writes {sorted(both)} in both halves")
+        both = set(mun["shared"]["names"]) & set(entry["names"])
+        if both:
+            die(f"{census_id} {ward!r} lists {sorted(both)} in both halves")
+
+for mun in municipalities.values():
+    mun["shared"] = compact_entry(mun["shared"])
+    mun["wards"] = {ward: compact_entry(e) for ward, e in mun["wards"].items()}
 
 # Counted from the input, not the output: a ward pair is stored once per ward it is drawn
 # from, and every at-large list is repeated under each ward, so counting the output would
@@ -580,12 +699,22 @@ doc = {
         # stem names both.
         "stems": compact(NAME_FIELD),
         "max_names": max_names,
-        "fields": compact(list(field_keys)),
+        # Split by where the scalar is decided, matching the two halves of every
+        # municipality entry. The survey writes their union; nothing downstream has
+        # to care which half a field came from, but a reader of this file does.
+        "fields": compact(
+            {"shared": list(shared_field_keys), "ward": list(ward_field_keys)}
+        ),
         "provisional": raw["_meta"]["provisional"],
         "schema": (
             "A lookup table, not a description of the elections: "
-            "municipalities[census_id].wards[ward label|\"99\"] holds everything the "
-            "survey writes for a respondent who gave that municipality and ward. `names` "
+            "municipalities[census_id].shared and .wards[ward label|\"99\"] together hold "
+            "everything the survey writes for a respondent who gave that municipality and "
+            "ward. The two halves are disjoint and the survey writes both, so read their "
+            "union; `shared` is the part the municipality decides for every ward alike - "
+            "the mayoral, at-large councillor and deputy mayor races - held once instead "
+            "of repeated in every ward entry, and meta.fields says which scalars fall "
+            "where. `names` "
             "is the five candidate lists, \"LAST, First\", already merged across the races "
             "they are served and in localeCompare order, keyed by the field the survey "
             "writes them out as: mayor1.., coun_ward1.., coun_atlarge1.., coun_reg1.., "
@@ -605,8 +734,9 @@ doc = {
             "have no such flag. meta.stems maps one to the other, and is "
             "worth reading rather than guessing - the ward stem's candidate list is "
             "coun_ward1.., not ward1... Every ward entry "
-            "carries the same `fields` keys. \"99\" is the entry for a respondent with no "
-            "ward, and the only entry for a municipality that elects at large."
+            "carries the same `fields` keys, as does every `shared`. \"99\" is the entry "
+            "for a respondent with no ward, and the only entry for a municipality that "
+            "elects at large."
         ),
         "max_names_note": (
             "The longest list each field family can reach, and the municipality that sets "
@@ -658,4 +788,5 @@ print(
 for stem in STEMS:
     field = NAME_FIELD[stem]
     print(f"    {field:<13} widest: {widest.get(field, '-')}")
-print("  plus the scalars: " + " ".join(field_keys))
+print("  plus the scalars, shared: " + " ".join(shared_field_keys))
+print("             and per ward: " + " ".join(ward_field_keys))

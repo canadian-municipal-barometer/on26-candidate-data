@@ -114,6 +114,39 @@ function parseCsv(text) {
     .map((line) => Object.fromEntries(parseLine(line).map((v, i) => [header[i], v])));
 }
 
+// "LAST, First", or bare "LAST" where the source published no given name — display_name()
+// in build-candidates-js.py, restated. Keeping the two in step is what makes "no candidate
+// is lost, and none is invented" below an assertion about the names rather than about the
+// join: it rebuilds every name from the raw data, so any rule the build applies and this
+// does not shows up there as a mismatch.
+function displayName(candidate) {
+  return candidate.first_name
+    ? candidate.last_name + ", " + candidate.first_name
+    : candidate.last_name;
+}
+
+// One ward entry as a respondent meets it. The built file stores it in two halves — the
+// municipality's `shared`, holding the races decided for every ward alike, and the ward's
+// own — and parse-candidates.js writes both. The halves are disjoint (the build aborts if
+// they ever are not), so merging them here cannot lose anything, and it makes the tests
+// below assertions about what a respondent is served rather than about where it is kept.
+function servedTo(mun, ward) {
+  const entry = mun.wards[ward];
+  return {
+    names: { ...mun.shared.names, ...entry.names },
+    fields: { ...mun.shared.fields, ...entry.fields },
+  };
+}
+
+// Every [ward, served entry] pair of a municipality — what iterating mun.wards used to
+// give, before the shared half was lifted out of it.
+function servedEntries(mun) {
+  return Object.keys(mun.wards).map((ward) => [ward, servedTo(mun, ward)]);
+}
+
+// Every scalar the survey writes, across both halves; `meta.fields` is split by level.
+const FIELDS = [...DATA.meta.fields.shared, ...DATA.meta.fields.ward];
+
 // Every (stem, ward) a raw race contributes to, with that race's numbers. Mirrors what a
 // respondent is served: an at-large race reaches every ward, a ward race only its own.
 function rawRaces(census_id) {
@@ -133,7 +166,7 @@ function rawRaces(census_id) {
             at_large,
             seats: race.seats_per_district,
             max_votes: race.max_votes,
-            names: district.candidates.map((c) => c.last_name + ", " + c.first_name),
+            names: district.candidates.map(displayName),
           });
         }
       }
@@ -181,7 +214,7 @@ test("meta.stems maps every stem to the field its candidates are written under",
   // entry, and max_names sizes the name fields.
   assert.deepEqual(Object.keys(DATA.meta.max_names).sort(), Object.values(NAME_FIELD).sort());
   for (const mun of Object.values(DATA.municipalities)) {
-    for (const [ward, entry] of Object.entries(mun.wards)) {
+    for (const [ward, entry] of servedEntries(mun)) {
       assert.deepEqual(
         Object.keys(entry.names).sort(),
         Object.values(NAME_FIELD).sort(),
@@ -198,9 +231,9 @@ test("meta.stems maps every stem to the field its candidates are written under",
 });
 
 test("every ward entry carries the same scalar fields", () => {
-  const expected = [...DATA.meta.fields].sort();
+  const expected = [...FIELDS].sort();
   for (const [census_id, mun] of Object.entries(DATA.municipalities)) {
-    for (const [ward, entry] of Object.entries(mun.wards)) {
+    for (const [ward, entry] of servedEntries(mun)) {
       assert.deepEqual(
         Object.keys(entry.fields).sort(),
         expected,
@@ -241,7 +274,7 @@ test("every scalar field is named for its stem", () => {
     ...SERVED_FLAG_STEMS,
   ].sort();
 
-  assert.deepEqual([...DATA.meta.fields].sort(), expected);
+  assert.deepEqual([...FIELDS].sort(), expected);
 });
 
 // `coun`, `smd` and `mmd` were dropped once the flow moved to filtering on the accl and
@@ -253,7 +286,7 @@ test("every scalar field is named for its stem", () => {
 test("the served-flags agree with the accl family, and the dropped flags are derivable", () => {
   for (const census_id of censusIds) {
     const mun = DATA.municipalities[census_id];
-    for (const [ward, entry] of Object.entries(mun.wards)) {
+    for (const [ward, entry] of servedEntries(mun)) {
       const f = entry.fields;
       const where = `${mun.name} ${ward}`;
 
@@ -293,12 +326,12 @@ test("the served-flags agree with the accl family, and the dropped flags are der
 test("mayor and dep_mayor write no max_votes, and never need one", () => {
   for (const stem of SINGLE_VOTE_STEMS) {
     assert.ok(
-      !DATA.meta.fields.includes(stem + "_max_votes"),
+      !FIELDS.includes(stem + "_max_votes"),
       `${stem}_max_votes should not be declared`,
     );
     for (const census_id of censusIds) {
       const mun = DATA.municipalities[census_id];
-      for (const [ward, entry] of Object.entries(mun.wards)) {
+      for (const [ward, entry] of servedEntries(mun)) {
         assert.ok(
           !(stem + "_max_votes" in entry.fields),
           `${mun.name} ${ward}: ${stem}_max_votes should not be written`,
@@ -318,7 +351,7 @@ test("mayor and dep_mayor write no max_votes, and never need one", () => {
 test("no candidate is lost, and none is invented", () => {
   for (const census_id of censusIds) {
     const mun = DATA.municipalities[census_id];
-    for (const [ward, entry] of Object.entries(mun.wards)) {
+    for (const [ward, entry] of servedEntries(mun)) {
       for (const stem of STEMS) {
         const expected = expectedFor(census_id, stem, ward)
           .flatMap((r) => r.names)
@@ -333,20 +366,52 @@ test("no candidate is lost, and none is invented", () => {
   }
 });
 
+test("every served name is a display string the survey can read back", () => {
+  // The check that does not go through the same join the build uses, and so is the one
+  // that catches the next name the join is wrong for. The test above rebuilds every name
+  // from the raw data — if it rebuilds it the same wrong way, the two agree and neither
+  // says anything. That is exactly what happened to Brampton's `Gursimranjit Singh, -`,
+  // published with a placeholder given name: both sides joined an empty first name onto a
+  // ", " and both produced "GURSIMRANJIT SINGH, ".
+  //
+  // It matters beyond looking wrong on the page. These strings are the recognition
+  // questions' choice text, and parse-recognition.js reads the selections back by matching
+  // them against these same strings verbatim — after trimming the capture. A name whose
+  // last character is a space therefore fails to match whenever it is the final selection,
+  // and is dropped from `__js_recog_*` with nothing in the export to show it went missing.
+  const malformed = new Set();
+  for (const [census_id, mun] of Object.entries(DATA.municipalities)) {
+    for (const [ward, entry] of servedEntries(mun)) {
+      for (const list of Object.values(entry.names)) {
+        for (const name of list) {
+          if (name !== name.trim() || name === "" || /^,|,$/.test(name)) {
+            malformed.add(`${mun.name} (${census_id}) ${ward}: ${JSON.stringify(name)}`);
+          }
+        }
+      }
+    }
+  }
+  assert.deepEqual(
+    [...malformed],
+    [],
+    "names carrying an edge space, or a separator with no name after it",
+  );
+});
+
 test("a respondent is served their own ward and no other", () => {
   // The failure this guards against is summing a municipality's wards together. Thunder
   // Bay is the case that would show it: its own ward's councillor, never the other six
   // wards', which would total 7 marks rather than 1.
   const tb = DATA.municipalities["3558004"];
-  assert.equal(tb.wards["McIntyre"].fields.ward_max_votes, 1);
-  assert.equal(tb.wards["McIntyre"].names.coun_ward.length, 1);
+  assert.equal(servedTo(tb, "McIntyre").fields.ward_max_votes, 1);
+  assert.equal(servedTo(tb, "McIntyre").names.coun_ward.length, 1);
 
   // Every ward of every municipality: neither councillor list may carry a name from a
   // different ward's race.
   for (const census_id of censusIds) {
     const races = rawRaces(census_id);
     const mun = DATA.municipalities[census_id];
-    for (const [ward, entry] of Object.entries(mun.wards)) {
+    for (const [ward, entry] of servedEntries(mun)) {
       for (const stem of ["ward", "atlarge"]) {
         const allowed = new Set(
           races
@@ -373,7 +438,7 @@ test("Sarnia's two city-wide slates are two contests, city and county", () => {
   // regional one.
   const sarnia = DATA.municipalities["3538030"];
   assert.deepEqual(Object.keys(sarnia.wards), [AT_LARGE]);
-  const { fields, names } = sarnia.wards[AT_LARGE];
+  const { fields, names } = servedTo(sarnia, AT_LARGE);
 
   assert.equal(fields.atlarge_max_votes, 4);
   assert.equal(names.coun_atlarge.length, 15);
@@ -392,14 +457,14 @@ test("a ward councillor race and an at-large one stay separate contests", () => 
   // Thunder Bay respondent to mark 6 names in a race that fills one seat. Thunder Bay is
   // the only municipality here that runs both, so it is the only place the two could be
   // conflated — but the stems are split for every municipality, not for this one.
-  const tb = DATA.municipalities["3558004"].wards["McIntyre"].fields;
+  const tb = servedTo(DATA.municipalities["3558004"], "McIntyre").fields;
   assert.equal(tb.ward, 1);
   assert.equal(tb.ward_max_votes, 1);
   assert.equal(tb.atlarge_max_votes, 5);
 
   // And the two lists are disjoint everywhere: a name is on one ballot line or the other.
   for (const mun of Object.values(DATA.municipalities)) {
-    for (const [ward, entry] of Object.entries(mun.wards)) {
+    for (const [ward, entry] of servedEntries(mun)) {
       const overlap = entry.names.coun_ward.filter((n) =>
         entry.names.coun_atlarge.includes(n),
       );
@@ -421,7 +486,7 @@ test("at-large councillors are atlarge even with no ward race to collide with", 
   ]) {
     const mun = DATA.municipalities[census_id];
     assert.deepEqual(Object.keys(mun.wards), [AT_LARGE], mun.name);
-    const entry = mun.wards[AT_LARGE];
+    const entry = servedTo(mun, AT_LARGE);
 
     assert.notEqual(entry.fields.atlarge_accl, "", mun.name);
     assert.equal(entry.fields.atlarge_max_votes, marks, mun.name);
@@ -477,7 +542,7 @@ test("PUNCT_ORDER is the order localeCompare actually puts that punctuation in",
   // punctuation with no rank, but this says so against the file rather than at build time.
   const used = new Set();
   for (const mun of Object.values(DATA.municipalities)) {
-    for (const entry of Object.values(mun.wards)) {
+    for (const entry of servedEntries(mun).map(([, entry]) => entry)) {
       for (const list of Object.values(entry.names)) {
         for (const name of list) {
           for (const ch of name) {
@@ -499,7 +564,7 @@ test("names are in the order JavaScript's localeCompare produces", () => {
   // that the reproduction still holds: a name introducing a character the build has no
   // rank for would sort somewhere localeCompare would not put it.
   for (const [census_id, mun] of Object.entries(DATA.municipalities)) {
-    for (const [ward, entry] of Object.entries(mun.wards)) {
+    for (const [ward, entry] of servedEntries(mun)) {
       for (const [stem, names] of Object.entries(entry.names)) {
         assert.deepEqual(
           names,
@@ -514,7 +579,7 @@ test("names are in the order JavaScript's localeCompare produces", () => {
 test("acclamation is candidates <= seats, across every race served", () => {
   for (const census_id of censusIds) {
     const mun = DATA.municipalities[census_id];
-    for (const [ward, entry] of Object.entries(mun.wards)) {
+    for (const [ward, entry] of servedEntries(mun)) {
       for (const stem of STEMS) {
         const races = expectedFor(census_id, stem, ward);
         const expected =
@@ -534,7 +599,7 @@ test("acclamation is candidates <= seats, across every race served", () => {
 test("max_votes is summed from max_votes, never from seats", () => {
   for (const census_id of censusIds) {
     const mun = DATA.municipalities[census_id];
-    for (const [ward, entry] of Object.entries(mun.wards)) {
+    for (const [ward, entry] of servedEntries(mun)) {
       for (const stem of STEMS) {
         if (SINGLE_VOTE_STEMS.includes(stem)) continue; // writes no max_votes
         const races = expectedFor(census_id, stem, ward);
@@ -573,7 +638,7 @@ test("an excluded contest reaches no respondent, in any ward", () => {
     const stem = STEM[row.race_key];
     assert.ok(stem, `unknown race_key ${row.race_key} in excluded-races.csv`);
 
-    for (const [ward, entry] of Object.entries(mun.wards)) {
+    for (const [ward, entry] of servedEntries(mun)) {
       assert.deepEqual(
         entry.names[NAME_FIELD[stem]],
         [],
@@ -604,7 +669,7 @@ test("the ward flag describes the ward councillor race actually served", () => {
   // read off atlarge_accl, not from here — see the stem split above.
   for (const census_id of censusIds) {
     const mun = DATA.municipalities[census_id];
-    for (const [ward, entry] of Object.entries(mun.wards)) {
+    for (const [ward, entry] of servedEntries(mun)) {
       const races = expectedFor(census_id, "ward", ward);
       const f = entry.fields;
       assert.equal(f.ward, Number(races.length > 0), mun.name + " " + ward);
@@ -628,7 +693,7 @@ test("Chatham-Kent's two ward tiers differ, and Thunder Bay runs both races", ()
   assert.equal(ck["Ward 1 - South West Kent"].fields.ward, 1);
   assert.equal(ck["Ward 3 - North East Kent"].fields.ward, 1);
 
-  const tb = DATA.municipalities["3558004"].wards["McIntyre"].fields;
+  const tb = servedTo(DATA.municipalities["3558004"], "McIntyre").fields;
   assert.equal(tb.ward, 1);
   assert.equal(tb.ward_max_votes, 1);
   assert.notEqual(tb.atlarge_accl, "");
@@ -661,7 +726,7 @@ test("max_names is the longest list any respondent can be served", () => {
   // skipped. max_names is keyed by name field, since it sizes the numbered fields.
   const seen = Object.fromEntries(Object.values(NAME_FIELD).map((f) => [f, 0]));
   for (const mun of Object.values(DATA.municipalities)) {
-    for (const entry of Object.values(mun.wards)) {
+    for (const entry of servedEntries(mun).map(([, entry]) => entry)) {
       for (const [stem, names] of Object.entries(entry.names)) {
         seen[stem] = Math.max(seen[stem], names.length);
       }
