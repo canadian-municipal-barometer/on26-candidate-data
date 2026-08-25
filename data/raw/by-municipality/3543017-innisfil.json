@@ -4,10 +4,13 @@
   "name_format": "last_first",
   "candidate_list_url": "https://www.innisfil.ca/government-administration/elections",
   "notes": {
-    "list_status": "page states the Unofficial List of Candidates is updated daily by end of day; nominations close 2026-08-21 14:00",
+    "list_status": "Certified. The page reads 'The below lists certified candidates for the 2026 Municipal and School Board Election by office.'",
     "source_note": "district_source_url is itself the candidate list. Race labels are in each table's <caption>, not in headings.",
     "structure_match": "Ward 1-7 tables plus a Deputy Mayor table, matching the two structure-CSV rows (Wards 1-7, and Deputy Mayor at-large).",
-    "duplicate_filings": "Tricia Tyrell appears in both Ward 3 Councillor and Ward 4 Councillor on the source page. Recorded as published; worth re-checking against the certified list after 2026-08-24."
+    "duplicate_filings": "Tricia Tyrell appears in both Ward 3 Councillor and Ward 4 Councillor on the source page. Recorded as published; worth re-checking against the certified list after 2026-08-24.",
+    "retrieved": "2026-08-24",
+    "name_change": "Ward 4's candidate is now 'Khan, Tricia'. The town prints the note '(previously posted as Tricia Tyrell)' as a separate paragraph in the same table cell; it is an annotation, not part of the name, so it is not recorded. She was listed on 2026-08-11 in both Ward 3 and Ward 4 as 'Tyrell, Tricia' and appears only in Ward 4 now.",
+    "acclamation_note": "The page's only ACCLAIMED marker is against Cardwell, Michael for Simcoe County District School Board Trustee, not against any council race."
   },
   "races": {
     "mayor": [
@@ -21,7 +24,9 @@
         "districts": {
           "At-large": [
             "Dollin, Lynn",
-            "Fowler, Kenneth"
+            "Fowler, Kenneth",
+            "Romer, Travis",
+            "Stott, Dana"
           ]
         }
       }
@@ -60,28 +65,33 @@
           "Ward 2": [
             "Bennett, Susan",
             "Constantine, Grace",
+            "Croos, Ignasius",
+            "Dutta, Anil",
             "Griffith, Carol"
           ],
           "Ward 3": [
+            "Harrigan, Andrew",
             "Jacks, Alison",
             "La Costa, Nina",
-            "Richardson, Jennifer",
-            "Tyrell, Tricia"
+            "Richardson, Jennifer"
           ],
           "Ward 4": [
+            "Cugliari, Alan",
             "Faria, Melissa",
-            "Tyrell, Tricia"
+            "Khan, Tricia",
+            "McGrath, Deb"
           ],
           "Ward 5": [
             "Brown, Karen",
+            "Davidson, Dan",
             "Zanella, Linda"
           ],
           "Ward 6": [
             "Knibbs, Keisha",
-            "O'Neill, Deborah",
             "Saunders, Robert"
           ],
           "Ward 7": [
+            "Ditaranto, Rita",
             "Drodge, Fred"
           ]
         }

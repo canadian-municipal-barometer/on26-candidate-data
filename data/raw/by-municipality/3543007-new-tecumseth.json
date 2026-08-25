@@ -4,11 +4,12 @@
   "name_format": "first_last",
   "candidate_list_url": "https://www.newtecumseth.ca/government/new-tecumseth-votes/",
   "notes": {
-    "retrieved": "2026-08-12",
-    "list_status": "the page calls it 'an unofficial list of Registered Candidates who have filed nomination papers, but have not yet been certified to run for office', updated daily at 16:00; certification by 2026-08-24.",
+    "retrieved": "2026-08-24",
+    "list_status": "Certified. The page now carries a 'List of Certified Candidates' section, headed 'Certification took place on Monday, August 24, 2026. All Candidates are qualified and their nomination complies with the requirements of the Municipal Elections Act, 1996.'",
     "source_note": "The Notice of Nomination gives the offices; the names are on the New Tecumseth Votes page, which is the other district_source_url. Both are in the structure CSV.",
     "structure_match": "Headings run Mayor, Deputy Mayor, and Councillor Ward 1 through Councillor Ward 7, matching the two structure-CSV rows (Wards 1-7, and Deputy Mayor at-large). Seven ward headings rather than the master list's eight independently confirms Ward Boundary By-law 2025-052, which is why New Tecumseth is a documented seat-check exception.",
-    "name_split": "Names are published 'First Last' and the splitter takes the final token as the surname, which is wrong for 'Shira Harrison McIntyre' (surname 'Harrison McIntyre') and 'Dianna Del Bianco' (surname 'Del Bianco'). name_raw preserves the published form."
+    "name_split": "Names are published 'First Last' and the splitter takes the final token as the surname, which is wrong for 'Shira Harrison McIntyre' (surname 'Harrison McIntyre') and 'Dianna Del Bianco' (surname 'Del Bianco'). name_raw preserves the published form.",
+    "name_change": "Ward 6's 'Joseph Castellano' is published on the certified list as 'Joe Castellano'."
   },
   "races": {
     "mayor": [
@@ -22,7 +23,8 @@
         "districts": {
           "At-large": [
             "Stephanie MacLellan",
-            "Richard Norcross"
+            "Richard Norcross",
+            "Jaison Waldman"
           ]
         }
       }
@@ -53,6 +55,7 @@
         "block_vote": false,
         "districts": {
           "Ward 1": [
+            "James Dougall",
             "Chris Rapin"
           ],
           "Ward 2": [
@@ -60,20 +63,22 @@
             "Jason Shand"
           ],
           "Ward 3": [
-            "Tony Phekoo",
-            "Laurie Mortimer"
+            "Laurie Mortimer",
+            "Tony Phekoo"
           ],
           "Ward 4": [
-            "Alan Masters"
+            "Alan Masters",
+            "Ben Miadovnik"
           ],
           "Ward 5": [
-            "Nicole Cox",
-            "Peter Barbati"
+            "Peter Barbati",
+            "Nicole Cox"
           ],
           "Ward 6": [
+            "Joe Castellano",
             "Shira Harrison McIntyre",
-            "Kyle Warren",
-            "Joseph Castellano"
+            "Shannon Rose",
+            "Kyle Warren"
           ],
           "Ward 7": [
             "Dianna Del Bianco",

@@ -1,13 +1,15 @@
 {
   "census_id": "3529006",
   "csdname": "Brantford",
-  "name_format": "first_last",
+  "name_format": "caps_surname",
   "candidate_list_url": "https://www.brantford.ca/your-government/municipal-election/candidates/",
   "notes": {
-    "list_status": "unofficial; page states eligible candidates will be officially certified 2026-08-24",
+    "list_status": "Certified. The page reads 'All candidates for Mayor, Ward Councillor, and School Board Trustee listed on this page have been officially certified as of Monday, August 24th, 2026.'",
     "source_note": "district_source_url is the city council page; the candidate list sits under the Municipal Election section.",
-    "structure_match": "Page prints 'Ward N (2 Councillors elected per ward)' for all 5 wards, independently confirming seats_per_district=2 and max_votes=2 in the structure CSV.",
-    "parse_check": "Extracted name count equals the count of 'Email:' entries in every section."
+    "structure_match": "Page still prints 'Ward N (2 Councillors elected per ward)' for all 5 wards, confirming seats_per_district=2 and max_votes=2 in the structure CSV.",
+    "parse_check": "Extracted name count equals the count of 'Email:' entries in every section.",
+    "retrieved": "2026-08-24",
+    "name_format_change": "The certified list sets every surname in capitals ('Leslie BORY'), which the pre-deadline page did not, so name_format moved from first_last to caps_surname. The capitals are in the markup, not a CSS transform — the accordion anchors are named 'LeslieBORY'."
   },
   "races": {
     "mayor": [
@@ -20,12 +22,13 @@
         "block_vote": false,
         "districts": {
           "At-large": [
-            "Dan McCreary",
-            "Mandy Samwell",
-            "Richard Carpenter",
-            "Rose Sicoli",
-            "Ricky Willdy",
-            "Leslie Bory"
+            "Leslie BORY",
+            "Richard CARPENTER",
+            "Dan MCCREARY",
+            "Richard Michael MISURA",
+            "Mandy SAMWELL",
+            "Rose SICOLI",
+            "Ricky WILLDY"
           ]
         }
       }
@@ -40,38 +43,44 @@
         "block_vote": true,
         "districts": {
           "Ward 1": [
-            "Darryl Casey",
-            "Michael Sullivan",
-            "Bob Sproul",
-            "Michael Boucher"
+            "Michael BOUCHER",
+            "Darryl CASEY",
+            "Nick SINGH",
+            "Bob SPROUL",
+            "Michael SULLIVAN"
           ],
           "Ward 2": [
-            "Erica James",
-            "Dave Malcolm",
-            "Mark Littell",
-            "Gino Caputo"
+            "Gino CAPUTO",
+            "Erica JAMES",
+            "Mark LITTELL",
+            "Dave MALCOLM",
+            "Dave WROBEL"
           ],
           "Ward 3": [
-            "Andrew Davis",
-            "Rod Philpot",
-            "Arron Jeavons",
-            "Trevor J Cherewka",
-            "Jay Goldberg",
-            "Mike Clancy"
+            "Trevor J CHEREWKA",
+            "Mike CLANCY",
+            "Andrew DAVIS",
+            "Arron JEAVONS",
+            "Frank KOHLBERGER",
+            "Rod PHILPOT",
+            "Kailee POISSON",
+            "Gordon RICHES",
+            "Dan SKATER",
+            "Mark ST. ANGELO"
           ],
           "Ward 4": [
-            "Nicole Callander",
-            "Linda Hunt",
-            "Nicole Durnford",
-            "Colleen Goupil",
-            "Al Moscoe"
+            "Nicole CALLANDER",
+            "Nicole DURNFORD",
+            "Colleen GOUPIL",
+            "Linda HUNT",
+            "Al MOSCOE"
           ],
           "Ward 5": [
-            "Karleigh Csordas",
-            "Mandy Stelling",
-            "Dan Thompson",
-            "Robert Stanley Harland",
-            "Brian Van Tilborg"
+            "Karleigh CSORDAS",
+            "Robert Stanley HARLAND",
+            "Mandy STELLING",
+            "Dan THOMPSON",
+            "Brian VAN TILBORG"
           ]
         }
       }

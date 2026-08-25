@@ -4,9 +4,11 @@
   "name_format": "first_last",
   "candidate_list_url": "https://www.greatersudbury.ca/city-hall/municipal-schoolboard-elections/for-voters/registered-candidates/",
   "notes": {
-    "list_status": "unofficial; nominations close 2026-08-21 14:00",
-    "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
-    "structure_match": "12 ward sections published, matching n_districts=12 in the structure CSV."
+    "list_status": "Checked against the city's signed 'List of Certified & Acclaimed Candidates' PDF (linked from the same page): the two lists agree candidate for candidate, and the registered list already omits the four the PDF marks WITHDRAWN (Bill Leduc for mayor, Braden Hill in Ward 9, George Lalonde in Ward 11, Deborah Josipovic in Ward 12). Bill Leduc withdrew from the mayoral race and is a Ward 11 candidate; George Lalonde withdrew in Ward 11 and is a Ward 8 candidate.",
+    "source_note": "The candidate list on the 'Registered Candidates' page is loaded by script; the names were read instead from the two accordion pages it links, /accordion-2026-registered-candidates/mayoral-candidates/ and /council-candidates/, which publish them as plain text.",
+    "structure_match": "12 ward sections published, matching n_districts=12 in the structure CSV.",
+    "retrieved": "2026-08-24",
+    "name_spelling": "The PDF is a scan and drops accents and some letters ('Labbee'/'Rene', 'Brandie' for 'Brandle'); the accordion pages are taken as the spelling of record. The page now writes Ward 7's 'Natalie Labbee' without the accent it carried on 2026-08-11."
   },
   "races": {
     "mayor": [
@@ -20,12 +22,13 @@
         "districts": {
           "At-large": [
             "Bob Johnston",
-            "Bill Leduc",
             "Paul Lefebvre",
             "Rodney Newton",
             "Joseph Boutros",
             "Keenan Menard",
-            "Miranda Rocca-Circelli"
+            "Miranda Rocca-Circelli",
+            "Michael McIntosh",
+            "Troy Crowder"
           ]
         }
       }
@@ -40,52 +43,78 @@
         "block_vote": false,
         "districts": {
           "Ward 1": [
-            "Mark Signoretti"
+            "William Cable",
+            "Mark Signoretti",
+            "Tysen Galoni"
           ],
           "Ward 2": [
             "Eric Benoit",
             "Christel Brandle",
             "Glen Duffy",
-            "Dan Xilon"
+            "Dan Xilon",
+            "Tracy Oost"
           ],
           "Ward 3": [
             "Michel Brabant",
-            "Devin White"
+            "Devin White",
+            "Marcel Montpellier"
           ],
           "Ward 4": [
             "Pauline Fortin",
             "Vincent Bolt"
           ],
           "Ward 5": [
-            "Mike Parent"
+            "Mike Parent",
+            "Roger Trottier"
           ],
           "Ward 6": [
             "René Lapierre",
-            "Dan Boulard"
+            "Dan Boulard",
+            "Keegan Dutrisac"
           ],
           "Ward 7": [
-            "Natalie Labbée"
+            "Natalie Labbee",
+            "Aaron Walsh",
+            "Dave Rajotte"
           ],
           "Ward 8": [
             "George Lalonde",
             "Shawn Rossi",
-            "Karanbir Badhesha"
+            "Karanbir Badhesha",
+            "Natalie Tessier",
+            "Carla Ross-Arsenault"
           ],
           "Ward 9": [
-            "Carly Gasparini"
+            "Shawn Poland",
+            "Eddie Astgen",
+            "Carly Gasparini",
+            "Wanda Berton-Heyerichs",
+            "James Borg"
           ],
           "Ward 10": [
+            "Paul Stopciati",
+            "Derek Young",
             "Tay Butt",
             "Suzanne Seiling",
-            "Cora Demarco"
+            "Cora DeMarco",
+            "Trinity Mary Hollis",
+            "Cathan Pasanen"
           ],
           "Ward 11": [
             "Daniel Larocque",
-            "Shawn Ouimet"
+            "Shawn Ouimet",
+            "Bill Leduc",
+            "Mike Bleskie",
+            "Robert Rovinelli",
+            "Roxanne Tessier",
+            "Amy Voz"
           ],
           "Ward 12": [
+            "Matteo Raso",
             "Jeff MacIntyre",
-            "Ron Goswell"
+            "Ron Goswell",
+            "Colin McKerral",
+            "Linnet Rimmer"
           ]
         }
       }

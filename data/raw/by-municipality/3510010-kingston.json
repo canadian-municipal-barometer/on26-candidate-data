@@ -4,10 +4,12 @@
   "name_format": "first_last",
   "candidate_list_url": "https://www.cityofkingston.ca/council-and-city-administration/elections/candidates/candidate-list/",
   "notes": {
-    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "list_status": "Post-deadline list. Two withdrawals are marked '(withdrawn)' on the page and are excluded here: Stephen Cuthbertson from the mayoral race (he is a District 4 candidate) and Jago Garrett in District 10.",
     "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
     "district_names": "Kingston's wards are called districts and carry names; recorded here as published, e.g. 'District 1 - Countryside'.",
-    "structure_match": "12 district tables published, matching n_districts=12 in the structure CSV."
+    "structure_match": "12 district tables published, matching n_districts=12 in the structure CSV.",
+    "retrieved": "2026-08-24",
+    "name_changes": "Three names are published differently than on 2026-08-11: 'Grant William Bedard' is now 'Grant Bedard', 'Ryan Boehme' is now 'Ryan Nelson Boehme', and District 6's 'Jamshed Hassan' is now 'Jimmy Hassan'."
   },
   "races": {
     "mayor": [
@@ -23,7 +25,7 @@
             "Conny Glenn",
             "Vanessa Mensah",
             "Bryan Paterson",
-            "Grant William Bedard"
+            "Grant Bedard"
           ]
         }
       }
@@ -60,7 +62,8 @@
             "Don Amos"
           ],
           "District 6 - Trillium": [
-            "Jamshed Hassan"
+            "Prakash Dayal",
+            "Jimmy Hassan"
           ],
           "District 7 - Kingscourt-Rideau": [
             "Michael Judd",
@@ -77,7 +80,6 @@
           ],
           "District 10 - Sydenham": [
             "Andrew DaCosta",
-            "Jago Garrett",
             "Rajesh Kumar",
             "John Meligrana",
             "Annie Palone"
@@ -88,7 +90,7 @@
             "Greg Ridge"
           ],
           "District 12 - Pittsburgh": [
-            "Ryan Boehme",
+            "Ryan Nelson Boehme",
             "Matt McTaggart",
             "Chelsea Rae",
             "Zachary Typhair"

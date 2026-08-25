@@ -6,7 +6,8 @@
   "notes": {
     "list_status": "unofficial; nominations open until 2026-08-21 14:00",
     "source_note": "district_source_url in councillor-election-structure.csv points to the ward-system and council-members pages, which carry no candidates. Candidates were taken from the town's 'Unofficial List of Candidates' accordion on the Candidate Information page, reached by a link from the ward-system page.",
-    "structure_match": "6 ward tables published, matching n_districts=6 in the structure CSV."
+    "structure_match": "6 ward tables published, matching n_districts=6 in the structure CSV.",
+    "retrieved": "2026-08-24"
   },
   "races": {
     "mayor": [
@@ -21,7 +22,8 @@
           "At-large": [
             "Deane, Shawn",
             "Gallo, John",
-            "Mrakas, Tom"
+            "Mrakas, Tom",
+            "Shi, Yafang"
           ]
         }
       }
@@ -48,7 +50,9 @@
           "Ward 3": [
             "Alber, Nikki",
             "Bonham, Alexandra",
-            "Fraser, Robert James"
+            "Fraser, Robert James",
+            "MacDonald, Harold",
+            "Vaez Ghamsary, Reza"
           ],
           "Ward 4": [
             "Moledina, Shaheen",
@@ -58,10 +62,14 @@
             "Dela Cruz-Toupin, Charity",
             "Fraser, Jessie",
             "Hart, Milton",
-            "Thandi, Harbinder (Binda)"
+            "Thandi, Harbinder (Binda)",
+            "Tremtsidis, George",
+            "Zhu, Terrence"
           ],
           "Ward 6": [
+            "Kashef, Nicholas",
             "Khan, Jibraan",
+            "Kicic, Zivka",
             "Kim, Harold"
           ]
         }

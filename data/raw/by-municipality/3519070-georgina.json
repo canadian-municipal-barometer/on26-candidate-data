@@ -6,7 +6,9 @@
   "notes": {
     "list_status": "unofficial; nominations close 2026-08-21 14:00",
     "source_note": "district_source_url is the 2026 Election landing page; the 'Registered Candidates' tables live on the 2026 Candidate Information page (node/11536), reached from it.",
-    "structure_match": "One at-large Regional Councillor table plus Councillor Ward 1-5 tables, matching both structure-CSV rows."
+    "structure_match": "One at-large Regional Councillor table plus Councillor Ward 1-5 tables, matching both structure-CSV rows.",
+    "retrieved": "2026-08-24",
+    "withdrawals": "The ward tables carry a 'Date of Withdrawal' column. Three councillor candidates have one filled in and are excluded here: Shannon DeLenardo in Ward 2 (2026-08-14), Antonio Romans in Ward 4 (2026-08-13) and Bruce Adkins in Ward 5 (2026-08-21). The mayoral, regional councillor, Ward 1 and Ward 3 tables have no such column."
   },
   "races": {
     "mayor": [
@@ -20,7 +22,8 @@
         "districts": {
           "At-large": [
             "Dale Kerr Genge",
-            "Margaret Quirk"
+            "Margaret Quirk",
+            "Frank Sebo"
           ]
         }
       }
@@ -41,7 +44,6 @@
           "Ward 2": [
             "Natalie Floyd",
             "Mike Gurr",
-            "Shannon DeLenardo",
             "Dan Fellini",
             "Stephen Faudemer"
           ],
@@ -53,10 +55,10 @@
             "Dave Neeson"
           ],
           "Ward 4": [
-            "Antonio Romans",
             "Casey Sellers",
             "Mike Anderson",
-            "Ivy Henriksen"
+            "Ivy Henriksen",
+            "Greta Zinck"
           ],
           "Ward 5": [
             "Karen Wolfe",

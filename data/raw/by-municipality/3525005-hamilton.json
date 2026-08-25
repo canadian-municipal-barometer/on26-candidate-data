@@ -7,7 +7,10 @@
     "list_status": "unofficial; nominations close 2026-08-21 14:00",
     "source_note": "district_source_url is the city council members page; the candidate list sits under the Municipal Election section. The page is a tab widget (Mayor / Councillor / Trustee) with one accordion per ward, so labels come from the accordion buttons rather than headings.",
     "name_quirk": "Ward 2 lists 'Tompkins, Bernard-' with a trailing hyphen in the source; recorded as published.",
-    "structure_match": "15 ward accordions published, matching n_districts=15 in the structure CSV."
+    "structure_match": "15 ward accordions published, matching n_districts=15 in the structure CSV.",
+    "retrieved": "2026-08-24",
+    "withdrawals": "Four ward candidates carry a withdrawal suffix on the page and are excluded here: 'Myles, Dan - Withdrawn' in Ward 2, 'Douglas, Rod - WITHDRAWN' in Ward 4, 'Loomans, Michael T. - WITHDRAWN' in Ward 9 and 'Beattie, Jeff - WITHDRAWN' in Ward 10. Loomans is listed without the suffix in Ward 10, so he changed wards rather than leaving the ballot.",
+    "parse_check": "'Tompkins, Bernard-' is published with that trailing hyphen, as it was on 2026-08-11; it is the given name as the city prints it, not a dangling separator."
   },
   "races": {
     "mayor": [
@@ -22,11 +25,16 @@
           "At-large": [
             "Austin, Sasha",
             "Butt, Ejaz",
+            "Cherkewski, David Mark",
             "Cooper, Rob",
             "Fromm, Paul",
             "Gillespie, Scarlett",
+            "Harrison, David",
+            "Horwath, Andrea",
+            "Janus, Erin",
             "Loomis, Keanin",
             "Mitchell, Pamela",
+            "Walker, Kevin",
             "Yan, Nathalie Xian Yi"
           ]
         }
@@ -42,16 +50,18 @@
         "block_vote": false,
         "districts": {
           "Ward 1": [
+            "Paquette, Raymond R.",
+            "Powell, Mark",
             "Savelli, Nathan",
             "Wilson, Maureen"
           ],
           "Ward 2": [
             "Abdulkarim, Eisham",
+            "Elesie, Rodney",
             "Greene, Daniel",
             "Houston, Bill",
             "Kroetsch, Cameron",
             "Lewis, Brian",
-            "Myles, Dan",
             "Oucharek, Kelly",
             "Sciara, Tony",
             "Tompkins, Bernard-"
@@ -67,13 +77,16 @@
           ],
           "Ward 4": [
             "Anderson, Todd",
-            "Douglas, Rod",
             "Farr, Jason",
             "Hwang, Tammy",
-            "Mamone, Tony"
+            "Lambert, Jemma",
+            "Mamone, Tony",
+            "Tuff, Tobin"
           ],
           "Ward 5": [
-            "Francis, Matt"
+            "Francis, Matt",
+            "Khan, Ahmad",
+            "Maldonado, Juanita"
           ],
           "Ward 6": [
             "Debicki, Melissa",
@@ -87,8 +100,13 @@
             "Pauls, Esther"
           ],
           "Ward 8": [
+            "Damerchie, Nenos",
+            "Danko, Dawn",
+            "Morris, Jonathan",
+            "Piro, Pat",
+            "Taramov, Adlan",
             "Tenbrinke, Jacob",
-            "Danko, Dawn"
+            "Whitehead, Terry"
           ],
           "Ward 9": [
             "Clark, Brad",
@@ -99,15 +117,20 @@
           ],
           "Ward 10": [
             "DiFalco, Cal",
+            "Farago, Eugene",
             "Fung, Olivia",
             "Gamble, Sam",
             "Grewal, Akash",
             "Loomans, Michael T.",
+            "Luksic, Ivan",
             "Nijjar, Tanjoban",
+            "Paletta, Larry",
+            "Rigitano, Vince",
             "Trombetta, Nicole"
           ],
           "Ward 11": [
             "Mombourquette, Damon",
+            "Post, Aaron",
             "Tadeson, Mark"
           ],
           "Ward 12": [
@@ -115,8 +138,10 @@
             "Cassar, Craig"
           ],
           "Ward 13": [
+            "Aikema, Gary",
             "Kunc, Rick",
-            "Lieberman, Loren"
+            "Lieberman, Loren",
+            "Naylor, Spencer"
           ],
           "Ward 14": [
             "Damptey, Kojo",
@@ -124,6 +149,7 @@
           ],
           "Ward 15": [
             "Alford, Chase",
+            "Kovacs, Mary",
             "McMeekin, Ted",
             "Stewart, Colleen",
             "Wrobel, Zac",

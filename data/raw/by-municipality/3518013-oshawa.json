@@ -4,9 +4,12 @@
   "name_format": "first_last",
   "candidate_list_url": "https://www.oshawa.ca/city-hall/elections/registered-candidates/",
   "notes": {
-    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "list_status": "Certified; the page links the full list of Certified Candidates.",
     "source_note": "district_source_url is itself the candidate list; race labels come from each table's <caption>.",
-    "structure_match": "'Regional and City Councillor' and 'City Councillor' each have Ward 1-5 tables, matching both structure-CSV rows."
+    "structure_match": "'Regional and City Councillor' and 'City Councillor' each have Ward 1-5 tables, matching both structure-CSV rows.",
+    "retrieved": "2026-08-24",
+    "withdrawals": "Don Rockbrune's Ward 4 city councillor row reads 'Withdrawn (August 21, 2026)' in place of contact information and is excluded here.",
+    "name_change": "Ward 1's regional councillor was collected on 2026-08-11 as 'Martin Franseen'; the page now spells it 'Martin Franssen'."
   },
   "races": {
     "mayor": [
@@ -19,8 +22,10 @@
         "block_vote": false,
         "districts": {
           "At-large": [
+            "Sherland Chhangur",
             "Michael Coons",
             "Derek Giberson",
+            "Jeremy Large",
             "Jim Lee",
             "Tito-Dante Marimpietri",
             "Henry Onwuachu",
@@ -47,30 +52,38 @@
             "Omar Wisdom"
           ],
           "Ward 2": [
+            "Avik Banerjee",
             "Sarah Chiapparro",
+            "Liam Fraser",
             "Jane Hurst",
             "John R.E. Sturdy"
           ],
           "Ward 3": [
+            "Miguel Araujo",
             "Roger Bouma",
+            "Sam Howes",
             "Sylwia Lesner",
+            "Rahul Padmini Soumian",
+            "Shailene Panylo",
             "Matthew Schaffer"
           ],
           "Ward 4": [
+            "Domenic Albis",
+            "Lisa Freeman",
             "Theresa Grant",
             "Eric Guernsey",
-            "Jose Morales",
             "Edouard Nwaha Gwet",
+            "Pauline Mwangi",
+            "Jose Morales",
             "Deb Oldfield",
-            "Don Rockbrune",
-            "Dave Thompson",
-            "Domenic Albis"
+            "Dave Thompson"
           ],
           "Ward 5": [
             "Todd Forbes",
             "Siddharth (Sid) Goyal",
             "John Gray",
             "Adedeji Ibinayo",
+            "Scheshawna Lemaire",
             "Christeen Elizabeth Thornton"
           ]
         }
@@ -87,14 +100,19 @@
         "districts": {
           "Ward 1": [
             "Christopher Biancaniello",
-            "Martin Franseen"
+            "Nadea Clarke",
+            "Martin Franssen",
+            "Selvan Sinnadurai"
           ],
           "Ward 2": [
             "Cameron Anderson",
             "Bradley Marks"
           ],
           "Ward 3": [
-            "Robert (Bob) Chapman"
+            "Robert (Bob) Chapman",
+            "Timothy Dobson",
+            "Katherine Pollard",
+            "Javed Rizwan"
           ],
           "Ward 4": [
             "Jeff Davis",

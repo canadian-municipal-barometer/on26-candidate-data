@@ -4,10 +4,13 @@
   "name_format": "last_first",
   "candidate_list_url": "https://guelph.ca/city-government/mayor-and-council/municipal-elections/candidates-of-the-2026-municipal-and-school-board-election/",
   "notes": {
-    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "list_status": "Certified. The page reads 'The Official List of Certified Candidates for the 2026 Municipal and School Board Election Is Now Available.'",
     "source_note": "district_source_url is the council-composition page; the candidate list sits under the Municipal Elections section.",
     "name_quirk": "One mayoral candidate is published as 'Ramos, Jr., Evaristo' - the suffix carries its own comma, so the surname is 'Ramos, Jr.' and the given name 'Evaristo'.",
-    "structure_match": "6 ward tables published, matching n_districts=6 in the structure CSV (2 seats per ward, vote-for-2)."
+    "structure_match": "6 ward tables published, matching n_districts=6 in the structure CSV (2 seats per ward, vote-for-2).",
+    "retrieved": "2026-08-24",
+    "withdrawals": "Three ward candidates carry a '(withdrawn)' suffix on the page and are excluded here: Klassen, Carly in Ward 2, and Crewson, Natalia and Jennings, Ross in Ward 3. Natalia Crewson also appears, without the suffix, as a Wellington Catholic District School Board candidate.",
+    "parse_check": "The page sets Laura McQuillen's surname as 'M<sup><sub>c</sub></sup>Quillen', which a naive text extraction renders 'M c Quillen'. Recorded as 'McQuillen, Laura'."
   },
   "races": {
     "mayor": [
@@ -22,8 +25,10 @@
           "At-large": [
             "Caron, Leanne",
             "Chew, Ken Yee",
+            "Krusky, John Edward",
             "Meunier, Ryan",
-            "Ramos, Jr., Evaristo"
+            "Ramos, Jr., Evaristo",
+            "Sinha, Rajee"
           ]
         }
       }
@@ -38,6 +43,7 @@
         "block_vote": true,
         "districts": {
           "Ward 1": [
+            "Corbin, Tammy",
             "Gibson, Dan",
             "Kaufmann, Daniel",
             "Lambert, Marcel Dion",
@@ -47,6 +53,7 @@
             "Zuberi, Mustafa"
           ],
           "Ward 2": [
+            "Barber, Michael",
             "Bowman, Michelle",
             "Bridgeman, Troy",
             "Cox, Greg",
@@ -59,8 +66,8 @@
           "Ward 3": [
             "Allt, Phil",
             "Bowman, Kevin",
-            "Jennings, Ross",
             "Maldonado, Annika",
+            "Richardson, Michele",
             "Williams, Marty"
           ],
           "Ward 4": [
@@ -78,13 +85,16 @@
             "Christensen, Jon",
             "Doran, James",
             "Downer, Cathy",
-            "Harris, Wesley"
+            "Harris, Wesley",
+            "Lui, Danny",
+            "White, Dylan"
           ],
           "Ward 6": [
             "Adam, Rebecca",
             "Coulis, Shane",
             "Devos, Luke",
             "Hauser, Katherine",
+            "Liu, Helen",
             "McQuillen, Laura"
           ]
         }

@@ -5,9 +5,13 @@
   "candidate_list_url": "https://app2.kitchener.ca/election/candidates.aspx",
   "notes": {
     "list_status": "unofficial; page states the list is updated until the 2026-08-21 14:00 deadline",
-    "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
-    "excluded_race": "The city publishes an at-large Regional Councillor race (11 candidates, 4 seats). Excluded from the study: its Regional Councillors sit on Regional Council and not on city council, so the seat is not one the survey asks about. The race is listed in notes/excluded-races.csv and dropped by scripts/build-candidates-raw.py, so it reaches neither candidates-raw.json nor the served file. The names stay here because this file is the record of what the city published.",
-    "other": "The Regional Chair no longer appears on the ballot: under the Better Regional Governance Act, 2026 (2026-05-07) it became a provincially appointed position and no nominations for it may be filed or accepted."
+    "source_note": "The page is now headed 'Certified List of Candidates - Municipal Council'; names sit under office headings as plain text with contact details beneath, not in a table.",
+    "excluded_race": "The regional councillor race is collected here but dropped by the build: see notes/excluded-races.csv. Kitchener's regional councillors sit on Regional Council, not on city council.",
+    "other": "The Regional Chair no longer appears on the ballot: under the Better Regional Governance Act, 2026 (2026-05-07) it became a provincially appointed position and no nominations for it may be filed or accepted.",
+    "retrieved": "2026-08-24",
+    "withdrawals": "Three names carry a '- [WITHDRAWN]' suffix and are excluded here: Nair, Nitin and Rose, Danielle in Ward 5, and Kolsawala, Sajid among the regional councillors. Sajid Mohamed Farooq Kolsawala appears separately as a Waterloo Region District School Board candidate.",
+    "name_change": "'Simson, Eve' among the regional councillors is now published as 'Simson, Eve Elizabeth'.",
+    "regional_chair": "The Regional Chair heading now carries only a notice that the Better Regional Governance Act, 2026 made the post a provincial appointment, that it will not appear on the ballot, and that nominations filed before the Act are deemed withdrawn. It is not a Kitchener council office and is not collected."
   },
   "races": {
     "mayor": [
@@ -22,8 +26,11 @@
           "At-large": [
             "Alton, David",
             "Frogh, Wazhma",
+            "Khan, Wali",
+            "Nair, Manikantan",
             "Trihenea, George",
-            "Vrbanovic, Berry"
+            "Vrbanovic, Berry",
+            "Ward, Cindy"
           ]
         }
       }
@@ -38,7 +45,10 @@
         "block_vote": false,
         "districts": {
           "Ward 1": [
-            "Davey, Scott"
+            "Bate, Elizabeth",
+            "Davey, Scott",
+            "Kiflai, Haile",
+            "Mahmood, Zahid Mian"
           ],
           "Ward 2": [
             "Ibrahim, Soran",
@@ -46,6 +56,7 @@
             "Schnider, Dave"
           ],
           "Ward 3": [
+            "Bradshaw, Shawn",
             "Delaney-Fraser, Joanne",
             "Deneault, Jason",
             "Jordao, Lurdes",
@@ -53,40 +64,49 @@
             "Parker, Matt"
           ],
           "Ward 4": [
+            "Jain, Anant",
             "Kappaya, Ibraheem",
             "Michaud, Christine",
             "Poirier, Vikki",
             "Scanlan, Harry"
           ],
           "Ward 5": [
+            "Bahlbi, Nate",
             "Birdee, Dimple",
             "Hudda, Muhammad Miqdad",
             "Massimi, Jon",
-            "Nair, Nitin",
             "Peers, Rich",
-            "Rose, Danielle",
+            "Sandhu, Navjot",
             "Sehli, Sumit",
             "Vanderpool, Fitz",
             "Weiler, Tracey"
           ],
           "Ward 6": [
+            "Culley, Amber Louise",
             "Singh, Paul",
             "Wallis, Brooklin"
           ],
           "Ward 7": [
             "Ioannidis, Bil",
+            "Nanan, Richie",
             "Rollick, Nikki"
           ],
           "Ward 8": [
+            "Creighton, Wendy",
             "Johnston, Margaret",
+            "Molto, Philip",
             "Pettinger, Carly"
           ],
           "Ward 9": [
+            "Askalany, Mohamed",
             "Chapman, Debbie",
             "Willcox, Tim"
           ],
           "Ward 10": [
+            "Dixon, Everton",
             "Nabi, Sam",
+            "Piluk, Peter Gordon",
+            "Rehman, Aalaa",
             "Stretch, Stephanie"
           ]
         }
@@ -102,16 +122,17 @@
         "block_vote": null,
         "districts": {
           "At-large": [
+            "Edwards, Ed",
             "Gowing, Joe",
             "Graham, Mac",
             "Guthrie, Simon",
             "Harris, Michael",
             "Huxted, Kim",
             "James, Colleen",
-            "Kolsawala, Sajid",
             "Meksavanh, Anna",
             "Rodrigues, Matt",
-            "Simson, Eve",
+            "Simson, Eve Elizabeth",
+            "White, Kevin",
             "Wisniewski, Michael"
           ]
         }

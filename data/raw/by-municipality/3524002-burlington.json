@@ -4,10 +4,11 @@
   "name_format": "first_last",
   "candidate_list_url": "https://myvote.burlington.ca/for-voters/list-of-candidates/",
   "notes": {
-    "list_status": "unofficial; nominations close 2026-08-21 14:00",
-    "source_note": "district_source_url is the council-members-and-wards page. Burlington moved all 2026 election content to a separate site, myvote.burlington.ca; the list of candidates lives there. The city's own elections.aspx page no longer links a candidate list directly.",
+    "list_status": "Certified. The page reads 'List of certified candidates in the 2026 municipal and school board election' and stamps itself 'Last updated: Monday, Aug. 24, 2026 at 2:00 p.m.'",
+    "source_note": "The names are laid out as headings with contact details beneath rather than in a table; each office heading is followed by its candidates. Burlington's ward seat is a single combined 'City and Regional Councillor' office, so there is no separate regional councillor race.",
     "race_type_choice": "Burlington's single councillor race is 'City and Regional Councillor' - one ward-based contest whose winners sit on both councils. It is filed under 'ward' because it is the municipality's only ward council race, not under 'regional councillor'.",
-    "structure_match": "6 ward tables published, matching n_districts=6 in the structure CSV."
+    "structure_match": "6 ward tables published, matching n_districts=6 in the structure CSV.",
+    "retrieved": "2026-08-24"
   },
   "races": {
     "mayor": [
@@ -23,7 +24,8 @@
             "Keith Demoe",
             "Lisa Kearns",
             "Marianne Meed Ward",
-            "Rory Nisan"
+            "Rory Nisan",
+            "Yugalkeesor Ramdhonee"
           ]
         }
       }
@@ -40,6 +42,7 @@
           "Ward 1": [
             "Kelvin Galbraith",
             "Cheryl Hurst",
+            "James Kerr",
             "Robert Radway"
           ],
           "Ward 2": [
@@ -51,6 +54,7 @@
           "Ward 3": [
             "Tony Brecknock",
             "Mark Carr",
+            "Lisa Cooper",
             "Kyle Hutton",
             "Katy Moore"
           ],
@@ -61,14 +65,17 @@
           "Ward 5": [
             "Kristy Dickinson",
             "Alex Don",
+            "Brian Machan",
             "Paul Sharman"
           ],
           "Ward 6": [
             "Osob Adus",
             "Angelo Bentivegna",
+            "Bianca Bielski",
             "Chris Bouchard",
             "Frank Domenic",
-            "Rowen Fraser"
+            "Rowen Fraser",
+            "Edmond Jodhi"
           ]
         }
       }

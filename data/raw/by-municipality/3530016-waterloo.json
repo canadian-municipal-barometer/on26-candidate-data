@@ -4,13 +4,15 @@
   "name_format": "caps_surname",
   "candidate_list_url": "https://www.waterloo.ca/council-and-committees/municipal-elections/find-election-candidates/",
   "notes": {
-    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "list_status": "Certified. The page reads 'The official certified lists of candidates for the City of Waterloo 2026 municipal election can be found below.'",
     "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
-    "name_format_note": "Surnames are printed in CAPS and given names in mixed case, so multi-word names such as 'Ying Susan JIANG' and 'Sarvesh Pratap SINGH' split unambiguously.",
+    "name_format_note": "Ward 7's first candidate is published as the single word 'ABDULLAH', with no given name, alongside the campaign email hi@voteforabdullah.ca. Under caps_surname that is a bare surname, the same shape as Brampton's 'Gursimranjit Singh, -'.",
     "incomplete_warning": "Only one mayoral candidate (Dorothy McCabe) and one Ward 1 and Ward 7 candidate each had filed as of 2026-08-11.",
     "structure_match": "Ward 1-7 councillor tables, matching n_districts=7 in the structure CSV. The page's at-large Regional Councillor table is the excluded race below.",
-    "excluded_race": "The page also carries an at-large Regional Councillor race (4 candidates, 2 seats). Excluded from the study: its Regional Councillors sit on Regional Council and not on city council, so the seat is not one the survey asks about. The race is listed in notes/excluded-races.csv and dropped by scripts/build-candidates-raw.py, so it reaches neither candidates-raw.json nor the served file. The names stay here because this file is the record of what the city published.",
-    "other": "The page also lists a Regional Chair race (Nina Deeb), which is not a Waterloo council seat and is not recorded here."
+    "excluded_race": "The regional councillor race is collected here but dropped by the build: see notes/excluded-races.csv. Waterloo's regional councillors sit on Regional Council, not on city council.",
+    "other": "The page also lists a Regional Chair race (Nina Deeb), which is not a Waterloo council seat and is not recorded here.",
+    "retrieved": "2026-08-24",
+    "regional_chair": "The Regional Chair contest carries only a withdrawn nomination (Nina DEEB) under a notice that nominations filed before the Better Regional Governance Act, 2026 are deemed withdrawn. It is not a Waterloo council office and is not collected."
   },
   "races": {
     "mayor": [
@@ -23,7 +25,11 @@
         "block_vote": false,
         "districts": {
           "At-large": [
-            "Dorothy MCCABE"
+            "Jeyas BALASKANTHAN",
+            "Jamie HARI",
+            "Jerry JIANG",
+            "Dorothy MCCABE",
+            "Shannon WEBER"
           ]
         }
       }
@@ -38,6 +44,7 @@
         "block_vote": true,
         "districts": {
           "Ward 1": [
+            "Joel BOTTER",
             "Sandra HANMER"
           ],
           "Ward 2": [
@@ -45,7 +52,9 @@
             "Khaled BERBASH",
             "Shawn HUMES",
             "Ying Susan JIANG",
-            "Venkat KONDAM"
+            "Venkat KONDAM",
+            "Moraa MOCHAMA",
+            "Janice MOORE"
           ],
           "Ward 3": [
             "Hans ROACH",
@@ -53,7 +62,8 @@
           ],
           "Ward 4": [
             "Diane FREEMAN",
-            "Travis RESTOULE"
+            "Travis RESTOULE",
+            "Syed TIRMIZI"
           ],
           "Ward 5": [
             "Eda DEDE",
@@ -67,6 +77,7 @@
             "Mary Lou ROE"
           ],
           "Ward 7": [
+            "ABDULLAH",
             "Julie WRIGHT"
           ]
         }
@@ -84,7 +95,10 @@
           "At-large": [
             "Jim ERB",
             "Chantal HUININK",
+            "Soo Bok LEE",
+            "Lindsay MANARY",
             "Chris MOSER",
+            "Rami SAID",
             "Sarvesh Pratap SINGH"
           ]
         }

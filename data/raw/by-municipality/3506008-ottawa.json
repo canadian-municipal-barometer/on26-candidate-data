@@ -2,12 +2,13 @@
   "census_id": "3506008",
   "csdname": "Ottawa",
   "name_format": "first_last",
-  "candidate_list_url": "https://ottawa.ca/en/city-hall/elections/candidates/nominated-candidates",
+  "candidate_list_url": "https://ottawa.ca/en/city-hall/elections/candidates/certified-and-acclaimed-candidates",
   "notes": {
-    "source_note": "district_source_url is the 'Voting for Mayor and City Councillor' page. Ottawa publishes one page per ward under /candidates/nominated-candidates/candidates-city-councillor/, plus a separate mayor page; all 24 ward pages were fetched.",
-    "ward_names": "Ottawa wards carry names; recorded as published, e.g. 'Ward 1 Orléans East-Cumberland'.",
+    "source_note": "candidate_list_url moved: /candidates/nominated-candidates now redirects to /candidates/certified-and-acclaimed-candidates, which links one page per office — a mayoral page and 24 ward pages under /certified-and-acclaimed-candidates-city-councillor/. All 25 were read. ottawa.ca sits behind an Incapsula bot filter that returns a JavaScript challenge to a plain fetch, so the pages were opened in a browser and the ward pages fetched same-origin from it.",
+    "ward_names": "Ottawa wards carry names; recorded as published, e.g. 'Ward 1 Orléans East-Cumberland'. Two keys changed with the move to the certified pages: the stray space in 'Ward 11 Beacon Hill- Cyrville' and 'Ward 19 Orléans South- Navan' is gone, so they are now 'Ward 11 Beacon Hill-Cyrville' and 'Ward 19 Orléans South-Navan'. The survey matches respondents to a ward by this string, so its embedded ward names have to move with them.",
     "structure_match": "24 ward pages published, matching n_districts=24 in the structure CSV.",
-    "list_status": "unofficial; the city updates its candidate lists regularly through the nomination period. Nominations close 2026-08-21 14:00."
+    "list_status": "Certified. The section is titled 'Certified and acclaimed candidates'; two ward pages are headed 'Acclaimed candidate for ...' — Ward 16 River (Riley Brockington) and Ward 21 Rideau-Jock (David Brown) — and each has the single candidate that heading implies, so the build derives the same result from the count.",
+    "withdrawals": "Withdrawn nominations are on their own page and are already absent from the certified lists. Three of its six rows are council offices: Peter Westaway (Councillor, Ward 9), Adriana Galan (Councillor, Ward 6) and Michelle Groulx (Councillor, Ward 15). Westaway is a certified mayoral candidate, and Donna Blackburn, who withdrew as an OCDSB trustee, is a certified Ward 3 councillor candidate."
   },
   "races": {
     "mayor": [
@@ -26,7 +27,14 @@
             "Mark Sutcliffe",
             "Zed Chebib",
             "Peter Westaway",
-            "Suraj Harish"
+            "Suraj Harish",
+            "Queen Divine Priya Amber Bakshi",
+            "Bernard Couchman",
+            "Ali Shayvard",
+            "Jacob Solomon",
+            "Amjad Ali Syed",
+            "Josh Rachlis",
+            "Geoff Nicholas"
           ]
         }
       }
@@ -51,18 +59,23 @@
           ],
           "Ward 2 Orléans West-Innes": [
             "Laura Dudas",
-            "Jenna Jessop"
+            "Jenna Jessop",
+            "David Purchase"
           ],
           "Ward 3 Barrhaven West": [
             "David Hill",
-            "Donna Blackburn"
+            "Donna Blackburn",
+            "Jeff Balys"
           ],
           "Ward 4 Kanata North": [
-            "Cathy Curry"
+            "Cathy Curry",
+            "James Murchison",
+            "Rob Millan"
           ],
           "Ward 5 West Carleton": [
             "Christine Harrison",
-            "Clarke Kelly"
+            "Clarke Kelly",
+            "Dylan Nose"
           ],
           "Ward 6 Stittsville": [
             "Chelsea Walton",
@@ -72,7 +85,8 @@
             "Theresa Qadri",
             "Kevin Hua",
             "Marie-Ange Yindaki Ahinful",
-            "Paul Meek"
+            "Paul Meek",
+            "Devin Michael Fitzgerald O'Brien"
           ],
           "Ward 7 Bay": [
             "Theresa Kavanagh",
@@ -80,7 +94,8 @@
             "Butch Moore"
           ],
           "Ward 8 College": [
-            "Laine Johnson"
+            "Laine Johnson",
+            "Malloum Abakar"
           ],
           "Ward 9 Knoxdale-Merivale": [
             "Cole Fraser Jones",
@@ -91,15 +106,22 @@
           "Ward 10 Gloucester-Southgate": [
             "John Redins",
             "Donna Dickson",
-            "Jessica Bradley"
+            "Jessica Bradley",
+            "Ahmed Rashid",
+            "Ayub Omar"
           ],
-          "Ward 11 Beacon Hill- Cyrville": [
+          "Ward 11 Beacon Hill-Cyrville": [
             "Cathryne Milburn",
-            "Tim Tierney"
+            "Tim Tierney",
+            "Coreen Corcoran"
           ],
           "Ward 12 Rideau-Vanier": [
             "Lyra Evans",
-            "Stéphanie Plante"
+            "Stéphanie Plante",
+            "Eric Smith",
+            "Brian Paquette",
+            "Michael Karl Sewanaku",
+            "Julie Fiala Chartrand"
           ],
           "Ward 13 Rideau-Rockcliffe": [
             "Peter J. Karwacki",
@@ -115,7 +137,8 @@
           "Ward 15 Kitchissippi": [
             "Joanne Chianello",
             "Subhir Uppal",
-            "Brian Innes"
+            "Brian Innes",
+            "Xavier Commerford"
           ],
           "Ward 16 River": [
             "Riley Brockington"
@@ -128,14 +151,17 @@
           "Ward 18 Alta Vista": [
             "Tressy El-Hawi",
             "Marty Carr",
-            "Derek McSweeney"
+            "Derek McSweeney",
+            "Muhyadin Omar Barkhat",
+            "Elsa Niyongabo"
           ],
-          "Ward 19 Orléans South- Navan": [
+          "Ward 19 Orléans South-Navan": [
             "Jason Wing",
             "Catherine Kitts"
           ],
           "Ward 20 Osgoode": [
-            "Isabelle Skalski"
+            "Isabelle Skalski",
+            "Bruce Anthony Faulkner"
           ],
           "Ward 21 Rideau-Jock": [
             "David Brown"
@@ -154,7 +180,8 @@
             "Wilson Lo",
             "Zahy A Adam",
             "Jules Ruhinda",
-            "Yoosaf Melparamba"
+            "Yoosaf Melparamba",
+            "Ahmed Alsabaawi"
           ]
         }
       }

@@ -4,10 +4,12 @@
   "name_format": "first_last",
   "candidate_list_url": "https://www.thunderbay.ca/en/city-hall/2026-municipal-election.aspx",
   "notes": {
-    "list_status": "The page states outright that those listed 'are not official candidates until their nomination has been certified by the City Clerk', before 16:00 on 2026-08-24.",
+    "list_status": "Certified. Every race on the page is headed 'The following candidates have been certified as of 4:00 pm on August 24, 2026.', which is the deadline the pre-deadline note pointed to.",
     "source_note": "district_source_url is itself the candidate list; races are accordions.",
-    "parse_check": "Some names are split across nested tags (e.g. 'Stéphane Léonard Kuziora', 'Volker Kromm'), so a <strong>-based parse fragmented them and overcounted the mayoral race as 9. Names were rebuilt by walking child nodes and flushing at each phone/email boundary, giving 8 mayoral candidates.",
-    "structure_match": "The page's own headings read 'At Large Councillor - Five (5) to be elected' and name seven single-member wards (Current River, McIntyre, McKellar, Neebing, Northwood, Red River, Westfort). This independently confirms both structure-CSV rows, including max_votes=5 for the at-large race, which SOURCES.md had flagged as resting partly on 2022 sources."
+    "parse_check": "The nested-tag problem noted on 2026-08-11 is still there and still needs the same handling: a plain text extraction splits 'Volker Kromm' after the V and 'Stéphane Léonard Kuziora' at both accented letters. The counts here are the accordion headings' own: 10 mayoral, 14 at-large and 22 ward candidates.",
+    "structure_match": "The headings still read 'Mayor - One (1) to be elected', 'At Large Councillor - Five (5) to be elected' and one '... Ward Councillor - One (1) to be elected' per ward, confirming both structure-CSV rows including max_votes=5 for the at-large race.",
+    "retrieved": "2026-08-24",
+    "cross_race": "Clinton Harris was a mayoral candidate on 2026-08-11 and is certified in the Westfort ward race instead."
   },
   "races": {
     "mayor": [
@@ -24,10 +26,12 @@
             "Maureen (Moe) Comuzzi",
             "Volker Kromm",
             "Peter Mark John Diedrich",
-            "Clinton Harris",
             "Donald Baxter",
             "Shane Judge",
-            "Aldo Ruberto"
+            "Aldo Ruberto",
+            "Peter Panetta",
+            "Wolfgang Schoor",
+            "Doug Vincent"
           ]
         }
       }
@@ -48,7 +52,14 @@
             "Dino Menei",
             "Mark Bentz",
             "Gary Christian",
-            "Jamie Nichols"
+            "Jamie Nichols",
+            "Patrick George Cully",
+            "Rajni Agarwal",
+            "Tyler Goode",
+            "Heather K. Dahlstrom",
+            "Stephanie Danylko",
+            "Julie Colquhoun",
+            "Gene Capar"
           ]
         }
       }
@@ -67,24 +78,36 @@
             "Stéphane Léonard Kuziora"
           ],
           "McIntyre": [
-            "Albert Aiello"
+            "Albert Aiello",
+            "Brian Phillips"
           ],
           "McKellar": [
             "Donna Lee Morettin",
-            "Brian Hamilton"
+            "Brian Hamilton",
+            "Marco Cupelli",
+            "Tony DiPaolo",
+            "Tracey MacKinnon"
           ],
           "Neebing": [
-            "Greg Johnsen"
+            "Greg Johnsen",
+            "John Warren Beals"
           ],
           "Northwood": [
             "André Gagné",
-            "Syed Kabir"
+            "Syed Kabir",
+            "John Ongaro"
           ],
           "Red River": [
-            "Cory Bagdon"
+            "Cory Bagdon",
+            "Michael Giardetti",
+            "Jamie Scrimger",
+            "John Murray",
+            "Dino Cicchitano"
           ],
           "Westfort": [
-            "Stephen Margarit"
+            "Stephen Margarit",
+            "Clinton Harris",
+            "Angel Gamble"
           ]
         }
       }

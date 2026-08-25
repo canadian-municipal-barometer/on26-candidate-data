@@ -4,9 +4,10 @@
   "name_format": "first_last",
   "candidate_list_url": "https://www.clarington.net/clarington-elections/voters/whos-running/",
   "notes": {
-    "list_status": "unofficial; nominations close 2026-08-21 14:00",
-    "source_note": "district_source_url is itself the candidate list; a single table with an 'Electoral Position' column gives each candidate's race.",
-    "structure_match": "Local Councillor appears for Wards 1-4 and Regional Councillor for the pairs 'Wards 1 and 2' and 'Wards 3 and 4', matching both structure-CSV rows."
+    "list_status": "Post-deadline; the page states 'The nomination period is now closed.' It does not use the word certified for the council races, and marks no council candidate withdrawn or acclaimed. Its only 'Acclaimed' headings are on three school board trustee tables.",
+    "source_note": "Clarington elects its regional councillors from ward pairs, and the page's headings say so: 'Candidates - Regional Councillor Wards 1 and 2' and 'Wards 3 and 4'.",
+    "structure_match": "Local Councillor appears for Wards 1-4 and Regional Councillor for the pairs 'Wards 1 and 2' and 'Wards 3 and 4', matching both structure-CSV rows.",
+    "retrieved": "2026-08-24"
   },
   "races": {
     "mayor": [
@@ -19,8 +20,8 @@
         "block_vote": false,
         "districts": {
           "At-large": [
-            "Adrian Foster",
-            "Tom Dingwall"
+            "Tom Dingwall",
+            "Adrian Foster"
           ]
         }
       }
@@ -40,16 +41,21 @@
           ],
           "Ward 2": [
             "Chris Aucoin",
-            "Bernard Sanchez",
-            "Jason Kay"
+            "Kathleen Flynn",
+            "Joshua Glover",
+            "Jason Kay",
+            "Bernard Sanchez"
           ],
           "Ward 3": [
             "Mike Mokhtar",
-            "Kyle Templeton"
+            "Kyle Templeton",
+            "Corinna Traill",
+            "Thomas Zekveld"
           ],
           "Ward 4": [
+            "Andrew McVey",
             "Denise Robinson",
-            "Andrew McVey"
+            "Margaret Zwart"
           ]
         }
       }
@@ -69,7 +75,8 @@
           ],
           "Wards 3 and 4": [
             "Kannan Nair",
-            "Kevin Taylor"
+            "Kevin Taylor",
+            "Willie Woo"
           ]
         }
       }

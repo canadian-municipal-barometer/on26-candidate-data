@@ -4,10 +4,12 @@
   "name_format": "caps_surname",
   "candidate_list_url": "https://www.pickering.ca/council-city-administration/elections/who-is-running/",
   "notes": {
-    "list_status": "unofficial; nominations close 2026-08-21 14:00",
+    "list_status": "Certified. The page reads 'The following list contains all the Certified Candidates for the 2026 Municipal Election.'",
     "source_note": "district_source_url is the Offices to be Elected page, which confirms the six council offices but lists no candidates; the 'Who is Running?' page was used.",
     "name_format_note": "Surnames are printed in CAPS, so the surname boundary is usually unambiguous. One mayoral candidate, 'Andrea Wood', is published in mixed case; splitting falls back to the final token for that name.",
-    "structure_match": "Regional Councillor and City Councillor each have Ward 1-3 entries, matching both structure-CSV rows."
+    "structure_match": "Regional Councillor and City Councillor each have Ward 1-3 entries, matching both structure-CSV rows.",
+    "retrieved": "2026-08-24",
+    "withdrawals": "Two names carry a '- WITHDRAWN' suffix on the page and are excluded here: Zubahir MOHAMED as regional councillor for Ward 1, and Laurin JEFFREY as city councillor for Ward 1. Zubahir MOHAMED is listed without the suffix as a Ward 1 city councillor candidate, so he moved between the two offices rather than leaving the ballot."
   },
   "races": {
     "mayor": [
@@ -22,9 +24,11 @@
           "At-large": [
             "Kevin ASHE",
             "Doug CORNELL",
+            "Janice FRAMPTON",
+            "Zargham RASOOL",
             "Shaun RICKARD",
             "Lisa ROBINSON",
-            "Andrea Wood"
+            "Andrea WOOD"
           ]
         }
       }
@@ -41,6 +45,7 @@
           "Ward 1": [
             "James BLAIR",
             "Abdullah MIR",
+            "Zubahir MOHAMED",
             "Jamie NYE",
             "Michael SAMLALSINGH",
             "Jeremy STEINHAUSEN",
@@ -74,9 +79,11 @@
           ],
           "Ward 2": [
             "Linda COOK",
+            "Bushra RASOOL",
             "Nancy VAN ROOY"
           ],
           "Ward 3": [
+            "Azmat MUJEEB",
             "David PICKLES"
           ]
         }

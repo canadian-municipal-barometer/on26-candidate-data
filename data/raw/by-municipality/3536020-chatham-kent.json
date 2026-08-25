@@ -4,10 +4,11 @@
   "name_format": "last_first",
   "candidate_list_url": "https://www.chatham-kent.ca/localgovernment/elections/Pages/Candidates.aspx",
   "notes": {
-    "list_status": "unofficial; page states it is updated daily through the nomination period (2026-05-01 to 2026-08-21)",
-    "source_note": "district_source_url is the election landing page; candidates live one hop away on Pages/Candidates.aspx.",
-    "structure_match": "Candidate page prints '(Number to be elected - N)' per ward: 2 for wards 1,2,5,6,7,8 and 1 for wards 3,4. This independently confirms both structure-CSV rows (max_votes 2 and 1).",
-    "ward_names": "Ward numbers carry local names on the source page; recorded here as 'Ward N - Name'."
+    "list_status": "Certified. The page is now titled 'Certified Candidates' and reads 'This page includes candidates certified by the Municipal Clerk in accordance with the Municipal Elections Act.' It marks no candidate withdrawn or acclaimed.",
+    "source_note": "candidate_list_url is unchanged, but the page's races are now SharePoint accordions built by script: a plain fetch returns the heading and intro only, and the earlier scrape picked up the sitting-councillors list instead. Read in the browser with the collapsed panels opened. Each candidate is one line, 'Surname, Given - email - filing date', and the separators mix hyphens and en dashes.",
+    "structure_match": "Candidate page still prints '(Number to be elected - N)' per ward: 2 for wards 1, 2, 5, 6, 7, 8 and 1 for wards 3, 4. This independently confirms both structure-CSV rows (max_votes 2 and 1). The mayoral panel prints no such line.",
+    "ward_names": "Ward numbers carry local names on the source page, which writes them with an en dash; recorded here as 'Ward N - Name'.",
+    "retrieved": "2026-08-24"
   },
   "races": {
     "mayor": [
@@ -24,6 +25,7 @@
             "Bondy, Michael",
             "Burm, Nelson",
             "Canniff, Darrin",
+            "Colby, April",
             "Gow, Ryan",
             "Hope, Randy"
           ]
@@ -60,6 +62,7 @@
             "Tariq, Hassan"
           ],
           "Ward 5 - Wallaceburg & Area": [
+            "Arends, Bill",
             "Authier, Brendan",
             "Bailey, Loree",
             "Blake, Jim",
@@ -70,6 +73,8 @@
             "DeNure, Brent",
             "Hyatt, David",
             "Nicholson, Zac",
+            "Stewart, Victoria",
+            "Wolsing, Bill",
             "Young, Chris"
           ],
           "Ward 6 - North West Chatham": [
@@ -78,26 +83,34 @@
             "Machado, F. Brian",
             "Moir-Martin, Sheila",
             "Montgomery, Karen",
+            "Palmer, Dave",
+            "Pigeon, Bonny",
             "Storey, Alysson",
             "Westerman, Marc"
           ],
           "Ward 7 - North East Chatham": [
             "Adkins, Steve",
             "Crew, Marjorie",
+            "Duchesne, Penelope",
             "Fife, Michael",
             "Finn, Amy",
             "Gawne, Dustin (Duddee)",
             "Gibbons, Michael",
+            "Hottot, Rick",
             "Hutchins, Larry",
             "Kenney, Steve",
             "King, Marc",
+            "Meriano, Jonathan",
             "Reynolds, Jason",
             "Robbins, Doug",
             "Robinet, Karen",
-            "Ryan, Dustin"
+            "Ryan, Dustin",
+            "VanDusen, Dale"
           ],
           "Ward 8 - South Chatham": [
             "Allin, Conor",
+            "Caldwell, Bruce",
+            "Côté, Cynthia",
             "Dorner, Sandra",
             "Drouillard, Ryan",
             "Duquette, John",

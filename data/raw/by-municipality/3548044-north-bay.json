@@ -4,7 +4,7 @@
   "name_format": "last_first",
   "candidate_list_url": "https://northbay.ca/city-government/2026-elections/registered-candidates-and-third-party-advertisers/",
   "notes": {
-    "retrieved": "2026-08-12",
+    "retrieved": "2026-08-24",
     "list_status": "unofficial; the page states 'Candidate nominations are not final until certified after August 24' and that nominations are 'updated regularly as they are received'. Nominations close 2026-08-21 14:00.",
     "source_note": "district_source_url is the City's Municipal Elections page, which gives the offices but no names; the names are one hop away on the Registered Candidates and Third-Party Advertisers page. Names are published as 'SURNAME, First', so the split is unambiguous.",
     "structure_match": "One undifferentiated Councillor list under a single heading, with no wards anywhere on the page - which is the structure itself: North Bay elects its whole council in one at-large contest, matching the single structure-CSV row (n_districts 1, 10 seats, 10 votes).",
@@ -22,8 +22,10 @@
         "districts": {
           "At-large": [
             "CURRIE, Connor",
+            "DEMERS, Melanie",
             "HORSFIELD, Maggie",
-            "LOWERY, Jamie"
+            "LOWERY, Jamie",
+            "SEGUIN, Daniel"
           ]
         }
       }
@@ -38,17 +40,31 @@
         "block_vote": true,
         "districts": {
           "At-large": [
+            "ALLISON, Jordaan",
+            "BROUSSEAU, Johanne",
             "CORBETT, Caroline",
             "DALE, Dave",
             "DASS, Rahul",
+            "FINCH, TJ",
             "HENEBERRY, Myles",
             "INCH, Sara",
+            "KING, Mark",
+            "KRISTOLAITIS, Johanna",
+            "LACHANCE, Nathaniel",
+            "LACHOWSKI, Matthew",
             "LANGLOIS, Glen",
             "MALLAH, Justine",
             "MAYNE, Chris",
+            "MENDICINO, David",
+            "MITCHELL, Lana",
+            "MORGAN, Eric",
+            "PAROLIN, Terry",
+            "POITRAS, Louise",
             "SKINNER, Darryl",
+            "TAYLOR, Mike",
             "TILANDER, Randall",
-            "VREBOSCH, Bill"
+            "VREBOSCH, Bill",
+            "VREBOSCH, Tanya"
           ]
         }
       }

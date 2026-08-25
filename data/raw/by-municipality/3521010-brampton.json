@@ -5,9 +5,12 @@
   "candidate_list_url": "https://www.brampton.ca/EN/City-Hall/Election/Candidates/Pages/candidateListing.aspx",
   "notes": {
     "list_status": "unofficial; page says it is updated as nominations are received. Nominations close 2026-08-21 14:00.",
-    "source_note": "district_source_url points to an AMO 2022 page and the 2022 official-results PDF; neither lists 2026 candidates. The city's own 'List of Candidates' page was used. That page renders its list from JavaScript, so it was read in the browser rather than by plain fetch.",
-    "name_quirk": "One mayoral candidate is published as 'Gursimranjit Singh, -' with a placeholder given name; recorded as published, with first_name left empty.",
-    "structure_match": "Both City and Regional councillors are elected from the five ward pairs 1&5, 2&6, 3&4, 7&8, 9&10, matching both structure-CSV rows."
+    "source_note": "The listing is built by script behind 'Filter By Office / Filter By Ward / Sort By' controls and returns nothing to a plain fetch; read in the browser.",
+    "name_quirk": "The bare-surname case is gone from Brampton: 'Gursimranjit Singh, -' — the mayoral nomination the town published with '-' in place of a given name — is one of the withdrawals. Toronto's Ward 21 'Nisha Kumari, ' is now the study's only name published without a given name.",
+    "structure_match": "Both City and Regional councillors are elected from the five ward pairs 1&5, 2&6, 3&4, 7&8, 9&10, matching both structure-CSV rows.",
+    "retrieved": "2026-08-24",
+    "withdrawals": "Seven nominations carry a '(Withdrawn)' suffix and the line 'This candidate has withdrawn from this year's municipal election', and are excluded here: Dhaliwal, Avi; 'Gursimranjit Singh, -'; and Patel, Tirth Vinodkumar for mayor; Campbell, Chris for city councillor Wards 3, 4; Power, Rod for city councillor Wards 7, 8; and Dhillon, Ripudaman Singh and Fortini, Pat for regional councillor Wards 7, 8. Three of them moved rather than left: Power is a certified regional councillor candidate in the same ward pair, Dhillon a city councillor candidate in it, and Campbell a Peel District School Board candidate.",
+    "name_changes": "Two Wards 7, 8 city councillor names changed form: 'Sharma, Rakesh Singh' is now 'Sharma, Rakesh', and 'Soares, Monica' is now 'Singh Soares, Monica'."
   },
   "races": {
     "mayor": [
@@ -22,12 +25,15 @@
           "At-large": [
             "Bhatt, Jagruti",
             "Brown, Patrick",
-            "Dhaliwal, Avi",
+            "Dhothar, Gurdeep Singh",
             "Gautam, Vidya Sagar",
             "Gill, Prabh",
-            "Gursimranjit Singh, -",
-            "Patel, Tirth Vinodkumar",
+            "Jackson, Wesley",
+            "Khurram, Najma",
+            "Peart, Nathaniel",
+            "Sidhu, Prabhjot Kaur",
             "Somal, Sandeep",
+            "Tarriwal, Paul",
             "Walia, Gaurav"
           ]
         }
@@ -43,10 +49,13 @@
         "block_vote": false,
         "districts": {
           "Wards 1, 5": [
+            "Atwal, Gagandeep Singh",
+            "Bhinder, Tajinder Singh",
             "Brooks, Staceyann",
             "Dutta, Amit",
             "Pepe, Tracy Ann",
             "Santos, Rowena",
+            "Sidhu, Tejpal",
             "Tantalo, Romolo",
             "Williams, Khimani"
           ],
@@ -55,7 +64,10 @@
             "Chambers, Jermaine",
             "Deswal, Yadvinder",
             "Dhir, Raghav",
+            "Hassan, Amir Khawaja",
+            "Pabla, Gurpreet",
             "Shah, Keval",
+            "Thakur, Rakesh Singh",
             "Wilson, Carmen"
           ],
           "Wards 3, 4": [
@@ -63,14 +75,16 @@
             "Keenan, Dennis",
             "Khinda, Jugraj Singh",
             "Mujinga, Kaniki Karine",
-            "Randhawa, Santokh"
+            "Randhawa, Santokh",
+            "Seerha, Ajit"
           ],
           "Wards 7, 8": [
             "Brahmbhatt, Nayan",
+            "Dhillon, Ripudaman Singh",
             "Kahlon, Ayanna",
-            "Power, Rod",
-            "Sharma, Rakesh Singh",
-            "Soares, Monica"
+            "Khan, Ali",
+            "Sharma, Rakesh",
+            "Singh Soares, Monica"
           ],
           "Wards 9, 10": [
             "Gordon-Daniels, Janice",
@@ -78,6 +92,8 @@
             "Grewal, Jagdish Singh",
             "Hassan, Kamran",
             "Kumar, Sandeep",
+            "Nehal, Baljinder Singh",
+            "Rodricks, Cheryl",
             "Singh, Harkirat"
           ]
         }
@@ -95,34 +111,42 @@
           "Wards 1, 5": [
             "Lee, Steven",
             "Orughu, Idris",
-            "Vicente, Paul"
+            "Vicente, Paul",
+            "Walia, Pooja"
           ],
           "Wards 2, 6": [
             "Dogra, Romy",
             "Gill, Prempal",
+            "Luckasavitch, Julie",
             "Palleschi, Michael Paul",
             "Sharma, Parth",
             "Sran, Ajaib Singh",
             "Tandon, Sameer"
           ],
           "Wards 3, 4": [
+            "Choudhary, Manmeet Singh",
             "Goel, Sandeep Kumar",
+            "Lotey, Navneet Singh",
             "Medeiros, Martin"
           ],
           "Wards 7, 8": [
-            "Dhillon, Ripudaman Singh",
-            "Fortini, Pat",
+            "Power, Rod",
             "Sahajpal, Anil",
             "Sharma, Aman",
             "Soranno, Christopher",
+            "Sri Pragash, Cynthia",
             "Vyas, Vedaant"
           ],
           "Wards 9, 10": [
             "Dancy, Michael",
+            "Dhaliwal, Prabhjot Singh",
+            "Dhillon, Gurpreet K.",
             "Dhillon, Gurpreet Singh",
             "Johal, Satpaul Singh",
             "Madhu, Nirmala Devi",
-            "Sangha, Sukhman"
+            "Miller, Gregory",
+            "Sangha, Sukhman",
+            "Singh, Harsimran"
           ]
         }
       }

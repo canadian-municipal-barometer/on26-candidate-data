@@ -1,13 +1,16 @@
 {
   "census_id": "3538030",
   "csdname": "Sarnia",
-  "name_format": "first_last",
-  "candidate_list_url": "https://www.sarnia.ca/city-government/elections/2026-election/unofficial-list-of-candidates/",
+  "name_format": "last_first",
+  "candidate_list_url": "https://www.sarnia.ca/city-government/elections/2026-election/list-of-certified-candidates/",
   "notes": {
-    "list_status": "explicitly labelled 'Unofficial List of Candidates'; nominations open until 2026-08-21 14:00",
-    "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
+    "list_status": "Certified. The city has published a new 'List of Certified Candidates' page, and candidate_list_url now points at it rather than at the 'Unofficial List of Candidates' page used before the deadline.",
+    "source_note": "district_source_url is the same election section. Sarnia's second city-wide slate is the Lambton County council seat, recorded as the regional councillor race rather than a second at-large city contest.",
     "schema_note": "Sarnia elects two distinct slates of four councillors city-wide, on separate ballot lines: 'Councillor, City' sits on city council only and is keyed 'atlarge'; 'Councillor, City-County' sits on Lambton County council as well and is keyed 'regional councillor', the same key every other upper-tier seat in the study uses. Both are At-large scope - the key is the office's tier, not its geography - so the survey asks them as two questions and the export keeps a Sarnia respondent's county vote in the same columns as a Waterloo or York respondent's.",
-    "name_format": "Published as 'First Last', unlike most sources; name_raw preserves the published form."
+    "name_format": "Published as 'First Last', unlike most sources; name_raw preserves the published form.",
+    "retrieved": "2026-08-24",
+    "name_format_change": "The certified list prints names 'Last, First' ('Bradley, Mike'), where the unofficial list printed 'First Last', so name_format moved from first_last to last_first.",
+    "withdrawals": "The certified list already omits the six nominations the unofficial page marked 'Nomination Withdrawn': Chrissy McRoberts for mayor, Clara James and Hari Srinivasan as county councillors, and Ellen Marie Alonzo, Tony Marshall and Charmaine Murray as city councillors. Four of the six withdrew from one race and are certified in another — McRoberts and Murray as county councillors, James and Srinivasan as city councillors."
   },
   "races": {
     "mayor": [
@@ -20,10 +23,11 @@
         "block_vote": false,
         "districts": {
           "At-large": [
-            "Bill Dennis",
-            "Chrissy McRoberts",
-            "Scott Molson",
-            "Carrie McEachran"
+            "Bradley, Mike",
+            "Dennis, Bill",
+            "McEachran, Carrie",
+            "Molson, Scott",
+            "Stanko, George"
           ]
         }
       }
@@ -38,21 +42,27 @@
         "block_vote": true,
         "districts": {
           "At-large": [
-            "Stevie Devlin",
-            "Christopher Pettit",
-            "Josh Coutts-Smith",
-            "Jonathon Walker",
-            "Andrew Stokley",
-            "Ellen Marie Alonzo",
-            "Richard C (Dick) Felton",
-            "Scott Spinks Jr.",
-            "Clara James",
-            "Briana Reid",
-            "Hari Srinivasan",
-            "Terry Burrell",
-            "Honie Chumko",
-            "Ray McMaster",
-            "Lo-Anne Chan"
+            "Burrell, Terry",
+            "Chan, Lo-Anne",
+            "Chumko, Honie",
+            "Colquhoun, Nathan",
+            "Coutts-Smith, Josh",
+            "Devlin, Stevie",
+            "Felton, Richard C (Dick)",
+            "Ghobril, David",
+            "Gillis, Anne Marie",
+            "James, Clara",
+            "Mathieson, Tammy",
+            "McMaster, Ray",
+            "Oram, Christopher",
+            "Panjehbandpour (Phox), Roza",
+            "Parks, Michelle",
+            "Pettit, Christopher",
+            "Reid, Briana",
+            "Spinks, Scott Jr",
+            "Srinivasan, Hari",
+            "Stokley, Andrew",
+            "Walker, Jonathon"
           ]
         }
       }
@@ -67,19 +77,23 @@
         "block_vote": true,
         "districts": {
           "At-large": [
-            "Mark Lamore",
-            "Patrick Coutu",
-            "Paul Wiersma",
-            "George Vandenberg",
-            "John Richardson",
-            "Peter Goodman",
-            "Ed Gresham",
-            "Margaret Bird",
-            "Mario Fazio",
-            "Brian White",
-            "Andy Bruziewicz",
-            "Adam Kilner",
-            "Bill Anning"
+            "Anning, Bill",
+            "Bird, Margaret",
+            "Bruziewicz, Andy",
+            "Coutu, Patrick",
+            "Duffy, Al",
+            "Fazio, Mario",
+            "Goodman, Peter",
+            "Gresham, Ed",
+            "Kilner, Adam",
+            "Lamore, Mark",
+            "McRoberts, Chrissy",
+            "Murray, Charmaine",
+            "Richardson, John",
+            "Stark, Mike",
+            "Vandenberg, George",
+            "White, Brian",
+            "Wiersma, Paul"
           ]
         }
       }

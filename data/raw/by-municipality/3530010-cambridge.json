@@ -6,9 +6,12 @@
   "notes": {
     "list_status": "unofficial; page's own key dates give nominations closing 2026-08-21 and certification 2026-08-24",
     "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
-    "excluded_race": "The city publishes a 'Regional Councillors (Cambridge)' race (5 candidates, 2 seats). Excluded from the study: its Regional Councillors sit on Regional Council and not on city council, so the seat is not one the survey asks about. The race is listed in notes/excluded-races.csv and dropped by scripts/build-candidates-raw.py, so it reaches neither candidates-raw.json nor the served file. The names stay here because this file is the record of what the city published.",
+    "excluded_race": "The regional councillor race is collected here but dropped by the build: see notes/excluded-races.csv. Cambridge's regional councillors sit on Regional Council, not on city council. The page also carries a Regional Chair contest, which is not a Cambridge council office and is not collected.",
     "structure_match": "8 ward tables published, matching n_districts=8 in the structure CSV.",
-    "other": "The page also lists a Regional Chair race (1 candidate, Nina Deeb), which is not a Cambridge council seat and is not recorded here."
+    "other": "The page also lists a Regional Chair race (1 candidate, Nina Deeb), which is not a Cambridge council seat and is not recorded here.",
+    "retrieved": "2026-08-24",
+    "withdrawals": "Three council candidates have a withdrawal date in the table's own column and are excluded here: KENNEDY, Brian (2026-08-18) and KHAN, Shahzada Jalal (2026-08-20) in the mayoral race, and DANSON, Kristen in Ward 7.",
+    "name_change": "Ward 6's 'HARRINGTON, Barbara' is now published as 'HARRINGTON, Barbara A.'"
   },
   "races": {
     "mayor": [
@@ -22,10 +25,11 @@
         "districts": {
           "At-large": [
             "BOLENDER, Ryan",
+            "CHAVES, Tony",
             "HAMILTON, Scott",
-            "KENNEDY, Brian",
-            "KHAN, Shahzada Jalal",
-            "LIGGETT, Jan"
+            "HAQ, Ihtsham",
+            "LIGGETT, Jan",
+            "ROCHE, Ken"
           ]
         }
       }
@@ -41,18 +45,23 @@
         "districts": {
           "Ward 1": [
             "DONKERSGOED, Jeff",
+            "SHAIKH, Saleem",
             "SHWERY, Helen"
           ],
           "Ward 2": [
             "CRAIG, David",
-            "DEVINE, Mike"
+            "DEVINE, Mike",
+            "LINTON, Mark",
+            "ROGERS, Matt"
           ],
           "Ward 3": [
-            "KIMPSON, Corey"
+            "ABID, Kiran",
+            "KIMPSON, Corey",
+            "SPALDING, Shaun"
           ],
           "Ward 4": [
             "EARNSHAW, Ross",
-            "MALIK, Ahmad Jawad",
+            "MALIK, Jawad Ahmad",
             "O'HARA, David"
           ],
           "Ward 5": [
@@ -60,20 +69,23 @@
             "SHAH, Nazim"
           ],
           "Ward 6": [
-            "COOPER, Adam",
             "CARTER, Randy",
-            "HARRINGTON, Barbara",
+            "COOPER, Adam",
+            "HARRINGTON, Barbara A.",
             "MCCORMICK, Chris"
           ],
           "Ward 7": [
             "CHHADIYA, Tasneem",
-            "DANSON, Kristen",
+            "DA SILVA, Manuel",
             "GUERIN, David",
             "IESO, Dani",
             "TEAT, John"
           ],
           "Ward 8": [
+            "ALWARD, Chris",
+            "BOTELHO, Cody",
             "ERMETA, Nicholas",
+            "FIDDICK, George",
             "PANDIT, Arpan"
           ]
         }

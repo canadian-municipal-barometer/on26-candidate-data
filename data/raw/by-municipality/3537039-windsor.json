@@ -4,9 +4,10 @@
   "name_format": "first_last",
   "candidate_list_url": "https://citywindsor.ca/city-hall/municipal-election/who-is-running",
   "notes": {
-    "list_status": "unofficial; nominations close 2026-08-21 14:00",
-    "source_note": "district_source_url points at the Ward 2 page specifically. Windsor publishes one page per office under /who-is-running/; all eleven (mayor plus wards 1-10) were fetched.",
-    "structure_match": "Each ward page states 'For this office, you are entitled to vote for 1 (one) candidate', independently confirming max_votes=1 across all 10 wards in the structure CSV."
+    "list_status": "Post-deadline. None of the eleven pages contains the word withdrawn, and none marks a race acclaimed.",
+    "source_note": "The 'Who is Running' page carries no names of its own: it is an index linking one page per office, /who-is-running/Mayor and /who-is-running/councillor-ward-1..10, and each of those was fetched. On the office pages the candidates are headings, with contact lines and social links beneath, so the headings alone give the list. Every ward page states 'For this office, you are entitled to vote for 1 (one) candidate', confirming max_votes=1 across the 10 wards.",
+    "structure_match": "Each ward page states 'For this office, you are entitled to vote for 1 (one) candidate', independently confirming max_votes=1 across all 10 wards in the structure CSV.",
+    "retrieved": "2026-08-24"
   },
   "races": {
     "mayor": [
@@ -20,10 +21,16 @@
         "districts": {
           "At-large": [
             "Benjamin Danyluk",
+            "Aaron Day",
+            "Drew Dilkens",
             "Fred Francis",
+            "Dylon Graves",
             "Tara Grayer",
+            "Nick Kolasky",
+            "Tristan Ty Morencie",
             "Kat Pasquach",
-            "Patrick Sutherland"
+            "Patrick Sutherland",
+            "Louis Vaupotic"
           ]
         }
       }
@@ -38,35 +45,52 @@
         "block_vote": false,
         "districts": {
           "Ward 1": [
-            "Darcie Renaud"
+            "Henry De Cordova",
+            "Geoffrey D Guttmann",
+            "Shezi Jaffri",
+            "Brenda Juarez",
+            "Frank Providenti",
+            "Darcie Renaud",
+            "Linda Qin"
           ],
           "Ward 2": [
             "Frazier Fathers",
             "Anthony Jabbour",
-            "Nick Markham"
+            "Nick Markham",
+            "Cynthia Van Vrouwerff"
           ],
           "Ward 3": [
             "Renaldo Agostino",
-            "Rabia Kirma"
+            "Rabia Kirma",
+            "Randal Saccucci",
+            "Spiro S. Spiliadis"
           ],
           "Ward 4": [
+            "Mike Burton",
+            "Catherine Gariepy-Schulze",
             "Chris Holt",
-            "Rasha Zaid"
+            "Rasha Zaid",
+            "Xsander Moisenko"
           ],
           "Ward 5": [
             "Ken Acton",
+            "Farah Ahmed",
             "Alessandro Didone",
             "Natasha Elizabeth Feghali",
             "Shane Potvin"
           ],
           "Ward 6": [
             "Nick Jirgens",
+            "Denis Marier",
             "Hiral Munim",
+            "Wendi Nicholson",
             "Jeremy Renaud",
+            "Khassan Saka",
             "Owen Smith"
           ],
           "Ward 7": [
             "Angelo Marignani",
+            "Beth Ann Prince",
             "Victoria Soluade"
           ],
           "Ward 8": [
@@ -74,10 +98,13 @@
             "Kevin Racine"
           ],
           "Ward 9": [
-            "Kieran McKenzie"
+            "Kieran McKenzie",
+            "Soham Patel"
           ],
           "Ward 10": [
+            "Wally Chafchak",
             "Adam Ibrahim",
+            "Mark Masanovich",
             "Jim Morrison"
           ]
         }

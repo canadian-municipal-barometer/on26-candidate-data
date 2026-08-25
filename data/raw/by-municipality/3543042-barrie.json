@@ -4,10 +4,12 @@
   "name_format": "first_last",
   "candidate_list_url": "https://www.barrie.ca/government-news/2026-municipal-election/candidates-list",
   "notes": {
-    "list_status": "unofficial; nominations open until 2026-08-21 14:00",
+    "list_status": "Certified. The page reads 'The below lists certified candidates for the 2026 Municipal Election by office.'",
     "source_note": "district_source_url is the city council page, which carries no candidates; it links to the 2026 Municipal Election section whose 'Candidates List' page was used.",
-    "name_quirk": "One Ward 4 candidate is published as 'Lori Galeazza, she/her'; the pronoun suffix is stripped for name splitting and the published form is kept in name_raw.",
-    "structure_match": "10 ward tables published, matching n_districts=10 in the structure CSV."
+    "name_quirk": "Three candidates are published with a pronoun suffix — 'Lori Galeazza, she/her' in Ward 4, 'Nader Nasar George, he/him' in Ward 6 and 'Asmar Naveed, he/him' in Ward 9. The published form is kept, as it was for Galeazza on 2026-08-11; the suffix is stripped for name splitting.",
+    "structure_match": "10 ward tables published, matching n_districts=10 in the structure CSV.",
+    "retrieved": "2026-08-24",
+    "withdrawals": "Two ward rows are prefixed 'Withdrawn:' and carry the withdrawal time and the ward the candidate moved to; both are excluded from the ward they left. Samina Alim withdrew in Ward 7 on 2026-08-21 and is certified in Ward 8; Hafiz Rahman withdrew in Ward 10 on 2026-05-21 and is certified in Ward 1."
   },
   "races": {
     "mayor": [
@@ -22,7 +24,8 @@
           "At-large": [
             "Alex Nuttall",
             "Tanya Saari",
-            "Kay Sayer"
+            "Kay Sayer",
+            "Russell Tighe"
           ]
         }
       }
@@ -45,6 +48,7 @@
             "Pauline Stevenson"
           ],
           "Ward 2": [
+            "Frank Casera",
             "Shanicka Edwards",
             "Craig Nixon",
             "Ajmal Noushahi",
@@ -68,21 +72,27 @@
             "Robert Thomson"
           ],
           "Ward 6": [
-            "Nigussie Nigussie"
+            "Nader Nasar George, he/him",
+            "Nigussie Nigussie",
+            "Christel Pena"
           ],
           "Ward 7": [
-            "Gary Harvey"
+            "Gary Harvey",
+            "Michael Lewis"
           ],
           "Ward 8": [
+            "Samina Alim",
             "Amanda Fellows",
             "Jim Harris"
           ],
           "Ward 9": [
             "Norm Costello",
             "Sergio Morales",
+            "Asmar Naveed, he/him",
             "Dave Weingarten"
           ],
           "Ward 10": [
+            "William Cadeau",
             "Bryn Hamilton",
             "Georgy Kapustin"
           ]
