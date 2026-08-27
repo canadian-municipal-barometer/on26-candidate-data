@@ -1,0 +1,445 @@
+census_id,csdname,tier,county,website,matched_on
+3511035,Addington Highlands,Lower Tier,Lennox and Addington,http://www.addingtonhighlands.ca/,name
+3539047,Adelaide-Metcalfe,Lower Tier,Middlesex,https://adelaidemetcalfe.on.ca/,name
+3543003,Adjala-Tosorontio,Lower Tier,Simcoe,https://www.adjtos.ca/en/index.aspx,name
+3547043,Admaston/Bromley,Lower Tier,Renfrew,http://www.admastonbromley.com/,name
+3518005,Ajax,Lower Tier,Durham,http://www.ajax.ca/en/,name
+3559011,Alberton,Single Tier,Rainy River,http://www.alberton.ca/,name
+3502023,Alfred and Plantagenet,Lower Tier,Prescott and Russell,https://www.alfred-plantagenet.com/en/index.aspx,name
+3546018,Algonquin Highlands,Lower Tier,Haliburton,http://www.algonquinhighlands.ca/,name
+3514024,Alnwick/Haldimand,Lower Tier,Northumberland,http://www.alnwickhaldimand.ca/,name
+3522008,Amaranth,Lower Tier,Dufferin,http://www.amaranth.ca/en/index.aspx,name
+3537028,Amherstburg,Lower Tier,Essex,http://www.amherstburg.ca/,name
+3549019,Armour,Single Tier,Parry Sound,http://www.armourtownship.ca/,name
+3554036,Armstrong,Single Tier,Timiskaming,http://www.armstrongtownship.com/,name
+3547002,Arnprior,Lower Tier,Renfrew,http://www.arnprior.ca/,name
+3541043,Arran-Elderslie,Lower Tier,Bruce,http://www.arran-elderslie.com/,name
+3540063,Ashfield-Colborne-Wawanosh,Lower Tier,Huron,http://www.acwtownship.ca/,name
+3515003,Asphodel-Norwood,Lower Tier,Peterborough,https://www.antownship.ca/en/index.aspx,name
+3551011,Assiginack,Single Tier,Manitoulin,http://www.assiginack.ca/,name
+3507042,Athens,Lower Tier,Leeds and Grenville,http://www.athenstownship.ca/,name
+3559001,Atikokan,Single Tier,Rainy River,http://www.atikokan.ca/siteengine/activepage.asp,name
+3507006,Augusta,Lower Tier,Leeds and Grenville,http://www.augusta.ca/,name
+3519046,Aurora,Lower Tier,York,https://www.aurora.ca/en/index.aspx,name
+3534011,Aylmer,Lower Tier,Elgin,http://www.aylmer.ca/,name
+3552028,Baldwin,Single Tier,Sudbury,https://www.baldwin.ca/,name
+3512061,Bancroft,Lower Tier,Hastings,http://www.bancroft.ca/,name
+3543042,Barrie,Single Tier,Simcoe,http://www.barrie.ca/Pages/default.aspx,name
+3534005,Bayham,Lower Tier,Elgin,http://www.bayham.on.ca/siteengine/activepage.asp,name
+3509024,Beckwith,Lower Tier,Lanark,http://www.twp.beckwith.on.ca/,name
+3512005,Belleville,Single Tier,Hastings,http://www.belleville.ca/,name
+3551021,Billings,Single Tier,Manitoulin,http://www.billingstwp.ca/,name
+3556014,Black River-Matheson,Single Tier,Cochrane,https://www.twpbrm.ca/,name
+3532045,Blandford-Blenheim,Lower Tier,Oxford,http://www.blandfordblenheim.ca/,name
+3557038,Blind River,Single Tier,Algoma,https://www.blindriver.ca/,name
+3540010,Bluewater,Lower Tier,Huron,https://www.municipalityofbluewater.ca/,name
+3548027,Bonfield,Single Tier,Nipissing,https://www.bonfieldtownship.com/,name
+3547035,Bonnechere Valley,Lower Tier,Renfrew,http://www.bonnecherevalleytwp.com/,name
+3544018,Bracebridge,Lower Tier,Muskoka,http://www.bracebridge.ca/,name
+3543014,Bradford West Gwillimbury,Lower Tier,Simcoe,https://www.townofbwg.com/,name
+3521010,Brampton,Lower Tier,Peel,http://www.brampton.ca/en/pages/welcome.aspx,name
+3529005,Brant,Single Tier,Brant,http://www.brant.ca/,name
+3529006,Brantford,Single Tier,Brant,http://www.brantford.ca/Pages/default.aspx,name
+3554032,Brethour,Single Tier,Timiskaming,,name
+3514004,Brighton,Lower Tier,Northumberland,http://www.brighton.ca/,name
+3518039,Brock,Lower Tier,Durham,http://townshipofbrock.ca/,name
+3541032,Brockton,Lower Tier,Bruce,http://www.brockton.ca/,name
+3507015,Brockville,Single Tier,Leeds and Grenville,http://www.brockville.com/,name
+3538015,Brooke-Alvinston,Lower Tier,Lambton,http://brookealvinston.com/home/,name
+3541,Bruce,Upper Tier,Bruce,http://www.brucecounty.on.ca/,name
+3557021,Bruce Mines,Single Tier,Algoma,http://www.brucemines.ca/,name
+3547020,"Brudenell, Lyndoch and Raglan",Lower Tier,Renfrew,http://www.blrtownship.ca/,name
+3549022,Burk's Falls,Single Tier,Parry Sound,http://www.burksfalls.net/,name
+3524002,Burlington,Lower Tier,Halton,https://www.burlington.ca/en/index.aspx,name
+3551028,Burpee and Mills,Single Tier,Manitoulin,http://www.burpeemills.com/,name
+3521024,Caledon,Lower Tier,Peel,http://www.town.caledon.on.ca/,name
+3549066,Callander,Single Tier,Parry Sound,http://mycallander.ca/,name
+3548022,Calvin,Single Tier,Nipissing,http://www.calvintownship.ca/,name
+3530010,Cambridge,Lower Tier,Waterloo,http://www.cambridge.ca/,name
+3509028,Carleton Place,Lower Tier,Lanark,http://www.carletonplace.ca/,name
+3549036,Carling,Single Tier,Parry Sound,http://www.carlingtownship.ca/,name
+3512065,Carlow/Mayo,Lower Tier,Hastings,http://www.carlowmayo.ca/,name
+3554029,Casey,Single Tier,Timiskaming,http://Casey.ca,name
+3502044,Casselman,Lower Tier,Prescott and Russell,http://www.en.casselman.ca/,name
+3515013,Cavan Monaghan,Lower Tier,Peterborough,http://www.cavanmonaghan.net/siteengine/activepage.asp,name
+3534020,Central Elgin,Lower Tier,Elgin,https://www.centralelgin.org/en/index.aspx,name
+3510035,Central Frontenac,Lower Tier,Frontenac,http://www.centralfrontenac.com/,name
+3540025,Central Huron,Lower Tier,Huron,http://www.centralhuron.com/,name
+3551006,Central Manitoulin,Single Tier,Manitoulin,http://www.centralmanitoulin.ca/,name
+3512026,Centre Hastings,Lower Tier,Hastings,http://www.centrehastings.com/,name
+3523025,Centre Wellington,Lower Tier,Wellington,https://www.centrewellington.ca/en/index.aspx,name
+3554054,Chamberlain,Single Tier,Timiskaming,https://www.chamberlaintownship.com,name
+3502010,Champlain,Lower Tier,Prescott and Russell,http://www.champlain.ca/en/index.aspx,name
+3552092,Chapleau,Single Tier,Sudbury,https://chapleau.ca/,name
+3559024,Chapple,Single Tier,Rainy River,http://www.chapple.on.ca/,name
+3554044,Charlton and Dack,Single Tier,Timiskaming,http://www.charltonanddack.com/,name
+3536020,Chatham-Kent,Single Tier,Chatham-Kent,http://www.chatham-kent.ca,name
+3542037,Chatsworth,Lower Tier,Grey,http://www.chatsworth.ca/,name
+3548031,Chisholm,Single Tier,Nipissing,http://www.chisholm.ca/,name
+3502036,Clarence-Rockland,Lower Tier,Prescott and Russell,http://www.clarence-rockland.com/,name
+3518017,Clarington,Lower Tier,Durham,http://www.clarington.net/,name
+3543005,Clearview,Lower Tier,Simcoe,http://www.clearview.ca/,name
+3554008,Cobalt,Single Tier,Timiskaming,http://www.cobalt.ca/,name
+3514021,Cobourg,Lower Tier,Northumberland,http://www.cobourg.ca/,name
+3556042,Cochrane,Single Tier,Cochrane,https://cochraneontario.com/,name
+3551034,Cockburn Island,Single Tier,Manitoulin,https://www.cockburnisland.ca/,name
+3554001,Coleman,Single Tier,Timiskaming,http://www.colemantownship.ca/,name
+3543031,Collingwood,Lower Tier,Simcoe,http://www.collingwood.ca/,name
+3558019,Conmee,Single Tier,Thunder Bay,http://www.conmee.com/,name
+3501012,Cornwall,Single Tier,"Stormont, Dundas and Glengarry",http://www.cornwall.ca/,name
+3514014,Cramahe,Lower Tier,Northumberland,http://www.visitcramahe.ca/,name
+3538007,Dawn-Euphemia,Lower Tier,Lambton,https://dawneuphemia.ca/,name
+3559040,Dawson,Single Tier,Rainy River,https://dawsontownship.weebly.com/,name
+3547096,Deep River,Lower Tier,Renfrew,http://www.deepriver.ca/,name
+3512002,Deseronto,Lower Tier,Hastings,http://www.deseronto.ca/,name
+3558034,Dorion,Single Tier,Thunder Bay,http://www.doriontownship.ca/,name
+3515023,Douro-Dummer,Lower Tier,Peterborough,http://www.dourodummer.on.ca/,name
+3509010,Drummond/North Elmsley,Lower Tier,Lanark,https://www.dnetownship.ca/,name
+3560027,Dryden,Single Tier,Kenora,http://www.dryden.ca/,name
+3557079,Dubreuilville,Single Tier,Algoma,http://www.dubreuilville.ca/,name
+3522,Dufferin,Upper Tier,Dufferin,https://www.dufferincounty.ca/,name
+3518,Durham,Upper Tier,Durham,http://www.durham.ca/,name
+3534030,Dutton/Dunwich,Lower Tier,Elgin,http://www.duttondunwich.on.ca/,name
+3546024,Dysart et al,Lower Tier,Haliburton,http://www.dysartetal.ca/,name
+3560032,Ear Falls,Single Tier,Kenora,http://www.ear-falls.com/,name
+3548034,East Ferris,Single Tier,Nipissing,http://eastferris.ca/,name
+3522001,East Garafraxa,Lower Tier,Dufferin,https://www.eastgarafraxa.ca/en/index.aspx,name
+3519054,East Gwillimbury,Lower Tier,York,http://www.eastgwillimbury.ca/,name
+3502001,East Hawkesbury,Lower Tier,Prescott and Russell,http://www.easthawkesbury.ca/,name
+3532038,East Zorra-Tavistock,Lower Tier,Oxford,https://www.ezt.ca/en/index.aspx,name
+3507004,Edwardsburgh/Cardinal,Lower Tier,Leeds and Grenville,http://www.edwardsburghcardinal.ca/,name
+3534,Elgin,Upper Tier,Elgin,www.elgincounty.ca,name
+3507014,Elizabethtown-Kitley,Lower Tier,Leeds and Grenville,http://www.elizabethtown-kitley.on.ca/,name
+3557041,Elliot Lake,Single Tier,Algoma,http://www.cityofelliotlake.com/,name
+3559019,Emo,Single Tier,Rainy River,http://www.twspemo.on.ca/,name
+3554052,Englehart,Single Tier,Timiskaming,http://www.englehart.ca/,name
+3538016,Enniskillen,Lower Tier,Lambton,http://www.enniskillen.ca/,name
+3523017,Erin,Lower Tier,Wellington,http://www.erin.ca/,name
+3552026,Espanola,Single Tier,Sudbury,https://www.espanola.ca/,name
+3543021,Essa,Lower Tier,Simcoe,http://www.essatownship.on.ca/,name
+3537016,Essex,Lower Tier,Essex,http://www.townofessex.on.ca/,name+tier
+3537,Essex,Upper Tier,Essex,https://www.countyofessex.ca/en/index.aspx,name+tier
+3554049,Evanturel,Single Tier,Timiskaming,http://www.evanturel.com/,name
+3512058,Faraday,Lower Tier,Hastings,http://www.faraday.ca/,name
+3556052,Fauquier-Strickland,Single Tier,Cochrane,http://www.fauquierstrickland.com/,name
+3526003,Fort Erie,Lower Tier,Niagara,https://www.forterie.ca/,name
+3559012,Fort Frances,Single Tier,Rainy River,http://www.fort-frances.com/,name
+3552001,French River / Rivière des Français,Single Tier,Sudbury,http://www.frenchriver.ca/,name
+3507017,Front of Yonge,Lower Tier,Leeds and Grenville,https://mallorytown.ca/,name
+3510,Frontenac,Upper Tier,Frontenac,https://frontenacislands.ca/,name
+3510005,Frontenac Islands,Lower Tier,Frontenac,http://municipality.frontenacislands.on.ca/,name
+3507024,Gananoque,Single Tier,Leeds and Grenville,http://www.gananoque.ca/,name
+3554066,Gauthier,Single Tier,Timiskaming,,name
+3544065,Georgian Bay,Lower Tier,Muskoka,http://www.gbtownship.ca/,name
+3542053,Georgian Bluffs,Lower Tier,Grey,https://www.georgianbluffs.ca/en/index.aspx,name
+3519070,Georgina,Lower Tier,York,http://www.georgina.ca/,name
+3558012,Gillies,Single Tier,Thunder Bay,http://www.gilliestownship.com/,name
+3540028,Goderich,Lower Tier,Huron,http://www.goderich.ca/,name
+3551027,Gordon/Barrie Island,Single Tier,Manitoulin,https://www.gordonbarrieisland.ca/,name
+3551026,Gore Bay,Single Tier,Manitoulin,http://www.gorebay.ca/,name
+3522010,Grand Valley,Lower Tier,Dufferin,http://www.eastluthergrandvalley.ca/,name
+3544002,Gravenhurst,Lower Tier,Muskoka,http://www.gravenhurst.ca/,name
+3547008,Greater Madawaska,Lower Tier,Renfrew,http://www.greatermadawaska.com/,name
+3511015,Greater Napanee,Lower Tier,Lennox and Addington,https://www.greaternapanee.com/en/index.aspx,name
+3553005,Greater Sudbury / Grand Sudbury,Single Tier,Sudbury,https://www.greatersudbury.ca/,name
+3558075,Greenstone,Single Tier,Thunder Bay,http://www.greenstone.ca/,name
+3542,Grey,Upper Tier,Grey,http://www.grey.ca/,name
+3542015,Grey Highlands,Lower Tier,Grey,http://www.greyhighlands.ca/,name
+3526065,Grimsby,Lower Tier,Niagara,http://www.town.grimsby.on.ca/,name
+3523008,Guelph,Single Tier,Wellington,http://www.guelph.ca/,name
+3523009,Guelph/Eramosa,Lower Tier,Wellington,http://www.get.on.ca/,name
+3528018,Haldimand County,Single Tier,Haldimand,http://www.haldimandcounty.on.ca/,name
+3546,Haliburton,Upper Tier,Haliburton,http://haliburtoncounty.ca/,name
+3524,Halton,Upper Tier,Halton,http://www.halton.ca/,name
+3524015,Halton Hills,Lower Tier,Halton,http://www.haltonhills.ca/,name
+3514019,Hamilton,Lower Tier,Northumberland,http://www.hamiltontownship.ca/,name+tier+status
+3525005,Hamilton,Single Tier,Hamilton,http://www.hamilton.ca/,name+tier+status
+3542029,Hanover,Lower Tier,Grey,http://www.hanover.ca/,name
+3554026,Harley,Single Tier,Timiskaming,http://www.harley.ca/,name
+3554014,Harris,Single Tier,Timiskaming,https://harristownship.weebly.com/,name
+3512,Hastings,Upper Tier,Hastings,http://www.hastingscounty.com/,name
+3512076,Hastings Highlands,Lower Tier,Hastings,http://www.hastingshighlands.ca/,name
+3515030,Havelock-Belmont-Methuen,Lower Tier,Peterborough,http://www.hbmtwp.ca/,name
+3502008,Hawkesbury,Lower Tier,Prescott and Russell,http://www.hawkesbury.ca/en/,name
+3547098,"Head, Clara and Maria",Lower Tier,Renfrew,http://townshipsofheadclaramaria.ca/,name
+3556076,Hearst,Single Tier,Cochrane,http://www.hearst.ca/,name
+3546005,Highlands East,Lower Tier,Haliburton,http://www.highlandseast.ca/,name
+3554034,Hilliard,Single Tier,Timiskaming,https://townshipofhilliard.ca/,name
+3557004,Hilton,Single Tier,Algoma,http://www.hiltontownship.ca/,name
+3557006,Hilton Beach,Single Tier,Algoma,http://www.hiltonbeach.com/,name
+3557096,Hornepayne,Single Tier,Algoma,http://www.townshipofhornepayne.ca/,name
+3547046,Horton,Lower Tier,Renfrew,http://www.hortontownship.ca/,name
+3540046,Howick,Lower Tier,Huron,https://howick.ca/,name
+3554021,Hudson,Single Tier,Timiskaming,http://Hudson.ca,name
+3544042,Huntsville,Lower Tier,Muskoka,https://www.huntsville.ca/en/index.aspx,name
+3540,Huron,Upper Tier,Huron,http://www.huroncounty.ca/,name
+3540040,Huron East,Lower Tier,Huron,http://www.huroneast.com/,name
+3557035,Huron Shores,Single Tier,Algoma,http://www.huronshores.ca/,name
+3541015,Huron-Kinloss,Lower Tier,Bruce,http://www.huronkinloss.com/,name
+3560001,Ignace,Single Tier,Kenora,http://town.ignace.on.ca/,name
+3532018,Ingersoll,Lower Tier,Oxford,http://www.ingersoll.ca/,name
+3543017,Innisfil,Lower Tier,Simcoe,https://innisfil.ca/,name
+3556031,Iroquois Falls,Single Tier,Cochrane,http://www.iroquoisfalls.com/home,name
+3554042,James,Single Tier,Timiskaming,http://www.elklake.ca/,name
+3557001,Jocelyn,Single Tier,Algoma,https://jocelyn.ca/,name
+3557016,Johnson,Single Tier,Algoma,https://johnsontownship.ca/,name
+3549051,Joly,Single Tier,Parry Sound,http://www.townshipofjoly.com/,name
+3556066,Kapuskasing,Single Tier,Cochrane,http://www.kapuskasing.ca/,name
+3516010,Kawartha Lakes,Single Tier,Kawartha Lakes,http://www.city.kawarthalakes.on.ca/,name
+3549018,Kearney,Single Tier,Parry Sound,http://www.townofkearney.com/,name
+3560010,Kenora,Single Tier,Kenora,http://www.kenora.ca/,name
+3554024,Kerns,Single Tier,Timiskaming,http://kerns.ca,name
+3547033,"Killaloe, Hagarty and Richards",Lower Tier,Renfrew,http://www.killaloe-hagarty-richards.ca/,name
+3552036,Killarney,Single Tier,Sudbury,http://www.municipalityofkillarney.ca/,name
+3541024,Kincardine,Lower Tier,Bruce,https://www.kincardine.ca/en/index.aspx,name
+3519049,King,Lower Tier,York,http://www.king.ca/,name
+3510010,Kingston,Single Tier,Frontenac,http://www.cityofkingston.ca/,name
+3537013,Kingsville,Lower Tier,Essex,https://www.kingsville.ca/en/index.aspx,name
+3554068,Kirkland Lake,Single Tier,Timiskaming,http://www.discoverkl.ca/,name
+3530013,Kitchener,Lower Tier,Waterloo,http://www.kitchener.ca/,name
+3559016,La Vallee,Single Tier,Rainy River,http://www.lavallee.ca/,name
+3537034,LaSalle,Lower Tier,Essex,http://www.town.lasalle.on.ca/,name
+3557011,Laird,Single Tier,Algoma,http://www.lairdtownship.ca/,name
+3544027,Lake of Bays,Lower Tier,Muskoka,http://www.lakeofbays.on.ca/,name
+3559047,Lake of the Woods,Single Tier,Rainy River,http://www.lakeofthewoods.ca/,name
+3537064,Lakeshore,Lower Tier,Essex,http://www.townoflakeshore.on.ca/,name
+3538,Lambton,Upper Tier,Lambton,http://www.lambtononline.ca/,name
+3538040,Lambton Shores,Lower Tier,Lambton,http://www.lambtonshores.ca/,name
+3509,Lanark,Upper Tier,Lanark,https://www.lanarkcounty.ca/en/index.aspx,name
+3509039,Lanark Highlands,Lower Tier,Lanark,http://www.lanarkhighlands.ca/,name
+3554062,Larder Lake,Single Tier,Timiskaming,https://larderlake.ca/,name
+3554006,Latchford,Single Tier,Timiskaming,http://www.latchford.ca/,name
+3547090,Laurentian Hills,Lower Tier,Renfrew,http://www.laurentianhills.ca/,name
+3547075,Laurentian Valley,Lower Tier,Renfrew,http://www.laurentianvalleytwsp.on.ca/,name
+3537003,Leamington,Lower Tier,Essex,http://www.leamington.ca/,name
+3507,Leeds and Grenville,Upper Tier,Leeds and Grenville,https://www.leedsgrenville.com/en/index.aspx,name
+3507021,Leeds and the Thousand Islands,Lower Tier,Leeds and Grenville,https://www.leeds1000islands.ca/,name
+3511,Lennox and Addington,Upper Tier,Lennox and Addington,http://www.lennox-addington.on.ca/,name
+3512051,Limerick,Lower Tier,Hastings,http://www.township.limerick.on.ca/,name
+3526057,Lincoln,Lower Tier,Niagara,http://www.lincoln.ca/,name
+3539036,London,Single Tier,Middlesex,http://www.london.ca/,name
+3511005,Loyalist,Lower Tier,Lennox and Addington,http://www.loyalist.ca/,name
+3539060,Lucan Biddulph,Lower Tier,Middlesex,http://www.lucanbiddulph.on.ca/,name
+3557051,"Macdonald, Meredith and Aberdeen Additional",Single Tier,Algoma,http://www.echobay.ca/,name
+3549054,Machar,Single Tier,Parry Sound,http://www.machartownship.net/,name
+3560021,Machin,Single Tier,Kenora,http://www.visitmachin.com/,name
+3547030,Madawaska Valley,Lower Tier,Renfrew,http://www.madawaskavalley.ca/,name
+3512036,Madoc,Lower Tier,Hastings,http://www.madoc.ca/,name
+3549043,Magnetawan,Single Tier,Parry Sound,http://www.magnetawan.com/,name
+3534010,Malahide,Lower Tier,Elgin,http://www.malahide.ca/,name
+3558066,Manitouwadge,Single Tier,Thunder Bay,http://www.manitouwadge.ca/,name
+3523033,Mapleton,Lower Tier,Wellington,http://www.mapleton.ca/,name
+3558059,Marathon,Single Tier,Thunder Bay,http://www.marathon.ca/,name
+3519036,Markham,Lower Tier,York,http://www.markham.ca/,name
+3552013,Markstay-Warren,Single Tier,Sudbury,http://www.markstay-warren.ca/,name
+3512046,Marmora and Lake,Lower Tier,Hastings,http://www.marmoraandlake.ca/,name
+3554056,Matachewan,Single Tier,Timiskaming,http://www.matachewan.com/,name
+3548021,Mattawa,Single Tier,Nipissing,http://www.mattawa.ca/,name
+3548019,Mattawan,Single Tier,Nipissing,https://mattawan.ca/,name
+3556077,Mattice-Val Côté,Single Tier,Cochrane,http://www.matticevalcote.ca/,name
+3549031,McDougall,Single Tier,Parry Sound,http://www.municipalityofmcdougall.com/,name
+3554058,McGarry,Single Tier,Timiskaming,http://www.mcgarry.ca/,name
+3549028,McKellar,Single Tier,Parry Sound,https://www.mckellar.ca/en/index.aspx,name
+3549012,McMurrich/Monteith,Single Tier,Parry Sound,http://www.mcmurrichmonteith.com/,name
+3547003,McNab/Braeside,Lower Tier,Renfrew,http://mcnabbraeside.com/,name
+3542047,Meaford,Lower Tier,Grey,http://meaford.ca/,name
+3522019,Melancthon,Lower Tier,Dufferin,http://melancthontownship.ca/,name
+3507052,Merrickville-Wolford,Lower Tier,Leeds and Grenville,http://www.merrickville-wolford.ca/,name
+3539,Middlesex,Upper Tier,Middlesex,http://www.middlesex.ca/,name
+3539033,Middlesex Centre,Lower Tier,Middlesex,http://www.middlesexcentre.on.ca/,name
+3543074,Midland,Lower Tier,Simcoe,http://www.midland.ca/,name
+3524009,Milton,Lower Tier,Halton,http://www.milton.ca/,name
+3546015,Minden Hills,Lower Tier,Haliburton,http://www.mindenhills.ca/,name
+3523043,Minto,Lower Tier,Wellington,http://www.town.minto.on.ca/,name
+3521005,Mississauga,Lower Tier,Peel,http://www.mississauga.ca/,name
+3509030,Mississippi Mills,Lower Tier,Lanark,http://www.mississippimills.ca/,name
+3522012,Mono,Lower Tier,Dufferin,http://www.townofmono.com/,name
+3509001,Montague,Lower Tier,Lanark,http://www.township.montague.on.ca/,name
+3556056,Moonbeam,Single Tier,Cochrane,http://www.moonbeam.ca/,name
+3556106,Moosonee,Single Tier,Cochrane,http://www.moosonee.ca/,name
+3559031,Morley,Single Tier,Rainy River,http://www.townshipofmorley.ca/,name
+3540050,Morris-Turnberry,Lower Tier,Huron,https://morristurnberry.ca/,name
+3522016,Mulmur,Lower Tier,Dufferin,http://www.mulmurtownship.ca./,name
+3544,Muskoka,Upper Tier,Muskoka,http://www.muskoka.on.ca/,name
+3544053,Muskoka Lakes,Lower Tier,Muskoka,http://www.muskokalakes.ca/,name
+3552031,Nairn and Hyman,Single Tier,Sudbury,http://www.nairncentre.ca/,name
+3558001,Neebing,Single Tier,Thunder Bay,http://www.neebing.org/,name
+3543007,New Tecumseth,Lower Tier,Simcoe,http://www.town.newtecumseth.on.ca/,name
+3539002,Newbury,Lower Tier,Middlesex,http://www.newbury.ca/,name
+3519048,Newmarket,Lower Tier,York,http://www.newmarket.ca/,name
+3526,Niagara,Upper Tier,Niagara,http://www.niagararegion.ca/,name
+3526043,Niagara Falls,Lower Tier,Niagara,http://www.niagarafalls.ca/,name
+3526047,Niagara-on-the-Lake,Lower Tier,Niagara,http://www.notl.org/,name
+3558044,Nipigon,Single Tier,Thunder Bay,http://www.nipigon.net/,name
+3549071,Nipissing,Single Tier,Parry Sound,http://nipissingtownship.com/,name
+3528052,Norfolk County,Single Tier,Norfolk,https://www.norfolkcounty.ca/,name
+3547070,North Algona Wilberforce,Lower Tier,Renfrew,http://www.nalgonawil.com/,name
+3548044,North Bay,Single Tier,Nipissing,http://www.cityofnorthbay.ca/,name
+3530004,North Dumfries,Lower Tier,Waterloo,http://www.northdumfries.ca/,name
+3501030,North Dundas,Lower Tier,"Stormont, Dundas and Glengarry",http://www.northdundas.com/,name
+3510045,North Frontenac,Lower Tier,Frontenac,http://www.northfrontenac.ca/,name
+3501050,North Glengarry,Lower Tier,"Stormont, Dundas and Glengarry",http://www.northglengarry.ca/,name
+3507065,North Grenville,Lower Tier,Leeds and Grenville,http://www.northgrenville.ca/,name
+3540055,North Huron,Lower Tier,Huron,http://www.northhuron.ca/,name
+3515037,North Kawartha,Lower Tier,Peterborough,http://www.northkawartha.on.ca/,name
+3539041,North Middlesex,Lower Tier,Middlesex,http://www.northmiddlesex.on.ca/,name
+3531040,North Perth,Lower Tier,Perth,http://www.northperth.ca/,name
+3501042,North Stormont,Lower Tier,"Stormont, Dundas and Glengarry",http://www.northstormont.ca/,name
+3551017,Northeastern Manitoulin and the Islands,Single Tier,Manitoulin,http://www.townofnemi.on.ca/,name
+3541069,Northern Bruce Peninsula,Lower Tier,Bruce,http://www.northbrucepeninsula.ca/,name
+3514,Northumberland,Upper Tier,Northumberland,http://northumberland.ca/,name
+3532002,Norwich,Lower Tier,Oxford,http://www.twp.norwich.on.ca/,name
+3558016,O'Connor,Single Tier,Thunder Bay,http://www.oconnortownship.ca/,name
+3524001,Oakville,Lower Tier,Halton,http://www.oakville.ca/,name
+3538018,Oil Springs,Lower Tier,Lambton,http://www.oilsprings.ca/,name
+3558011,Oliver Paipoonge,Single Tier,Thunder Bay,http://www.oliverpaipoonge.on.ca/,name
+3556073,Opasatika,Single Tier,Cochrane,http://opasatika.net/,name
+3522014,Orangeville,Lower Tier,Dufferin,http://www.orangeville.ca/,name
+3543052,Orillia,Single Tier,Simcoe,http://www.orillia.ca/,name
+3543023,Oro-Medonte,Lower Tier,Simcoe,http://www.oro-medonte.ca/,name
+3518013,Oshawa,Lower Tier,Durham,https://www.oshawa.ca/en/index.aspx,name
+3515005,Otonabee-South Monaghan,Lower Tier,Peterborough,http://www.osmtownship.ca/,name
+3506008,Ottawa,Single Tier,Ottawa,http://ottawa.ca/en,name
+3542059,Owen Sound,Lower Tier,Grey,http://www.owensound.ca/,name
+3532,Oxford,Upper Tier,Oxford,http://www.oxfordcounty.ca/,name
+3548013,Papineau-Cameron,Single Tier,Nipissing,http://www.papineaucameron.ca/,name
+3549032,Parry Sound,Single Tier,Parry Sound,http://www.townofparrysound.com/,name
+3521,Peel,Upper Tier,Peel,http://www.peelregion.ca/,name
+3537001,Pelee,Single Tier,Essex,http://www.pelee.org/,name
+3526028,Pelham,Lower Tier,Niagara,http://www.pelham.ca/,name
+3547064,Pembroke,Single Tier,Renfrew,http://www.pembrokeontario.com/,name
+3543072,Penetanguishene,Lower Tier,Simcoe,http://www.penetanguishene.ca/,name
+3549014,Perry,Single Tier,Parry Sound,http://www.townshipofperry.ca/,name
+3509021,Perth,Lower Tier,Lanark,http://www.perth.ca/en/index.aspx,name+tier
+3531,Perth,Upper Tier,Perth,http://www.perthcounty.ca/,name+tier
+3531030,Perth East,Lower Tier,Perth,https://www.pertheast.ca/en/index.aspx,name
+3531013,Perth South,Lower Tier,Perth,http://www.perthsouth.ca/,name
+3547076,Petawawa,Lower Tier,Renfrew,http://www.petawawa.ca/,name
+3515014,Peterborough,Single Tier,Peterborough,http://www.peterborough.ca/,name+tier
+3515,Peterborough,Upper Tier,Peterborough,http://www.ptbocounty.ca/en/index.aspx,name+tier
+3538019,Petrolia,Lower Tier,Lambton,http://town.petrolia.on.ca/,name
+3518001,Pickering,Lower Tier,Durham,https://www.pickering.ca/en/index.aspx,name
+3560049,Pickle Lake,Single Tier,Kenora,http://www.picklelake.ca/,name
+3557019,Plummer Additional,Single Tier,Algoma,https://plummertownship.ca/,name
+3538035,Plympton-Wyoming,Lower Tier,Lambton,http://plympton-wyoming.com/,name
+3538031,Point Edward,Lower Tier,Lambton,http://www.villageofpointedward.com/,name
+3526011,Port Colborne,Lower Tier,Niagara,http://www.portcolborne.ca/,name
+3514020,Port Hope,Lower Tier,Northumberland,http://www.porthope.ca/,name
+3549060,Powassan,Single Tier,Parry Sound,http://www.powassan.net/,name
+3507008,Prescott,Single Tier,Leeds and Grenville,http://www.prescott.ca/,name
+3502,Prescott and Russell,Upper Tier,Prescott and Russell,http://www.prescott-russell.on.ca/,name
+3557066,Prince,Single Tier,Algoma,https://www.princetownship.ca/,name
+3513020,Prince Edward County,Single Tier,Prince Edward,http://www.pecounty.on.ca/,name
+3523001,Puslinch,Lower Tier,Wellington,https://puslinch.ca/,name
+3512015,Quinte West,Single Tier,Hastings,http://www.quintewest.ca/,name
+3559042,Rainy River,Single Tier,Rainy River,http://www.rainyriver.ca/,name
+3543019,Ramara,Lower Tier,Simcoe,http://www.ramara.ca/,name
+3560042,Red Lake,Single Tier,Kenora,http://www.red-lake.com/,name
+3558041,Red Rock,Single Tier,Thunder Bay,http://www.redrocktownship.com/,name
+3547048,Renfrew,Lower Tier,Renfrew,http://www.renfrewontario.com/,name+tier
+3547,Renfrew,Upper Tier,Renfrew,http://www.countyofrenfrew.on.ca/,name+tier
+3519038,Richmond Hill,Lower Tier,York,http://www.richmondhill.ca/,name
+3507040,Rideau Lakes,Lower Tier,Leeds and Grenville,http://www.twprideaulakes.on.ca/,name
+3502048,Russell,Lower Tier,Prescott and Russell,http://www.russell.ca/,name
+3549024,Ryerson,Single Tier,Parry Sound,http://www.ryersontownship.ca/,name
+3552023,Sables-Spanish Rivers,Single Tier,Sudbury,http://www.sables-spanish.ca/,name
+3538030,Sarnia,Lower Tier,Lambton,http://www.sarnia.ca/,name
+3541045,Saugeen Shores,Lower Tier,Bruce,http://www.saugeenshores.ca/,name
+3557061,Sault Ste. Marie,Single Tier,Algoma,https://saultstemarie.ca/,name
+3558051,Schreiber,Single Tier,Thunder Bay,http://www.schreiber.ca/,name
+3518020,Scugog,Lower Tier,Durham,https://www.scugog.ca/en/index.aspx,name
+3549003,Seguin,Single Tier,Parry Sound,http://www.twp.seguin.on.ca/,name
+3515015,Selwyn,Lower Tier,Peterborough,http://www.selwyntownship.ca/en/index.asp,name
+3543015,Severn,Lower Tier,Simcoe,http://www.townshipofsevern.com/,name
+3522021,Shelburne,Lower Tier,Dufferin,https://www.shelburne.ca/en/index.aspx/,name
+3558028,Shuniah,Single Tier,Thunder Bay,http://www.shuniah.org/,name
+3543,Simcoe,Upper Tier,Simcoe,http://www.simcoe.ca/,name
+3560034,Sioux Lookout,Single Tier,Kenora,http://www.siouxlookout.ca/,name
+3560008,Sioux Narrows-Nestor Falls,Single Tier,Kenora,http://www.siouxnarrows-nestorfalls.ca/,name
+3509004,Smiths Falls,Single Tier,Lanark,http://www.smithsfalls.ca/,name
+3556048,Smooth Rock Falls,Single Tier,Cochrane,http://www.townofsmoothrockfalls.ca/,name
+3548001,South Algonquin,Single Tier,Nipissing,https://www.southalgonquin.ca/,name
+3541004,South Bruce,Lower Tier,Bruce,http://www.town.southbruce.on.ca/,name
+3541055,South Bruce Peninsula,Lower Tier,Bruce,http://www.southbrucepeninsula.com/,name
+3501020,South Dundas,Lower Tier,"Stormont, Dundas and Glengarry",http://www.southdundas.com/,name
+3510020,South Frontenac,Lower Tier,Frontenac,http://www.township.southfrontenac.on.ca/,name
+3501005,South Glengarry,Lower Tier,"Stormont, Dundas and Glengarry",http://southglengarry.com/,name
+3540005,South Huron,Lower Tier,Huron,http://www.southhuron.ca/,name
+3549056,South River,Single Tier,Parry Sound,http://www.southriverontario.com/,name
+3501011,South Stormont,Lower Tier,"Stormont, Dundas and Glengarry",http://southstormont.ca/,name
+3532012,South-West Oxford,Lower Tier,Oxford,http://www.swox.org/,name
+3542005,Southgate,Lower Tier,Grey,https://www.southgate.ca/en/index.aspx,name
+3539005,Southwest Middlesex,Lower Tier,Middlesex,http://www.southwestmiddlesex.ca/,name
+3534024,Southwold,Lower Tier,Elgin,http://www.twp.southwold.on.ca/,name
+3557039,Spanish,Single Tier,Algoma,http://www.townofspanish.com/,name
+3543009,Springwater,Lower Tier,Simcoe,http://www.springwater.ca/,name
+3526053,St. Catharines,Lower Tier,Niagara,http://www.stcatharines.ca/,name
+3538003,St. Clair,Lower Tier,Lambton,http://www.twp.stclair.on.ca/,name
+3557008,St. Joseph,Single Tier,Algoma,http://www.stjosephtownship.com/,name
+3531016,St. Marys,Single Tier,Perth,http://www.townofstmarys.com/,name
+3534021,St. Thomas,Single Tier,Elgin,https://www.stthomas.ca/,name
+3552004,St.-Charles,Single Tier,Sudbury,http://www.stcharlesontario.ca/,name
+3512020,Stirling-Rawdon,Lower Tier,Hastings,http://www.stirling-rawdon.com/,name
+3511030,Stone Mills,Lower Tier,Lennox and Addington,http://www.stonemills.com/,name
+3501,Stormont,Upper Tier,"Stormont, Dundas and Glengarry",http://www.sdg.on.ca/,name
+3531011,Stratford,Single Tier,Perth,https://www.stratford.ca/en/index.aspx,name
+3539015,Strathroy-Caradoc,Lower Tier,Middlesex,http://www.strathroy-caradoc.ca/,name
+3549046,Strong,Single Tier,Parry Sound,http://www.strongtownship.com/,name
+3549048,Sundridge,Single Tier,Parry Sound,http://www.sundridge.ca/,name
+3557014,Tarbutt and Tarbutt Additional,Single Tier,Algoma,https://tarbutt.ca/,override
+3543071,Tay,Lower Tier,Simcoe,http://www.tay.ca/,name
+3509015,Tay Valley,Lower Tier,Lanark,http://www.tayvalleytwp.ca/,name
+3537048,Tecumseh,Lower Tier,Essex,http://www.tecumseh.ca/,name
+3551001,Tehkummah,Single Tier,Manitoulin,https://tehkummah.ca/,name
+3548069,Temagami,Single Tier,Nipissing,http://www.temagami.ca/,name
+3554020,Temiskaming Shores,Single Tier,Timiskaming,http://www.temiskamingshores.ca/,name
+3558054,Terrace Bay,Single Tier,Thunder Bay,http://www.terracebay.ca/,name
+3539027,Thames Centre,Lower Tier,Middlesex,http://www.thamescentre.on.ca/,name
+3549005,The Archipelago,Single Tier,Parry Sound,http://www.thearchipelago.on.ca/,name
+3542045,The Blue Mountains,Lower Tier,Grey,http://www.thebluemountains.ca/,name
+3502025,The Nation / La Nation,Lower Tier,Prescott and Russell,http://www.nationmun.ca/,name
+3557040,The North Shore,Single Tier,Algoma,http://www.townshipofthenorthshore.ca/,name
+3557028,Thessalon,Single Tier,Algoma,http://www.thessalon.ca/,name
+3554038,Thornloe,Single Tier,Timiskaming,,name
+3526037,Thorold,Lower Tier,Niagara,http://www.thorold.com/,name
+3558004,Thunder Bay,Single Tier,Thunder Bay,http://www.thunderbay.ca/,name
+3532004,Tillsonburg,Lower Tier,Oxford,http://www.town.tillsonburg.on.ca/,name
+3556027,Timmins,Single Tier,Cochrane,http://www.timmins.ca/,name
+3543068,Tiny,Lower Tier,Simcoe,https://www.tiny.ca/,name
+3520005,Toronto,Single Tier,Toronto,http://www.toronto.ca/,name
+3514045,Trent Hills,Lower Tier,Northumberland,http://www.trenthills.ca/,name
+3515044,Trent Lakes,Lower Tier,Peterborough,http://www.trentlakes.ca/,name
+3512048,Tudor and Cashel,Lower Tier,Hastings,http://www.tudorandcashel.com/,name
+3512030,Tweed,Lower Tier,Hastings,http://www.tweed.ca/,name
+3512001,Tyendinaga,Lower Tier,Hastings,http://www.tyendinagatownship.com/,name
+3518029,Uxbridge,Lower Tier,Durham,http://www.town.uxbridge.on.ca/,name
+3556070,Val Rita-Harty,Single Tier,Cochrane,http://valharty.ca/en/,name
+3519028,Vaughan,Lower Tier,York,http://www.city.vaughan.on.ca/,name
+3526014,Wainfleet,Lower Tier,Niagara,http://www.wainfleet.ca/,name
+3538043,Warwick,Lower Tier,Lambton,http://www.warwicktownship.ca/,name
+3543064,Wasaga Beach,Lower Tier,Simcoe,http://www.wasagabeach.com/,name
+3530016,Waterloo,Lower Tier,Waterloo,http://www.city.waterloo.on.ca/,name+tier
+3530,Waterloo,Upper Tier,Waterloo,http://www.region.waterloo.on.ca/,name+tier
+3557076,Wawa,Single Tier,Algoma,http://www.wawa.cc/,name
+3526032,Welland,Lower Tier,Niagara,http://www.welland.ca/,name
+3530027,Wellesley,Lower Tier,Waterloo,https://www.wellesley.ca/en/index.aspx,name
+3523,Wellington,Upper Tier,Wellington,http://www.wellington.ca/,name
+3523050,Wellington North,Lower Tier,Wellington,http://www.wellington-north.com/,name
+3534042,West Elgin,Lower Tier,Elgin,http://www.westelgin.net/,name
+3542004,West Grey,Lower Tier,Grey,http://www.westgrey.com/,name
+3526021,West Lincoln,Lower Tier,Niagara,http://www.westlincoln.ca/,name
+3548055,West Nipissing / Nipissing Ouest,Single Tier,Nipissing,http://www.westnipissing.ca/,name
+3531025,West Perth,Lower Tier,Perth,https://www.westperth.com/en/index.aspx,name
+3507033,Westport,Lower Tier,Leeds and Grenville,http://www.village.westport.on.ca/,name
+3518009,Whitby,Lower Tier,Durham,http://www.whitby.ca/en/,name
+3519044,Whitchurch-Stouffville,Lower Tier,York,http://www.townofws.com/,name
+3557091,White River,Single Tier,Algoma,http://www.whiteriver.ca/,name
+3549039,Whitestone,Single Tier,Parry Sound,http://www.whitestone.ca/,name
+3547056,Whitewater Region,Lower Tier,Renfrew,http://www.whitewaterregion.ca/,name
+3530020,Wilmot,Lower Tier,Waterloo,http://www.wilmot.ca/,name
+3537039,Windsor,Single Tier,Essex,http://www.citywindsor.ca/,name
+3512054,Wollaston,Lower Tier,Hastings,https://wollaston.ca/,name
+3532042,Woodstock,Lower Tier,Oxford,https://www.cityofwoodstock.ca/en/index.aspx,name
+3530035,Woolwich,Lower Tier,Waterloo,http://www.woolwich.ca/,name
+3519,York,Upper Tier,York,http://www.york.ca/,name
+3532027,Zorra,Lower Tier,Oxford,http://www.zorra.on.ca/,name

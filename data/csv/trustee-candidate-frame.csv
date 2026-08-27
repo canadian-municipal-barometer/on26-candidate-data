@@ -1,0 +1,708 @@
+board_number,board_name,system,supervised,zone_labels,name_raw,first_name,last_name,acclaimed,email,phone,website,reachable,contact_source,seen_in_municipalities,n_municipalities,sources
+B28010,Algoma District School Board,public,0,ADSB Ward 1 Trustee,NORMAN FERA,,,0,,,,0,,3557061:Sault Ste. Marie,1,voterview-harvest
+B28010,Algoma District School Board,public,0,ADSB Ward 2 Trustee,JESSE BALANYK,,,0,,,,0,,3557061:Sault Ste. Marie,1,voterview-harvest
+B28010,Algoma District School Board,public,0,ADSB Ward 2 Trustee,MICHELLE MURPHY,,,0,,,,0,,3557061:Sault Ste. Marie,1,voterview-harvest
+B28010,Algoma District School Board,public,0,ADSB Ward 3 Trustee,GREG BOWMAN,,,0,,,,0,,3557061:Sault Ste. Marie,1,voterview-harvest
+B28010,Algoma District School Board,public,0,ADSB Ward 4 Trustee,TIM MARSH,,,0,,,,0,,3557061:Sault Ste. Marie,1,voterview-harvest
+B28010,Algoma District School Board,public,0,ADSB Ward 5 Trustee,NICK APOSTLE,,,0,,,,0,,3557061:Sault Ste. Marie,1,voterview-harvest
+B67202,Algonquin and Lakeshore Catholic District School Board,catholic,0,Algonquin and Lakeshore Catholic District School Board Trustee School Board Trustee,ANTHEA MURRELL,,,0,antheamurrell@gmail.com,(613) 970-3200,,1,voterview-harvest,3512001:Tyendinaga,1,voterview-harvest
+B67202,Algonquin and Lakeshore Catholic District School Board,catholic,0,Algonquin and Lakeshore Catholic District School Board Trustee School Board Trustee,PETER MATWYUK,,,0,,,,0,,3512001:Tyendinaga,1,voterview-harvest
+B67202,Algonquin and Lakeshore Catholic District School Board,catholic,0,Algonquin and Lakeshore Catholic District School Board Trustee School Board Trustee,THOMAS DALL,,,0,tomandkathydall@gmail.com,(613) 243-6489,,1,voterview-harvest,3512001:Tyendinaga,1,voterview-harvest
+B66010,Avon Maitland District School Board,public,0,Avon Maitland District School Board (English),Ginny Rolph,,,0,ginnyr66@gmail.com,519-301-9640,,1,accordion-batch,3531013:Perth South,1,accordion-batch
+B66010,Avon Maitland District School Board,public,0,Avon Maitland District School Board (English),Sheila Armstrong-Marshall,,,0,msheep2026@gmail.com,519-393-6509,,1,accordion-batch,3531013:Perth South,1,accordion-batch
+B66010,Avon Maitland District School Board,public,0,Candidates for Avon Maitland District School Board,Avon Maitland District School Board Candidates,,,0,,,,0,,3531011:Stratford,1,accordion-batch
+B66010,Avon Maitland District School Board,public,0,Candidates for Avon Maitland District School Board,"Bannerman, Michael",,,0,mcbannerman@rogers.com,519-703-0885,,1,accordion-batch,3531011:Stratford,1,accordion-batch
+B66010,Avon Maitland District School Board,public,0,Candidates for Avon Maitland District School Board,"Mishra, Deepika",,,0,deepikamishra3478@gmail.com,416-709-9630,,1,accordion-batch,3531011:Stratford,1,accordion-batch
+B66010,Avon Maitland District School Board,public,0,Candidates for Avon Maitland District School Board,"Montgomery, Ed",,,0,edmontgomery@hotmail.com,,,1,accordion-batch,3531011:Stratford,1,accordion-batch
+B66010,Avon Maitland District School Board,public,0,Candidates for Avon Maitland District School Board,"Wagler, Jamie-Lee",,,0,hello@jamiewagler.ca,519-588-4964,https://www.jamiewagler.ca/,1,accordion-batch,3531011:Stratford,1,accordion-batch
+B66001,Bluewater District School Board,public,0,Bluewater District School Board Trustee,MICHAEL DUNN,,,0,,,,0,,3542059:Owen Sound,1,voterview-harvest
+B66001,Bluewater District School Board,public,0,Bluewater District School Board Trustee,SARAH MILNE,,,0,,,,0,,3542059:Owen Sound,1,voterview-harvest
+B66001,Bluewater District School Board,public,0,Bluewater District School Board Trustee - English Public,"Cowley, Scott",,,0,scottcowleytrusteecandidate@gmail.com,(226) 974-0679,,1,accordion-batch,3542045:The Blue Mountains,1,accordion-batch
+B66001,Bluewater District School Board,public,0,Bluewater District School Board Trustee - English Public,"Forder, Angela",,,0,northernpetshop@gmail.com,(905) 403-6336,,1,accordion-batch,3542045:The Blue Mountains,1,accordion-batch
+B66001,Bluewater District School Board,public,0,English Public School Board Trustee (Bluewater District School Board) - Acclaimed,Terry Boyd-Zhang,,,0,,,,0,,3541032:Brockton,1,accordion-batch
+B66001,Bluewater District School Board,public,0,Official List of Candidates for Councillor,Ann Schneider,,,0,acschneider@bmts.com,519-534-0276,,1,accordion-batch,3542053:Georgian Bluffs,1,accordion-batch
+B66001,Bluewater District School Board,public,0,Official List of Candidates for Councillor,Brad McRoberts,,,0,bmcrober@alumni.uwo.ca,519-935-2893,,1,accordion-batch,3542053:Georgian Bluffs,1,accordion-batch
+B66001,Bluewater District School Board,public,0,Official List of Candidates for Councillor,Ejaye McComb,,,0,ejayemccomb@gmail.com,226-668-8370,,1,accordion-batch,3542053:Georgian Bluffs,1,accordion-batch
+B66001,Bluewater District School Board,public,0,Official List of Candidates for Councillor,Gary McMillan,,,0,gary4georgianbluffs@gmail.com,519-368-3766,,1,accordion-batch,3542053:Georgian Bluffs,1,accordion-batch
+B66001,Bluewater District School Board,public,0,Official List of Candidates for Councillor,Isaac Shouldice,,,0,isaacshouldice94@gmail.com,226-668-6913,,1,accordion-batch,3542053:Georgian Bluffs,1,accordion-batch
+B66001,Bluewater District School Board,public,0,Official List of Candidates for Councillor,Jarod Outridge,,,0,jarod.outridge@outlook.com,519-371-4813,,1,accordion-batch,3542053:Georgian Bluffs,1,accordion-batch
+B66001,Bluewater District School Board,public,0,Official List of Candidates for Councillor,Mass Arezzi,,,0,massforgb@gmail.com,416-804-5446,,1,accordion-batch,3542053:Georgian Bluffs,1,accordion-batch
+B66001,Bluewater District School Board,public,0,Official List of Candidates for Councillor,Rick Winters,,,0,rickwinters2022@gmail.com,519-447-0134,,1,accordion-batch,3542053:Georgian Bluffs,1,accordion-batch
+B66001,Bluewater District School Board,public,0,Official List of Candidates for Councillor,Steve Spencer,,,0,spencerbeeffarms@gmail.com,416-561-5730,,1,accordion-batch,3542053:Georgian Bluffs,1,accordion-batch
+B66001,Bluewater District School Board,public,0,Official List of Candidates for Deputy Mayor,Grant Pringle - ACCLAIMED,,,0,kgpringle23@outlook.com,519-270-6535,,1,accordion-batch,3542053:Georgian Bluffs,1,accordion-batch
+B66001,Bluewater District School Board,public,0,Official List of Candidates for English Public School Board Trustee,Leslie Patrick Medve - ACCLAIMED,,,0,les_p_medve@yahoo.ca,,,1,accordion-batch,3542053:Georgian Bluffs,1,accordion-batch
+B66001,Bluewater District School Board,public,0,Official List of Candidates for Mayor,Susan (Sue) Carleton - ACCLAIMED,,,0,suecarleton@outlook.com,519-379-0231,,1,accordion-batch,3542053:Georgian Bluffs,1,accordion-batch
+B67164,Brant Haldimand Norfolk Catholic District School Board,catholic,0,Brant Haldimand Norfolk Catholic District School Board candidates,"Paradis, David",,,0,david.paradis@gmail.com,416-844-5549,,1,accordion-batch,3528018:Haldimand County,1,accordion-batch
+B67008,Bruce-Grey Catholic District School Board,catholic,0,Bruce Grey Catholic School Board Trustee,SURIYA THOMAS,,,0,,,,0,,3542059:Owen Sound,1,voterview-harvest
+B67008,Bruce-Grey Catholic District School Board,catholic,0,Bruce-Grey Catholic District School Board Trustee - English Separate,"Thomas, Suriya Mariam",,,0,mariamma39@gmail.com,(902) 402-9223,,1,accordion-batch,3542045:The Blue Mountains,1,accordion-batch
+B67008,Bruce-Grey Catholic District School Board,catholic,0,English Separate School Board Trustee - Ward 31 (Bruce-Grey Catholic District School Board) - Acclaimed*,Lori Di Castri,,,0,,,,0,,3541032:Brockton,1,accordion-batch
+B67008,Bruce-Grey Catholic District School Board,catholic,0,English Separate School Board Trustee - Wards 34 & 36 (Bruce-Grey Catholic District School Board) - 1 Position,Jim Nolan,,,0,,,,0,,3541032:Brockton,1,accordion-batch
+B67008,Bruce-Grey Catholic District School Board,catholic,0,English Separate School Board Trustee - Wards 34 & 36 (Bruce-Grey Catholic District School Board) - 1 Position,Linda Strader,,,0,,,,0,,3541032:Brockton,1,accordion-batch
+B67008,Bruce-Grey Catholic District School Board,catholic,0,Official List of Candidates for English Catholic Public School Board Trustee,Lucie Desbiens - ACCLAIMED,,,0,ldesbiens1956@gmail.com,,,1,accordion-batch,3542053:Georgian Bluffs,1,accordion-batch
+B67172,Catholic District School Board of Eastern Ontario,catholic,0,Candidates for the Catholic District School Board of Eastern Ontario (English Separate),André Bonneau,,,0,,,,0,,3502010:Champlain,1,accordion-batch
+B67172,Catholic District School Board of Eastern Ontario,catholic,0,Candidates for the Catholic District School Board of Eastern Ontario (English Separate),Félicia Williams,,,0,,,,0,,3502010:Champlain,1,accordion-batch
+B67172,Catholic District School Board of Eastern Ontario,catholic,0,English Separate (Catholic District School Board of Eastern Ontario),Karen E. McAllister - ACCLAIMED,,,0,kmcallister2327@outlook.com,,,1,accordion-batch,3501011:South Stormont,1,accordion-batch
+B67172,Catholic District School Board of Eastern Ontario,catholic,0,SCHOOL BOARD TRUSTEE - ENGLISH SEPARATE | School Board Trustee - English Separate (CDSBEO),"Ayotte, Suzanne",,,0,suzanneayotte.trustee@gmail.com,,,1,accordion-batch,3501005:South Glengarry | 3501050:North Glengarry,2,accordion-batch
+B67172,Catholic District School Board of Eastern Ontario,catholic,0,SCHOOL BOARD TRUSTEE - ENGLISH SEPARATE | School Board Trustee - English Separate (CDSBEO),"Nielsen, Donna",,,0,nielsendonna610@gmail.com,,,1,accordion-batch,3501005:South Glengarry | 3501050:North Glengarry,2,accordion-batch
+B67172,Catholic District School Board of Eastern Ontario,catholic,0,SCHOOL BOARD TRUSTEE - ENGLISH SEPARATE | School Board Trustee - English Separate (CDSBEO),"Ryan, Krista",,,0,krista_lalonde@hotmail.com,,,1,accordion-batch,3501005:South Glengarry | 3501050:North Glengarry,2,accordion-batch
+B67172,Catholic District School Board of Eastern Ontario,catholic,0,SCHOOL BOARD TRUSTEE - ENGLISH SEPARATE | School Board Trustee - English Separate (CDSBEO),"Torrie-Racine, Karen",,,0,ktr1805@hotmail.com,,,1,accordion-batch,3501005:South Glengarry | 3501050:North Glengarry,2,accordion-batch
+B66150,District School Board of Niagara,public,0,Cameron Klemm,Mark Bagu,,,0,bagumark13@gmail.com,(905) 835-1229,,1,accordion-batch,3526011:Port Colborne,1,accordion-batch
+B66150,District School Board of Niagara,public,0,Certified Candidates,Bea Kenny,,,0,beakenny49@gmail.com,(905) 834-7685,,1,accordion-batch,3526011:Port Colborne,1,accordion-batch
+B66150,District School Board of Niagara,public,0,Certified Candidates,"Mayor and, by virtue of office, Regional Councillor",,,0,,,,0,,3526011:Port Colborne,1,accordion-batch
+B66150,District School Board of Niagara,public,0,Danny DiLorenzo,Amanda Leduc,,,0,,,https://www.welland.ca/city-hall/municipal-elections/registered-candidates/#FrenchPublicSchoolBoard,1,accordion-batch,3526011:Port Colborne,1,accordion-batch
+B66150,District School Board of Niagara,public,0,District School Board of Niagara Trustee Candidates,Helga CAMPBELL,,,0,helgamcampbell@gmail.com,905-358-9643,N/A,1,accordion-batch,3526043:Niagara Falls,1,accordion-batch
+B66150,District School Board of Niagara,public,0,District School Board of Niagara Trustee Candidates,Ravneet GIRN,,,0,ravneetgirn@yahoo.ca,647-707-9857,N/A,1,accordion-batch,3526043:Niagara Falls,1,accordion-batch
+B66150,District School Board of Niagara,public,0,District School Board of Niagara Trustee Candidates,Shannon MITCHELL,,,0,shannonmitchellnf@gmail.com,905-327-2129,N/A,1,accordion-batch,3526043:Niagara Falls,1,accordion-batch
+B66150,District School Board of Niagara,public,0,District School Board of Niagara Trustee Candidates,Todd BRIGHT,,,0,Toddb0411@gmail.com,905-932-0412,N/A,1,accordion-batch,3526043:Niagara Falls,1,accordion-batch
+B66150,District School Board of Niagara,public,0,District School Board of Niagara Trustee Candidates,Zach MAVES,,,0,zach_maves_28@outlook.com,905-348-8040,N/A,1,accordion-batch,3526043:Niagara Falls,1,accordion-batch
+B66150,District School Board of Niagara,public,0,Gary Bruno,English Language Public District School Board,,,0,,,,0,,3526011:Port Colborne,1,accordion-batch
+B66150,District School Board of Niagara,public,0,Gary Bruno,Susan Jovanovic,,,0,susanjovan@hotmail.com,,,1,accordion-batch,3526011:Port Colborne,1,accordion-batch
+B66150,District School Board of Niagara,public,0,Geoffrey Black,Ron Bodner,,,0,ronbodner@hotmail.com,(905) 834-6269,,1,accordion-batch,3526011:Port Colborne,1,accordion-batch
+B66150,District School Board of Niagara,public,0,Mark Minor,Amanda Emery,,,0,amandaemerypc@gmail.com,(289) 696-2640,,1,accordion-batch,3526011:Port Colborne,1,accordion-batch
+B66150,District School Board of Niagara,public,0,Matthew Graham,Jean Max Philome,,,0,,,https://www.welland.ca/city-hall/municipal-elections/registered-candidates/#FrenchSeparateSchoolBoard,1,accordion-batch,3526011:Port Colborne,1,accordion-batch
+B66150,District School Board of Niagara,public,0,School Board Trustee,Amir Ismael,,,0,,,,0,,3526053:St. Catharines,1,accordion-batch
+B66150,District School Board of Niagara,public,0,School Board Trustee,Jennifer Ajandi,,,0,jennajandi@hotmail.com,905.933.6106,,1,accordion-batch,3526053:St. Catharines,1,accordion-batch
+B66150,District School Board of Niagara,public,0,School Board Trustee,Jonathan Fast,,,0,,,,0,,3526053:St. Catharines,1,accordion-batch
+B66150,District School Board of Niagara,public,0,School Board Trustee,Kate Baggott,,,0,baggott.kate@gmail.com,,,1,accordion-batch,3526053:St. Catharines,1,accordion-batch
+B66150,District School Board of Niagara,public,0,School Board Trustee,Lauren Bubnic,,,0,lauren.bubnicfortrustee@gmail.com,,,1,accordion-batch,3526053:St. Catharines,1,accordion-batch
+B66150,District School Board of Niagara,public,0,School Board Trustee,M. Areeb Aijaz,,,0,vote4mareebaijaz@gmail.com,,,1,accordion-batch,3526053:St. Catharines,1,accordion-batch
+B66150,District School Board of Niagara,public,0,School Board Trustee,Mark Matchem,,,0,,,,0,,3526053:St. Catharines,1,accordion-batch
+B66150,District School Board of Niagara,public,0,School Board Trustee,Marwa Salih,,,0,,,,0,,3526053:St. Catharines,1,accordion-batch
+B66150,District School Board of Niagara,public,0,School Board Trustee,Matthew Bradman,,,0,,,,0,,3526053:St. Catharines,1,accordion-batch
+B66150,District School Board of Niagara,public,0,School Board Trustee,Mike Brousseau,,,0,vote@mikebrousseau.ca,905.401.9825,,1,accordion-batch,3526053:St. Catharines,1,accordion-batch
+B66150,District School Board of Niagara,public,0,Steve Webb,Danny DiLorenzo,,,0,dannydilorenzo5@gmail.com,,,1,accordion-batch,3526011:Port Colborne,1,accordion-batch
+B66150,District School Board of Niagara,public,0,Steve Webb,English Language Catholic District School Board,,,0,,,,0,,3526011:Port Colborne,1,accordion-batch
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,(Acclaimed),"Banfield, Lenora (Acclaimed)",,,0,banfields@sympatico.ca,519-939-3009,,1,accordion-batch,3522001:East Garafraxa,1,accordion-batch
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,(Acclaimed),"Halls, Dave (Acclaimed)",,,0,hallser02@hotmail.com,519-215-0716,,1,accordion-batch,3522001:East Garafraxa,1,accordion-batch
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,(Acclaimed),"Zukowski, Jeremy (Acclaimed)",,,0,jeremy@greenwoodconst.ca,519-942-6544,,1,accordion-batch,3522001:East Garafraxa,1,accordion-batch
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,*Unofficial candidates for School Board Trustee - English Separate (Dufferin-Peel Catholic District School Board),"Golem, Rachael",,,0,,647-884-3044,,1,accordion-batch,3522014:Orangeville,1,accordion-batch
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,*Unofficial candidates for School Board Trustee - English Separate (Dufferin-Peel Catholic District School Board),"Lapointe, Eric",,,0,,,,0,,3522014:Orangeville,1,accordion-batch
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,Contact Information,"Dametto-Giovannozzi, Paula - Acclaimed Acclamation Form",,,0,pauladamettogiovannozzi@gmail.com,416-570-5087,https://media-001-ca.cdn.govstack.com/amaranth-007-ca/media/3dkl3rpf/signed-english-seperate-school-acclamation-2026.pdf,1,accordion-batch,3522008:Amaranth,1,accordion-batch
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,Contact Information,"Grenier, Genevieve - Acclaimed Acclamation Form",,,0,,416-571-7407,https://media-001-ca.cdn.govstack.com/amaranth-007-ca/media/3dkl3rpf/signed-english-seperate-school-acclamation-2026.pdf,1,accordion-batch,3522008:Amaranth,1,accordion-batch
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,Date Filed,Deputy Mayor,,,0,,,,0,,3522001:East Garafraxa,1,accordion-batch
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,Date Filed,"Stirk, John (Acclaimed)",,,0,johnsdstirk@gmail.com,519-939-0703,,1,accordion-batch,3522001:East Garafraxa,1,accordion-batch
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,"Dufferin-Peel Catholic District School Board - Wards 1, 3, 4",ALFONSO MENANNO,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,"Dufferin-Peel Catholic District School Board - Wards 1, 3, 4",AMANDA BAEZ,,,0,amandafortrustee@gmail.com,,https://www.instagram.com/Amandafortrustee,1,voterview-harvest,3521010:Brampton,1,voterview-harvest
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,"Dufferin-Peel Catholic District School Board - Wards 1, 3, 4",ANISHA THOMAS,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,"Dufferin-Peel Catholic District School Board - Wards 2, 5, 6",DAMIEN JOSEPH,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,"Dufferin-Peel Catholic District School Board - Wards 2, 5, 6",DARRYL BRIAN D'SOUZA,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,"Dufferin-Peel Catholic District School Board - Wards 2, 5, 6",DOMINIQUE DARMANIN-STURGEON,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,"Dufferin-Peel Catholic District School Board - Wards 7, 8, 9, 10",ANDREA BARANOWSKI,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,"Dufferin-Peel Catholic District School Board - Wards 7, 8, 9, 10",KAREN DANCY,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,"Dufferin-Peel Catholic District School Board - Wards 7, 8, 9, 10",SHAWN XAVIOUR,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B67083,Dufferin-Peel Catholic District School Board,catholic,1,Municipal Council (Certified Candidates),"Gardhouse, Guy (Acclaimed)",,,0,sueguy2@hotmail.com,519-855-4832,,1,accordion-batch,3522001:East Garafraxa,1,accordion-batch
+B67105,Durham Catholic District School Board,catholic,0,Durham Catholic District School Board Trustee (two to be elected),MARY LOUISE LABARRE,,,0,,,,0,,3518009:Whitby,1,voterview-harvest
+B67105,Durham Catholic District School Board,catholic,0,Durham Catholic District School Board Trustee (two to be elected),ROBERT DE SOUZA,,,0,,,,0,,3518009:Whitby,1,voterview-harvest
+B67105,Durham Catholic District School Board,catholic,0,Durham Catholic District School Board Trustee (two to be elected),SINH NGO,,,0,,,,0,,3518009:Whitby,1,voterview-harvest
+B67105,Durham Catholic District School Board,catholic,0,Durham Catholic District School Board Trustee (two to be elected),TREVOR AITCHESON,,,0,,,,0,,3518009:Whitby,1,voterview-harvest
+B67105,Durham Catholic District School Board,catholic,0,Trustee - Durham Catholic District School Board,JOHN RZESZUT,,,0,,,,0,,3518013:Oshawa,1,voterview-harvest
+B67105,Durham Catholic District School Board,catholic,0,Trustee - Durham Catholic District School Board,KIM BEATTY,,,0,,,,0,,3518013:Oshawa,1,voterview-harvest
+B67105,Durham Catholic District School Board,catholic,0,Trustee - Durham Catholic District School Board,MORGAN STE. MARIE,,,0,,,,0,,3518013:Oshawa,1,voterview-harvest
+B67105,Durham Catholic District School Board,catholic,0,"Trustee, Durham Catholic District School Board",ANDRE DE FREITAS,,,0,,,,0,,3518001:Pickering,1,voterview-harvest
+B67105,Durham Catholic District School Board,catholic,0,"Trustee, Durham Catholic District School Board",AYEZA PEREZ,,,0,,,,0,,3518001:Pickering,1,voterview-harvest
+B67105,Durham Catholic District School Board,catholic,0,"Trustee, Durham Catholic District School Board",BESSY STERGIOU,,,0,,,,0,,3518001:Pickering,1,voterview-harvest
+B67105,Durham Catholic District School Board,catholic,0,"Trustee, Durham Catholic District School Board",Erik Lapointe,,,0,ErikJLapointe@gmail.com,,,1,accordion-batch,3518013:Oshawa,1,accordion-batch
+B67105,Durham Catholic District School Board,catholic,0,"Trustee, Durham Catholic District School Board",Kristine Dandavino,,,0,,,,0,,3518013:Oshawa,1,accordion-batch
+B66060,Durham District School Board,public,0,Candidates Elected by Acclamation,English Separate: Durham Catholic District School Board,,,0,,,,0,,3518020:Scugog,1,accordion-batch
+B66060,Durham District School Board,public,0,Candidates Elected by Acclamation,French Separate: Conseil scolaire catholique MonAvenir,,,0,,,,0,,3518020:Scugog,1,accordion-batch
+B66060,Durham District School Board,public,0,Durham District School Board Trustee (two to be elected),CHRISTOPHER PRICE,,,0,,,,0,,3518009:Whitby,1,voterview-harvest
+B66060,Durham District School Board,public,0,Durham District School Board Trustee (two to be elected),JASON ARSENEAULT,,,0,,,,0,,3518009:Whitby,1,voterview-harvest
+B66060,Durham District School Board,public,0,Durham District School Board Trustee (two to be elected),KIM DOWNEY,,,0,333downey@gmail.com,,,1,voterview-harvest,3518009:Whitby,1,voterview-harvest
+B66060,Durham District School Board,public,0,Durham District School Board Trustee (two to be elected),KIMBERLEY PINEAU,,,0,kim.pineau@gmail.com,,http://sites.google.com/view/kimpineau-ddsbtrustee-2026/home,1,voterview-harvest,3518009:Whitby,1,voterview-harvest
+B66060,Durham District School Board,public,0,Durham District School Board Trustee (two to be elected),LYNDA YARDLEY,,,0,,,,0,,3518009:Whitby,1,voterview-harvest
+B66060,Durham District School Board,public,0,Durham District School Board Trustee (two to be elected),MANAS KHANNA,,,0,,,,0,,3518009:Whitby,1,voterview-harvest
+B66060,Durham District School Board,public,0,Durham District School Board Trustee (two to be elected),MICHELLE AMBROSE,,,0,,,,0,,3518009:Whitby,1,voterview-harvest
+B66060,Durham District School Board,public,0,Durham District School Board Trustee (two to be elected),ROB DIAMOND,,,0,,,,0,,3518009:Whitby,1,voterview-harvest
+B66060,Durham District School Board,public,0,Durham District School Board Trustee (two to be elected),SRI MYLAVARAPU,,,0,,,,0,,3518009:Whitby,1,voterview-harvest
+B66060,Durham District School Board,public,0,Durham District School Board Trustee (two to be elected),WILL ELLIS,,,0,,,,0,,3518009:Whitby,1,voterview-harvest
+B66060,Durham District School Board,public,0,Trustee - Durham District School Board,ARJUN ARIARAN,,,0,,,,0,,3518013:Oshawa,1,voterview-harvest
+B66060,Durham District School Board,public,0,Trustee - Durham District School Board,HAMZA KHAN,,,0,,,,0,,3518013:Oshawa,1,voterview-harvest
+B66060,Durham District School Board,public,0,Trustee - Durham District School Board,HARRY CLARKE,,,0,,,,0,,3518013:Oshawa,1,voterview-harvest
+B66060,Durham District School Board,public,0,Trustee - Durham District School Board,JIM VAN ALLEN,,,0,,,,0,,3518013:Oshawa,1,voterview-harvest
+B66060,Durham District School Board,public,0,Trustee - Durham District School Board,PENNY NUGENT,,,0,,,,0,,3518013:Oshawa,1,voterview-harvest
+B66060,Durham District School Board,public,0,Trustee - Durham District School Board,SANDRA LAZARUS,,,0,,,,0,,3518013:Oshawa,1,voterview-harvest
+B66060,Durham District School Board,public,0,Trustee - Durham District School Board,SANJAY SARKAR,,,0,,,,0,,3518013:Oshawa,1,voterview-harvest
+B66060,Durham District School Board,public,0,"Trustee, Durham District School Board",AMJAD MUHAMMAD,,,0,,,,0,,3518001:Pickering,1,voterview-harvest
+B66060,Durham District School Board,public,0,"Trustee, Durham District School Board",EMMA CUNNINGHAM,,,0,,,,0,,3518001:Pickering,1,voterview-harvest
+B66060,Durham District School Board,public,0,"Trustee, Durham District School Board",HITESH PARIKH,,,0,,,,0,,3518001:Pickering,1,voterview-harvest
+B66060,Durham District School Board,public,0,"Trustee, Durham District School Board",John Rzeszut,,,0,votejohnrzeszut@gmail.com,,,1,accordion-batch,3518013:Oshawa,1,accordion-batch
+B66060,Durham District School Board,public,0,"Trustee, Durham District School Board",KHADIZA MANJRA,,,0,,,,0,,3518001:Pickering,1,voterview-harvest
+B66060,Durham District School Board,public,0,"Trustee, Durham District School Board",Kim Beatty,,,0,electKimBeatty@rogers.com,,,1,accordion-batch,3518013:Oshawa,1,accordion-batch
+B66060,Durham District School Board,public,0,"Trustee, Durham District School Board",Morgan Ste. Marie,,,0,vote@morganstemarie.ca,,https://morganstemarie.ca,1,accordion-batch,3518013:Oshawa,1,accordion-batch
+B66060,Durham District School Board,public,0,"Trustee, Durham District School Board",SINTHUJA KANAGESWARAN,,,0,,,,0,,3518001:Pickering,1,voterview-harvest
+B66060,Durham District School Board,public,0,"Trustee, Durham District School Board",WALTON ARMSTRONG,,,0,,,,0,,3518001:Pickering,1,voterview-harvest
+B66168,Grand Erie District School Board,public,0,Grand Erie Public School Board candidates,"Corbett, Bernie",,,0,,,,0,,3528018:Haldimand County,1,accordion-batch
+B66168,Grand Erie District School Board,public,0,Grand Erie Public School Board withdrawn candidates,"Poirier, Toni",,,0,tpoirier064@gmail.com,905-765-7982,,1,accordion-batch,3528018:Haldimand County,1,accordion-batch
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 1, 2 & 9",AFFAN SHAHID,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 1, 2 & 9",FAZLE BAKI,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 1, 2 & 9",MALINI ONDROVCIK,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 1, 2 & 9",SANDRA KIRMA,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 1, 2 & 9",TINA CHITTLE,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 1, 2 & 9",TODD GERVAIS,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 3, 4 & 10",BETH ST. DENIS,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 3, 4 & 10",CHRISTIE NELSON,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 3, 4 & 10",DANIEL LOCKHART,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 3, 4 & 10",MALAK BAKHASH,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 3, 4 & 10",MALEK MEKAWI,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 3, 4 & 10",MOHAMAD ALAWIE,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 5, 6, 7 & 8",CATHY COOKE,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 5, 6, 7 & 8",GALE SIMKO HATFIELD,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 5, 6, 7 & 8",LUCA LAZARUS,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 5, 6, 7 & 8",MAY LYMAN,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 5, 6, 7 & 8",MICHAEL SERDAN,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B66028,Greater Essex County District School Board,public,0,"Trustee - GECDSB - Wards 5, 6, 7 & 8",SALENA HAMILTON,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,1 to be elected,Eliane Bousamra,,,0,eliane4trustee@yahoo.com,,,1,accordion-batch,3524015:Halton Hills,1,accordion-batch
+B67113,Halton Catholic District School Board,catholic,0,1 to be elected,Janet O'Hearn Czarnota,,,0,,905-630-3581,,1,accordion-batch,3524015:Halton Hills,1,accordion-batch
+B67113,Halton Catholic District School Board,catholic,0,English Separate School Trustee Ward 1 & 4 | Ward 1 and 4,Joseph Brendan,,,0,brendanjoseph4hcdsb@gmail.com,416-294-0416,https://www.josephbrendan.ca/,1,accordion-batch,3524009:Milton,1,accordion-batch | voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,English Separate School Trustee Ward 1 & 4 | Ward 1 and 4,Juan Cumming,,,0,,,,0,,3524009:Milton,1,accordion-batch | voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,English Separate School Trustee Ward 2 & 3 | Ward 2 and 3,Cecil Young,,,0,cecyoung@sbg.ca,416-997-9584,,1,accordion-batch,3524009:Milton,1,accordion-batch | voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,English Separate School Trustee Ward 2 & 3 | Ward 2 and 3,Joseph Adams,,,0,josephadams4hcdsbtrustee@gmail.com,,http://josephadams.ca,1,accordion-batch,3524009:Milton,1,accordion-batch | voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,HCDSB Trustee - Ward 1 & 2,MCKENZIE ALLISON,,,0,,,,0,,3524002:Burlington,1,voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,HCDSB Trustee - Ward 1 & 2,VINCENT IANTOMASI,,,0,,,,0,,3524002:Burlington,1,voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,HCDSB Trustee - Ward 3 & 6,BERNICE CARVALHO,,,0,,,,0,,3524002:Burlington,1,voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,HCDSB Trustee - Ward 3 & 6,ROMAN SOLER,,,0,,,,0,,3524002:Burlington,1,voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,HCDSB Trustee - Wards 4 & 5,BASHAR HADDADEN,,,0,,,,0,,3524002:Burlington,1,voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,HCDSB Trustee - Wards 4 & 5,KARINA VINKA KVENICH,,,0,,,,0,,3524002:Burlington,1,voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,HCDSB Trustee - Wards 4 & 5,TIM O'BRIEN,,,0,,,,0,,3524002:Burlington,1,voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,"Halton Catholic District School Board - Wards 1,2 & 3",MARIO JELIC,,,0,mjelic91@gmail.com,(647) 464-8411,,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,"Halton Catholic District School Board - Wards 1,2 & 3",MARTIN GEGUS,,,0,,(905) 361-9162,,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,"Halton Catholic District School Board - Wards 1,2 & 3",TOM MURAD,,,0,dr.t.murad@ieee.org,(647) 960-0469,,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,Halton Catholic District School Board - Wards 4 and 7,CHRIS SAUNDERS,,,0,csaunders3@cogeco.ca,(905) 580-5875,,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,Halton Catholic District School Board - Wards 5 and 6,HELENA KARABELA,,,0,helena@karabela.ca,(905) 510-1849,,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B67113,Halton Catholic District School Board,catholic,0,Halton Catholic District School Board - Wards 5 and 6,SEAN MCCARTHY,,,0,,(226) 377-3700,,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B66133,Halton District School Board,public,0,1 to be elected,Lennox Liverpool,,,0,,647-388-5909,,1,accordion-batch,3524015:Halton Hills,1,accordion-batch
+B66133,Halton District School Board,public,0,1 to be elected,Susan Doyle,,,0,,,,0,,3524015:Halton Hills,1,accordion-batch
+B66133,Halton District School Board,public,0,English Public School Trustee Wards 1 & 2 | Ward 1 and 2,Andrew J. Wood,,,0,trusteewood@gmail.com,647-999-8516,https://andrewjwood.ca/,1,accordion-batch,3524009:Milton,1,accordion-batch | voterview-harvest
+B66133,Halton District School Board,public,0,English Public School Trustee Wards 1 & 2 | Ward 1 and 2,Khdiga R. Metwally,,,0,drkmetwally@gmail.com,,http://votefordrkmetwally.ca/,1,accordion-batch,3524009:Milton,1,accordion-batch | voterview-harvest
+B66133,Halton District School Board,public,0,English Public School Trustee Wards 3 & 4,ABDULILLAH FARUQI,,,0,abdulillah.faruqi@gmail.com,(905) 703-6035,http://abdulillahfaruqi.ca,1,voterview-harvest,3524009:Milton,1,voterview-harvest
+B66133,Halton District School Board,public,0,English Public School Trustee Wards 3 & 4,HAS SLEIMAN,,,0,info@votesleiman.ca,,http://votesleiman.ca,1,voterview-harvest,3524009:Milton,1,voterview-harvest
+B66133,Halton District School Board,public,0,English Public School Trustee Wards 3 & 4,LETITIA HENRY,,,0,topcarenursing@gmail.com,,http://sites.google.com/view/letitia-henry-msc-phdcc/home,1,voterview-harvest,3524009:Milton,1,voterview-harvest
+B66133,Halton District School Board,public,0,English Public School Trustee Wards 3 & 4,MALIH SIDDIQI,,,0,siddiqimalih@gmail.com,(647) 786-5290,,1,voterview-harvest,3524009:Milton,1,voterview-harvest
+B66133,Halton District School Board,public,0,English Public School Trustee Wards 3 & 4,YASAR SHAIKH,,,0,yasarshaikh@yahoo.com,(289) 221-7774,,1,voterview-harvest,3524009:Milton,1,voterview-harvest
+B66133,Halton District School Board,public,0,HDSB Trustee - Ward 4,AHMED ZAKI,,,0,,,,0,,3524002:Burlington,1,voterview-harvest
+B66133,Halton District School Board,public,0,HDSB Trustee - Ward 4,DANIA THURMAN,,,0,,,,0,,3524002:Burlington,1,voterview-harvest
+B66133,Halton District School Board,public,0,HDSB Trustee - Ward 4,RYAN MARLOW,,,0,,,,0,,3524002:Burlington,1,voterview-harvest
+B66133,Halton District School Board,public,0,HDSB Trustee - Ward 5,AMY COLLARD,,,0,,,,0,,3524002:Burlington,1,voterview-harvest
+B66133,Halton District School Board,public,0,HDSB Trustee - Wards 1 & 2,BIKA DIAKOLOUKAS,,,0,,,,0,,3524002:Burlington,1,voterview-harvest
+B66133,Halton District School Board,public,0,HDSB Trustee - Wards 3 & 6,SUKHWINDER SINGH,,,0,,,,0,,3524002:Burlington,1,voterview-harvest
+B66133,Halton District School Board,public,0,HDSB Trustee - Wards 3 & 6,XIN YI ZHANG,,,0,,,,0,,3524002:Burlington,1,voterview-harvest
+B66133,Halton District School Board,public,0,Halton District School Board Trustee - Ward 3 and 6,REBECCA MAYVILLE,,,0,mayvillehdsb@gmail.com,,,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B66133,Halton District School Board,public,0,Halton District School Board Trustee - Ward 3 and 6,TAUSIF SABIR,,,0,tsabir1@gmail.com,(416) 712-0595,,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B66133,Halton District School Board,public,0,Halton District School Board Trustee - Ward 3 and 6,VINAY PARAMANAND,,,0,vinayforhdsb2026@gmail.com,,,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B66133,Halton District School Board,public,0,Halton District School Board Trustee - Ward 4,DEEPAK PATHANIA,,,0,deepak_pathania@hotmail.com,(647) 765-5183,http://deepakpathania.ca,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B66133,Halton District School Board,public,0,Halton District School Board Trustee - Ward 4,FLORIN CRISTIAN VILCU,,,0,florincvilcu@gmail.com,,,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B66133,Halton District School Board,public,0,Halton District School Board Trustee - Ward 4,IRA DAVIDOV,,,0,iraoakville@gmail.com,,,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B66133,Halton District School Board,public,0,Halton District School Board Trustee - Ward 4,VIRGINIA NSITEM,,,0,virginia4trustee@gmail.com,,http://www.virginiansitem.ca/,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B66133,Halton District School Board,public,0,Halton District School Board Trustee - Wards 1 & 2,CAROLE BAXTER,,,0,carole4trustee@gmail.com,,http://www.carolebaxter.ca,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B66133,Halton District School Board,public,0,Halton District School Board Trustee - Wards 1 & 2,HAMZAH KHAN,,,0,khanfortrustee@gmail.com,(289) 400-1525,,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B66133,Halton District School Board,public,0,Halton District School Board Trustee - Wards 1 & 2,ZAFAR KAYANI,,,0,votezafarkayani@gmail.com,(905) 466-8110,http://votezafarkayani.com,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B66133,Halton District School Board,public,0,Halton District School Board Trustee - Wards 5 & 7,AHMED GOHAR,,,0,,,,0,,3524001:Oakville,1,voterview-harvest
+B66133,Halton District School Board,public,0,Halton District School Board Trustee - Wards 5 & 7,ASHISH MAGGO,,,0,ashish.maggo08@gmail.com,(778) 933-2827,,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B66133,Halton District School Board,public,0,Halton District School Board Trustee - Wards 5 & 7,AZRA GHUMMAN,,,0,azraghumman@gmail.com,,,1,voterview-harvest,3524001:Oakville,1,voterview-harvest
+B66133,Halton District School Board,public,0,Halton District School Board Trustee - Wards 5 & 7,JAKE ZHU,,,0,,,,0,,3524001:Oakville,1,voterview-harvest
+B66133,Halton District School Board,public,0,Halton District School Board Trustee - Wards 5 & 7,KIM TAIT,,,0,,,,0,,3524001:Oakville,1,voterview-harvest
+B66133,Halton District School Board,public,0,Halton District School Board Trustee - Wards 5 & 7,LILY BHARAT,,,0,,,,0,,3524001:Oakville,1,voterview-harvest
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Ward 10 - English Separate,"Di Nicola, Andrea",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Ward 10 - English Separate,"Nardini, Mary",,,0,,905-664-6336,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Ward 5 - English Separate,"D'Intino, Aldo",,,0,,905-578-2135,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Ward 6 - English Separate,"Agostino, Ellen",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Ward 6 - English Separate,"Belanger, Joanne",,,0,,613-921-0560,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Ward 6 - English Separate,"Mari, Anthony",,,0,,905-520-2900,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Ward 7 - English Separate,"Agostino, Nick",,,0,,905-973-3094,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Ward 7 - English Separate,"Duffy, Kevin",,,0,,905-537-1486,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Ward 7 - English Separate,"Filice, Luca",,,0,,905-928-5769,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,"Wards 1, 2 & 15 - English Separate","Valvasori, Mark",,,0,,905-529-5980,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Wards 12 & 13 - English Separate,"Homerski, Phil",,,0,,905-689-3898,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Wards 12 & 13 - English Separate,"McKenna, Kevin",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Wards 12 & 13 - English Separate,"Mercante, Paul",,,0,,289-237-1898,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Wards 12 & 13 - English Separate,"Xenos, Christopher",,,0,,289-239-7558,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Wards 3 & 4 - English Separate,"Agostino, Ralph",,,0,,905-317-6654,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Wards 8 & 14 - English Separate,"Bonilla-Damptey, Jessica",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Wards 8 & 14 - English Separate,"Chrapka, Wieslawa Helena",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Wards 8 & 14 - English Separate,"Valvasori, John",,,0,,905-679-6523,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B67121,Hamilton-Wentworth Catholic District School Board,catholic,0,Wards 9 & 11 - English Separate,"Iorio, Tyler",,,0,,905-520-6228,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 1 - English Public,"Hambly, Blake",,,0,,289-775-6363,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 1 - English Public,"Harrington, Andrew",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 1 - English Public,"McMullin, Shawn",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 1 - English Public,"Prosic, Cameron",,,0,,905-818-7110,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 13 - English Public,"Slye, Chris",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 15 - English Public,"Nicholl, Anthony",,,0,,289-700-9831,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 15 - English Public,"Noble, Graeme",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 2 - English Public,"Chepil, Anthony L.",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 2 - English Public,"Dahab, Sabreina",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 3 - English Public,"Crowder, Frank",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 3 - English Public,"Pattison, Larry",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 3 - English Public,"Preston, Kory",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 3 - English Public,"Shanahan, Meagan",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 4 - English Public,"Zaitley, Abby",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 7 - English Public,"Floyd, Seth",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 7 - English Public,"King, Bill",,,0,,905-512-5852,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Ward 7 - English Public,"Picken, Marlon",,,0,,905-902-7707,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Wards 11 & 12 - English Public,"Baxter, Melissa",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Wards 11 & 12 - English Public,"Fehrman, Amanda",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Wards 5 & 10 - English Public,"Maguire-Garber, Theresa",,,0,,905-664-7867,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Wards 5 & 10 - English Public,"Shields, Logan",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Wards 5 & 10 - English Public,"White, Todd",,,0,,289-237-1644,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Wards 6 & 9 - English Public,"Archer, Kathy",,,0,,905-574-4190,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Wards 6 & 9 - English Public,"May, Todd",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Wards 8 & 14 - English Public,"Hillen, Daunte",,,0,,905-981-2673,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Wards 8 & 14 - English Public,"Johnson, Bryan",,,0,,416-989-4509,,1,accordion-batch,3525005:Hamilton,1,accordion-batch
+B66141,Hamilton-Wentworth District School Board,public,0,Wards 8 & 14 - English Public,"O'Reilly, Ben",,,0,,,,0,,3525005:Hamilton,1,accordion-batch
+B66222,Hastings & Prince Edward District School Board,public,0,Hastings Prince Edward District School Board School Board Trustee,DAVID PICKETT,,,0,,,,0,,3512001:Tyendinaga,1,voterview-harvest
+B66222,Hastings & Prince Edward District School Board,public,0,Hastings Prince Edward District School Board School Board Trustee,SHANNON BINDER,,,1,,,,0,,3512001:Tyendinaga,1,voterview-harvest
+B67016,Huron Perth Catholic District School Board,catholic,0,Candidates for Huron Perth Catholic District School Board,"Charlesworth, David",,,0,d.charlesworth@mac.com,519-801-1234,,1,accordion-batch,3531011:Stratford,1,accordion-batch
+B67016,Huron Perth Catholic District School Board,catholic,0,Candidates for Huron Perth Catholic District School Board,Huron Perth Catholic District School Board Candidates,,,0,,,,0,,3531011:Stratford,1,accordion-batch
+B67016,Huron Perth Catholic District School Board,catholic,0,Candidates for Huron Perth Catholic District School Board,"Marcy, Heather",,,0,heathermarcy7@gmail.com,,,1,accordion-batch,3531011:Stratford,1,accordion-batch
+B67016,Huron Perth Catholic District School Board,catholic,0,Candidates for Huron Perth Catholic District School Board,"Thomson, Laurie",,,0,,,,0,,3531011:Stratford,1,accordion-batch
+B67016,Huron Perth Catholic District School Board,catholic,0,Declaration of Acclamation to Office,Jamie Heffer,,,0,,,,0,,3540050:Morris-Turnberry,1,accordion-batch
+B67016,Huron Perth Catholic District School Board,catholic,0,Declaration of Acclamation to Office,Michael Salvatore,,,0,,,,0,,3540050:Morris-Turnberry,1,accordion-batch
+B67016,Huron Perth Catholic District School Board,catholic,0,Declaration of Acclamation to Office,Patricia Smith,,,0,,,,0,,3540050:Morris-Turnberry,1,accordion-batch
+B67016,Huron Perth Catholic District School Board,catholic,0,Declaration of Acclamation to Office,Rachid Barrima,,,0,,,,0,,3540050:Morris-Turnberry,1,accordion-batch
+B67016,Huron Perth Catholic District School Board,catholic,0,Huron-Perth Catholic Separate School Board (English),Derek Van De Walle,,,0,davandewalle@gmail.com,519-275-4120,,1,accordion-batch,3531013:Perth South,1,accordion-batch
+B67016,Huron Perth Catholic District School Board,catholic,0,Huron-Perth Catholic Separate School Board (English),Mary Helen Van Loon,,,0,maryhelenvl@hotmail.com,519-275-1710,,1,accordion-batch,3531013:Perth South,1,accordion-batch
+B29025,Huron-Superior Catholic District School Board,catholic,0,HSCDSB Trustee,CAROL AMADIO,,,0,,,,0,,3557061:Sault Ste. Marie,1,voterview-harvest
+B29025,Huron-Superior Catholic District School Board,catholic,0,HSCDSB Trustee,JOHN BRUNO,,,0,,,,0,,3557061:Sault Ste. Marie,1,voterview-harvest
+B29025,Huron-Superior Catholic District School Board,catholic,0,HSCDSB Trustee,JOHN CAPUTO,,,0,,,,0,,3557061:Sault Ste. Marie,1,voterview-harvest
+B29025,Huron-Superior Catholic District School Board,catholic,0,HSCDSB Trustee,SANDRA P TURCO,,,0,,,,0,,3557061:Sault Ste. Marie,1,voterview-harvest
+B29025,Huron-Superior Catholic District School Board,catholic,0,HSCDSB Trustee,TONY D'AGOSTINO,,,0,,,,0,,3557061:Sault Ste. Marie,1,voterview-harvest
+B29025,Huron-Superior Catholic District School Board,catholic,0,HSCDSB Trustee,WAYNE GRECO,,,0,,,,0,,3557061:Sault Ste. Marie,1,voterview-harvest
+B66079,Kawartha Pine Ridge District School Board,public,0,Kawartha Pine Ridge District School Board Trustee,BUNMI OYINSAN,,,0,olubunmioyinsan@gmail.com,(647) 286-0643,http://bunmioyinsan.net,1,voterview-harvest,3518017:Clarington,1,voterview-harvest
+B66079,Kawartha Pine Ridge District School Board,public,0,Kawartha Pine Ridge District School Board Trustee,Brad Jakobsen,,,0,bradtrusteecandidate@gmail.com,905-242-1221,https://www.facebook.com/JakobsenBrad,1,accordion-batch,3518017:Clarington,1,accordion-batch
+B66079,Kawartha Pine Ridge District School Board,public,0,Kawartha Pine Ridge District School Board Trustee,CATHY ABRAHAM,,,0,cathy.abraham2026@gmail.com,(647) 620-2877,,1,voterview-harvest,3518017:Clarington,1,voterview-harvest
+B66079,Kawartha Pine Ridge District School Board,public,0,Kawartha Pine Ridge District School Board Trustee,JACK HENRY,,,0,,,,0,,3515014:Peterborough,1,voterview-harvest
+B66079,Kawartha Pine Ridge District School Board,public,0,Kawartha Pine Ridge District School Board Trustee,JULIE CHATTEN,,,0,,,,0,,3515014:Peterborough,1,voterview-harvest
+B66079,Kawartha Pine Ridge District School Board,public,0,Kawartha Pine Ridge District School Board Trustee,KURTIS MCALEER,,,0,kurtismcaleertrustee@gmail.com,,http://www.KurtisMcAleer.ca,1,voterview-harvest,3518017:Clarington,1,voterview-harvest
+B66079,Kawartha Pine Ridge District School Board,public,0,Kawartha Pine Ridge District School Board Trustee,Kevin MacKenzie,,,0,kevin@yourtrustee.ca,289-356-7838,https://kevinamackenzie.merlin-site.com/,1,accordion-batch,3518017:Clarington,1,accordion-batch
+B66079,Kawartha Pine Ridge District School Board,public,0,Kawartha Pine Ridge District School Board Trustee,PRANAY GUNTI,,,0,pranayfortrustee@gmail.com,(437) 345-6353,,1,voterview-harvest,3518017:Clarington,1,voterview-harvest
+B66079,Kawartha Pine Ridge District School Board,public,0,Kawartha Pine Ridge District School Board Trustee,SHAWNA BLACKWOOD,,,0,,,,0,,3515014:Peterborough,1,voterview-harvest
+B66079,Kawartha Pine Ridge District School Board,public,0,Nominations for Office of School Board Trustee - English Public Kawartha Pine Ridge District School Board,Elizabeth Terrell,,,0,Lizterrell73@gmail.com,705-395-8563,,1,accordion-batch,3514045:Trent Hills,1,accordion-batch
+B66079,Kawartha Pine Ridge District School Board,public,0,Nominations for Office of School Board Trustee - English Public Kawartha Pine Ridge District School Board,Jaine Klassen Jeninga,,,0,jaineKlassenjeningo@gmail.com,905-396-5665,,1,accordion-batch,3514045:Trent Hills,1,accordion-batch
+B66079,Kawartha Pine Ridge District School Board,public,0,Nominations for Office of School Board Trustee - English Public Kawartha Pine Ridge District School Board,Lindsay White,,,0,lindsay.a.white@gmail.com,289-251-4186,,1,accordion-batch,3514045:Trent Hills,1,accordion-batch
+B66079,Kawartha Pine Ridge District School Board,public,0,Nominations for Office of School Board Trustee - English Public Kawartha Pine Ridge District School Board,Terry Brown,,,0,brownterry755@gmail.com,905-376-0212,,1,accordion-batch,3514045:Trent Hills,1,accordion-batch
+B66079,Kawartha Pine Ridge District School Board,public,0,"School Board Trustee, English Public",Amy McQuaid,,,0,vote@amymcquaid.ca,905-442-4497,,1,accordion-batch,3514004:Brighton,1,accordion-batch
+B66079,Kawartha Pine Ridge District School Board,public,0,"School Board Trustee, English Public",Cynthia (Cyndi) Dickson,,,0,cyndi_dickson@live.ca,613-475-4222,,1,accordion-batch,3514004:Brighton,1,accordion-batch
+B66036,Lambton Kent District School Board,public,0,"Trustee, Lambton Kent District School Board (English Public School Board)","Carroll, Erin",,,0,,,,0,,3538030:Sarnia,1,accordion-batch
+B66036,Lambton Kent District School Board,public,0,"Trustee, Lambton Kent District School Board (English Public School Board)","Kershaw, Janet",,,0,kershaja7@gmail.com,519-466-7059,,1,accordion-batch,3538030:Sarnia,1,accordion-batch
+B66036,Lambton Kent District School Board,public,0,"Trustee, Lambton Kent District School Board (English Public School Board)","McKessock, Robert John",,,0,rmckessock69@gmail.com,519-330-2580,,1,accordion-batch,3538030:Sarnia,1,accordion-batch
+B66036,Lambton Kent District School Board,public,0,"Trustee, Lambton Kent District School Board (English Public School Board)","Ramos, Petra Linda",,,0,lacanaca2003@yahoo.ca,519-869-2220,,1,accordion-batch,3538030:Sarnia,1,accordion-batch
+B66036,Lambton Kent District School Board,public,0,"Trustee, Lambton Kent District School Board (English Public School Board)","Shortt, David",,,0,ElectDavidShortt@gmail.com,519-344-7075,,1,accordion-batch,3538030:Sarnia,1,accordion-batch
+B67032,London District Catholic School Board,catholic,0,Contact Information,David Paradis,,,0,david.paradis@gmail.com,416-844-5549,,1,accordion-batch,3532018:Ingersoll,1,accordion-batch
+B67032,London District Catholic School Board,catholic,0,English Catholic Trustee Wards 1 & 14,DENISE SINGH,,,0,,,,0,,3539036:London,1,voterview-harvest
+B67032,London District Catholic School Board,catholic,0,English Catholic Trustee Wards 1 & 14,MATTHEW PIZZUTI,,,0,,,,0,,3539036:London,1,voterview-harvest
+B67032,London District Catholic School Board,catholic,0,English Catholic Trustee Wards 1 & 14,ODILIA GOUVEIA,,,0,,,,0,,3539036:London,1,voterview-harvest
+B67032,London District Catholic School Board,catholic,0,English Catholic Trustee Wards 1 & 14,PEDRO ALMEIDA,,,0,,,,0,,3539036:London,1,voterview-harvest
+B67032,London District Catholic School Board,catholic,0,"English Catholic Trustee Wards 11, 12 & 13",ARTHUR PATRICK MACLEOD,,,0,,,,0,,3539036:London,1,voterview-harvest
+B67032,London District Catholic School Board,catholic,0,"English Catholic Trustee Wards 11, 12 & 13",JOHN JEVNIKAR,,,0,,,,0,,3539036:London,1,voterview-harvest
+B67032,London District Catholic School Board,catholic,0,"English Catholic Trustee Wards 11, 12 & 13",NANDO FAVARO,,,0,,,,0,,3539036:London,1,voterview-harvest
+B67032,London District Catholic School Board,catholic,0,"English Catholic Trustee Wards 2, 3 & 4",REJOSE MATHEW ARACKAL,,,0,,,,0,,3539036:London,1,voterview-harvest
+B67032,London District Catholic School Board,catholic,0,"English Catholic Trustee Wards 2, 3 & 4",SANDRA CRUZ,,,0,,,,0,,3539036:London,1,voterview-harvest
+B67032,London District Catholic School Board,catholic,0,"English Catholic Trustee Wards 5,6 & 7",BENSY MATHEW,,,0,,,,0,,3539036:London,1,voterview-harvest
+B67032,London District Catholic School Board,catholic,0,"English Catholic Trustee Wards 5,6 & 7",BILL RUEGER,,,0,,,,0,,3539036:London,1,voterview-harvest
+B67032,London District Catholic School Board,catholic,0,"English Catholic Trustee Wards 5,6 & 7",GABE PIZZUTI,,,0,,,,0,,3539036:London,1,voterview-harvest
+B67032,London District Catholic School Board,catholic,0,"English Catholic Trustee Wards 5,6 & 7",LUCIE ALVES,,,0,,,,0,,3539036:London,1,voterview-harvest
+B67032,London District Catholic School Board,catholic,0,"English Catholic Trustee Wards 8, 9 & 10",LINDA STEEL,,,1,,,,0,,3539036:London,1,voterview-harvest
+B67032,London District Catholic School Board,catholic,0,English Separate School Trustee,ANA PAULA ALVES,,,0,ldcsb.oxfordcounty2022@gmail.com,,,1,voterview-harvest,3532042:Woodstock,1,voterview-harvest
+B67032,London District Catholic School Board,catholic,0,English Separate School Trustee,MARY HOLMES,,,0,paquette.holmes@gmail.com,,,1,voterview-harvest,3532042:Woodstock,1,voterview-harvest
+B67032,London District Catholic School Board,catholic,0,London District Catholic School Board Trustee (English Separate),Mary Holmes (acclaimed),,,0,paquette.holmes@gmail.com,519-537-5183 226-228-7784,,1,accordion-batch,3532038:East Zorra-Tavistock,1,accordion-batch
+B67032,London District Catholic School Board,catholic,0,"London District Catholic School Board Trustee - Acclaimed (English Separate) | Trustee, London District Catholic School Board (LDCSB)","Lamb, Josh",,,0,lambj@cintas.com,519-868-4174,,1,accordion-batch,3539027:Thames Centre | 3539033:Middlesex Centre,2,accordion-batch
+B67032,London District Catholic School Board,catholic,0,Phone: 226-228-7784,Joseph-Guy Bourbeau,,,0,,,,0,,3532018:Ingersoll,1,accordion-batch
+B28037,Near North District School Board,public,1,English Public School Board,BRIGID WILKINSON,,,1,,,,0,,3548069:Temagami,1,voterview-harvest
+B28037,Near North District School Board,public,1,English Public School Board,LARRY WIWCHAR,,,1,,,,0,,3548069:Temagami,1,voterview-harvest
+B28037,Near North District School Board,public,1,Near North District School Board,"ASPIN, Jay",,,0,jayaspin@bell.net,705-494-0084,,1,accordion-batch,3548044:North Bay,1,accordion-batch
+B28037,Near North District School Board,public,1,Near North District School Board,"GILL, John",,,0,john.gill.for.trustee@gmail.com,,,1,accordion-batch,3548044:North Bay,1,accordion-batch
+B28037,Near North District School Board,public,1,Near North District School Board,"SARGENT, Louise",,,0,mrs.louisesargent@gmail.com,,,1,accordion-batch,3548044:North Bay,1,accordion-batch
+B28037,Near North District School Board,public,1,Near North District School Board,"STEER, Bill",,,0,wilstonsteer@gmail.com,,,1,accordion-batch,3548044:North Bay,1,accordion-batch
+B28037,Near North District School Board,public,1,Near North District School Board,"VANDERLEE, Darlene",,,0,DarleneVanderlee29@gmail.com,,,1,accordion-batch,3548044:North Bay,1,accordion-batch
+B28037,Near North District School Board,public,1,Nominations will be accepted,By-law Number,,,0,,,,0,,3548027:Bonfield,1,accordion-batch
+B28037,Near North District School Board,public,1,Public School Trustee-Near North Board | Unofficial List of School Board Trustee Candidates,Jean Beckett,,,0,jean4trustee@vianet.ca,,,1,accordion-batch,3544065:Georgian Bay | 3549005:The Archipelago,2,accordion-batch | voterview-harvest
+B28037,Near North District School Board,public,1,Public School Trustee-Near North Board | Unofficial List of School Board Trustee Candidates,Jim Wilson,,,0,jwilson.solor@gmail.com,905-536-1908,,1,accordion-batch,3544065:Georgian Bay | 3549005:The Archipelago,2,accordion-batch | voterview-harvest
+B28037,Near North District School Board,public,1,Public School Trustee-Near North Board | Unofficial List of School Board Trustee Candidates,John Cochrane,,,0,johncochrane@hotmail.com,705-746-7877,,1,accordion-batch,3544065:Georgian Bay | 3549005:The Archipelago,2,accordion-batch | voterview-harvest
+B67156,Niagara Catholic District School Board,catholic,0,Niagara Catholic District School Board Trustee Candidates,Jim MARINO,,,0,mayor86@cogeco.ca,905-328-9248,N/A,1,accordion-batch,3526043:Niagara Falls,1,accordion-batch
+B67156,Niagara Catholic District School Board,catholic,0,Niagara Catholic District School Board Trustee Candidates,Joseph BRUZZESE,,,0,N/A,N/A,N/A,1,accordion-batch,3526043:Niagara Falls,1,accordion-batch
+B67156,Niagara Catholic District School Board,catholic,0,Niagara Catholic District School Board Trustee Candidates,Tony CARUSO,,,0,tony@tonycaruso.ca,289-271-0488,N/A,1,accordion-batch,3526043:Niagara Falls,1,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,2026 Municipal Candidates,"CORBETT, Jason",,,0,jasoncorbett40@icloud.com,705-840-0379,,1,accordion-batch,3548027:Bonfield,1,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,2026 Municipal Candidates,"DICKHOUT, Sarah",,,0,sarahdickhout@outlook.com,289-209-0041,,1,accordion-batch,3548027:Bonfield,1,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,2026 Municipal Candidates,"GAGNE, Jules",,,0,julesgagne@hotmail.ca,705-498-8582,,1,accordion-batch,3548027:Bonfield,1,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,2026 Municipal Candidates,"KROLIKOWSKI, Marcin",,,0,martiniblues75@yahoo.ca,647-404-8353,,1,accordion-batch,3548027:Bonfield,1,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,2026 Municipal Candidates,"MCLAREN, Randy",,,0,rcmclaren@sympatico.ca,705-498-2679,,1,accordion-batch,3548027:Bonfield,1,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,Committees of Council:,Cemetery Committee:,,,0,,,,0,,3549071:Nipissing,1,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,Committees of Council:,Committee of Adjustment:,,,0,,,,0,,3549071:Nipissing,1,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,Committees of Council:,Museum Board:,,,0,,,,0,,3549071:Nipissing,1,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,Committees of Council:,Recreation Committee:,,,0,,,,0,,3549071:Nipissing,1,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,Council Appointment to Boards:,Shared With Neighboring Municipalities,,,0,,,,0,,3549071:Nipissing,1,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,English Catholic School Board,MARTIN DRAINVILLE,,,1,,,,0,,3548069:Temagami,1,voterview-harvest
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,Near North District School Board,"ASPIN, Jay",,,0,jayaspin@bell.net,,,1,accordion-batch,3548055:West Nipissing / Nipissing Ouest,1,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,Near North District School Board,"GILL, John",,,0,john.gill.for.trustee@gmail.com,,,1,accordion-batch,3548055:West Nipissing / Nipissing Ouest,1,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,Near North District School Board,"SARGENT, Louise",,,0,mrs.louisesargent@gmail.com,,,1,accordion-batch,3548055:West Nipissing / Nipissing Ouest,1,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,Near North District School Board,"STEER, Bill",,,0,wilstonsteer@gmail.com,,,1,accordion-batch,3548055:West Nipissing / Nipissing Ouest,1,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,Near North District School Board,"VANDERLEE, Darlene",,,0,DarleneVanderlee29@gmail.com,,,1,accordion-batch,3548055:West Nipissing / Nipissing Ouest,1,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,Nipissing Parry Sound District Catholic School Board | Nipissing-Parry Sound Catholic District School Board,"CELENTANO, Ralph",,,0,rcelentano2022@gmail.com,,,1,accordion-batch,3548044:North Bay | 3548055:West Nipissing / Nipissing Ouest,2,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,Nipissing Parry Sound District Catholic School Board | Nipissing-Parry Sound Catholic District School Board,"DUNKLEY, David",,,0,david@daviddunkley.com,,,1,accordion-batch,3548044:North Bay | 3548055:West Nipissing / Nipissing Ouest,2,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,Nipissing Parry Sound District Catholic School Board | Nipissing-Parry Sound Catholic District School Board,"FITZSIMMONS, Shawn",,,0,shawnfitzsimmons@cogeco.ca,705-472-7985,,1,accordion-batch,3548044:North Bay | 3548055:West Nipissing / Nipissing Ouest,2,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,Nipissing Parry Sound District Catholic School Board | Nipissing-Parry Sound Catholic District School Board,"WARREN, Shelly",,,0,29sawarren@gmail.com,,,1,accordion-batch,3548044:North Bay | 3548055:West Nipissing / Nipissing Ouest,2,accordion-batch
+B29017,Nipissing-Parry Sound Catholic District School Board,catholic,0,Nipissing Parry Sound District Catholic School Board | Nipissing-Parry Sound Catholic District School Board,"WHITTET, George",,,0,gwittet@cogeco.ca,705-497-3997,,1,accordion-batch,3548044:North Bay | 3548055:West Nipissing / Nipissing Ouest,2,accordion-batch
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 1, 5",DAVID GREEN,,,0,,,http://www.ElectDavid.ca,1,voterview-harvest,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 1, 5",STAN TAYLOR,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 1, 5",SUFIAN BAIG,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 1, 5 | Peel District School Board - Wards 3, 4",KATHY MCDONALD,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 2, 6",CHARANPREET SINGH SIDHU,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 2, 6",CHRIS CAMPBELL,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 2, 6",JEANNETTE FLYNN,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 2, 6",MANSOOR MIRZA,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 2, 6",PAL DHALIWAL,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 2, 6",SHRUTIBEN SHAH,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 2, 6",WILL DAVIES,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 3, 4",ARSHEI NIDHA,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 3, 4",CELINA REYES,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 3, 4",CLAUDIO C LEWIS,,,0,claudiolewis@trispeed.ca,(416) 475-2197,,1,voterview-harvest,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 3, 4",GURLEENJOT SINGH DHALIWAL,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 7, 8",ANDREA FRANCIS-BUCKNOR,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 7, 8",BRIAN JAMES BLAKE,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 7, 8",JATIN SETHI,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 7, 8",KARLA BAILEY,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 7, 8",MICHAEL GYOVAI,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 9, 10",- DALJIT SINGH,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 9, 10",- HARSIMRAN SINGH,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 9, 10",DENISE DANI,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 9, 10",DHARMAVIR GOHIL,,,0,,(416) 648-4447,,1,voterview-harvest,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 9, 10",GAGANDEEP SHARMA,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 9, 10",GURINDER SEHGAL,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 9, 10",KHUSHPAL SINGH PAWAR,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 9, 10",MILY MICHAEL MACWAN,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 9, 10",MUHAMMAD MISBAHUL HAQUE,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 9, 10",PANKAJ JOSHI,,,0,joship@outlook.com,(647) 968-5874,,1,voterview-harvest,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 9, 10",PARNEET DHOTHAR,,,0,,,,0,,3521010:Brampton,1,voterview-harvest
+B66125,Peel District School Board,public,1,"Peel District School Board - Wards 9, 10",THERESE GUIDOLIN,,,0,thereseguidolin@gmail.com,(416) 918-6353,,1,voterview-harvest,3521010:Brampton,1,voterview-harvest
+B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,catholic,0,Acclaimed Candidates for Peterborough Victoria Northumberland and Clarington Catholic District School Board Trustee,Erik Lapointe,,,0,,,,0,,3518017:Clarington,1,accordion-batch
+B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,catholic,0,PVNCCDSB Trustee,ALEX DELOREY,,,0,,,,0,,3515014:Peterborough,1,voterview-harvest
+B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,catholic,0,PVNCCDSB Trustee,BRADEN LEAL,,,0,,,,0,,3515014:Peterborough,1,voterview-harvest
+B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,catholic,0,PVNCCDSB Trustee,CHRISTINE HAFFIE,,,0,,,,0,,3515014:Peterborough,1,voterview-harvest
+B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,catholic,0,PVNCCDSB Trustee,JACQUELYN ROFFEY,,,0,,,,0,,3515014:Peterborough,1,voterview-harvest
+B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,catholic,0,PVNCCDSB Trustee,LORETTA DURST,,,0,,,,0,,3515014:Peterborough,1,voterview-harvest
+B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,catholic,0,Peterborough Victoria Northumberland and Clarington Catholic District School Board Trustee,BRAD JAKOBSEN,,,1,bradtrusteecandidate@gmail.com,(905) 242-1221,https://www.facebook.com/jakobsenbrad,1,voterview-harvest,3518017:Clarington,1,voterview-harvest
+B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,catholic,0,Peterborough Victoria Northumberland and Clarington Catholic District School Board Trustee,KEVIN MACKENZIE,,,1,kevin@yourtrustee.ca,(289) 356-7838,http://www.yourtrustee.ca,1,voterview-harvest,3518017:Clarington,1,voterview-harvest
+B67199,Renfrew County Catholic District School Board,catholic,0,School Board Trustee - English Catholic- one (1) to be elected,Jeannie Ivory,,,0,ACCLAIMED,ACCLAIMED,,1,accordion-batch,3547008:Greater Madawaska,1,accordion-batch
+B66214,Renfrew County District School Board,public,0,Councillor Candidates,Alexis Young,,,0,alexischarlotteyoung@gmail.com,(438) 868-6168,,1,accordion-batch,3547002:Arnprior,1,accordion-batch
+B66214,Renfrew County District School Board,public,0,Councillor Candidates,Bob Cunnington,,,0,,,,0,,3547002:Arnprior,1,accordion-batch
+B66214,Renfrew County District School Board,public,0,Councillor Candidates,Chris Couper,,,0,couper@gmail.com,(613) 518-4081,,1,accordion-batch,3547002:Arnprior,1,accordion-batch
+B66214,Renfrew County District School Board,public,0,Councillor Candidates,Chris Toner,,,0,cgtoner1969@gmail.com,(613) 913-9571,,1,accordion-batch,3547002:Arnprior,1,accordion-batch
+B66214,Renfrew County District School Board,public,0,Councillor Candidates,Donna Defalco,,,0,dldefalco62@gmail.com,,,1,accordion-batch,3547002:Arnprior,1,accordion-batch
+B66214,Renfrew County District School Board,public,0,Councillor Candidates,Leslie Anne Hook,,,0,hook.leslie@yahoo.ca,(613) 612-5683,,1,accordion-batch,3547002:Arnprior,1,accordion-batch
+B66214,Renfrew County District School Board,public,0,Councillor Candidates,Lynn Cloutier,,,0,lgrinstead@sympatico.ca,(613) 371-6036,,1,accordion-batch,3547002:Arnprior,1,accordion-batch
+B66214,Renfrew County District School Board,public,0,Councillor Candidates,Seth Malina,,,0,sethmalina.arnprior@gmail.com,(613) 791-9316,,1,accordion-batch,3547002:Arnprior,1,accordion-batch
+B66214,Renfrew County District School Board,public,0,Councillor Candidates,Tom Burnette,,,0,dtburnette@bell.net,(613) 799-1773,,1,accordion-batch,3547002:Arnprior,1,accordion-batch
+B66214,Renfrew County District School Board,public,0,Deputy Mayor Candidates,Dan Lynch,,,0,daniellynch@cogeco.ca,613-623-0146,,1,accordion-batch,3547002:Arnprior,1,accordion-batch
+B66214,Renfrew County District School Board,public,0,Mayor Candidates,Bill Griese,,,0,billgriese51@gmail.com,,,1,accordion-batch,3547002:Arnprior,1,accordion-batch
+B66214,Renfrew County District School Board,public,0,Mayor Candidates,Eric Burton,,,0,eric@ericburton.ca,613-401-1644,,1,accordion-batch,3547002:Arnprior,1,accordion-batch
+B66214,Renfrew County District School Board,public,0,Mayor Candidates,Lisa McGee,,,0,lisamcgee@gmail.com,(613) 322-0271,,1,accordion-batch,3547002:Arnprior,1,accordion-batch
+B66214,Renfrew County District School Board,public,0,School Board Trustee - English Public - one (1) to be elected,Jeffrey Barber,,,0,ACCLAIMED,ACCLAIMED,,1,accordion-batch,3547008:Greater Madawaska,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,English Public School Board Trustee,ADAM HARROD,,,0,,,,0,,3543031:Collingwood,1,voterview-harvest
+B66109,Simcoe County District School Board,public,0,English Public School Board Trustee,JAY BARRON,,,0,,,,0,,3543031:Collingwood,1,voterview-harvest
+B66109,Simcoe County District School Board,public,0,English Public School Board Trustee,JULIE ROSE,,,0,,,,0,,3543031:Collingwood,1,voterview-harvest
+B66109,Simcoe County District School Board,public,0,English Public School Board Trustee,KASIA BANIAK,,,0,,,,0,,3543031:Collingwood,1,voterview-harvest
+B66109,Simcoe County District School Board,public,0,English Public School Board Trustee,SARAH AZIZI,,,0,,,,0,,3543031:Collingwood,1,voterview-harvest
+B66109,Simcoe County District School Board,public,0,English Public School Board Trustee (Simcoe County District School Board),Debbie Connors,,,0,theconnors5@rogers.com,,https://www.facebook.com/bradfordtrustee.ca/,1,accordion-batch,3543014:Bradford West Gwillimbury,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,English Public School Board Trustee (Simcoe County District School Board),Gary Lamb,,,0,ggary009@sympatico.ca,905-715-4361,,1,accordion-batch,3543014:Bradford West Gwillimbury,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,English Public School Trustee,LESLIE WATTS,,,0,,,,0,,3543068:Tiny,1,voterview-harvest
+B66109,Simcoe County District School Board,public,0,"English Public School Trustee | Trustee, English Language Public School Board (Simcoe County District School Board)",Bob McMillan,,,0,6683727@bell.net,647-700-3322,,1,accordion-batch,3543068:Tiny | 3543074:Midland,2,accordion-batch | voterview-harvest
+B66109,Simcoe County District School Board,public,0,"English Public School Trustee | Trustee, English Language Public School Board (Simcoe County District School Board)",Jeff Bumstead,,,0,bumstead13.77@gmail.com,,,1,accordion-batch,3543068:Tiny | 3543074:Midland,2,accordion-batch | voterview-harvest
+B66109,Simcoe County District School Board,public,0,Simcoe County District School Board (English-Public),Brandy Rafeek,,,0,brandyrafeek@gmail.com,705-791-7009,,1,accordion-batch,3543003:Adjala-Tosorontio,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,"Simcoe County District School Board | Representing Barrie Wards 1, 2 and 3",David William O'Brien,,,0,davidwobrien4trustee@gmail.com,,https://www.facebook.com/davidwobrien4trustee/,1,accordion-batch,3543042:Barrie,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,"Simcoe County District School Board | Representing Barrie Wards 1, 2 and 3",Tim Ware,,,0,timothy.ware@gmail.com,705-716-5456,,1,accordion-batch,3543042:Barrie,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,"Simcoe County District School Board | Representing Barrie Wards 1, 2 and 3",Wes Ayranto,,,0,wes_ayranto@hotmail.com,905-751-6605,,1,accordion-batch,3543042:Barrie,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,"Simcoe County District School Board | Representing Barrie Wards 4, 5 and 6",Beth Mouratidis,,,0,beth.mouratidis@yahoo.ca,705-739-4739,https://www.facebook.com/Bethfortrustee/,1,accordion-batch,3543042:Barrie,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,"Simcoe County District School Board | Representing Barrie Wards 4, 5 and 6",Candice Thomas,,,0,,,,0,,3543042:Barrie,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,"Simcoe County District School Board | Representing Barrie Wards 4, 5 and 6",Dana Powell,,,0,powell.1972@rogers.com,705-792-6686,,1,accordion-batch,3543042:Barrie,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,"Simcoe County District School Board | Representing Barrie Wards 7, 8, 9 and 10",Chaudhry Farooq Haider Virk,,,0,votes4virk@gmail.com,705-305-8786,,1,accordion-batch,3543042:Barrie,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,"Simcoe County District School Board | Representing Barrie Wards 7, 8, 9 and 10",Darren Steeves,,,0,darrensteeves@gmail.com,416-522-7798,,1,accordion-batch,3543042:Barrie,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,"Simcoe County District School Board | Representing Barrie Wards 7, 8, 9 and 10",Denise Ketching,,,0,ketchingd@gmail.com,,https://www.facebook.com/deniseketching,1,accordion-batch,3543042:Barrie,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,"Simcoe County District School Board | Representing Barrie Wards 7, 8, 9 and 10",Kevin Berry,,,0,kevinberryfortrustee@gmail.com,705-794-2008,,1,accordion-batch,3543042:Barrie,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,"Simcoe County District School Board | Representing Barrie Wards 7, 8, 9 and 10",Sean Fitzgerald,,,0,fitzgerald.sean@ymail.com,705-241-6756,https://www.seanfitzgeraldcampaign.net/,1,accordion-batch,3543042:Barrie,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,"Trustee, English Language Public School Board (Simcoe County District School Board)",Lesley Watts,,,0,leswatts.ubc@gmail.com,,,1,accordion-batch,3543074:Midland,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,"Trustee, English-Public",Jodi M. Lloyd,,,0,jodilloyd4trustee@gmail.com,705-955-4964,,1,accordion-batch,3543052:Orillia,1,accordion-batch
+B66109,Simcoe County District School Board,public,0,"Trustee, English-Public",Stephen Sopher,,,0,,,,0,,3543052:Orillia,1,accordion-batch
+B67091,Simcoe Muskoka Catholic District School Board,catholic,0,English Catholic School Board Trustee (Simcoe Muskoka Catholic District School Board),Alex Sikorski,,,0,alex4smcdsbtrustee@gmail.com,647-881-7482,http://www.instagram.com/alex4trustee,1,accordion-batch,3543014:Bradford West Gwillimbury,1,accordion-batch
+B67091,Simcoe Muskoka Catholic District School Board,catholic,0,English Catholic School Board Trustee (Simcoe Muskoka Catholic District School Board),Tanya Da Silva,,,0,tanyadasilva611@gmail.com,,https://www.facebook.com/p/Tanya-J-Da-Silva-Catholic-School-Trustee-for-BradfordInnsfil-100083716294179/,1,accordion-batch,3543014:Bradford West Gwillimbury,1,accordion-batch
+B67091,Simcoe Muskoka Catholic District School Board,catholic,0,English Separate School Board Trustee,SHAWN COOPER,,,1,,,,0,,3543031:Collingwood,1,voterview-harvest
+B67091,Simcoe Muskoka Catholic District School Board,catholic,0,"English Separate School Trustee | Office: Trustee, English Language Separate School Board (Simcoe Muskoka Catholic District School Board)",Nicole Chuchmach,,,0,sophiesrun@hotmail.com,905-876-8080,,1,accordion-batch,3543068:Tiny | 3543074:Midland,2,accordion-batch | voterview-harvest
+B67091,Simcoe Muskoka Catholic District School Board,catholic,0,"English Separate School Trustee | Office: Trustee, English Language Separate School Board (Simcoe Muskoka Catholic District School Board)",Sherine McIntosh,,,0,mcintosh.sherine.a@gmail.com,705-896-2299,,1,accordion-batch,3543068:Tiny | 3543074:Midland,2,accordion-batch | voterview-harvest
+B67091,Simcoe Muskoka Catholic District School Board,catholic,0,"English Separate School Trustee | Office: Trustee, English Language Separate School Board (Simcoe Muskoka Catholic District School Board)",Steven Knuff,,,0,sgknuff@gmail.com,705-717-0037,,1,accordion-batch,3543068:Tiny | 3543074:Midland,2,accordion-batch | voterview-harvest
+B67091,Simcoe Muskoka Catholic District School Board,catholic,0,Simcoe Muskoka Catholic District School Board (English-Separate),Janice Hutchison,,,0,hutchisonjanice@hotmail.com,,,1,accordion-batch,3543003:Adjala-Tosorontio,1,accordion-batch
+B67091,Simcoe Muskoka Catholic District School Board,catholic,0,"Simcoe Muskoka Catholic District School Board | Representing Barrie Wards 1, 2, 3 and 5",Justin Heran,,,0,justinheran@gmail.com,705-791-2001,,1,accordion-batch,3543042:Barrie,1,accordion-batch
+B67091,Simcoe Muskoka Catholic District School Board,catholic,0,"Simcoe Muskoka Catholic District School Board | Representing Barrie Wards 1, 2, 3 and 5",Susan van Amelsvoort,,,0,vanam4trustee@gmail.com,,,1,accordion-batch,3543042:Barrie,1,accordion-batch
+B67091,Simcoe Muskoka Catholic District School Board,catholic,0,"Simcoe Muskoka Catholic District School Board | Representing Barrie Wards 4, 6, 7, 8, 9 and 10",Maria Hardie,,,0,hardie.maria@gmail.com,705-896-9395,,1,accordion-batch,3543042:Barrie,1,accordion-batch
+B67091,Simcoe Muskoka Catholic District School Board,catholic,0,"Simcoe Muskoka Catholic District School Board | Representing Barrie Wards 4, 6, 7, 8, 9 and 10",Rob Chiaramida,,,0,robbiec2000@rogers.com,,,1,accordion-batch,3543042:Barrie,1,accordion-batch
+B67091,Simcoe Muskoka Catholic District School Board,catholic,0,"Trustee, English-Separate",J. Timothy Jackson Acclaimed,,,0,jacksonjtim@gmail.com,705-259-3518,,1,accordion-batch,3543052:Orillia,1,accordion-batch
+B67040,St Clair Catholic District School Board,catholic,0,"Trustee, St. Clair Catholic District School Board (English Separate School Board)","Iafrate, Anthony",,,0,anthonyiafrate@hotmail.com,519-381-6585,,1,accordion-batch,3538030:Sarnia,1,accordion-batch
+B67040,St Clair Catholic District School Board,catholic,0,"Trustee, St. Clair Catholic District School Board (English Separate School Board)","McCann, Jennifer",,,0,jlmccann6@gmail.com,519-312-3661,,1,accordion-batch,3538030:Sarnia,1,accordion-batch
+B67040,St Clair Catholic District School Board,catholic,0,"Trustee, St. Clair Catholic District School Board (English Separate School Board)","Ward, Linda",,,0,linda.wally@hotmail.com,519-542-4257,,1,accordion-batch,3538030:Sarnia,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,English Public School Trustee,DAVID EDWARD CRIPPS,,,0,hello@davecripps.ca,(226) 228-4199,http://www.davecripps.ca/,1,voterview-harvest,3532042:Woodstock,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,English Public School Trustee,LEEANNE HOPKINS,,,0,jrlehopkins@gmail.com,(519) 281-5882,,1,voterview-harvest,3532042:Woodstock,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,English Public School Trustee,SETH ALLEN,,,0,seth@sethforoxford.ca&#x9;,(226) 268-1964,http://sethforoxford.ca/,1,voterview-harvest,3532042:Woodstock,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 1, 11, 12 & 14",ALEJANDRA VALENCIA,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 1, 11, 12 & 14",CHRISTINE MORGAN,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 1, 11, 12 & 14",DAVID SABINE,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 1, 11, 12 & 14",LORI-ANN PIZZOLATO,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 1, 11, 12 & 14",SHERI POLHILL,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 1, 11, 12 & 14",TRISTAN SQUIRE-SMITH,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 2, 3, 4, 5 & 6",GABRIELLE STURM,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 2, 3, 4, 5 & 6",JULIE WEDLAKE,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 2, 3, 4, 5 & 6",LAMISE KABLAWI,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 2, 3, 4, 5 & 6",LAURA GONZALEZ,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 2, 3, 4, 5 & 6",LEROY OSBOURNE,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 2, 3, 4, 5 & 6",MARIANNE LARSEN,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 2, 3, 4, 5 & 6",PAUL GRAY,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 2, 3, 4, 5 & 6",TRACEY AQUILINA,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 2, 3, 4, 5 & 6",VIOLET LEMA,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 7, 8, 9, 10 & 13",BETH MAI,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 7, 8, 9, 10 & 13",CHRISTOPHER MORGAN,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 7, 8, 9, 10 & 13",CLAIRE ROBERTS,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 7, 8, 9, 10 & 13",ERIC MICHAEL VALLILLEE,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 7, 8, 9, 10 & 13",MATTHEW REID,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 7, 8, 9, 10 & 13",MIKE BLOXAM,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 7, 8, 9, 10 & 13",MIKE JONES,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 7, 8, 9, 10 & 13",SHARI HALL,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,"English Public Trustee Wards 7, 8, 9, 10 & 13",SHERRI MOORE,,,0,,,,0,,3539036:London,1,voterview-harvest
+B66044,Thames Valley District School Board,public,1,School Board Trustee | Thames Valley District School Board Trustee - two (2) to be elected (English Public),"Noble, Bev",,,0,bevgalenoble@icloud.com,519-660-9571,,1,accordion-batch,3539027:Thames Centre | 3539041:North Middlesex,2,accordion-batch
+B66044,Thames Valley District School Board,public,1,School Board Trustee | Thames Valley District School Board Trustee - two (2) to be elected (English Public),"Tichenoff, Bill",,,0,billtichenoff@gmail.com,519-374-5560,,1,accordion-batch,3539027:Thames Centre | 3539041:North Middlesex,2,accordion-batch
+B66044,Thames Valley District School Board,public,1,"School Board Trustee | Thames Valley District School Board Trustee - two (2) to be elected (English Public) | Trustee, Thames Valley District School Board (TVDSB)","Sachs, Christian",,,0,sachs.christian22@gmail.com,519-722-1069,,1,accordion-batch,3539027:Thames Centre | 3539033:Middlesex Centre | 3539041:North Middlesex,3,accordion-batch
+B66044,Thames Valley District School Board,public,1,Thames Valley District School Board Trustee (English Public),Benjamin Lampkin (acclaimed),,,0,benflampkin@gmail.com,,,1,accordion-batch,3532038:East Zorra-Tavistock,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,Thames Valley District School Board Trustee (English Public),William McKinnon (acclaimed),,,0,billmckinnontrustee@gmail.com,,,1,accordion-batch,3532038:East Zorra-Tavistock,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,"Trustee, Thames Valley District School Board (TVDSB)",Aina DeViet,,,0,,,,0,,3539033:Middlesex Centre,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,"Trustee, Thames Valley District School Board (TVDSB)",Brad McGhie,,,0,,,,0,,3539033:Middlesex Centre,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,"Trustee, Thames Valley District School Board (TVDSB)",Brad Scott,,,0,,,,0,,3539033:Middlesex Centre,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,"Trustee, Thames Valley District School Board (TVDSB)","Cocksworth, William",,,0,,,,0,,3539033:Middlesex Centre,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,"Trustee, Thames Valley District School Board (TVDSB)",Debbie Heffernan,,,0,,,,0,,3539033:Middlesex Centre,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,"Trustee, Thames Valley District School Board (TVDSB)",Frank Berze,,,0,,,,0,,3539033:Middlesex Centre,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,"Trustee, Thames Valley District School Board (TVDSB)",Hugh Aerts,,,0,,,,0,,3539033:Middlesex Centre,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,"Trustee, Thames Valley District School Board (TVDSB)",Jean Coles,,,0,,,,0,,3539033:Middlesex Centre,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,"Trustee, Thames Valley District School Board (TVDSB)",John Brennan,,,0,,,,0,,3539033:Middlesex Centre,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,"Trustee, Thames Valley District School Board (TVDSB)",Lee Mann,,,0,,,,0,,3539033:Middlesex Centre,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,"Trustee, Thames Valley District School Board (TVDSB)","Morell, Arlene",,,0,,,,0,,3539033:Middlesex Centre,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,"Trustee, Thames Valley District School Board (TVDSB)",Spoiled and Declined,,,0,,,,0,,3539033:Middlesex Centre,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,"Trustee, Thames Valley District School Board (TVDSB)",Sue Cates,,,0,,,,0,,3539033:Middlesex Centre,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,"Trustee, Thames Valley District School Board (TVDSB)",Total Ballots Cast:,,,0,,,,0,,3539033:Middlesex Centre,1,accordion-batch
+B66044,Thames Valley District School Board,public,1,"Trustee, Thames Valley District School Board (TVDSB)",Wayne Shipley,,,0,,,,0,,3539033:Middlesex Centre,1,accordion-batch
+B67059,Toronto Catholic District School Board,catholic,1,Ward 1,"Di Francesco, Jennifer",Jennifer,Di Francesco,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 1,"Dias, Maria",Maria,Dias,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 1,"Pella, Robert",Robert,Pella,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 10,"Araujo, Rosanna",Rosanna,Araujo,0,rosanna@rosannaaraujo.com,,https://www.rosannaaraujo.com,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 10,"Colonna, Teresa",Teresa,Colonna,0,trusteecolonna@gmail.com,437-375-2668,https://www.teresacolonna.ca/,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 10,"Loor Ruiz, Stephanie",Stephanie,Loor Ruiz,0,teamstephanieloorruiz@gmail.com,,https://stephloorruiz.com/,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 10,"Piccininni, Sal",Sal,Piccininni,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 10,"Salvatori, Paul",Paul,Salvatori,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 11,"Kennedy, Angela",Angela,Kennedy,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 11,"Perera, Anton",Anton,Perera,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 12,"Crawford, Nancy",Nancy,Crawford,0,njcrawford7@gmail.com,416-425-8025,,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 2,"Concordia, Sara",Sara,Concordia,0,sara@saratcdsbward2.ca,,https://www.instagram.com/saratcdsbward2/,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 2,"de Domenico, Markus",Markus,de Domenico,0,Markus4Ward2@gmail.com,,https://www.facebook.com/markus4ward2/,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 3,"Li Preti, Ida",Ida,Li Preti,0,ida@idalipreti.com,416-827-3643,https://idalipreti.com/,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 3,"Munoz Plasencia, Susel",Susel,Munoz Plasencia,0,susel4trustee@gmail.com,,https://www.susel4trusteeward3.com,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 4,"Borreca, Maria",Maria,Borreca,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 4,"Fracassi, Peter",Peter,Fracassi,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 4,"Lubinski, Teresa",Teresa,Lubinski,0,ReElectLubinski@gmail.com,,,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 5,"Cristiano, Gianfranco",Gianfranco,Cristiano,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 5,"Rizzo, Maria",Maria,Rizzo,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 6,"DAmico, Frank",Frank,D'Amico,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 7,"DiNova, Celine",Celine,DiNova,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 7,"Largo, Marissa",Marissa,Largo,0,contact@trusteelargo.com,,https://trusteelargo.ca/,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 7,"Rodriguez, Gregory",Gregory,Rodriguez,0,g.rodriguez2025@hotmail.com,647-354-6567,https://rodriguez4trustee.david-064.workers.dev/,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 8,"Allen, Carla",Carla,Allen,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 8,"Paul, Mary Cury",Mary Cury,Paul,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 8,"Tanuan, Garry",Garry,Tanuan,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 9,"Bonavota, Rosina",Rosina,Bonavota,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 9,"Fallico, Renato",Renato,Fallico,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 9,"Le, David",David,Le,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B67059,Toronto Catholic District School Board,catholic,1,Ward 9,"Santos, Jonathan",Jonathan,Santos,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 1,"Bryan, Rosemarie",Rosemarie,Bryan,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 1,"Clarke, Antonius",Antonius,Clarke,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 1,"Hastings, Dennis",Dennis,Hastings,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 1,"Henry, Amberley Ryan",Amberley Ryan,Henry,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 1,"Kang, Lakhan",Lakhan,Kang,0,info@lakhankang.com,647-545-4242,https://www.lakhankang.com/,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 1,"de Dovitiis, Matias",Matias,de Dovitiis,0,info@matiasdedovitiis.ca,,https://www.matiasdedovitiis.ca,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 10,"Ahmad, Malik",Malik,Ahmad,0,info@malikahmad.ca,,,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 10,"Dewan, Azim",Azim,Dewan,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 10,"Emerson, Karen",Karen,Emerson,0,connect@voteemerson.ca,,https://www.voteemerson.ca/,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 10,"Hassan, Ahnaaf",Ahnaaf,Hassan,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 10,"Islam, Md Sazibul",Md Sazibul,Islam,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 10,"Kremp, Glenn",Glenn,Kremp,0,glennkremp@gmail.com,,https://www.instagram.com/glenn.kremp,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 10,"Li, Shawn",Shawn,Li,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 10,"Poirier, Jocelyne",Jocelyne,Poirier,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 10,"Sterling, Marisa",Marisa,Sterling,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 11,"Deus, Dedan",Dedan,Deus,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 11,"Grant, Angus",Angus,Grant,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 11,"Halstead, Dameon",Dameon,Halstead,0,info@dameonhalstead.ca,416-871-4772,,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 11,"Jack, Curtis",Curtis,Jack,0,cjack@votecurtisjack.ca,437-435-9449,https://www.votecurtisjack.ca,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 11,"Mohammed, Abdul Azeem",Abdul Azeem,Mohammed,0,Vote.Azeem@gmail.com,647-887-1869,,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 11,"Ravinthiran, Ravicha",Ravicha,Ravinthiran,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 12,"Ansari, Safiya",Safiya,Ansari,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 12,"Frake, Darren",Darren,Frake,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 12,"Garcia, Aria",Aria,Garcia,0,gemjab5@live.com,,https://www.podomatic.com/podcasts/mariagarciaremerata,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 12,"McBean, Gary",Gary,McBean,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 12,"Nantheeswarar, Vimuththan",Vimuththan,Nantheeswarar,0,,,https://www.voteforwe.ca/,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 12,"Purohit, Ketan",Ketan,Purohit,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 12,"Sriskandarajah, Anu",Anu,Sriskandarajah,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 12,"Williams, Sherri",Sherri,Williams,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 12,"Wilson, Marcia",Marcia,Wilson,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 2,"Ellis, Timothy",Timothy,Ellis,0,info@votetim.ca,647-520-1848,https://www.votetim.ca/,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 2,"Voitsytskyi, Ivan",Ivan,Voitsytskyi,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 2,"Zaffino, Matthew",Matthew,Zaffino,0,info@matthewzaffino.ca,647-490-9419,https://www.matthewzaffino.ca,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 3,"Banninga, Matt",Matt,Banninga,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 3,"Choi, Daniel",Daniel,Choi,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 3,"Dawson, Alexis",Alexis,Dawson,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 3,"Gural, Christina",Christina,Gural,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 3,"Ishraq, Fatin",Fatin,Ishraq,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 3,"Mensah, Justin",Justin,Mensah,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 3,"Waters, Andrew",Andrew,Waters,0,candidate@andrewwaters.ca,416-738-8538,https://www.andrewwaters.ca,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 3,"Webster, Jennifer",Jennifer,Webster,0,,,https://www.instagram.com/jennwebster4ward3,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 4,"Andrusyak, Ivanna",Ivanna,Andrusyak,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 4,"Choi, Brandon",Brandon,Choi,0,info@brandonchoi.ca,,https://www.brandonchoi.ca/,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 4,"Delpero, Anthony",Anthony,Delpero,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 4,"Pei, Weidong",Weidong,Pei,0,info@weidongpei.ca,,https://www.weidongpei.ca,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 5,"Feyginberg, Elina",Elina,Feyginberg,0,info@elina4trustee.ca,,https://www.elina4trustee.ca,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 5,"Gregory, Andrene",Andrene,Gregory,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 5,"Gulyas, David",David,Gulyas,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 5,"Kolb, Jared",Jared,Kolb,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 5,"Larkin, Maureen",Maureen,Larkin,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 5,"Massey, Andrew",Andrew,Massey,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 5,"Stefanis, Gus",Gus,Stefanis,0,gus.stefanis@mail.com,,https://sites.google.com/view/gus-stefanis,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 5,"Viret, Janine",Janine,Viret,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 5,"Volk, Jennifer",Jennifer,Volk,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 6,"Cline, Stacey",Stacey,Cline,0,info@staceycline.ca,,https://staceycline.ca,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 6,"Osman, Saherla",Saherla,Osman,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 6,"Smithies, Sarah",Sarah,Smithies,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 6,"Vassal, John",John,Vassal,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 7,"Arvizu, Axel",Axel,Arvizu,0,axelarvizuTO@gmail.com,,https://axelarvizu5.wixsite.com/axelarvizu,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 7,"Cherrington, Gladstone",Gladstone,Cherrington,0,votecherrington2026@gmail.com,416-410-2546,https://www.facebook.com/p/Gladstone-Cherrington-61593231673284/,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 7,"Golding, Adam",Adam,Golding,0,adamgolding@adamgolding.ca,289-207-2527,https://www.adamgolding.ca,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 7,"Kheiriddin, Tasha",Tasha,Kheiriddin,0,info@votetasha.ca,,https://www.votetasha.ca/,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 7,"Mohammad, Nasir",Nasir,Mohammad,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 7,"Nalir, Shaffni",Shaffni,Nalir,0,shaffni.nalir@gmail.com,,https://www.instagram.com/shaffni.nalir,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 7,"Nazary, Theo",Theo,Nazary,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 7,"Williams, Deborah",Deborah,Williams,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 8,"Haddleton, Tracey",Tracey,Haddleton,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 8,"Hatia, Ibrahim",Ibrahim,Hatia,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 8,"Kapoglis, Spiros",Spiros,Kapoglis,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 8,"Khan, Imran",Imran,Khan,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 8,"Lee III, Dewitt",Dewitt,Lee III,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 8,"McGirr, Christine",Christine,McGirr,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 8,"Rajwani, Farzana",Farzana,Rajwani,0,farzanarajwani4trustee@gmail.com,,https://www.farzanarajwani.ca/,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 9,"De Pass, Carey",Carey,De Pass,0,carey.depass4ward9trustee@gmail.com,,,1,toronto-harvest,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 9,"Mammoliti, Christopher",Christopher,Mammoliti,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 9,"Wu, Bill",Bill,Wu,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66052,Toronto District School Board,public,1,Ward 9,"Yeung, Sonny",Sonny,Yeung,0,,,,0,,3520005:Toronto,1,toronto-harvest
+B66087,Trillium Lakelands District School Board,public,0,Don Embree,Victoria Hillier-Hutchinson,,,0,victoriamhillier@gmail.com,249-392-9824,,1,accordion-batch,3546018:Algonquin Highlands,1,accordion-batch
+B66087,Trillium Lakelands District School Board,public,0,Don Embree | Trustee - English Public School Board,Kinga Baricz,,,0,zsomli2024@yahoo.com,705-455-2326,,1,accordion-batch,3546018:Algonquin Highlands | 3546024:Dysart et al,2,accordion-batch
+B66087,Trillium Lakelands District School Board,public,0,Public School Trustee-Trillium District,ESTHER CHILDS,,,0,,,,0,,3544065:Georgian Bay,1,voterview-harvest
+B66087,Trillium Lakelands District School Board,public,0,Public School Trustee-Trillium District,LOUISE CLODD,,,0,,,,0,,3544065:Georgian Bay,1,voterview-harvest
+B66087,Trillium Lakelands District School Board,public,0,Trustee - English Public School Board,Victoria Hillier-Hutchison,,,0,victoriamhillier@gmail.com,705-272-9617,,1,accordion-batch,3546024:Dysart et al,1,accordion-batch
+B66192,Upper Canada District School Board,public,0,Candidates for the Upper Canada District School Board (English Public),Marc-Antoine Gagnier,,,0,,,,0,,3502010:Champlain,1,accordion-batch
+B66192,Upper Canada District School Board,public,0,English Public (Upper Canada District School Board of Eastern Ontario) | SCHOOL BOARD TRUSTEE - ENGLISH PUBLIC | School Board Trustee - English Public (UCDSB),"Danaher, John - ACCLAIMED",,,0,danaherjohn1@gmail.com,,,1,accordion-batch,3501005:South Glengarry | 3501011:South Stormont | 3501050:North Glengarry,3,accordion-batch
+B66192,Upper Canada District School Board,public,0,Name,"Buczynski, Christopher",,,0,dadabuleroom@gmail.com,613-572-0039,,1,accordion-batch,3507021:Leeds and the Thousand Islands,1,accordion-batch
+B66192,Upper Canada District School Board,public,0,Name,"McAllister, John",,,0,jjmcallister1947@gmail.com,613-923-5355,,1,accordion-batch,3507021:Leeds and the Thousand Islands,1,accordion-batch
+B66117,Upper Grand District School Board,public,0,Candidate for School Board Trustee - English Public (Upper Grand District School Board),"Dametto-Giovannozzi, Paula",,,0,,,,0,,3522014:Orangeville,1,accordion-batch
+B66117,Upper Grand District School Board,public,0,Candidates for School Board Trustee,"Karsch, Bernie",,,0,bkarsch49@outlook.com,519-925-9254,,1,accordion-batch,3522008:Amaranth,1,accordion-batch
+B66117,Upper Grand District School Board,public,0,Contact Information,"Golem, Rachael",,,0,,647-884-3044,,1,accordion-batch,3522008:Amaranth,1,accordion-batch
+B66117,Upper Grand District School Board,public,0,Contact Information,"Lapointe, Eric",,,0,ericlapointe@yahoo.com,705-241-8909,,1,accordion-batch,3522008:Amaranth,1,accordion-batch
+B66117,Upper Grand District School Board,public,0,Date Filed,"Grenier, Genevieve",,,0,ggrenier19@yahoo.ca,,,1,accordion-batch,3522001:East Garafraxa,1,accordion-batch
+B66117,Upper Grand District School Board,public,0,Date Filed,"O'Neil, Patrick",,,0,pconeil1520@gmail.com,,,1,accordion-batch,3522001:East Garafraxa,1,accordion-batch
+B66117,Upper Grand District School Board,public,0,Upper Grand District School Board,Dr. Raymond J. SETO,,,0,,,,0,,3522012:Mono,1,accordion-batch
+B66117,Upper Grand District School Board,public,0,Upper Grand District School Board,Lynn TOPPING,,,0,,,,0,,3522012:Mono,1,accordion-batch
+B66117,Upper Grand District School Board,public,0,"Upper Grand District School Board Trustee - Ward 6 and Township of Puslinch | Ward 6, Puslinch","Ramchandani, Pallavi",,,0,pallaviramchandani@gmail.com,437-533-6603,,1,accordion-batch,3523008:Guelph,1,accordion-batch | voterview-harvest
+B66117,Upper Grand District School Board,public,0,"Upper Grand District School Board Trustee - Ward 6 and Township of Puslinch | Ward 6, Puslinch","Reaburn, Kyle",,,0,,,https://kylefortrustee.ca,1,accordion-batch,3523008:Guelph,1,accordion-batch | voterview-harvest
+B66117,Upper Grand District School Board,public,0,"Upper Grand District School Board Trustee - Wards 1 and 5 | Wards 5, 1","Blair, Aaron",,,0,blairaaron@hotmail.com,519-803-4936,https://aaronblairguelph.wordpress.com/,1,accordion-batch,3523008:Guelph,1,accordion-batch | voterview-harvest
+B66117,Upper Grand District School Board,public,0,"Upper Grand District School Board Trustee - Wards 1 and 5 | Wards 5, 1","Foster, Bill",,,0,vote.forwtf2026@gmail.com,,,1,voterview-harvest,3523008:Guelph,1,accordion-batch | voterview-harvest
+B66117,Upper Grand District School Board,public,0,"Upper Grand District School Board Trustee - Wards 1 and 5 | Wards 5, 1","MacNeil, Martha",,,0,votemarthamacneil@gmail.com,,https://www.marthamacneil.ca,1,accordion-batch,3523008:Guelph,1,accordion-batch | voterview-harvest
+B66117,Upper Grand District School Board,public,0,"Upper Grand District School Board Trustee - Wards 2, 3, 4 | Wards 2, 3, 4","Atkinson, Dan",,,0,,,,0,,3523008:Guelph,1,accordion-batch | voterview-harvest
+B66117,Upper Grand District School Board,public,0,"Upper Grand District School Board Trustee - Wards 2, 3, 4 | Wards 2, 3, 4","Freese, Randy",,,0,r.freese@freezeflameinc.com,416-697-1737,,1,accordion-batch,3523008:Guelph,1,accordion-batch | voterview-harvest
+B66117,Upper Grand District School Board,public,0,"Upper Grand District School Board Trustee - Wards 2, 3, 4 | Wards 2, 3, 4","Frosst, Lange",,,0,,,,0,,3523008:Guelph,1,accordion-batch | voterview-harvest
+B66117,Upper Grand District School Board,public,0,"Upper Grand District School Board Trustee - Wards 2, 3, 4 | Wards 2, 3, 4","Mesenbrink, Ralf",,,0,,,,0,,3523008:Guelph,1,accordion-batch | voterview-harvest
+B67148,Waterloo Catholic District School Board,catholic,0,English Separate School Board Trustee (2 to be elected),Jeanne Gravelle,,,0,,,,0,,3530027:Wellesley,1,accordion-batch
+B67148,Waterloo Catholic District School Board,catholic,0,English Separate School Board Trustee (2 to be elected),Melanie Van Alphen,,,0,,,,0,,3530027:Wellesley,1,accordion-batch
+B67148,Waterloo Catholic District School Board,catholic,0,English Separate School Board Trustee (2 to be elected),Nike Dattani,,,0,,,,0,,3530027:Wellesley,1,accordion-batch
+B67148,Waterloo Catholic District School Board,catholic,0,English Separate School Board Trustee (2 to be elected),Sally Fuentes,,,0,,,,0,,3530027:Wellesley,1,accordion-batch
+B67148,Waterloo Catholic District School Board,catholic,0,English Separate School Board Trustee (2 to be elected) | Waterloo Region Catholic School Board Trustee (Vote for no more than 2),Conrad Stanley,,,0,,,,0,,3530016:Waterloo | 3530027:Wellesley,2,accordion-batch | voterview-harvest
+B67148,Waterloo Catholic District School Board,catholic,0,English Separate School Board Trustee (2 to be elected) | Waterloo Region Catholic School Board Trustee (Vote for no more than 2),Linda Cuff,,,0,,,,0,,3530016:Waterloo | 3530027:Wellesley,2,accordion-batch | voterview-harvest
+B67148,Waterloo Catholic District School Board,catholic,0,Waterloo Region Catholic School Board Trustee (Vote for no more than 2),ANNA ACETO-GUERIN,,,0,,,,0,,3530016:Waterloo,1,voterview-harvest
+B67148,Waterloo Catholic District School Board,catholic,0,Waterloo Region Catholic School Board Trustee (Vote for no more than 2),NORMAN J DAMAREN,,,0,,,,0,,3530016:Waterloo,1,voterview-harvest
+B66176,Waterloo Region District School Board,public,0,English Public School Board Trustee (1 to be elected),Fred Meissner,,,0,,,,0,,3530027:Wellesley,1,accordion-batch
+B66176,Waterloo Region District School Board,public,0,English Public School Board Trustee (1 to be elected),Gerhard Ens,,,0,,,,0,,3530027:Wellesley,1,accordion-batch
+B66176,Waterloo Region District School Board,public,0,English Public School Board Trustee (1 to be elected),Jen Burkholder,,,0,,,,0,,3530027:Wellesley,1,accordion-batch
+B66176,Waterloo Region District School Board,public,0,English Public School Board Trustee (1 to be elected),Karen Meissner,,,0,,,,0,,3530027:Wellesley,1,accordion-batch
+B66176,Waterloo Region District School Board,public,0,English Public School Board Trustee (1 to be elected),Zach Smith,,,0,,,,0,,3530027:Wellesley,1,accordion-batch
+B66176,Waterloo Region District School Board,public,0,Waterloo Region District School Board Trustee (Vote for no more than 3),BRIAN BEST,,,0,,,,0,,3530016:Waterloo,1,voterview-harvest
+B66176,Waterloo Region District School Board,public,0,Waterloo Region District School Board Trustee (Vote for no more than 3),BRIAN BOURKE,,,0,,,,0,,3530016:Waterloo,1,voterview-harvest
+B66176,Waterloo Region District School Board,public,0,Waterloo Region District School Board Trustee (Vote for no more than 3),CLINTON HEFFERNAN,,,0,,,,0,,3530016:Waterloo,1,voterview-harvest
+B66176,Waterloo Region District School Board,public,0,Waterloo Region District School Board Trustee (Vote for no more than 3),CRISTINA BAIROS FERNANDES,,,0,,,,0,,3530016:Waterloo,1,voterview-harvest
+B66176,Waterloo Region District School Board,public,0,Waterloo Region District School Board Trustee (Vote for no more than 3),GEOFF HORSMAN,,,0,,,,0,,3530016:Waterloo,1,voterview-harvest
+B66176,Waterloo Region District School Board,public,0,Waterloo Region District School Board Trustee (Vote for no more than 3),KAREN COVIELLO,,,0,,,,0,,3530016:Waterloo,1,voterview-harvest
+B66176,Waterloo Region District School Board,public,0,Waterloo Region District School Board Trustee (Vote for no more than 3),KATHLEEN WOODCOCK,,,0,,,,0,,3530016:Waterloo,1,voterview-harvest
+B67130,Wellington Catholic District School Board,catholic,0,Candidates for Wellington Catholic District School Board | Wellington Catholic District School Board,"Crewson, Natalia",,,0,nataliacrewson@gmail.com,,,1,voterview-harvest,3523008:Guelph,1,accordion-batch | voterview-harvest
+B67130,Wellington Catholic District School Board,catholic,0,Candidates for Wellington Catholic District School Board | Wellington Catholic District School Board,"Dupuis, Vikki",,,0,vikki.dupuis@gmail.com,519-822-9489,,1,accordion-batch,3523008:Guelph,1,accordion-batch | voterview-harvest
+B67130,Wellington Catholic District School Board,catholic,0,Candidates for Wellington Catholic District School Board | Wellington Catholic District School Board,"Fayer, Valerie",,,0,valfayer@yahoo.com,519-835-2353,,1,accordion-batch,3523008:Guelph,1,accordion-batch | voterview-harvest
+B67130,Wellington Catholic District School Board,catholic,0,Candidates for Wellington Catholic District School Board | Wellington Catholic District School Board,"Gazzola, Marino",,,0,marino.gazzola@sympatico.ca,226-979-2008,,1,accordion-batch,3523008:Guelph,1,accordion-batch | voterview-harvest
+B67130,Wellington Catholic District School Board,catholic,0,Candidates for Wellington Catholic District School Board | Wellington Catholic District School Board,"Sabara, Holly",,,0,hollysabara@rogers.com,,,1,voterview-harvest,3523008:Guelph,1,accordion-batch | voterview-harvest
+B67024,Windsor-Essex Catholic District School Board,catholic,0,Trustee - WECDSB - Wards 1 & 10,FULVIO VALENTINIS,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B67024,Windsor-Essex Catholic District School Board,catholic,0,Trustee - WECDSB - Wards 1 & 10,SALAM ESHO,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B67024,Windsor-Essex Catholic District School Board,catholic,0,Trustee - WECDSB - Wards 2 & 9,JOE (GIUSEPPE) IACONO,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B67024,Windsor-Essex Catholic District School Board,catholic,0,Trustee - WECDSB - Wards 3 & 4,BERNARD MASTROMATTEI,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B67024,Windsor-Essex Catholic District School Board,catholic,0,Trustee - WECDSB - Wards 3 & 4,JULIET BUSHI,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B67024,Windsor-Essex Catholic District School Board,catholic,0,Trustee - WECDSB - Wards 5 & 8,IGOR DZAIC,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B67024,Windsor-Essex Catholic District School Board,catholic,0,Trustee - WECDSB - Wards 5 & 8,JASON LAZARUS,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B67024,Windsor-Essex Catholic District School Board,catholic,0,Trustee - WECDSB - Wards 5 & 8,LOONA AL-NODRO,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B67024,Windsor-Essex Catholic District School Board,catholic,0,Trustee - WECDSB - Wards 6 & 7,KIM BOUCHARD,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B67024,Windsor-Essex Catholic District School Board,catholic,0,Trustee - WECDSB - Wards 6 & 7,RON DUNN,,,0,,,,0,,3537039:Windsor,1,voterview-harvest
+B67075,York Catholic District School Board,catholic,1,English Separate School Trustee,KEVIN MOORE,,,0,,,,0,,3519054:East Gwillimbury,1,voterview-harvest
+B67075,York Catholic District School Board,catholic,1,English Separate School Trustee,ROSA CALABRESE,,,0,,,,0,,3519054:East Gwillimbury,1,voterview-harvest
+B67075,York Catholic District School Board,catholic,1,English Separate School Trustee,THERESA MCNICOL,,,0,,,,0,,3519054:East Gwillimbury,1,voterview-harvest
+B67075,York Catholic District School Board,catholic,1,English Separate School Trustee | York Catholic District School Board Trustee,"Cescolini, Brandan James",,,0,trusteebrandan@gmail.com,647-918-9809,brandanjamescescolini.ca,1,accordion-batch,3519046:Aurora | 3519049:King,2,accordion-batch | voterview-harvest
+B67075,York Catholic District School Board,catholic,1,English Separate School Trustee | York Catholic District School Board Trustee,"Juarez, Eduardo",,,0,ejuarez@sympatico.ca,416-566-4843,,1,accordion-batch,3519046:Aurora | 3519049:King,2,accordion-batch | voterview-harvest
+B67075,York Catholic District School Board,catholic,1,Trustee - York Catholic District School Board,GINA DE CAIRES,,,0,,,,0,,3519038:Richmond Hill,1,voterview-harvest
+B67075,York Catholic District School Board,catholic,1,Trustee - York Catholic District School Board,GLENCIA BROOKES-DOS SANTOS,,,0,,,,0,,3519038:Richmond Hill,1,voterview-harvest
+B67075,York Catholic District School Board,catholic,1,Trustee - York Catholic District School Board,JOE DIMEO,,,0,,,,0,,3519038:Richmond Hill,1,voterview-harvest
+B67075,York Catholic District School Board,catholic,1,Trustee - York Catholic District School Board,MARIA IAFRATE,,,0,,,,0,,3519038:Richmond Hill,1,voterview-harvest
+B67075,York Catholic District School Board,catholic,1,YCDSB Trustee - Area 1 (Ward 1),GIANLUCA FRATTAROLI,,,0,,,,0,,3519028:Vaughan,1,voterview-harvest
+B67075,York Catholic District School Board,catholic,1,YCDSB Trustee - Area 1 (Ward 1),MARY PETROLO,,,0,,,,0,,3519028:Vaughan,1,voterview-harvest
+B67075,York Catholic District School Board,catholic,1,YCDSB Trustee - Area 2 (Ward 2),ALEX CASBARRO,,,0,,,http://alexcasbarro.ca,1,voterview-harvest,3519028:Vaughan,1,voterview-harvest
+B67075,York Catholic District School Board,catholic,1,York Catholic District School Board Trustee,Nomination date,,,0,,,,0,,3519070:Georgina,1,accordion-batch
+B67075,York Catholic District School Board,catholic,1,"York Catholic District School Board Trustee (Wards 1, 2, 3 & 6)",DENYS PETIKA,,,0,,,,0,,3519036:Markham,1,voterview-harvest
+B67075,York Catholic District School Board,catholic,1,"York Catholic District School Board Trustee (Wards 1, 2, 3 & 6)",SIMON HO,,,0,,,,0,,3519036:Markham,1,voterview-harvest
+B67075,York Catholic District School Board,catholic,1,"York Catholic District School Board Trustee (Wards 4, 5, 7 & 8)",JAMES BUSH,,,0,,,,0,,3519036:Markham,1,voterview-harvest
+B67075,York Catholic District School Board,catholic,1,"York Catholic District School Board Trustee (Wards 4, 5, 7 & 8)",YAN ZHOU,,,0,,,,0,,3519036:Markham,1,voterview-harvest
+B66095,York Region District School Board,public,0,English Public School Trustee,HAYDEN LAI,,,0,,,,0,,3519054:East Gwillimbury,1,voterview-harvest
+B66095,York Region District School Board,public,0,English Public School Trustee,MARY ALIYIANIS,,,0,,,,0,,3519054:East Gwillimbury,1,voterview-harvest
+B66095,York Region District School Board,public,0,English Public School Trustee | YRDSB Trustee - Area 1 (Township of King & Vaughan Ward 1),ARSLAN AHMAD,,,0,,,,0,,3519028:Vaughan | 3519049:King,2,voterview-harvest
+B66095,York Region District School Board,public,0,English Public School Trustee | YRDSB Trustee - Area 1 (Township of King & Vaughan Ward 1),BRIER DODGE PHOUNSY,,,0,,,,0,,3519028:Vaughan | 3519049:King,2,voterview-harvest
+B66095,York Region District School Board,public,0,English Public School Trustee | YRDSB Trustee - Area 1 (Township of King & Vaughan Ward 1),DORIT SMALI,,,0,,,,0,,3519028:Vaughan | 3519049:King,2,voterview-harvest
+B66095,York Region District School Board,public,0,"Trustee - York Region District School Board Wds 1,2,4",ALI NIKJOO,,,0,,,,0,,3519038:Richmond Hill,1,voterview-harvest
+B66095,York Region District School Board,public,0,"Trustee - York Region District School Board Wds 1,2,4",CRYSTAL YU,,,0,,,,0,,3519038:Richmond Hill,1,voterview-harvest
+B66095,York Region District School Board,public,0,"Trustee - York Region District School Board Wds 1,2,4",JONATHAN NADLER,,,0,,,,0,,3519038:Richmond Hill,1,voterview-harvest
+B66095,York Region District School Board,public,0,"Trustee - York Region District School Board Wds 1,2,4",JYOTI OBEROI,,,0,,,,0,,3519038:Richmond Hill,1,voterview-harvest
+B66095,York Region District School Board,public,0,"Trustee - York Region District School Board Wds 1,2,4",ROBERT KOLOSOWSKI,,,0,,,,0,,3519038:Richmond Hill,1,voterview-harvest
+B66095,York Region District School Board,public,0,"Trustee - York Region District School Board Wds 3,5,6",CINDY LIANG,,,0,,,,0,,3519038:Richmond Hill,1,voterview-harvest
+B66095,York Region District School Board,public,0,"Trustee - York Region District School Board Wds 3,5,6",SADRA NASSERI,,,0,,,,0,,3519038:Richmond Hill,1,voterview-harvest
+B66095,York Region District School Board,public,0,YRDSB Trustee - Area 2 (Ward 2 & 3),BEN AZAR,,,0,,,,0,,3519028:Vaughan,1,voterview-harvest
+B66095,York Region District School Board,public,0,YRDSB Trustee - Area 2 (Ward 2 & 3),DARIO DI GIANNANTONIO,,,0,,,,0,,3519028:Vaughan,1,voterview-harvest
+B66095,York Region District School Board,public,0,YRDSB Trustee - Area 2 (Ward 2 & 3),MARJORIE BOWEN,,,0,,,,0,,3519028:Vaughan,1,voterview-harvest
+B66095,York Region District School Board,public,0,YRDSB Trustee - Area 2 (Ward 2 & 3),WAHEED CHEEMA,,,0,,,,0,,3519028:Vaughan,1,voterview-harvest
+B66095,York Region District School Board,public,0,YRDSB Trustee - Area 2 (Ward 2 & 3),WINNIE HO,,,0,,,,0,,3519028:Vaughan,1,voterview-harvest
+B66095,York Region District School Board,public,0,YRDSB Trustee - Area 3 (Ward 4 & 5),ALI MALIK-A,,,0,,,,0,,3519028:Vaughan,1,voterview-harvest
+B66095,York Region District School Board,public,0,YRDSB Trustee - Area 3 (Ward 4 & 5),ANNA MOLCHANOVA,,,0,,,,0,,3519028:Vaughan,1,voterview-harvest
+B66095,York Region District School Board,public,0,YRDSB Trustee - Area 3 (Ward 4 & 5),ESTELLE COHEN,,,0,,,,0,,3519028:Vaughan,1,voterview-harvest
+B66095,York Region District School Board,public,0,YRDSB Trustee - Area 3 (Ward 4 & 5),LOTAN WIDER,,,0,,,http://lotanwider.ca,1,voterview-harvest,3519028:Vaughan,1,voterview-harvest
+B66095,York Region District School Board,public,0,York Region District School Board Trustee,Nomination date,,,0,,,,0,,3519070:Georgina,1,accordion-batch
+B66095,York Region District School Board,public,0,York Region District School Board Trustee,"Radia, Bill",,,0,william.radia@outlook.com,416-994-1296,billradia.ca,1,accordion-batch,3519046:Aurora,1,accordion-batch
+B66095,York Region District School Board,public,0,York Region District School Board Trustee (Wards 1 & 8),CINDY HACKELBERG,,,0,,,,0,,3519036:Markham,1,voterview-harvest
+B66095,York Region District School Board,public,0,York Region District School Board Trustee (Wards 1 & 8),FRANCES YAU,,,0,,,,0,,3519036:Markham,1,voterview-harvest
+B66095,York Region District School Board,public,0,York Region District School Board Trustee (Wards 1 & 8),PETER PAVLOVIC,,,0,,,,0,,3519036:Markham,1,voterview-harvest
+B66095,York Region District School Board,public,0,York Region District School Board Trustee (Wards 1 & 8),WEN LIU,,,0,,,,0,,3519036:Markham,1,voterview-harvest
+B66095,York Region District School Board,public,0,York Region District School Board Trustee (Wards 2 & 6),JERRICA LIN,,,0,,,,0,,3519036:Markham,1,voterview-harvest
+B66095,York Region District School Board,public,0,York Region District School Board Trustee (Wards 2 & 6),JOYCE CHEN,,,0,,,,0,,3519036:Markham,1,voterview-harvest
+B66095,York Region District School Board,public,0,York Region District School Board Trustee (Wards 3 & 4),CHRISTINE CALANCHIE,,,0,,,,0,,3519036:Markham,1,voterview-harvest
+B66095,York Region District School Board,public,0,York Region District School Board Trustee (Wards 3 & 4),ED LAW,,,0,,,,0,,3519036:Markham,1,voterview-harvest
+B66095,York Region District School Board,public,0,York Region District School Board Trustee (Wards 5 & 7),GARISHAN RAVISHANKAR,,,0,,,,0,,3519036:Markham,1,voterview-harvest
+B66095,York Region District School Board,public,0,York Region District School Board Trustee (Wards 5 & 7),HEMAMALINI VENKATARAMAN,,,0,,,,0,,3519036:Markham,1,voterview-harvest
+B66095,York Region District School Board,public,0,York Region District School Board Trustee (Wards 5 & 7),MICHAEL CHEN,,,0,,,,0,,3519036:Markham,1,voterview-harvest
+B66095,York Region District School Board,public,0,York Region District School Board Trustee (Wards 5 & 7),RUKSHAN PARA,,,0,,,,0,,3519036:Markham,1,voterview-harvest
+B66095,York Region District School Board,public,0,York Region District School Board Trustee | York Region District School Board Trustee for Aurora and Whitchurch-Stouffville,"Sears, Emma",,,0,emmasearstrustee@gmail.com,,,1,accordion-batch,3519046:Aurora,1,accordion-batch | voterview-harvest
+B66095,York Region District School Board,public,0,York Region District School Board Trustee | York Region District School Board Trustee for Aurora and Whitchurch-Stouffville,"Yu, Bruce",,,0,info@bruceyu.ca,,bruceyu.ca,1,accordion-batch,3519046:Aurora,1,accordion-batch | voterview-harvest

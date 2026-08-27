@@ -1,0 +1,4688 @@
+[
+ {
+  "census_id": "3543068",
+  "csdname": "Tiny, Township (TP)",
+  "county_mun": "4368",
+  "office": "English Public School Trustee",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "JEFF BUMSTEAD",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 18, 2026"
+   },
+   {
+    "name_raw": "BOB MCMILLAN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   },
+   {
+    "name_raw": "LESLIE WATTS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 18, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3543068",
+  "csdname": "Tiny, Township (TP)",
+  "county_mun": "4368",
+  "office": "English Separate School Trustee",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "NICOLE CHUCHMACH",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   },
+   {
+    "name_raw": "STEVEN KNUFF",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 20, 2026"
+   },
+   {
+    "name_raw": "SHERINE MCINTOSH",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3512001",
+  "csdname": "Tyendinaga, Township (TP)",
+  "county_mun": "1201",
+  "office": "Algonquin and Lakeshore Catholic District School Board Trustee School Board Trustee",
+  "board_number": "B67202",
+  "system": "catholic",
+  "classify_reason": "matched:Algonquin and Lakeshore",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "THOMAS DALL",
+    "acclaimed": false,
+    "email": "tomandkathydall@gmail.com",
+    "phone": "(613) 243-6489",
+    "links": [],
+    "nomination_date": "June 16, 2026"
+   },
+   {
+    "name_raw": "PETER MATWYUK",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "June 26, 2026"
+   },
+   {
+    "name_raw": "ANTHEA MURRELL",
+    "acclaimed": false,
+    "email": "antheamurrell@gmail.com",
+    "phone": "(613) 970-3200",
+    "links": [],
+    "nomination_date": "August 5, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3512001",
+  "csdname": "Tyendinaga, Township (TP)",
+  "county_mun": "1201",
+  "office": "Hastings Prince Edward District School Board School Board Trustee",
+  "board_number": "B66222",
+  "system": "public",
+  "classify_reason": "matched:Hastings Prince Edward",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "SHANNON BINDER",
+    "acclaimed": true,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 14, 2026"
+   },
+   {
+    "name_raw": "DAVID PICKETT",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3547096",
+  "csdname": "Deep River, Town (T)",
+  "county_mun": "4796",
+  "office": "School Board Trustee English Public",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": true,
+  "candidates": []
+ },
+ {
+  "census_id": "3547096",
+  "csdname": "Deep River, Town (T)",
+  "county_mun": "4796",
+  "office": "School Board Trustee English Separate",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": true,
+  "candidates": []
+ },
+ {
+  "census_id": "3548069",
+  "csdname": "Temagami, Municipality (MU)",
+  "county_mun": "4869",
+  "office": "English Public School Board",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "BRIGID WILKINSON",
+    "acclaimed": true,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 7, 2026"
+   },
+   {
+    "name_raw": "LARRY WIWCHAR",
+    "acclaimed": true,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 8, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3548069",
+  "csdname": "Temagami, Municipality (MU)",
+  "county_mun": "4869",
+  "office": "English Catholic School Board",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "MARTIN DRAINVILLE",
+    "acclaimed": true,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 7, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3532042",
+  "csdname": "Woodstock, City (CY)",
+  "county_mun": "3242",
+  "office": "English Public School Trustee",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "SETH ALLEN",
+    "acclaimed": false,
+    "email": "seth@sethforoxford.ca&#x9;",
+    "phone": "(226) 268-1964",
+    "links": [
+     "http://sethforoxford.ca/"
+    ],
+    "nomination_date": "Wednesday, May 18, 2022"
+   },
+   {
+    "name_raw": "DAVID EDWARD CRIPPS",
+    "acclaimed": false,
+    "email": "hello@davecripps.ca",
+    "phone": "(226) 228-4199",
+    "links": [
+     "http://www.davecripps.ca/"
+    ],
+    "nomination_date": "Monday, June 20, 2022"
+   },
+   {
+    "name_raw": "LEEANNE HOPKINS",
+    "acclaimed": false,
+    "email": "jrlehopkins@gmail.com",
+    "phone": "(519) 281-5882",
+    "links": [],
+    "nomination_date": "Wednesday, May 4, 2022"
+   }
+  ]
+ },
+ {
+  "census_id": "3532042",
+  "csdname": "Woodstock, City (CY)",
+  "county_mun": "3242",
+  "office": "English Separate School Trustee",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ANA PAULA ALVES",
+    "acclaimed": false,
+    "email": "ldcsb.oxfordcounty2022@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "MARY HOLMES",
+    "acclaimed": false,
+    "email": "paquette.holmes@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, June 21, 2022"
+   }
+  ]
+ },
+ {
+  "census_id": "3518029",
+  "csdname": "Uxbridge, Township (TP)",
+  "county_mun": "1829",
+  "office": "ENGLISH PUBLIC SCHOOL BOARD TRUSTEE",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "GORDON BAXTER",
+    "acclaimed": false,
+    "email": "uxgord2006@hotmail.ca",
+    "phone": "(905) 904-2444",
+    "links": [],
+    "nomination_date": "Thursday, July 7, 2022"
+   },
+   {
+    "name_raw": "CAROLYN MORTON",
+    "acclaimed": false,
+    "email": "carolyn.morton@sympatico.ca",
+    "phone": "(905) 986-5215",
+    "links": [],
+    "nomination_date": "Friday, August 5, 2022"
+   }
+  ]
+ },
+ {
+  "census_id": "3518029",
+  "csdname": "Uxbridge, Township (TP)",
+  "county_mun": "1829",
+  "office": "ENGLISH SEPARATE SCHOOL BOARD TRUSTEE",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "RICHARD DAMIANOPOULOS",
+    "acclaimed": false,
+    "email": "richdamian@gmail.com",
+    "phone": "(416) 587-8951",
+    "links": [],
+    "nomination_date": "Tuesday, May 3, 2022"
+   },
+   {
+    "name_raw": "TIM ROBINS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, August 17, 2022"
+   }
+  ]
+ },
+ {
+  "census_id": "3518005",
+  "csdname": "Ajax, Town (T)",
+  "county_mun": "1805",
+  "office": "English Public School Trustee",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": true,
+  "candidates": []
+ },
+ {
+  "census_id": "3518005",
+  "csdname": "Ajax, Town (T)",
+  "county_mun": "1805",
+  "office": "English Separate School Trustee",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": true,
+  "candidates": []
+ },
+ {
+  "census_id": "3519046",
+  "csdname": "Aurora, Town (T)",
+  "county_mun": "1946",
+  "office": "York Region District School Board Trustee for Aurora and Whitchurch-Stouffville",
+  "board_number": "B66095",
+  "system": "public",
+  "classify_reason": "matched:York Region District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "EMMA SEARS",
+    "acclaimed": false,
+    "email": "emma.sears@hotmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, July 3, 2026"
+   },
+   {
+    "name_raw": "BRUCE YU",
+    "acclaimed": false,
+    "email": "info@bruceyu.ca",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, May 8, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519046",
+  "csdname": "Aurora, Town (T)",
+  "county_mun": "1946",
+  "office": "York Catholic School Board Trustee for Aurora, King, and Whitchurch-Stouffville",
+  "board_number": "B67075",
+  "system": "catholic",
+  "classify_reason": "matched:York Catholic",
+  "empty_notice": true,
+  "candidates": []
+ },
+ {
+  "census_id": "3524002",
+  "csdname": "Burlington, City (CY)",
+  "county_mun": "2402",
+  "office": "HDSB Trustee - Wards 1 & 2",
+  "board_number": "B66133",
+  "system": "public",
+  "classify_reason": "matched:HDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "BIKA DIAKOLOUKAS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 1, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3524002",
+  "csdname": "Burlington, City (CY)",
+  "county_mun": "2402",
+  "office": "HDSB Trustee - Wards 3 & 6",
+  "board_number": "B66133",
+  "system": "public",
+  "classify_reason": "matched:HDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "SUKHWINDER SINGH",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 17, 2026"
+   },
+   {
+    "name_raw": "XIN YI ZHANG",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 15, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3524002",
+  "csdname": "Burlington, City (CY)",
+  "county_mun": "2402",
+  "office": "HDSB Trustee - Ward 4",
+  "board_number": "B66133",
+  "system": "public",
+  "classify_reason": "matched:HDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "RYAN MARLOW",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 8, 2026"
+   },
+   {
+    "name_raw": "DANIA THURMAN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 18, 2026"
+   },
+   {
+    "name_raw": "AHMED ZAKI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 14, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3524002",
+  "csdname": "Burlington, City (CY)",
+  "county_mun": "2402",
+  "office": "HDSB Trustee - Ward 5",
+  "board_number": "B66133",
+  "system": "public",
+  "classify_reason": "matched:HDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "AMY COLLARD",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 1, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3524002",
+  "csdname": "Burlington, City (CY)",
+  "county_mun": "2402",
+  "office": "HCDSB Trustee - Ward 1 & 2",
+  "board_number": "B67113",
+  "system": "catholic",
+  "classify_reason": "matched:HCDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "MCKENZIE ALLISON",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 2, 2026"
+   },
+   {
+    "name_raw": "VINCENT IANTOMASI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 27, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3524002",
+  "csdname": "Burlington, City (CY)",
+  "county_mun": "2402",
+  "office": "HCDSB Trustee - Ward 3 & 6",
+  "board_number": "B67113",
+  "system": "catholic",
+  "classify_reason": "matched:HCDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "BERNICE CARVALHO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 19, 2026"
+   },
+   {
+    "name_raw": "ROMAN SOLER",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "June 25, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3524002",
+  "csdname": "Burlington, City (CY)",
+  "county_mun": "2402",
+  "office": "HCDSB Trustee - Wards 4 & 5",
+  "board_number": "B67113",
+  "system": "catholic",
+  "classify_reason": "matched:HCDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "BASHAR HADDADEN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 20, 2026"
+   },
+   {
+    "name_raw": "KARINA VINKA KVENICH",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 14, 2026"
+   },
+   {
+    "name_raw": "TIM O'BRIEN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 14, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3518017",
+  "csdname": "Clarington, Municipality (MU)",
+  "county_mun": "1817",
+  "office": "Kawartha Pine Ridge District School Board Trustee",
+  "board_number": "B66079",
+  "system": "public",
+  "classify_reason": "matched:Kawartha Pine Ridge",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "CATHY ABRAHAM",
+    "acclaimed": false,
+    "email": "cathy.abraham2026@gmail.com",
+    "phone": "(647) 620-2877",
+    "links": [],
+    "nomination_date": "May 1, 2026"
+   },
+   {
+    "name_raw": "PRANAY GUNTI",
+    "acclaimed": false,
+    "email": "pranayfortrustee@gmail.com",
+    "phone": "(437) 345-6353",
+    "links": [],
+    "nomination_date": "August 17, 2026"
+   },
+   {
+    "name_raw": "KURTIS MCALEER",
+    "acclaimed": false,
+    "email": "kurtismcaleertrustee@gmail.com",
+    "phone": "",
+    "links": [
+     "http://www.KurtisMcAleer.ca",
+     "http://www.Threads.com/KurtisMcAleerTrustee",
+     "https://www.facebook.com/www.facebook.com/KurtisMcAleerTrustee",
+     "https://www.instagram.com/www.instagram.com/KurtisMcAleerTrustee"
+    ],
+    "nomination_date": "July 9, 2026"
+   },
+   {
+    "name_raw": "BUNMI OYINSAN",
+    "acclaimed": false,
+    "email": "olubunmioyinsan@gmail.com",
+    "phone": "(647) 286-0643",
+    "links": [
+     "http://bunmioyinsan.net",
+     "http://ca.linkedin.com/in/bunmi-oyinsan",
+     "https://www.facebook.com/oyinsanbunmi/",
+     "https://www.instagram.com/oyinsanbunmi/"
+    ],
+    "nomination_date": "May 5, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3518017",
+  "csdname": "Clarington, Municipality (MU)",
+  "county_mun": "1817",
+  "office": "Peterborough Victoria Northumberland and Clarington Catholic District School Board Trustee",
+  "board_number": "B67067",
+  "system": "catholic",
+  "classify_reason": "matched:Peterborough Victoria Northumberland",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "BRAD JAKOBSEN",
+    "acclaimed": true,
+    "email": "bradtrusteecandidate@gmail.com",
+    "phone": "(905) 242-1221",
+    "links": [
+     "https://www.facebook.com/jakobsenbrad",
+     "https://www.instagram.com/brad_jakobsen/",
+     "https://x.com/41brad41"
+    ],
+    "nomination_date": "May 13, 2026"
+   },
+   {
+    "name_raw": "KEVIN MACKENZIE",
+    "acclaimed": true,
+    "email": "kevin@yourtrustee.ca",
+    "phone": "(289) 356-7838",
+    "links": [
+     "http://www.yourtrustee.ca",
+     "https://www.facebook.com/share/1dv6c8mrqr/",
+     "https://www.instagram.com/www.instagram.com/kevinamackenzie",
+     "https://www.twitter.com/www.x.com/kevinamackenzie"
+    ],
+    "nomination_date": "June 11, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519054",
+  "csdname": "East Gwillimbury, Town (T)",
+  "county_mun": "1954",
+  "office": "English Public School Trustee",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "MARY ALIYIANIS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, May 5, 2026"
+   },
+   {
+    "name_raw": "HAYDEN LAI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, August 4, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519054",
+  "csdname": "East Gwillimbury, Town (T)",
+  "county_mun": "1954",
+  "office": "English Separate School Trustee",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ROSA CALABRESE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, May 19, 2026"
+   },
+   {
+    "name_raw": "THERESA MCNICOL",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, May 12, 2026"
+   },
+   {
+    "name_raw": "KEVIN MOORE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, May 1, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3544065",
+  "csdname": "Georgian Bay, Township (TP)",
+  "county_mun": "4465",
+  "office": "Public School Trustee-Near North Board",
+  "board_number": "B28037",
+  "system": "public",
+  "classify_reason": "matched:Near North",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "JEAN BECKETT",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 13, 2026"
+   },
+   {
+    "name_raw": "JOHN COCHRANE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 20, 2026"
+   },
+   {
+    "name_raw": "JIM WILSON",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, July 29, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3544065",
+  "csdname": "Georgian Bay, Township (TP)",
+  "county_mun": "4465",
+  "office": "Public School Trustee-Trillium District",
+  "board_number": "B66087",
+  "system": "public",
+  "classify_reason": "matched:Trillium District",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ESTHER CHILDS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 6, 2026"
+   },
+   {
+    "name_raw": "LOUISE CLODD",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, August 17, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3544065",
+  "csdname": "Georgian Bay, Township (TP)",
+  "county_mun": "4465",
+  "office": "English Separate School Trustee",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "JOSHUA BOUTOTTE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 14, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519049",
+  "csdname": "King, Township (TP)",
+  "county_mun": "1949",
+  "office": "English Public School Trustee",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ARSLAN AHMAD",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, August 17, 2026"
+   },
+   {
+    "name_raw": "BRIER DODGE PHOUNSY",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 13, 2026"
+   },
+   {
+    "name_raw": "DORIT SMALI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, May 5, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519049",
+  "csdname": "King, Township (TP)",
+  "county_mun": "1949",
+  "office": "English Separate School Trustee",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "BRANDAN JAMES CESCOLINI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, July 14, 2026"
+   },
+   {
+    "name_raw": "EDUARDO JUAREZ",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 20, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3544027",
+  "csdname": "Lake of Bays, Township (TP)",
+  "county_mun": "4427",
+  "office": "English Public School Trustee",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ELIZABETH PURCELL",
+    "acclaimed": false,
+    "email": "epurcelltrustee@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 19, 2026"
+   },
+   {
+    "name_raw": "BRUCE REAIN",
+    "acclaimed": false,
+    "email": "breain46@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 4, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3544027",
+  "csdname": "Lake of Bays, Township (TP)",
+  "county_mun": "4427",
+  "office": "English Separate School Trustee",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "JOSHUA BOUTOTTE",
+    "acclaimed": true,
+    "email": "jboutotte@gmail.com",
+    "phone": "(705) 706-5596",
+    "links": [],
+    "nomination_date": "August 14, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3518001",
+  "csdname": "Pickering, City (CY)",
+  "county_mun": "1801",
+  "office": "Trustee, Durham District School Board",
+  "board_number": "B66060",
+  "system": "public",
+  "classify_reason": "matched:Durham District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "WALTON ARMSTRONG",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, May 26, 2026"
+   },
+   {
+    "name_raw": "EMMA CUNNINGHAM",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, May 15, 2026"
+   },
+   {
+    "name_raw": "SINTHUJA KANAGESWARAN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, May 15, 2026"
+   },
+   {
+    "name_raw": "KHADIZA MANJRA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 14, 2026"
+   },
+   {
+    "name_raw": "AMJAD MUHAMMAD",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, May 25, 2026"
+   },
+   {
+    "name_raw": "HITESH PARIKH",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, July 23, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3518001",
+  "csdname": "Pickering, City (CY)",
+  "county_mun": "1801",
+  "office": "Trustee, Durham Catholic District School Board",
+  "board_number": "B67105",
+  "system": "catholic",
+  "classify_reason": "matched:Durham Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ANDRE DE FREITAS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, May 27, 2026"
+   },
+   {
+    "name_raw": "AYEZA PEREZ",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, June 29, 2026"
+   },
+   {
+    "name_raw": "BESSY STERGIOU",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, August 4, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519044",
+  "csdname": "Whitchurch-Stouffville, Town (T)",
+  "county_mun": "1944",
+  "office": "School Board Trustee, English Public",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": true,
+  "candidates": []
+ },
+ {
+  "census_id": "3519044",
+  "csdname": "Whitchurch-Stouffville, Town (T)",
+  "county_mun": "1944",
+  "office": "School Board Trustee, English Separate",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": true,
+  "candidates": []
+ },
+ {
+  "census_id": "3530016",
+  "csdname": "Waterloo, City (CY)",
+  "county_mun": "3016",
+  "office": "Waterloo Region District School Board Trustee (Vote for no more than 3)",
+  "board_number": "B66176",
+  "system": "public",
+  "classify_reason": "matched:Waterloo Region District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "CRISTINA BAIROS FERNANDES",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, August 18, 2026"
+   },
+   {
+    "name_raw": "BRIAN BEST",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 20, 2026"
+   },
+   {
+    "name_raw": "BRIAN BOURKE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 21, 2026"
+   },
+   {
+    "name_raw": "KAREN COVIELLO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 20, 2026"
+   },
+   {
+    "name_raw": "CLINTON HEFFERNAN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, May 14, 2026"
+   },
+   {
+    "name_raw": "GEOFF HORSMAN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, August 18, 2026"
+   },
+   {
+    "name_raw": "KATHLEEN WOODCOCK",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, May 1, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3530016",
+  "csdname": "Waterloo, City (CY)",
+  "county_mun": "3016",
+  "office": "Waterloo Region Catholic School Board Trustee (Vote for no more than 2)",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ANNA ACETO-GUERIN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, August 17, 2026"
+   },
+   {
+    "name_raw": "LINDA CUFF",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, May 4, 2026"
+   },
+   {
+    "name_raw": "NORMAN J DAMAREN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, August 12, 2026"
+   },
+   {
+    "name_raw": "CONRAD STANLEY",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, May 1, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3543031",
+  "csdname": "Collingwood, Town (T)",
+  "county_mun": "4331",
+  "office": "English Public School Board Trustee",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "SARAH AZIZI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 28, 2026"
+   },
+   {
+    "name_raw": "KASIA BANIAK",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 19, 2026"
+   },
+   {
+    "name_raw": "JAY BARRON",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 20, 2026"
+   },
+   {
+    "name_raw": "ADAM HARROD",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 27, 2026"
+   },
+   {
+    "name_raw": "JULIE ROSE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3543031",
+  "csdname": "Collingwood, Town (T)",
+  "county_mun": "4331",
+  "office": "English Separate School Board Trustee",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "SHAWN COOPER",
+    "acclaimed": true,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 6, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3542059",
+  "csdname": "Owen Sound, City (CY)",
+  "county_mun": "4259",
+  "office": "Bluewater District School Board Trustee",
+  "board_number": "B66001",
+  "system": "public",
+  "classify_reason": "matched:Bluewater",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "MICHAEL DUNN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 17, 2026"
+   },
+   {
+    "name_raw": "SARAH MILNE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3542059",
+  "csdname": "Owen Sound, City (CY)",
+  "county_mun": "4259",
+  "office": "Bruce Grey Catholic School Board Trustee",
+  "board_number": "B67008",
+  "system": "catholic",
+  "classify_reason": "matched:Bruce Grey Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "SURIYA THOMAS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 17, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3544002",
+  "csdname": "Gravenhurst, Town (T)",
+  "county_mun": "4402",
+  "office": "English Public School Trustee",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ESTHER CHILDS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 6, 2026"
+   },
+   {
+    "name_raw": "LOUISE CLODD",
+    "acclaimed": true,
+    "email": "",
+    "phone": "(705) 394-4669",
+    "links": [],
+    "nomination_date": "Tuesday, May 3, 2022"
+   }
+  ]
+ },
+ {
+  "census_id": "3544002",
+  "csdname": "Gravenhurst, Town (T)",
+  "county_mun": "4402",
+  "office": "English Separate School Trustee",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": true,
+  "candidates": []
+ },
+ {
+  "census_id": "3519038",
+  "csdname": "Richmond Hill, Town (T)",
+  "county_mun": "1938",
+  "office": "Trustee - York Region District School Board Wds 1,2,4",
+  "board_number": "B66095",
+  "system": "public",
+  "classify_reason": "matched:York Region District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ROBERT KOLOSOWSKI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "June 14, 2022"
+   },
+   {
+    "name_raw": "JONATHAN NADLER",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 8, 2022"
+   },
+   {
+    "name_raw": "ALI NIKJOO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "June 2, 2022"
+   },
+   {
+    "name_raw": "JYOTI OBEROI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 19, 2022"
+   },
+   {
+    "name_raw": "CRYSTAL YU",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "June 28, 2022"
+   }
+  ]
+ },
+ {
+  "census_id": "3519038",
+  "csdname": "Richmond Hill, Town (T)",
+  "county_mun": "1938",
+  "office": "Trustee - York Region District School Board Wds 3,5,6",
+  "board_number": "B66095",
+  "system": "public",
+  "classify_reason": "matched:York Region District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "CINDY LIANG",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 26, 2022"
+   },
+   {
+    "name_raw": "SADRA NASSERI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 3, 2022"
+   }
+  ]
+ },
+ {
+  "census_id": "3519038",
+  "csdname": "Richmond Hill, Town (T)",
+  "county_mun": "1938",
+  "office": "Trustee - York Catholic District School Board",
+  "board_number": "B67075",
+  "system": "catholic",
+  "classify_reason": "matched:York Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "GLENCIA BROOKES-DOS SANTOS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 2, 2022"
+   },
+   {
+    "name_raw": "GINA DE CAIRES",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 11, 2022"
+   },
+   {
+    "name_raw": "JOE DIMEO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 17, 2022"
+   },
+   {
+    "name_raw": "MARIA IAFRATE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 15, 2022"
+   }
+  ]
+ },
+ {
+  "census_id": "3518009",
+  "csdname": "Whitby, Town (T)",
+  "county_mun": "1809",
+  "office": "Durham District School Board Trustee (two to be elected)",
+  "board_number": "B66060",
+  "system": "public",
+  "classify_reason": "matched:Durham District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "MICHELLE AMBROSE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   },
+   {
+    "name_raw": "JASON ARSENEAULT",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   },
+   {
+    "name_raw": "ROB DIAMOND",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   },
+   {
+    "name_raw": "KIM DOWNEY",
+    "acclaimed": false,
+    "email": "333downey@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 3, 2026"
+   },
+   {
+    "name_raw": "WILL ELLIS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 19, 2026"
+   },
+   {
+    "name_raw": "MANAS KHANNA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 19, 2026"
+   },
+   {
+    "name_raw": "SRI MYLAVARAPU",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 1, 2026"
+   },
+   {
+    "name_raw": "KIMBERLEY PINEAU",
+    "acclaimed": false,
+    "email": "kim.pineau@gmail.com",
+    "phone": "",
+    "links": [
+     "http://sites.google.com/view/kimpineau-ddsbtrustee-2026/home",
+     "http://www.linkedin.com/in/kim-pineau"
+    ],
+    "nomination_date": "August 6, 2026"
+   },
+   {
+    "name_raw": "CHRISTOPHER PRICE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   },
+   {
+    "name_raw": "LYNDA YARDLEY",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 1, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3518009",
+  "csdname": "Whitby, Town (T)",
+  "county_mun": "1809",
+  "office": "Durham Catholic District School Board Trustee (two to be elected)",
+  "board_number": "B67105",
+  "system": "catholic",
+  "classify_reason": "matched:Durham Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "TREVOR AITCHESON",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 7, 2026"
+   },
+   {
+    "name_raw": "ROBERT DE SOUZA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 29, 2026"
+   },
+   {
+    "name_raw": "MARY LOUISE LABARRE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   },
+   {
+    "name_raw": "SINH NGO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 20, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521024",
+  "csdname": "Caledon, Town (T)",
+  "county_mun": "2124",
+  "office": "English Public School Board Trustee",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ROSEY KAUR",
+    "acclaimed": false,
+    "email": "info@roseykaur.com",
+    "phone": "",
+    "links": [
+     "http://www.roseykaur.com/"
+    ],
+    "nomination_date": "May 11, 2026"
+   },
+   {
+    "name_raw": "GAGAN SANDHU",
+    "acclaimed": false,
+    "email": "supportgspeel@gmail.com",
+    "phone": "(647) 572-3332",
+    "links": [],
+    "nomination_date": "June 22, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521024",
+  "csdname": "Caledon, Town (T)",
+  "county_mun": "2124",
+  "office": "English Separate School Board Trustee",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "PAULA DAMETTO-GIOVANNOZZI",
+    "acclaimed": false,
+    "email": "pauladamettogiovannozzi@gmail.com",
+    "phone": "(416) 570-5087",
+    "links": [],
+    "nomination_date": "May 1, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3544042",
+  "csdname": "Huntsville, Town (T)",
+  "county_mun": "4442",
+  "office": "English Public School Trustee",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": true,
+  "candidates": []
+ },
+ {
+  "census_id": "3544042",
+  "csdname": "Huntsville, Town (T)",
+  "county_mun": "4442",
+  "office": "English Separate School Trustee",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": true,
+  "candidates": []
+ },
+ {
+  "census_id": "3524009",
+  "csdname": "Milton, Town (T)",
+  "county_mun": "2409",
+  "office": "English Public School Trustee Wards 1 & 2",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "KHDIGA R METWALLY",
+    "acclaimed": false,
+    "email": "drkmetwally@gmail.com",
+    "phone": "",
+    "links": [
+     "http://VOTEFORDRKMETWALLY.ca"
+    ],
+    "nomination_date": "Monday, June 15, 2026"
+   },
+   {
+    "name_raw": "ANDREW J WOOD",
+    "acclaimed": false,
+    "email": "andrew@southsidemilton.org",
+    "phone": "(647) 999-8516",
+    "links": [],
+    "nomination_date": "Thursday, August 13, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3524009",
+  "csdname": "Milton, Town (T)",
+  "county_mun": "2409",
+  "office": "English Public School Trustee Wards 3 & 4",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ABDULILLAH FARUQI",
+    "acclaimed": false,
+    "email": "abdulillah.faruqi@gmail.com",
+    "phone": "(905) 703-6035",
+    "links": [
+     "http://abdulillahfaruqi.ca"
+    ],
+    "nomination_date": "Tuesday, June 30, 2026"
+   },
+   {
+    "name_raw": "LETITIA HENRY",
+    "acclaimed": false,
+    "email": "topcarenursing@gmail.com",
+    "phone": "",
+    "links": [
+     "http://sites.google.com/view/letitia-henry-msc-phdcc/home"
+    ],
+    "nomination_date": "Thursday, May 7, 2026"
+   },
+   {
+    "name_raw": "YASAR SHAIKH",
+    "acclaimed": false,
+    "email": "yasarshaikh@yahoo.com",
+    "phone": "(289) 221-7774",
+    "links": [],
+    "nomination_date": "Thursday, June 11, 2026"
+   },
+   {
+    "name_raw": "MALIH SIDDIQI",
+    "acclaimed": false,
+    "email": "siddiqimalih@gmail.com",
+    "phone": "(647) 786-5290",
+    "links": [],
+    "nomination_date": "Thursday, August 13, 2026"
+   },
+   {
+    "name_raw": "HAS SLEIMAN",
+    "acclaimed": false,
+    "email": "info@votesleiman.ca",
+    "phone": "",
+    "links": [
+     "http://votesleiman.ca"
+    ],
+    "nomination_date": "Friday, August 21, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3524009",
+  "csdname": "Milton, Town (T)",
+  "county_mun": "2409",
+  "office": "English Separate School Trustee Ward 1 & 4",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "JOSEPH BRENDAN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, August 19, 2026"
+   },
+   {
+    "name_raw": "JUAN CUMMING",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 21, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3524009",
+  "csdname": "Milton, Town (T)",
+  "county_mun": "2409",
+  "office": "English Separate School Trustee Ward 2 & 3",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "JOSEPH ADAMS",
+    "acclaimed": false,
+    "email": "josephadams4hcdsbtrustee@gmail.com",
+    "phone": "",
+    "links": [
+     "http://Josephadams.ca"
+    ],
+    "nomination_date": "Tuesday, May 26, 2026"
+   },
+   {
+    "name_raw": "CECIL YOUNG",
+    "acclaimed": false,
+    "email": "cecyoung@sbg.ca",
+    "phone": "(416) 997-9584",
+    "links": [],
+    "nomination_date": "Friday, August 21, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519028",
+  "csdname": "Vaughan, City (CY)",
+  "county_mun": "1928",
+  "office": "YRDSB Trustee - Area 1 (Township of King & Vaughan Ward 1)",
+  "board_number": "B66095",
+  "system": "public",
+  "classify_reason": "matched:YRDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ARSLAN AHMAD",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, August 17, 2026"
+   },
+   {
+    "name_raw": "BRIER DODGE PHOUNSY",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 13, 2026"
+   },
+   {
+    "name_raw": "DORIT SMALI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, May 5, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519028",
+  "csdname": "Vaughan, City (CY)",
+  "county_mun": "1928",
+  "office": "YRDSB Trustee - Area 2 (Ward 2 & 3)",
+  "board_number": "B66095",
+  "system": "public",
+  "classify_reason": "matched:YRDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "BEN AZAR",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, July 3, 2026"
+   },
+   {
+    "name_raw": "MARJORIE BOWEN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, June 22, 2026"
+   },
+   {
+    "name_raw": "WAHEED CHEEMA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 13, 2026"
+   },
+   {
+    "name_raw": "DARIO DI GIANNANTONIO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, June 1, 2026"
+   },
+   {
+    "name_raw": "WINNIE HO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, August 12, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519028",
+  "csdname": "Vaughan, City (CY)",
+  "county_mun": "1928",
+  "office": "YRDSB Trustee - Area 3 (Ward 4 & 5)",
+  "board_number": "B66095",
+  "system": "public",
+  "classify_reason": "matched:YRDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ESTELLE COHEN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, June 19, 2026"
+   },
+   {
+    "name_raw": "ALI MALIK-A",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, May 4, 2026"
+   },
+   {
+    "name_raw": "ANNA MOLCHANOVA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 13, 2026"
+   },
+   {
+    "name_raw": "LOTAN WIDER",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [
+     "http://lotanwider.ca",
+     "https://www.facebook.com/lotanwiderr",
+     "https://www.instagram.com/lotanwiderr",
+     "https://www.twitter.com/lotanwiderr"
+    ],
+    "nomination_date": "Monday, May 4, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519028",
+  "csdname": "Vaughan, City (CY)",
+  "county_mun": "1928",
+  "office": "YCDSB Trustee - Area 1 (Ward 1)",
+  "board_number": "B67075",
+  "system": "catholic",
+  "classify_reason": "matched:YCDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "GIANLUCA FRATTAROLI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, June 24, 2026"
+   },
+   {
+    "name_raw": "MARY PETROLO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, June 29, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519028",
+  "csdname": "Vaughan, City (CY)",
+  "county_mun": "1928",
+  "office": "YCDSB Trustee - Area 2 (Ward 2)",
+  "board_number": "B67075",
+  "system": "catholic",
+  "classify_reason": "matched:YCDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ALEX CASBARRO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [
+     "http://alexcasbarro.ca",
+     "https://www.instagram.com/alexmcasbarro"
+    ],
+    "nomination_date": "Friday, May 1, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3543042",
+  "csdname": "Barrie, City (CY)",
+  "county_mun": "4342",
+  "office": "Member - Simcoe County District School Board - Area 1",
+  "board_number": "B66109",
+  "system": "public",
+  "classify_reason": "matched:Simcoe County District School Board",
+  "empty_notice": true,
+  "candidates": []
+ },
+ {
+  "census_id": "3543042",
+  "csdname": "Barrie, City (CY)",
+  "county_mun": "4342",
+  "office": "Member - Simcoe County District School Board - Area 2",
+  "board_number": "B66109",
+  "system": "public",
+  "classify_reason": "matched:Simcoe County District School Board",
+  "empty_notice": true,
+  "candidates": []
+ },
+ {
+  "census_id": "3543042",
+  "csdname": "Barrie, City (CY)",
+  "county_mun": "4342",
+  "office": "Member - Simcoe County District School Board - Area 3",
+  "board_number": "B66109",
+  "system": "public",
+  "classify_reason": "matched:Simcoe County District School Board",
+  "empty_notice": true,
+  "candidates": []
+ },
+ {
+  "census_id": "3543042",
+  "csdname": "Barrie, City (CY)",
+  "county_mun": "4342",
+  "office": "Member - Simcoe Muskoka Catholic District School Board - Area 1",
+  "board_number": "B67091",
+  "system": "catholic",
+  "classify_reason": "matched:Simcoe Muskoka Catholic",
+  "empty_notice": true,
+  "candidates": []
+ },
+ {
+  "census_id": "3543042",
+  "csdname": "Barrie, City (CY)",
+  "county_mun": "4342",
+  "office": "Member - Simcoe Muskoka Catholic District School Board - Area 2",
+  "board_number": "B67091",
+  "system": "catholic",
+  "classify_reason": "matched:Simcoe Muskoka Catholic",
+  "empty_notice": true,
+  "candidates": []
+ },
+ {
+  "census_id": "3521010",
+  "csdname": "Brampton, City (CY)",
+  "county_mun": "2110",
+  "office": "Peel District School Board - Wards 1, 5",
+  "board_number": "B66125",
+  "system": "public",
+  "classify_reason": "matched:Peel District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "SUFIAN BAIG",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 19, 2026"
+   },
+   {
+    "name_raw": "DAVID GREEN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [
+     "http://www.ElectDavid.ca"
+    ],
+    "nomination_date": "May 1, 2026"
+   },
+   {
+    "name_raw": "KATHY MCDONALD",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   },
+   {
+    "name_raw": "STAN TAYLOR",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521010",
+  "csdname": "Brampton, City (CY)",
+  "county_mun": "2110",
+  "office": "Peel District School Board - Wards 2, 6",
+  "board_number": "B66125",
+  "system": "public",
+  "classify_reason": "matched:Peel District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "CHRIS CAMPBELL",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   },
+   {
+    "name_raw": "WILL DAVIES",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 11, 2026"
+   },
+   {
+    "name_raw": "PAL DHALIWAL",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 13, 2026"
+   },
+   {
+    "name_raw": "JEANNETTE FLYNN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 21, 2026"
+   },
+   {
+    "name_raw": "MANSOOR MIRZA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 17, 2026"
+   },
+   {
+    "name_raw": "SHRUTIBEN SHAH",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   },
+   {
+    "name_raw": "CHARANPREET SINGH SIDHU",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 19, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521010",
+  "csdname": "Brampton, City (CY)",
+  "county_mun": "2110",
+  "office": "Peel District School Board - Wards 3, 4",
+  "board_number": "B66125",
+  "system": "public",
+  "classify_reason": "matched:Peel District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "GURLEENJOT SINGH DHALIWAL",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 16, 2026"
+   },
+   {
+    "name_raw": "CLAUDIO C LEWIS",
+    "acclaimed": false,
+    "email": "claudiolewis@trispeed.ca",
+    "phone": "(416) 475-2197",
+    "links": [],
+    "nomination_date": "August 18, 2026"
+   },
+   {
+    "name_raw": "KATHY MCDONALD",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 6, 2026"
+   },
+   {
+    "name_raw": "ARSHEI NIDHA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 28, 2026"
+   },
+   {
+    "name_raw": "CELINA REYES",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521010",
+  "csdname": "Brampton, City (CY)",
+  "county_mun": "2110",
+  "office": "Peel District School Board - Wards 7, 8",
+  "board_number": "B66125",
+  "system": "public",
+  "classify_reason": "matched:Peel District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "KARLA BAILEY",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 4, 2026"
+   },
+   {
+    "name_raw": "BRIAN JAMES BLAKE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 20, 2026"
+   },
+   {
+    "name_raw": "ANDREA FRANCIS-BUCKNOR",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 10, 2026"
+   },
+   {
+    "name_raw": "MICHAEL GYOVAI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 17, 2026"
+   },
+   {
+    "name_raw": "JATIN SETHI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 22, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521010",
+  "csdname": "Brampton, City (CY)",
+  "county_mun": "2110",
+  "office": "Peel District School Board - Wards 9, 10",
+  "board_number": "B66125",
+  "system": "public",
+  "classify_reason": "matched:Peel District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "- DALJIT SINGH",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 15, 2026"
+   },
+   {
+    "name_raw": "DENISE DANI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 27, 2026"
+   },
+   {
+    "name_raw": "PARNEET DHOTHAR",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 14, 2026"
+   },
+   {
+    "name_raw": "DHARMAVIR GOHIL",
+    "acclaimed": false,
+    "email": "",
+    "phone": "(416) 648-4447",
+    "links": [],
+    "nomination_date": "August 17, 2026"
+   },
+   {
+    "name_raw": "THERESE GUIDOLIN",
+    "acclaimed": false,
+    "email": "thereseguidolin@gmail.com",
+    "phone": "(416) 918-6353",
+    "links": [],
+    "nomination_date": "August 17, 2026"
+   },
+   {
+    "name_raw": "MUHAMMAD MISBAHUL HAQUE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 6, 2026"
+   },
+   {
+    "name_raw": "- HARSIMRAN SINGH",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   },
+   {
+    "name_raw": "PANKAJ JOSHI",
+    "acclaimed": false,
+    "email": "joship@outlook.com",
+    "phone": "(647) 968-5874",
+    "links": [],
+    "nomination_date": "August 18, 2026"
+   },
+   {
+    "name_raw": "MILY MICHAEL MACWAN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   },
+   {
+    "name_raw": "KHUSHPAL SINGH PAWAR",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 14, 2026"
+   },
+   {
+    "name_raw": "GURINDER SEHGAL",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 14, 2026"
+   },
+   {
+    "name_raw": "GAGANDEEP SHARMA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 20, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521010",
+  "csdname": "Brampton, City (CY)",
+  "county_mun": "2110",
+  "office": "Dufferin-Peel Catholic District School Board - Wards 1, 3, 4",
+  "board_number": "B67083",
+  "system": "catholic",
+  "classify_reason": "matched:Dufferin-Peel Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "AMANDA BAEZ",
+    "acclaimed": false,
+    "email": "amandafortrustee@gmail.com",
+    "phone": "",
+    "links": [
+     "https://www.instagram.com/Amandafortrustee"
+    ],
+    "nomination_date": "August 18, 2026"
+   },
+   {
+    "name_raw": "ALFONSO MENANNO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 15, 2026"
+   },
+   {
+    "name_raw": "ANISHA THOMAS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 26, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521010",
+  "csdname": "Brampton, City (CY)",
+  "county_mun": "2110",
+  "office": "Dufferin-Peel Catholic District School Board - Wards 2, 5, 6",
+  "board_number": "B67083",
+  "system": "catholic",
+  "classify_reason": "matched:Dufferin-Peel Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "DOMINIQUE DARMANIN-STURGEON",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "June 26, 2026"
+   },
+   {
+    "name_raw": "DARRYL BRIAN D'SOUZA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 11, 2026"
+   },
+   {
+    "name_raw": "DAMIEN JOSEPH",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 10, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521010",
+  "csdname": "Brampton, City (CY)",
+  "county_mun": "2110",
+  "office": "Dufferin-Peel Catholic District School Board - Wards 7, 8, 9, 10",
+  "board_number": "B67083",
+  "system": "catholic",
+  "classify_reason": "matched:Dufferin-Peel Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ANDREA BARANOWSKI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 27, 2026"
+   },
+   {
+    "name_raw": "KAREN DANCY",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 16, 2026"
+   },
+   {
+    "name_raw": "SHAWN XAVIOUR",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 20, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3518013",
+  "csdname": "Oshawa, City (CY)",
+  "county_mun": "1813",
+  "office": "Trustee - Durham District School Board",
+  "board_number": "B66060",
+  "system": "public",
+  "classify_reason": "matched:Durham District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ARJUN ARIARAN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, June 17, 2026"
+   },
+   {
+    "name_raw": "HARRY CLARKE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 21, 2026"
+   },
+   {
+    "name_raw": "HAMZA KHAN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, June 22, 2026"
+   },
+   {
+    "name_raw": "SANDRA LAZARUS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, May 15, 2026"
+   },
+   {
+    "name_raw": "PENNY NUGENT",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, June 22, 2026"
+   },
+   {
+    "name_raw": "SANJAY SARKAR",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 20, 2026"
+   },
+   {
+    "name_raw": "JIM VAN ALLEN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, July 8, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3518013",
+  "csdname": "Oshawa, City (CY)",
+  "county_mun": "1813",
+  "office": "Trustee - Durham Catholic District School Board",
+  "board_number": "B67105",
+  "system": "catholic",
+  "classify_reason": "matched:Durham Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "KIM BEATTY",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, May 8, 2026"
+   },
+   {
+    "name_raw": "JOHN RZESZUT",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, July 31, 2026"
+   },
+   {
+    "name_raw": "MORGAN STE. MARIE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, May 21, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3515014",
+  "csdname": "Peterborough, City (CY)",
+  "county_mun": "1514",
+  "office": "Kawartha Pine Ridge District School Board Trustee",
+  "board_number": "B66079",
+  "system": "public",
+  "classify_reason": "matched:Kawartha Pine Ridge",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "SHAWNA BLACKWOOD",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 18, 2026"
+   },
+   {
+    "name_raw": "JULIE CHATTEN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 18, 2026"
+   },
+   {
+    "name_raw": "JACK HENRY",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 20, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3515014",
+  "csdname": "Peterborough, City (CY)",
+  "county_mun": "1514",
+  "office": "PVNCCDSB Trustee",
+  "board_number": "B67067",
+  "system": "catholic",
+  "classify_reason": "matched:PVNCCDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ALEX DELOREY",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 28, 2026"
+   },
+   {
+    "name_raw": "LORETTA DURST",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 30, 2026"
+   },
+   {
+    "name_raw": "CHRISTINE HAFFIE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   },
+   {
+    "name_raw": "BRADEN LEAL",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 18, 2026"
+   },
+   {
+    "name_raw": "JACQUELYN ROFFEY",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 17, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3557061",
+  "csdname": "Sault Ste. Marie, City (CY)",
+  "county_mun": "5761",
+  "office": "ADSB Ward 1 Trustee",
+  "board_number": "B28010",
+  "system": "public",
+  "classify_reason": "matched:ADSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "NORMAN FERA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, July 27, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3557061",
+  "csdname": "Sault Ste. Marie, City (CY)",
+  "county_mun": "5761",
+  "office": "ADSB Ward 2 Trustee",
+  "board_number": "B28010",
+  "system": "public",
+  "classify_reason": "matched:ADSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "JESSE BALANYK",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, July 28, 2026"
+   },
+   {
+    "name_raw": "MICHELLE MURPHY",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, July 24, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3557061",
+  "csdname": "Sault Ste. Marie, City (CY)",
+  "county_mun": "5761",
+  "office": "ADSB Ward 3 Trustee",
+  "board_number": "B28010",
+  "system": "public",
+  "classify_reason": "matched:ADSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "GREG BOWMAN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, May 7, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3557061",
+  "csdname": "Sault Ste. Marie, City (CY)",
+  "county_mun": "5761",
+  "office": "ADSB Ward 4 Trustee",
+  "board_number": "B28010",
+  "system": "public",
+  "classify_reason": "matched:ADSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "TIM MARSH",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 20, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3557061",
+  "csdname": "Sault Ste. Marie, City (CY)",
+  "county_mun": "5761",
+  "office": "ADSB Ward 5 Trustee",
+  "board_number": "B28010",
+  "system": "public",
+  "classify_reason": "matched:ADSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "NICK APOSTLE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, May 28, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3557061",
+  "csdname": "Sault Ste. Marie, City (CY)",
+  "county_mun": "5761",
+  "office": "HSCDSB Trustee",
+  "board_number": "B29025",
+  "system": "catholic",
+  "classify_reason": "matched:HSCDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "CAROL AMADIO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, June 5, 2026"
+   },
+   {
+    "name_raw": "JOHN BRUNO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, May 28, 2026"
+   },
+   {
+    "name_raw": "JOHN CAPUTO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, June 5, 2026"
+   },
+   {
+    "name_raw": "TONY D'AGOSTINO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, July 30, 2026"
+   },
+   {
+    "name_raw": "WAYNE GRECO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, May 8, 2026"
+   },
+   {
+    "name_raw": "SANDRA P TURCO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, July 31, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3537039",
+  "csdname": "Windsor, City (CY)",
+  "county_mun": "3739",
+  "office": "Trustee - GECDSB - Wards 1, 2 & 9",
+  "board_number": "B66028",
+  "system": "public",
+  "classify_reason": "matched:GECDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "FAZLE BAKI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, August 19, 2026"
+   },
+   {
+    "name_raw": "TINA CHITTLE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 20, 2026"
+   },
+   {
+    "name_raw": "TODD GERVAIS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 21, 2026"
+   },
+   {
+    "name_raw": "SANDRA KIRMA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 7, 2026"
+   },
+   {
+    "name_raw": "MALINI ONDROVCIK",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, May 8, 2026"
+   },
+   {
+    "name_raw": "AFFAN SHAHID",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 21, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3537039",
+  "csdname": "Windsor, City (CY)",
+  "county_mun": "3739",
+  "office": "Trustee - GECDSB - Wards 3, 4 & 10",
+  "board_number": "B66028",
+  "system": "public",
+  "classify_reason": "matched:GECDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "MOHAMAD ALAWIE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 20, 2026"
+   },
+   {
+    "name_raw": "MALAK BAKHASH",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, July 27, 2026"
+   },
+   {
+    "name_raw": "DANIEL LOCKHART",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, August 19, 2026"
+   },
+   {
+    "name_raw": "MALEK MEKAWI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, August 19, 2026"
+   },
+   {
+    "name_raw": "CHRISTIE NELSON",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 21, 2026"
+   },
+   {
+    "name_raw": "BETH ST. DENIS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, June 26, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3537039",
+  "csdname": "Windsor, City (CY)",
+  "county_mun": "3739",
+  "office": "Trustee - GECDSB - Wards 5, 6, 7 & 8",
+  "board_number": "B66028",
+  "system": "public",
+  "classify_reason": "matched:GECDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "CATHY COOKE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, August 19, 2026"
+   },
+   {
+    "name_raw": "SALENA HAMILTON",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, July 3, 2026"
+   },
+   {
+    "name_raw": "GALE SIMKO HATFIELD",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, May 29, 2026"
+   },
+   {
+    "name_raw": "LUCA LAZARUS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 20, 2026"
+   },
+   {
+    "name_raw": "MAY LYMAN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, June 1, 2026"
+   },
+   {
+    "name_raw": "MICHAEL SERDAN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, August 26, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3537039",
+  "csdname": "Windsor, City (CY)",
+  "county_mun": "3739",
+  "office": "Trustee - WECDSB - Wards 1 & 10",
+  "board_number": "B67024",
+  "system": "catholic",
+  "classify_reason": "matched:WECDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "SALAM ESHO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 21, 2026"
+   },
+   {
+    "name_raw": "FULVIO VALENTINIS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Sunday, July 26, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3537039",
+  "csdname": "Windsor, City (CY)",
+  "county_mun": "3739",
+  "office": "Trustee - WECDSB - Wards 2 & 9",
+  "board_number": "B67024",
+  "system": "catholic",
+  "classify_reason": "matched:WECDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "JOE (GIUSEPPE) IACONO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, May 19, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3537039",
+  "csdname": "Windsor, City (CY)",
+  "county_mun": "3739",
+  "office": "Trustee - WECDSB - Wards 3 & 4",
+  "board_number": "B67024",
+  "system": "catholic",
+  "classify_reason": "matched:WECDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "JULIET BUSHI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, June 9, 2026"
+   },
+   {
+    "name_raw": "BERNARD MASTROMATTEI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, July 6, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3537039",
+  "csdname": "Windsor, City (CY)",
+  "county_mun": "3739",
+  "office": "Trustee - WECDSB - Wards 5 & 8",
+  "board_number": "B67024",
+  "system": "catholic",
+  "classify_reason": "matched:WECDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "LOONA AL-NODRO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 14, 2026"
+   },
+   {
+    "name_raw": "IGOR DZAIC",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 21, 2026"
+   },
+   {
+    "name_raw": "JASON LAZARUS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, May 12, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3537039",
+  "csdname": "Windsor, City (CY)",
+  "county_mun": "3739",
+  "office": "Trustee - WECDSB - Wards 6 & 7",
+  "board_number": "B67024",
+  "system": "catholic",
+  "classify_reason": "matched:WECDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "KIM BOUCHARD",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, May 12, 2026"
+   },
+   {
+    "name_raw": "RON DUNN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 21, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521005",
+  "csdname": "Mississauga, City (CY)",
+  "county_mun": "2105",
+  "office": "Trustee English Public Wards 1 and 7",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "CHARLES COREY",
+    "acclaimed": false,
+    "email": "mrcharlescorey@gmail.com",
+    "phone": "(416) 455-9612",
+    "links": [
+     "https://www.facebook.com/mrcharlescorey",
+     "https://www.twitter.com/charlescorey_"
+    ],
+    "nomination_date": "Tuesday, June 23, 2026"
+   },
+   {
+    "name_raw": "JAD EL-GHALI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [
+     "https://www.twitter.com/jadelghali"
+    ],
+    "nomination_date": "Friday, August 21, 2026"
+   },
+   {
+    "name_raw": "SARA IQBAL",
+    "acclaimed": false,
+    "email": "siqbal8934@gmail.com",
+    "phone": "(416) 301-0684",
+    "links": [],
+    "nomination_date": "Thursday, July 30, 2026"
+   },
+   {
+    "name_raw": "PAUL PU",
+    "acclaimed": false,
+    "email": "bg27018@gmail.com",
+    "phone": "(416) 669-5198",
+    "links": [
+     "https://www.facebook.com/paul.pu.67051",
+     "https://www.instagram.com/paulpu66",
+     "https://x.com/bg27018"
+    ],
+    "nomination_date": "Thursday, July 2, 2026"
+   },
+   {
+    "name_raw": "MILES ROQUE",
+    "acclaimed": false,
+    "email": "roquefortrustee@gmail.com",
+    "phone": "(416) 821-1812",
+    "links": [],
+    "nomination_date": "Monday, August 17, 2026"
+   },
+   {
+    "name_raw": "SARIYA TALAT",
+    "acclaimed": false,
+    "email": "talatsariya@gmail.com",
+    "phone": "(416) 902-7033",
+    "links": [],
+    "nomination_date": "Wednesday, June 24, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521005",
+  "csdname": "Mississauga, City (CY)",
+  "county_mun": "2105",
+  "office": "Trustee English Public Wards 2 and 8",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "TAMER ELKATEB",
+    "acclaimed": false,
+    "email": "tamer-trustee@outlook.com",
+    "phone": "(416) 845-3109",
+    "links": [],
+    "nomination_date": "Wednesday, August 19, 2026"
+   },
+   {
+    "name_raw": "SAMANTHA FUNG",
+    "acclaimed": false,
+    "email": "samantha.fung246@gmail.com",
+    "phone": "(289) 772-9614",
+    "links": [],
+    "nomination_date": "Tuesday, June 23, 2026"
+   },
+   {
+    "name_raw": "BRAD MACDONALD",
+    "acclaimed": false,
+    "email": "election2026@makekidsfirst.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, May 6, 2026"
+   },
+   {
+    "name_raw": "MICHAEL MICHALIAS",
+    "acclaimed": false,
+    "email": "mikemichalias@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, August 19, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521005",
+  "csdname": "Mississauga, City (CY)",
+  "county_mun": "2105",
+  "office": "Trustee English Public Wards 3 and 4",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "VINCE CERULLO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, May 5, 2026"
+   },
+   {
+    "name_raw": "KASHAF PARACHA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, August 11, 2026"
+   },
+   {
+    "name_raw": "SHIVAKUMAR SETHUMADHAVAN",
+    "acclaimed": false,
+    "email": "trusteeshiva@gmail.com",
+    "phone": "(647) 717-5083",
+    "links": [
+     "https://www.instagram.com/trusteeshiva"
+    ],
+    "nomination_date": "Friday, August 21, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521005",
+  "csdname": "Mississauga, City (CY)",
+  "county_mun": "2105",
+  "office": "Trustee English Public Ward 5",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "SUSAN BENJAMIN",
+    "acclaimed": false,
+    "email": "can_marine@yahoo.com",
+    "phone": "(647) 898-9433",
+    "links": [],
+    "nomination_date": "Friday, May 1, 2026"
+   },
+   {
+    "name_raw": "MOHAMED ELGHAMRY",
+    "acclaimed": false,
+    "email": "melghamry1980@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, August 18, 2026"
+   },
+   {
+    "name_raw": "AVTAR GHOTRA",
+    "acclaimed": false,
+    "email": "trust.avtar@gmail.com",
+    "phone": "(647) 622-7047",
+    "links": [],
+    "nomination_date": "Friday, July 17, 2026"
+   },
+   {
+    "name_raw": "MARINA QURESHI",
+    "acclaimed": false,
+    "email": "marinaqureshi.ward5@gmail.com",
+    "phone": "",
+    "links": [
+     "https://www.facebook.com/Marina Qureshi",
+     "https://www.instagram.com/marinaqureshi.ward5"
+    ],
+    "nomination_date": "Wednesday, August 5, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521005",
+  "csdname": "Mississauga, City (CY)",
+  "county_mun": "2105",
+  "office": "Trustee English Public Wards 6 and 11",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "PATRICK KHRENARON MA",
+    "acclaimed": false,
+    "email": "khrenaronpatrick@gmail.com",
+    "phone": "(416) 918-1643",
+    "links": [],
+    "nomination_date": "Friday, August 21, 2026"
+   },
+   {
+    "name_raw": "JILL PROMOLI",
+    "acclaimed": false,
+    "email": "jill@jillpromoli.ca",
+    "phone": "",
+    "links": [
+     "http://jillpromoli.ca",
+     "https://www.instagram.com/jillpromoli"
+    ],
+    "nomination_date": "Friday, May 1, 2026"
+   },
+   {
+    "name_raw": "HARISH SHROFF",
+    "acclaimed": false,
+    "email": "harishroff2026@gmail.com",
+    "phone": "(647) 983-5972",
+    "links": [
+     "https://www.facebook.com/forstudentsandparents",
+     "https://www.instagram.com/harishshroff2026"
+    ],
+    "nomination_date": "Wednesday, May 27, 2026"
+   },
+   {
+    "name_raw": "SHASHI SINGH",
+    "acclaimed": false,
+    "email": "shashi05july@gmail.com",
+    "phone": "(647) 451-2834",
+    "links": [
+     "https://www.instagram.com/shashi05july",
+     "https://www.instagram.com/shashi05july?igsh=mtlkejdknjnoy3nwzw%3d%3d&amp;utm_source=qr"
+    ],
+    "nomination_date": "Tuesday, June 16, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521005",
+  "csdname": "Mississauga, City (CY)",
+  "county_mun": "2105",
+  "office": "Trustee English Public Wards 9 and 10",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "MOHANAD ASSAL",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [
+     "https://www.instagram.com/mohanad_assal"
+    ],
+    "nomination_date": "Friday, July 31, 2026"
+   },
+   {
+    "name_raw": "JEFF CLARK",
+    "acclaimed": false,
+    "email": "jjclark@rogers.com",
+    "phone": "(416) 270-4961",
+    "links": [
+     "https://www.facebook.com/jeff.clark.737448",
+     "https://www.instagram.com/jeffclark1969",
+     "https://www.twitter.com/jeffclark1969"
+    ],
+    "nomination_date": "Thursday, May 7, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521005",
+  "csdname": "Mississauga, City (CY)",
+  "county_mun": "2105",
+  "office": "Trustee English Separate Wards 1 and 3",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "MARIO PASCUCCI",
+    "acclaimed": false,
+    "email": "mariopascucci@rogers.com",
+    "phone": "(416) 230-3611",
+    "links": [],
+    "nomination_date": "Thursday, May 7, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521005",
+  "csdname": "Mississauga, City (CY)",
+  "county_mun": "2105",
+  "office": "Trustee English Separate Wards 2 and 8",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "LUCITA GONSALVES",
+    "acclaimed": false,
+    "email": "lucitagonsalves@hotmail.com",
+    "phone": "(647) 890-1078",
+    "links": [
+     "https://www.facebook.com/lucitagonsalves",
+     "https://www.instagram.com/lucita_gonsalves"
+    ],
+    "nomination_date": "Friday, August 14, 2026"
+   },
+   {
+    "name_raw": "HERMAN VILORIA",
+    "acclaimed": false,
+    "email": "hviloria@rogers.com",
+    "phone": "(416) 452-9345",
+    "links": [],
+    "nomination_date": "Friday, May 1, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521005",
+  "csdname": "Mississauga, City (CY)",
+  "county_mun": "2105",
+  "office": "Trustee English Separate Ward 4",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "STEFANO PASCUCCI",
+    "acclaimed": false,
+    "email": "reelectpascucci@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, May 4, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521005",
+  "csdname": "Mississauga, City (CY)",
+  "county_mun": "2105",
+  "office": "Trustee English Separate Ward 5",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "SABIR MASIH",
+    "acclaimed": false,
+    "email": "sabirmasih@hotmail.com",
+    "phone": "(647) 760-2460",
+    "links": [],
+    "nomination_date": "Thursday, August 20, 2026"
+   },
+   {
+    "name_raw": "DOMENICA LAURA SIMONE",
+    "acclaimed": false,
+    "email": "laurasimone57@gmail.com",
+    "phone": "(647) 225-0495",
+    "links": [
+     "https://www.instagram.com/dls4maltonmississauga"
+    ],
+    "nomination_date": "Thursday, August 20, 2026"
+   },
+   {
+    "name_raw": "THOMAS THOMAS",
+    "acclaimed": false,
+    "email": "trusteethomas3@gmail.com",
+    "phone": "(416) 845-8225",
+    "links": [],
+    "nomination_date": "Friday, May 15, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521005",
+  "csdname": "Mississauga, City (CY)",
+  "county_mun": "2105",
+  "office": "Trustee English Separate Wards 6 and 11",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "LUZ DEL ROSARIO",
+    "acclaimed": false,
+    "email": "luz_del_rosario@hotmail.com",
+    "phone": "(416) 726-7614",
+    "links": [],
+    "nomination_date": "Wednesday, May 6, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521005",
+  "csdname": "Mississauga, City (CY)",
+  "county_mun": "2105",
+  "office": "Trustee English Separate Ward 7",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "DIANA CARLESIMO",
+    "acclaimed": false,
+    "email": "dianacarlesimo2026@gmail.com",
+    "phone": "(647) 287-2558",
+    "links": [
+     "https://www.instagram.com/trusteecandidatedianacarlesimo",
+     "https://www.twitter.com/dianacarlesimo"
+    ],
+    "nomination_date": "Tuesday, August 11, 2026"
+   },
+   {
+    "name_raw": "BRUNO IANNICCA",
+    "acclaimed": false,
+    "email": "bruno.iannicca@3web.com",
+    "phone": "(905) 270-0536",
+    "links": [],
+    "nomination_date": "Wednesday, May 13, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3521005",
+  "csdname": "Mississauga, City (CY)",
+  "county_mun": "2105",
+  "office": "Trustee English Separate Wards 9 and 10",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "BREA CORBET",
+    "acclaimed": false,
+    "email": "reelectcorbet@gmail.com",
+    "phone": "",
+    "links": [
+     "https://www.facebook.com/breacorbet",
+     "https://www.instagram.com/breacorbet",
+     "https://www.twitter.com/breacorbet"
+    ],
+    "nomination_date": "Friday, August 14, 2026"
+   },
+   {
+    "name_raw": "RESHMA MATHEW",
+    "acclaimed": false,
+    "email": "reshumathew@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 20, 2026"
+   },
+   {
+    "name_raw": "MATHEW THOMAS",
+    "acclaimed": false,
+    "email": "tomannjerry@gmail.com",
+    "phone": "(647) 449-2333",
+    "links": [],
+    "nomination_date": "Wednesday, July 22, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3523008",
+  "csdname": "Guelph, City (CY)",
+  "county_mun": "2308",
+  "office": "Upper Grand District School Board Trustee - Wards 1 and 5",
+  "board_number": "B66117",
+  "system": "public",
+  "classify_reason": "matched:Upper Grand",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "AARON BLAIR",
+    "acclaimed": false,
+    "email": "blairaaron@hotmail.com",
+    "phone": "(519) 803-4936",
+    "links": [
+     "http://aaronblairguelph.wordpress.com"
+    ],
+    "nomination_date": "Thursday, August 6, 2026"
+   },
+   {
+    "name_raw": "BILL FOSTER",
+    "acclaimed": false,
+    "email": "vote.forwtf2026@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, August 12, 2026"
+   },
+   {
+    "name_raw": "MARTHA MACNEIL",
+    "acclaimed": false,
+    "email": "votemarthamacneil@gmail.com",
+    "phone": "",
+    "links": [
+     "http://marthamacneil.ca"
+    ],
+    "nomination_date": "Wednesday, July 8, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3523008",
+  "csdname": "Guelph, City (CY)",
+  "county_mun": "2308",
+  "office": "Upper Grand District School Board Trustee - Wards 2, 3, 4",
+  "board_number": "B66117",
+  "system": "public",
+  "classify_reason": "matched:Upper Grand",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "DAN ATKINSON",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 14, 2026"
+   },
+   {
+    "name_raw": "RANDY FREESE",
+    "acclaimed": false,
+    "email": "r.freese@freezeflameinc.com",
+    "phone": "(416) 697-1737",
+    "links": [],
+    "nomination_date": "Friday, May 29, 2026"
+   },
+   {
+    "name_raw": "LANGE FROSST",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, August 19, 2026"
+   },
+   {
+    "name_raw": "RALF MESENBRINK",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, May 1, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3523008",
+  "csdname": "Guelph, City (CY)",
+  "county_mun": "2308",
+  "office": "Upper Grand District School Board Trustee - Ward 6 and Township of Puslinch",
+  "board_number": "B66117",
+  "system": "public",
+  "classify_reason": "matched:Upper Grand",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "PALLAVI RAMCHANDANI",
+    "acclaimed": false,
+    "email": "pallaviramchandani@gmail.com",
+    "phone": "(437) 533-6603",
+    "links": [],
+    "nomination_date": "Thursday, July 16, 2026"
+   },
+   {
+    "name_raw": "KYLE REABURN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [
+     "http://kylefortrustee.ca"
+    ],
+    "nomination_date": "Friday, May 8, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3523008",
+  "csdname": "Guelph, City (CY)",
+  "county_mun": "2308",
+  "office": "Wellington Catholic District School Board",
+  "board_number": "B67130",
+  "system": "catholic",
+  "classify_reason": "matched:Wellington Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "NATALIA CREWSON",
+    "acclaimed": false,
+    "email": "nataliacrewson@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 7, 2026"
+   },
+   {
+    "name_raw": "VIKKI DUPUIS",
+    "acclaimed": false,
+    "email": "vikki.dupuis@gmail.com",
+    "phone": "(519) 822-9489",
+    "links": [],
+    "nomination_date": "Wednesday, July 29, 2026"
+   },
+   {
+    "name_raw": "VALERIE FAYER",
+    "acclaimed": false,
+    "email": "valfayer@yahoo.com",
+    "phone": "(519) 835-2353",
+    "links": [],
+    "nomination_date": "Monday, August 17, 2026"
+   },
+   {
+    "name_raw": "MARINO GAZZOLA",
+    "acclaimed": false,
+    "email": "marino.gazzola@sympatico.ca",
+    "phone": "(226) 979-2008",
+    "links": [],
+    "nomination_date": "Friday, August 7, 2026"
+   },
+   {
+    "name_raw": "HOLLY SABARA",
+    "acclaimed": false,
+    "email": "hollysabara@rogers.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Wednesday, August 19, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519036",
+  "csdname": "Markham, City (CY)",
+  "county_mun": "1936",
+  "office": "York Region District School Board Trustee (Wards 1 & 8)",
+  "board_number": "B66095",
+  "system": "public",
+  "classify_reason": "matched:York Region District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "CINDY HACKELBERG",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 18, 2026"
+   },
+   {
+    "name_raw": "WEN LIU",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 15, 2026"
+   },
+   {
+    "name_raw": "PETER PAVLOVIC",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   },
+   {
+    "name_raw": "FRANCES YAU",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 8, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519036",
+  "csdname": "Markham, City (CY)",
+  "county_mun": "1936",
+  "office": "York Region District School Board Trustee (Wards 2 & 6)",
+  "board_number": "B66095",
+  "system": "public",
+  "classify_reason": "matched:York Region District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "JOYCE CHEN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 26, 2026"
+   },
+   {
+    "name_raw": "JERRICA LIN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 14, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519036",
+  "csdname": "Markham, City (CY)",
+  "county_mun": "1936",
+  "office": "York Region District School Board Trustee (Wards 3 & 4)",
+  "board_number": "B66095",
+  "system": "public",
+  "classify_reason": "matched:York Region District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "CHRISTINE CALANCHIE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 18, 2026"
+   },
+   {
+    "name_raw": "ED LAW",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 27, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519036",
+  "csdname": "Markham, City (CY)",
+  "county_mun": "1936",
+  "office": "York Region District School Board Trustee (Wards 5 & 7)",
+  "board_number": "B66095",
+  "system": "public",
+  "classify_reason": "matched:York Region District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "MICHAEL CHEN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 1, 2026"
+   },
+   {
+    "name_raw": "RUKSHAN PARA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 17, 2026"
+   },
+   {
+    "name_raw": "GARISHAN RAVISHANKAR",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 6, 2026"
+   },
+   {
+    "name_raw": "HEMAMALINI VENKATARAMAN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 17, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519036",
+  "csdname": "Markham, City (CY)",
+  "county_mun": "1936",
+  "office": "York Catholic District School Board Trustee (Wards 1, 2, 3 & 6)",
+  "board_number": "B67075",
+  "system": "catholic",
+  "classify_reason": "matched:York Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "SIMON HO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "July 31, 2026"
+   },
+   {
+    "name_raw": "DENYS PETIKA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 21, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3519036",
+  "csdname": "Markham, City (CY)",
+  "county_mun": "1936",
+  "office": "York Catholic District School Board Trustee (Wards 4, 5, 7 & 8)",
+  "board_number": "B67075",
+  "system": "catholic",
+  "classify_reason": "matched:York Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "JAMES BUSH",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "August 24, 2026"
+   },
+   {
+    "name_raw": "YAN ZHOU",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "May 1, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3539036",
+  "csdname": "London, City (CY)",
+  "county_mun": "3936",
+  "office": "English Public Trustee Wards 1, 11, 12 & 14",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "CHRISTINE MORGAN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "LORI-ANN PIZZOLATO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "SHERI POLHILL",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "DAVID SABINE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "TRISTAN SQUIRE-SMITH",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "ALEJANDRA VALENCIA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   }
+  ]
+ },
+ {
+  "census_id": "3539036",
+  "csdname": "London, City (CY)",
+  "county_mun": "3936",
+  "office": "English Public Trustee Wards 2, 3, 4, 5 & 6",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "TRACEY AQUILINA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "LAURA GONZALEZ",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "PAUL GRAY",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "LAMISE KABLAWI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "MARIANNE LARSEN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "VIOLET LEMA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "LEROY OSBOURNE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "GABRIELLE STURM",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "JULIE WEDLAKE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   }
+  ]
+ },
+ {
+  "census_id": "3539036",
+  "csdname": "London, City (CY)",
+  "county_mun": "3936",
+  "office": "English Public Trustee Wards 7, 8, 9, 10 & 13",
+  "board_number": "UNRESOLVED-public",
+  "system": "public",
+  "classify_reason": "generic-public-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "MIKE BLOXAM",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "SHARI HALL",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "MIKE JONES",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "BETH MAI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "SHERRI MOORE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "CHRISTOPHER MORGAN",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "MATTHEW REID",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "CLAIRE ROBERTS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "ERIC MICHAEL VALLILLEE",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   }
+  ]
+ },
+ {
+  "census_id": "3539036",
+  "csdname": "London, City (CY)",
+  "county_mun": "3936",
+  "office": "English Catholic Trustee Wards 1 & 14",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "PEDRO ALMEIDA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "ODILIA GOUVEIA",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "MATTHEW PIZZUTI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "DENISE SINGH",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   }
+  ]
+ },
+ {
+  "census_id": "3539036",
+  "csdname": "London, City (CY)",
+  "county_mun": "3936",
+  "office": "English Catholic Trustee Wards 2, 3 & 4",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "SANDRA CRUZ",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "REJOSE MATHEW ARACKAL",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   }
+  ]
+ },
+ {
+  "census_id": "3539036",
+  "csdname": "London, City (CY)",
+  "county_mun": "3936",
+  "office": "English Catholic Trustee Wards 5,6 & 7",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "LUCIE ALVES",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "BENSY MATHEW",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "GABE PIZZUTI",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "BILL RUEGER",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   }
+  ]
+ },
+ {
+  "census_id": "3539036",
+  "csdname": "London, City (CY)",
+  "county_mun": "3936",
+  "office": "English Catholic Trustee Wards 8, 9 & 10",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "LINDA STEEL",
+    "acclaimed": true,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   }
+  ]
+ },
+ {
+  "census_id": "3539036",
+  "csdname": "London, City (CY)",
+  "county_mun": "3936",
+  "office": "English Catholic Trustee Wards 11, 12 & 13",
+  "board_number": "UNRESOLVED-catholic",
+  "system": "catholic",
+  "classify_reason": "generic-catholic-label",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "NANDO FAVARO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "JOHN JEVNIKAR",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   },
+   {
+    "name_raw": "ARTHUR PATRICK MACLEOD",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, August 19, 2022"
+   }
+  ]
+ },
+ {
+  "census_id": "3524001",
+  "csdname": "Oakville, Town (T)",
+  "county_mun": "2401",
+  "office": "Halton District School Board Trustee - Wards 1 & 2",
+  "board_number": "B66133",
+  "system": "public",
+  "classify_reason": "matched:Halton District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "CAROLE BAXTER",
+    "acclaimed": false,
+    "email": "carole4trustee@gmail.com",
+    "phone": "",
+    "links": [
+     "http://www.carolebaxter.ca"
+    ],
+    "nomination_date": "Thursday, August 20, 2026"
+   },
+   {
+    "name_raw": "ZAFAR KAYANI",
+    "acclaimed": false,
+    "email": "votezafarkayani@gmail.com",
+    "phone": "(905) 466-8110",
+    "links": [
+     "http://votezafarkayani.com"
+    ],
+    "nomination_date": "Thursday, August 6, 2026"
+   },
+   {
+    "name_raw": "HAMZAH KHAN",
+    "acclaimed": false,
+    "email": "khanfortrustee@gmail.com",
+    "phone": "(289) 400-1525",
+    "links": [],
+    "nomination_date": "Friday, August 21, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3524001",
+  "csdname": "Oakville, Town (T)",
+  "county_mun": "2401",
+  "office": "Halton District School Board Trustee - Ward 3 and 6",
+  "board_number": "B66133",
+  "system": "public",
+  "classify_reason": "matched:Halton District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "REBECCA MAYVILLE",
+    "acclaimed": false,
+    "email": "mayvillehdsb@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, July 24, 2026"
+   },
+   {
+    "name_raw": "VINAY PARAMANAND",
+    "acclaimed": false,
+    "email": "vinayforhdsb2026@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Friday, June 5, 2026"
+   },
+   {
+    "name_raw": "TAUSIF SABIR",
+    "acclaimed": false,
+    "email": "tsabir1@gmail.com",
+    "phone": "(416) 712-0595",
+    "links": [],
+    "nomination_date": "Wednesday, August 19, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3524001",
+  "csdname": "Oakville, Town (T)",
+  "county_mun": "2401",
+  "office": "Halton District School Board Trustee - Ward 4",
+  "board_number": "B66133",
+  "system": "public",
+  "classify_reason": "matched:Halton District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "IRA DAVIDOV",
+    "acclaimed": false,
+    "email": "iraoakville@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, August 18, 2026"
+   },
+   {
+    "name_raw": "VIRGINIA NSITEM",
+    "acclaimed": false,
+    "email": "virginia4trustee@gmail.com",
+    "phone": "",
+    "links": [
+     "http://www.virginiansitem.ca/"
+    ],
+    "nomination_date": "Thursday, June 25, 2026"
+   },
+   {
+    "name_raw": "DEEPAK PATHANIA",
+    "acclaimed": false,
+    "email": "deepak_pathania@hotmail.com",
+    "phone": "(647) 765-5183",
+    "links": [
+     "http://deepakpathania.ca"
+    ],
+    "nomination_date": "Friday, August 21, 2026"
+   },
+   {
+    "name_raw": "FLORIN CRISTIAN VILCU",
+    "acclaimed": false,
+    "email": "florincvilcu@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, June 29, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3524001",
+  "csdname": "Oakville, Town (T)",
+  "county_mun": "2401",
+  "office": "Halton District School Board Trustee - Wards 5 & 7",
+  "board_number": "B66133",
+  "system": "public",
+  "classify_reason": "matched:Halton District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "LILY BHARAT",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 20, 2026"
+   },
+   {
+    "name_raw": "AZRA GHUMMAN",
+    "acclaimed": false,
+    "email": "azraghumman@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Tuesday, August 18, 2026"
+   },
+   {
+    "name_raw": "AHMED GOHAR",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, August 20, 2026"
+   },
+   {
+    "name_raw": "ASHISH MAGGO",
+    "acclaimed": false,
+    "email": "ashish.maggo08@gmail.com",
+    "phone": "(778) 933-2827",
+    "links": [],
+    "nomination_date": "Thursday, August 20, 2026"
+   },
+   {
+    "name_raw": "KIM TAIT",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Monday, August 17, 2026"
+   },
+   {
+    "name_raw": "JAKE ZHU",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "Thursday, May 21, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3524001",
+  "csdname": "Oakville, Town (T)",
+  "county_mun": "2401",
+  "office": "Halton Catholic District School Board - Wards 1,2 & 3",
+  "board_number": "B67113",
+  "system": "catholic",
+  "classify_reason": "matched:Halton Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "MARTIN GEGUS",
+    "acclaimed": false,
+    "email": "",
+    "phone": "(905) 361-9162",
+    "links": [],
+    "nomination_date": "Tuesday, July 28, 2026"
+   },
+   {
+    "name_raw": "MARIO JELIC",
+    "acclaimed": false,
+    "email": "mjelic91@gmail.com",
+    "phone": "(647) 464-8411",
+    "links": [],
+    "nomination_date": "Friday, August 14, 2026"
+   },
+   {
+    "name_raw": "TOM MURAD",
+    "acclaimed": false,
+    "email": "dr.t.murad@ieee.org",
+    "phone": "(647) 960-0469",
+    "links": [],
+    "nomination_date": "Friday, August 14, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3524001",
+  "csdname": "Oakville, Town (T)",
+  "county_mun": "2401",
+  "office": "Halton Catholic District School Board - Wards 4 and 7",
+  "board_number": "B67113",
+  "system": "catholic",
+  "classify_reason": "matched:Halton Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "CHRIS SAUNDERS",
+    "acclaimed": false,
+    "email": "csaunders3@cogeco.ca",
+    "phone": "(905) 580-5875",
+    "links": [],
+    "nomination_date": "Thursday, July 2, 2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3524001",
+  "csdname": "Oakville, Town (T)",
+  "county_mun": "2401",
+  "office": "Halton Catholic District School Board - Wards 5 and 6",
+  "board_number": "B67113",
+  "system": "catholic",
+  "classify_reason": "matched:Halton Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "HELENA KARABELA",
+    "acclaimed": false,
+    "email": "helena@karabela.ca",
+    "phone": "(905) 510-1849",
+    "links": [],
+    "nomination_date": "Friday, May 29, 2026"
+   },
+   {
+    "name_raw": "SEAN MCCARTHY",
+    "acclaimed": false,
+    "email": "",
+    "phone": "(226) 377-3700",
+    "links": [],
+    "nomination_date": "Tuesday, August 18, 2026"
+   }
+  ]
+ }
+]

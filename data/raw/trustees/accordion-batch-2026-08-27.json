@@ -1,0 +1,4492 @@
+[
+ {
+  "census_id": "3501005",
+  "csdname": "South Glengarry",
+  "county_mun": "",
+  "office": "SCHOOL BOARD TRUSTEE - ENGLISH PUBLIC",
+  "office_context": "SCHOOL BOARD TRUSTEE - ENGLISH PUBLIC - SCHOOL BOARD TRUSTEE - ENGLISH PUBLIC",
+  "board_number": "B66192",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Danaher, John - ACCLAIMED",
+    "acclaimed": false,
+    "email": "danaherjohn1@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3501005",
+  "csdname": "South Glengarry",
+  "county_mun": "",
+  "office": "SCHOOL BOARD TRUSTEE - ENGLISH SEPARATE",
+  "office_context": "SCHOOL BOARD TRUSTEE - ENGLISH SEPARATE - SCHOOL BOARD TRUSTEE - ENGLISH SEPARATE",
+  "board_number": "B67172",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Ayotte, Suzanne",
+    "acclaimed": false,
+    "email": "suzanneayotte.trustee@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Ryan, Krista",
+    "acclaimed": false,
+    "email": "krista_lalonde@hotmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Torrie-Racine, Karen",
+    "acclaimed": false,
+    "email": "ktr1805@hotmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Nielsen, Donna",
+    "acclaimed": false,
+    "email": "nielsendonna610@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3501011",
+  "csdname": "South Stormont",
+  "county_mun": "",
+  "office": "English Public (Upper Canada District School Board of Eastern Ontario)",
+  "office_context": "English Public (Upper Canada District School Board of Eastern Ontario) - English Public (Upper Canada District School Board of Eastern Ontario)",
+  "board_number": "B66192",
+  "system": "public",
+  "classify_reason": "matched:Upper Canada",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "John Danaher - ACCLAIMED",
+    "acclaimed": false,
+    "email": "danaherjohn1@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3501011",
+  "csdname": "South Stormont",
+  "county_mun": "",
+  "office": "English Separate (Catholic District School Board of Eastern Ontario)",
+  "office_context": "English Separate (Catholic District School Board of Eastern Ontario) - English Separate (Catholic District School Board of Eastern Ontario)",
+  "board_number": "B67172",
+  "system": "catholic",
+  "classify_reason": "matched:Catholic District School Board of Eastern Ontario",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Karen E. McAllister - ACCLAIMED",
+    "acclaimed": false,
+    "email": "kmcallister2327@outlook.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3501050",
+  "csdname": "North Glengarry",
+  "county_mun": "",
+  "office": "School Board Trustee - English Public (UCDSB)",
+  "office_context": "School Board Trustee - English Public - School Board Trustee - English Public (UCDSB)",
+  "board_number": "B66192",
+  "system": "public",
+  "classify_reason": "matched:UCDSB",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "John Danaher ACCLAIMED",
+    "acclaimed": false,
+    "email": "danaherjohn1@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3501050",
+  "csdname": "North Glengarry",
+  "county_mun": "",
+  "office": "School Board Trustee - English Separate (CDSBEO)",
+  "office_context": "School Board Trustee - English Separate (CDSBEO) - School Board Trustee - English Separate (CDSBEO)",
+  "board_number": "B67172",
+  "system": "catholic",
+  "classify_reason": "matched:CDSBEO",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Suzanne Ayotte",
+    "acclaimed": false,
+    "email": "suzanneayotte.trustee@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Krista Ryan",
+    "acclaimed": false,
+    "email": "krista_lalonde@hotmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Karen Torrie-Racine",
+    "acclaimed": false,
+    "email": "ktr1805@hotmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Donna Nielsen",
+    "acclaimed": false,
+    "email": "nielsendonna610@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3502010",
+  "csdname": "Champlain",
+  "county_mun": "",
+  "office": "Candidates for the Upper Canada District School Board (English Public)",
+  "office_context": "School Board Trustees - Candidates for the Upper Canada District School Board (English Public)",
+  "board_number": "B66192",
+  "system": "public",
+  "classify_reason": "matched:Upper Canada",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Marc-Antoine Gagnier",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3502010",
+  "csdname": "Champlain",
+  "county_mun": "",
+  "office": "Candidates for the Catholic District School Board of Eastern Ontario (English Separate)",
+  "office_context": "School Board Trustees - Candidates for the Catholic District School Board of Eastern Ontario (English Separate)",
+  "board_number": "B67172",
+  "system": "catholic",
+  "classify_reason": "matched:Catholic District School Board of Eastern Ontario",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Andr\u00e9 Bonneau",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "F\u00e9licia Williams",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3507021",
+  "csdname": "Leeds and the Thousand Islands",
+  "county_mun": "",
+  "office": "Name",
+  "office_context": "English Public School Board Trustee \u2013 Upper Canada District School Board \u2013 Ward 4 - Name",
+  "board_number": "B66192",
+  "system": "public",
+  "classify_reason": "matched:Upper Canada",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "McAllister, John",
+    "acclaimed": false,
+    "email": "jjmcallister1947@gmail.com",
+    "phone": "613-923-5355",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Buczynski, Christopher",
+    "acclaimed": false,
+    "email": "dadabuleroom@gmail.com",
+    "phone": "613-572-0039",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3514004",
+  "csdname": "Brighton",
+  "county_mun": "",
+  "office": "School Board Trustee, English Public",
+  "office_context": "(Kawartha Pine Ridge District School Board) - School Board Trustee, English Public",
+  "board_number": "B66079",
+  "system": "public",
+  "classify_reason": "matched:Kawartha Pine Ridge",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Cynthia (Cyndi) Dickson",
+    "acclaimed": false,
+    "email": "cyndi_dickson@live.ca",
+    "phone": "613-475-4222",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Amy McQuaid",
+    "acclaimed": false,
+    "email": "vote@amymcquaid.ca",
+    "phone": "905-442-4497",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3514045",
+  "csdname": "Trent Hills",
+  "county_mun": "",
+  "office": "Nominations for Office of School Board Trustee - English Public Kawartha Pine Ridge District School Board",
+  "office_context": "(Two (2) Trustees to be elected) Representing the Municipality of Trent Hills, Township of Alnwick/Haldimand, Township of Hamilton, Municipality of Port Hope and Town of Cobourg. - Nominations for Office of School Board Trustee - English Public Kawartha Pine Ridge District School Board",
+  "board_number": "B66079",
+  "system": "public",
+  "classify_reason": "matched:Kawartha Pine Ridge",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Terry Brown",
+    "acclaimed": false,
+    "email": "brownterry755@gmail.com",
+    "phone": "905-376-0212",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Jaine Klassen Jeninga",
+    "acclaimed": false,
+    "email": "jaineKlassenjeningo@gmail.com",
+    "phone": "905-396-5665",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Elizabeth Terrell",
+    "acclaimed": false,
+    "email": "Lizterrell73@gmail.com",
+    "phone": "705-395-8563",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Lindsay White",
+    "acclaimed": false,
+    "email": "lindsay.a.white@gmail.com",
+    "phone": "289-251-4186",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3518013",
+  "csdname": "Oshawa",
+  "county_mun": "",
+  "office": "Trustee, Durham District School Board",
+  "office_context": "School Boards - Trustee, Durham District School Board",
+  "board_number": "B66060",
+  "system": "public",
+  "classify_reason": "matched:Durham District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Kim Beatty",
+    "acclaimed": false,
+    "email": "electKimBeatty@rogers.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "John Rzeszut",
+    "acclaimed": false,
+    "email": "votejohnrzeszut@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Morgan Ste. Marie",
+    "acclaimed": false,
+    "email": "vote@morganstemarie.ca",
+    "phone": "",
+    "address": "",
+    "links": [
+     "https://morganstemarie.ca"
+    ]
+   }
+  ]
+ },
+ {
+  "census_id": "3518013",
+  "csdname": "Oshawa",
+  "county_mun": "",
+  "office": "Trustee, Durham Catholic District School Board",
+  "office_context": "School Boards - Trustee, Durham Catholic District School Board",
+  "board_number": "B67105",
+  "system": "catholic",
+  "classify_reason": "matched:Durham Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Kristine Dandavino",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Erik Lapointe",
+    "acclaimed": false,
+    "email": "ErikJLapointe@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3518017",
+  "csdname": "Clarington",
+  "county_mun": "",
+  "office": "Kawartha Pine Ridge District School Board Trustee",
+  "office_context": "Kawartha Pine Ridge District School Board Trustee",
+  "board_number": "B66079",
+  "system": "public",
+  "classify_reason": "matched:Kawartha Pine Ridge",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Brad Jakobsen",
+    "acclaimed": false,
+    "email": "bradtrusteecandidate@gmail.com",
+    "phone": "905-242-1221",
+    "address": "",
+    "links": [
+     "https://www.facebook.com/JakobsenBrad"
+    ]
+   },
+   {
+    "name_raw": "Kevin MacKenzie",
+    "acclaimed": false,
+    "email": "kevin@yourtrustee.ca",
+    "phone": "289-356-7838",
+    "address": "",
+    "links": [
+     "https://kevinamackenzie.merlin-site.com/"
+    ]
+   }
+  ]
+ },
+ {
+  "census_id": "3518017",
+  "csdname": "Clarington",
+  "county_mun": "",
+  "office": "Acclaimed Candidates for Peterborough Victoria Northumberland and Clarington Catholic District School Board Trustee",
+  "office_context": "Acclaimed Candidates for Peterborough Victoria Northumberland and Clarington Catholic District School Board Trustee",
+  "board_number": "B67067",
+  "system": "catholic",
+  "classify_reason": "matched:Peterborough Victoria Northumberland",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Erik Lapointe",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3518020",
+  "csdname": "Scugog",
+  "county_mun": "",
+  "office": "Candidates Elected by Acclamation",
+  "office_context": "English Public: Durham District School Board - Candidates Elected by Acclamation",
+  "board_number": "B66060",
+  "system": "public",
+  "classify_reason": "matched:Durham District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "English Separate: Durham Catholic District School Board",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "French Separate: Conseil scolaire catholique MonAvenir",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3519046",
+  "csdname": "Aurora",
+  "county_mun": "",
+  "office": "York Catholic District School Board Trustee",
+  "office_context": "York Catholic District School Board Trustee - York Catholic District School Board Trustee",
+  "board_number": "B67075",
+  "system": "catholic",
+  "classify_reason": "matched:York Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Cescolini, Brandan James",
+    "acclaimed": false,
+    "email": "trusteebrandan@gmail.com",
+    "phone": "647-918-9809",
+    "address": "",
+    "links": [
+     "brandanjamescescolini.ca"
+    ]
+   },
+   {
+    "name_raw": "Juarez, Eduardo",
+    "acclaimed": false,
+    "email": "ejuarez@sympatico.ca",
+    "phone": "416-566-4843",
+    "address": "189 Timpson Drive",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3519046",
+  "csdname": "Aurora",
+  "county_mun": "",
+  "office": "York Region District School Board Trustee",
+  "office_context": "York Region District School Board Trustee - York Region District School Board Trustee",
+  "board_number": "B66095",
+  "system": "public",
+  "classify_reason": "matched:York Region District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Radia, Bill",
+    "acclaimed": false,
+    "email": "william.radia@outlook.com",
+    "phone": "416-994-1296",
+    "address": "",
+    "links": [
+     "billradia.ca"
+    ]
+   },
+   {
+    "name_raw": "Sears, Emma",
+    "acclaimed": false,
+    "email": "emmasearstrustee@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Yu, Bruce",
+    "acclaimed": false,
+    "email": "info@bruceyu.ca",
+    "phone": "",
+    "address": "",
+    "links": [
+     "bruceyu.ca"
+    ]
+   }
+  ]
+ },
+ {
+  "census_id": "3519070",
+  "csdname": "Georgina",
+  "county_mun": "",
+  "office": "York Region District School Board Trustee",
+  "office_context": "York Region District School Board Trustee - York Region District School Board Trustee",
+  "board_number": "B66095",
+  "system": "public",
+  "classify_reason": "matched:York Region District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Nomination date",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3519070",
+  "csdname": "Georgina",
+  "county_mun": "",
+  "office": "York Catholic District School Board Trustee",
+  "office_context": "York Catholic District School Board Trustee - York Catholic District School Board Trustee",
+  "board_number": "B67075",
+  "system": "catholic",
+  "classify_reason": "matched:York Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Nomination date",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3522001",
+  "csdname": "East Garafraxa",
+  "county_mun": "",
+  "office": "Municipal Council (Certified Candidates)",
+  "office_context": "Dufferin Peel Catholic District School Board (English Separate) - Municipal Council (Certified Candidates)",
+  "board_number": "B67083",
+  "system": "catholic",
+  "classify_reason": "matched:Dufferin Peel Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Gardhouse, Guy (Acclaimed)",
+    "acclaimed": false,
+    "email": "sueguy2@hotmail.com",
+    "phone": "519-855-4832",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3522001",
+  "csdname": "East Garafraxa",
+  "county_mun": "",
+  "office": "Date Filed",
+  "office_context": "Dufferin Peel Catholic District School Board (English Separate) - Date Filed",
+  "board_number": "B67083",
+  "system": "catholic",
+  "classify_reason": "matched:Dufferin Peel Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Deputy Mayor",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Stirk, John (Acclaimed)",
+    "acclaimed": false,
+    "email": "johnsdstirk@gmail.com",
+    "phone": "519-939-0703",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3522001",
+  "csdname": "East Garafraxa",
+  "county_mun": "",
+  "office": "(Acclaimed)",
+  "office_context": "Dufferin Peel Catholic District School Board (English Separate) - (Acclaimed)",
+  "board_number": "B67083",
+  "system": "catholic",
+  "classify_reason": "matched:Dufferin Peel Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Banfield, Lenora (Acclaimed)",
+    "acclaimed": false,
+    "email": "banfields@sympatico.ca",
+    "phone": "519-939-3009",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Zukowski, Jeremy (Acclaimed)",
+    "acclaimed": false,
+    "email": "jeremy@greenwoodconst.ca",
+    "phone": "519-942-6544",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Halls, Dave (Acclaimed)",
+    "acclaimed": false,
+    "email": "hallser02@hotmail.com",
+    "phone": "519-215-0716",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3522001",
+  "csdname": "East Garafraxa",
+  "county_mun": "",
+  "office": "Date Filed",
+  "office_context": "Member, Trustee - Upper Grand District School Board (English Public) - Date Filed",
+  "board_number": "B66117",
+  "system": "public",
+  "classify_reason": "matched:Upper Grand",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Grenier, Genevieve",
+    "acclaimed": false,
+    "email": "ggrenier19@yahoo.ca",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "O'Neil, Patrick",
+    "acclaimed": false,
+    "email": "pconeil1520@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3522008",
+  "csdname": "Amaranth",
+  "county_mun": "",
+  "office": "Candidates for School Board Trustee",
+  "office_context": "Upper Grand District School Board (English Public) - Candidates for School Board Trustee",
+  "board_number": "B66117",
+  "system": "public",
+  "classify_reason": "matched:Upper Grand",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Karsch, Bernie",
+    "acclaimed": false,
+    "email": "bkarsch49@outlook.com",
+    "phone": "519-925-9254",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3522008",
+  "csdname": "Amaranth",
+  "county_mun": "",
+  "office": "Contact Information",
+  "office_context": "Upper Grand District School Board (English Public) - Contact Information",
+  "board_number": "B66117",
+  "system": "public",
+  "classify_reason": "matched:Upper Grand",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Lapointe, Eric",
+    "acclaimed": false,
+    "email": "ericlapointe@yahoo.com",
+    "phone": "705-241-8909",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Golem, Rachael",
+    "acclaimed": false,
+    "email": "",
+    "phone": "647-884-3044",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3522008",
+  "csdname": "Amaranth",
+  "county_mun": "",
+  "office": "Contact Information",
+  "office_context": "Dufferin Peel Catholic District School Board (English Separate) - Contact Information",
+  "board_number": "B67083",
+  "system": "catholic",
+  "classify_reason": "matched:Dufferin Peel Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Dametto-Giovannozzi, Paula - Acclaimed Acclamation Form",
+    "acclaimed": false,
+    "email": "pauladamettogiovannozzi@gmail.com",
+    "phone": "416-570-5087",
+    "address": "",
+    "links": [
+     "https://media-001-ca.cdn.govstack.com/amaranth-007-ca/media/3dkl3rpf/signed-english-seperate-school-acclamation-2026.pdf"
+    ]
+   }
+  ]
+ },
+ {
+  "census_id": "3522008",
+  "csdname": "Amaranth",
+  "county_mun": "",
+  "office": "Contact Information",
+  "office_context": "Dufferin Peel Catholic District School Board (English Separate) - Contact Information",
+  "board_number": "B67083",
+  "system": "catholic",
+  "classify_reason": "matched:Dufferin Peel Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Grenier, Genevieve - Acclaimed Acclamation Form",
+    "acclaimed": false,
+    "email": "",
+    "phone": "416-571-7407",
+    "address": "",
+    "links": [
+     "https://media-001-ca.cdn.govstack.com/amaranth-007-ca/media/3dkl3rpf/signed-english-seperate-school-acclamation-2026.pdf"
+    ]
+   }
+  ]
+ },
+ {
+  "census_id": "3522012",
+  "csdname": "Mono",
+  "county_mun": "",
+  "office": "Upper Grand District School Board",
+  "office_context": "Upper Grand District School Board - Upper Grand District School Board",
+  "board_number": "B66117",
+  "system": "public",
+  "classify_reason": "matched:Upper Grand",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Dr. Raymond J. SETO",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Lynn TOPPING",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3522014",
+  "csdname": "Orangeville",
+  "county_mun": "",
+  "office": "Candidate for School Board Trustee - English Public (Upper Grand District School Board)",
+  "office_context": "The 2026 election will be held on October 26, 2026. Once elected, members of council and school board trustees will serve a four year term beginning in November 2026. - Candidate for School Board Trustee - English Public (Upper Grand District School Board)",
+  "board_number": "B66117",
+  "system": "public",
+  "classify_reason": "matched:Upper Grand",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Dametto-Giovannozzi, Paula",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3522014",
+  "csdname": "Orangeville",
+  "county_mun": "",
+  "office": "*Unofficial candidates for School Board Trustee - English Separate (Dufferin-Peel Catholic District School Board)",
+  "office_context": "The 2026 election will be held on October 26, 2026. Once elected, members of council and school board trustees will serve a four year term beginning in November 2026. - *Unofficial candidates for School Board Trustee - English Separate (Dufferin-Peel Catholic District School Board)",
+  "board_number": "B67083",
+  "system": "catholic",
+  "classify_reason": "matched:Dufferin-Peel Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Golem, Rachael",
+    "acclaimed": false,
+    "email": "",
+    "phone": "647-884-3044",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Lapointe, Eric",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3523008",
+  "csdname": "Guelph",
+  "county_mun": "",
+  "office": "Wards 5, 1",
+  "office_context": "Candidates for Upper Grand District School Board - Wards 5, 1",
+  "board_number": "B66117",
+  "system": "public",
+  "classify_reason": "matched:Upper Grand",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Blair, Aaron",
+    "acclaimed": false,
+    "email": "",
+    "phone": "519-803-4936",
+    "address": "",
+    "links": [
+     "https://aaronblairguelph.wordpress.com/"
+    ]
+   },
+   {
+    "name_raw": "Foster, Bill",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "MacNeil, Martha",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": [
+     "https://www.marthamacneil.ca"
+    ]
+   }
+  ]
+ },
+ {
+  "census_id": "3523008",
+  "csdname": "Guelph",
+  "county_mun": "",
+  "office": "Wards 2, 3, 4",
+  "office_context": "Candidates for Upper Grand District School Board - Wards 2, 3, 4",
+  "board_number": "B66117",
+  "system": "public",
+  "classify_reason": "matched:Upper Grand",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Atkinson, Dan",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Freese, Randy",
+    "acclaimed": false,
+    "email": "",
+    "phone": "416-697-1737",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Frosst, Lange",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Mesenbrink, Ralf",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3523008",
+  "csdname": "Guelph",
+  "county_mun": "",
+  "office": "Ward 6, Puslinch",
+  "office_context": "Candidates for Upper Grand District School Board - Ward 6, Puslinch",
+  "board_number": "B66117",
+  "system": "public",
+  "classify_reason": "matched:Upper Grand",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Ramchandani, Pallavi",
+    "acclaimed": false,
+    "email": "",
+    "phone": "437-533-6603",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Reaburn, Kyle",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": [
+     "https://kylefortrustee.ca"
+    ]
+   }
+  ]
+ },
+ {
+  "census_id": "3523008",
+  "csdname": "Guelph",
+  "county_mun": "",
+  "office": "Candidates for Wellington Catholic District School Board",
+  "office_context": "Candidates for Wellington Catholic District School Board - Candidates for Wellington Catholic District School Board",
+  "board_number": "B67130",
+  "system": "catholic",
+  "classify_reason": "matched:Wellington Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Crewson, Natalia",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Dupuis, Vikki",
+    "acclaimed": false,
+    "email": "",
+    "phone": "519-822-9489",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Gazzola, Marino",
+    "acclaimed": false,
+    "email": "",
+    "phone": "226-979-2008",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Fayer, Valerie",
+    "acclaimed": false,
+    "email": "",
+    "phone": "519-835-2353",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Sabara, Holly",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3524009",
+  "csdname": "Milton",
+  "county_mun": "",
+  "office": "Ward 1 and 2",
+  "office_context": "Halton District School Board Trustee Candidates - Ward 1 and 2",
+  "board_number": "B66133",
+  "system": "public",
+  "classify_reason": "matched:Halton District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Khdiga R. Metwally",
+    "acclaimed": false,
+    "email": "drkmetwally@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": [
+     "http://votefordrkmetwally.ca/"
+    ]
+   },
+   {
+    "name_raw": "Andrew J. Wood",
+    "acclaimed": false,
+    "email": "trusteewood@gmail.com",
+    "phone": "647-999-8516",
+    "address": "",
+    "links": [
+     "https://andrewjwood.ca/"
+    ]
+   }
+  ]
+ },
+ {
+  "census_id": "3524009",
+  "csdname": "Milton",
+  "county_mun": "",
+  "office": "Ward 1 and 4",
+  "office_context": "Halton Catholic District School Board Trustee Candidates - Ward 1 and 4",
+  "board_number": "B67113",
+  "system": "catholic",
+  "classify_reason": "matched:Halton Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Joseph Brendan",
+    "acclaimed": false,
+    "email": "brendanjoseph4hcdsb@gmail.com",
+    "phone": "416-294-0416",
+    "address": "",
+    "links": [
+     "https://www.josephbrendan.ca/"
+    ]
+   },
+   {
+    "name_raw": "Juan Cumming",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3524009",
+  "csdname": "Milton",
+  "county_mun": "",
+  "office": "Ward 2 and 3",
+  "office_context": "Halton Catholic District School Board Trustee Candidates - Ward 2 and 3",
+  "board_number": "B67113",
+  "system": "catholic",
+  "classify_reason": "matched:Halton Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Joseph Adams",
+    "acclaimed": false,
+    "email": "josephadams4hcdsbtrustee@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": [
+     "http://josephadams.ca"
+    ]
+   },
+   {
+    "name_raw": "Cecil Young",
+    "acclaimed": false,
+    "email": "cecyoung@sbg.ca",
+    "phone": "416-997-9584",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3524015",
+  "csdname": "Halton Hills",
+  "county_mun": "",
+  "office": "1 to be elected",
+  "office_context": "Halton District School Board - 1 to be elected",
+  "board_number": "B66133",
+  "system": "public",
+  "classify_reason": "matched:Halton District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Susan Doyle",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Lennox Liverpool",
+    "acclaimed": false,
+    "email": "",
+    "phone": "647-388-5909",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3524015",
+  "csdname": "Halton Hills",
+  "county_mun": "",
+  "office": "1 to be elected",
+  "office_context": "Halton Catholic District School Board - 1 to be elected",
+  "board_number": "B67113",
+  "system": "catholic",
+  "classify_reason": "matched:Halton Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Eliane Bousamra",
+    "acclaimed": false,
+    "email": "eliane4trustee@yahoo.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Janet O'Hearn Czarnota",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-630-3581",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Ward 1 - English Public",
+  "office_context": "School Board Trustee - English Public - Ward 1 - English Public",
+  "board_number": "B66141",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Hambly, Blake",
+    "acclaimed": false,
+    "email": "",
+    "phone": "289-775-6363",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Harrington, Andrew",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "134 Dundurn St N, Hamilton ON L8R 3E8",
+    "links": []
+   },
+   {
+    "name_raw": "McMullin, Shawn",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Prosic, Cameron",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-818-7110",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Ward 2 - English Public",
+  "office_context": "School Board Trustee - English Public - Ward 2 - English Public",
+  "board_number": "B66141",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Chepil, Anthony L.",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Dahab, Sabreina",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Ward 3 - English Public",
+  "office_context": "School Board Trustee - English Public - Ward 3 - English Public",
+  "board_number": "B66141",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Crowder, Frank",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Pattison, Larry",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Preston, Kory",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Shanahan, Meagan",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Ward 4 - English Public",
+  "office_context": "School Board Trustee - English Public - Ward 4 - English Public",
+  "board_number": "B66141",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Zaitley, Abby",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Wards 5 & 10 - English Public",
+  "office_context": "School Board Trustee - English Public - Wards 5 & 10 - English Public",
+  "board_number": "B66141",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Maguire-Garber, Theresa",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-664-7867",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Shields, Logan",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "White, Todd",
+    "acclaimed": false,
+    "email": "",
+    "phone": "289-237-1644",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Wards 6 & 9 - English Public",
+  "office_context": "School Board Trustee - English Public - Wards 6 & 9 - English Public",
+  "board_number": "B66141",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Archer, Kathy",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-574-4190",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "May, Todd",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Ward 7 - English Public",
+  "office_context": "School Board Trustee - English Public - Ward 7 - English Public",
+  "board_number": "B66141",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Floyd, Seth",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "King, Bill",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-512-5852",
+    "address": "1-92 Sanford Ave. S., Hamilton, ON L8M 2G8",
+    "links": []
+   },
+   {
+    "name_raw": "Picken, Marlon",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-902-7707",
+    "address": "101 Fieldway Dr, Hamilton, ON L9A 2L5",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Wards 8 & 14 - English Public",
+  "office_context": "School Board Trustee - English Public - Wards 8 & 14 - English Public",
+  "board_number": "B66141",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Hillen, Daunte",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-981-2673",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "O'Reilly, Ben",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Johnson, Bryan",
+    "acclaimed": false,
+    "email": "",
+    "phone": "416-989-4509",
+    "address": "385 Upper Ottawa Street",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Wards 11 & 12 - English Public",
+  "office_context": "School Board Trustee - English Public - Wards 11 & 12 - English Public",
+  "board_number": "B66141",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Baxter, Melissa",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Fehrman, Amanda",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Ward 13 - English Public",
+  "office_context": "School Board Trustee - English Public - Ward 13 - English Public",
+  "board_number": "B66141",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Slye, Chris",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "47 Livingstone Dr., Hamilton, ON L9H 7S4",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Ward 15 - English Public",
+  "office_context": "School Board Trustee - English Public - Ward 15 - English Public",
+  "board_number": "B66141",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Nicholl, Anthony",
+    "acclaimed": false,
+    "email": "",
+    "phone": "289-700-9831",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Noble, Graeme",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Wards 1, 2 & 15 - English Separate",
+  "office_context": "School Board Trustee - English Separate - Wards 1, 2 & 15 - English Separate",
+  "board_number": "B67121",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Valvasori, Mark",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-529-5980",
+    "address": "81 Inchbury St., Hamilton, ON L8R 3B7",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Wards 3 & 4 - English Separate",
+  "office_context": "School Board Trustee - English Separate - Wards 3 & 4 - English Separate",
+  "board_number": "B67121",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Agostino, Ralph",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-317-6654",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Ward 5 - English Separate",
+  "office_context": "School Board Trustee - English Separate - Ward 5 - English Separate",
+  "board_number": "B67121",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "D'Intino, Aldo",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-578-2135",
+    "address": "132 National Dr., Hamilton, ON L8G 5B3",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Ward 6 - English Separate",
+  "office_context": "School Board Trustee - English Separate - Ward 6 - English Separate",
+  "board_number": "B67121",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Agostino, Ellen",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Belanger, Joanne",
+    "acclaimed": false,
+    "email": "",
+    "phone": "613-921-0560",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Mari, Anthony",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-520-2900",
+    "address": "30 Pineridge Drive, Hamilton, ON L9A 4K2",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Ward 7 - English Separate",
+  "office_context": "School Board Trustee - English Separate - Ward 7 - English Separate",
+  "board_number": "B67121",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Agostino, Nick",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-973-3094",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Duffy, Kevin",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-537-1486",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Filice, Luca",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-928-5769",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Wards 8 & 14 - English Separate",
+  "office_context": "School Board Trustee - English Separate - Wards 8 & 14 - English Separate",
+  "board_number": "B67121",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Bonilla-Damptey, Jessica",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Chrapka, Wieslawa Helena",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Valvasori, John",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-679-6523",
+    "address": "9157 White Church Rd W, Hamilton, ON L0R 1W0",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Wards 9 & 11 - English Separate",
+  "office_context": "School Board Trustee - English Separate - Wards 9 & 11 - English Separate",
+  "board_number": "B67121",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Iorio, Tyler",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-520-6228",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Ward 10 - English Separate",
+  "office_context": "School Board Trustee - English Separate - Ward 10 - English Separate",
+  "board_number": "B67121",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Di Nicola, Andrea",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Nardini, Mary",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-664-6336",
+    "address": "101 Maple Drive, Stoney Creek, ON L8G 4T2",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3525005",
+  "csdname": "Hamilton",
+  "county_mun": "",
+  "office": "Wards 12 & 13 - English Separate",
+  "office_context": "School Board Trustee - English Separate - Wards 12 & 13 - English Separate",
+  "board_number": "B67121",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Homerski, Phil",
+    "acclaimed": false,
+    "email": "",
+    "phone": "905-689-3898",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "McKenna, Kevin",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Mercante, Paul",
+    "acclaimed": false,
+    "email": "",
+    "phone": "289-237-1898",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Xenos, Christopher",
+    "acclaimed": false,
+    "email": "",
+    "phone": "289-239-7558",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3526011",
+  "csdname": "Port Colborne",
+  "county_mun": "",
+  "office": "Certified Candidates",
+  "office_context": "\u200bThe local area municipalities in Niagara along with the District School Board of Niagara and Niagara Catholic District School Board are recruiting experienced professionals for appointment to the 2026 to 2030 Joint Election Compliance Audit Committee. - Certified Candidates",
+  "board_number": "B66150",
+  "system": "public",
+  "classify_reason": "matched:District School Board of Niagara",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Mayor and, by virtue of office, Regional Councillor",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Bea Kenny",
+    "acclaimed": false,
+    "email": "beakenny49@gmail.com",
+    "phone": "(905) 834-7685",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3526011",
+  "csdname": "Port Colborne",
+  "county_mun": "",
+  "office": "Cameron Klemm",
+  "office_context": "\u200bThe local area municipalities in Niagara along with the District School Board of Niagara and Niagara Catholic District School Board are recruiting experienced professionals for appointment to the 2026 to 2030 Joint Election Compliance Audit Committee. - Cameron Klemm",
+  "board_number": "B66150",
+  "system": "public",
+  "classify_reason": "matched:District School Board of Niagara",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Mark Bagu",
+    "acclaimed": false,
+    "email": "bagumark13@gmail.com",
+    "phone": "(905) 835-1229",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3526011",
+  "csdname": "Port Colborne",
+  "county_mun": "",
+  "office": "Geoffrey Black",
+  "office_context": "\u200bThe local area municipalities in Niagara along with the District School Board of Niagara and Niagara Catholic District School Board are recruiting experienced professionals for appointment to the 2026 to 2030 Joint Election Compliance Audit Committee. - Geoffrey Black",
+  "board_number": "B66150",
+  "system": "public",
+  "classify_reason": "matched:District School Board of Niagara",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Ron Bodner",
+    "acclaimed": false,
+    "email": "ronbodner@hotmail.com",
+    "phone": "(905) 834-6269",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3526011",
+  "csdname": "Port Colborne",
+  "county_mun": "",
+  "office": "Mark Minor",
+  "office_context": "\u200bThe local area municipalities in Niagara along with the District School Board of Niagara and Niagara Catholic District School Board are recruiting experienced professionals for appointment to the 2026 to 2030 Joint Election Compliance Audit Committee. - Mark Minor",
+  "board_number": "B66150",
+  "system": "public",
+  "classify_reason": "matched:District School Board of Niagara",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Amanda Emery",
+    "acclaimed": false,
+    "email": "amandaemerypc@gmail.com",
+    "phone": "(289) 696-2640",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3526011",
+  "csdname": "Port Colborne",
+  "county_mun": "",
+  "office": "Gary Bruno",
+  "office_context": "\u200bThe local area municipalities in Niagara along with the District School Board of Niagara and Niagara Catholic District School Board are recruiting experienced professionals for appointment to the 2026 to 2030 Joint Election Compliance Audit Committee. - Gary Bruno",
+  "board_number": "B66150",
+  "system": "public",
+  "classify_reason": "matched:District School Board of Niagara",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "English Language Public District School Board",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Susan Jovanovic",
+    "acclaimed": false,
+    "email": "susanjovan@hotmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3526011",
+  "csdname": "Port Colborne",
+  "county_mun": "",
+  "office": "Steve Webb",
+  "office_context": "\u200bThe local area municipalities in Niagara along with the District School Board of Niagara and Niagara Catholic District School Board are recruiting experienced professionals for appointment to the 2026 to 2030 Joint Election Compliance Audit Committee. - Steve Webb",
+  "board_number": "B66150",
+  "system": "public",
+  "classify_reason": "matched:District School Board of Niagara",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "English Language Catholic District School Board",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Danny DiLorenzo",
+    "acclaimed": false,
+    "email": "dannydilorenzo5@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3526011",
+  "csdname": "Port Colborne",
+  "county_mun": "",
+  "office": "Danny DiLorenzo",
+  "office_context": "\u200bThe local area municipalities in Niagara along with the District School Board of Niagara and Niagara Catholic District School Board are recruiting experienced professionals for appointment to the 2026 to 2030 Joint Election Compliance Audit Committee. - Danny DiLorenzo",
+  "board_number": "B66150",
+  "system": "public",
+  "classify_reason": "matched:District School Board of Niagara",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Amanda Leduc",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": [
+     "https://www.welland.ca/city-hall/municipal-elections/registered-candidates/#FrenchPublicSchoolBoard"
+    ]
+   }
+  ]
+ },
+ {
+  "census_id": "3526011",
+  "csdname": "Port Colborne",
+  "county_mun": "",
+  "office": "Matthew Graham",
+  "office_context": "\u200bThe local area municipalities in Niagara along with the District School Board of Niagara and Niagara Catholic District School Board are recruiting experienced professionals for appointment to the 2026 to 2030 Joint Election Compliance Audit Committee. - Matthew Graham",
+  "board_number": "B66150",
+  "system": "public",
+  "classify_reason": "matched:District School Board of Niagara",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Jean Max Philome",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": [
+     "https://www.welland.ca/city-hall/municipal-elections/registered-candidates/#FrenchSeparateSchoolBoard"
+    ]
+   }
+  ]
+ },
+ {
+  "census_id": "3526043",
+  "csdname": "Niagara Falls",
+  "county_mun": "",
+  "office": "District School Board of Niagara Trustee Candidates",
+  "office_context": "District School Board of Niagara Trustee Candidates - District School Board of Niagara Trustee Candidates",
+  "board_number": "B66150",
+  "system": "public",
+  "classify_reason": "matched:District School Board of Niagara",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Todd BRIGHT",
+    "acclaimed": false,
+    "email": "Toddb0411@gmail.com",
+    "phone": "905-932-0412",
+    "address": "7793 Charnwood Avenue, Niagara Falls, ON, L2H 3E2",
+    "links": [
+     "N/A"
+    ]
+   },
+   {
+    "name_raw": "Helga CAMPBELL",
+    "acclaimed": false,
+    "email": "helgamcampbell@gmail.com",
+    "phone": "905-358-9643",
+    "address": "4889 Armoury Street, Niagara Falls, ON, L2E 1S9",
+    "links": [
+     "N/A"
+    ]
+   },
+   {
+    "name_raw": "Ravneet GIRN",
+    "acclaimed": false,
+    "email": "ravneetgirn@yahoo.ca",
+    "phone": "647-707-9857",
+    "address": "N/A",
+    "links": [
+     "N/A"
+    ]
+   },
+   {
+    "name_raw": "Zach MAVES",
+    "acclaimed": false,
+    "email": "zach_maves_28@outlook.com",
+    "phone": "905-348-8040",
+    "address": "6358 Crawford Street, Niagara Falls, ON, L2E 5Y9",
+    "links": [
+     "N/A"
+    ]
+   },
+   {
+    "name_raw": "Shannon MITCHELL",
+    "acclaimed": false,
+    "email": "shannonmitchellnf@gmail.com",
+    "phone": "905-327-2129",
+    "address": "N/A",
+    "links": [
+     "N/A"
+    ]
+   }
+  ]
+ },
+ {
+  "census_id": "3526043",
+  "csdname": "Niagara Falls",
+  "county_mun": "",
+  "office": "Niagara Catholic District School Board Trustee Candidates",
+  "office_context": "Niagara Catholic District School Board Trustee Candidates - Niagara Catholic District School Board Trustee Candidates",
+  "board_number": "B67156",
+  "system": "catholic",
+  "classify_reason": "matched:Niagara Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Joseph BRUZZESE",
+    "acclaimed": false,
+    "email": "N/A",
+    "phone": "N/A",
+    "address": "N/A",
+    "links": [
+     "N/A"
+    ]
+   },
+   {
+    "name_raw": "Tony CARUSO",
+    "acclaimed": false,
+    "email": "tony@tonycaruso.ca",
+    "phone": "289-271-0488",
+    "address": "N/A",
+    "links": [
+     "N/A"
+    ]
+   },
+   {
+    "name_raw": "Jim MARINO",
+    "acclaimed": false,
+    "email": "mayor86@cogeco.ca",
+    "phone": "905-328-9248",
+    "address": "N/A",
+    "links": [
+     "N/A"
+    ]
+   }
+  ]
+ },
+ {
+  "census_id": "3526053",
+  "csdname": "St. Catharines",
+  "county_mun": "",
+  "office": "School Board Trustee",
+  "office_context": "Certified Candidates to run for trustee for the District School Board of Niagara. - School Board Trustee",
+  "board_number": "B66150",
+  "system": "public",
+  "classify_reason": "matched:District School Board of Niagara",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "M. Areeb Aijaz",
+    "acclaimed": false,
+    "email": "vote4mareebaijaz@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Jennifer Ajandi",
+    "acclaimed": false,
+    "email": "jennajandi@hotmail.com",
+    "phone": "905.933.6106",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Kate Baggott",
+    "acclaimed": false,
+    "email": "baggott.kate@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Matthew Bradman",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Mike Brousseau",
+    "acclaimed": false,
+    "email": "vote@mikebrousseau.ca",
+    "phone": "905.401.9825",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Lauren Bubnic",
+    "acclaimed": false,
+    "email": "lauren.bubnicfortrustee@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Jonathan Fast",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Amir Ismael",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Mark Matchem",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Marwa Salih",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3528018",
+  "csdname": "Haldimand County",
+  "county_mun": "",
+  "office": "Grand Erie Public School Board candidates",
+  "office_context": "Withdrawn Candidates for School Board Trustee - Grand Erie District School Board (English Public): - Grand Erie Public School Board candidates",
+  "board_number": "B66168",
+  "system": "public",
+  "classify_reason": "matched:Grand Erie",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Corbett, Bernie",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3528018",
+  "csdname": "Haldimand County",
+  "county_mun": "",
+  "office": "Grand Erie Public School Board withdrawn candidates",
+  "office_context": "Withdrawn Candidates for School Board Trustee - Grand Erie District School Board (English Public): - Grand Erie Public School Board withdrawn candidates",
+  "board_number": "B66168",
+  "system": "public",
+  "classify_reason": "matched:Grand Erie",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Poirier, Toni",
+    "acclaimed": false,
+    "email": "tpoirier064@gmail.com",
+    "phone": "905-765-7982",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3528018",
+  "csdname": "Haldimand County",
+  "county_mun": "",
+  "office": "Brant Haldimand Norfolk Catholic District School Board candidates",
+  "office_context": "Withdrawn Candidates for School Board Trustee - Grand Erie District School Board (English Public): - Brant Haldimand Norfolk Catholic District School Board candidates",
+  "board_number": "B67164",
+  "system": "catholic",
+  "classify_reason": "matched:Brant Haldimand Norfolk",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Paradis, David",
+    "acclaimed": false,
+    "email": "david.paradis@gmail.com",
+    "phone": "416-844-5549",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3530027",
+  "csdname": "Wellesley",
+  "county_mun": "",
+  "office": "English Public School Board Trustee (1 to be elected)",
+  "office_context": "English Public School Board Trustee (1 to be elected) - English Public School Board Trustee (1 to be elected)",
+  "board_number": "B66176",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Karen Meissner",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3530027",
+  "csdname": "Wellesley",
+  "county_mun": "",
+  "office": "English Separate School Board Trustee (2 to be elected)",
+  "office_context": "English Separate School Board Trustee (2 to be elected) - English Separate School Board Trustee (2 to be elected)",
+  "board_number": "B67148",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Jeanne Gravelle",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Melanie Van Alphen",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3530027",
+  "csdname": "Wellesley",
+  "county_mun": "",
+  "office": "English Public School Board Trustee (1 to be elected)",
+  "office_context": "English Public School Board Trustee (1 to be elected) - English Public School Board Trustee (1 to be elected)",
+  "board_number": "B66176",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Jen Burkholder",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Gerhard Ens",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Fred Meissner",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Zach Smith",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3530027",
+  "csdname": "Wellesley",
+  "county_mun": "",
+  "office": "English Separate School Board Trustee (2 to be elected)",
+  "office_context": "English Separate School Board Trustee (2 to be elected) - English Separate School Board Trustee (2 to be elected)",
+  "board_number": "B67148",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Linda Cuff",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Nike Dattani",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Sally Fuentes",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Conrad Stanley",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3531011",
+  "csdname": "Stratford",
+  "county_mun": "",
+  "office": "Candidates for Avon Maitland District School Board",
+  "office_context": "Candidates for Avon Maitland District School Board - Candidates for Avon Maitland District School Board",
+  "board_number": "B66010",
+  "system": "public",
+  "classify_reason": "matched:Avon Maitland",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Avon Maitland District School Board Candidates",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Bannerman, Michael",
+    "acclaimed": false,
+    "email": "mcbannerman@rogers.com",
+    "phone": "519-703-0885",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Mishra, Deepika",
+    "acclaimed": false,
+    "email": "deepikamishra3478@gmail.com",
+    "phone": "416-709-9630",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Montgomery, Ed",
+    "acclaimed": false,
+    "email": "edmontgomery@hotmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Wagler, Jamie-Lee",
+    "acclaimed": false,
+    "email": "hello@jamiewagler.ca",
+    "phone": "519-588-4964",
+    "address": "",
+    "links": [
+     "https://www.jamiewagler.ca/"
+    ]
+   }
+  ]
+ },
+ {
+  "census_id": "3531011",
+  "csdname": "Stratford",
+  "county_mun": "",
+  "office": "Candidates for Huron Perth Catholic District School Board",
+  "office_context": "Candidates for Huron Perth Catholic District School Board - Candidates for Huron Perth Catholic District School Board",
+  "board_number": "B67016",
+  "system": "catholic",
+  "classify_reason": "matched:Huron Perth Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Huron Perth Catholic District School Board Candidates",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Charlesworth, David",
+    "acclaimed": false,
+    "email": "d.charlesworth@mac.com",
+    "phone": "519-801-1234",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Marcy, Heather",
+    "acclaimed": false,
+    "email": "heathermarcy7@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Thomson, Laurie",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3531013",
+  "csdname": "Perth South",
+  "county_mun": "",
+  "office": "Avon Maitland District School Board (English)",
+  "office_context": "Avon Maitland District School Board (English) - Avon Maitland District School Board (English)",
+  "board_number": "B66010",
+  "system": "public",
+  "classify_reason": "matched:Avon Maitland",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Sheila Armstrong-Marshall",
+    "acclaimed": false,
+    "email": "msheep2026@gmail.com",
+    "phone": "519-393-6509",
+    "address": "3364 Road 130",
+    "links": []
+   },
+   {
+    "name_raw": "Ginny Rolph",
+    "acclaimed": false,
+    "email": "ginnyr66@gmail.com",
+    "phone": "519-301-9640",
+    "address": "6684 Perth Line 44",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3531013",
+  "csdname": "Perth South",
+  "county_mun": "",
+  "office": "Huron-Perth Catholic Separate School Board (English)",
+  "office_context": "Huron-Perth Catholic Separate School Board (English) - Huron-Perth Catholic Separate School Board (English)",
+  "board_number": "B67016",
+  "system": "catholic",
+  "classify_reason": "matched:Huron-Perth Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Mary Helen Van Loon",
+    "acclaimed": false,
+    "email": "maryhelenvl@hotmail.com",
+    "phone": "519-275-1710",
+    "address": "3929 Road 181",
+    "links": []
+   },
+   {
+    "name_raw": "Derek Van De Walle",
+    "acclaimed": false,
+    "email": "davandewalle@gmail.com",
+    "phone": "519-275-4120",
+    "address": "4965 Line 4",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3531013",
+  "csdname": "Perth South",
+  "county_mun": "",
+  "office": "Avon Maitland District School Board (English)",
+  "office_context": "Avon Maitland District School Board (English) - Avon Maitland District School Board (English)",
+  "board_number": "B66010",
+  "system": "public",
+  "classify_reason": "matched:Avon Maitland",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Sheila Armstrong-Marshall",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Ginny Rolph",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3531013",
+  "csdname": "Perth South",
+  "county_mun": "",
+  "office": "Huron-Perth Catholic Separate School Board (English)",
+  "office_context": "Huron-Perth Catholic Separate School Board (English) - Huron-Perth Catholic Separate School Board (English)",
+  "board_number": "B67016",
+  "system": "catholic",
+  "classify_reason": "matched:Huron-Perth Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Mary Helen Van Loon",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Derek Van De Walle",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3532018",
+  "csdname": "Ingersoll",
+  "county_mun": "",
+  "office": "Phone: 226-228-7784",
+  "office_context": "The above candidate for the office of English separate school board trustee is acclaimed in accordance with section 37(1) of the Municipal Elections Act, 1996 - Phone: 226-228-7784",
+  "board_number": "B67032",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Joseph-Guy Bourbeau",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3532018",
+  "csdname": "Ingersoll",
+  "county_mun": "",
+  "office": "Contact Information",
+  "office_context": "The above candidate for the office of English separate school board trustee is acclaimed in accordance with section 37(1) of the Municipal Elections Act, 1996 - Contact Information",
+  "board_number": "B67032",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "David Paradis",
+    "acclaimed": false,
+    "email": "david.paradis@gmail.com",
+    "phone": "416-844-5549",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3532038",
+  "csdname": "East Zorra-Tavistock",
+  "county_mun": "",
+  "office": "Thames Valley District School Board Trustee (English Public)",
+  "office_context": "Thames Valley District School Board Trustee (English Public) - Thames Valley District School Board Trustee (English Public)",
+  "board_number": "B66044",
+  "system": "public",
+  "classify_reason": "matched:Thames Valley",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Benjamin Lampkin (acclaimed)",
+    "acclaimed": false,
+    "email": "benflampkin@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "William McKinnon (acclaimed)",
+    "acclaimed": false,
+    "email": "billmckinnontrustee@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3532038",
+  "csdname": "East Zorra-Tavistock",
+  "county_mun": "",
+  "office": "London District Catholic School Board Trustee (English Separate)",
+  "office_context": "London District Catholic School Board Trustee (English Separate) - London District Catholic School Board Trustee (English Separate)",
+  "board_number": "B67032",
+  "system": "catholic",
+  "classify_reason": "matched:London District Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Mary Holmes (acclaimed)",
+    "acclaimed": false,
+    "email": "paquette.holmes@gmail.com",
+    "phone": "519-537-5183 226-228-7784",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3538030",
+  "csdname": "Sarnia",
+  "county_mun": "",
+  "office": "Trustee, Lambton Kent District School Board (English Public School Board)",
+  "office_context": "Consult the table below for Lambton Kent District School Board Trustee candidates. - Trustee, Lambton Kent District School Board (English Public School Board)",
+  "board_number": "B66036",
+  "system": "public",
+  "classify_reason": "matched:Lambton Kent",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Carroll, Erin",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Kershaw, Janet",
+    "acclaimed": false,
+    "email": "kershaja7@gmail.com",
+    "phone": "519-466-7059",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "McKessock, Robert John",
+    "acclaimed": false,
+    "email": "rmckessock69@gmail.com",
+    "phone": "519-330-2580",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Ramos, Petra Linda",
+    "acclaimed": false,
+    "email": "lacanaca2003@yahoo.ca",
+    "phone": "519-869-2220",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Shortt, David",
+    "acclaimed": false,
+    "email": "ElectDavidShortt@gmail.com",
+    "phone": "519-344-7075",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3538030",
+  "csdname": "Sarnia",
+  "county_mun": "",
+  "office": "Trustee, St. Clair Catholic District School Board (English Separate School Board)",
+  "office_context": "Consult the table below for St. Clair Catholic District School Board Trustee candidates. - Trustee, St. Clair Catholic District School Board (English Separate School Board)",
+  "board_number": "B67040",
+  "system": "catholic",
+  "classify_reason": "matched:St. Clair Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Iafrate, Anthony",
+    "acclaimed": false,
+    "email": "anthonyiafrate@hotmail.com",
+    "phone": "519-381-6585",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "McCann, Jennifer",
+    "acclaimed": false,
+    "email": "jlmccann6@gmail.com",
+    "phone": "519-312-3661",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Ward, Linda",
+    "acclaimed": false,
+    "email": "linda.wally@hotmail.com",
+    "phone": "519-542-4257",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3539027",
+  "csdname": "Thames Centre",
+  "county_mun": "",
+  "office": "London District Catholic School Board Trustee - Acclaimed (English Separate)",
+  "office_context": "London District Catholic School Board Trustee - Acclaimed (English Separate) - London District Catholic School Board Trustee - Acclaimed (English Separate)",
+  "board_number": "B67032",
+  "system": "catholic",
+  "classify_reason": "matched:London District Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Lamb, Josh",
+    "acclaimed": false,
+    "email": "lambj@cintas.com",
+    "phone": "519-868-4174",
+    "address": "59 Clarence Street, Strathroy",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3539027",
+  "csdname": "Thames Centre",
+  "county_mun": "",
+  "office": "Thames Valley District School Board Trustee - two (2) to be elected (English Public)",
+  "office_context": "Thames Valley District School Board Trustee - two (2) to be elected (English Public) - Thames Valley District School Board Trustee - two (2) to be elected (English Public)",
+  "board_number": "B66044",
+  "system": "public",
+  "classify_reason": "matched:Thames Valley",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Noble, Bev",
+    "acclaimed": false,
+    "email": "bevgalenoble@icloud.com",
+    "phone": "519-660-9571",
+    "address": "217 Campanale Way, Lucan ON",
+    "links": []
+   },
+   {
+    "name_raw": "Tichenoff, Bill",
+    "acclaimed": false,
+    "email": "billtichenoff@gmail.com",
+    "phone": "519-374-5560",
+    "address": "22909 Highbury Avenue, Ilderton, ON",
+    "links": []
+   },
+   {
+    "name_raw": "Sachs, Christian",
+    "acclaimed": false,
+    "email": "sachs.christian22@gmail.com",
+    "phone": "519-722-1069",
+    "address": "34444 Granton Line, Lucan",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3539033",
+  "csdname": "Middlesex Centre",
+  "county_mun": "",
+  "office": "Trustee, London District Catholic School Board (LDCSB)",
+  "office_context": "Trustee, London District Catholic School Board (LDCSB) - Trustee, London District Catholic School Board (LDCSB)",
+  "board_number": "B67032",
+  "system": "catholic",
+  "classify_reason": "matched:London District Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Lamb, Josh",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3539033",
+  "csdname": "Middlesex Centre",
+  "county_mun": "",
+  "office": "Trustee, Thames Valley District School Board (TVDSB)",
+  "office_context": "Trustee, Thames Valley District School Board (TVDSB) - Trustee, Thames Valley District School Board (TVDSB)",
+  "board_number": "B66044",
+  "system": "public",
+  "classify_reason": "matched:Thames Valley",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Cocksworth, William",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Morell, Arlene",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Sachs, Christian",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Spoiled and Declined",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Total Ballots Cast:",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3539033",
+  "csdname": "Middlesex Centre",
+  "county_mun": "",
+  "office": "Trustee, Thames Valley District School Board (TVDSB)",
+  "office_context": "*School board elections for our region were run by the following municipalities: - Trustee, Thames Valley District School Board (TVDSB)",
+  "board_number": "B66044",
+  "system": "public",
+  "classify_reason": "matched:Thames Valley",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Aina DeViet",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "John Brennan",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Jean Coles",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Debbie Heffernan",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Brad McGhie",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Wayne Shipley",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Hugh Aerts",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Sue Cates",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Lee Mann",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Frank Berze",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Brad Scott",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3539041",
+  "csdname": "North Middlesex",
+  "county_mun": "",
+  "office": "School Board Trustee",
+  "office_context": "THAMES VALLEY DISTRICT SCHOOL BOARD \u2013 Two members to be elected to represent Middlesex County - School Board Trustee",
+  "board_number": "B66044",
+  "system": "public",
+  "classify_reason": "matched:Thames Valley",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Bev Noble",
+    "acclaimed": false,
+    "email": "@email",
+    "phone": "519-660-9571",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Bill Tichenoff",
+    "acclaimed": false,
+    "email": "@email",
+    "phone": "519-374-5560",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Christian Sachs",
+    "acclaimed": false,
+    "email": "@email",
+    "phone": "519-722-1069",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3540050",
+  "csdname": "Morris-Turnberry",
+  "county_mun": "",
+  "office": "Declaration of Acclamation to Office",
+  "office_context": "Huron Perth Catholic District School Board - Declaration of Acclamation to Office",
+  "board_number": "B67016",
+  "system": "catholic",
+  "classify_reason": "matched:Huron Perth Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Jamie Heffer",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Patricia Smith",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Rachid Barrima",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Michael Salvatore",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3541032",
+  "csdname": "Brockton",
+  "county_mun": "",
+  "office": "English Public School Board Trustee (Bluewater District School Board) - Acclaimed",
+  "office_context": "English Public School Board Trustee (Bluewater District School Board) - Acclaimed - English Public School Board Trustee (Bluewater District School Board) - Acclaimed",
+  "board_number": "B66001",
+  "system": "public",
+  "classify_reason": "matched:Bluewater",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Terry Boyd-Zhang",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3541032",
+  "csdname": "Brockton",
+  "county_mun": "",
+  "office": "English Separate School Board Trustee - Ward 31 (Bruce-Grey Catholic District School Board) - Acclaimed*",
+  "office_context": "English Separate School Board Trustee - Ward 31 (Bruce-Grey Catholic District School Board) - Acclaimed* - English Separate School Board Trustee - Ward 31 (Bruce-Grey Catholic District School Board) - Acclaimed*",
+  "board_number": "B67008",
+  "system": "catholic",
+  "classify_reason": "matched:Bruce-Grey Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Lori Di Castri",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3541032",
+  "csdname": "Brockton",
+  "county_mun": "",
+  "office": "English Separate School Board Trustee - Wards 34 & 36 (Bruce-Grey Catholic District School Board) - 1 Position",
+  "office_context": "English Separate School Board Trustee - Wards 34 & 36 (Bruce-Grey Catholic District School Board) - 1 Position - English Separate School Board Trustee - Wards 34 & 36 (Bruce-Grey Catholic District School Board) - 1 Position",
+  "board_number": "B67008",
+  "system": "catholic",
+  "classify_reason": "matched:Bruce-Grey Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Jim Nolan",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Linda Strader",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3542045",
+  "csdname": "The Blue Mountains",
+  "county_mun": "",
+  "office": "Bluewater District School Board Trustee - English Public",
+  "office_context": "Nominations for the 2026 Municipal and School Board Election are now closed. - Bluewater District School Board Trustee - English Public",
+  "board_number": "B66001",
+  "system": "public",
+  "classify_reason": "matched:Bluewater",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Cowley, Scott",
+    "acclaimed": false,
+    "email": "scottcowleytrusteecandidate@gmail.com",
+    "phone": "(226) 974-0679",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Forder, Angela",
+    "acclaimed": false,
+    "email": "northernpetshop@gmail.com",
+    "phone": "(905) 403-6336",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3542045",
+  "csdname": "The Blue Mountains",
+  "county_mun": "",
+  "office": "Bruce-Grey Catholic District School Board Trustee - English Separate",
+  "office_context": "Nominations for the 2026 Municipal and School Board Election are now closed. - Bruce-Grey Catholic District School Board Trustee - English Separate",
+  "board_number": "B67008",
+  "system": "catholic",
+  "classify_reason": "matched:Bruce-Grey Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Thomas, Suriya Mariam",
+    "acclaimed": false,
+    "email": "mariamma39@gmail.com",
+    "phone": "(902) 402-9223",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3542053",
+  "csdname": "Georgian Bluffs",
+  "county_mun": "",
+  "office": "Official List of Candidates for Mayor",
+  "office_context": "The Township of Georgian Bluffs is responsible for receiving nominations for the Township of Georgian Bluffs and Township of Chatsworth for English Public School Board Trustee (Bluewater District School Board). - Official List of Candidates for Mayor",
+  "board_number": "B66001",
+  "system": "public",
+  "classify_reason": "matched:Bluewater",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Susan (Sue) Carleton - ACCLAIMED",
+    "acclaimed": false,
+    "email": "suecarleton@outlook.com",
+    "phone": "519-379-0231",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3542053",
+  "csdname": "Georgian Bluffs",
+  "county_mun": "",
+  "office": "Official List of Candidates for Deputy Mayor",
+  "office_context": "The Township of Georgian Bluffs is responsible for receiving nominations for the Township of Georgian Bluffs and Township of Chatsworth for English Public School Board Trustee (Bluewater District School Board). - Official List of Candidates for Deputy Mayor",
+  "board_number": "B66001",
+  "system": "public",
+  "classify_reason": "matched:Bluewater",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Grant Pringle - ACCLAIMED",
+    "acclaimed": false,
+    "email": "kgpringle23@outlook.com",
+    "phone": "519-270-6535",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3542053",
+  "csdname": "Georgian Bluffs",
+  "county_mun": "",
+  "office": "Official List of Candidates for Councillor",
+  "office_context": "The Township of Georgian Bluffs is responsible for receiving nominations for the Township of Georgian Bluffs and Township of Chatsworth for English Public School Board Trustee (Bluewater District School Board). - Official List of Candidates for Councillor",
+  "board_number": "B66001",
+  "system": "public",
+  "classify_reason": "matched:Bluewater",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Ejaye McComb",
+    "acclaimed": false,
+    "email": "ejayemccomb@gmail.com",
+    "phone": "226-668-8370",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Brad McRoberts",
+    "acclaimed": false,
+    "email": "bmcrober@alumni.uwo.ca",
+    "phone": "519-935-2893",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Rick Winters",
+    "acclaimed": false,
+    "email": "rickwinters2022@gmail.com",
+    "phone": "519-447-0134",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Isaac Shouldice",
+    "acclaimed": false,
+    "email": "isaacshouldice94@gmail.com",
+    "phone": "226-668-6913",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Gary McMillan",
+    "acclaimed": false,
+    "email": "gary4georgianbluffs@gmail.com",
+    "phone": "519-368-3766",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Jarod Outridge",
+    "acclaimed": false,
+    "email": "jarod.outridge@outlook.com",
+    "phone": "519-371-4813",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Ann Schneider",
+    "acclaimed": false,
+    "email": "acschneider@bmts.com",
+    "phone": "519-534-0276",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Mass Arezzi",
+    "acclaimed": false,
+    "email": "massforgb@gmail.com",
+    "phone": "416-804-5446",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Steve Spencer",
+    "acclaimed": false,
+    "email": "spencerbeeffarms@gmail.com",
+    "phone": "416-561-5730",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3542053",
+  "csdname": "Georgian Bluffs",
+  "county_mun": "",
+  "office": "Official List of Candidates for English Public School Board Trustee",
+  "office_context": "Official List of Candidates for English Public School Board Trustee - Official List of Candidates for English Public School Board Trustee",
+  "board_number": "B66001",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Leslie Patrick Medve - ACCLAIMED",
+    "acclaimed": false,
+    "email": "les_p_medve@yahoo.ca",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3542053",
+  "csdname": "Georgian Bluffs",
+  "county_mun": "",
+  "office": "Official List of Candidates for English Catholic Public School Board Trustee",
+  "office_context": "Official List of Candidates for English Catholic Public School Board Trustee - Official List of Candidates for English Catholic Public School Board Trustee",
+  "board_number": "B67008",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Lucie Desbiens - ACCLAIMED",
+    "acclaimed": false,
+    "email": "ldesbiens1956@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3543003",
+  "csdname": "Adjala-Tosorontio",
+  "county_mun": "",
+  "office": "Simcoe County District School Board (English-Public)",
+  "office_context": "Simcoe County District School Board (English-Public) - Simcoe County District School Board (English-Public)",
+  "board_number": "B66109",
+  "system": "public",
+  "classify_reason": "matched:Simcoe County District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Brandy Rafeek",
+    "acclaimed": false,
+    "email": "brandyrafeek@gmail.com",
+    "phone": "705-791-7009",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3543003",
+  "csdname": "Adjala-Tosorontio",
+  "county_mun": "",
+  "office": "Simcoe Muskoka Catholic District School Board (English-Separate)",
+  "office_context": "Simcoe Muskoka Catholic District School Board (English-Separate) - Simcoe Muskoka Catholic District School Board (English-Separate)",
+  "board_number": "B67091",
+  "system": "catholic",
+  "classify_reason": "matched:Simcoe Muskoka Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Janice Hutchison",
+    "acclaimed": false,
+    "email": "hutchisonjanice@hotmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3543014",
+  "csdname": "Bradford West Gwillimbury",
+  "county_mun": "",
+  "office": "English Public School Board Trustee (Simcoe County District School Board)",
+  "office_context": "English Public School Board Trustee (Simcoe County District School Board) - English Public School Board Trustee (Simcoe County District School Board)",
+  "board_number": "B66109",
+  "system": "public",
+  "classify_reason": "matched:Simcoe County District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Debbie Connors",
+    "acclaimed": false,
+    "email": "theconnors5@rogers.com",
+    "phone": "",
+    "address": "190 Melbourne Dr Bradford, ON L3Z 2W2",
+    "links": [
+     "https://www.facebook.com/bradfordtrustee.ca/"
+    ]
+   },
+   {
+    "name_raw": "Gary Lamb",
+    "acclaimed": false,
+    "email": "ggary009@sympatico.ca",
+    "phone": "905-715-4361",
+    "address": "143 Wood Cres Bradford, ON L3Z 2G4",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3543014",
+  "csdname": "Bradford West Gwillimbury",
+  "county_mun": "",
+  "office": "English Catholic School Board Trustee (Simcoe Muskoka Catholic District School Board)",
+  "office_context": "English Catholic School Board Trustee (Simcoe Muskoka Catholic District School Board) - English Catholic School Board Trustee (Simcoe Muskoka Catholic District School Board)",
+  "board_number": "B67091",
+  "system": "catholic",
+  "classify_reason": "matched:Simcoe Muskoka Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Tanya Da Silva",
+    "acclaimed": false,
+    "email": "tanyadasilva611@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": [
+     "https://www.facebook.com/p/Tanya-J-Da-Silva-Catholic-School-Trustee-for-BradfordInnsfil-100083716294179/"
+    ]
+   },
+   {
+    "name_raw": "Alex Sikorski",
+    "acclaimed": false,
+    "email": "alex4smcdsbtrustee@gmail.com",
+    "phone": "647-881-7482",
+    "address": "",
+    "links": [
+     "http://www.instagram.com/alex4trustee"
+    ]
+   }
+  ]
+ },
+ {
+  "census_id": "3543042",
+  "csdname": "Barrie",
+  "county_mun": "",
+  "office": "Simcoe County District School Board | Representing Barrie Wards 1, 2 and 3",
+  "office_context": "Simcoe County District School Board | Representing Barrie Wards 1, 2 and 3 - Simcoe County District School Board | Representing Barrie Wards 1, 2 and 3",
+  "board_number": "B66109",
+  "system": "public",
+  "classify_reason": "matched:Simcoe County District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Wes Ayranto",
+    "acclaimed": false,
+    "email": "wes_ayranto@hotmail.com",
+    "phone": "905-751-6605",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "David William O'Brien",
+    "acclaimed": false,
+    "email": "davidwobrien4trustee@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": [
+     "https://www.facebook.com/davidwobrien4trustee/"
+    ]
+   },
+   {
+    "name_raw": "Tim Ware",
+    "acclaimed": false,
+    "email": "timothy.ware@gmail.com",
+    "phone": "705-716-5456",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3543042",
+  "csdname": "Barrie",
+  "county_mun": "",
+  "office": "Simcoe County District School Board | Representing Barrie Wards 4, 5 and 6",
+  "office_context": "Simcoe County District School Board | Representing Barrie Wards 4, 5 and 6 - Simcoe County District School Board | Representing Barrie Wards 4, 5 and 6",
+  "board_number": "B66109",
+  "system": "public",
+  "classify_reason": "matched:Simcoe County District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Beth Mouratidis",
+    "acclaimed": false,
+    "email": "beth.mouratidis@yahoo.ca",
+    "phone": "705-739-4739",
+    "address": "",
+    "links": [
+     "https://www.facebook.com/Bethfortrustee/"
+    ]
+   },
+   {
+    "name_raw": "Dana Powell",
+    "acclaimed": false,
+    "email": "powell.1972@rogers.com",
+    "phone": "705-792-6686",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Candice Thomas",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3543042",
+  "csdname": "Barrie",
+  "county_mun": "",
+  "office": "Simcoe County District School Board | Representing Barrie Wards 7, 8, 9 and 10",
+  "office_context": "Simcoe County District School Board | Representing Barrie Wards 7, 8, 9 and 10 - Simcoe County District School Board | Representing Barrie Wards 7, 8, 9 and 10",
+  "board_number": "B66109",
+  "system": "public",
+  "classify_reason": "matched:Simcoe County District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Kevin Berry",
+    "acclaimed": false,
+    "email": "kevinberryfortrustee@gmail.com",
+    "phone": "705-794-2008",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Sean Fitzgerald",
+    "acclaimed": false,
+    "email": "fitzgerald.sean@ymail.com",
+    "phone": "705-241-6756",
+    "address": "",
+    "links": [
+     "https://www.seanfitzgeraldcampaign.net/"
+    ]
+   },
+   {
+    "name_raw": "Denise Ketching",
+    "acclaimed": false,
+    "email": "ketchingd@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": [
+     "https://www.facebook.com/deniseketching"
+    ]
+   },
+   {
+    "name_raw": "Darren Steeves",
+    "acclaimed": false,
+    "email": "darrensteeves@gmail.com",
+    "phone": "416-522-7798",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Chaudhry Farooq Haider Virk",
+    "acclaimed": false,
+    "email": "votes4virk@gmail.com",
+    "phone": "705-305-8786",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3543042",
+  "csdname": "Barrie",
+  "county_mun": "",
+  "office": "Simcoe Muskoka Catholic District School Board | Representing Barrie Wards 1, 2, 3 and 5",
+  "office_context": "Simcoe Muskoka Catholic District School Board | Representing Barrie Wards 1, 2, 3 and 5 - Simcoe Muskoka Catholic District School Board | Representing Barrie Wards 1, 2, 3 and 5",
+  "board_number": "B67091",
+  "system": "catholic",
+  "classify_reason": "matched:Simcoe Muskoka Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Justin Heran",
+    "acclaimed": false,
+    "email": "justinheran@gmail.com",
+    "phone": "705-791-2001",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Susan van Amelsvoort",
+    "acclaimed": false,
+    "email": "vanam4trustee@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3543042",
+  "csdname": "Barrie",
+  "county_mun": "",
+  "office": "Simcoe Muskoka Catholic District School Board | Representing Barrie Wards 4, 6, 7, 8, 9 and 10",
+  "office_context": "Simcoe Muskoka Catholic District School Board | Representing Barrie Wards 4, 6, 7, 8, 9 and 10 - Simcoe Muskoka Catholic District School Board | Representing Barrie Wards 4, 6, 7, 8, 9 and 10",
+  "board_number": "B67091",
+  "system": "catholic",
+  "classify_reason": "matched:Simcoe Muskoka Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Rob Chiaramida",
+    "acclaimed": false,
+    "email": "robbiec2000@rogers.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Maria Hardie",
+    "acclaimed": false,
+    "email": "hardie.maria@gmail.com",
+    "phone": "705-896-9395",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3543052",
+  "csdname": "Orillia",
+  "county_mun": "",
+  "office": "Trustee, English-Public",
+  "office_context": "Trustee, English-Public - Trustee, English-Public",
+  "board_number": "B66109",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Jodi M. Lloyd",
+    "acclaimed": false,
+    "email": "jodilloyd4trustee@gmail.com",
+    "phone": "705-955-4964",
+    "address": "13 Fitton Heights",
+    "links": []
+   },
+   {
+    "name_raw": "Stephen Sopher",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3543052",
+  "csdname": "Orillia",
+  "county_mun": "",
+  "office": "Trustee, English-Separate",
+  "office_context": "Trustee, English-Separate - Trustee, English-Separate",
+  "board_number": "B67091",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "J. Timothy Jackson Acclaimed",
+    "acclaimed": false,
+    "email": "jacksonjtim@gmail.com",
+    "phone": "705-259-3518",
+    "address": "19 Johnson St, Orillia",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3543074",
+  "csdname": "Midland",
+  "county_mun": "",
+  "office": "Trustee, English Language Public School Board (Simcoe County District School Board)",
+  "office_context": "Trustee, English Language Public School Board (Simcoe County District School Board) - Trustee, English Language Public School Board (Simcoe County District School Board)",
+  "board_number": "B66109",
+  "system": "public",
+  "classify_reason": "matched:Simcoe County District School Board",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Jeff Bumstead",
+    "acclaimed": false,
+    "email": "bumstead13.77@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Bob McMillan",
+    "acclaimed": false,
+    "email": "6683727@bell.net",
+    "phone": "647-700-3322",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Lesley Watts",
+    "acclaimed": false,
+    "email": "leswatts.ubc@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3543074",
+  "csdname": "Midland",
+  "county_mun": "",
+  "office": "Office: Trustee, English Language Separate School Board (Simcoe Muskoka Catholic District School Board)",
+  "office_context": "Office: Trustee, English Language Separate School Board (Simcoe Muskoka Catholic District School Board) - Office: Trustee, English Language Separate School Board (Simcoe Muskoka Catholic District School Board)",
+  "board_number": "B67091",
+  "system": "catholic",
+  "classify_reason": "matched:Simcoe Muskoka Catholic",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Nicole Chuchmach",
+    "acclaimed": false,
+    "email": "sophiesrun@hotmail.com",
+    "phone": "905-876-8080",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Steven Knuff",
+    "acclaimed": false,
+    "email": "sgknuff@gmail.com",
+    "phone": "705-717-0037",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Sherine McIntosh",
+    "acclaimed": false,
+    "email": "mcintosh.sherine.a@gmail.com",
+    "phone": "705-896-2299",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3546018",
+  "csdname": "Algonquin Highlands",
+  "county_mun": "",
+  "office": "Don Embree",
+  "office_context": "School Board Trustee - English Public - Trillium Lakelands District School Board (Certified by the Clerk of the Municipality of Dysart et al) - Don Embree",
+  "board_number": "B66087",
+  "system": "public",
+  "classify_reason": "matched:Trillium Lakelands",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Kinga Baricz",
+    "acclaimed": false,
+    "email": "zsomli2024@yahoo.com",
+    "phone": "705-455-2326",
+    "address": "1007 Wintergreen Lane, Haliburton",
+    "links": []
+   },
+   {
+    "name_raw": "Victoria Hillier-Hutchinson",
+    "acclaimed": false,
+    "email": "victoriamhillier@gmail.com",
+    "phone": "249-392-9824",
+    "address": "1067 Poster Lane, Minden Hills",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3546024",
+  "csdname": "Dysart et al",
+  "county_mun": "",
+  "office": "Trustee - English Public School Board",
+  "office_context": "Trustee - English Public School Board - Trustee - English Public School Board",
+  "board_number": "B66087",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Kinga Baricz",
+    "acclaimed": false,
+    "email": "zsomli2024@yahoo.com",
+    "phone": "705-455-2326",
+    "address": "1007 Wintergreen Lane, Haliburton",
+    "links": []
+   },
+   {
+    "name_raw": "Victoria Hillier-Hutchison",
+    "acclaimed": false,
+    "email": "victoriamhillier@gmail.com",
+    "phone": "705-272-9617",
+    "address": "1067 Poster Lane, Minden Hills",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3547002",
+  "csdname": "Arnprior",
+  "county_mun": "",
+  "office": "Mayor Candidates",
+  "office_context": "School Board Trustee (English Public) - Mayor Candidates",
+  "board_number": "B66214",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Bill Griese",
+    "acclaimed": false,
+    "email": "billgriese51@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Eric Burton",
+    "acclaimed": false,
+    "email": "eric@ericburton.ca",
+    "phone": "613-401-1644",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Lisa McGee",
+    "acclaimed": false,
+    "email": "lisamcgee@gmail.com",
+    "phone": "(613) 322-0271",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3547002",
+  "csdname": "Arnprior",
+  "county_mun": "",
+  "office": "Deputy Mayor Candidates",
+  "office_context": "School Board Trustee (English Public) - Deputy Mayor Candidates",
+  "board_number": "B66214",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Dan Lynch",
+    "acclaimed": false,
+    "email": "daniellynch@cogeco.ca",
+    "phone": "613-623-0146",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3547002",
+  "csdname": "Arnprior",
+  "county_mun": "",
+  "office": "Councillor Candidates",
+  "office_context": "School Board Trustee (English Public) - Councillor Candidates",
+  "board_number": "B66214",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Bob Cunnington",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Chris Couper",
+    "acclaimed": false,
+    "email": "couper@gmail.com",
+    "phone": "(613) 518-4081",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Chris Toner",
+    "acclaimed": false,
+    "email": "cgtoner1969@gmail.com",
+    "phone": "(613) 913-9571",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Leslie Anne Hook",
+    "acclaimed": false,
+    "email": "hook.leslie@yahoo.ca",
+    "phone": "(613) 612-5683",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Lynn Cloutier",
+    "acclaimed": false,
+    "email": "lgrinstead@sympatico.ca",
+    "phone": "(613) 371-6036",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Tom Burnette",
+    "acclaimed": false,
+    "email": "dtburnette@bell.net",
+    "phone": "(613) 799-1773",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Donna Defalco",
+    "acclaimed": false,
+    "email": "dldefalco62@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Seth Malina",
+    "acclaimed": false,
+    "email": "sethmalina.arnprior@gmail.com",
+    "phone": "(613) 791-9316",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Alexis Young",
+    "acclaimed": false,
+    "email": "alexischarlotteyoung@gmail.com",
+    "phone": "(438) 868-6168",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3547008",
+  "csdname": "Greater Madawaska",
+  "county_mun": "",
+  "office": "School Board Trustee - English Public - one (1) to be elected",
+  "office_context": "School Board Trustee - English Public - one (1) to be elected - School Board Trustee - English Public - one (1) to be elected",
+  "board_number": "B66214",
+  "system": "public",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Jeffrey Barber",
+    "acclaimed": false,
+    "email": "ACCLAIMED",
+    "phone": "ACCLAIMED",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3547008",
+  "csdname": "Greater Madawaska",
+  "county_mun": "",
+  "office": "School Board Trustee - English Catholic- one (1) to be elected",
+  "office_context": "School Board Trustee - English Catholic- one (1) to be elected - School Board Trustee - English Catholic- one (1) to be elected",
+  "board_number": "B67199",
+  "system": "catholic",
+  "classify_reason": "resolved-from-jurisdictions",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Jeannie Ivory",
+    "acclaimed": false,
+    "email": "ACCLAIMED",
+    "phone": "ACCLAIMED",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3548027",
+  "csdname": "Bonfield",
+  "county_mun": "",
+  "office": "2026 Municipal Candidates",
+  "office_context": "Nipissing Parry Sound Catholic District School Board - 2026 Municipal Candidates",
+  "board_number": "B29017",
+  "system": "catholic",
+  "classify_reason": "matched:Nipissing Parry Sound",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "CORBETT, Jason",
+    "acclaimed": false,
+    "email": "jasoncorbett40@icloud.com",
+    "phone": "705-840-0379",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "DICKHOUT, Sarah",
+    "acclaimed": false,
+    "email": "sarahdickhout@outlook.com",
+    "phone": "289-209-0041",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "GAGNE, Jules",
+    "acclaimed": false,
+    "email": "julesgagne@hotmail.ca",
+    "phone": "705-498-8582",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "KROLIKOWSKI, Marcin",
+    "acclaimed": false,
+    "email": "martiniblues75@yahoo.ca",
+    "phone": "647-404-8353",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "MCLAREN, Randy",
+    "acclaimed": false,
+    "email": "rcmclaren@sympatico.ca",
+    "phone": "705-498-2679",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3548027",
+  "csdname": "Bonfield",
+  "county_mun": "",
+  "office": "Nominations will be accepted",
+  "office_context": "Near North School Board - Nominations will be accepted",
+  "board_number": "B28037",
+  "system": "public",
+  "classify_reason": "matched:Near North",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "By-law Number",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3548044",
+  "csdname": "North Bay",
+  "county_mun": "",
+  "office": "Near North District School Board",
+  "office_context": "School Board Trustees - Near North District School Board",
+  "board_number": "B28037",
+  "system": "public",
+  "classify_reason": "matched:Near North",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ASPIN, Jay",
+    "acclaimed": false,
+    "email": "jayaspin@bell.net",
+    "phone": "705-494-0084",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "GILL, John",
+    "acclaimed": false,
+    "email": "john.gill.for.trustee@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "SARGENT, Louise",
+    "acclaimed": false,
+    "email": "mrs.louisesargent@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "STEER, Bill",
+    "acclaimed": false,
+    "email": "wilstonsteer@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "VANDERLEE, Darlene",
+    "acclaimed": false,
+    "email": "DarleneVanderlee29@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3548044",
+  "csdname": "North Bay",
+  "county_mun": "",
+  "office": "Nipissing-Parry Sound Catholic District School Board",
+  "office_context": "School Board Trustees - Nipissing-Parry Sound Catholic District School Board",
+  "board_number": "B29017",
+  "system": "catholic",
+  "classify_reason": "matched:Nipissing-Parry Sound",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "CELENTANO, Ralph",
+    "acclaimed": false,
+    "email": "rcelentano2022@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "DUNKLEY, David",
+    "acclaimed": false,
+    "email": "david@daviddunkley.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "FITZSIMMONS, Shawn",
+    "acclaimed": false,
+    "email": "shawnfitzsimmons@cogeco.ca",
+    "phone": "705-472-7985",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "WARREN, Shelly",
+    "acclaimed": false,
+    "email": "29sawarren@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "WHITTET, George",
+    "acclaimed": false,
+    "email": "gwittet@cogeco.ca",
+    "phone": "705-497-3997",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3548055",
+  "csdname": "West Nipissing / Nipissing Ouest",
+  "county_mun": "",
+  "office": "Nipissing Parry Sound District Catholic School Board",
+  "office_context": "Certified School Board Trustee Candidates - Nipissing Parry Sound District Catholic School Board",
+  "board_number": "B29017",
+  "system": "catholic",
+  "classify_reason": "matched:Nipissing Parry Sound",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "CELENTANO, Ralph",
+    "acclaimed": false,
+    "email": "rcelentano2022@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "DUNKLEY, David",
+    "acclaimed": false,
+    "email": "david@daviddunkley.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "FITZSIMMONS, Shawn",
+    "acclaimed": false,
+    "email": "shawnfitzsimmons@cogeco.ca",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "WARREN, Shelly",
+    "acclaimed": false,
+    "email": "29sawarren@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "WHITTET, George",
+    "acclaimed": false,
+    "email": "g.whittet@cogeco.ca",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3548055",
+  "csdname": "West Nipissing / Nipissing Ouest",
+  "county_mun": "",
+  "office": "Near North District School Board",
+  "office_context": "Nipissing Parry Sound District Catholic School Board - Near North District School Board",
+  "board_number": "B29017",
+  "system": "catholic",
+  "classify_reason": "matched:Nipissing Parry Sound",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "ASPIN, Jay",
+    "acclaimed": false,
+    "email": "jayaspin@bell.net",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "GILL, John",
+    "acclaimed": false,
+    "email": "john.gill.for.trustee@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "SARGENT, Louise",
+    "acclaimed": false,
+    "email": "mrs.louisesargent@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "STEER, Bill",
+    "acclaimed": false,
+    "email": "wilstonsteer@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "VANDERLEE, Darlene",
+    "acclaimed": false,
+    "email": "DarleneVanderlee29@gmail.com",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3549005",
+  "csdname": "The Archipelago",
+  "county_mun": "",
+  "office": "Unofficial List of School Board Trustee Candidates",
+  "office_context": "TRUSTEE, ENGLISH PUBLIC - NEAR NORTH DISTRICT SCHOOL BOARD ZONE 3 - Unofficial List of School Board Trustee Candidates",
+  "board_number": "B28037",
+  "system": "public",
+  "classify_reason": "matched:Near North",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Jean Beckett",
+    "acclaimed": false,
+    "email": "jean4trustee@vianet.ca",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "John Cochrane",
+    "acclaimed": false,
+    "email": "johncochrane@hotmail.com",
+    "phone": "705-746-7877",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Jim Wilson",
+    "acclaimed": false,
+    "email": "jwilson.solor@gmail.com",
+    "phone": "905-536-1908",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3549071",
+  "csdname": "Nipissing",
+  "county_mun": "",
+  "office": "Committees of Council:",
+  "office_context": "Nipissing-Parry Sound Catholic School Board: - Committees of Council:",
+  "board_number": "B29017",
+  "system": "catholic",
+  "classify_reason": "matched:Nipissing-Parry Sound",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Committee of Adjustment:",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Recreation Committee:",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Museum Board:",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   },
+   {
+    "name_raw": "Cemetery Committee:",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ },
+ {
+  "census_id": "3549071",
+  "csdname": "Nipissing",
+  "county_mun": "",
+  "office": "Council Appointment to Boards:",
+  "office_context": "Nipissing-Parry Sound Catholic School Board: - Council Appointment to Boards:",
+  "board_number": "B29017",
+  "system": "catholic",
+  "classify_reason": "matched:Nipissing-Parry Sound",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Shared With Neighboring Municipalities",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "address": "",
+    "links": []
+   }
+  ]
+ }
+]

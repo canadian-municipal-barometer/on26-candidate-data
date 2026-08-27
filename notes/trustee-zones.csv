@@ -1,0 +1,280 @@
+board_number,zone_id,seats,n_candidates,zone_labels,municipalities,n_municipalities,board_source,empty,sources
+B28010,B28010-adsb-ward-1-trustee,,1,ADSB Ward 1 Trustee,"3557061:Sault Ste. Marie, City (CY)",1,label,0,harvest
+B28010,B28010-adsb-ward-2-trustee,,2,ADSB Ward 2 Trustee,"3557061:Sault Ste. Marie, City (CY)",1,label,0,harvest
+B28010,B28010-adsb-ward-3-trustee,,1,ADSB Ward 3 Trustee,"3557061:Sault Ste. Marie, City (CY)",1,label,0,harvest
+B28010,B28010-adsb-ward-4-trustee,,1,ADSB Ward 4 Trustee,"3557061:Sault Ste. Marie, City (CY)",1,label,0,harvest
+B28010,B28010-adsb-ward-5-trustee,,1,ADSB Ward 5 Trustee,"3557061:Sault Ste. Marie, City (CY)",1,label,0,harvest
+B28037,B28037-near-north-district-school-board,,5,Near North District School Board,3548044:North Bay,1,label,0,harvest
+B28037,B28037-nominations-will-be-accepted,,1,Nominations will be accepted,3548027:Bonfield,1,label,0,harvest
+B28037,B28037-unofficial-list-of-school-board-trustee-candidates,,3,Public School Trustee-Near North Board | Unofficial List of School Board Trustee Candidates,"3544065:Georgian Bay, Township (TP) | 3549005:The Archipelago",2,label,0,harvest
+B29017,B29017-2026-municipal-candidates,,5,2026 Municipal Candidates,3548027:Bonfield,1,label,0,harvest
+B29017,B29017-committees-of-council,,4,Committees of Council:,3549071:Nipissing,1,label,0,harvest
+B29017,B29017-council-appointment-to-boards,,1,Council Appointment to Boards:,3549071:Nipissing,1,label,0,harvest
+B29017,B29017-near-north-district-school-board,,5,Near North District School Board,3548055:West Nipissing / Nipissing Ouest,1,label,0,harvest
+B29017,B29017-nipissing-parry-sound-district-catholic-school-board,,5,Nipissing Parry Sound District Catholic School Board | Nipissing-Parry Sound Catholic District School Board,3548044:North Bay | 3548055:West Nipissing / Nipissing Ouest,2,label,0,harvest
+B29025,B29025-hscdsb-trustee,,6,HSCDSB Trustee,"3557061:Sault Ste. Marie, City (CY)",1,label,0,harvest
+B66001,B66001-bluewater-district-school-board-trustee,,2,Bluewater District School Board Trustee,"3542059:Owen Sound, City (CY)",1,label,0,harvest
+B66001,B66001-bluewater-district-school-board-trustee-english-public,,2,Bluewater District School Board Trustee - English Public,3542045:The Blue Mountains,1,label,0,harvest
+B66001,B66001-english-public-school-board-trustee-bluewater-district-schoo,,1,English Public School Board Trustee (Bluewater District School Board) - Acclaimed,3541032:Brockton,1,label,0,harvest
+B66001,B66001-official-list-of-candidates-for-councillor,,9,Official List of Candidates for Councillor,3542053:Georgian Bluffs,1,label,0,harvest
+B66001,B66001-official-list-of-candidates-for-deputy-mayor,,1,Official List of Candidates for Deputy Mayor,3542053:Georgian Bluffs,1,label,0,harvest
+B66001,B66001-official-list-of-candidates-for-english-public-school-board-,,1,Official List of Candidates for English Public School Board Trustee,3542053:Georgian Bluffs,1,label,0,harvest
+B66001,B66001-official-list-of-candidates-for-mayor,,1,Official List of Candidates for Mayor,3542053:Georgian Bluffs,1,label,0,harvest
+B66010,B66010-avon-maitland-district-school-board-english,,2,Avon Maitland District School Board (English),3531013:Perth South,1,label,0,harvest
+B66010,B66010-candidates-for-avon-maitland-district-school-board,,5,Candidates for Avon Maitland District School Board,3531011:Stratford,1,label,0,harvest
+B66028,B66028-trustee-gecdsb-wards-1-2-9,,6,"Trustee - GECDSB - Wards 1, 2 & 9","3537039:Windsor, City (CY)",1,label,0,harvest
+B66028,B66028-trustee-gecdsb-wards-3-4-10,,6,"Trustee - GECDSB - Wards 3, 4 & 10","3537039:Windsor, City (CY)",1,label,0,harvest
+B66028,B66028-trustee-gecdsb-wards-5-6-7-8,,6,"Trustee - GECDSB - Wards 5, 6, 7 & 8","3537039:Windsor, City (CY)",1,label,0,harvest
+B66036,B66036-trustee-lambton-kent-district-school-board-english-public-sc,,5,"Trustee, Lambton Kent District School Board (English Public School Board)",3538030:Sarnia,1,label,0,harvest
+B66044,B66044-thames-valley-district-school-board-trustee-english-public,,2,Thames Valley District School Board Trustee (English Public),3532038:East Zorra-Tavistock,1,label,0,harvest
+B66044,B66044-thames-valley-district-school-board-trustee-two-2-to-be-elec,,3,School Board Trustee | Thames Valley District School Board Trustee - two (2) to be elected (English Public),3539027:Thames Centre | 3539041:North Middlesex,2,label,0,harvest
+B66044,B66044-trustee-thames-valley-district-school-board-tvdsb,,5,"Trustee, Thames Valley District School Board (TVDSB)",3539033:Middlesex Centre,1,label,0,harvest
+B66044,B66044-trustee-thames-valley-district-school-board-tvdsb,,11,"Trustee, Thames Valley District School Board (TVDSB)",3539033:Middlesex Centre,1,label,0,harvest
+B66052,B66052-ward-1,,6,Ward 1,3520005:Toronto,1,label,0,harvest
+B66052,B66052-ward-10,,9,Ward 10,3520005:Toronto,1,label,0,harvest
+B66052,B66052-ward-11,,6,Ward 11,3520005:Toronto,1,label,0,harvest
+B66052,B66052-ward-12,,9,Ward 12,3520005:Toronto,1,label,0,harvest
+B66052,B66052-ward-2,,3,Ward 2,3520005:Toronto,1,label,0,harvest
+B66052,B66052-ward-3,,8,Ward 3,3520005:Toronto,1,label,0,harvest
+B66052,B66052-ward-4,,4,Ward 4,3520005:Toronto,1,label,0,harvest
+B66052,B66052-ward-5,,9,Ward 5,3520005:Toronto,1,label,0,harvest
+B66052,B66052-ward-6,,4,Ward 6,3520005:Toronto,1,label,0,harvest
+B66052,B66052-ward-7,,8,Ward 7,3520005:Toronto,1,label,0,harvest
+B66052,B66052-ward-8,,7,Ward 8,3520005:Toronto,1,label,0,harvest
+B66052,B66052-ward-9,,4,Ward 9,3520005:Toronto,1,label,0,harvest
+B66060,B66060-candidates-elected-by-acclamation,,2,Candidates Elected by Acclamation,3518020:Scugog,1,label,0,harvest
+B66060,B66060-durham-district-school-board-trustee-two-to-be-elected,,10,Durham District School Board Trustee (two to be elected),"3518009:Whitby, Town (T)",1,label,0,harvest
+B66060,B66060-trustee-durham-district-school-board,,3,"Trustee, Durham District School Board",3518013:Oshawa,1,label,0,harvest
+B66060,B66060-trustee-durham-district-school-board,,6,"Trustee, Durham District School Board","3518001:Pickering, City (CY)",1,label,0,harvest
+B66060,B66060-trustee-durham-district-school-board,,7,Trustee - Durham District School Board,"3518013:Oshawa, City (CY)",1,label,0,harvest
+B66079,B66079-kawartha-pine-ridge-district-school-board-trustee,,2,Kawartha Pine Ridge District School Board Trustee,3518017:Clarington,1,label,0,harvest
+B66079,B66079-kawartha-pine-ridge-district-school-board-trustee,,4,Kawartha Pine Ridge District School Board Trustee,"3518017:Clarington, Municipality (MU)",1,label,0,harvest
+B66079,B66079-kawartha-pine-ridge-district-school-board-trustee,,3,Kawartha Pine Ridge District School Board Trustee,"3515014:Peterborough, City (CY)",1,label,0,harvest
+B66079,B66079-nominations-for-office-of-school-board-trustee-english-publi,,4,Nominations for Office of School Board Trustee - English Public Kawartha Pine Ridge District School Board,3514045:Trent Hills,1,label,0,harvest
+B66079,B66079-school-board-trustee-english-public,,2,"School Board Trustee, English Public",3514004:Brighton,1,label,0,harvest
+B66087,B66087-don-embree,,2,Don Embree,3546018:Algonquin Highlands,1,label,0,harvest
+B66087,B66087-english-public-school-trustee,,2,English Public School Trustee,"3544002:Gravenhurst, Town (T)",1,inferred-from-candidate-set,0,harvest
+B66087,B66087-public-school-trustee-trillium-district,,2,Public School Trustee-Trillium District,"3544065:Georgian Bay, Township (TP)",1,label,0,harvest
+B66087,B66087-trustee-english-public-school-board,,2,Trustee - English Public School Board,3546024:Dysart et al,1,label,0,harvest
+B66095,B66095-english-public-school-trustee,,3,English Public School Trustee,"3519049:King, Township (TP)",1,inferred-from-candidate-set,0,harvest
+B66095,B66095-trustee-york-region-district-school-board-wds-1-2-4,,5,"Trustee - York Region District School Board Wds 1,2,4","3519038:Richmond Hill, Town (T)",1,label,0,harvest
+B66095,B66095-trustee-york-region-district-school-board-wds-3-5-6,,2,"Trustee - York Region District School Board Wds 3,5,6","3519038:Richmond Hill, Town (T)",1,label,0,harvest
+B66095,B66095-york-region-district-school-board-trustee,,3,York Region District School Board Trustee,3519046:Aurora,1,label,0,harvest
+B66095,B66095-york-region-district-school-board-trustee,,1,York Region District School Board Trustee,3519070:Georgina,1,label,0,harvest
+B66095,B66095-york-region-district-school-board-trustee-for-aurora-and-whi,,2,York Region District School Board Trustee for Aurora and Whitchurch-Stouffville,"3519046:Aurora, Town (T)",1,label,0,harvest
+B66095,B66095-york-region-district-school-board-trustee-wards-1-8,,4,York Region District School Board Trustee (Wards 1 & 8),"3519036:Markham, City (CY)",1,label,0,harvest
+B66095,B66095-york-region-district-school-board-trustee-wards-2-6,,2,York Region District School Board Trustee (Wards 2 & 6),"3519036:Markham, City (CY)",1,label,0,harvest
+B66095,B66095-york-region-district-school-board-trustee-wards-3-4,,2,York Region District School Board Trustee (Wards 3 & 4),"3519036:Markham, City (CY)",1,label,0,harvest
+B66095,B66095-york-region-district-school-board-trustee-wards-5-7,,4,York Region District School Board Trustee (Wards 5 & 7),"3519036:Markham, City (CY)",1,label,0,harvest
+B66095,B66095-yrdsb-trustee-area-1-township-of-king-vaughan-ward-1,,3,YRDSB Trustee - Area 1 (Township of King & Vaughan Ward 1),"3519028:Vaughan, City (CY)",1,label,0,harvest
+B66095,B66095-yrdsb-trustee-area-2-ward-2-3,,5,YRDSB Trustee - Area 2 (Ward 2 & 3),"3519028:Vaughan, City (CY)",1,label,0,harvest
+B66095,B66095-yrdsb-trustee-area-3-ward-4-5,,4,YRDSB Trustee - Area 3 (Ward 4 & 5),"3519028:Vaughan, City (CY)",1,label,0,harvest
+B66109,B66109-english-public-school-board-trustee-simcoe-county-district-s,,2,English Public School Board Trustee (Simcoe County District School Board),3543014:Bradford West Gwillimbury,1,label,0,harvest
+B66109,B66109-member-simcoe-county-district-school-board-area-1,,0,Member - Simcoe County District School Board - Area 1,"3543042:Barrie, City (CY)",1,label,1,harvest
+B66109,B66109-member-simcoe-county-district-school-board-area-2,,0,Member - Simcoe County District School Board - Area 2,"3543042:Barrie, City (CY)",1,label,1,harvest
+B66109,B66109-member-simcoe-county-district-school-board-area-3,,0,Member - Simcoe County District School Board - Area 3,"3543042:Barrie, City (CY)",1,label,1,harvest
+B66109,B66109-simcoe-county-district-school-board-english-public,,1,Simcoe County District School Board (English-Public),3543003:Adjala-Tosorontio,1,label,0,harvest
+B66109,B66109-simcoe-county-district-school-board-representing-barrie-ward,,3,"Simcoe County District School Board | Representing Barrie Wards 1, 2 and 3",3543042:Barrie,1,label,0,harvest
+B66109,B66109-simcoe-county-district-school-board-representing-barrie-ward,,3,"Simcoe County District School Board | Representing Barrie Wards 4, 5 and 6",3543042:Barrie,1,label,0,harvest
+B66109,B66109-simcoe-county-district-school-board-representing-barrie-ward,,5,"Simcoe County District School Board | Representing Barrie Wards 7, 8, 9 and 10",3543042:Barrie,1,label,0,harvest
+B66109,B66109-trustee-english-language-public-school-board-simcoe-county-d,,3,"Trustee, English Language Public School Board (Simcoe County District School Board)",3543074:Midland,1,label,0,harvest
+B66109,B66109-trustee-english-public,,2,"Trustee, English-Public",3543052:Orillia,1,label,0,harvest
+B66117,B66117-candidate-for-school-board-trustee-english-public-upper-gran,,1,Candidate for School Board Trustee - English Public (Upper Grand District School Board),3522014:Orangeville,1,label,0,harvest
+B66117,B66117-candidates-for-school-board-trustee,,1,Candidates for School Board Trustee,3522008:Amaranth,1,label,0,harvest
+B66117,B66117-contact-information,,2,Contact Information,3522008:Amaranth,1,label,0,harvest
+B66117,B66117-date-filed,,2,Date Filed,3522001:East Garafraxa,1,label,0,harvest
+B66117,B66117-english-separate-school-board-trustee,,1,English Separate School Board Trustee,"3521024:Caledon, Town (T)",1,inferred-from-candidate-set,0,harvest
+B66117,B66117-upper-grand-district-school-board,,2,Upper Grand District School Board,3522012:Mono,1,label,0,harvest
+B66117,B66117-upper-grand-district-school-board-trustee-ward-6-and-townshi,,2,"Upper Grand District School Board Trustee - Ward 6 and Township of Puslinch | Ward 6, Puslinch","3523008:Guelph | 3523008:Guelph, City (CY)",2,label,0,harvest
+B66117,B66117-upper-grand-district-school-board-trustee-wards-1-and-5,,3,"Upper Grand District School Board Trustee - Wards 1 and 5 | Wards 5, 1","3523008:Guelph | 3523008:Guelph, City (CY)",2,label,0,harvest
+B66117,B66117-upper-grand-district-school-board-trustee-wards-2-3-4,,4,"Upper Grand District School Board Trustee - Wards 2, 3, 4 | Wards 2, 3, 4","3523008:Guelph | 3523008:Guelph, City (CY)",2,label,0,harvest
+B66125,B66125-peel-district-school-board-wards-1-5,,4,"Peel District School Board - Wards 1, 5","3521010:Brampton, City (CY)",1,label,0,harvest
+B66125,B66125-peel-district-school-board-wards-2-6,,7,"Peel District School Board - Wards 2, 6","3521010:Brampton, City (CY)",1,label,0,harvest
+B66125,B66125-peel-district-school-board-wards-3-4,,5,"Peel District School Board - Wards 3, 4","3521010:Brampton, City (CY)",1,label,0,harvest
+B66125,B66125-peel-district-school-board-wards-7-8,,5,"Peel District School Board - Wards 7, 8","3521010:Brampton, City (CY)",1,label,0,harvest
+B66125,B66125-peel-district-school-board-wards-9-10,,12,"Peel District School Board - Wards 9, 10","3521010:Brampton, City (CY)",1,label,0,harvest
+B66133,B66133-1-to-be-elected,,2,1 to be elected,3524015:Halton Hills,1,label,0,harvest
+B66133,B66133-english-public-school-trustee-wards-1-2,,2,English Public School Trustee Wards 1 & 2,"3524009:Milton, Town (T)",1,inferred-from-candidate-set,0,harvest
+B66133,B66133-halton-district-school-board-trustee-ward-3-and-6,,3,Halton District School Board Trustee - Ward 3 and 6,"3524001:Oakville, Town (T)",1,label,0,harvest
+B66133,B66133-halton-district-school-board-trustee-ward-4,,4,Halton District School Board Trustee - Ward 4,"3524001:Oakville, Town (T)",1,label,0,harvest
+B66133,B66133-halton-district-school-board-trustee-wards-1-2,,3,Halton District School Board Trustee - Wards 1 & 2,"3524001:Oakville, Town (T)",1,label,0,harvest
+B66133,B66133-halton-district-school-board-trustee-wards-5-7,,6,Halton District School Board Trustee - Wards 5 & 7,"3524001:Oakville, Town (T)",1,label,0,harvest
+B66133,B66133-hdsb-trustee-ward-4,,3,HDSB Trustee - Ward 4,"3524002:Burlington, City (CY)",1,label,0,harvest
+B66133,B66133-hdsb-trustee-ward-5,,1,HDSB Trustee - Ward 5,"3524002:Burlington, City (CY)",1,label,0,harvest
+B66133,B66133-hdsb-trustee-wards-1-2,,1,HDSB Trustee - Wards 1 & 2,"3524002:Burlington, City (CY)",1,label,0,harvest
+B66133,B66133-hdsb-trustee-wards-3-6,,2,HDSB Trustee - Wards 3 & 6,"3524002:Burlington, City (CY)",1,label,0,harvest
+B66133,B66133-ward-1-and-2,,2,Ward 1 and 2,3524009:Milton,1,label,0,harvest
+B66141,B66141-ward-1-english-public,,4,Ward 1 - English Public,3525005:Hamilton,1,label,0,harvest
+B66141,B66141-ward-13-english-public,,1,Ward 13 - English Public,3525005:Hamilton,1,label,0,harvest
+B66141,B66141-ward-15-english-public,,2,Ward 15 - English Public,3525005:Hamilton,1,label,0,harvest
+B66141,B66141-ward-2-english-public,,2,Ward 2 - English Public,3525005:Hamilton,1,label,0,harvest
+B66141,B66141-ward-3-english-public,,4,Ward 3 - English Public,3525005:Hamilton,1,label,0,harvest
+B66141,B66141-ward-4-english-public,,1,Ward 4 - English Public,3525005:Hamilton,1,label,0,harvest
+B66141,B66141-ward-7-english-public,,3,Ward 7 - English Public,3525005:Hamilton,1,label,0,harvest
+B66141,B66141-wards-11-12-english-public,,2,Wards 11 & 12 - English Public,3525005:Hamilton,1,label,0,harvest
+B66141,B66141-wards-5-10-english-public,,3,Wards 5 & 10 - English Public,3525005:Hamilton,1,label,0,harvest
+B66141,B66141-wards-6-9-english-public,,2,Wards 6 & 9 - English Public,3525005:Hamilton,1,label,0,harvest
+B66141,B66141-wards-8-14-english-public,,3,Wards 8 & 14 - English Public,3525005:Hamilton,1,label,0,harvest
+B66150,B66150-cameron-klemm,,1,Cameron Klemm,3526011:Port Colborne,1,label,0,harvest
+B66150,B66150-certified-candidates,,2,Certified Candidates,3526011:Port Colborne,1,label,0,harvest
+B66150,B66150-danny-dilorenzo,,1,Danny DiLorenzo,3526011:Port Colborne,1,label,0,harvest
+B66150,B66150-district-school-board-of-niagara-trustee-candidates,,5,District School Board of Niagara Trustee Candidates,3526043:Niagara Falls,1,label,0,harvest
+B66150,B66150-gary-bruno,,2,Gary Bruno,3526011:Port Colborne,1,label,0,harvest
+B66150,B66150-geoffrey-black,,1,Geoffrey Black,3526011:Port Colborne,1,label,0,harvest
+B66150,B66150-mark-minor,,1,Mark Minor,3526011:Port Colborne,1,label,0,harvest
+B66150,B66150-matthew-graham,,1,Matthew Graham,3526011:Port Colborne,1,label,0,harvest
+B66150,B66150-school-board-trustee,,10,School Board Trustee,3526053:St. Catharines,1,label,0,harvest
+B66150,B66150-steve-webb,,2,Steve Webb,3526011:Port Colborne,1,label,0,harvest
+B66168,B66168-grand-erie-public-school-board-candidates,,1,Grand Erie Public School Board candidates,3528018:Haldimand County,1,label,0,harvest
+B66168,B66168-grand-erie-public-school-board-withdrawn-candidates,,1,Grand Erie Public School Board withdrawn candidates,3528018:Haldimand County,1,label,0,harvest
+B66176,B66176-english-public-school-board-trustee-1-to-be-elected,,1,English Public School Board Trustee (1 to be elected),3530027:Wellesley,1,label,0,harvest
+B66176,B66176-english-public-school-board-trustee-1-to-be-elected,,4,English Public School Board Trustee (1 to be elected),3530027:Wellesley,1,label,0,harvest
+B66176,B66176-waterloo-region-district-school-board-trustee-vote-for-no-mo,,7,Waterloo Region District School Board Trustee (Vote for no more than 3),"3530016:Waterloo, City (CY)",1,label,0,harvest
+B66192,B66192-candidates-for-the-upper-canada-district-school-board-englis,,1,Candidates for the Upper Canada District School Board (English Public),3502010:Champlain,1,label,0,harvest
+B66192,B66192-english-public-upper-canada-district-school-board-of-eastern,,1,English Public (Upper Canada District School Board of Eastern Ontario) | SCHOOL BOARD TRUSTEE - ENGLISH PUBLIC | School Board Trustee - English Public (UCDSB),3501005:South Glengarry | 3501011:South Stormont | 3501050:North Glengarry,3,label,0,harvest
+B66192,B66192-name,,2,Name,3507021:Leeds and the Thousand Islands,1,label,0,harvest
+B66214,B66214-councillor-candidates,,9,Councillor Candidates,3547002:Arnprior,1,label,0,harvest
+B66214,B66214-deputy-mayor-candidates,,1,Deputy Mayor Candidates,3547002:Arnprior,1,label,0,harvest
+B66214,B66214-mayor-candidates,,3,Mayor Candidates,3547002:Arnprior,1,label,0,harvest
+B66214,B66214-school-board-trustee-english-public-one-1-to-be-elected,,1,School Board Trustee - English Public - one (1) to be elected,3547008:Greater Madawaska,1,label,0,harvest
+B66222,B66222-hastings-prince-edward-district-school-board-school-board-tr,,2,Hastings Prince Edward District School Board School Board Trustee,"3512001:Tyendinaga, Township (TP)",1,label,0,harvest
+B67008,B67008-bruce-grey-catholic-district-school-board-trustee-english-se,,1,Bruce-Grey Catholic District School Board Trustee - English Separate,3542045:The Blue Mountains,1,label,0,harvest
+B67008,B67008-bruce-grey-catholic-school-board-trustee,,1,Bruce Grey Catholic School Board Trustee,"3542059:Owen Sound, City (CY)",1,label,0,harvest
+B67008,B67008-english-separate-school-board-trustee-ward-31-bruce-grey-cat,,1,English Separate School Board Trustee - Ward 31 (Bruce-Grey Catholic District School Board) - Acclaimed*,3541032:Brockton,1,label,0,harvest
+B67008,B67008-english-separate-school-board-trustee-wards-34-36-bruce-grey,,2,English Separate School Board Trustee - Wards 34 & 36 (Bruce-Grey Catholic District School Board) - 1 Position,3541032:Brockton,1,label,0,harvest
+B67008,B67008-official-list-of-candidates-for-english-catholic-public-scho,,1,Official List of Candidates for English Catholic Public School Board Trustee,3542053:Georgian Bluffs,1,label,0,harvest
+B67016,B67016-candidates-for-huron-perth-catholic-district-school-board,,4,Candidates for Huron Perth Catholic District School Board,3531011:Stratford,1,label,0,harvest
+B67016,B67016-declaration-of-acclamation-to-office,,4,Declaration of Acclamation to Office,3540050:Morris-Turnberry,1,label,0,harvest
+B67016,B67016-huron-perth-catholic-separate-school-board-english,,2,Huron-Perth Catholic Separate School Board (English),3531013:Perth South,1,label,0,harvest
+B67024,B67024-trustee-wecdsb-wards-1-10,,2,Trustee - WECDSB - Wards 1 & 10,"3537039:Windsor, City (CY)",1,label,0,harvest
+B67024,B67024-trustee-wecdsb-wards-2-9,,1,Trustee - WECDSB - Wards 2 & 9,"3537039:Windsor, City (CY)",1,label,0,harvest
+B67024,B67024-trustee-wecdsb-wards-3-4,,2,Trustee - WECDSB - Wards 3 & 4,"3537039:Windsor, City (CY)",1,label,0,harvest
+B67024,B67024-trustee-wecdsb-wards-5-8,,3,Trustee - WECDSB - Wards 5 & 8,"3537039:Windsor, City (CY)",1,label,0,harvest
+B67024,B67024-trustee-wecdsb-wards-6-7,,2,Trustee - WECDSB - Wards 6 & 7,"3537039:Windsor, City (CY)",1,label,0,harvest
+B67032,B67032-contact-information,,1,Contact Information,3532018:Ingersoll,1,label,0,harvest
+B67032,B67032-london-district-catholic-school-board-trustee-acclaimed-engl,,1,"London District Catholic School Board Trustee - Acclaimed (English Separate) | Trustee, London District Catholic School Board (LDCSB)",3539027:Thames Centre | 3539033:Middlesex Centre,2,label,0,harvest
+B67032,B67032-london-district-catholic-school-board-trustee-english-separa,,1,London District Catholic School Board Trustee (English Separate),3532038:East Zorra-Tavistock,1,label,0,harvest
+B67032,B67032-phone-226-228-7784,,1,Phone: 226-228-7784,3532018:Ingersoll,1,label,0,harvest
+B67040,B67040-trustee-st-clair-catholic-district-school-board-english-sepa,,3,"Trustee, St. Clair Catholic District School Board (English Separate School Board)",3538030:Sarnia,1,label,0,harvest
+B67059,B67059-ward-1,,3,Ward 1,3520005:Toronto,1,label,0,harvest
+B67059,B67059-ward-10,,5,Ward 10,3520005:Toronto,1,label,0,harvest
+B67059,B67059-ward-11,,2,Ward 11,3520005:Toronto,1,label,0,harvest
+B67059,B67059-ward-12,,1,Ward 12,3520005:Toronto,1,label,0,harvest
+B67059,B67059-ward-2,,2,Ward 2,3520005:Toronto,1,label,0,harvest
+B67059,B67059-ward-3,,2,Ward 3,3520005:Toronto,1,label,0,harvest
+B67059,B67059-ward-4,,3,Ward 4,3520005:Toronto,1,label,0,harvest
+B67059,B67059-ward-5,,2,Ward 5,3520005:Toronto,1,label,0,harvest
+B67059,B67059-ward-6,,1,Ward 6,3520005:Toronto,1,label,0,harvest
+B67059,B67059-ward-7,,3,Ward 7,3520005:Toronto,1,label,0,harvest
+B67059,B67059-ward-8,,3,Ward 8,3520005:Toronto,1,label,0,harvest
+B67059,B67059-ward-9,,4,Ward 9,3520005:Toronto,1,label,0,harvest
+B67067,B67067-acclaimed-candidates-for-peterborough-victoria-northumberlan,,1,Acclaimed Candidates for Peterborough Victoria Northumberland and Clarington Catholic District School Board Trustee,3518017:Clarington,1,label,0,harvest
+B67067,B67067-peterborough-victoria-northumberland-and-clarington-catholic,,2,Peterborough Victoria Northumberland and Clarington Catholic District School Board Trustee,"3518017:Clarington, Municipality (MU)",1,label,0,harvest
+B67067,B67067-pvnccdsb-trustee,,5,PVNCCDSB Trustee,"3515014:Peterborough, City (CY)",1,label,0,harvest
+B67075,B67075-english-separate-school-trustee,,2,English Separate School Trustee,"3519049:King, Township (TP)",1,inferred-from-candidate-set,0,harvest
+B67075,B67075-trustee-york-catholic-district-school-board,,4,Trustee - York Catholic District School Board,"3519038:Richmond Hill, Town (T)",1,label,0,harvest
+B67075,B67075-ycdsb-trustee-area-1-ward-1,,2,YCDSB Trustee - Area 1 (Ward 1),"3519028:Vaughan, City (CY)",1,label,0,harvest
+B67075,B67075-ycdsb-trustee-area-2-ward-2,,1,YCDSB Trustee - Area 2 (Ward 2),"3519028:Vaughan, City (CY)",1,label,0,harvest
+B67075,B67075-york-catholic-district-school-board-trustee,,2,York Catholic District School Board Trustee,3519046:Aurora,1,label,0,harvest
+B67075,B67075-york-catholic-district-school-board-trustee,,1,York Catholic District School Board Trustee,3519070:Georgina,1,label,0,harvest
+B67075,B67075-york-catholic-district-school-board-trustee-wards-1-2-3-6,,2,"York Catholic District School Board Trustee (Wards 1, 2, 3 & 6)","3519036:Markham, City (CY)",1,label,0,harvest
+B67075,B67075-york-catholic-district-school-board-trustee-wards-4-5-7-8,,2,"York Catholic District School Board Trustee (Wards 4, 5, 7 & 8)","3519036:Markham, City (CY)",1,label,0,harvest
+B67075,B67075-york-catholic-school-board-trustee-for-aurora-king-and-whitc,,0,"York Catholic School Board Trustee for Aurora, King, and Whitchurch-Stouffville","3519046:Aurora, Town (T)",1,label,1,harvest
+B67083,B67083-acclaimed,,3,(Acclaimed),3522001:East Garafraxa,1,label,0,harvest
+B67083,B67083-contact-information,,1,Contact Information,3522008:Amaranth,1,label,0,harvest
+B67083,B67083-contact-information,,1,Contact Information,3522008:Amaranth,1,label,0,harvest
+B67083,B67083-date-filed,,2,Date Filed,3522001:East Garafraxa,1,label,0,harvest
+B67083,B67083-dufferin-peel-catholic-district-school-board-wards-1-3-4,,3,"Dufferin-Peel Catholic District School Board - Wards 1, 3, 4","3521010:Brampton, City (CY)",1,label,0,harvest
+B67083,B67083-dufferin-peel-catholic-district-school-board-wards-2-5-6,,3,"Dufferin-Peel Catholic District School Board - Wards 2, 5, 6","3521010:Brampton, City (CY)",1,label,0,harvest
+B67083,B67083-dufferin-peel-catholic-district-school-board-wards-7-8-9-10,,3,"Dufferin-Peel Catholic District School Board - Wards 7, 8, 9, 10","3521010:Brampton, City (CY)",1,label,0,harvest
+B67083,B67083-municipal-council-certified-candidates,,1,Municipal Council (Certified Candidates),3522001:East Garafraxa,1,label,0,harvest
+B67083,B67083-unofficial-candidates-for-school-board-trustee-english-separ,,2,*Unofficial candidates for School Board Trustee - English Separate (Dufferin-Peel Catholic District School Board),3522014:Orangeville,1,label,0,harvest
+B67091,B67091-english-catholic-school-board-trustee-simcoe-muskoka-catholi,,2,English Catholic School Board Trustee (Simcoe Muskoka Catholic District School Board),3543014:Bradford West Gwillimbury,1,label,0,harvest
+B67091,B67091-english-separate-school-trustee,,3,English Separate School Trustee,"3543068:Tiny, Township (TP)",1,inferred-from-candidate-set,0,harvest
+B67091,B67091-member-simcoe-muskoka-catholic-district-school-board-area-1,,0,Member - Simcoe Muskoka Catholic District School Board - Area 1,"3543042:Barrie, City (CY)",1,label,1,harvest
+B67091,B67091-member-simcoe-muskoka-catholic-district-school-board-area-2,,0,Member - Simcoe Muskoka Catholic District School Board - Area 2,"3543042:Barrie, City (CY)",1,label,1,harvest
+B67091,B67091-office-trustee-english-language-separate-school-board-simcoe,,3,"Office: Trustee, English Language Separate School Board (Simcoe Muskoka Catholic District School Board)",3543074:Midland,1,label,0,harvest
+B67091,B67091-simcoe-muskoka-catholic-district-school-board-english-separa,,1,Simcoe Muskoka Catholic District School Board (English-Separate),3543003:Adjala-Tosorontio,1,label,0,harvest
+B67091,B67091-simcoe-muskoka-catholic-district-school-board-representing-b,,2,"Simcoe Muskoka Catholic District School Board | Representing Barrie Wards 1, 2, 3 and 5",3543042:Barrie,1,label,0,harvest
+B67091,B67091-simcoe-muskoka-catholic-district-school-board-representing-b,,2,"Simcoe Muskoka Catholic District School Board | Representing Barrie Wards 4, 6, 7, 8, 9 and 10",3543042:Barrie,1,label,0,harvest
+B67091,B67091-trustee-english-separate,,1,"Trustee, English-Separate",3543052:Orillia,1,label,0,harvest
+B67105,B67105-durham-catholic-district-school-board-trustee-two-to-be-elec,,4,Durham Catholic District School Board Trustee (two to be elected),"3518009:Whitby, Town (T)",1,label,0,harvest
+B67105,B67105-trustee-durham-catholic-district-school-board,,2,"Trustee, Durham Catholic District School Board",3518013:Oshawa,1,label,0,harvest
+B67105,B67105-trustee-durham-catholic-district-school-board,,3,"Trustee, Durham Catholic District School Board","3518001:Pickering, City (CY)",1,label,0,harvest
+B67105,B67105-trustee-durham-catholic-district-school-board,,3,Trustee - Durham Catholic District School Board,"3518013:Oshawa, City (CY)",1,label,0,harvest
+B67113,B67113-1-to-be-elected,,2,1 to be elected,3524015:Halton Hills,1,label,0,harvest
+B67113,B67113-english-separate-school-trustee-ward-1-4,,2,English Separate School Trustee Ward 1 & 4,"3524009:Milton, Town (T)",1,inferred-from-candidate-set,0,harvest
+B67113,B67113-english-separate-school-trustee-ward-2-3,,2,English Separate School Trustee Ward 2 & 3,"3524009:Milton, Town (T)",1,inferred-from-candidate-set,0,harvest
+B67113,B67113-halton-catholic-district-school-board-wards-1-2-3,,3,"Halton Catholic District School Board - Wards 1,2 & 3","3524001:Oakville, Town (T)",1,label,0,harvest
+B67113,B67113-halton-catholic-district-school-board-wards-4-and-7,,1,Halton Catholic District School Board - Wards 4 and 7,"3524001:Oakville, Town (T)",1,label,0,harvest
+B67113,B67113-halton-catholic-district-school-board-wards-5-and-6,,2,Halton Catholic District School Board - Wards 5 and 6,"3524001:Oakville, Town (T)",1,label,0,harvest
+B67113,B67113-hcdsb-trustee-ward-1-2,,2,HCDSB Trustee - Ward 1 & 2,"3524002:Burlington, City (CY)",1,label,0,harvest
+B67113,B67113-hcdsb-trustee-ward-3-6,,2,HCDSB Trustee - Ward 3 & 6,"3524002:Burlington, City (CY)",1,label,0,harvest
+B67113,B67113-hcdsb-trustee-wards-4-5,,3,HCDSB Trustee - Wards 4 & 5,"3524002:Burlington, City (CY)",1,label,0,harvest
+B67113,B67113-ward-1-and-4,,2,Ward 1 and 4,3524009:Milton,1,label,0,harvest
+B67113,B67113-ward-2-and-3,,2,Ward 2 and 3,3524009:Milton,1,label,0,harvest
+B67121,B67121-ward-10-english-separate,,2,Ward 10 - English Separate,3525005:Hamilton,1,label,0,harvest
+B67121,B67121-ward-5-english-separate,,1,Ward 5 - English Separate,3525005:Hamilton,1,label,0,harvest
+B67121,B67121-ward-6-english-separate,,3,Ward 6 - English Separate,3525005:Hamilton,1,label,0,harvest
+B67121,B67121-ward-7-english-separate,,3,Ward 7 - English Separate,3525005:Hamilton,1,label,0,harvest
+B67121,B67121-wards-1-2-15-english-separate,,1,"Wards 1, 2 & 15 - English Separate",3525005:Hamilton,1,label,0,harvest
+B67121,B67121-wards-12-13-english-separate,,4,Wards 12 & 13 - English Separate,3525005:Hamilton,1,label,0,harvest
+B67121,B67121-wards-3-4-english-separate,,1,Wards 3 & 4 - English Separate,3525005:Hamilton,1,label,0,harvest
+B67121,B67121-wards-8-14-english-separate,,3,Wards 8 & 14 - English Separate,3525005:Hamilton,1,label,0,harvest
+B67121,B67121-wards-9-11-english-separate,,1,Wards 9 & 11 - English Separate,3525005:Hamilton,1,label,0,harvest
+B67130,B67130-candidates-for-wellington-catholic-district-school-board,,5,Candidates for Wellington Catholic District School Board | Wellington Catholic District School Board,"3523008:Guelph | 3523008:Guelph, City (CY)",2,label,0,harvest
+B67148,B67148-english-separate-school-board-trustee-2-to-be-elected,,2,English Separate School Board Trustee (2 to be elected),3530027:Wellesley,1,label,0,harvest
+B67148,B67148-english-separate-school-board-trustee-2-to-be-elected,,4,English Separate School Board Trustee (2 to be elected),3530027:Wellesley,1,label,0,harvest
+B67156,B67156-niagara-catholic-district-school-board-trustee-candidates,,3,Niagara Catholic District School Board Trustee Candidates,3526043:Niagara Falls,1,label,0,harvest
+B67164,B67164-brant-haldimand-norfolk-catholic-district-school-board-candi,,1,Brant Haldimand Norfolk Catholic District School Board candidates,3528018:Haldimand County,1,label,0,harvest
+B67172,B67172-candidates-for-the-catholic-district-school-board-of-eastern,,2,Candidates for the Catholic District School Board of Eastern Ontario (English Separate),3502010:Champlain,1,label,0,harvest
+B67172,B67172-english-separate-catholic-district-school-board-of-eastern-o,,1,English Separate (Catholic District School Board of Eastern Ontario),3501011:South Stormont,1,label,0,harvest
+B67172,B67172-school-board-trustee-english-separate-cdsbeo,,4,SCHOOL BOARD TRUSTEE - ENGLISH SEPARATE | School Board Trustee - English Separate (CDSBEO),3501005:South Glengarry | 3501050:North Glengarry,2,label,0,harvest
+B67199,B67199-school-board-trustee-english-catholic-one-1-to-be-elected,,1,School Board Trustee - English Catholic- one (1) to be elected,3547008:Greater Madawaska,1,label,0,harvest
+B67202,B67202-algonquin-and-lakeshore-catholic-district-school-board-trust,,3,Algonquin and Lakeshore Catholic District School Board Trustee School Board Trustee,"3512001:Tyendinaga, Township (TP)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-english-catholic-school-board,,1,English Catholic School Board,"3548069:Temagami, Municipality (MU)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-english-catholic-trustee-wards-1-14,,4,English Catholic Trustee Wards 1 & 14,"3539036:London, City (CY)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-english-catholic-trustee-wards-11-12-13,,3,"English Catholic Trustee Wards 11, 12 & 13","3539036:London, City (CY)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-english-catholic-trustee-wards-2-3-4,,2,"English Catholic Trustee Wards 2, 3 & 4","3539036:London, City (CY)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-english-catholic-trustee-wards-5-6-7,,4,"English Catholic Trustee Wards 5,6 & 7","3539036:London, City (CY)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-english-catholic-trustee-wards-8-9-10,,1,"English Catholic Trustee Wards 8, 9 & 10","3539036:London, City (CY)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-english-separate-school-board-trustee,,2,ENGLISH SEPARATE SCHOOL BOARD TRUSTEE,"3518029:Uxbridge, Township (TP)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-english-separate-school-board-trustee,,1,English Separate School Board Trustee,"3543031:Collingwood, Town (T)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-english-separate-school-trustee,,2,English Separate School Trustee,"3532042:Woodstock, City (CY)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-english-separate-school-trustee,,0,English Separate School Trustee,"3518005:Ajax, Town (T)",1,label,1,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-english-separate-school-trustee,,3,English Separate School Trustee,"3519054:East Gwillimbury, Town (T)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-english-separate-school-trustee,,1,English Separate School Trustee,"3544027:Lake of Bays, Township (TP) | 3544065:Georgian Bay, Township (TP)",2,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-english-separate-school-trustee,,0,English Separate School Trustee,"3544002:Gravenhurst, Town (T)",1,label,1,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-english-separate-school-trustee,,0,English Separate School Trustee,"3544042:Huntsville, Town (T)",1,label,1,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-school-board-trustee-english-separate,,0,School Board Trustee English Separate,"3547096:Deep River, Town (T)",1,label,1,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-school-board-trustee-english-separate,,0,"School Board Trustee, English Separate","3519044:Whitchurch-Stouffville, Town (T)",1,label,1,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-trustee-english-separate-ward-4,,1,Trustee English Separate Ward 4,"3521005:Mississauga, City (CY)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-trustee-english-separate-ward-5,,3,Trustee English Separate Ward 5,"3521005:Mississauga, City (CY)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-trustee-english-separate-ward-7,,2,Trustee English Separate Ward 7,"3521005:Mississauga, City (CY)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-trustee-english-separate-wards-1-and-3,,1,Trustee English Separate Wards 1 and 3,"3521005:Mississauga, City (CY)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-trustee-english-separate-wards-2-and-8,,2,Trustee English Separate Wards 2 and 8,"3521005:Mississauga, City (CY)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-trustee-english-separate-wards-6-and-11,,1,Trustee English Separate Wards 6 and 11,"3521005:Mississauga, City (CY)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-trustee-english-separate-wards-9-and-10,,3,Trustee English Separate Wards 9 and 10,"3521005:Mississauga, City (CY)",1,label,0,harvest
+UNRESOLVED-catholic,UNRESOLVED-catholic-waterloo-region-catholic-school-board-trustee-vote-for-no-mo,,4,Waterloo Region Catholic School Board Trustee (Vote for no more than 2),"3530016:Waterloo, City (CY)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-english-public-school-board,,2,English Public School Board,"3548069:Temagami, Municipality (MU)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-english-public-school-board-trustee,,2,ENGLISH PUBLIC SCHOOL BOARD TRUSTEE,"3518029:Uxbridge, Township (TP)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-english-public-school-board-trustee,,5,English Public School Board Trustee,"3543031:Collingwood, Town (T)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-english-public-school-board-trustee,,2,English Public School Board Trustee,"3521024:Caledon, Town (T)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-english-public-school-trustee,,3,English Public School Trustee,"3543068:Tiny, Township (TP)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-english-public-school-trustee,,3,English Public School Trustee,"3532042:Woodstock, City (CY)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-english-public-school-trustee,,0,English Public School Trustee,"3518005:Ajax, Town (T)",1,label,1,harvest
+UNRESOLVED-public,UNRESOLVED-public-english-public-school-trustee,,2,English Public School Trustee,"3519054:East Gwillimbury, Town (T)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-english-public-school-trustee,,2,English Public School Trustee,"3544027:Lake of Bays, Township (TP)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-english-public-school-trustee,,0,English Public School Trustee,"3544042:Huntsville, Town (T)",1,label,1,harvest
+UNRESOLVED-public,UNRESOLVED-public-english-public-school-trustee-wards-3-4,,5,English Public School Trustee Wards 3 & 4,"3524009:Milton, Town (T)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-english-public-trustee-wards-1-11-12-14,,6,"English Public Trustee Wards 1, 11, 12 & 14","3539036:London, City (CY)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-english-public-trustee-wards-2-3-4-5-6,,9,"English Public Trustee Wards 2, 3, 4, 5 & 6","3539036:London, City (CY)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-english-public-trustee-wards-7-8-9-10-13,,9,"English Public Trustee Wards 7, 8, 9, 10 & 13","3539036:London, City (CY)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-school-board-trustee-english-public,,0,School Board Trustee English Public,"3547096:Deep River, Town (T)",1,label,1,harvest
+UNRESOLVED-public,UNRESOLVED-public-school-board-trustee-english-public,,0,"School Board Trustee, English Public","3519044:Whitchurch-Stouffville, Town (T)",1,label,1,harvest
+UNRESOLVED-public,UNRESOLVED-public-trustee-english-public-ward-5,,4,Trustee English Public Ward 5,"3521005:Mississauga, City (CY)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-trustee-english-public-wards-1-and-7,,6,Trustee English Public Wards 1 and 7,"3521005:Mississauga, City (CY)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-trustee-english-public-wards-2-and-8,,4,Trustee English Public Wards 2 and 8,"3521005:Mississauga, City (CY)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-trustee-english-public-wards-3-and-4,,3,Trustee English Public Wards 3 and 4,"3521005:Mississauga, City (CY)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-trustee-english-public-wards-6-and-11,,4,Trustee English Public Wards 6 and 11,"3521005:Mississauga, City (CY)",1,label,0,harvest
+UNRESOLVED-public,UNRESOLVED-public-trustee-english-public-wards-9-and-10,,2,Trustee English Public Wards 9 and 10,"3521005:Mississauga, City (CY)",1,label,0,harvest
