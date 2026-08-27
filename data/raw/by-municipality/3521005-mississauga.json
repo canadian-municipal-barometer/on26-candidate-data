@@ -49,10 +49,7 @@
         "max_votes": 1,
         "block_vote": false,
         "districts": {
-          "Ward 1": [
-            "STEPHEN DASKO",
-            "OLIVIA GANNON"
-          ],
+          "Ward 1": ["STEPHEN DASKO", "OLIVIA GANNON"],
           "Ward 2": [
             "SAMER FAWZI ALGHOUL",
             "RONNIE AMYOTTE",
@@ -141,11 +138,7 @@
             "SUE MCFADDEN",
             "SALMAN TARIQ"
           ],
-          "Ward 11": [
-            "BRAD BUTT",
-            "AMIN NANJI",
-            "DEV VASHI"
-          ]
+          "Ward 11": ["BRAD BUTT", "AMIN NANJI", "DEV VASHI"]
         }
       }
     ]

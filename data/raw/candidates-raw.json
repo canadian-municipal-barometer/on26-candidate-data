@@ -951,7 +951,8 @@
     "notes": {
       "list_status": "NOT certified. Alone among the 38, Peterborough had not updated its page three days after nominations closed: the heading still reads 'List of Uncertified Candidates' and the text below it still reads 'The nomination period is open until August 21 at 2 p.m.' A no-cache refetch on 2026-08-24 returned the same page, so this is the city's published state, not a stale copy. The linked /elections/candidates/ page confirms it, saying only that the list of uncertified candidates is posted on the Voters page. The names below are that list; a certified list should be re-collected when the city posts one.",
       "source_note": "The layout changed since 2026-08-11: candidates are now paragraphs of the form 'Name: contact details' under an office heading, not table rows.",
-      "structure_match": "Five named wards published - Otonabee, Monaghan, Town, Ashburnham, Northcrest - matching the districts listed in the structure CSV (5 districts, 2 seats each, vote-for-2).",
+      "structure_match": "Five wards published - Ward 1 - Otonabee, Ward 2 - Monaghan, Ward 3 - Town, Ward 4 - Ashburnham, Ward 5 - Northcrest - matching the districts listed in the structure CSV (5 districts, 2 seats each, vote-for-2), which names them without their numbers.",
+      "ward_labels": "The districts here are the page's own headings, 'Councillor, Ward 1 - Otonabee' and so on, which it repeats over its election-day voting places. Collected 2026-08-24 as the name half alone ('Otonabee'); the numbers were restored 2026-08-27 from the same page.",
       "retrieved": "2026-08-24",
       "withdrawals": "Two Ward 1 candidates are marked 'Withdrawn' and are excluded here: Jessica Correa and Noella Koshul. The page's other three withdrawals are school board trustees."
     },
@@ -1031,7 +1032,7 @@
             "candidate_list_url": "https://www.peterborough.ca/council-city-hall/elections/voters/"
           },
           "districts": {
-            "Otonabee": {
+            "Ward 1 - Otonabee": {
               "candidates": [
                 {
                   "name_raw": "Kevin Duguay",
@@ -1060,7 +1061,7 @@
                 }
               ]
             },
-            "Monaghan": {
+            "Ward 2 - Monaghan": {
               "candidates": [
                 {
                   "name_raw": "Matt Crowley",
@@ -1094,7 +1095,7 @@
                 }
               ]
             },
-            "Town": {
+            "Ward 3 - Town": {
               "candidates": [
                 {
                   "name_raw": "Alex Bierk",
@@ -1123,7 +1124,7 @@
                 }
               ]
             },
-            "Ashburnham": {
+            "Ward 4 - Ashburnham": {
               "candidates": [
                 {
                   "name_raw": "Gary Baldwin",
@@ -1147,7 +1148,7 @@
                 }
               ]
             },
-            "Northcrest": {
+            "Ward 5 - Northcrest": {
               "candidates": [
                 {
                   "name_raw": "Andrew Beamer",
@@ -2575,6 +2576,7 @@
       "source_note": "candidate_list_url moved to that release. /council/elections carries no names and links to it, and /council/elections/candidates redirects to a 403. Both /council/elections and the release are behind a bot filter that refuses scripted fetches with 403, so the page was read in a browser.",
       "incomplete_warning": "Only one mayoral candidate (incumbent Steven Del Duca) had filed as of 2026-08-11 - another illustration that these lists are incomplete before the deadline.",
       "structure_match": "One 'Local and Regional Councillor' at-large table plus Ward 1-5 Councillor tables, matching both structure-CSV rows (at-large vote-for-4, 5 single-member wards).",
+      "ward_labels": "The districts here are the release's own headings, 'Ward 1 Councillor (Maple/Kleinburg)' and so on, kept in their parentheses because they name the communities a ward covers rather than the ward. Collected 2026-08-24 as the number half alone ('Ward 1'); the communities were restored 2026-08-27 from the same release.",
       "retrieved": "2026-08-24",
       "acclamation": "The release names Ward 5 Councillor (Thornhill) Gila Martow as acclaimed, and she is the ward's only candidate, so the build derives the same result from the count. Its other two acclamations are school board trustees."
     },
@@ -2629,7 +2631,7 @@
             "candidate_list_url": "https://www.vaughan.ca/news/city-vaughans-list-acclaimed-and-certified-candidates-2026-municipal-election"
           },
           "districts": {
-            "Ward 1": {
+            "Ward 1 (Maple/Kleinburg)": {
               "candidates": [
                 {
                   "name_raw": "Marilyn Iafrate",
@@ -2653,7 +2655,7 @@
                 }
               ]
             },
-            "Ward 2": {
+            "Ward 2 (West Woodbridge)": {
               "candidates": [
                 {
                   "name_raw": "Pedro Benevides",
@@ -2672,7 +2674,7 @@
                 }
               ]
             },
-            "Ward 3": {
+            "Ward 3 (Woodbridge/Vellore)": {
               "candidates": [
                 {
                   "name_raw": "Asadullah Aminpur",
@@ -2686,7 +2688,7 @@
                 }
               ]
             },
-            "Ward 4": {
+            "Ward 4 (Concord/Thornhill)": {
               "candidates": [
                 {
                   "name_raw": "Chris Ainsworth",
@@ -2710,7 +2712,7 @@
                 }
               ]
             },
-            "Ward 5": {
+            "Ward 5 (Thornhill)": {
               "candidates": [
                 {
                   "name_raw": "Gila Martow",
@@ -3824,6 +3826,7 @@
       "source_note": "candidate_list_url moved: the old /data/elections/candidate_list/ now returns 404 and the list lives at /city-government/elections/candidate-list/. The tables are built by script, so a plain fetch returns only the disclaimer; the names were read from the rendered DataTables (mayorCityWideDT and councillorDT_w1..w25).",
       "name_split": "first_name/last_name come from the feed's own firstName/lastName fields, not from parsing.",
       "structure_match": "25 wards returned, matching n_districts=25 in the structure CSV.",
+      "ward_labels": "The districts here are the headings over the councillor tables, 'Councillor Ward 1 - Etobicoke North' and so on. Collected 2026-08-24 as the number half alone ('Ward 1') - the tables are drawn by script, so a plain fetch of this page shows neither the names nor the candidates. Restored 2026-08-27 by rendering the page.",
       "retrieved": "2026-08-24",
       "withdrawals": "The page keeps withdrawn nominations in a separate 'Withdrawn Candidates' tab, which the certified tables already exclude, so nothing had to be dropped here.",
       "name_quirk": "Ward 21 has a candidate the city renders as 'Nisha Kumari, ' — a surname with no given name after the comma, the same shape as Brampton's 'Gursimranjit Singh, -'. Recorded with the separator as published, for display_name() to strip."
@@ -4131,7 +4134,7 @@
             "candidate_list_url": "https://www.toronto.ca/city-government/elections/candidate-list/"
           },
           "districts": {
-            "Ward 1": {
+            "Ward 1 - Etobicoke North": {
               "candidates": [
                 {
                   "name_raw": "Abbey, Abraham",
@@ -4185,7 +4188,7 @@
                 }
               ]
             },
-            "Ward 2": {
+            "Ward 2 - Etobicoke Centre": {
               "candidates": [
                 {
                   "name_raw": "Alexander, Jennifer",
@@ -4204,7 +4207,7 @@
                 }
               ]
             },
-            "Ward 3": {
+            "Ward 3 - Etobicoke-Lakeshore": {
               "candidates": [
                 {
                   "name_raw": "Andrei, Mihaela",
@@ -4228,7 +4231,7 @@
                 }
               ]
             },
-            "Ward 4": {
+            "Ward 4 - Parkdale-High Park": {
               "candidates": [
                 {
                   "name_raw": "Corcoran, Michael",
@@ -4282,7 +4285,7 @@
                 }
               ]
             },
-            "Ward 5": {
+            "Ward 5 - York South-Weston": {
               "candidates": [
                 {
                   "name_raw": "Ali, Sharmarke",
@@ -4331,7 +4334,7 @@
                 }
               ]
             },
-            "Ward 6": {
+            "Ward 6 - York Centre": {
               "candidates": [
                 {
                   "name_raw": "Artamonov, Alexander",
@@ -4350,7 +4353,7 @@
                 }
               ]
             },
-            "Ward 7": {
+            "Ward 7 - Humber River-Black Creek": {
               "candidates": [
                 {
                   "name_raw": "Antwi, Lorna",
@@ -4369,7 +4372,7 @@
                 }
               ]
             },
-            "Ward 8": {
+            "Ward 8 - Eglinton-Lawrence": {
               "candidates": [
                 {
                   "name_raw": "Colle, Mike",
@@ -4403,7 +4406,7 @@
                 }
               ]
             },
-            "Ward 9": {
+            "Ward 9 - Davenport": {
               "candidates": [
                 {
                   "name_raw": "Bravo, Alejandra",
@@ -4427,7 +4430,7 @@
                 }
               ]
             },
-            "Ward 10": {
+            "Ward 10 - Spadina-Fort York": {
               "candidates": [
                 {
                   "name_raw": "Cunningham, Ian",
@@ -4471,7 +4474,7 @@
                 }
               ]
             },
-            "Ward 11": {
+            "Ward 11 - University-Rosedale": {
               "candidates": [
                 {
                   "name_raw": "Courtis, Keenan",
@@ -4520,7 +4523,7 @@
                 }
               ]
             },
-            "Ward 12": {
+            "Ward 12 - Toronto-St. Paul's": {
               "candidates": [
                 {
                   "name_raw": "Cottrell, David",
@@ -4554,7 +4557,7 @@
                 }
               ]
             },
-            "Ward 13": {
+            "Ward 13 - Toronto Centre": {
               "candidates": [
                 {
                   "name_raw": "Cadeau, Joe",
@@ -4613,7 +4616,7 @@
                 }
               ]
             },
-            "Ward 14": {
+            "Ward 14 - Toronto-Danforth": {
               "candidates": [
                 {
                   "name_raw": "Ahmad, Maqsood",
@@ -4707,7 +4710,7 @@
                 }
               ]
             },
-            "Ward 15": {
+            "Ward 15 - Don Valley West": {
               "candidates": [
                 {
                   "name_raw": "Chernos Lin, Rachel",
@@ -4726,7 +4729,7 @@
                 }
               ]
             },
-            "Ward 16": {
+            "Ward 16 - Don Valley East": {
               "candidates": [
                 {
                   "name_raw": "Burnside, Jon",
@@ -4750,7 +4753,7 @@
                 }
               ]
             },
-            "Ward 17": {
+            "Ward 17 - Don Valley North": {
               "candidates": [
                 {
                   "name_raw": "Adamson, Jeffery",
@@ -4789,7 +4792,7 @@
                 }
               ]
             },
-            "Ward 18": {
+            "Ward 18 - Willowdale": {
               "candidates": [
                 {
                   "name_raw": "Cheng, Lily",
@@ -4823,7 +4826,7 @@
                 }
               ]
             },
-            "Ward 19": {
+            "Ward 19 - Beaches-East York": {
               "candidates": [
                 {
                   "name_raw": "Ali, Syeda Jaana",
@@ -4892,7 +4895,7 @@
                 }
               ]
             },
-            "Ward 20": {
+            "Ward 20 - Scarborough Southwest": {
               "candidates": [
                 {
                   "name_raw": "Choudhury, Laikul",
@@ -4936,7 +4939,7 @@
                 }
               ]
             },
-            "Ward 21": {
+            "Ward 21 - Scarborough Centre": {
               "candidates": [
                 {
                   "name_raw": "Ahmed, Taiba",
@@ -4995,7 +4998,7 @@
                 }
               ]
             },
-            "Ward 22": {
+            "Ward 22 - Scarborough-Agincourt": {
               "candidates": [
                 {
                   "name_raw": "Azad, Madhuri",
@@ -5049,7 +5052,7 @@
                 }
               ]
             },
-            "Ward 23": {
+            "Ward 23 - Scarborough North": {
               "candidates": [
                 {
                   "name_raw": "Chen, Shaun",
@@ -5093,7 +5096,7 @@
                 }
               ]
             },
-            "Ward 24": {
+            "Ward 24 - Scarborough-Guildwood": {
               "candidates": [
                 {
                   "name_raw": "Ainslie, Paul",
@@ -5127,7 +5130,7 @@
                 }
               ]
             },
-            "Ward 25": {
+            "Ward 25 - Scarborough-Rouge Park": {
               "candidates": [
                 {
                   "name_raw": "Allen, Shawn",
@@ -8309,6 +8312,7 @@
       "list_status": "Certified. The page reads 'The City Clerk is satisfied that these individuals are qualified to be nominated and that their nominations comply with the Municipal Elections Act, 1996, and therefore has certified each of the following candidates for the office noted below.'",
       "source_note": "district_source_url is the ward councillors page; the candidate list sits under the Elections section.",
       "structure_match": "Six City Councillor ward tables published and no elected Regional Councillor race, consistent with SOURCES.md recording that Niagara abolished elected regional councillors for 2026 and that St. Catharines' at-large regional row was dropped.",
+      "ward_labels": "The districts here are the headings over the six councillor tables, 'Ward 1 - Merritton' and so on. Collected 2026-08-24 as the number half alone ('Ward 1'); the names were restored 2026-08-27 from the same page.",
       "retrieved": "2026-08-24",
       "name_changes": "The certified list drops the parenthesised short forms four names carried on 2026-08-11: 'Geoffrey (Geoff) Crane' and 'Jacqueline (Jackie) Lindal' in Ward 1, 'Matthew (Matt) Harris' in Ward 2, and 'Dunsin Sunday Fakorede' in Ward 5, now published as Geoff Crane, Jackie Lindal, Matt Harris and Dunsin Fakorede."
     },
@@ -8378,7 +8382,7 @@
             "candidate_list_url": "https://www.stcatharines.ca/council-and-administration/elections/registered-candidates/"
           },
           "districts": {
-            "Ward 1": {
+            "Ward 1 - Merritton": {
               "candidates": [
                 {
                   "name_raw": "Matt Aymar",
@@ -8402,7 +8406,7 @@
                 }
               ]
             },
-            "Ward 2": {
+            "Ward 2 - St. Andrew's": {
               "candidates": [
                 {
                   "name_raw": "Jim Adair",
@@ -8441,7 +8445,7 @@
                 }
               ]
             },
-            "Ward 3": {
+            "Ward 3 - St. George's": {
               "candidates": [
                 {
                   "name_raw": "Mike Britton",
@@ -8475,7 +8479,7 @@
                 }
               ]
             },
-            "Ward 4": {
+            "Ward 4 - St. Patrick's": {
               "candidates": [
                 {
                   "name_raw": "Grant Higginson",
@@ -8509,7 +8513,7 @@
                 }
               ]
             },
-            "Ward 5": {
+            "Ward 5 - Grantham": {
               "candidates": [
                 {
                   "name_raw": "Spencer Bellows-DeWolfe",
@@ -8538,7 +8542,7 @@
                 }
               ]
             },
-            "Ward 6": {
+            "Ward 6 - Port Dalhousie": {
               "candidates": [
                 {
                   "name_raw": "Marty Mako",

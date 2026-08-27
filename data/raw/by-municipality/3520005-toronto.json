@@ -8,6 +8,7 @@
     "source_note": "candidate_list_url moved: the old /data/elections/candidate_list/ now returns 404 and the list lives at /city-government/elections/candidate-list/. The tables are built by script, so a plain fetch returns only the disclaimer; the names were read from the rendered DataTables (mayorCityWideDT and councillorDT_w1..w25).",
     "name_split": "first_name/last_name come from the feed's own firstName/lastName fields, not from parsing.",
     "structure_match": "25 wards returned, matching n_districts=25 in the structure CSV.",
+    "ward_labels": "The districts here are the headings over the councillor tables, 'Councillor Ward 1 - Etobicoke North' and so on. Collected 2026-08-24 as the number half alone ('Ward 1') - the tables are drawn by script, so a plain fetch of this page shows neither the names nor the candidates. Restored 2026-08-27 by rendering the page.",
     "retrieved": "2026-08-24",
     "withdrawals": "The page keeps withdrawn nominations in a separate 'Withdrawn Candidates' tab, which the certified tables already exclude, so nothing had to be dropped here.",
     "name_quirk": "Ward 21 has a candidate the city renders as 'Nisha Kumari, ' — a surname with no given name after the comma, the same shape as Brampton's 'Gursimranjit Singh, -'. Recorded with the separator as published, for display_name() to strip."
@@ -89,7 +90,7 @@
         "max_votes": 1,
         "block_vote": false,
         "districts": {
-          "Ward 1": [
+          "Ward 1 - Etobicoke North": [
             "Abbey, Abraham",
             "Adib, Ala'a",
             "Babar, Saima",
@@ -101,18 +102,18 @@
             "Parmar, Hard",
             "Santos, Kristian"
           ],
-          "Ward 2": [
+          "Ward 2 - Etobicoke Centre": [
             "Alexander, Jennifer",
             "Andrachuk, Katie",
             "Holyday, Stephen"
           ],
-          "Ward 3": [
+          "Ward 3 - Etobicoke-Lakeshore": [
             "Andrei, Mihaela",
             "Internicola, Anthony",
             "Morley, Amber",
             "Opitz, Ted"
           ],
-          "Ward 4": [
+          "Ward 4 - Parkdale-High Park": [
             "Corcoran, Michael",
             "Guerrera, Nadia",
             "King, Debbie",
@@ -124,7 +125,7 @@
             "Weber, Holly",
             "Yuen, Steve"
           ],
-          "Ward 5": [
+          "Ward 5 - York South-Weston": [
             "Ali, Sharmarke",
             "Boateng, Matthew",
             "Di Giorgio, Daniel",
@@ -135,17 +136,17 @@
             "Padovani, Chiara",
             "Phillips, Sileen"
           ],
-          "Ward 6": [
+          "Ward 6 - York Centre": [
             "Artamonov, Alexander",
             "Irving, Conroy",
             "Pasternak, James"
           ],
-          "Ward 7": [
+          "Ward 7 - Humber River-Black Creek": [
             "Antwi, Lorna",
             "Coombs, Amanda",
             "Perruzza, Anthony"
           ],
-          "Ward 8": [
+          "Ward 8 - Eglinton-Lawrence": [
             "Colle, Mike",
             "Grade, Liz",
             "Maiolo, Domenico",
@@ -153,13 +154,13 @@
             "Torrone, Enzo",
             "Trayes, Daniel"
           ],
-          "Ward 9": [
+          "Ward 9 - Davenport": [
             "Bravo, Alejandra",
             "Jansen, Ashley",
             "Martins, Marco",
             "Simon, Neil"
           ],
-          "Ward 10": [
+          "Ward 10 - Spadina-Fort York": [
             "Cunningham, Ian",
             "Ding, Xue",
             "Hoàng-Lefranc, Andi",
@@ -169,7 +170,7 @@
             "Neemuchwala, Husain",
             "Vashistha, Aanchal"
           ],
-          "Ward 11": [
+          "Ward 11 - University-Rosedale": [
             "Courtis, Keenan",
             "Hawkes, Terri",
             "Layton, Mike",
@@ -180,7 +181,7 @@
             "Viret, Paul",
             "Yoon, Diana"
           ],
-          "Ward 12": [
+          "Ward 12 - Toronto-St. Paul's": [
             "Cottrell, David",
             "Kalimbet, Jenny",
             "Kamal, Ahmed",
@@ -188,7 +189,7 @@
             "Murphy, Bob",
             "Nadimi, Mina"
           ],
-          "Ward 13": [
+          "Ward 13 - Toronto Centre": [
             "Cadeau, Joe",
             "Cai, Tom",
             "Davis, Victoria",
@@ -201,7 +202,7 @@
             "Tate, Daniel",
             "Ward, Nicki"
           ],
-          "Ward 14": [
+          "Ward 14 - Toronto-Danforth": [
             "Ahmad, Maqsood",
             "Chapelle, Susan",
             "Connor, Michael",
@@ -221,18 +222,18 @@
             "Voutsinas, Maria",
             "Walcott, Denise"
           ],
-          "Ward 15": [
+          "Ward 15 - Don Valley West": [
             "Chernos Lin, Rachel",
             "Sharp, Sheena",
             "Tsang, Denis"
           ],
-          "Ward 16": [
+          "Ward 16 - Don Valley East": [
             "Burnside, Jon",
             "Erdemir, Sinan",
             "Moffat, Didi",
             "Moffatt, Stacey"
           ],
-          "Ward 17": [
+          "Ward 17 - Don Valley North": [
             "Adamson, Jeffery",
             "Carroll, Shelley",
             "Kavod, Jethro Adir",
@@ -241,7 +242,7 @@
             "Xiao, Hong",
             "Zuniga, Sabrina"
           ],
-          "Ward 18": [
+          "Ward 18 - Willowdale": [
             "Cheng, Lily",
             "Daneshvar, Nicole",
             "Magazzinich, David",
@@ -249,7 +250,7 @@
             "Yusifov, Nathan",
             "Zarezade, Ardeshir"
           ],
-          "Ward 19": [
+          "Ward 19 - Beaches-East York": [
             "Ali, Syeda Jaana",
             "Dann, James",
             "Erskine-Smith, Nate",
@@ -264,7 +265,7 @@
             "Wilkins, Devin",
             "Worden, Jennie"
           ],
-          "Ward 20": [
+          "Ward 20 - Scarborough Southwest": [
             "Choudhury, Laikul",
             "Kaid, Naser",
             "Kandavel, Parthi",
@@ -274,7 +275,7 @@
             "Reza, Mohammad Ali",
             "Rupasinghe, Kevin"
           ],
-          "Ward 21": [
+          "Ward 21 - Scarborough Centre": [
             "Ahmed, Taiba",
             "Barahmand, Bahareh",
             "Evbagharu, Patience",
@@ -287,7 +288,7 @@
             "Thompson, Michael",
             "Veerasingam, Krissan"
           ],
-          "Ward 22": [
+          "Ward 22 - Scarborough-Agincourt": [
             "Azad, Madhuri",
             "Chan, Bill",
             "Ho, Jackson",
@@ -299,7 +300,7 @@
             "Morgan, Donny",
             "Vijayarajan, Sindia"
           ],
-          "Ward 23": [
+          "Ward 23 - Scarborough North": [
             "Chen, Shaun",
             "Dong, Han",
             "Javed, Sajawal",
@@ -309,7 +310,7 @@
             "Phen, Ronald",
             "Sathiyanantham, Piravena"
           ],
-          "Ward 24": [
+          "Ward 24 - Scarborough-Guildwood": [
             "Ainslie, Paul",
             "Bazil, Robert",
             "Mulamalla, Jithender",
@@ -317,7 +318,7 @@
             "Sivanandan, Arun",
             "Wu, An"
           ],
-          "Ward 25": [
+          "Ward 25 - Scarborough-Rouge Park": [
             "Allen, Shawn",
             "Casinathen, Dharshan",
             "Fernando, Ashan",

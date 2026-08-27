@@ -401,10 +401,10 @@ test("every served name is a display string the survey can read back", () => {
 test("a respondent is served their own ward and no other", () => {
   // The failure this guards against is summing a municipality's wards together. Thunder
   // Bay is the case that would show it: its own ward's councillor, never the other six
-  // wards', which would total 7 marks rather than 1.
+  // wards', which would total 7 marks rather than 1 and 22 names rather than 2.
   const tb = DATA.municipalities["3558004"];
   assert.equal(servedTo(tb, "McIntyre").fields.ward_max_votes, 1);
-  assert.equal(servedTo(tb, "McIntyre").names.coun_ward.length, 1);
+  assert.equal(servedTo(tb, "McIntyre").names.coun_ward.length, 2);
 
   // Every ward of every municipality: neither councillor list may carry a name from a
   // different ward's race.
@@ -441,9 +441,9 @@ test("Sarnia's two city-wide slates are two contests, city and county", () => {
   const { fields, names } = servedTo(sarnia, AT_LARGE);
 
   assert.equal(fields.atlarge_max_votes, 4);
-  assert.equal(names.coun_atlarge.length, 15);
+  assert.equal(names.coun_atlarge.length, 21);
   assert.equal(fields.reg_coun_max_votes, 4);
-  assert.equal(names.coun_reg.length, 13);
+  assert.equal(names.coun_reg.length, 17);
   assert.deepEqual(
     names.coun_atlarge.filter((n) => names.coun_reg.includes(n)),
     [],
@@ -482,7 +482,7 @@ test("at-large councillors are atlarge even with no ward race to collide with", 
   for (const [census_id, marks, listed] of [
     ["3526043", 8, null], // Niagara Falls
     ["3548044", 10, null], // North Bay
-    ["3538030", 4, 15], // Sarnia: the City slate; its City-County one is reg_coun
+    ["3538030", 4, 21], // Sarnia: the City slate; its City-County one is reg_coun
   ]) {
     const mun = DATA.municipalities[census_id];
     assert.deepEqual(Object.keys(mun.wards), [AT_LARGE], mun.name);
@@ -697,11 +697,19 @@ test("Chatham-Kent's two ward tiers differ, and Thunder Bay runs both races", ()
   assert.equal(tb.ward, 1);
   assert.equal(tb.ward_max_votes, 1);
   assert.notEqual(tb.atlarge_accl, "");
-  // Acclamation is per contest now, which is the point of splitting them: this ward's
-  // councillor is in unopposed, while the at-large race is contested. Merged, the ward
-  // seat's acclamation was invisible — the combined field read 0.
-  assert.equal(tb.ward_accl, 1);
+  // Acclamation is per contest, which is the point of splitting them: each race answers
+  // for itself. Both of Thunder Bay's are contested on the certified list — McIntyre drew
+  // a second candidate at the deadline, so the acclaimed ward that used to make the point
+  // here is gone, and the contrast is pinned below on a ward that is still acclaimed.
+  assert.equal(tb.ward_accl, 0);
   assert.equal(tb.atlarge_accl, 0);
+
+  // A ward race that fills its seat unopposed still reads 1, in a municipality whose
+  // other councillor races are contested. Merged into one field, that would be invisible.
+  const ottawa = DATA.municipalities["3506008"].wards;
+  assert.equal(ottawa["Ward 16 River"].fields.ward_accl, 1);
+  assert.equal(ottawa["Ward 16 River"].names.coun_ward.length, 1);
+  assert.equal(ottawa["Ward 14 Somerset"].fields.ward_accl, 0);
 });
 
 test("a ward pair is reachable from either of its wards", () => {

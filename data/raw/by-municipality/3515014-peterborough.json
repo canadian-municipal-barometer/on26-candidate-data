@@ -6,7 +6,8 @@
   "notes": {
     "list_status": "NOT certified. Alone among the 38, Peterborough had not updated its page three days after nominations closed: the heading still reads 'List of Uncertified Candidates' and the text below it still reads 'The nomination period is open until August 21 at 2 p.m.' A no-cache refetch on 2026-08-24 returned the same page, so this is the city's published state, not a stale copy. The linked /elections/candidates/ page confirms it, saying only that the list of uncertified candidates is posted on the Voters page. The names below are that list; a certified list should be re-collected when the city posts one.",
     "source_note": "The layout changed since 2026-08-11: candidates are now paragraphs of the form 'Name: contact details' under an office heading, not table rows.",
-    "structure_match": "Five named wards published - Otonabee, Monaghan, Town, Ashburnham, Northcrest - matching the districts listed in the structure CSV (5 districts, 2 seats each, vote-for-2).",
+    "structure_match": "Five wards published - Ward 1 - Otonabee, Ward 2 - Monaghan, Ward 3 - Town, Ward 4 - Ashburnham, Ward 5 - Northcrest - matching the districts listed in the structure CSV (5 districts, 2 seats each, vote-for-2), which names them without their numbers.",
+    "ward_labels": "The districts here are the page's own headings, 'Councillor, Ward 1 - Otonabee' and so on, which it repeats over its election-day voting places. Collected 2026-08-24 as the name half alone ('Otonabee'); the numbers were restored 2026-08-27 from the same page.",
     "retrieved": "2026-08-24",
     "withdrawals": "Two Ward 1 candidates are marked 'Withdrawn' and are excluded here: Jessica Correa and Noella Koshul. The page's other three withdrawals are school board trustees."
   },
@@ -41,14 +42,14 @@
         "max_votes": 2,
         "block_vote": true,
         "districts": {
-          "Otonabee": [
+          "Ward 1 - Otonabee": [
             "Kevin Duguay",
             "Lucas Graham",
             "Joe Laton-Trickett",
             "Lesley Parnell",
             "Chris Potter"
           ],
-          "Monaghan": [
+          "Ward 2 - Monaghan": [
             "Matt Crowley",
             "Ashley Flynn",
             "Rose Kitney",
@@ -56,20 +57,20 @@
             "Aris Metaxakis",
             "AJ Shearer"
           ],
-          "Town": [
+          "Ward 3 - Town": [
             "Alex Bierk",
             "Jenni Cathcart",
             "Jessica Kuhlmorgen-Hille",
             "Joy Lachica",
             "Nigel Lister"
           ],
-          "Ashburnham": [
+          "Ward 4 - Ashburnham": [
             "Gary Baldwin",
             "Ashley Bonner",
             "Andrew MacGregor",
             "Jason Stabler"
           ],
-          "Northcrest": [
+          "Ward 5 - Northcrest": [
             "Andrew Beamer",
             "Debbie Halstead",
             "Phil Jolicoeur",

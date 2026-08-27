@@ -7,6 +7,7 @@
     "list_status": "Certified. The page reads 'The City Clerk is satisfied that these individuals are qualified to be nominated and that their nominations comply with the Municipal Elections Act, 1996, and therefore has certified each of the following candidates for the office noted below.'",
     "source_note": "district_source_url is the ward councillors page; the candidate list sits under the Elections section.",
     "structure_match": "Six City Councillor ward tables published and no elected Regional Councillor race, consistent with SOURCES.md recording that Niagara abolished elected regional councillors for 2026 and that St. Catharines' at-large regional row was dropped.",
+    "ward_labels": "The districts here are the headings over the six councillor tables, 'Ward 1 - Merritton' and so on. Collected 2026-08-24 as the number half alone ('Ward 1'); the names were restored 2026-08-27 from the same page.",
     "retrieved": "2026-08-24",
     "name_changes": "The certified list drops the parenthesised short forms four names carried on 2026-08-11: 'Geoffrey (Geoff) Crane' and 'Jacqueline (Jackie) Lindal' in Ward 1, 'Matthew (Matt) Harris' in Ward 2, and 'Dunsin Sunday Fakorede' in Ward 5, now published as Geoff Crane, Jackie Lindal, Matt Harris and Dunsin Fakorede."
   },
@@ -39,13 +40,13 @@
         "max_votes": 2,
         "block_vote": true,
         "districts": {
-          "Ward 1": [
+          "Ward 1 - Merritton": [
             "Matt Aymar",
             "Geoff Crane",
             "Ashlee Davidson-Miller",
             "Jackie Lindal"
           ],
-          "Ward 2": [
+          "Ward 2 - St. Andrew's": [
             "Jim Adair",
             "Bryan Blue",
             "Noel Buckley",
@@ -54,7 +55,7 @@
             "Catherine McNabb",
             "Tom Neale"
           ],
-          "Ward 3": [
+          "Ward 3 - St. George's": [
             "Mike Britton",
             "Alexander Miller",
             "Sal Sorrento",
@@ -62,7 +63,7 @@
             "Kevin Townsend",
             "Kate Werneburg"
           ],
-          "Ward 4": [
+          "Ward 4 - St. Patrick's": [
             "Grant Higginson",
             "Noah Machek",
             "Allen McKay",
@@ -70,14 +71,14 @@
             "Caleb Ratzlaff",
             "Austin Shynal"
           ],
-          "Ward 5": [
+          "Ward 5 - Grantham": [
             "Spencer Bellows-DeWolfe",
             "Dawn Dodge",
             "Dunsin Fakorede",
             "Emmanuel Oneka",
             "Bill Phillips"
           ],
-          "Ward 6": [
+          "Ward 6 - Port Dalhousie": [
             "Marty Mako",
             "Constantina O'Reilly",
             "Bruce Williamson"

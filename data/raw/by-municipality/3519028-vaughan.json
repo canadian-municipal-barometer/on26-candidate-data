@@ -8,6 +8,7 @@
     "source_note": "candidate_list_url moved to that release. /council/elections carries no names and links to it, and /council/elections/candidates redirects to a 403. Both /council/elections and the release are behind a bot filter that refuses scripted fetches with 403, so the page was read in a browser.",
     "incomplete_warning": "Only one mayoral candidate (incumbent Steven Del Duca) had filed as of 2026-08-11 - another illustration that these lists are incomplete before the deadline.",
     "structure_match": "One 'Local and Regional Councillor' at-large table plus Ward 1-5 Councillor tables, matching both structure-CSV rows (at-large vote-for-4, 5 single-member wards).",
+    "ward_labels": "The districts here are the release's own headings, 'Ward 1 Councillor (Maple/Kleinburg)' and so on, kept in their parentheses because they name the communities a ward covers rather than the ward. Collected 2026-08-24 as the number half alone ('Ward 1'); the communities were restored 2026-08-27 from the same release.",
     "retrieved": "2026-08-24",
     "acclamation": "The release names Ward 5 Councillor (Thornhill) Gila Martow as acclaimed, and she is the ward's only candidate, so the build derives the same result from the count. Its other two acclamations are school board trustees."
   },
@@ -37,28 +38,28 @@
         "max_votes": 1,
         "block_vote": true,
         "districts": {
-          "Ward 1": [
+          "Ward 1 (Maple/Kleinburg)": [
             "Marilyn Iafrate",
             "Nadeem Mahmood",
             "Angela Saggese",
             "Vince Scaramuzzo"
           ],
-          "Ward 2": [
+          "Ward 2 (West Woodbridge)": [
             "Pedro Benevides",
             "Anna DeBartolo",
             "Adriano Volpentesta"
           ],
-          "Ward 3": [
+          "Ward 3 (Woodbridge/Vellore)": [
             "Asadullah Aminpur",
             "Rosanna DeFrancesca"
           ],
-          "Ward 4": [
+          "Ward 4 (Concord/Thornhill)": [
             "Chris Ainsworth",
             "Karim Aziz",
             "Nirmala Ramlall",
             "Deven Sandhu"
           ],
-          "Ward 5": [
+          "Ward 5 (Thornhill)": [
             "Gila Martow"
           ]
         }
