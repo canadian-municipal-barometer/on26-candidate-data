@@ -12,7 +12,7 @@ census_id,csdname,race,office,district_scope,district,n_candidates,retrieved
 3521005,Mississauga,mayor,Mayor,At-large,At-large,14,2026-08-24
 3521005,Mississauga,ward,Councillor,Ward,Ward 2,14,2026-08-24
 3506008,Ottawa,mayor,Mayor,At-large,At-large,14,2026-08-11
-3558004,Thunder Bay,atlarge,"Councillor, At-Large",At-large,At-large,14,2026-08-24
+3558004,Thunder Bay,atlarge,"Councillor, At-Large",At-large,At-large,14,2026-08-27
 3525005,Hamilton,mayor,Mayor,At-large,At-large,13,2026-08-24
 3520005,Toronto,ward,Councillor,Ward,Ward 19 - Beaches-East York,13,2026-08-24
 3521010,Brampton,mayor,Mayor,At-large,At-large,12,2026-08-24
@@ -27,7 +27,7 @@ census_id,csdname,race,office,district_scope,district,n_candidates,retrieved
 3523008,Guelph,ward,Councillor,Ward,Ward 5,10,2026-08-24
 3524009,Milton,mayor,Mayor,At-large,At-large,10,2026-08-24
 3521005,Mississauga,ward,Councillor,Ward,Ward 5,10,2026-08-24
-3558004,Thunder Bay,mayor,Mayor,At-large,At-large,10,2026-08-24
+3558004,Thunder Bay,mayor,Mayor,At-large,At-large,10,2026-08-27
 3520005,Toronto,ward,Councillor,Ward,Ward 1 - Etobicoke North,10,2026-08-24
 3520005,Toronto,ward,Councillor,Ward,Ward 4 - Parkdale-High Park,10,2026-08-24
 3520005,Toronto,ward,Councillor,Ward,Ward 22 - Scarborough-Agincourt,10,2026-08-24
@@ -164,8 +164,8 @@ census_id,csdname,race,office,district_scope,district,n_candidates,retrieved
 3538030,Sarnia,mayor,Mayor,At-large,At-large,5,2026-08-24
 3526053,St. Catharines,mayor,Mayor,At-large,At-large,5,2026-08-24
 3526053,St. Catharines,ward,"Councillor, City",Ward,Ward 5 - Grantham,5,2026-08-24
-3558004,Thunder Bay,ward,"Councillor, Ward",Ward,McKellar,5,2026-08-24
-3558004,Thunder Bay,ward,"Councillor, Ward",Ward,Red River,5,2026-08-24
+3558004,Thunder Bay,ward,"Councillor, Ward",Ward,McKellar,5,2026-08-27
+3558004,Thunder Bay,ward,"Councillor, Ward",Ward,Red River,5,2026-08-27
 3530016,Waterloo,mayor,Mayor,At-large,At-large,5,2026-08-24
 3530016,Waterloo,ward,"Councillor, Ward",Ward,Ward 5,5,2026-08-24
 3537039,Windsor,ward,Councillor,Ward,Ward 4,5,2026-08-24
@@ -287,8 +287,8 @@ census_id,csdname,race,office,district_scope,district,n_candidates,retrieved
 3519038,Richmond Hill,regional councillor,"Councillor, Regional and Local",At-large,At-large,3,2026-08-24
 3519038,Richmond Hill,ward,"Councillor, Ward",Ward,Ward 6,3,2026-08-24
 3526053,St. Catharines,ward,"Councillor, City",Ward,Ward 6 - Port Dalhousie,3,2026-08-24
-3558004,Thunder Bay,ward,"Councillor, Ward",Ward,Northwood,3,2026-08-24
-3558004,Thunder Bay,ward,"Councillor, Ward",Ward,Westfort,3,2026-08-24
+3558004,Thunder Bay,ward,"Councillor, Ward",Ward,Northwood,3,2026-08-27
+3558004,Thunder Bay,ward,"Councillor, Ward",Ward,Westfort,3,2026-08-27
 3520005,Toronto,ward,Councillor,Ward,Ward 2 - Etobicoke Centre,3,2026-08-24
 3520005,Toronto,ward,Councillor,Ward,Ward 6 - York Centre,3,2026-08-24
 3520005,Toronto,ward,Councillor,Ward,Ward 7 - Humber River-Black Creek,3,2026-08-24
@@ -346,9 +346,9 @@ census_id,csdname,race,office,district_scope,district,n_candidates,retrieved
 3518001,Pickering,regional councillor,"Councillor, Regional",Ward,Ward 3,2,2026-08-24
 3518001,Pickering,ward,"Councillor, City",Ward,Ward 3,2,2026-08-24
 3519038,Richmond Hill,ward,"Councillor, Ward",Ward,Ward 3,2,2026-08-24
-3558004,Thunder Bay,ward,"Councillor, Ward",Ward,Current River,2,2026-08-24
-3558004,Thunder Bay,ward,"Councillor, Ward",Ward,McIntyre,2,2026-08-24
-3558004,Thunder Bay,ward,"Councillor, Ward",Ward,Neebing,2,2026-08-24
+3558004,Thunder Bay,ward,"Councillor, Ward",Ward,Current River,2,2026-08-27
+3558004,Thunder Bay,ward,"Councillor, Ward",Ward,McIntyre,2,2026-08-27
+3558004,Thunder Bay,ward,"Councillor, Ward",Ward,Neebing,2,2026-08-27
 3519028,Vaughan,mayor,Mayor,At-large,At-large,2,2026-08-24
 3519028,Vaughan,ward,"Councillor, Ward",Ward,Ward 3 (Woodbridge/Vellore),2,2026-08-24
 3530016,Waterloo,ward,"Councillor, Ward",Ward,Ward 1,2,2026-08-24
