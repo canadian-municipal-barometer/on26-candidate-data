@@ -9,6 +9,7 @@
     "name_split": "first_name/last_name come from the feed's own firstName/lastName fields, not from parsing.",
     "structure_match": "25 wards returned, matching n_districts=25 in the structure CSV.",
     "ward_labels": "The districts here are the headings over the councillor tables, 'Councillor Ward 1 - Etobicoke North' and so on. Collected 2026-08-24 as the number half alone ('Ward 1') - the tables are drawn by script, so a plain fetch of this page shows neither the names nor the candidates. Restored 2026-08-27 by rendering the page.",
+    "position": "From the list's own headings, 'Candidates for Mayor' and 'Councillor Ward 1 - Etobicoke North'.",
     "retrieved": "2026-08-24",
     "withdrawals": "The page keeps withdrawn nominations in a separate 'Withdrawn Candidates' tab, which the certified tables already exclude, so nothing had to be dropped here.",
     "name_quirk": "Ward 21 has a candidate the city renders as 'Nisha Kumari, ' — a surname with no given name after the comma, the same shape as Brampton's 'Gursimranjit Singh, -'. Recorded with the separator as published, for display_name() to strip."
@@ -17,6 +18,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -84,6 +86,7 @@
     "ward": [
       {
         "office": "Councillor",
+        "position": "Councillor",
         "scope": "Ward",
         "n_districts": 25,
         "seats": 1,

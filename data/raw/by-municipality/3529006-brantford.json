@@ -8,6 +8,7 @@
     "source_note": "district_source_url is the city council page; the candidate list sits under the Municipal Election section.",
     "structure_match": "Page still prints 'Ward N (2 Councillors elected per ward)' for all 5 wards, confirming seats_per_district=2 and max_votes=2 in the structure CSV.",
     "parse_check": "Extracted name count equals the count of 'Email:' entries in every section.",
+    "position": "From the section headings, 'Mayor (1 Mayor elected at large)' and 'Ward 1 (2 Councillors elected per ward)'.",
     "retrieved": "2026-08-24",
     "name_format_change": "The certified list sets every surname in capitals ('Leslie BORY'), which the pre-deadline page did not, so name_format moved from first_last to caps_surname. The capitals are in the markup, not a CSS transform — the accordion anchors are named 'LeslieBORY'."
   },
@@ -15,6 +16,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -36,6 +38,7 @@
     "ward": [
       {
         "office": "Councillor",
+        "position": "Councillor",
         "scope": "Ward",
         "n_districts": 5,
         "seats": 2,

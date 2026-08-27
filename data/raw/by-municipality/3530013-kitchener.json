@@ -8,6 +8,7 @@
     "source_note": "The page is now headed 'Certified List of Candidates - Municipal Council'; names sit under office headings as plain text with contact details beneath, not in a table.",
     "excluded_race": "The regional councillor race is collected here but dropped by the build: see notes/excluded-races.csv. Kitchener's regional councillors sit on Regional Council, not on city council.",
     "other": "The Regional Chair no longer appears on the ballot: under the Better Regional Governance Act, 2026 (2026-05-07) it became a provincially appointed position and no nominations for it may be filed or accepted.",
+    "position": "From the section headings, 'Ward 1 Councillor (Vote for no more than 1)' and 'Regional Councillor (Vote for no more than 4)'. The regional race is collected but excluded from the study.",
     "retrieved": "2026-08-24",
     "withdrawals": "Three names carry a '- [WITHDRAWN]' suffix and are excluded here: Nair, Nitin and Rose, Danielle in Ward 5, and Kolsawala, Sajid among the regional councillors. Sajid Mohamed Farooq Kolsawala appears separately as a Waterloo Region District School Board candidate.",
     "name_change": "'Simson, Eve' among the regional councillors is now published as 'Simson, Eve Elizabeth'.",
@@ -17,6 +18,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -38,6 +40,7 @@
     "ward": [
       {
         "office": "Councillor, Ward",
+        "position": "Ward Councillor",
         "scope": "Ward",
         "n_districts": 10,
         "seats": 1,
@@ -115,6 +118,7 @@
     "regional councillor": [
       {
         "office": "Councillor, Regional",
+        "position": "Regional Councillor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": null,

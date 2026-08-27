@@ -8,6 +8,7 @@
     "source_note": "Each ward heading is followed by two sub-headings, 'Town Councillor candidates' and 'Town and Regional Councillor candidates', which are the ward and regional councillor races respectively.",
     "race_type_choice": "Oakville runs two ward races. 'Councillor for the Town of Oakville' is filed under 'ward'; 'Councillor for the Town of Oakville and the Region of Halton' is filed under 'regional councillor', since it is the seat that also sits on Halton Region. Both are ward-based, so they would otherwise collide on one key.",
     "structure_match": "The Offices to be Elected page states 'Seven to be elected, one in each ward' for each of the two councillor offices, matching both structure-CSV rows.",
+    "position": "From the page's headings, 'Mayor of the Town of Oakville', 'Town Councillor candidates' and 'Town and Regional Councillor candidates'. Oakville's upper-tier seat is a town seat as well, hence the compound title.",
     "retrieved": "2026-08-24",
     "withdrawals": "Two Town and Regional Councillor candidates carry a '(withdrawn)' suffix and a withdrawal date, and are excluded here: Zena Al-Mudaris in Ward 6 (2026-08-21) and Riaz Ahmad Sinawan in Ward 7 (2026-08-20). Al-Mudaris is listed without the suffix in Ward 2, so she changed wards rather than leaving the ballot.",
     "name_changes": "Two Ward 4 names are published differently than on 2026-08-11. 'Syed Hasan Tahir' is now 'Syed Tahir', and the regional candidate collected as 'Lee Hutchison' is now 'Hutchison Lee' — the page's own email (hutchisonleeforward4@) and site (hleeforward4.ca) put the surname as Lee, so the new order is the one recorded."
@@ -16,6 +17,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -35,6 +37,7 @@
     "ward": [
       {
         "office": "Councillor, Town",
+        "position": "Town Councillor",
         "scope": "Ward",
         "n_districts": 7,
         "seats": 1,
@@ -86,6 +89,7 @@
     "regional councillor": [
       {
         "office": "Councillor, Town and Region of Halton",
+        "position": "Town and Regional Councillor",
         "scope": "Ward",
         "n_districts": 7,
         "seats": 1,

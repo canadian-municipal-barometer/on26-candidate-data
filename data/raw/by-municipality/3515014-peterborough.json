@@ -8,6 +8,7 @@
     "source_note": "The layout changed since 2026-08-11: candidates are now paragraphs of the form 'Name: contact details' under an office heading, not table rows.",
     "structure_match": "Five wards published - Ward 1 - Otonabee, Ward 2 - Monaghan, Ward 3 - Town, Ward 4 - Ashburnham, Ward 5 - Northcrest - matching the districts listed in the structure CSV (5 districts, 2 seats each, vote-for-2), which names them without their numbers.",
     "ward_labels": "The districts here are the page's own headings, 'Councillor, Ward 1 - Otonabee' and so on, which it repeats over its election-day voting places. Collected 2026-08-24 as the name half alone ('Otonabee'); the numbers were restored 2026-08-27 from the same page.",
+    "position": "From the page's headings, 'Office of Mayor' and 'Councillor, Ward 1 - Otonabee'. 'Office of' frames the race rather than naming the position.",
     "retrieved": "2026-08-24",
     "withdrawals": "Two Ward 1 candidates are marked 'Withdrawn' and are excluded here: Jessica Correa and Noella Koshul. The page's other three withdrawals are school board trustees."
   },
@@ -15,6 +16,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -36,6 +38,7 @@
     "ward": [
       {
         "office": "Councillor",
+        "position": "Councillor",
         "scope": "Ward",
         "n_districts": 5,
         "seats": 2,

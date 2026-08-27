@@ -8,12 +8,14 @@
     "ward_names": "Ottawa wards carry names; recorded as published, e.g. 'Ward 1 Orléans East-Cumberland'. Two keys changed with the move to the certified pages: the stray space in 'Ward 11 Beacon Hill- Cyrville' and 'Ward 19 Orléans South- Navan' is gone, so they are now 'Ward 11 Beacon Hill-Cyrville' and 'Ward 19 Orléans South-Navan'. The survey matches respondents to a ward by this string, so its embedded ward names have to move with them.",
     "structure_match": "24 ward pages published, matching n_districts=24 in the structure CSV.",
     "list_status": "Certified. The section is titled 'Certified and acclaimed candidates'; two ward pages are headed 'Acclaimed candidate for ...' — Ward 16 River (Riley Brockington) and Ward 21 Rideau-Jock (David Brown) — and each has the single candidate that heading implies, so the build derives the same result from the count.",
-    "withdrawals": "Withdrawn nominations are on their own page and are already absent from the certified lists. Three of its six rows are council offices: Peter Westaway (Councillor, Ward 9), Adriana Galan (Councillor, Ward 6) and Michelle Groulx (Councillor, Ward 15). Westaway is a certified mayoral candidate, and Donna Blackburn, who withdrew as an OCDSB trustee, is a certified Ward 3 councillor candidate."
+    "withdrawals": "Withdrawn nominations are on their own page and are already absent from the certified lists. Three of its six rows are council offices: Peter Westaway (Councillor, Ward 9), Adriana Galan (Councillor, Ward 6) and Michelle Groulx (Councillor, Ward 15). Westaway is a certified mayoral candidate, and Donna Blackburn, who withdrew as an OCDSB trustee, is a certified Ward 3 councillor candidate.",
+    "position": "Read from the office pages' own headings: 'Certified candidates for Mayor' and 'Certified and acclaimed candidates for City Councillor'. Ottawa's ward seat is a City Councillor, not a plain Councillor."
   },
   "races": {
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -42,6 +44,7 @@
     "ward": [
       {
         "office": "Councillor",
+        "position": "City Councillor",
         "scope": "Ward",
         "n_districts": 24,
         "seats": 1,

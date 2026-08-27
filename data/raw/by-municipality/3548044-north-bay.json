@@ -4,6 +4,7 @@
   "name_format": "last_first",
   "candidate_list_url": "https://northbay.ca/city-government/2026-elections/registered-candidates-and-third-party-advertisers/",
   "notes": {
+    "position": "From the single undifferentiated table heading, 'Councillor'. North Bay elects its whole council in one at-large contest, so the title carries no district and no ward.",
     "retrieved": "2026-08-24",
     "list_status": "unofficial; the page states 'Candidate nominations are not final until certified after August 24' and that nominations are 'updated regularly as they are received'. Nominations close 2026-08-21 14:00.",
     "source_note": "district_source_url is the City's Municipal Elections page, which gives the offices but no names; the names are one hop away on the Registered Candidates and Third-Party Advertisers page. Names are published as 'SURNAME, First', so the split is unambiguous.",
@@ -14,6 +15,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -33,6 +35,7 @@
     "atlarge": [
       {
         "office": "Councillor",
+        "position": "Councillor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 10,

@@ -7,6 +7,7 @@
     "list_status": "Checked against the city's signed 'List of Certified & Acclaimed Candidates' PDF (linked from the same page): the two lists agree candidate for candidate, and the registered list already omits the four the PDF marks WITHDRAWN (Bill Leduc for mayor, Braden Hill in Ward 9, George Lalonde in Ward 11, Deborah Josipovic in Ward 12). Bill Leduc withdrew from the mayoral race and is a Ward 11 candidate; George Lalonde withdrew in Ward 11 and is a Ward 8 candidate.",
     "source_note": "The candidate list on the 'Registered Candidates' page is loaded by script; the names were read instead from the two accordion pages it links, /accordion-2026-registered-candidates/mayoral-candidates/ and /council-candidates/, which publish them as plain text.",
     "structure_match": "12 ward sections published, matching n_districts=12 in the structure CSV.",
+    "position": "The accordion pages are headed by ward alone; the city's signed 'List of Certified & Acclaimed Candidates' names the office in its Office column, as 'Councillor - Ward 1'.",
     "retrieved": "2026-08-24",
     "name_spelling": "The PDF is a scan and drops accents and some letters ('Labbee'/'Rene', 'Brandie' for 'Brandle'); the accordion pages are taken as the spelling of record. The page now writes Ward 7's 'Natalie Labbee' without the accent it carried on 2026-08-11."
   },
@@ -14,6 +15,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -36,6 +38,7 @@
     "ward": [
       {
         "office": "Councillor",
+        "position": "Councillor",
         "scope": "Ward",
         "n_districts": 12,
         "seats": 1,

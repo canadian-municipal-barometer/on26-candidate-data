@@ -8,6 +8,7 @@
     "source_note": "district_source_url is itself the candidate list; races are accordions.",
     "parse_check": "The nested-tag problem noted on 2026-08-11 is still there and still needs the same handling: a plain text extraction splits 'Volker Kromm' after the V and 'Stéphane Léonard Kuziora' at both accented letters. The counts here are the accordion headings' own: 10 mayoral, 14 at-large and 22 ward candidates.",
     "structure_match": "The headings still read 'Mayor - One (1) to be elected', 'At Large Councillor - Five (5) to be elected' and one '... Ward Councillor - One (1) to be elected' per ward, confirming both structure-CSV rows including max_votes=5 for the at-large race.",
+    "position": "From the accordion headings, 'Mayor - One (1) to be elected', 'At Large Councillor - Five (5) to be elected' and 'Current River Ward Councillor - One (1) to be elected'. Thunder Bay's two councillor races are told apart by their titles as well as by their ballots.",
     "retrieved": "2026-08-24",
     "cross_race": "Clinton Harris was a mayoral candidate on 2026-08-11 and is certified in the Westfort ward race instead."
   },
@@ -15,6 +16,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -39,6 +41,7 @@
     "atlarge": [
       {
         "office": "Councillor, At-Large",
+        "position": "At Large Councillor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 5,
@@ -67,6 +70,7 @@
     "ward": [
       {
         "office": "Councillor, Ward",
+        "position": "Ward Councillor",
         "scope": "Ward",
         "n_districts": 7,
         "seats": 1,

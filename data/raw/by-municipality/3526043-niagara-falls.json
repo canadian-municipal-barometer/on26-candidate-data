@@ -8,12 +8,14 @@
     "source_note": "The tables are headed 'Name (as it is to appear on the ballot)', so the names are recorded in ballot form, nicknames included.",
     "name_format_note": "Surnames are printed in CAPS and given names in mixed case, so the surname boundary is unambiguous even for multi-word surnames such as 'Lilian LUM MBAH'. Splitting uses the capitalisation, not token position.",
     "structure_match": "A single at-large 'Candidates for City Councillor' list with no ward breakdown, matching the structure CSV's at-large row (8 seats, vote-for-8). No elected Regional Councillor race appears, consistent with SOURCES.md noting Niagara abolished elected regional councillors for 2026.",
+    "position": "From the section headings, 'Candidates for Mayor' and 'Candidates for City Councillor'. All eight seats are one city-wide contest, so the title carries no district.",
     "retrieved": "2026-08-24"
   },
   "races": {
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -33,6 +35,7 @@
     "atlarge": [
       {
         "office": "Councillor",
+        "position": "City Councillor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 8,

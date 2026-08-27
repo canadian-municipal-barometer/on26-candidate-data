@@ -8,6 +8,7 @@
     "source_note": "district_source_url is the council-composition page; the candidate list sits under the Municipal Elections section.",
     "name_quirk": "One mayoral candidate is published as 'Ramos, Jr., Evaristo' - the suffix carries its own comma, so the surname is 'Ramos, Jr.' and the given name 'Evaristo'.",
     "structure_match": "6 ward tables published, matching n_districts=6 in the structure CSV (2 seats per ward, vote-for-2).",
+    "position": "The page heads its tables 'Candidates for Ward 1' and never names the office; the city's signed List of Certified Candidates does, as 'Councillor Ward 1', and that is where the position is taken from.",
     "retrieved": "2026-08-24",
     "withdrawals": "Three ward candidates carry a '(withdrawn)' suffix on the page and are excluded here: Klassen, Carly in Ward 2, and Crewson, Natalia and Jennings, Ross in Ward 3. Natalia Crewson also appears, without the suffix, as a Wellington Catholic District School Board candidate.",
     "parse_check": "The page sets Laura McQuillen's surname as 'M<sup><sub>c</sub></sup>Quillen', which a naive text extraction renders 'M c Quillen'. Recorded as 'McQuillen, Laura'."
@@ -16,6 +17,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -36,6 +38,7 @@
     "ward": [
       {
         "office": "Councillor",
+        "position": "Councillor",
         "scope": "Ward",
         "n_districts": 6,
         "seats": 2,

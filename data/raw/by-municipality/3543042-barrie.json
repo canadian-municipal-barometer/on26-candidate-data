@@ -8,6 +8,7 @@
     "source_note": "district_source_url is the city council page, which carries no candidates; it links to the 2026 Municipal Election section whose 'Candidates List' page was used.",
     "name_quirk": "Three candidates are published with a pronoun suffix — 'Lori Galeazza, she/her' in Ward 4, 'Nader Nasar George, he/him' in Ward 6 and 'Asmar Naveed, he/him' in Ward 9. The published form is kept, as it was for Galeazza on 2026-08-11; the suffix is stripped for name splitting.",
     "structure_match": "10 ward tables published, matching n_districts=10 in the structure CSV.",
+    "position": "The page lists the offices that 'will appear on the 2026 ballot' - 'Mayor' and 'Councillor' - and heads each table 'Councillor, Ward 1'.",
     "retrieved": "2026-08-24",
     "withdrawals": "Two ward rows are prefixed 'Withdrawn:' and carry the withdrawal time and the ward the candidate moved to; both are excluded from the ward they left. Samina Alim withdrew in Ward 7 on 2026-08-21 and is certified in Ward 8; Hafiz Rahman withdrew in Ward 10 on 2026-05-21 and is certified in Ward 1."
   },
@@ -15,6 +16,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -33,6 +35,7 @@
     "ward": [
       {
         "office": "Councillor",
+        "position": "Councillor",
         "scope": "Ward",
         "n_districts": 10,
         "seats": 1,

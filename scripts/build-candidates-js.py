@@ -30,12 +30,13 @@ acclaimed, how many names they may mark, what shape their ballot is - is decided
         name: "Ottawa",
         shared: {
           names:  { mayor: [...], coun_atlarge: [...], dep_mayor: [...] },
-          fields: { mayor_accl: 0, atlarge: 1, atlarge_accl: 0, ... }
+          fields: { mayor_accl: 0, mayor_position: "Mayor", atlarge: 1, ... }
         },
         wards: {
           "<ward label>"|"99": {
             names:  { coun_ward: [...], coun_reg: [...] },
-            fields: { ward: 1, ward_accl: 0, ward_max_votes: 1, ... }
+            fields: { ward: 1, ward_accl: 0, ward_max_votes: 1,
+                      ward_position: "Ward Councillor", ... }
           }
         }
       }
@@ -49,12 +50,13 @@ disjoint, so the survey writes both and each field lands exactly once, and which
 field falls in changes nothing about the export. See SHARED_STEMS.
 
 `names` holds "LAST, First" in the order they should appear. `fields` holds every scalar
-the survey writes, already in its final form - a number, or "" where there is nothing to
-say. Every ward entry carries the same `fields` keys, so nothing can go stale. Every stem
-produces `<stem>_accl` and the numbered name fields the survey writes from `names`; the
-three stems that can put more than one name on a ballot add `<stem>_max_votes`. A blank in
-either family is how the survey flow knows the respondent has no such race, so it means
-that and nothing else - an unverified seat count aborts the build rather than writing one.
+the survey writes, already in its final form - a number, a position, or "" where there is
+nothing to say. Every ward entry carries the same `fields` keys, so nothing can go stale.
+Every stem produces `<stem>_accl`, `<stem>_position` and the numbered name fields the
+survey writes from `names`; the three stems that can put more than one name on a ballot
+add `<stem>_max_votes`. A blank in any of them is how the survey flow knows the respondent
+has no such race, so it means that and nothing else - an unverified seat count aborts the
+build rather than writing one.
 The three councillor stems also carry a bare `<stem>` served-flag, which says what a blank
 accl says and is kept anyway because the flow reads better for it. Add a stem and the
 fields follow; the only lists of field names are SINGLE_VOTE_STEMS, which names the two
@@ -102,6 +104,17 @@ WHY IT IS SHAPED THIS WAY, rather than mirroring the races
   answer finds their ballot. Brampton elects both its City and its Regional councillors
   from five pairs, and Clarington its Regional councillors from two. The rule is the one
   parse-wards.test.js already uses: take the numbers out of the label.
+
+POSITION is what the municipality's own candidate list calls the seat, carried through
+from data/raw/by-municipality/ - Vaughan's at-large upper-tier race is a "Local and
+Regional Councillor" contest and Kingston's ward seat a "District Councillor" one, where
+the study's `office` classification says "Councillor, Local and Regional" and plain
+"Councillor". The survey pipes it into the question text, so a respondent reads the words
+their own ballot uses. Every stem writes one, including the two whose value never varies
+today: unlike a max_votes that would read 1 in every row, a position that reads "Mayor"
+everywhere says something true about that race, and the flow pipes all five the same way.
+Where a stem merges several races - none today - they must agree on the position, since
+the respondent is asked about them as one contest.
 
 NAME ORDER is settled here, so the survey does not have to sort. The order is the one
 JavaScript's localeCompare produces, reproduced by NAME_SORT_KEY below, because that is
@@ -433,6 +446,7 @@ for census_id in sorted(k for k in raw if k != "_meta"):
             races.setdefault(stem, []).append(
                 {
                     "office": race["office"],
+                    "position": race["position"],
                     "at_large": at_large,
                     "districts": districts,
                 }
@@ -563,6 +577,25 @@ def entry_for(census_id, ward):
         # mayor and dep_mayor write no max_votes at all - see SINGLE_VOTE_STEMS.
         if stem not in SINGLE_VOTE_STEMS:
             fields[stem + "_max_votes"] = sum(votes) if got else ""
+
+        # What this respondent's ballot calls the seat, in the municipality's own words,
+        # for the survey to pipe into the question it asks about the race. Blank on the
+        # same terms as the rest of the family: no such race, nothing to name.
+        #
+        # A stem that merged two races with different titles would have to name the merged
+        # contest something, and there is no honest answer - the respondent is shown one
+        # question. Nothing merges today (see STEM), so this aborts rather than picking.
+        titles = []
+        for race, _ in got:
+            if race["position"] not in titles:
+                titles.append(race["position"])
+        if len(titles) > 1:
+            die(
+                f"{census_id}: ward {ward!r} is served {len(titles)} {stem} races with "
+                f"different positions ({', '.join(repr(t) for t in titles)}), which are "
+                "asked about as one question. Give them one position, or split the stem."
+            )
+        fields[stem + "_position"] = titles[0] if titles else ""
 
     # The served-flags are written in the loop above, so each completes its stem's family
     # rather than standing outside it: ward, ward_accl, ward_max_votes.
@@ -721,11 +754,16 @@ doc = {
             "dep_mayor1... One list is one contest - the ward councillor race and the "
             "at-large one are never merged, since their candidates, max_votes and "
             "acclamation are all their own. `fields` is every scalar, already final - a "
-            "number, or \"\" where there is nothing to say - and is keyed by stem instead: "
-            "`<stem>_accl` for each of mayor, ward, atlarge, reg_coun, dep_mayor, plus "
-            "`<stem>_max_votes` for ward, atlarge and reg_coun only - mayor and dep_mayor "
+            "number, a position, or \"\" where there is nothing to say - and is keyed by "
+            "stem instead: `<stem>_accl` and `<stem>_position` for each of mayor, ward, "
+            "atlarge, reg_coun, dep_mayor, plus `<stem>_max_votes` for ward, atlarge and "
+            "reg_coun only - mayor and dep_mayor "
             "are single-seat everywhere, so a max_votes for them would read 1 in every "
-            "row. A blank in either family means the respondent has no such race, and is "
+            "row. `<stem>_position` is what the municipality's own candidate list calls "
+            "the seat, for the survey to pipe into the question about it: Vaughan's "
+            "at-large upper-tier race is a \"Local and Regional Councillor\" contest and "
+            "Kingston's ward seat a \"District Councillor\" one. A blank in any of the "
+            "three families means the respondent has no such race, and is "
             "what the survey flow filters the question on; a served race never writes one, "
             "since an unverified seat count aborts the build. The three councillor stems - "
             "ward, atlarge, reg_coun - each also carry a bare `<stem>` served-flag: 1 where "

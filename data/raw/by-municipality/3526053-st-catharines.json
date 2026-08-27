@@ -8,6 +8,7 @@
     "source_note": "district_source_url is the ward councillors page; the candidate list sits under the Elections section.",
     "structure_match": "Six City Councillor ward tables published and no elected Regional Councillor race, consistent with SOURCES.md recording that Niagara abolished elected regional councillors for 2026 and that St. Catharines' at-large regional row was dropped.",
     "ward_labels": "The districts here are the headings over the six councillor tables, 'Ward 1 - Merritton' and so on. Collected 2026-08-24 as the number half alone ('Ward 1'); the names were restored 2026-08-27 from the same page.",
+    "position": "From the section headings, 'Certified Candidates for Mayor' and 'Certified Candidates for City Councillor - Ward 1'.",
     "retrieved": "2026-08-24",
     "name_changes": "The certified list drops the parenthesised short forms four names carried on 2026-08-11: 'Geoffrey (Geoff) Crane' and 'Jacqueline (Jackie) Lindal' in Ward 1, 'Matthew (Matt) Harris' in Ward 2, and 'Dunsin Sunday Fakorede' in Ward 5, now published as Geoff Crane, Jackie Lindal, Matt Harris and Dunsin Fakorede."
   },
@@ -15,6 +16,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -34,6 +36,7 @@
     "ward": [
       {
         "office": "Councillor, City",
+        "position": "City Councillor",
         "scope": "Ward",
         "n_districts": 6,
         "seats": 2,

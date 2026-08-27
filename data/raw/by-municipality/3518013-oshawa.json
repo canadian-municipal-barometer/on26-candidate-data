@@ -7,6 +7,7 @@
     "list_status": "Certified; the page links the full list of Certified Candidates.",
     "source_note": "district_source_url is itself the candidate list; race labels come from each table's <caption>.",
     "structure_match": "'Regional and City Councillor' and 'City Councillor' each have Ward 1-5 tables, matching both structure-CSV rows.",
+    "position": "From the page's headings, 'Office of Mayor', 'Office of City Councillor - Ward 1' and 'Office of Regional and City Councillor - Ward 1'. Oshawa's upper-tier seat sits on both councils and its title says so.",
     "retrieved": "2026-08-24",
     "withdrawals": "Don Rockbrune's Ward 4 city councillor row reads 'Withdrawn (August 21, 2026)' in place of contact information and is excluded here.",
     "name_change": "Ward 1's regional councillor was collected on 2026-08-11 as 'Martin Franseen'; the page now spells it 'Martin Franssen'."
@@ -15,6 +16,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -38,6 +40,7 @@
     "ward": [
       {
         "office": "Councillor, City",
+        "position": "City Councillor",
         "scope": "Ward",
         "n_districts": 5,
         "seats": 1,
@@ -92,6 +95,7 @@
     "regional councillor": [
       {
         "office": "Councillor, Regional and City",
+        "position": "Regional and City Councillor",
         "scope": "Ward",
         "n_districts": 5,
         "seats": 1,

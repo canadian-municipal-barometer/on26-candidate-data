@@ -11,6 +11,7 @@
     "structure_match": "Ward 1-7 councillor tables, matching n_districts=7 in the structure CSV. The page's at-large Regional Councillor table is the excluded race below.",
     "excluded_race": "The regional councillor race is collected here but dropped by the build: see notes/excluded-races.csv. Waterloo's regional councillors sit on Regional Council, not on city council.",
     "other": "The page also lists a Regional Chair race (Nina Deeb), which is not a Waterloo council seat and is not recorded here.",
+    "position": "From the page's headings, 'City of Waterloo ward councillor candidates' and 'Region of Waterloo - Regional councillor'. The city writes them in sentence case; they are recorded in title case, as every other municipality's are. The regional race is collected but excluded from the study.",
     "retrieved": "2026-08-24",
     "regional_chair": "The Regional Chair contest carries only a withdrawn nomination (Nina DEEB) under a notice that nominations filed before the Better Regional Governance Act, 2026 are deemed withdrawn. It is not a Waterloo council office and is not collected."
   },
@@ -18,6 +19,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -37,6 +39,7 @@
     "ward": [
       {
         "office": "Councillor, Ward",
+        "position": "Ward Councillor",
         "scope": "Ward",
         "n_districts": 7,
         "seats": 1,
@@ -86,6 +89,7 @@
     "regional councillor": [
       {
         "office": "Councillor, Regional",
+        "position": "Regional Councillor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 2,

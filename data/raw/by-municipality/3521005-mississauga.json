@@ -8,6 +8,7 @@
     "name_case": "VoterView publishes names in ALL CAPS with no comma, so the surname boundary cannot be read from capitalisation. Splitting takes the final token as the surname, which is unreliable for multi-word surnames such as 'ANA LUISA VASQUEZ DE ESPINAL' and 'ROSEMARIE SANCHEZ SANCHEZ'. name_raw preserves the published form.",
     "structure_match": "11 ward sections published, matching n_districts=11 in the structure CSV.",
     "source_note": "ovs.voterview.ca is a JavaScript app whose races are collapsed accordions, so a plain fetch returns an empty shell. Read in the browser after clicking 'Expand All'. The upper case is real, not a CSS transform: the DOM text is 'BONNIE  CROMBIE'.",
+    "position": "From the VoterView accordion headings, 'Candidates for City of Mississauga Mayor' and 'Candidates for Councillor Ward 1'.",
     "retrieved": "2026-08-24",
     "name_change": "Ward 2's candidate collected on 2026-08-11 as 'FAWZI SAMER ALGHOUL' is now published as 'SAMER FAWZI ALGHOUL'."
   },
@@ -15,6 +16,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -43,13 +45,17 @@
     "ward": [
       {
         "office": "Councillor",
+        "position": "Councillor",
         "scope": "Ward",
         "n_districts": 11,
         "seats": 1,
         "max_votes": 1,
         "block_vote": false,
         "districts": {
-          "Ward 1": ["STEPHEN DASKO", "OLIVIA GANNON"],
+          "Ward 1": [
+            "STEPHEN DASKO",
+            "OLIVIA GANNON"
+          ],
           "Ward 2": [
             "SAMER FAWZI ALGHOUL",
             "RONNIE AMYOTTE",
@@ -138,7 +144,11 @@
             "SUE MCFADDEN",
             "SALMAN TARIQ"
           ],
-          "Ward 11": ["BRAD BUTT", "AMIN NANJI", "DEV VASHI"]
+          "Ward 11": [
+            "BRAD BUTT",
+            "AMIN NANJI",
+            "DEV VASHI"
+          ]
         }
       }
     ]

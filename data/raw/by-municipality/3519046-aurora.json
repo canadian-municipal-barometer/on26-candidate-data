@@ -7,12 +7,14 @@
     "list_status": "unofficial; nominations open until 2026-08-21 14:00",
     "source_note": "district_source_url in councillor-election-structure.csv points to the ward-system and council-members pages, which carry no candidates. Candidates were taken from the town's 'Unofficial List of Candidates' accordion on the Candidate Information page, reached by a link from the ward-system page.",
     "structure_match": "6 ward tables published, matching n_districts=6 in the structure CSV.",
+    "position": "From the page's headings, 'Office of Mayor' and 'Ward 1 Councillor'; the page also states 'One Councillor for Ward 1 to be elected by the eligible electors in Ward 1'.",
     "retrieved": "2026-08-24"
   },
   "races": {
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -31,6 +33,7 @@
     "ward": [
       {
         "office": "Councillor, Ward",
+        "position": "Ward Councillor",
         "scope": "Ward",
         "n_districts": 6,
         "seats": 1,

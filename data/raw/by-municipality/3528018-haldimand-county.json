@@ -7,6 +7,7 @@
     "list_status": "unofficial; nominations close 2026-08-21 14:00",
     "source_note": "district_source_url is the news post announcing the seven-ward model; the candidate list is on the Registered Candidates page under the 2026 Municipal Election section.",
     "structure_match": "Ward 1-7 tables published, matching n_districts=7 in the structure CSV - the seven-ward model the district_source_url announces.",
+    "position": "The candidate sections are headed by ward alone ('Ward 1 candidates'); the office is named in the withdrawn-candidates table, whose 'Office being Withdrawn from' column reads 'Councillor - Ward 5'.",
     "retrieved": "2026-08-24",
     "withdrawals": "The page's only council withdrawal table is 'Withdrawn Candidates for Councillor - Ward 5', listing Earl Reinink and Veronika Simmons, both 2026-06-25. Both are certified Ward 6 candidates, so they changed wards rather than leaving the ballot, and neither is excluded.",
     "name_change": "Ward 2's 'Beauvais, Paul' is now published as 'Beauvais, Paul Thomas'."
@@ -15,6 +16,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -33,6 +35,7 @@
     "ward": [
       {
         "office": "Councillor",
+        "position": "Councillor",
         "scope": "Ward",
         "n_districts": 7,
         "seats": 1,

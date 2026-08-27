@@ -8,6 +8,7 @@
     "source_note": "district_source_url is itself the candidate list; each race is a <details>/<summary> accordion.",
     "parse_check": "Each office is a <details> block whose candidates are bolded names followed by <br>-separated contact lines. Two shapes have to be handled: several candidates can share one <p>, separated by a double <br>, and a name can be split across two <strong> tags — 'Simon Karikkassery' is written '<strong>Simon </strong><span><strong>Karikkassery</strong></span>'. Names read from a single <strong> per <p> lose two mayoral candidates and two in Ward 5.",
     "structure_match": "14 ward accordions published, matching n_districts=14 in the structure CSV.",
+    "position": "The sections are headed by ward, with the office in the line beneath: 'Ward 1' / '1 Councillor to be elected'.",
     "retrieved": "2026-08-24",
     "withdrawals": "Three candidates are printed with a trailing 'Withdrawn' and are excluded here: Janette Larocque in Ward 1, Alicia Caskey in Ward 4 and Praveen Varkey in Ward 7.",
     "name_changes": "Five names drop a parenthesised or middle form they carried on 2026-08-11: 'Simon Sabeesh Karikassery' is now 'Simon Karikkassery', 'Kamrul Ahsan (Kam)' is 'Kamrul Ahsan', 'Coralia Esterra Tudor' is 'Coralia Tudor', 'Harinder Kumar (Harry)' is 'Harinder Kumar', and 'Christopher (Tony) Biviano' is 'Tony Biviano'."
@@ -16,6 +17,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -42,6 +44,7 @@
     "ward": [
       {
         "office": "Councillor",
+        "position": "Councillor",
         "scope": "Ward",
         "n_districts": 14,
         "seats": 1,

@@ -6,6 +6,7 @@
   "notes": {
     "list_status": "Post-deadline, but the town has not re-worded the page: it still reads 'The Municipal Clerk will provide a certified list of candidates following the close of nominations on August 21, 2026.' The names are the current published list.",
     "source_note": "The /voters#candidates section is an index of buttons rather than a list; each race links to its own page under /voters/offices-to-be-elected-*, and those seven pages were fetched. They hold the names in a table whose first column is 'Name'.",
+    "position": "From the accordion headings, 'Ward 1 - Local Councillor' and 'Ward 1 - Regional Councillor'. Ajax calls its lower-tier seat a Local Councillor where Pickering and Oshawa say City and Whitby says Town.",
     "retrieved": "2026-08-24",
     "withdrawals": "Six nominations carry a '- Withdrawn' suffix and are excluded here: Sajid Raza Rehman for mayor; Sadiq Boodoo and Angie Papas as Ward 1 local councillor; and Asad Ali, Sajid Dogar and Asif Kasim as Ward 2 local councillor. Two of them moved rather than left: Asad Ali is a Ward 2 regional councillor candidate and Angie Papas a Ward 3 regional councillor candidate.",
     "name_change": "Ward 1's regional candidate collected on 2026-08-11 as 'Rob Tyler Morin' is now published as 'Rob Tyler-Morin'."
@@ -14,6 +15,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -33,6 +35,7 @@
     "ward": [
       {
         "office": "Councillor, Local",
+        "position": "Local Councillor",
         "scope": "Ward",
         "n_districts": 3,
         "seats": 1,
@@ -67,6 +70,7 @@
     "regional councillor": [
       {
         "office": "Councillor, Regional",
+        "position": "Regional Councillor",
         "scope": "Ward",
         "n_districts": 3,
         "seats": 1,

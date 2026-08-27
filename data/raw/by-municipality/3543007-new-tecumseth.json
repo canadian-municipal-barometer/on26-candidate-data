@@ -4,6 +4,7 @@
   "name_format": "first_last",
   "candidate_list_url": "https://www.newtecumseth.ca/government/new-tecumseth-votes/",
   "notes": {
+    "position": "From the section headings, 'Mayor', 'Deputy Mayor' and 'Councillor Ward 1'.",
     "retrieved": "2026-08-24",
     "list_status": "Certified. The page now carries a 'List of Certified Candidates' section, headed 'Certification took place on Monday, August 24, 2026. All Candidates are qualified and their nomination complies with the requirements of the Municipal Elections Act, 1996.'",
     "source_note": "The Notice of Nomination gives the offices; the names are on the New Tecumseth Votes page, which is the other district_source_url. Both are in the structure CSV.",
@@ -15,6 +16,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -32,6 +34,7 @@
     "deputy mayor": [
       {
         "office": "Deputy Mayor",
+        "position": "Deputy Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -48,6 +51,7 @@
     "ward": [
       {
         "office": "Councillor",
+        "position": "Councillor",
         "scope": "Ward",
         "n_districts": 7,
         "seats": 1,

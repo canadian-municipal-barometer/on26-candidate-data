@@ -7,6 +7,7 @@
     "list_status": "Certified. The page reads 'The nomination review and certification process is now complete, and the Town Clerk has officially certified the candidates listed below.'",
     "source_note": "district_source_url is the news post announcing nominations opening; the candidate list is at /en/2026-election-candidates.aspx, reached via the 2026 Municipal Election page.",
     "structure_match": "Regional Councillor and Town Councillor each have Ward 1-4 tables, matching both structure-CSV rows.",
+    "position": "From the section headings, 'Regional Councillor Candidates' and 'Town Councillor Candidates', with the ward given underneath ('Town Councillor Ward 1').",
     "retrieved": "2026-08-24",
     "withdrawals": "The page keeps a separate 'Withdrawn Candidates' table, which the office lists themselves already exclude. Two of its five rows are council offices: Pat Scaduto (Town Councillor, Ward 1, 2026-08-04) and Mohammad Tariq (Mayor, 2026-08-21); the other three are school board trustees."
   },
@@ -14,6 +15,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -38,6 +40,7 @@
     "ward": [
       {
         "office": "Councillor, Town",
+        "position": "Town Councillor",
         "scope": "Ward",
         "n_districts": 4,
         "seats": 1,
@@ -78,6 +81,7 @@
     "regional councillor": [
       {
         "office": "Councillor, Regional",
+        "position": "Regional Councillor",
         "scope": "Ward",
         "n_districts": 4,
         "seats": 1,

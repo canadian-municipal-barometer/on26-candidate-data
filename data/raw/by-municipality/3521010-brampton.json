@@ -8,6 +8,7 @@
     "source_note": "The listing is built by script behind 'Filter By Office / Filter By Ward / Sort By' controls and returns nothing to a plain fetch; read in the browser.",
     "name_quirk": "The bare-surname case is gone from Brampton: 'Gursimranjit Singh, -' — the mayoral nomination the town published with '-' in place of a given name — is one of the withdrawals. Toronto's Ward 21 'Nisha Kumari, ' is now the study's only name published without a given name.",
     "structure_match": "Both City and Regional councillors are elected from the five ward pairs 1&5, 2&6, 3&4, 7&8, 9&10, matching both structure-CSV rows.",
+    "position": "The listing inverts its headings - 'Councillor, City - Wards 1, 5' and 'Councillor, Regional - Wards 1, 5' - so the titles are recorded the right way round, City Councillor and Regional Councillor, which is how they are spoken and the only way a piped question reads.",
     "retrieved": "2026-08-24",
     "withdrawals": "Seven nominations carry a '(Withdrawn)' suffix and the line 'This candidate has withdrawn from this year's municipal election', and are excluded here: Dhaliwal, Avi; 'Gursimranjit Singh, -'; and Patel, Tirth Vinodkumar for mayor; Campbell, Chris for city councillor Wards 3, 4; Power, Rod for city councillor Wards 7, 8; and Dhillon, Ripudaman Singh and Fortini, Pat for regional councillor Wards 7, 8. Three of them moved rather than left: Power is a certified regional councillor candidate in the same ward pair, Dhillon a city councillor candidate in it, and Campbell a Peel District School Board candidate.",
     "name_changes": "Two Wards 7, 8 city councillor names changed form: 'Sharma, Rakesh Singh' is now 'Sharma, Rakesh', and 'Soares, Monica' is now 'Singh Soares, Monica'."
@@ -16,6 +17,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -42,6 +44,7 @@
     "ward": [
       {
         "office": "Councillor, City",
+        "position": "City Councillor",
         "scope": "Ward-pair",
         "n_districts": 5,
         "seats": 1,
@@ -102,6 +105,7 @@
     "regional councillor": [
       {
         "office": "Councillor, Regional",
+        "position": "Regional Councillor",
         "scope": "Ward-pair",
         "n_districts": 5,
         "seats": 1,

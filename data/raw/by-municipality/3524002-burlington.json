@@ -8,12 +8,14 @@
     "source_note": "The names are laid out as headings with contact details beneath rather than in a table; each office heading is followed by its candidates. Burlington's ward seat is a single combined 'City and Regional Councillor' office, so there is no separate regional councillor race.",
     "race_type_choice": "Burlington's single councillor race is 'City and Regional Councillor' - one ward-based contest whose winners sit on both councils. It is filed under 'ward' because it is the municipality's only ward council race, not under 'regional councillor'.",
     "structure_match": "6 ward tables published, matching n_districts=6 in the structure CSV.",
+    "position": "From the section headings, 'City and Regional Councillor - Ward 1'. Burlington fills both tiers with one ward race, which is why there is no separate regional contest here.",
     "retrieved": "2026-08-24"
   },
   "races": {
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -33,6 +35,7 @@
     "ward": [
       {
         "office": "Councillor, City and Regional",
+        "position": "City and Regional Councillor",
         "scope": "Ward",
         "n_districts": 6,
         "seats": 1,

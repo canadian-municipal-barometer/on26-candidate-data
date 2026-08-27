@@ -7,6 +7,7 @@
     "list_status": "Certified. The page reads 'These are the the certified candidates running in the 2026 Municipal Elections. The candidates are listed alphabetically and were certified by the Clerk on August 24, 2026.'",
     "source_note": "district_source_url is itself the Registered Candidates page; no extra hop needed.",
     "structure_match": "The at-large race is captioned 'Regional and Local Councillor (two to be elected)', independently confirming max_votes=2 for that row, alongside Ward 1-6 Councillor tables.",
+    "position": "From the page's headings, 'Regional and Local Councillor (two to be elected)' and 'Ward 1 Councillor'.",
     "retrieved": "2026-08-24",
     "acclamation_note": "The '(Acclaimed)' marker appears on the page only against two school board trustees, not against any council race."
   },
@@ -14,6 +15,7 @@
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -31,6 +33,7 @@
     "ward": [
       {
         "office": "Councillor, Ward",
+        "position": "Ward Councillor",
         "scope": "Ward",
         "n_districts": 6,
         "seats": 1,
@@ -82,6 +85,7 @@
     "regional councillor": [
       {
         "office": "Councillor, Regional and Local",
+        "position": "Regional and Local Councillor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 2,

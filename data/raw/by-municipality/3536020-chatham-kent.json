@@ -8,12 +8,14 @@
     "source_note": "candidate_list_url is unchanged, but the page's races are now SharePoint accordions built by script: a plain fetch returns the heading and intro only, and the earlier scrape picked up the sitting-councillors list instead. Read in the browser with the collapsed panels opened. Each candidate is one line, 'Surname, Given - email - filing date', and the separators mix hyphens and en dashes.",
     "structure_match": "Candidate page still prints '(Number to be elected - N)' per ward: 2 for wards 1, 2, 5, 6, 7, 8 and 1 for wards 3, 4. This independently confirms both structure-CSV rows (max_votes 2 and 1). The mayoral panel prints no such line.",
     "ward_names": "Ward numbers carry local names on the source page, which writes them with an en dash; recorded here as 'Ward N - Name'.",
+    "position": "From the accordion headings, 'Councillor Ward 1 - South West Kent'. Both ward tiers are published under the same title; what differs between them is how many councillors a ward elects, not what they are called.",
     "retrieved": "2026-08-24"
   },
   "races": {
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -35,6 +37,7 @@
     "ward": [
       {
         "office": "Councillor",
+        "position": "Councillor",
         "scope": "Ward",
         "n_districts": 6,
         "seats": 2,
@@ -127,6 +130,7 @@
       },
       {
         "office": "Councillor",
+        "position": "Councillor",
         "scope": "Ward",
         "n_districts": 2,
         "seats": 1,

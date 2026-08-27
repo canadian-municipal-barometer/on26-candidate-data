@@ -7,12 +7,14 @@
     "list_status": "Post-deadline; the page states 'The nomination period is now closed.' It does not use the word certified for the council races, and marks no council candidate withdrawn or acclaimed. Its only 'Acclaimed' headings are on three school board trustee tables.",
     "source_note": "Clarington elects its regional councillors from ward pairs, and the page's headings say so: 'Candidates - Regional Councillor Wards 1 and 2' and 'Wards 3 and 4'.",
     "structure_match": "Local Councillor appears for Wards 1-4 and Regional Councillor for the pairs 'Wards 1 and 2' and 'Wards 3 and 4', matching both structure-CSV rows.",
+    "position": "From the section headings, 'Candidates - Mayor', 'Councillor Ward 1' and 'Candidates - Regional Councillor Wards 1 and 2'. The lower-tier seat is published as a plain Councillor, though the structure CSV classifies it 'Councillor, Local'.",
     "retrieved": "2026-08-24"
   },
   "races": {
     "mayor": [
       {
         "office": "Mayor",
+        "position": "Mayor",
         "scope": "At-large",
         "n_districts": 1,
         "seats": 1,
@@ -29,6 +31,7 @@
     "ward": [
       {
         "office": "Councillor, Local",
+        "position": "Councillor",
         "scope": "Ward",
         "n_districts": 4,
         "seats": 1,
@@ -63,6 +66,7 @@
     "regional councillor": [
       {
         "office": "Councillor, Regional",
+        "position": "Regional Councillor",
         "scope": "Ward-pair",
         "n_districts": 2,
         "seats": 1,

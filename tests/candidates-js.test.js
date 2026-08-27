@@ -166,6 +166,7 @@ function rawRaces(census_id) {
             at_large,
             seats: race.seats_per_district,
             max_votes: race.max_votes,
+            position: race.position,
             names: district.candidates.map(displayName),
           });
         }
@@ -267,6 +268,7 @@ test("every scalar field is named for its stem", () => {
   const stems = STEMS;
   const expected = [
     ...stems.map((stem) => stem + "_accl"),
+    ...stems.map((stem) => stem + "_position"),
     ...stems
       .filter((stem) => !SINGLE_VOTE_STEMS.includes(stem))
       .map((stem) => stem + "_max_votes"),
@@ -615,6 +617,54 @@ test("max_votes is summed from max_votes, never from seats", () => {
       }
     }
   }
+});
+
+// The position is the one field the survey shows a respondent in the municipality's own
+// words rather than deriving, so it is checked the same way the numbers are: against the
+// race it came from, for every respondent, rather than spot-checked.
+test("every served race is named as its own municipality names it", () => {
+  for (const census_id of censusIds) {
+    const mun = DATA.municipalities[census_id];
+    for (const [ward, entry] of servedEntries(mun)) {
+      for (const stem of STEMS) {
+        const races = expectedFor(census_id, stem, ward);
+        // Blank on exactly the terms the rest of the family is blank on: no such race.
+        // Where a respondent is served several races under one stem they are asked about
+        // as one contest, so the build requires one position between them.
+        const titles = [...new Set(races.map((r) => r.position))];
+        assert.ok(
+          titles.length <= 1,
+          `${mun.name} ${ward}: ${stem} has ${titles.length} positions`,
+        );
+        assert.equal(
+          entry.fields[stem + "_position"],
+          titles.length ? titles[0] : "",
+          `${mun.name} ${ward} ${stem}_position`,
+        );
+        assert.equal(
+          entry.fields[stem + "_position"] === "",
+          entry.fields[stem + "_accl"] === "",
+          `${mun.name} ${ward}: ${stem}_position blankness no longer tracks served`,
+        );
+      }
+    }
+  }
+});
+
+// The point of carrying the position at all: what the survey used to say and what the
+// ballot says are not the same words. Both of these were plain "Councillor" to `office`.
+test("the position is the ballot's own title, not the study's classification", () => {
+  const vaughan = servedTo(DATA.municipalities["3519028"], "Ward 1 (Maple/Kleinburg)");
+  assert.equal(vaughan.fields.reg_coun_position, "Local and Regional Councillor");
+  assert.equal(vaughan.fields.ward_position, "Ward Councillor");
+
+  const kingston = servedTo(DATA.municipalities["3510010"], "District 1 - Countryside");
+  assert.equal(kingston.fields.ward_position, "District Councillor");
+
+  // Thunder Bay runs both councillor races, and its two titles differ as its ballots do.
+  const tb = servedTo(DATA.municipalities["3558004"], "McIntyre").fields;
+  assert.equal(tb.ward_position, "Ward Councillor");
+  assert.equal(tb.atlarge_position, "At Large Councillor");
 });
 
 test("an excluded contest reaches no respondent, in any ward", () => {
