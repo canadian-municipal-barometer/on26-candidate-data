@@ -636,9 +636,12 @@ test("every served race is named as its own municipality names it", () => {
           titles.length <= 1,
           `${mun.name} ${ward}: ${stem} has ${titles.length} positions`,
         );
+        // Upper-cased on the way out: the questions set the office against the rest of
+        // their sentence in capitals, and the build is where that is decided rather than
+        // the flow's piped text. The raw data keeps the source's own case.
         assert.equal(
           entry.fields[stem + "_position"],
-          titles.length ? titles[0] : "",
+          titles.length ? titles[0].toUpperCase() : "",
           `${mun.name} ${ward} ${stem}_position`,
         );
         assert.equal(
@@ -655,16 +658,36 @@ test("every served race is named as its own municipality names it", () => {
 // ballot says are not the same words. Both of these were plain "Councillor" to `office`.
 test("the position is the ballot's own title, not the study's classification", () => {
   const vaughan = servedTo(DATA.municipalities["3519028"], "Ward 1 (Maple/Kleinburg)");
-  assert.equal(vaughan.fields.reg_coun_position, "Local and Regional Councillor");
-  assert.equal(vaughan.fields.ward_position, "Ward Councillor");
+  assert.equal(vaughan.fields.reg_coun_position, "LOCAL AND REGIONAL COUNCILLOR");
+  assert.equal(vaughan.fields.ward_position, "WARD COUNCILLOR");
 
   const kingston = servedTo(DATA.municipalities["3510010"], "District 1 - Countryside");
-  assert.equal(kingston.fields.ward_position, "District Councillor");
+  assert.equal(kingston.fields.ward_position, "DISTRICT COUNCILLOR");
 
   // Thunder Bay runs both councillor races, and its two titles differ as its ballots do.
   const tb = servedTo(DATA.municipalities["3558004"], "McIntyre").fields;
-  assert.equal(tb.ward_position, "Ward Councillor");
-  assert.equal(tb.atlarge_position, "At Large Councillor");
+  assert.equal(tb.ward_position, "WARD COUNCILLOR");
+  assert.equal(tb.atlarge_position, "AT LARGE COUNCILLOR");
+});
+
+// The casing is the survey's, not the source's: every municipality here publishes its
+// offices in mixed case, and the raw data keeps them that way. A served value that came
+// through in the source's case would read as a stray sentence inside a question that
+// capitalises the office, so it is pinned rather than left to the build's good intentions.
+test("every served position is written in capitals", () => {
+  for (const census_id of censusIds) {
+    const mun = DATA.municipalities[census_id];
+    for (const [ward, entry] of servedEntries(mun)) {
+      for (const stem of STEMS) {
+        const value = entry.fields[stem + "_position"];
+        assert.equal(
+          value,
+          value.toUpperCase(),
+          `${mun.name} ${ward} ${stem}_position is not upper case`,
+        );
+      }
+    }
+  }
 });
 
 test("an excluded contest reaches no respondent, in any ward", () => {

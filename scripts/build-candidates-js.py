@@ -30,13 +30,13 @@ acclaimed, how many names they may mark, what shape their ballot is - is decided
         name: "Ottawa",
         shared: {
           names:  { mayor: [...], coun_atlarge: [...], dep_mayor: [...] },
-          fields: { mayor_accl: 0, mayor_position: "Mayor", atlarge: 1, ... }
+          fields: { mayor_accl: 0, mayor_position: "MAYOR", atlarge: 1, ... }
         },
         wards: {
           "<ward label>"|"99": {
             names:  { coun_ward: [...], coun_reg: [...] },
             fields: { ward: 1, ward_accl: 0, ward_max_votes: 1,
-                      ward_position: "Ward Councillor", ... }
+                      ward_position: "WARD COUNCILLOR", ... }
           }
         }
       }
@@ -106,11 +106,11 @@ WHY IT IS SHAPED THIS WAY, rather than mirroring the races
   parse-wards.test.js already uses: take the numbers out of the label.
 
 POSITION is what the municipality's own candidate list calls the seat, carried through
-from data/raw/by-municipality/ - Vaughan's at-large upper-tier race is a "Local and
-Regional Councillor" contest and Kingston's ward seat a "District Councillor" one, where
-the study's `office` classification says "Councillor, Local and Regional" and plain
-"Councillor". The survey pipes it into the question text, so a respondent reads the words
-their own ballot uses. Every stem writes one, including the two whose value never varies
+from data/raw/by-municipality/ and upper-cased here - Vaughan's at-large upper-tier race
+is a LOCAL AND REGIONAL COUNCILLOR contest and Kingston's ward seat a DISTRICT COUNCILLOR
+one, where the study's `office` classification says "Councillor, Local and Regional" and
+plain "Councillor". The survey pipes it into the question text, so a respondent reads the
+words their own ballot uses. Every stem writes one, including the two whose value never varies
 today: unlike a max_votes that would read 1 in every row, a position that reads "Mayor"
 everywhere says something true about that race, and the flow pipes all five the same way.
 Where a stem merges several races - none today - they must agree on the position, since
@@ -582,6 +582,13 @@ def entry_for(census_id, ward):
         # for the survey to pipe into the question it asks about the race. Blank on the
         # same terms as the rest of the family: no such race, nothing to name.
         #
+        # Written in CAPITALS, which is how the questions set an office against the rest
+        # of their sentence - "the LOCAL AND REGIONAL COUNCILLOR candidates". The raw data
+        # keeps each source's own case, since that is what the source published; the
+        # casing is a decision about how the survey reads, so it is made here with the
+        # rest of them rather than left to the flow's piped text or to CSS, where it would
+        # have to be repeated per question and could not be tested.
+        #
         # A stem that merged two races with different titles would have to name the merged
         # contest something, and there is no honest answer - the respondent is shown one
         # question. Nothing merges today (see STEM), so this aborts rather than picking.
@@ -595,7 +602,7 @@ def entry_for(census_id, ward):
                 f"different positions ({', '.join(repr(t) for t in titles)}), which are "
                 "asked about as one question. Give them one position, or split the stem."
             )
-        fields[stem + "_position"] = titles[0] if titles else ""
+        fields[stem + "_position"] = titles[0].upper() if titles else ""
 
     # The served-flags are written in the loop above, so each completes its stem's family
     # rather than standing outside it: ward, ward_accl, ward_max_votes.
@@ -760,9 +767,9 @@ doc = {
             "reg_coun only - mayor and dep_mayor "
             "are single-seat everywhere, so a max_votes for them would read 1 in every "
             "row. `<stem>_position` is what the municipality's own candidate list calls "
-            "the seat, for the survey to pipe into the question about it: Vaughan's "
-            "at-large upper-tier race is a \"Local and Regional Councillor\" contest and "
-            "Kingston's ward seat a \"District Councillor\" one. A blank in any of the "
+            "the seat, upper-cased for the survey to pipe into the question about it: "
+            "Vaughan's at-large upper-tier race is a LOCAL AND REGIONAL COUNCILLOR "
+            "contest and Kingston's ward seat a DISTRICT COUNCILLOR one. A blank in any of the "
             "three families means the respondent has no such race, and is "
             "what the survey flow filters the question on; a served race never writes one, "
             "since an unverified seat count aborts the build. The three councillor stems - "
