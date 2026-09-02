@@ -257,12 +257,14 @@ test("every ward entry carries the same scalar fields", () => {
 // the export and would suggest it might not be. See SINGLE_VOTE_STEMS in the build script.
 const SINGLE_VOTE_STEMS = ["mayor", "dep_mayor"];
 
-// The stems that carry a bare `<stem>` served-flag as well as their scalars. The three
-// councillor races, because the flow picks between them per respondent and a piped
-// `__js_atlarge` says what it means where `__js_atlarge_accl != ""` needs the README. Not
-// mayor, which every municipality elects, and not dep_mayor, which is one question rather
-// than one of a set. See SERVED_FLAG_STEMS in the build script.
-const SERVED_FLAG_STEMS = ["ward", "atlarge", "reg_coun"];
+// The stems that carry a bare `<stem>` served-flag as well as their scalars. Every stem
+// but mayor: the three councillor races, because the flow picks between them per
+// respondent, and dep_mayor, because the two municipalities that elect one are the two the
+// flow has to single out. In both cases a piped `__js_atlarge` or `__js_dep_mayor` says
+// what it means where `__js_atlarge_accl != ""` needs the README. Not mayor, which every
+// municipality in the study elects, so its flag would read 1 in every row. See
+// SERVED_FLAG_STEMS in the build script.
+const SERVED_FLAG_STEMS = ["ward", "atlarge", "reg_coun", "dep_mayor"];
 
 test("every scalar field is named for its stem", () => {
   const stems = STEMS;
@@ -280,8 +282,8 @@ test("every scalar field is named for its stem", () => {
 });
 
 // `coun`, `smd` and `mmd` were dropped once the flow moved to filtering on the accl and
-// max_votes families directly, and so were the bare served-flags — until the three
-// councillor ones came back for the flow's sake. Each was exactly derivable from what
+// max_votes families directly, and so were the bare served-flags — until the councillor
+// ones came back for the flow's sake, and dep_mayor after them. Each was exactly derivable from what
 // remains, and that is the point of this test either way: a flag that is kept has to keep
 // agreeing with the accl it duplicates, or the flow and the export start disagreeing about
 // who was served what, and a flag that is gone has to stay gone.

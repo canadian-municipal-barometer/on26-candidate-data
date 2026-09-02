@@ -57,10 +57,10 @@ survey writes from `names`; the three stems that can put more than one name on a
 add `<stem>_max_votes`. A blank in any of them is how the survey flow knows the respondent
 has no such race, so it means that and nothing else - an unverified seat count aborts the
 build rather than writing one.
-The three councillor stems also carry a bare `<stem>` served-flag, which says what a blank
+Every stem but mayor also carries a bare `<stem>` served-flag, which says what a blank
 accl says and is kept anyway because the flow reads better for it. Add a stem and the
 fields follow; the only lists of field names are SINGLE_VOTE_STEMS, which names the two
-that omit max_votes, and SERVED_FLAG_STEMS, which names the three that add a flag.
+that omit max_votes, and SERVED_FLAG_STEMS, which names the four that add a flag.
 
 Every municipality has a "99" ward entry as well as its real wards. It holds whatever is
 decided at large - the mayor, the at-large councillors, and any at-large regional or
@@ -188,8 +188,7 @@ NAME_FIELD = {
 # `<stem>_accl` is still written for both: whether a respondent is served the race varies
 # (only Innisfil and New Tecumseth elect a deputy mayor), and so does acclamation - Markham,
 # Vaughan and Waterloo each had a single mayoral candidate on file when this was written.
-# Neither carries a bare served-flag; see SERVED_FLAG_STEMS for why the three councillor
-# stems do and these two do not.
+# dep_mayor carries a bare served-flag and mayor does not; see SERVED_FLAG_STEMS for why.
 #
 # The assumption is checked rather than trusted, below: a race under one of these stems
 # with a max_votes other than 1 aborts the build instead of quietly dropping the number.
@@ -200,22 +199,25 @@ SINGLE_VOTE_STEMS = {"mayor", "dep_mayor"}
 #
 # The flag says nothing `<stem>_accl != ""` does not - that equivalence is pinned by the
 # tests, and it is why the other served-flags were dropped once the flow began filtering on
-# accl directly. It is back for the three councillor stems because of what the flow has to
-# do with them. A respondent can be served any combination of the three, the questions are
+# accl directly. It is back for the stems because of what the flow has to do with them.
+# A respondent can be served any combination of the councillor races, the questions are
 # piped and shown per stem, and `__js_atlarge` reads as what it means to the next person to
 # open the flow where `__js_atlarge_accl != ""` reads as a puzzle - "is a blank acclamation
 # a race nobody won, or no race at all?". The answer is in this file's header and in the
 # survey README, which is exactly where a flow editor is not looking.
 #
-# mayor and dep_mayor keep the derived reading. Not because the fact is any less true for
-# them, but because neither is a choice between questions: every municipality in the study
-# elects a mayor, so the flag would read 1 in every row, and the deputy mayor question is
-# one question shown in two municipalities rather than one of a set to pick between.
+# dep_mayor is here for the same reading rather than for a choice between questions: it is
+# one question shown in the two municipalities that elect a deputy mayor, and `__js_dep_mayor`
+# is what the flow filters it on. The flag is 0 in the other 36, which is the point - a
+# column of 0s with two 1s says who was served, where a column of blanks needs the README.
+#
+# mayor keeps the derived reading. Not because the fact is any less true for it, but because
+# every municipality in the study elects a mayor, so the flag would read 1 in every row.
 #
 # Whether that is worth the second spelling is a judgement about the flow, not about the
 # data, which is why it lives in a set here rather than in the shape of the code. Adding a
 # stem to this set adds its flag and nothing else.
-SERVED_FLAG_STEMS = {"ward", "atlarge", "reg_coun"}
+SERVED_FLAG_STEMS = {"ward", "atlarge", "reg_coun", "dep_mayor"}
 
 # The stems a municipality decides once for all of its wards, and which are therefore
 # stored once under `shared` rather than repeated in every ward entry. Toronto's mayoral
@@ -551,7 +553,7 @@ def entry_for(census_id, ward):
         # seat count would write the same blank for a question the respondent should see,
         # so it aborts the build instead of reaching the field.
         #
-        # A bare `<stem>` flag sits alongside these for the three councillor stems, saying
+        # A bare `<stem>` flag sits alongside these for every stem but mayor, saying
         # the same thing as a 1/0 because the flow is easier to read for it - see
         # SERVED_FLAG_STEMS, which is also where the case for keeping the other two derived
         # is made. `smd`/`mmd` described the ward race's shape and are gone for good:
@@ -772,11 +774,12 @@ doc = {
             "contest and Kingston's ward seat a DISTRICT COUNCILLOR one. A blank in any of the "
             "three families means the respondent has no such race, and is "
             "what the survey flow filters the question on; a served race never writes one, "
-            "since an unverified seat count aborts the build. The three councillor stems - "
-            "ward, atlarge, reg_coun - each also carry a bare `<stem>` served-flag: 1 where "
-            "the respondent is served that race, 0 where they are not, which is the same "
-            "fact as a non-blank accl in a form a survey flow can pipe. mayor and dep_mayor "
-            "have no such flag. meta.stems maps one to the other, and is "
+            "since an unverified seat count aborts the build. Every stem but mayor - "
+            "ward, atlarge, reg_coun, dep_mayor - also carries a bare `<stem>` served-flag: "
+            "1 where the respondent is served that race, 0 where they are not, which is the "
+            "same fact as a non-blank accl in a form a survey flow can pipe. mayor "
+            "has no such flag, since every municipality in the study elects one. "
+            "meta.stems maps one to the other, and is "
             "worth reading rather than guessing - the ward stem's candidate list is "
             "coun_ward1.., not ward1... Every ward entry "
             "carries the same `fields` keys, as does every `shared`. \"99\" is the entry "
