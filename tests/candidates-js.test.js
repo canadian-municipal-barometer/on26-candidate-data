@@ -34,16 +34,33 @@ const STEM = {
   "deputy mayor": "dep_mayor",
 };
 
-function newestBuild() {
+// The newest build, which is now one file per fieldwork provider. Filenames are
+// candidates-{date}-v{version}-{provider}.js, so a plain sort puts the newest date and
+// version last and the providers of that version adjacent — which is what this takes.
+function newestBuilds() {
   const files = readdirSync(VERSIONS)
     .filter((f) => /^candidates-.*\.js$/.test(f))
     .sort();
   assert.ok(files.length, "no built candidate file in " + VERSIONS);
-  return path.join(VERSIONS, files[files.length - 1]);
+
+  const stamp = files[files.length - 1].match(/^candidates-(\d{4}-\d\d-\d\d-v\d+)-/);
+  assert.ok(
+    stamp,
+    "newest build " +
+      files[files.length - 1] +
+      " is not named candidates-{date}-v{version}-{provider}.js — a pre-split file " +
+      "cannot be checked here, since neither half of the split is in it",
+  );
+  const newest = files.filter((f) => f.startsWith("candidates-" + stamp[1] + "-"));
+  assert.equal(
+    newest.length,
+    2,
+    "expected two provider files for " + stamp[1] + ", found: " + newest.join(", "),
+  );
+  return newest.map((f) => path.join(VERSIONS, f));
 }
 
-function loadBuilt() {
-  const file = newestBuild();
+function loadBuilt(file) {
   const sandbox = { window: {} };
   vm.createContext(sandbox);
   vm.runInContext(readFileSync(file, "utf8"), sandbox, { filename: file });
@@ -56,7 +73,39 @@ function loadBuilt() {
   return JSON.parse(JSON.stringify(sandbox.window.CMB_CANDIDATES));
 }
 
-const DATA = loadBuilt();
+// Both provider files, keyed by the provider each one declares.
+const BUILT = Object.fromEntries(
+  newestBuilds().map((file) => {
+    const data = loadBuilt(file);
+    assert.ok(
+      data.meta.provider,
+      path.basename(file) + " declares no meta.provider",
+    );
+    assert.ok(
+      path.basename(file).endsWith("-" + data.meta.provider.toLowerCase() + ".js"),
+      path.basename(file) + " is not the file for " + data.meta.provider,
+    );
+    return [data.meta.provider, { file, data }];
+  }),
+);
+assert.equal(Object.keys(BUILT).length, 2, "both files declare the same provider");
+
+// Everything below this line checks the study, not one provider's share of it, so it runs
+// against the union of the two files. That is the right unit for almost every assertion
+// here — the projection kept every candidate, every respondent gets their own ward, the
+// names sort — and it is the only unit some of them are true of at all: max_names is
+// study-wide by design, so it is not the maximum of either file on its own.
+//
+// The split itself is checked separately, in "the two provider files partition the study"
+// below. Merging here is safe precisely because that test holds: the rosters are disjoint,
+// so no entry is overwritten by the other file's.
+const DATA = {
+  meta: Object.values(BUILT)[0].data.meta,
+  municipalities: Object.assign(
+    {},
+    ...Object.values(BUILT).map(({ data }) => data.municipalities),
+  ),
+};
 const RAW = JSON.parse(readFileSync(RAW_PATH, "utf8"));
 
 // stem -> the field its candidate list is written under. The two are the same word for
@@ -185,6 +234,88 @@ function expectedFor(census_id, stem, ward) {
 
 test("every municipality in the raw data is in the built file, and no others", () => {
   assert.deepEqual(Object.keys(DATA.municipalities).sort(), censusIds.sort());
+});
+
+test("the two provider files partition the study", () => {
+  // The failure this is here for is a municipality reaching neither file — a survey that
+  // serves nobody in it, which nothing downstream reports: parse-candidates.js finds no
+  // entry and logs to a console no one is reading. The union test above would catch that
+  // too, but only by accident of the merge; this says it directly, and also catches the
+  // opposite — a municipality in both files, where the merge would silently pick one.
+  const rosters = Object.entries(BUILT).map(([provider, { data }]) => [
+    provider,
+    Object.keys(data.municipalities),
+  ]);
+
+  const seen = new Map();
+  for (const [provider, ids] of rosters) {
+    for (const id of ids) {
+      assert.ok(
+        !seen.has(id),
+        `${id} is in both ${seen.get(id)} and ${provider}`,
+      );
+      seen.set(id, provider);
+    }
+  }
+  assert.deepEqual([...seen.keys()].sort(), censusIds.sort());
+});
+
+test("each provider file holds exactly the municipalities the structure CSV assigns it", () => {
+  // The assignment is the `provider` column of notes/councillor-election-structure.csv,
+  // the same column build-quotas.R splits the quota tables on. It carries one row per
+  // office, so a municipality appears several times and the rows have to agree — which
+  // the build aborts on, and this pins from the other side.
+  const rows = parseCsv(
+    readFileSync(path.join(ROOT, "notes", "councillor-election-structure.csv"), "utf8"),
+  );
+
+  const expected = {};
+  for (const row of rows) {
+    if (expected[row.census_id] !== undefined) {
+      assert.equal(
+        expected[row.census_id],
+        row.provider,
+        `${row.csdname} (${row.census_id}) is given two providers in the structure CSV`,
+      );
+    }
+    expected[row.census_id] = row.provider;
+  }
+
+  for (const [provider, { data }] of Object.entries(BUILT)) {
+    assert.deepEqual(
+      Object.keys(data.municipalities).sort(),
+      censusIds.filter((id) => expected[id] === provider).sort(),
+      `${provider}'s file does not match the structure CSV`,
+    );
+  }
+});
+
+test("the two files agree on everything except what describes their own contents", () => {
+  // meta.max_names is the one that matters: it sizes the numbered embedded data fields the
+  // Qualtrics flow declares by hand, and both surveys declare the same ones, so a build
+  // that started sizing each file to its own municipalities would quietly halve one
+  // survey's mayoral fields. The three exceptions describe the file rather than the study.
+  const own = new Set(["provider", "municipalities", "candidates"]);
+  const [first, second] = Object.values(BUILT);
+
+  const keys = new Set([...Object.keys(first.data.meta), ...Object.keys(second.data.meta)]);
+  for (const key of keys) {
+    if (own.has(key)) continue;
+    assert.deepEqual(
+      first.data.meta[key],
+      second.data.meta[key],
+      `meta.${key} differs between ${path.basename(first.file)} and ` +
+        path.basename(second.file),
+    );
+  }
+
+  for (const { file, data } of Object.values(BUILT)) {
+    assert.equal(
+      data.meta.municipalities,
+      Object.keys(data.municipalities).length,
+      path.basename(file) + " miscounts its own municipalities",
+    );
+  }
 });
 
 test("every municipality has a 99 entry for a respondent with no ward", () => {
