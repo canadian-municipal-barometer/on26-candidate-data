@@ -1,0 +1,206 @@
+{
+ "census_id": "3553005",
+ "csdname": "Greater Sudbury",
+ "name_format": "last_first",
+ "candidate_list_url": "https://www.greatersudbury.ca/sites/sudburyen/assets/List-of-Certified-Candidates.pdf",
+ "notes": {
+  "why_hand_collected": "Greater Sudbury publishes its certified list only as a PDF. The page the clerk links from - .../for-voters/registered-candidates/, which redirects to .../candidates/ - carries no names at all, just the sentence 'View the list of Certified Candidates.' over a link to List-of-Certified-Candidates.pdf. scripts/crawl-municipal-elections.py excludes .pdf hrefs by design, so the walk can never reach it and records Greater Sudbury as no-list-found however good the seed URL is. Read with `pdftotext -layout`.",
+  "pdf_layout": "pdftotext wraps each office label across two lines and lifts ACCLAIMED into the gap between them, so a line-by-line read mis-pairs names and offices; the file was read by eye instead. It also mis-renders a few glyphs - '|Hunda, Judy' for 'Hunda, Judy', '-Zone 6' for '- Zone 6' - which is a reason not to parse it automatically for the sake of fifteen names.",
+  "boards_in_scope": "Four boards appear. The two English ones are collected: Rainbow DSB (B28029) over 6 areas and Sudbury Catholic (B29033) over 6 zones. Conseil scolaire public du Grand Nord de l'Ontario (areas 7-12) and Conseil scolaire catholique du Nouvel-Ontario (zones 4-6) are French-language and out of scope. Note the area numbering is shared across boards - Grand Nord's areas start at 7 where Rainbow's end at 6 - so an 'Area 7' is NOT a Rainbow zone.",
+  "acclamation": "The list marks acclamations in its own column, and Greater Sudbury is unusually acclaimed: 5 of Rainbow's 7 candidates and 5 of Sudbury Catholic's 8. Only Rainbow Area 3 and Sudbury Catholic Zone 5 are contested.",
+  "withdrawn": "The PDF marks withdrawals inline in the same column. Five appear - the mayor, three councillors and one trustee - and the trustee is Marcel Montpellier of Conseil scolaire catholique du Nouvel-Ontario Zone 4, a French board. No English-board trustee withdrew, so nothing was dropped from what is recorded here.",
+  "contact": "None. This is a certification list and carries no email, phone or website for any candidate, so all 15 rows reach the frame unreachable. The clerk's nomination papers (Form 1) are the remaining route, which is a records request rather than a read.",
+  "retrieved": "2026-09-04"
+ },
+ "contests": [
+  {
+   "board_number": "B28029",
+   "system": "public",
+   "office": "Rainbow District School Board Trustee - Area 1",
+   "candidates": [
+    {
+     "name_raw": "Montgomery, Jessica",
+     "acclaimed": true,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B28029",
+   "system": "public",
+   "office": "Rainbow District School Board Trustee - Area 2",
+   "candidates": [
+    {
+     "name_raw": "Gibson, Anita",
+     "acclaimed": true,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B28029",
+   "system": "public",
+   "office": "Rainbow District School Board Trustee - Area 3",
+   "candidates": [
+    {
+     "name_raw": "Afzal, Muhammad",
+     "acclaimed": false,
+     "email": "",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "Carroll, Tina",
+     "acclaimed": false,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B28029",
+   "system": "public",
+   "office": "Rainbow District School Board Trustee - Area 4",
+   "candidates": [
+    {
+     "name_raw": "Islam, Mohammed",
+     "acclaimed": true,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B28029",
+   "system": "public",
+   "office": "Rainbow District School Board Trustee - Area 5",
+   "candidates": [
+    {
+     "name_raw": "Farrow, David",
+     "acclaimed": true,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B28029",
+   "system": "public",
+   "office": "Rainbow District School Board Trustee - Area 6",
+   "candidates": [
+    {
+     "name_raw": "Hunda, Judy",
+     "acclaimed": true,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B29033",
+   "system": "catholic",
+   "office": "Sudbury Catholic District School Board Trustee - Zone 1",
+   "candidates": [
+    {
+     "name_raw": "McKnight, Shirley",
+     "acclaimed": true,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B29033",
+   "system": "catholic",
+   "office": "Sudbury Catholic District School Board Trustee - Zone 2",
+   "candidates": [
+    {
+     "name_raw": "Desjardins, Raymond",
+     "acclaimed": true,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B29033",
+   "system": "catholic",
+   "office": "Sudbury Catholic District School Board Trustee - Zone 3",
+   "candidates": [
+    {
+     "name_raw": "Bellmore, Michael",
+     "acclaimed": true,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B29033",
+   "system": "catholic",
+   "office": "Sudbury Catholic District School Board Trustee - Zone 4",
+   "candidates": [
+    {
+     "name_raw": "Gouchie, Shannon",
+     "acclaimed": true,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B29033",
+   "system": "catholic",
+   "office": "Sudbury Catholic District School Board Trustee - Zone 5",
+   "candidates": [
+    {
+     "name_raw": "Aube, Katherine Ann",
+     "acclaimed": false,
+     "email": "",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "McFarthing, Michael",
+     "acclaimed": false,
+     "email": "",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "Seguin, Carmen",
+     "acclaimed": false,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B29033",
+   "system": "catholic",
+   "office": "Sudbury Catholic District School Board Trustee - Zone 6",
+   "candidates": [
+    {
+     "name_raw": "Cameron, Jody",
+     "acclaimed": true,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  }
+ ]
+}

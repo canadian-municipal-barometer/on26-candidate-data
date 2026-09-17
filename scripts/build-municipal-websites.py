@@ -18,10 +18,27 @@ Inputs
       in an <a href>, municipal status, and geographic area.
   The study's master list at CMB Data/auxiliary-data/Master Municipality List/all_muns.csv,
       read by absolute path, for census_id.
+  notes/municipal-website-overrides.csv
+      Hand-maintained. MMAH's URL column is not merely mis-encoded, it is out of date: 17
+      of the 414 ballot-running municipalities are recorded at a host that no longer
+      resolves, having moved domain since MMAH last refreshed the column. A dead URL costs
+      the trustee crawl the whole municipality - it is why Haldimand County's two trustees
+      left the frame on 2026-09-02 - so each is repaired here with the live host, the
+      reason, and the date it was verified. See APPLYING AN OVERRIDE below.
 
 Output
   notes/municipal-websites.csv
       One row per municipality: census_id, csdname, tier, county, website, matched_on.
+      matched_on is "url-override" where the URL came from the overrides file, so the
+      repaired rows can be counted or filtered out in one step.
+
+APPLYING AN OVERRIDE. A row is a claim about what MMAH currently publishes, not a blind
+replacement, so `old_website` is a PRECONDITION: it must equal what MMAH's column holds for
+that municipality. If MMAH has since fixed the URL - or broken it differently - the row no
+longer describes reality and is reported rather than applied, which is the same reasoning
+as `old_value` in notes/classification-overrides.csv and the stale-row abort in
+notes/excluded-races.csv. An override for a census_id the join never produced is an error
+and aborts, since it can only mean a typo or a municipality that no longer exists.
 
 BOTH INPUTS ARE MIS-ENCODED, in different ways, and both are repaired on the way in by
 demojibake().
@@ -60,6 +77,7 @@ SRC = os.path.join(REPO, "data", "raw", "mmah-municipalities-2026-05-26.csv")
 MASTER = ('/Users/reed/Can. Mun. Barometer Dropbox/Reed Merrill/cmb_main/CMB Data/'
           'auxiliary-data/Master Municipality List/all_muns.csv')
 DEST = os.path.join(REPO, "notes", "municipal-websites.csv")
+OVERRIDES = os.path.join(REPO, "notes", "municipal-website-overrides.csv")
 
 # Status words either file may append to a name. Stripped from both sides before matching.
 STATUS = (r"township|town|city|village|municipality|county|"
@@ -106,6 +124,35 @@ def bare(name):
     s = re.sub(r"\b(%s)\b" % STATUS, " ", s)
     s = re.sub(r"[^a-z0-9]+", " ", s)
     return re.sub(r"\s+", " ", s).strip()
+
+
+def apply_overrides(rows):
+    """Replace dead MMAH URLs with the live ones in notes/municipal-website-overrides.csv.
+
+    Returns (applied, stale). See APPLYING AN OVERRIDE in the module docstring: the row's
+    `old_website` has to match what MMAH publishes today, or the row is stale and is
+    reported instead of applied.
+    """
+    if not os.path.exists(OVERRIDES):
+        return [], []
+    by_id = {r["census_id"]: r for r in rows}
+    applied, stale = [], []
+    with open(OVERRIDES, newline="", encoding="utf-8") as f:
+        for o in csv.DictReader(f):
+            cid = o["census_id"].strip()
+            row = by_id.get(cid)
+            if row is None:
+                sys.exit(f"municipal-website-overrides.csv: census_id {cid} "
+                         f"({o['csdname']}) is not in the join - typo, or a municipality "
+                         f"that no longer exists")
+            want, got = o["old_website"].strip(), (row["website"] or "").strip()
+            if want != got:
+                stale.append((cid, row["csdname"], want, got))
+                continue
+            row["website"] = o["new_website"].strip()
+            row["matched_on"] = "url-override"
+            applied.append((cid, row["csdname"], row["website"]))
+    return applied, stale
 
 
 def main():
@@ -196,6 +243,8 @@ def main():
                     "tier": hit["tier"], "county": hit["county"],
                     "website": hit["website"], "matched_on": how})
 
+    applied, stale = apply_overrides(out)
+
     out.sort(key=lambda r: r["csdname"])
     with open(DEST, "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=list(out[0].keys()))
@@ -206,6 +255,15 @@ def main():
     print(f"wrote {os.path.relpath(DEST, REPO)}: {len(out)} matched of {len(master)}")
     print(f"  running a ballot (Lower/Single Tier): {len(ballot)}")
     print(f"  with a website URL                  : {sum(1 for r in ballot if r['website'])}")
+    print(f"  URL repaired from the overrides file: {len(applied)}")
+    for cid, name, url in applied:
+        print(f"      {cid} {name[:26]:<27} -> {url}")
+    if stale:
+        print(f"\nSTALE OVERRIDES ({len(stale)}) - MMAH no longer publishes the URL the row "
+              f"claims, so the row was NOT applied. Re-check the live host and update or "
+              f"delete it:")
+        for cid, name, want, got in stale:
+            print(f"  {cid} {name[:26]:<27} row says {want!r}, MMAH has {got!r}")
     if ambiguous:
         print(f"\nAMBIGUOUS ({len(ambiguous)}) - bare name matches more than one MMAH row:")
         for mu, cands in ambiguous:

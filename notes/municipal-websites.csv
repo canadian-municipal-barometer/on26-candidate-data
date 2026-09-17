@@ -60,7 +60,7 @@ census_id,csdname,tier,county,website,matched_on
 3549036,Carling,Single Tier,Parry Sound,http://www.carlingtownship.ca/,name
 3512065,Carlow/Mayo,Lower Tier,Hastings,http://www.carlowmayo.ca/,name
 3554029,Casey,Single Tier,Timiskaming,http://Casey.ca,name
-3502044,Casselman,Lower Tier,Prescott and Russell,http://www.en.casselman.ca/,name
+3502044,Casselman,Lower Tier,Prescott and Russell,https://www.casselman.ca/,url-override
 3515013,Cavan Monaghan,Lower Tier,Peterborough,http://www.cavanmonaghan.net/siteengine/activepage.asp,name
 3534020,Central Elgin,Lower Tier,Elgin,https://www.centralelgin.org/en/index.aspx,name
 3510035,Central Frontenac,Lower Tier,Frontenac,http://www.centralfrontenac.com/,name
@@ -111,7 +111,7 @@ census_id,csdname,tier,county,website,matched_on
 3534,Elgin,Upper Tier,Elgin,www.elgincounty.ca,name
 3507014,Elizabethtown-Kitley,Lower Tier,Leeds and Grenville,http://www.elizabethtown-kitley.on.ca/,name
 3557041,Elliot Lake,Single Tier,Algoma,http://www.cityofelliotlake.com/,name
-3559019,Emo,Single Tier,Rainy River,http://www.twspemo.on.ca/,name
+3559019,Emo,Single Tier,Rainy River,https://emo.ca/,url-override
 3554052,Englehart,Single Tier,Timiskaming,http://www.englehart.ca/,name
 3538016,Enniskillen,Lower Tier,Lambton,http://www.enniskillen.ca/,name
 3523017,Erin,Lower Tier,Wellington,http://www.erin.ca/,name
@@ -123,11 +123,11 @@ census_id,csdname,tier,county,website,matched_on
 3512058,Faraday,Lower Tier,Hastings,http://www.faraday.ca/,name
 3556052,Fauquier-Strickland,Single Tier,Cochrane,http://www.fauquierstrickland.com/,name
 3526003,Fort Erie,Lower Tier,Niagara,https://www.forterie.ca/,name
-3559012,Fort Frances,Single Tier,Rainy River,http://www.fort-frances.com/,name
+3559012,Fort Frances,Single Tier,Rainy River,https://www.fortfrances.ca/,url-override
 3552001,French River / Rivière des Français,Single Tier,Sudbury,http://www.frenchriver.ca/,name
 3507017,Front of Yonge,Lower Tier,Leeds and Grenville,https://mallorytown.ca/,name
 3510,Frontenac,Upper Tier,Frontenac,https://frontenacislands.ca/,name
-3510005,Frontenac Islands,Lower Tier,Frontenac,http://municipality.frontenacislands.on.ca/,name
+3510005,Frontenac Islands,Lower Tier,Frontenac,https://www.frontenacislands.ca/,url-override
 3507024,Gananoque,Single Tier,Leeds and Grenville,http://www.gananoque.ca/,name
 3554066,Gauthier,Single Tier,Timiskaming,,name
 3544065,Georgian Bay,Lower Tier,Muskoka,http://www.gbtownship.ca/,name
@@ -145,10 +145,10 @@ census_id,csdname,tier,county,website,matched_on
 3558075,Greenstone,Single Tier,Thunder Bay,http://www.greenstone.ca/,name
 3542,Grey,Upper Tier,Grey,http://www.grey.ca/,name
 3542015,Grey Highlands,Lower Tier,Grey,http://www.greyhighlands.ca/,name
-3526065,Grimsby,Lower Tier,Niagara,http://www.town.grimsby.on.ca/,name
+3526065,Grimsby,Lower Tier,Niagara,https://www.grimsby.ca/,url-override
 3523008,Guelph,Single Tier,Wellington,http://www.guelph.ca/,name
 3523009,Guelph/Eramosa,Lower Tier,Wellington,http://www.get.on.ca/,name
-3528018,Haldimand County,Single Tier,Haldimand,http://www.haldimandcounty.on.ca/,name
+3528018,Haldimand County,Single Tier,Haldimand,https://www.haldimandcounty.ca/,url-override
 3546,Haliburton,Upper Tier,Haliburton,http://haliburtoncounty.ca/,name
 3524,Halton,Upper Tier,Halton,http://www.halton.ca/,name
 3524015,Halton Hills,Lower Tier,Halton,http://www.haltonhills.ca/,name
@@ -269,7 +269,7 @@ census_id,csdname,tier,county,website,matched_on
 3519048,Newmarket,Lower Tier,York,http://www.newmarket.ca/,name
 3526,Niagara,Upper Tier,Niagara,http://www.niagararegion.ca/,name
 3526043,Niagara Falls,Lower Tier,Niagara,http://www.niagarafalls.ca/,name
-3526047,Niagara-on-the-Lake,Lower Tier,Niagara,http://www.notl.org/,name
+3526047,Niagara-on-the-Lake,Lower Tier,Niagara,https://www.notl.com/,url-override
 3558044,Nipigon,Single Tier,Thunder Bay,http://www.nipigon.net/,name
 3549071,Nipissing,Single Tier,Parry Sound,http://nipissingtownship.com/,name
 3528052,Norfolk County,Single Tier,Norfolk,https://www.norfolkcounty.ca/,name
@@ -277,7 +277,7 @@ census_id,csdname,tier,county,website,matched_on
 3548044,North Bay,Single Tier,Nipissing,http://www.cityofnorthbay.ca/,name
 3530004,North Dumfries,Lower Tier,Waterloo,http://www.northdumfries.ca/,name
 3501030,North Dundas,Lower Tier,"Stormont, Dundas and Glengarry",http://www.northdundas.com/,name
-3510045,North Frontenac,Lower Tier,Frontenac,http://www.northfrontenac.ca/,name
+3510045,North Frontenac,Lower Tier,Frontenac,https://www.northfrontenac.com/,url-override
 3501050,North Glengarry,Lower Tier,"Stormont, Dundas and Glengarry",http://www.northglengarry.ca/,name
 3507065,North Grenville,Lower Tier,Leeds and Grenville,http://www.northgrenville.ca/,name
 3540055,North Huron,Lower Tier,Huron,http://www.northhuron.ca/,name
@@ -288,11 +288,11 @@ census_id,csdname,tier,county,website,matched_on
 3551017,Northeastern Manitoulin and the Islands,Single Tier,Manitoulin,http://www.townofnemi.on.ca/,name
 3541069,Northern Bruce Peninsula,Lower Tier,Bruce,http://www.northbrucepeninsula.ca/,name
 3514,Northumberland,Upper Tier,Northumberland,http://northumberland.ca/,name
-3532002,Norwich,Lower Tier,Oxford,http://www.twp.norwich.on.ca/,name
+3532002,Norwich,Lower Tier,Oxford,https://www.norwich.ca/,url-override
 3558016,O'Connor,Single Tier,Thunder Bay,http://www.oconnortownship.ca/,name
 3524001,Oakville,Lower Tier,Halton,http://www.oakville.ca/,name
 3538018,Oil Springs,Lower Tier,Lambton,http://www.oilsprings.ca/,name
-3558011,Oliver Paipoonge,Single Tier,Thunder Bay,http://www.oliverpaipoonge.on.ca/,name
+3558011,Oliver Paipoonge,Single Tier,Thunder Bay,https://www.oliverpaipoonge.ca/,url-override
 3556073,Opasatika,Single Tier,Cochrane,http://opasatika.net/,name
 3522014,Orangeville,Lower Tier,Dufferin,http://www.orangeville.ca/,name
 3543052,Orillia,Single Tier,Simcoe,http://www.orillia.ca/,name
@@ -319,7 +319,7 @@ census_id,csdname,tier,county,website,matched_on
 3515,Peterborough,Upper Tier,Peterborough,http://www.ptbocounty.ca/en/index.aspx,name+tier
 3538019,Petrolia,Lower Tier,Lambton,http://town.petrolia.on.ca/,name
 3518001,Pickering,Lower Tier,Durham,https://www.pickering.ca/en/index.aspx,name
-3560049,Pickle Lake,Single Tier,Kenora,http://www.picklelake.ca/,name
+3560049,Pickle Lake,Single Tier,Kenora,https://picklelake.ca/,url-override
 3557019,Plummer Additional,Single Tier,Algoma,https://plummertownship.ca/,name
 3538035,Plympton-Wyoming,Lower Tier,Lambton,http://plympton-wyoming.com/,name
 3538031,Point Edward,Lower Tier,Lambton,http://www.villageofpointedward.com/,name
@@ -348,7 +348,7 @@ census_id,csdname,tier,county,website,matched_on
 3557061,Sault Ste. Marie,Single Tier,Algoma,https://saultstemarie.ca/,name
 3558051,Schreiber,Single Tier,Thunder Bay,http://www.schreiber.ca/,name
 3518020,Scugog,Lower Tier,Durham,https://www.scugog.ca/en/index.aspx,name
-3549003,Seguin,Single Tier,Parry Sound,http://www.twp.seguin.on.ca/,name
+3549003,Seguin,Single Tier,Parry Sound,https://www.seguin.ca/,url-override
 3515015,Selwyn,Lower Tier,Peterborough,http://www.selwyntownship.ca/en/index.asp,name
 3543015,Severn,Lower Tier,Simcoe,http://www.townshipofsevern.com/,name
 3522021,Shelburne,Lower Tier,Dufferin,https://www.shelburne.ca/en/index.aspx/,name
@@ -357,12 +357,12 @@ census_id,csdname,tier,county,website,matched_on
 3560034,Sioux Lookout,Single Tier,Kenora,http://www.siouxlookout.ca/,name
 3560008,Sioux Narrows-Nestor Falls,Single Tier,Kenora,http://www.siouxnarrows-nestorfalls.ca/,name
 3509004,Smiths Falls,Single Tier,Lanark,http://www.smithsfalls.ca/,name
-3556048,Smooth Rock Falls,Single Tier,Cochrane,http://www.townofsmoothrockfalls.ca/,name
+3556048,Smooth Rock Falls,Single Tier,Cochrane,https://smoothrockfalls.ca/,url-override
 3548001,South Algonquin,Single Tier,Nipissing,https://www.southalgonquin.ca/,name
 3541004,South Bruce,Lower Tier,Bruce,http://www.town.southbruce.on.ca/,name
 3541055,South Bruce Peninsula,Lower Tier,Bruce,http://www.southbrucepeninsula.com/,name
 3501020,South Dundas,Lower Tier,"Stormont, Dundas and Glengarry",http://www.southdundas.com/,name
-3510020,South Frontenac,Lower Tier,Frontenac,http://www.township.southfrontenac.on.ca/,name
+3510020,South Frontenac,Lower Tier,Frontenac,https://www.southfrontenac.net/,url-override
 3501005,South Glengarry,Lower Tier,"Stormont, Dundas and Glengarry",http://southglengarry.com/,name
 3540005,South Huron,Lower Tier,Huron,http://www.southhuron.ca/,name
 3549056,South River,Single Tier,Parry Sound,http://www.southriverontario.com/,name
@@ -370,7 +370,7 @@ census_id,csdname,tier,county,website,matched_on
 3532012,South-West Oxford,Lower Tier,Oxford,http://www.swox.org/,name
 3542005,Southgate,Lower Tier,Grey,https://www.southgate.ca/en/index.aspx,name
 3539005,Southwest Middlesex,Lower Tier,Middlesex,http://www.southwestmiddlesex.ca/,name
-3534024,Southwold,Lower Tier,Elgin,http://www.twp.southwold.on.ca/,name
+3534024,Southwold,Lower Tier,Elgin,https://www.southwold.ca/,url-override
 3557039,Spanish,Single Tier,Algoma,http://www.townofspanish.com/,name
 3543009,Springwater,Lower Tier,Simcoe,http://www.springwater.ca/,name
 3526053,St. Catharines,Lower Tier,Niagara,http://www.stcatharines.ca/,name
@@ -403,7 +403,7 @@ census_id,csdname,tier,county,website,matched_on
 3554038,Thornloe,Single Tier,Timiskaming,,name
 3526037,Thorold,Lower Tier,Niagara,http://www.thorold.com/,name
 3558004,Thunder Bay,Single Tier,Thunder Bay,http://www.thunderbay.ca/,name
-3532004,Tillsonburg,Lower Tier,Oxford,http://www.town.tillsonburg.on.ca/,name
+3532004,Tillsonburg,Lower Tier,Oxford,https://www.tillsonburg.ca/,url-override
 3556027,Timmins,Single Tier,Cochrane,http://www.timmins.ca/,name
 3543068,Tiny,Lower Tier,Simcoe,https://www.tiny.ca/,name
 3520005,Toronto,Single Tier,Toronto,http://www.toronto.ca/,name
@@ -430,7 +430,7 @@ census_id,csdname,tier,county,website,matched_on
 3526021,West Lincoln,Lower Tier,Niagara,http://www.westlincoln.ca/,name
 3548055,West Nipissing / Nipissing Ouest,Single Tier,Nipissing,http://www.westnipissing.ca/,name
 3531025,West Perth,Lower Tier,Perth,https://www.westperth.com/en/index.aspx,name
-3507033,Westport,Lower Tier,Leeds and Grenville,http://www.village.westport.on.ca/,name
+3507033,Westport,Lower Tier,Leeds and Grenville,https://villageofwestport.ca/,url-override
 3518009,Whitby,Lower Tier,Durham,http://www.whitby.ca/en/,name
 3519044,Whitchurch-Stouffville,Lower Tier,York,http://www.townofws.com/,name
 3557091,White River,Single Tier,Algoma,http://www.whiteriver.ca/,name

@@ -1,0 +1,1487 @@
+[
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 1",
+  "board_number": "B66052",
+  "system": "public",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Bryan, Rosemarie",
+    "first_name": "Rosemarie",
+    "last_name": "Bryan",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "Clarke, Antonius",
+    "first_name": "Antonius",
+    "last_name": "Clarke",
+    "acclaimed": false,
+    "email": "info@antoniusclarke.com",
+    "phone": "437-410-3850",
+    "links": [],
+    "nomination_date": "18-Aug-2026"
+   },
+   {
+    "name_raw": "de Dovitiis, Matias",
+    "first_name": "Matias",
+    "last_name": "de Dovitiis",
+    "acclaimed": false,
+    "email": "info@matiasdedovitiis.ca",
+    "phone": "",
+    "links": [
+     "https://www.matiasdedovitiis.ca",
+     "https://bsky.app/profile/thematias.bsky.social",
+     "https://www.instagram.com/dovitiis/"
+    ],
+    "nomination_date": "26-May-2026"
+   },
+   {
+    "name_raw": "Hastings, Dennis",
+    "first_name": "Dennis",
+    "last_name": "Hastings",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "13-Aug-2026"
+   },
+   {
+    "name_raw": "Henry, Amberley Ryan",
+    "first_name": "Amberley Ryan",
+    "last_name": "Henry",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "20-Aug-2026"
+   },
+   {
+    "name_raw": "Kang, Lakhan",
+    "first_name": "Lakhan",
+    "last_name": "Kang",
+    "acclaimed": false,
+    "email": "info@lakhankang.com",
+    "phone": "647-545-4242",
+    "links": [
+     "https://www.lakhankang.com/",
+     "https://www.instagram.com/lakhankang"
+    ],
+    "nomination_date": "25-May-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 2",
+  "board_number": "B66052",
+  "system": "public",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Ellis, Timothy",
+    "first_name": "Timothy",
+    "last_name": "Ellis",
+    "acclaimed": false,
+    "email": "info@votetim.ca",
+    "phone": "647-520-1848",
+    "links": [
+     "https://www.votetim.ca/",
+     "https://www.instagram.com/votetim.ca/",
+     "https://bsky.app/profile/votetim.ca",
+     "https://www.facebook.com/VoteTim.ca"
+    ],
+    "nomination_date": "29-Jul-2026"
+   },
+   {
+    "name_raw": "Voitsytskyi, Ivan",
+    "first_name": "Ivan",
+    "last_name": "Voitsytskyi",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "27-Jul-2026"
+   },
+   {
+    "name_raw": "Zaffino, Matthew",
+    "first_name": "Matthew",
+    "last_name": "Zaffino",
+    "acclaimed": false,
+    "email": "info@matthewzaffino.ca",
+    "phone": "647-490-9419",
+    "links": [
+     "https://www.matthewzaffino.ca",
+     "https://www.facebook.com/profile.php?id=61590244349737",
+     "https://www.instagram.com/matthew.zaffino/"
+    ],
+    "nomination_date": "28-May-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 3",
+  "board_number": "B66052",
+  "system": "public",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Banninga, Matt",
+    "first_name": "Matt",
+    "last_name": "Banninga",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "20-Aug-2026"
+   },
+   {
+    "name_raw": "Choi, Daniel",
+    "first_name": "Daniel",
+    "last_name": "Choi",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "18-Aug-2026"
+   },
+   {
+    "name_raw": "Dawson, Alexis",
+    "first_name": "Alexis",
+    "last_name": "Dawson",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "20-Aug-2026"
+   },
+   {
+    "name_raw": "Gural, Christina",
+    "first_name": "Christina",
+    "last_name": "Gural",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "19-Aug-2026"
+   },
+   {
+    "name_raw": "Ishraq, Fatin",
+    "first_name": "Fatin",
+    "last_name": "Ishraq",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "Mensah, Justin",
+    "first_name": "Justin",
+    "last_name": "Mensah",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "04-May-2026"
+   },
+   {
+    "name_raw": "Waters, Andrew",
+    "first_name": "Andrew",
+    "last_name": "Waters",
+    "acclaimed": false,
+    "email": "candidate@andrewwaters.ca",
+    "phone": "416-738-8538",
+    "links": [
+     "https://www.andrewwaters.ca",
+     "https://www.instagram.com/candidate_waters/",
+     "https://www.x.com/CandidateWaters"
+    ],
+    "nomination_date": "31-Jul-2026"
+   },
+   {
+    "name_raw": "Webster, Jennifer",
+    "first_name": "Jennifer",
+    "last_name": "Webster",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [
+     "https://www.instagram.com/jennwebster4ward3"
+    ],
+    "nomination_date": "15-Jul-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 4",
+  "board_number": "B66052",
+  "system": "public",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Andrusyak, Ivanna",
+    "first_name": "Ivanna",
+    "last_name": "Andrusyak",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "13-May-2026"
+   },
+   {
+    "name_raw": "Choi, Brandon",
+    "first_name": "Brandon",
+    "last_name": "Choi",
+    "acclaimed": false,
+    "email": "info@brandonchoi.ca",
+    "phone": "",
+    "links": [
+     "https://www.brandonchoi.ca/",
+     "https://www.instagram.com/brandonchoi.ca/"
+    ],
+    "nomination_date": "24-Jul-2026"
+   },
+   {
+    "name_raw": "Delpero, Anthony",
+    "first_name": "Anthony",
+    "last_name": "Delpero",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "20-Aug-2026"
+   },
+   {
+    "name_raw": "Pei, Weidong",
+    "first_name": "Weidong",
+    "last_name": "Pei",
+    "acclaimed": false,
+    "email": "info@weidongpei.ca",
+    "phone": "",
+    "links": [
+     "https://www.weidongpei.ca",
+     "https://x.com/DrPeiTO"
+    ],
+    "nomination_date": "04-May-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 5",
+  "board_number": "B66052",
+  "system": "public",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Feyginberg, Elina",
+    "first_name": "Elina",
+    "last_name": "Feyginberg",
+    "acclaimed": false,
+    "email": "info@elina4trustee.ca",
+    "phone": "",
+    "links": [
+     "https://www.elina4trustee.ca",
+     "https://www.instagram.com/elina4trustee"
+    ],
+    "nomination_date": "03-Jul-2026"
+   },
+   {
+    "name_raw": "Gregory, Andrene",
+    "first_name": "Andrene",
+    "last_name": "Gregory",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "Gulyas, David",
+    "first_name": "David",
+    "last_name": "Gulyas",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "01-May-2026"
+   },
+   {
+    "name_raw": "Kolb, Jared",
+    "first_name": "Jared",
+    "last_name": "Kolb",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "Larkin, Maureen",
+    "first_name": "Maureen",
+    "last_name": "Larkin",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "20-Aug-2026"
+   },
+   {
+    "name_raw": "Massey, Andrew",
+    "first_name": "Andrew",
+    "last_name": "Massey",
+    "acclaimed": false,
+    "email": "info@andrewmassey.ca",
+    "phone": "",
+    "links": [
+     "https://www.facebook.com/MasseyTO/",
+     "https://www.instagram.com/massey.to/"
+    ],
+    "nomination_date": "30-Jun-2026"
+   },
+   {
+    "name_raw": "Stefanis, Gus",
+    "first_name": "Gus",
+    "last_name": "Stefanis",
+    "acclaimed": false,
+    "email": "gus.stefanis@mail.com",
+    "phone": "",
+    "links": [
+     "https://sites.google.com/view/gus-stefanis"
+    ],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "Viret, Janine",
+    "first_name": "Janine",
+    "last_name": "Viret",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "Volk, Jennifer",
+    "first_name": "Jennifer",
+    "last_name": "Volk",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "20-Aug-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 6",
+  "board_number": "B66052",
+  "system": "public",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Cline, Stacey",
+    "first_name": "Stacey",
+    "last_name": "Cline",
+    "acclaimed": false,
+    "email": "info@staceycline.ca",
+    "phone": "",
+    "links": [
+     "https://staceycline.ca",
+     "https://www.facebook.com/p/Stacey-Cline-4-Trustee-61573657731504/",
+     "https://www.instagram.com/staceyclinetrustee/"
+    ],
+    "nomination_date": "23-Jun-2026"
+   },
+   {
+    "name_raw": "Osman, Saherla",
+    "first_name": "Saherla",
+    "last_name": "Osman",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "20-Aug-2026"
+   },
+   {
+    "name_raw": "Smithies, Sarah",
+    "first_name": "Sarah",
+    "last_name": "Smithies",
+    "acclaimed": false,
+    "email": "sarahsmithiesward6@gmail.com",
+    "phone": "416-606-0904",
+    "links": [
+     "https://sarahward6.ca/",
+     "https://www.facebook.com/people/Sarah-Smithies/61593571186898/",
+     "https://www.instagram.com/sarah_ward6/"
+    ],
+    "nomination_date": "31-Jul-2026"
+   },
+   {
+    "name_raw": "Vassal, John",
+    "first_name": "John",
+    "last_name": "Vassal",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "18-Aug-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 7",
+  "board_number": "B66052",
+  "system": "public",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Arvizu, Axel",
+    "first_name": "Axel",
+    "last_name": "Arvizu",
+    "acclaimed": false,
+    "email": "axelarvizuTO@gmail.com",
+    "phone": "",
+    "links": [
+     "https://axelarvizu5.wixsite.com/axelarvizu"
+    ],
+    "nomination_date": "10-Jul-2026"
+   },
+   {
+    "name_raw": "Cherrington, Gladstone",
+    "first_name": "Gladstone",
+    "last_name": "Cherrington",
+    "acclaimed": false,
+    "email": "votecherrington2026@gmail.com",
+    "phone": "416-410-2546",
+    "links": [
+     "https://www.facebook.com/p/Gladstone-Cherrington-61593231673284/"
+    ],
+    "nomination_date": "07-Aug-2026"
+   },
+   {
+    "name_raw": "Golding, Adam",
+    "first_name": "Adam",
+    "last_name": "Golding",
+    "acclaimed": false,
+    "email": "adamgolding@adamgolding.ca",
+    "phone": "289-207-2527",
+    "links": [
+     "https://www.adamgolding.ca",
+     "https://adamgolding.substack.com/archive",
+     "https://www.facebook.com/adamgolding"
+    ],
+    "nomination_date": "17-Aug-2026"
+   },
+   {
+    "name_raw": "Kheiriddin, Tasha",
+    "first_name": "Tasha",
+    "last_name": "Kheiriddin",
+    "acclaimed": false,
+    "email": "info@votetasha.ca",
+    "phone": "",
+    "links": [
+     "https://www.votetasha.ca/",
+     "https://www.x.com/tasha4trustee",
+     "https://www.facebook.com/tashakheiriddin1/",
+     "https://www.instagram.com/tasha4trustee"
+    ],
+    "nomination_date": "25-Jun-2026"
+   },
+   {
+    "name_raw": "Mohammad, Nasir",
+    "first_name": "Nasir",
+    "last_name": "Mohammad",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "01-May-2026"
+   },
+   {
+    "name_raw": "Nalir, Shaffni",
+    "first_name": "Shaffni",
+    "last_name": "Nalir",
+    "acclaimed": false,
+    "email": "shaffni.nalir@gmail.com",
+    "phone": "",
+    "links": [
+     "https://www.instagram.com/shaffni.nalir",
+     "https://www.linkedin.com/in/shaffni-nalir-2989b5319"
+    ],
+    "nomination_date": "15-May-2026"
+   },
+   {
+    "name_raw": "Nazary, Theo",
+    "first_name": "Theo",
+    "last_name": "Nazary",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "20-Aug-2026"
+   },
+   {
+    "name_raw": "Williams, Deborah",
+    "first_name": "Deborah",
+    "last_name": "Williams",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "11-Jun-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 8",
+  "board_number": "B66052",
+  "system": "public",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Haddleton, Tracey",
+    "first_name": "Tracey",
+    "last_name": "Haddleton",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "20-Aug-2026"
+   },
+   {
+    "name_raw": "Hatia, Ibrahim",
+    "first_name": "Ibrahim",
+    "last_name": "Hatia",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "15-Jun-2026"
+   },
+   {
+    "name_raw": "Kapoglis, Spiros",
+    "first_name": "Spiros",
+    "last_name": "Kapoglis",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "Khan, Imran",
+    "first_name": "Imran",
+    "last_name": "Khan",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "19-Aug-2026"
+   },
+   {
+    "name_raw": "Lee III, Dewitt",
+    "first_name": "Dewitt",
+    "last_name": "Lee III",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "McGirr, Christine",
+    "first_name": "Christine",
+    "last_name": "McGirr",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "Rajwani, Farzana",
+    "first_name": "Farzana",
+    "last_name": "Rajwani",
+    "acclaimed": false,
+    "email": "farzanarajwani4trustee@gmail.com",
+    "phone": "",
+    "links": [
+     "https://www.farzanarajwani.ca/"
+    ],
+    "nomination_date": "30-Jun-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 9",
+  "board_number": "B66052",
+  "system": "public",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "De Pass, Carey",
+    "first_name": "Carey",
+    "last_name": "De Pass",
+    "acclaimed": false,
+    "email": "carey.depass4ward9trustee@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "Mammoliti, Christopher",
+    "first_name": "Christopher",
+    "last_name": "Mammoliti",
+    "acclaimed": false,
+    "email": "mammolitifortrustee@gmail.com",
+    "phone": "647-993-7609",
+    "links": [
+     "https://mammolitifortrustee.ca/"
+    ],
+    "nomination_date": "01-Jun-2026"
+   },
+   {
+    "name_raw": "Wu, Bill",
+    "first_name": "Bill",
+    "last_name": "Wu",
+    "acclaimed": false,
+    "email": "bill@torontochinese.ca",
+    "phone": "416-450-0826",
+    "links": [
+     "https://yongwu.ca/"
+    ],
+    "nomination_date": "20-Aug-2026"
+   },
+   {
+    "name_raw": "Yeung, Sonny",
+    "first_name": "Sonny",
+    "last_name": "Yeung",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "19-Jun-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 10",
+  "board_number": "B66052",
+  "system": "public",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Ahmad, Malik",
+    "first_name": "Malik",
+    "last_name": "Ahmad",
+    "acclaimed": false,
+    "email": "info@malikahmad.ca",
+    "phone": "437-849-0057",
+    "links": [],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "Dewan, Azim",
+    "first_name": "Azim",
+    "last_name": "Dewan",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "20-Aug-2026"
+   },
+   {
+    "name_raw": "Emerson, Karen",
+    "first_name": "Karen",
+    "last_name": "Emerson",
+    "acclaimed": false,
+    "email": "connect@voteemerson.ca",
+    "phone": "",
+    "links": [
+     "https://www.voteemerson.ca/"
+    ],
+    "nomination_date": "20-Aug-2026"
+   },
+   {
+    "name_raw": "Hassan, Ahnaaf",
+    "first_name": "Ahnaaf",
+    "last_name": "Hassan",
+    "acclaimed": false,
+    "email": "",
+    "phone": "437-259-7122",
+    "links": [
+     "https://www.instagram.com/ahnaafhassan"
+    ],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "Islam, Md Sazibul",
+    "first_name": "Md Sazibul",
+    "last_name": "Islam",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "26-Jun-2026"
+   },
+   {
+    "name_raw": "Kremp, Glenn",
+    "first_name": "Glenn",
+    "last_name": "Kremp",
+    "acclaimed": false,
+    "email": "glennkremp@gmail.com",
+    "phone": "",
+    "links": [
+     "https://www.instagram.com/glenn.kremp"
+    ],
+    "nomination_date": "19-Aug-2026"
+   },
+   {
+    "name_raw": "Li, Shawn",
+    "first_name": "Shawn",
+    "last_name": "Li",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "20-Aug-2026"
+   },
+   {
+    "name_raw": "Poirier, Jocelyne",
+    "first_name": "Jocelyne",
+    "last_name": "Poirier",
+    "acclaimed": false,
+    "email": "contact@jocelynepoirier.ca",
+    "phone": "",
+    "links": [
+     "https://www.threads.com/@joce4trustee",
+     "https://www.instagram.com/joce4trustee/"
+    ],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "Sterling, Marisa",
+    "first_name": "Marisa",
+    "last_name": "Sterling",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "19-Aug-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 11",
+  "board_number": "B66052",
+  "system": "public",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Deus, Dedan",
+    "first_name": "Dedan",
+    "last_name": "Deus",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "10-Aug-2026"
+   },
+   {
+    "name_raw": "Grant, Angus",
+    "first_name": "Angus",
+    "last_name": "Grant",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "17-Aug-2026"
+   },
+   {
+    "name_raw": "Halstead, Dameon",
+    "first_name": "Dameon",
+    "last_name": "Halstead",
+    "acclaimed": false,
+    "email": "info@dameonhalstead.ca",
+    "phone": "416-871-4772",
+    "links": [
+     "https://dameonhalstead.ca/"
+    ],
+    "nomination_date": "09-Jun-2026"
+   },
+   {
+    "name_raw": "Jack, Curtis",
+    "first_name": "Curtis",
+    "last_name": "Jack",
+    "acclaimed": false,
+    "email": "cjack@votecurtisjack.ca",
+    "phone": "437-435-9449",
+    "links": [
+     "https://www.votecurtisjack.ca",
+     "https://www.instagram.com/votecurtisjack/",
+     "https://www.linkedin.com/in/cujack/"
+    ],
+    "nomination_date": "29-Jul-2026"
+   },
+   {
+    "name_raw": "Mohammed, Abdul Azeem",
+    "first_name": "Abdul Azeem",
+    "last_name": "Mohammed",
+    "acclaimed": false,
+    "email": "info@voteazeem.ca",
+    "phone": "647-887-1869",
+    "links": [
+     "https://www.voteazeem.ca/"
+    ],
+    "nomination_date": "20-Aug-2026"
+   },
+   {
+    "name_raw": "Ravinthiran, Ravicha",
+    "first_name": "Ravicha",
+    "last_name": "Ravinthiran",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "05-May-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 12",
+  "board_number": "B66052",
+  "system": "public",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Ansari, Safiya",
+    "first_name": "Safiya",
+    "last_name": "Ansari",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "09-Jun-2026"
+   },
+   {
+    "name_raw": "Frake, Darren",
+    "first_name": "Darren",
+    "last_name": "Frake",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "17-Aug-2026"
+   },
+   {
+    "name_raw": "Garcia, Aria",
+    "first_name": "Aria",
+    "last_name": "Garcia",
+    "acclaimed": false,
+    "email": "gemjab5@live.com",
+    "phone": "",
+    "links": [
+     "https://www.podomatic.com/podcasts/mariagarciaremerata",
+     "https://www.x.com/Ariamg2026",
+     "https://ca.pinterest.com/mediaartist89"
+    ],
+    "nomination_date": "05-May-2026"
+   },
+   {
+    "name_raw": "McBean, Gary",
+    "first_name": "Gary",
+    "last_name": "McBean",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "19-Aug-2026"
+   },
+   {
+    "name_raw": "Nantheeswarar, Vimuththan",
+    "first_name": "Vimuththan",
+    "last_name": "Nantheeswarar",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [
+     "https://www.voteforwe.ca/"
+    ],
+    "nomination_date": "10-Aug-2026"
+   },
+   {
+    "name_raw": "Purohit, Ketan",
+    "first_name": "Ketan",
+    "last_name": "Purohit",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "25-May-2026"
+   },
+   {
+    "name_raw": "Sriskandarajah, Anu",
+    "first_name": "Anu",
+    "last_name": "Sriskandarajah",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "17-Aug-2026"
+   },
+   {
+    "name_raw": "Williams, Sherri",
+    "first_name": "Sherri",
+    "last_name": "Williams",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "11-Aug-2026"
+   },
+   {
+    "name_raw": "Wilson, Marcia",
+    "first_name": "Marcia",
+    "last_name": "Wilson",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "21-Aug-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 1",
+  "board_number": "B67059",
+  "system": "catholic",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Di Francesco, Jennifer",
+    "first_name": "Jennifer",
+    "last_name": "Di Francesco",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "Dias, Maria",
+    "first_name": "Maria",
+    "last_name": "Dias",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "23-Jul-2026"
+   },
+   {
+    "name_raw": "Pella, Robert",
+    "first_name": "Robert",
+    "last_name": "Pella",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "20-Aug-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 2",
+  "board_number": "B67059",
+  "system": "catholic",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Concordia, Sara",
+    "first_name": "Sara",
+    "last_name": "Concordia",
+    "acclaimed": false,
+    "email": "sara@saratcdsbward2.ca",
+    "phone": "",
+    "links": [
+     "https://www.instagram.com/saratcdsbward2/",
+     "https://www.facebook.com/profile.php?id=61589391968035"
+    ],
+    "nomination_date": "06-May-2026"
+   },
+   {
+    "name_raw": "de Domenico, Markus",
+    "first_name": "Markus",
+    "last_name": "de Domenico",
+    "acclaimed": false,
+    "email": "Markus4Ward2@gmail.com",
+    "phone": "",
+    "links": [
+     "https://www.facebook.com/markus4ward2/",
+     "https://www.instagram.com/markusdedomenico/?hl=en",
+     "https://x.com/Markus4Ward2"
+    ],
+    "nomination_date": "19-Aug-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 3",
+  "board_number": "B67059",
+  "system": "catholic",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Li Preti, Ida",
+    "first_name": "Ida",
+    "last_name": "Li Preti",
+    "acclaimed": false,
+    "email": "ida@idalipreti.com",
+    "phone": "416-827-3643",
+    "links": [
+     "https://idalipreti.com/"
+    ],
+    "nomination_date": "09-Jul-2026"
+   },
+   {
+    "name_raw": "Munoz Plasencia, Susel",
+    "first_name": "Susel",
+    "last_name": "Munoz Plasencia",
+    "acclaimed": false,
+    "email": "susel4trustee@gmail.com",
+    "phone": "",
+    "links": [
+     "https://www.susel4trusteeward3.com",
+     "https://www.instagram.com/susel4trustee/",
+     "https://www.x.com/susel4trustee"
+    ],
+    "nomination_date": "04-May-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 4",
+  "board_number": "B67059",
+  "system": "catholic",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Borreca, Maria",
+    "first_name": "Maria",
+    "last_name": "Borreca",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "17-Aug-2026"
+   },
+   {
+    "name_raw": "Fracassi, Peter",
+    "first_name": "Peter",
+    "last_name": "Fracassi",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "11-May-2026"
+   },
+   {
+    "name_raw": "Lubinski, Teresa",
+    "first_name": "Teresa",
+    "last_name": "Lubinski",
+    "acclaimed": false,
+    "email": "ReElectLubinski@gmail.com",
+    "phone": "",
+    "links": [],
+    "nomination_date": "22-Jul-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 5",
+  "board_number": "B67059",
+  "system": "catholic",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Cristiano, Gianfranco",
+    "first_name": "Gianfranco",
+    "last_name": "Cristiano",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "06-Aug-2026"
+   },
+   {
+    "name_raw": "Rizzo, Maria",
+    "first_name": "Maria",
+    "last_name": "Rizzo",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "05-Aug-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 6",
+  "board_number": "B67059",
+  "system": "catholic",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "DAmico, Frank",
+    "first_name": "Frank",
+    "last_name": "D'Amico",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "01-May-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 7",
+  "board_number": "B67059",
+  "system": "catholic",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "DiNova, Celine",
+    "first_name": "Celine",
+    "last_name": "DiNova",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "Largo, Marissa",
+    "first_name": "Marissa",
+    "last_name": "Largo",
+    "acclaimed": false,
+    "email": "contact@trusteelargo.ca",
+    "phone": "",
+    "links": [
+     "https://trusteelargo.ca/",
+     "https://www.instagram.com/trusteelargo/",
+     "https://www.facebook.com/people/Elect-Marissa-Largo-for-TCDSB-Trustee-Ward-7/61593869284368/"
+    ],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "Rodriguez, Gregory",
+    "first_name": "Gregory",
+    "last_name": "Rodriguez",
+    "acclaimed": false,
+    "email": "g.rodriguez2025@hotmail.com",
+    "phone": "647-354-6567",
+    "links": [
+     "https://rodriguez4trustee.david-064.workers.dev/"
+    ],
+    "nomination_date": "27-Jul-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 8",
+  "board_number": "B67059",
+  "system": "catholic",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Allen, Carla",
+    "first_name": "Carla",
+    "last_name": "Allen",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "21-Aug-2026"
+   },
+   {
+    "name_raw": "Paul, Mary Cury",
+    "first_name": "Mary Cury",
+    "last_name": "Paul",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "17-Aug-2026"
+   },
+   {
+    "name_raw": "Tanuan, Garry",
+    "first_name": "Garry",
+    "last_name": "Tanuan",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "12-Aug-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 9",
+  "board_number": "B67059",
+  "system": "catholic",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Bonavota, Rosina",
+    "first_name": "Rosina",
+    "last_name": "Bonavota",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "20-Aug-2026"
+   },
+   {
+    "name_raw": "Fallico, Renato",
+    "first_name": "Renato",
+    "last_name": "Fallico",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "07-Aug-2026"
+   },
+   {
+    "name_raw": "Le, David",
+    "first_name": "David",
+    "last_name": "Le",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "10-Aug-2026"
+   },
+   {
+    "name_raw": "Santos, Jonathan",
+    "first_name": "Jonathan",
+    "last_name": "Santos",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "02-Jun-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 10",
+  "board_number": "B67059",
+  "system": "catholic",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Araujo, Rosanna",
+    "first_name": "Rosanna",
+    "last_name": "Araujo",
+    "acclaimed": false,
+    "email": "rosanna@rosannaaraujo.com",
+    "phone": "",
+    "links": [
+     "https://www.rosannaaraujo.com",
+     "https://www.instagram.com/boymamaof4?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw=="
+    ],
+    "nomination_date": "07-Aug-2026"
+   },
+   {
+    "name_raw": "Colonna, Teresa",
+    "first_name": "Teresa",
+    "last_name": "Colonna",
+    "acclaimed": false,
+    "email": "trusteecolonna@gmail.com",
+    "phone": "437-375-2668",
+    "links": [
+     "https://www.teresacolonna.ca/"
+    ],
+    "nomination_date": "01-May-2026"
+   },
+   {
+    "name_raw": "Loor Ruiz, Stephanie",
+    "first_name": "Stephanie",
+    "last_name": "Loor Ruiz",
+    "acclaimed": false,
+    "email": "teamstephanieloorruiz@gmail.com",
+    "phone": "",
+    "links": [
+     "https://stephloorruiz.com/",
+     "https://www.facebook.com/Stephanie.Loor.420",
+     "https://www.instagram.com/stephloorruiz/"
+    ],
+    "nomination_date": "10-Aug-2026"
+   },
+   {
+    "name_raw": "Piccininni, Sal",
+    "first_name": "Sal",
+    "last_name": "Piccininni",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "17-Aug-2026"
+   },
+   {
+    "name_raw": "Salvatori, Paul",
+    "first_name": "Paul",
+    "last_name": "Salvatori",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "07-Jul-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 11",
+  "board_number": "B67059",
+  "system": "catholic",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Kennedy, Angela",
+    "first_name": "Angela",
+    "last_name": "Kennedy",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "13-May-2026"
+   },
+   {
+    "name_raw": "Perera, Anton",
+    "first_name": "Anton",
+    "last_name": "Perera",
+    "acclaimed": false,
+    "email": "",
+    "phone": "",
+    "links": [],
+    "nomination_date": "26-May-2026"
+   }
+  ]
+ },
+ {
+  "census_id": "3520005",
+  "csdname": "Toronto",
+  "county_mun": "",
+  "office": "Ward 12",
+  "board_number": "B67059",
+  "system": "catholic",
+  "classify_reason": "toronto-feed",
+  "empty_notice": false,
+  "candidates": [
+   {
+    "name_raw": "Crawford, Nancy",
+    "first_name": "Nancy",
+    "last_name": "Crawford",
+    "acclaimed": false,
+    "email": "njcrawford7@gmail.com",
+    "phone": "416-425-8025",
+    "links": [],
+    "nomination_date": "07-May-2026"
+   }
+  ]
+ }
+]

@@ -1,12 +1,13 @@
 census_id,csdname,county_mun,n_races
 3518005,"Ajax, Town (T)",1805,12
-3519046,"Aurora, Town (T)",1946,9
+3519046,"Aurora, Town (T)",1946,11
 3543042,"Barrie, City (CY)",4342,18
 3544018,"Bracebridge, Town (T)",4418,11
 3521010,"Brampton, City (CY)",2110,21
 3524002,"Burlington, City (CY)",2402,16
 3521024,"Caledon, Town (T)",2124,13
 3518017,"Clarington, Municipality (MU)",1817,11
+3514021,"Cobourg, Town (T)",1421,7
 3543031,"Collingwood, Town (T)",4331,7
 3547096,"Deep River, Town (T)",4796,7
 3519054,"East Gwillimbury, Town (T)",1954,8
@@ -20,20 +21,23 @@ census_id,csdname,county_mun,n_races
 3519036,"Markham, City (CY)",1936,18
 3524009,"Milton, Town (T)",2409,15
 3521005,"Mississauga, City (CY)",2105,27
-3544053,"Muskoka Lakes, Township (TP)",4453,0
+3544053,"Muskoka Lakes, Township (TP)",4453,7
 3524001,"Oakville, Town (T)",2401,24
-3518013,"Oshawa, City (CY)",1813,16
+3518013,"Oshawa, City (CY)",1813,15
 3542059,"Owen Sound, City (CY)",4259,7
 3543072,"Penetanguishene, Town (T)",4372,0
 3515014,"Peterborough, City (CY)",1514,10
 3518001,"Pickering, City (CY)",1801,11
 3519038,"Richmond Hill, Town (T)",1938,13
 3557061,"Sault Ste. Marie, City (CY)",5761,15
-3534021,"St. Thomas, City (CY)",3421,0
+3518020,"Scugog, Township (TP)",1820,11
+3560034,"Sioux Lookout, Municipality (MU)",6034,7
+3534021,"St. Thomas, City (CY)",3421,3
+3531011,"Stratford, City (CY)",3111,6
 3548069,"Temagami, Municipality (MU)",4869,6
 3543068,"Tiny, Township (TP)",4368,7
 3512001,"Tyendinaga, Township (TP)",1201,7
-3518029,"Uxbridge, Township (TP)",1829,12
+3518029,"Uxbridge, Township (TP)",1829,11
 3519028,"Vaughan, City (CY)",1928,15
 3530016,"Waterloo, City (CY)",3016,14
 3518009,"Whitby, Town (T)",1809,13

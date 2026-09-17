@@ -112,14 +112,24 @@ FRENCH = re.compile(
     r"grandes rivi|nouvel-ontario|centre-est|est ontarien|grand nord|nord-est|"
     r"\bCEPEO\b|\bCSDCEO\b|\bCSPGNO\b|\bCSCFN\b|french", re.I)
 
-_TRUSTEE = re.compile(r"trustee|school board|conseiller|membre du conseil", re.I)
+# "school board" is written as one word by some clerks - Terrace Bay, Manitouwadge and
+# Marathon all head their public table "Superior Greenstone District Schoolboard" - and a
+# test for the two-word spelling alone refuses the contest outright, board name and all.
+# The optional space costs nothing and recovers Superior-Greenstone.
+_TRUSTEE = re.compile(r"trustee|school\s?board|conseiller|membre du conseil", re.I)
 # A generic label names the system but no board.
-_CATHOLIC_SYSTEM = re.compile(r"english\s*[- ]?\s*(separate|catholic)|"
+# "English Language Public" and "English Language Catholic" are ordinary clerk phrasing and
+# were not recognised, which is worse than it sounds: a label that classifies to nothing
+# falls back to the section heading, so Port Colborne's "English Language Catholic District
+# School Board" contest was attributed to the District School Board of Niagara - the public
+# board named further up its page. The optional word is all that was missing.
+_LANG = r"(language\s+)?"
+_CATHOLIC_SYSTEM = re.compile(r"english\s*[- ]?\s*" + _LANG + r"(separate|catholic)|"
                               r"(separate|catholic)\s+school\s+(board\s+)?trustee|"
-                              r"trustee\s+english\s+(separate|catholic)", re.I)
-_PUBLIC_SYSTEM = re.compile(r"english\s*[- ]?\s*public|"
+                              r"trustee\s+english\s+" + _LANG + r"(separate|catholic)", re.I)
+_PUBLIC_SYSTEM = re.compile(r"english\s*[- ]?\s*" + _LANG + r"public|"
                             r"public\s+school\s+(board\s+)?trustee|"
-                            r"trustee\s+english\s+public", re.I)
+                            r"trustee\s+english\s+" + _LANG + r"public", re.I)
 
 _KEYS = []
 for _num, (_sys, _name, _keys) in BOARDS.items():
@@ -146,10 +156,18 @@ def classify(office):
       None                  not an in-scope race (French, or not a trustee race at all)
     system is "public", "catholic" or None.
     """
-    if not _TRUSTEE.search(office):
-        return None, None, "not-a-trustee-race"
+    # FRENCH is tested BEFORE the trustee gate, and the order matters. A French board's own
+    # name often contains no word this gate recognises - "Conseil Scolaire Catholique
+    # Providence" has neither "trustee" nor "school board" - so behind the gate it was
+    # reported as not-a-trustee-race. Both answers refuse the race, but only one says WHY,
+    # and callers need the difference: scripts/harvest-accordion.py uses it to stop reading
+    # a table at a French heading instead of letting the heading above the table stand. A
+    # French separate trustee reached the 2026-09-02 frame as an English Catholic one for
+    # want of this.
     if FRENCH.search(office):
         return None, None, "french-language-board"
+    if not _TRUSTEE.search(office):
+        return None, None, "not-a-trustee-race"
     for num, system, key, rx in _KEYS:
         if rx.search(office):
             return num, system, f"matched:{key}"

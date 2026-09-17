@@ -1,0 +1,94 @@
+{
+ "census_id": "3560010",
+ "csdname": "Kenora",
+ "name_format": "first_last",
+ "candidate_list_url": "https://www.kenora.ca/your-government/elections/candidates/certified-candidates/",
+ "notes": {
+  "why_hand_collected": "Kenora publishes its certified candidates as headings and plain paragraphs, with no table anywhere on the page, so scripts/harvest-accordion.py - which reads a label followed by a table - finds nothing on it. The crawl does reach the right page; there is simply nothing there for a table reader to read.",
+  "boards_in_scope": "Four contests. The two English ones are collected. The page labels them only by system - 'English Public School Board Trustee' and 'English Catholic School Board Trustee' - and names no board, so the board comes from the Ministry of Education school list: Keewatin-Patricia DSB runs six schools in Kenora and Kenora CDSB five. The French Public (Conseil scolaire de district du Grand Nord de l'Ontario) and French Catholic (Conseil scolaire de district catholique des Aurores boreales) contests are out of scope.",
+  "public_board_is_not_split": "notes/board-jurisdictions.csv shows Kenora with TWO public boards, Keewatin-Patricia and Rainy River, and that second row is wrong. It comes from the ministry school list, whose single Rainy River entry for Kenora is Nestor Falls Public School in Nestor Falls (P0X1K0) - a school in Sioux Narrows-Nestor Falls, a different municipality. The postal-letter screen in scripts/build-board-municipalities.py cannot catch it because both sit in P. Kenora's ballot carries one public trustee race, and it is Keewatin-Patricia's.",
+  "acclamation": "The page prints 'Acclaimed office' under a heading rather than against a name. It appears under the English Catholic contest and under both French ones, and not under the English Public one - which has 4 candidates for 3 seats and is contested.",
+  "additional_nominations": "The public contest was reopened under s. 33(5) of the Municipal Elections Act: the page records nominations accepted on Wednesday, August 26, 2026 between 9 a.m. and 2 p.m. David Cornish is annotated '(certified on August 24, 2026)' on the page; the annotation is kept out of the name and recorded here instead. These are ordinary candidates in an under-subscribed race, not anomalies.",
+  "contact": "None published for any candidate. All 9 rows reach the frame unreachable.",
+  "retrieved": "2026-09-04"
+ },
+ "contests": [
+  {
+   "board_number": "B28045",
+   "system": "public",
+   "office": "English Public School Board Trustee (3 seats)",
+   "candidates": [
+    {
+     "name_raw": "Anita Cameron",
+     "acclaimed": false,
+     "email": "",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "David Cornish",
+     "acclaimed": false,
+     "email": "",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "Grant Erickson",
+     "acclaimed": false,
+     "email": "",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "Rory McMillan",
+     "acclaimed": false,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B29050",
+   "system": "catholic",
+   "office": "English Catholic School Board Trustee",
+   "candidates": [
+    {
+     "name_raw": "Derek Favreau",
+     "acclaimed": true,
+     "email": "",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "Teresa Gallik",
+     "acclaimed": true,
+     "email": "",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "Paul Landry",
+     "acclaimed": true,
+     "email": "",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "Marie Lundin",
+     "acclaimed": true,
+     "email": "",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "Irene Richards",
+     "acclaimed": true,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  }
+ ]
+}

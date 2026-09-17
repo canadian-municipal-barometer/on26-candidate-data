@@ -1,0 +1,18 @@
+census_id,csdname,election_url,source
+3506008,Ottawa,https://ottawa.ca/en/city-hall/elections/candidates/certified-and-acclaimed-candidates,data/raw/by-municipality/3506008-ottawa.json
+3510010,Kingston,https://www.cityofkingston.ca/council-and-city-administration/elections/candidates/candidate-list/,data/raw/by-municipality/3510010-kingston.json
+3519070,Georgina,https://www.georgina.ca/municipal-government/elections/2026-candidate-information,data/raw/by-municipality/3519070-georgina.json
+3525005,Hamilton,https://www.hamilton.ca/city-council/municipal-election/candidates-third-party-advertisers/candidates,data/raw/by-municipality/3525005-hamilton.json
+3526043,Niagara Falls,https://niagarafalls.ca/city-government/elections/municipal-election-candidates/,data/raw/by-municipality/3526043-niagara-falls.json
+3526053,St. Catharines,https://www.stcatharines.ca/council-and-administration/elections/registered-candidates/,data/raw/by-municipality/3526053-st-catharines.json
+3528018,Haldimand County,https://www.haldimandcounty.ca/government-administration/elections/2026-municipal-election/registered-candidates/,data/raw/by-municipality/3528018-haldimand-county.json
+3529006,Brantford,https://www.brantford.ca/your-government/municipal-election/candidates/,data/raw/by-municipality/3529006-brantford.json
+3530010,Cambridge,https://www.cambridge.ca/mayor-city-council-government/elections/nominations-candidate-profiles/,data/raw/by-municipality/3530010-cambridge.json
+3530013,Kitchener,https://app2.kitchener.ca/election/candidates.aspx,data/raw/by-municipality/3530013-kitchener.json
+3536020,Chatham-Kent,https://www.chatham-kent.ca/localgovernment/elections/Pages/Candidates.aspx,data/raw/by-municipality/3536020-chatham-kent.json
+3538030,Sarnia,https://www.sarnia.ca/city-government/elections/2026-election/list-of-certified-candidates/,data/raw/by-municipality/3538030-sarnia.json
+3543007,New Tecumseth,https://www.newtecumseth.ca/government/new-tecumseth-votes/,data/raw/by-municipality/3543007-new-tecumseth.json
+3543017,Innisfil,https://www.innisfil.ca/government-administration/elections,data/raw/by-municipality/3543017-innisfil.json
+3548044,North Bay,https://northbay.ca/city-government/2026-elections/registered-candidates-and-third-party-advertisers/,data/raw/by-municipality/3548044-north-bay.json
+3553005,Greater Sudbury / Grand Sudbury,https://www.greatersudbury.ca/city-hall/municipal-schoolboard-elections/for-voters/registered-candidates/,data/raw/by-municipality/3553005-greater-sudbury.json
+3558004,Thunder Bay,https://www.thunderbay.ca/en/city-hall/2026-election-candidate-profiles.aspx,data/raw/by-municipality/3558004-thunder-bay.json

@@ -19,6 +19,10 @@ candidate list if it names a school board or says "certified"/"acclaimed" next t
 trustee; that is a deliberately narrow test, because a page merely mentioning the election
 is not the list.
 
+It is still narrowly satisfiable by a page that only ANNOUNCES the list - "List of
+Certified Candidates for Council and School Board Trustees" is a heading, not a ballot -
+so a page accepted without naming a board is retried one hop deeper. See refine().
+
 Politeness. One request at a time per host, a delay between them, and a short timeout.
 Workers run across DIFFERENT municipalities, so no single site sees concurrent requests.
 
@@ -28,16 +32,29 @@ replacement rather than letting subprocess decode strictly and raise. And one mu
 must never end the run: crawl() catches everything and returns a row saying what failed, so
 a single bad site costs one row instead of the other 372.
 
+SEEDS SHORT-CIRCUIT THE WALK. For 17 municipalities this repo already knows the candidate
+list URL by hand, because data/raw/by-municipality/ cites it as the source of that city's
+council candidates. Re-deriving it by scoring links is work the crawl can lose: it stopped
+at Kingston's press release rather than its candidate list, at Toronto's election index
+rather than its list, and found nothing at all for Greater Sudbury, Chatham-Kent and New
+Tecumseth. A seed is TRIED FIRST and kept only if it passes the same looks_like_list()
+test as any other page, so it is a head start and never an unchecked assertion; a seed that
+fails the test falls through to the ordinary walk. `status` records which happened.
+
 Inputs
   notes/municipal-websites.csv    census_id -> official website (built by
                                   scripts/build-municipal-websites.py)
+  notes/municipal-election-page-seeds.csv   census_id -> known candidate-list URL,
+                                  generated from the source_url each per-municipality
+                                  candidate file already cites
   notes/voterview-municipalities.csv  skipped: already covered by the VoterView harvest
   data/boards/boards.csv          the 60 board names to look for
 
 Output
   notes/municipal-election-pages.csv
       census_id, csdname, website, election_url, status, boards_found, n_emails, saved_as
-      status is one of: found | no-list-found | unreachable | no-website | error
+      status is one of: found | found-from-seed | no-list-found | unreachable |
+                        no-website | error
 """
 import csv
 import html
@@ -55,6 +72,7 @@ from trustee_boards import BOARDS  # noqa: E402
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITES = os.path.join(REPO, "notes", "municipal-websites.csv")
 SKIP = os.path.join(REPO, "notes", "voterview-municipalities.csv")
+SEEDS = os.path.join(REPO, "notes", "municipal-election-page-seeds.csv")
 DEST = os.path.join(REPO, "notes", "municipal-election-pages.csv")
 
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
@@ -79,6 +97,11 @@ LINK_SCORES = [
     (re.compile(r"\belection", re.I), 2),
     (re.compile(r"\bvote|voter", re.I), 1),
 ]
+# The score a link has to reach before the refinement below will spend a fetch on it.
+# It is the "certified candidate list" / "who is running" tier of LINK_SCORES: a link that
+# names the list itself, not one that merely says "election".
+LIST_LINK = 10
+
 SKIP_LINK = re.compile(r"\.(pdf|jpg|jpeg|png|gif|docx?|xlsx?|zip)$|mailto:|tel:|"
                        r"facebook\.com|twitter\.com|x\.com|instagram|youtube|linkedin", re.I)
 
@@ -144,10 +167,39 @@ def looks_like_list(doc):
     return None, text
 
 
-def crawl(row, cache):
+def refine(best):
+    """Prefer the list itself over the page that announces it.
+
+    A hub page reading "List of Certified Candidates for Council and School Board
+    Trustees" passes looks_like_list() on the trustee-plus-certified test alone, so on a
+    site that puts the announcement and the list on separate pages the walk stops one hop
+    short - Sarnia, North Bay and Georgina are the cases that showed it, each of which had
+    the real list behind a link scoring 23 or better on the accepted page.
+
+    Only a page that names NO board is retried, because that is the signature of the miss,
+    and a deeper page is adopted only if it DOES name one. So this can promote a hub to
+    the list it points at, and can never replace a page that already named a board.
+    """
+    url, found, doc, text_body = best
+    if found:
+        return best
+    for score, link, _text in links(doc, url)[:2]:
+        if score < LIST_LINK or link == url:
+            continue
+        deeper = get(link)
+        time.sleep(DELAY)
+        if not deeper:
+            continue
+        names, deeper_text = looks_like_list(deeper)
+        if names:
+            return link, names, deeper, deeper_text
+    return best
+
+
+def crawl(row, cache, seeds):
     """Never raises - see ROBUSTNESS in the module docstring."""
     try:
-        return _crawl(row, cache)
+        return _crawl(row, cache, seeds)
     except Exception as exc:
         return {"census_id": row["census_id"], "csdname": row["csdname"],
                 "website": row["website"], "election_url": "", "status": "error",
@@ -155,11 +207,23 @@ def crawl(row, cache):
                 "error": f"{type(exc).__name__}: {exc}"[:120]}
 
 
-def _crawl(row, cache):
+def _crawl(row, cache, seeds):
     cid, name, site = row["census_id"], row["csdname"], row["website"]
     res = {"census_id": cid, "csdname": name, "website": site, "election_url": "",
            "status": "no-website", "boards_found": "", "n_emails": 0, "saved_as": "",
            "error": ""}
+
+    # A known URL is tried first, and still has to pass looks_like_list(). See SEEDS.
+    seed = seeds.get(cid)
+    if seed:
+        doc = get(seed)
+        time.sleep(DELAY)
+        if doc:
+            found, text_body = looks_like_list(doc)
+            if found is not None:
+                return finish(res, "found-from-seed",
+                              refine((seed, found, doc, text_body)), cid, cache)
+
     if not site:
         return res
     home = get(site)
@@ -194,9 +258,13 @@ def _crawl(row, cache):
     if not best:
         res["status"] = "no-list-found"
         return res
+    return finish(res, "found", refine(best), cid, cache)
 
+
+def finish(res, status, best, cid, cache):
+    """Record an accepted page on the result row, and save it if a cache was asked for."""
     url, found, doc, text_body = best
-    res.update(status="found", election_url=url,
+    res.update(status=status, election_url=url,
                boards_found="|".join(sorted(found)),
                n_emails=len(set(EMAIL.findall(text_body))))
     if cache:
@@ -214,16 +282,18 @@ def main():
     workers = int(args[args.index("--workers") + 1]) if "--workers" in args else 4
 
     skip = {r["census_id"] for r in csv.DictReader(open(SKIP))} if os.path.exists(SKIP) else set()
+    seeds = ({r["census_id"]: r["election_url"] for r in csv.DictReader(open(SEEDS))}
+             if os.path.exists(SEEDS) else {})
     rows = [r for r in csv.DictReader(open(SITES))
             if r["tier"] in BALLOT_TIERS and r["census_id"] not in skip]
     if limit:
         rows = rows[:limit]
     print(f"crawling {len(rows)} municipalities ({len(skip)} already on VoterView), "
-          f"{workers} workers", flush=True)
+          f"{len(seeds)} with a seed URL, {workers} workers", flush=True)
 
     out = []
     with ThreadPoolExecutor(max_workers=workers) as ex:
-        for i, res in enumerate(ex.map(lambda r: crawl(r, cache), rows), 1):
+        for i, res in enumerate(ex.map(lambda r: crawl(r, cache, seeds), rows), 1):
             out.append(res)
             print(f"{i:>3}/{len(rows)} {res['census_id']} {res['csdname'][:26]:<27} "
                   f"{res['status']:<14} boards={res['boards_found'][:40]:<41} "

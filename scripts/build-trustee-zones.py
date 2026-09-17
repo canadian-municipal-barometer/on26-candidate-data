@@ -22,10 +22,21 @@ shapes - "CHARLES COREY" in one place, "Corey, Charles" in another.
 An empty contest cannot be matched this way and is never merged; it stays one row per
 municipality, flagged, because "no candidates" is exactly the state a stale page shows.
 
-RESOLVING THE BOARD. A clerk who writes only "English Public School Trustee" leaves the
-board to be worked out. Where such a contest's candidate set matches one whose label did
-name a board, the board is carried across and recorded as inferred. What is left keeps its
-UNRESOLVED-<system> marker so it is visible rather than quietly wrong.
+RESOLVING THE BOARD happens in three steps, and `board_source` records which one answered.
+
+  label            the clerk named the board outright.
+  candidate set    the same names appear under a contest that DID name a board, in some
+                   other municipality of the same zone. Nominations are closed, so a
+                   candidate set identifies a contest.
+  jurisdictions    notes/board-jurisdictions.csv knows which board of that system serves
+                   the municipality. Applied last and only where the contest's
+                   municipalities all agree on one board, so a zone that straddles a board
+                   boundary is left alone rather than resolved by majority.
+
+What survives all three keeps its UNRESOLVED-<system> marker so it is visible rather than
+quietly wrong. The third step is what scripts/build-trustee-frame.py has always used; this
+file was left reporting 45 unresolved contests that the frame could place, which made the
+two disagree about the same data.
 
 Inputs
   data/raw/trustees/*.json    every harvest (VoterView sweep, Toronto feed, accordion
@@ -34,6 +45,7 @@ Inputs
                               skipped.
   data/boards/boards.csv
   notes/municipal-websites.csv
+  notes/board-jurisdictions.csv   resolves UNRESOLVED-<system> from the municipality
 
 Output
   notes/trustee-zones.csv
@@ -54,6 +66,7 @@ from collections import defaultdict
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BOARDS = os.path.join(REPO, "data", "boards", "boards.csv")
+JURIS = os.path.join(REPO, "notes", "board-jurisdictions.csv")
 DEST = os.path.join(REPO, "notes", "trustee-zones.csv")
 
 problems = []
@@ -114,9 +127,17 @@ def main():
         if isinstance(names, frozenset) and names and not str(board).startswith(("UNRESOLVED", "AMBIGUOUS")):
             by_names.setdefault(names, set()).add(board)
 
+    juris = defaultdict(list)
+    if os.path.exists(JURIS):
+        for r in csv.DictReader(open(JURIS)):
+            juris[(r["census_id"], r["system"])].append(r["board_number"])
+
     rows = []
     for (board, names), items in sorted(groups.items(), key=lambda kv: str(kv[0][0])):
         source = "label"
+        labels = sorted({c["office"] for c in items})
+        muns = sorted({(c["census_id"], c["csdname"]) for c in items})
+
         if str(board).startswith(("UNRESOLVED", "AMBIGUOUS")) and isinstance(names, frozenset):
             known = by_names.get(names, set())
             if len(known) == 1:
@@ -124,8 +145,15 @@ def main():
             elif len(known) > 1:
                 problems.append(f"candidate set matches {len(known)} different boards: {sorted(known)}")
 
-        labels = sorted({c["office"] for c in items})
-        muns = sorted({(c["census_id"], c["csdname"]) for c in items})
+        if str(board).startswith(("UNRESOLVED", "AMBIGUOUS")):
+            # Last resort: which board of this system serves these municipalities? Every one
+            # of them has to give the same single answer - see RESOLVING THE BOARD.
+            system = next((c.get("system") for c in items if c.get("system")), None)
+            candidates = {frozenset(juris.get((cid, system or ""), [])) for cid, _nm in muns}
+            if len(candidates) == 1 and len(next(iter(candidates))) == 1:
+                board = next(iter(next(iter(candidates))))
+                source = "resolved-from-jurisdictions"
+
         n = len(names) if isinstance(names, frozenset) else 0
         rows.append({
             "board_number": board,
@@ -153,8 +181,11 @@ def main():
     print(f"  contests in harvest      : {len(harvest)}")
     print(f"  distinct contests (zones): {len(rows)}   "
           f"({merged} duplicate publications merged away)")
+    from_set = [r for r in rows if r["board_source"] == "inferred-from-candidate-set"]
+    from_juris = [r for r in rows if r["board_source"] == "resolved-from-jurisdictions"]
     print(f"  board from label         : {len(rows) - len(unres) - len(inferred)}")
-    print(f"  board inferred from set  : {len(inferred)}")
+    print(f"  board inferred from set  : {len(from_set)}")
+    print(f"  board from jurisdictions : {len(from_juris)}")
     print(f"  board still unresolved   : {len(unres)}")
     print(f"  empty contests           : {sum(r['empty'] for r in rows)}")
     print(f"  boards represented       : "

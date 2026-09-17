@@ -1,0 +1,554 @@
+{
+ "census_id": "3506008",
+ "csdname": "Ottawa",
+ "name_format": "first_last",
+ "candidate_list_url": "https://ottawa.ca/en/city-hall/elections/candidates/certified-and-acclaimed-candidates?page=3044842",
+ "notes": {
+  "why_hand_collected": "ottawa.ca sits behind Incapsula, which answers any scripted fetch with a JavaScript challenge instead of the page - curl gets 1.1KB of challenge script whatever headers it sends - so scripts/crawl-municipal-elections.py records Ottawa as no-list-found. The list was read in a real browser instead. This is why by-zone/ exists.",
+  "why_the_url_could_not_be_guessed": "The trustee list is not a named subpage. It hangs off the certified-candidates page as a query parameter, ?page=3044842, which is why every guessed path 404'd; each board then has its own child page below that.",
+  "boards_in_scope": "Ottawa publishes four boards. Only the two English ones are collected: Ottawa-Carleton DSB (B66184) and Ottawa Catholic (B67180). Conseil des ecoles publiques de l'Est de l'Ontario and Conseil des ecoles catholiques du Centre-Est are French-language and out of scope by the same decision as everywhere else in this data.",
+  "acclamation": "Ottawa says it in the table's caption, not on the name: an Ottawa Catholic zone is headed 'Acclaimed candidate for ... Zone 1' where a contested one reads 'Certified candidates for ...'. Five of the ten Catholic zones are acclamations; none of the twelve OCDSB zones is.",
+  "withdrawn": "Ottawa gives withdrawals their own page rather than marking them inline. One is an English-board trustee - Donna Blackburn, OCDSB Zone 3, withdrawn 2026-07-06 - and she is correctly absent from the certified list collected here. The other two are French boards. Checked at https://ottawa.ca/en/city-hall/elections/candidates/certified-and-acclaimed-candidates/withdrawn-candidates",
+  "zones": "OCDSB runs 12 zones and Ottawa Catholic 10, each labelled with the city wards it covers. The label is recorded as published, e.g. 'Zone 1 (Wards 5, 6, 21)'.",
+  "contact": "The page gives every  candidate a telephone, email and website/social column, and prints 'Not provided' where the candidate gave none; those are recorded as empty.",
+  "page_last_updated": "2026-09-04, as stated on both board pages.",
+  "retrieved": "2026-09-04"
+ },
+ "contests": [
+  {
+   "board_number": "B66184",
+   "system": "public",
+   "office": "Zone 1 (Wards 5, 6, 21)",
+   "candidates": [
+    {
+     "name_raw": "Alykhan Abdulla",
+     "acclaimed": false,
+     "email": "",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "Jon Flemming",
+     "acclaimed": false,
+     "email": "ocdsb.students.deserve.better@gmail.com",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "John MacRae",
+     "acclaimed": false,
+     "email": "info@johnmacrae.ca",
+     "phone": "",
+     "links": [
+      "https://johnmacrae.ca"
+     ]
+    },
+    {
+     "name_raw": "Imrana Waraich",
+     "acclaimed": false,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B66184",
+   "system": "public",
+   "office": "Zone 2 (Wards 4, 23)",
+   "candidates": [
+    {
+     "name_raw": "Julia Fortey",
+     "acclaimed": false,
+     "email": "",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "Paul Crawford",
+     "acclaimed": false,
+     "email": "pcrawford475@gmail.com",
+     "phone": "613-599-4696",
+     "links": [
+      "https://ca.linkedin.com/in/paul-crawford531340272"
+     ]
+    }
+   ]
+  },
+  {
+   "board_number": "B66184",
+   "system": "public",
+   "office": "Zone 3 (Wards 3, 24)",
+   "candidates": [
+    {
+     "name_raw": "Brenda Abramson",
+     "acclaimed": false,
+     "email": "brenda4barrhaven@gmail.com",
+     "phone": "",
+     "links": [
+      "https://www.facebook.com/Brenda.Abramson.Barrhaven.OCDSB.trustee.candidate"
+     ]
+    },
+    {
+     "name_raw": "Kenneth (Kangwu) Xi",
+     "acclaimed": false,
+     "email": "trustee.kenneth@gmail.com",
+     "phone": "",
+     "links": [
+      "https://www.facebook.com/Kenneth.Kangwu.Xi/"
+     ]
+    },
+    {
+     "name_raw": "Daniel Pershick",
+     "acclaimed": false,
+     "email": "daniel.barrhaven.trustee@gmail.com",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B66184",
+   "system": "public",
+   "office": "Zone 4 (Wards 7, 15)",
+   "candidates": [
+    {
+     "name_raw": "Benoit Massé",
+     "acclaimed": false,
+     "email": "trusteebenoitzone4@outlook.com",
+     "phone": "",
+     "links": [
+      "http://www.votebenoit.ca/"
+     ]
+    },
+    {
+     "name_raw": "Emily Quaile",
+     "acclaimed": false,
+     "email": "emilyquaile.zone4@gmail.com",
+     "phone": "",
+     "links": [
+      "http://www.emilyquaile.ca/"
+     ]
+    }
+   ]
+  },
+  {
+   "board_number": "B66184",
+   "system": "public",
+   "office": "Zone 5 (Wards 8, 9)",
+   "candidates": [
+    {
+     "name_raw": "Suzanne Lyon",
+     "acclaimed": false,
+     "email": "electsuzanne2026@gmail.com",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "Lara Bremner",
+     "acclaimed": false,
+     "email": "larabremner6@gmail.com",
+     "phone": "",
+     "links": [
+      "https://larabremner.com/"
+     ]
+    },
+    {
+     "name_raw": "Natasha Lynn Mott",
+     "acclaimed": false,
+     "email": "Natashaforzone5@gmail.com",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B66184",
+   "system": "public",
+   "office": "Zone 6 (Wards 12, 13)",
+   "candidates": [
+    {
+     "name_raw": "Jennifer Moroziuk",
+     "acclaimed": false,
+     "email": "moroziuk1975@hotmail.com",
+     "phone": "613-266-9169",
+     "links": [
+      "https://moroziuk1975.wixsite.com/mysite"
+     ]
+    },
+    {
+     "name_raw": "Scott Walker",
+     "acclaimed": false,
+     "email": "",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "Chris Durrant",
+     "acclaimed": false,
+     "email": "chrisdurrantzone6@yahoo.com",
+     "phone": "",
+     "links": [
+      "https://sites.google.com/view/durrant-for-zone-6/home"
+     ]
+    },
+    {
+     "name_raw": "Dean Rusland",
+     "acclaimed": false,
+     "email": "",
+     "phone": "613-286-2749",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B66184",
+   "system": "public",
+   "office": "Zone 7 (Wards 20, 22)",
+   "candidates": [
+    {
+     "name_raw": "Jennifer Jennekens",
+     "acclaimed": false,
+     "email": "reelectjenniferjennekens@gmail.com",
+     "phone": "613-854-1245",
+     "links": [
+      "http://www.jenniferjennekens.com/"
+     ]
+    },
+    {
+     "name_raw": "Sasha Clayton",
+     "acclaimed": false,
+     "email": "",
+     "phone": "613-400-1220",
+     "links": [
+      "http://www.sashaclayton.ca/"
+     ]
+    }
+   ]
+  },
+  {
+   "board_number": "B66184",
+   "system": "public",
+   "office": "Zone 8 (Wards 1, 19)",
+   "candidates": [
+    {
+     "name_raw": "Rick Bédard",
+     "acclaimed": false,
+     "email": "",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "Anthony Wong",
+     "acclaimed": false,
+     "email": "tonyforeveryone@icloud.com",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B66184",
+   "system": "public",
+   "office": "Zone 9 (Wards 17, 18)",
+   "candidates": [
+    {
+     "name_raw": "Scott Dutrisac",
+     "acclaimed": false,
+     "email": "scott@scottd.ca",
+     "phone": "",
+     "links": [
+      "https://www.scottd.ca/"
+     ]
+    },
+    {
+     "name_raw": "Hilary Clauson",
+     "acclaimed": false,
+     "email": "hilary.clauson@gmail.com",
+     "phone": "613-220-5386",
+     "links": [
+      "https://hilaryclauson4schoolboardtrustee.ca/"
+     ]
+    },
+    {
+     "name_raw": "Sergio DeFranco",
+     "acclaimed": false,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B66184",
+   "system": "public",
+   "office": "Zone 10 (Ward 14)",
+   "candidates": [
+    {
+     "name_raw": "Shannon Boschy",
+     "acclaimed": false,
+     "email": "shannon4trustee@gmail.com",
+     "phone": "613-282-5370",
+     "links": [
+      "http://shannonboschy.com/"
+     ]
+    },
+    {
+     "name_raw": "Keelin Pringnitz",
+     "acclaimed": false,
+     "email": "hello@keelinpringnitz.ca",
+     "phone": "613-366-0212",
+     "links": [
+      "https://www.keelinpringnitz.ca/"
+     ]
+    },
+    {
+     "name_raw": "Diana Mills",
+     "acclaimed": false,
+     "email": "diana.zone10@gmail.com",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B66184",
+   "system": "public",
+   "office": "Zone 11 (Wards 10, 16)",
+   "candidates": [
+    {
+     "name_raw": "Brendan Ray",
+     "acclaimed": false,
+     "email": "peterbrendanray@gmail.com",
+     "phone": "613-295-5548",
+     "links": []
+    },
+    {
+     "name_raw": "Jason Glover",
+     "acclaimed": false,
+     "email": "glover.governance@gmail.com",
+     "phone": "613-416-7638",
+     "links": []
+    },
+    {
+     "name_raw": "Alan Riddell",
+     "acclaimed": false,
+     "email": "ariddell1234@outlook.com",
+     "phone": "613-782-3243",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B66184",
+   "system": "public",
+   "office": "Zone 12 (Wards 2, 11)",
+   "candidates": [
+    {
+     "name_raw": "Rick Whitley",
+     "acclaimed": false,
+     "email": "",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "Cathy Varrette",
+     "acclaimed": false,
+     "email": "trustee.cathy@gmail.com",
+     "phone": "",
+     "links": [
+      "http://cathyvarrette.ca/"
+     ]
+    }
+   ]
+  },
+  {
+   "board_number": "B67180",
+   "system": "catholic",
+   "office": "Zone 1 (Wards 6, 20, 21)",
+   "candidates": [
+    {
+     "name_raw": "Scott Phelan",
+     "acclaimed": true,
+     "email": "",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B67180",
+   "system": "catholic",
+   "office": "Zone 2 (Wards 4, 5, 23)",
+   "candidates": [
+    {
+     "name_raw": "Sandra Moore",
+     "acclaimed": true,
+     "email": "sandmoore66@gmail.com",
+     "phone": "613-271-8452",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B67180",
+   "system": "catholic",
+   "office": "Zone 3 (Wards 1, 19)",
+   "candidates": [
+    {
+     "name_raw": "Brian Coburn",
+     "acclaimed": true,
+     "email": "bmcoburn59@gmail.com",
+     "phone": "613-355-7166",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B67180",
+   "system": "catholic",
+   "office": "Zone 4 (Wards 3, 22, 24)",
+   "candidates": [
+    {
+     "name_raw": "Spencer Warren",
+     "acclaimed": false,
+     "email": "swarren7474@gmail.com",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "Greg Hopkins",
+     "acclaimed": false,
+     "email": "barrhavengreg@gmail.com",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B67180",
+   "system": "catholic",
+   "office": "Zone 5 (Wards 2, 11)",
+   "candidates": [
+    {
+     "name_raw": "Joanne MacEwan",
+     "acclaimed": true,
+     "email": "joanne.macewan@gmail.com",
+     "phone": "819-661-9856",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B67180",
+   "system": "catholic",
+   "office": "Zone 6 (Wards 8, 9)",
+   "candidates": [
+    {
+     "name_raw": "Glen Armstrong",
+     "acclaimed": false,
+     "email": "glenarmstrong831@gmail.com",
+     "phone": "",
+     "links": []
+    },
+    {
+     "name_raw": "Peter Chabursky",
+     "acclaimed": false,
+     "email": "chaburskyp@gmail.com",
+     "phone": "613-676-0669",
+     "links": []
+    },
+    {
+     "name_raw": "Eugene Milito",
+     "acclaimed": false,
+     "email": "eugenemilito@outlook.com",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B67180",
+   "system": "catholic",
+   "office": "Zone 7 (Wards 7, 15)",
+   "candidates": [
+    {
+     "name_raw": "Jeremy Wittet",
+     "acclaimed": false,
+     "email": "jeremy.wittet@gmail.com",
+     "phone": "613-818-7653",
+     "links": []
+    },
+    {
+     "name_raw": "Joshua Sargusingh",
+     "acclaimed": false,
+     "email": "joshuasa911@gmail.com",
+     "phone": "",
+     "links": [
+      "https://www.linkedin.com/in/joshua-sargusingh/"
+     ]
+    }
+   ]
+  },
+  {
+   "board_number": "B67180",
+   "system": "catholic",
+   "office": "Zone 8 (Wards 10, 18)",
+   "candidates": [
+    {
+     "name_raw": "Mark D Mullan",
+     "acclaimed": true,
+     "email": "mark@markmullan.ca",
+     "phone": "",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B67180",
+   "system": "catholic",
+   "office": "Zone 9 (Wards 16, 17)",
+   "candidates": [
+    {
+     "name_raw": "Luka Luketic-Buyers",
+     "acclaimed": false,
+     "email": "luka_luketic_buyers@hotmail.com",
+     "phone": "343-777-2208",
+     "links": []
+    },
+    {
+     "name_raw": "Danny Arrais",
+     "acclaimed": false,
+     "email": "dannyarrais1@gmail.com",
+     "phone": "613-854-1423",
+     "links": []
+    }
+   ]
+  },
+  {
+   "board_number": "B67180",
+   "system": "catholic",
+   "office": "Zone 10 (Wards 12, 13, 14)",
+   "candidates": [
+    {
+     "name_raw": "Cameron Bonesso",
+     "acclaimed": false,
+     "email": "vote@cam4trustee.ca",
+     "phone": "613-800-0812",
+     "links": [
+      "https://www.cam4trustee.ca/"
+     ]
+    },
+    {
+     "name_raw": "Cindy Desclouds-Simpson",
+     "acclaimed": false,
+     "email": "cinsimp24@gmail.com",
+     "phone": "613-824-0237",
+     "links": [
+      "https://www.vote4cindy.ca/"
+     ]
+    }
+   ]
+  }
+ ]
+}

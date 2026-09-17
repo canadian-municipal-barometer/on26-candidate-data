@@ -1,0 +1,527 @@
+census_id,csdname,county,system,board_number,board_name,n_schools,enrolment
+3511035,Addington Highlands,Lennox and Addington,public,B66206,Limestone District School Board,2,385
+3539047,Adelaide-Metcalfe,Middlesex,public,B66044,Thames Valley District School Board,1,180
+3543003,Adjala-Tosorontio,Simcoe,catholic,B67091,Simcoe Muskoka Catholic District School Board,1,270
+3543003,Adjala-Tosorontio,Simcoe,public,B66109,Simcoe County District School Board,2,670
+3547043,Admaston/Bromley,Renfrew,catholic,B67199,Renfrew County Catholic District School Board,1,115
+3547043,Admaston/Bromley,Renfrew,public,B66214,Renfrew County District School Board,1,415
+3518005,Ajax,Durham,catholic,B67105,Durham Catholic District School Board,12,4855
+3518005,Ajax,Durham,public,B66060,Durham District School Board,27,15185
+3514024,Alnwick/Haldimand,Northumberland,catholic,B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,1,220
+3514024,Alnwick/Haldimand,Northumberland,public,B66079,Kawartha Pine Ridge District School Board,2,480
+3522008,Amaranth,Dufferin,public,B66117,Upper Grand District School Board,1,245
+3537028,Amherstburg,Essex,catholic,B67024,Windsor-Essex Catholic District School Board,2,1110
+3537028,Amherstburg,Essex,public,B66028,Greater Essex County District School Board,3,1345
+3547002,Arnprior,Renfrew,catholic,B67199,Renfrew County Catholic District School Board,2,765
+3547002,Arnprior,Renfrew,public,B66214,Renfrew County District School Board,3,1495
+3541043,Arran-Elderslie,Bruce,public,B66001,Bluewater District School Board,5,1195
+3540063,Ashfield-Colborne-Wawanosh,Huron,public,B66010,Avon Maitland District School Board,1,335
+3515003,Asphodel-Norwood,Peterborough,catholic,B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,1,325
+3515003,Asphodel-Norwood,Peterborough,public,B66079,Kawartha Pine Ridge District School Board,3,740
+3551011,Assiginack,Manitoulin,public,B28029,Rainbow District School Board,1,100
+3507042,Athens,Leeds and Grenville,public,B66192,Upper Canada District School Board,3,425
+3559001,Atikokan,Rainy River,catholic,B29041,Northwest Catholic District School Board,1,70
+3559001,Atikokan,Rainy River,public,B28053,Rainy River District School Board,2,305
+3507006,Augusta,Leeds and Grenville,public,B66192,Upper Canada District School Board,1,260
+3519046,Aurora,York,catholic,B67075,York Catholic District School Board,9,4825
+3519046,Aurora,York,public,B66095,York Region District School Board,14,7535
+3534011,Aylmer,Elgin,catholic,B67032,London District Catholic School Board,1,195
+3534011,Aylmer,Elgin,public,B66044,Thames Valley District School Board,3,1525
+3512061,Bancroft,Hastings,catholic,B67202,Algonquin and Lakeshore Catholic District School Board,1,255
+3512061,Bancroft,Hastings,public,B66222,Hastings & Prince Edward District School Board,4,915
+3543042,Barrie,Simcoe,catholic,B67091,Simcoe Muskoka Catholic District School Board,16,8325
+3543042,Barrie,Simcoe,public,B66109,Simcoe County District School Board,31,19150
+3534005,Bayham,Elgin,public,B66044,Thames Valley District School Board,2,460
+3509024,Beckwith,Lanark,public,B66192,Upper Canada District School Board,1,580
+3512005,Belleville,Hastings,catholic,B67202,Algonquin and Lakeshore Catholic District School Board,8,3080
+3512005,Belleville,Hastings,public,B66222,Hastings & Prince Edward District School Board,14,6895
+3551021,Billings,Manitoulin,public,B28029,Rainbow District School Board,1,420
+3556014,Black River-Matheson,Cochrane,public,B28002,District School Board Ontario North East,1,130
+3532045,Blandford-Blenheim,Oxford,public,B66044,Thames Valley District School Board,2,585
+3557038,Blind River,Algoma,catholic,B29025,Huron-Superior Catholic District School Board,1,160
+3557038,Blind River,Algoma,public,B28010,Algoma District School Board,2,340
+3540010,Bluewater,Huron,catholic,B67016,Huron Perth Catholic District School Board,1,230
+3540010,Bluewater,Huron,public,B66010,Avon Maitland District School Board,2,570
+3547035,Bonnechere Valley,Renfrew,catholic,B67199,Renfrew County Catholic District School Board,1,120
+3547035,Bonnechere Valley,Renfrew,public,B66214,Renfrew County District School Board,1,415
+3544018,Bracebridge,Muskoka,catholic,B67091,Simcoe Muskoka Catholic District School Board,2,500
+3544018,Bracebridge,Muskoka,public,B66087,Trillium Lakelands District School Board,5,2315
+3543014,Bradford West Gwillimbury,Simcoe,catholic,B67091,Simcoe Muskoka Catholic District School Board,7,3820
+3543014,Bradford West Gwillimbury,Simcoe,public,B66109,Simcoe County District School Board,9,5220
+3521010,Brampton,Peel,catholic,B67083,Dufferin-Peel Catholic District School Board,60,27940
+3521010,Brampton,Peel,public,B66125,Peel District School Board,126,76110
+3529005,Brant,Brant,catholic,B67164,Brant Haldimand Norfolk Catholic District School Board,3,1160
+3529005,Brant,Brant,public,B66168,Grand Erie District School Board,8,3590
+3529006,Brantford,Brant,catholic,B67164,Brant Haldimand Norfolk Catholic District School Board,17,7485
+3529006,Brantford,Brant,public,B66168,Grand Erie District School Board,32,12395
+3514004,Brighton,Northumberland,public,B66079,Kawartha Pine Ridge District School Board,4,1890
+3518039,Brock,Durham,catholic,B67105,Durham Catholic District School Board,1,135
+3518039,Brock,Durham,public,B66060,Durham District School Board,5,1930
+3541032,Brockton,Bruce,catholic,B67008,Bruce-Grey Catholic District School Board,3,1265
+3541032,Brockton,Bruce,public,B66001,Bluewater District School Board,2,830
+3507015,Brockville,Leeds and Grenville,catholic,B67172,Catholic District School Board of Eastern Ontario,5,1050
+3507015,Brockville,Leeds and Grenville,public,B66192,Upper Canada District School Board,7,2470
+3538015,Brooke-Alvinston,Lambton,public,B66036,Lambton Kent District School Board,1,275
+3547020,"Brudenell, Lyndoch and Raglan",Renfrew,public,B66214,Renfrew County District School Board,1,70
+3549022,Burk's Falls,Parry Sound,public,B28037,Near North District School Board,1,320
+3524002,Burlington,Halton,catholic,B67113,Halton Catholic District School Board,18,9895
+3524002,Burlington,Halton,public,B66133,Halton District School Board,39,18410
+3521024,Caledon,Peel,catholic,B67083,Dufferin-Peel Catholic District School Board,7,3850
+3521024,Caledon,Peel,public,B66125,Peel District School Board,15,8615
+3530010,Cambridge,Waterloo,catholic,B67148,Waterloo Catholic District School Board,15,8080
+3530010,Cambridge,Waterloo,public,B66176,Waterloo Region District School Board,29,14010
+3509028,Carleton Place,Lanark,catholic,B67172,Catholic District School Board of Eastern Ontario,4,1530
+3509028,Carleton Place,Lanark,public,B66192,Upper Canada District School Board,4,1750
+3515013,Cavan Monaghan,Peterborough,public,B66079,Kawartha Pine Ridge District School Board,3,1500
+3534020,Central Elgin,Elgin,catholic,B67032,London District Catholic School Board,1,800
+3534020,Central Elgin,Elgin,public,B66044,Thames Valley District School Board,1,415
+3510035,Central Frontenac,Frontenac,public,B66206,Limestone District School Board,1,70
+3540025,Central Huron,Huron,catholic,B67016,Huron Perth Catholic District School Board,2,765
+3540025,Central Huron,Huron,public,B66010,Avon Maitland District School Board,4,985
+3551006,Central Manitoulin,Manitoulin,public,B28029,Rainbow District School Board,1,205
+3523025,Centre Wellington,Wellington,catholic,B67130,Wellington Catholic District School Board,2,965
+3523025,Centre Wellington,Wellington,public,B66117,Upper Grand District School Board,11,4030
+3502010,Champlain,Prescott and Russell,catholic,B67172,Catholic District School Board of Eastern Ontario,1,285
+3502010,Champlain,Prescott and Russell,public,B66192,Upper Canada District School Board,2,890
+3552092,Chapleau,Sudbury,catholic,B29025,Huron-Superior Catholic District School Board,1,55
+3552092,Chapleau,Sudbury,public,B28010,Algoma District School Board,2,165
+3559024,Chapple,Rainy River,public,B28053,Rainy River District School Board,1,105
+3536020,Chatham-Kent,Chatham-Kent,catholic,B67040,St Clair Catholic District School Board,11,4360
+3536020,Chatham-Kent,Chatham-Kent,public,B66036,Lambton Kent District School Board,28,9520
+3542037,Chatsworth,Grey,public,B66001,Bluewater District School Board,2,445
+3502036,Clarence-Rockland,Prescott and Russell,catholic,B67172,Catholic District School Board of Eastern Ontario,4,970
+3502036,Clarence-Rockland,Prescott and Russell,public,B66192,Upper Canada District School Board,3,1045
+3518017,Clarington,Durham,catholic,B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,10,5875
+3518017,Clarington,Durham,public,B66079,Kawartha Pine Ridge District School Board,25,11930
+3543005,Clearview,Simcoe,public,B66109,Simcoe County District School Board,6,1670
+3554008,Cobalt,Timiskaming,catholic,B29009,Northeastern Catholic District School Board,1,135
+3514021,Cobourg,Northumberland,catholic,B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,4,1350
+3514021,Cobourg,Northumberland,public,B66079,Kawartha Pine Ridge District School Board,7,3245
+3556042,Cochrane,Cochrane,catholic,B29009,Northeastern Catholic District School Board,2,185
+3556042,Cochrane,Cochrane,public,B28002,District School Board Ontario North East,2,580
+3543031,Collingwood,Simcoe,catholic,B67091,Simcoe Muskoka Catholic District School Board,2,1080
+3543031,Collingwood,Simcoe,public,B66109,Simcoe County District School Board,5,3230
+3501012,Cornwall,"Stormont, Dundas and Glengarry",catholic,B67172,Catholic District School Board of Eastern Ontario,9,2725
+3501012,Cornwall,"Stormont, Dundas and Glengarry",public,B66192,Upper Canada District School Board,9,3830
+3514014,Cramahe,Northumberland,public,B66079,Kawartha Pine Ridge District School Board,2,540
+3538007,Dawn-Euphemia,Lambton,public,B66036,Lambton Kent District School Board,1,125
+3547096,Deep River,Renfrew,catholic,B67199,Renfrew County Catholic District School Board,1,170
+3547096,Deep River,Renfrew,public,B66214,Renfrew County District School Board,2,790
+3512002,Deseronto,Hastings,public,B66222,Hastings & Prince Edward District School Board,1,165
+3558034,Dorion,Thunder Bay,public,B28070,Superior-Greenstone District School Board,1,0
+3515023,Douro-Dummer,Peterborough,catholic,B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,1,205
+3515023,Douro-Dummer,Peterborough,public,B66079,Kawartha Pine Ridge District School Board,1,140
+3509010,Drummond/North Elmsley,Lanark,public,B66192,Upper Canada District School Board,2,170
+3560027,Dryden,Kenora,catholic,B29041,Northwest Catholic District School Board,1,355
+3560027,Dryden,Kenora,public,B28045,Keewatin-Patricia District School Board,3,1245
+3534030,Dutton/Dunwich,Elgin,public,B66044,Thames Valley District School Board,1,440
+3546024,Dysart et al,Haliburton,public,B66087,Trillium Lakelands District School Board,3,1135
+3560032,Ear Falls,Kenora,public,B28045,Keewatin-Patricia District School Board,1,105
+3548034,East Ferris,Nipissing,catholic,B29017,Nipissing-Parry Sound Catholic District School Board,1,355
+3548034,East Ferris,Nipissing,public,B28037,Near North District School Board,1,215
+3522001,East Garafraxa,Dufferin,public,B66117,Upper Grand District School Board,1,195
+3519054,East Gwillimbury,York,catholic,B67075,York Catholic District School Board,2,990
+3519054,East Gwillimbury,York,public,B66095,York Region District School Board,7,3155
+3532038,East Zorra-Tavistock,Oxford,public,B66044,Thames Valley District School Board,4,1600
+3507004,Edwardsburgh/Cardinal,Leeds and Grenville,public,B66192,Upper Canada District School Board,2,300
+3507014,Elizabethtown-Kitley,Leeds and Grenville,catholic,B67172,Catholic District School Board of Eastern Ontario,1,215
+3507014,Elizabethtown-Kitley,Leeds and Grenville,public,B66192,Upper Canada District School Board,2,350
+3557041,Elliot Lake,Algoma,catholic,B29025,Huron-Superior Catholic District School Board,2,395
+3557041,Elliot Lake,Algoma,public,B28010,Algoma District School Board,5,780
+3559019,Emo,Rainy River,public,B28053,Rainy River District School Board,1,160
+3554052,Englehart,Timiskaming,catholic,B29009,Northeastern Catholic District School Board,1,120
+3554052,Englehart,Timiskaming,public,B28002,District School Board Ontario North East,3,445
+3538016,Enniskillen,Lambton,public,B66036,Lambton Kent District School Board,1,210
+3523017,Erin,Wellington,catholic,B67130,Wellington Catholic District School Board,1,265
+3523017,Erin,Wellington,public,B66117,Upper Grand District School Board,4,1350
+3552026,Espanola,Sudbury,catholic,B29025,Huron-Superior Catholic District School Board,1,255
+3552026,Espanola,Sudbury,public,B28029,Rainbow District School Board,2,765
+3543021,Essa,Simcoe,catholic,B67091,Simcoe Muskoka Catholic District School Board,1,875
+3543021,Essa,Simcoe,public,B66109,Simcoe County District School Board,5,2865
+3537016,Essex,Essex,catholic,B67024,Windsor-Essex Catholic District School Board,3,1935
+3537016,Essex,Essex,public,B66028,Greater Essex County District School Board,5,2595
+3526003,Fort Erie,Niagara,catholic,B67156,Niagara Catholic District School Board,4,910
+3526003,Fort Erie,Niagara,public,B66150,District School Board of Niagara,5,2980
+3559012,Fort Frances,Rainy River,catholic,B29041,Northwest Catholic District School Board,1,455
+3559012,Fort Frances,Rainy River,public,B28053,Rainy River District School Board,4,1355
+3552001,French River / Rivière des Français,Sudbury,public,B28029,Rainbow District School Board,1,95
+3507017,Front of Yonge,Leeds and Grenville,public,B66192,Upper Canada District School Board,1,120
+3510005,Frontenac Islands,Frontenac,catholic,B67202,Algonquin and Lakeshore Catholic District School Board,1,0
+3510005,Frontenac Islands,Frontenac,public,B66206,Limestone District School Board,1,0
+3507024,Gananoque,Leeds and Grenville,catholic,B67172,Catholic District School Board of Eastern Ontario,1,290
+3507024,Gananoque,Leeds and Grenville,public,B66192,Upper Canada District School Board,3,625
+3544065,Georgian Bay,Muskoka,public,B28037,Near North District School Board,1,95
+3544065,Georgian Bay,Muskoka,public,B66087,Trillium Lakelands District School Board,1,60
+3519070,Georgina,York,catholic,B67075,York Catholic District School Board,5,1380
+3519070,Georgina,York,public,B66095,York Region District School Board,13,5410
+3558012,Gillies,Thunder Bay,public,B28061,Lakehead District School Board,1,140
+3540028,Goderich,Huron,catholic,B67016,Huron Perth Catholic District School Board,1,325
+3540028,Goderich,Huron,public,B66010,Avon Maitland District School Board,3,1030
+3551026,Gore Bay,Manitoulin,public,B28029,Rainbow District School Board,1,175
+3544002,Gravenhurst,Muskoka,public,B66087,Trillium Lakelands District School Board,4,1155
+3547008,Greater Madawaska,Renfrew,catholic,B67199,Renfrew County Catholic District School Board,1,75
+3511015,Greater Napanee,Lennox and Addington,catholic,B67202,Algonquin and Lakeshore Catholic District School Board,1,250
+3511015,Greater Napanee,Lennox and Addington,public,B66206,Limestone District School Board,4,2405
+3553005,Greater Sudbury / Grand Sudbury,Sudbury,catholic,B29033,Sudbury Catholic District School Board,19,6945
+3553005,Greater Sudbury / Grand Sudbury,Sudbury,public,B28029,Rainbow District School Board,37,12080
+3558075,Greenstone,Thunder Bay,catholic,B29076,Superior North Catholic District School Board,2,155
+3558075,Greenstone,Thunder Bay,public,B28070,Superior-Greenstone District School Board,5,275
+3542015,Grey Highlands,Grey,public,B66001,Bluewater District School Board,5,2120
+3526065,Grimsby,Niagara,catholic,B67156,Niagara Catholic District School Board,3,1840
+3526065,Grimsby,Niagara,public,B66150,District School Board of Niagara,6,2005
+3523008,Guelph,Wellington,catholic,B67130,Wellington Catholic District School Board,17,6940
+3523008,Guelph,Wellington,public,B66117,Upper Grand District School Board,34,16865
+3523009,Guelph/Eramosa,Wellington,catholic,B67130,Wellington Catholic District School Board,1,335
+3523009,Guelph/Eramosa,Wellington,public,B66117,Upper Grand District School Board,1,235
+3528018,Haldimand County,Haldimand,catholic,B67164,Brant Haldimand Norfolk Catholic District School Board,6,1425
+3528018,Haldimand County,Haldimand,public,B66168,Grand Erie District School Board,14,5535
+3524015,Halton Hills,Halton,catholic,B67113,Halton Catholic District School Board,9,4580
+3524015,Halton Hills,Halton,public,B66133,Halton District School Board,15,5305
+3525005,Hamilton,Hamilton,catholic,B67121,Hamilton-Wentworth Catholic District School Board,56,31010
+3525005,Hamilton,Hamilton,public,B66141,Hamilton-Wentworth District School Board,97,51775
+3514019,Hamilton,Northumberland,public,B66079,Kawartha Pine Ridge District School Board,4,860
+3542029,Hanover,Grey,catholic,B67008,Bruce-Grey Catholic District School Board,1,345
+3542029,Hanover,Grey,public,B66001,Bluewater District School Board,4,1360
+3512076,Hastings Highlands,Hastings,public,B66222,Hastings & Prince Edward District School Board,2,200
+3515030,Havelock-Belmont-Methuen,Peterborough,public,B66079,Kawartha Pine Ridge District School Board,1,205
+3556076,Hearst,Cochrane,public,B28002,District School Board Ontario North East,2,65
+3546005,Highlands East,Haliburton,public,B66087,Trillium Lakelands District School Board,2,50
+3557096,Hornepayne,Algoma,public,B28010,Algoma District School Board,2,70
+3540046,Howick,Huron,public,B66010,Avon Maitland District School Board,1,340
+3544042,Huntsville,Muskoka,catholic,B67091,Simcoe Muskoka Catholic District School Board,1,200
+3544042,Huntsville,Muskoka,public,B66087,Trillium Lakelands District School Board,6,2690
+3540040,Huron East,Huron,catholic,B67016,Huron Perth Catholic District School Board,2,370
+3540040,Huron East,Huron,public,B66010,Avon Maitland District School Board,2,485
+3557035,Huron Shores,Algoma,public,B28010,Algoma District School Board,1,200
+3541015,Huron-Kinloss,Bruce,public,B66001,Bluewater District School Board,1,180
+3560001,Ignace,Kenora,public,B28045,Keewatin-Patricia District School Board,2,110
+3532018,Ingersoll,Oxford,catholic,B67032,London District Catholic School Board,1,390
+3532018,Ingersoll,Oxford,public,B66044,Thames Valley District School Board,4,2455
+3543017,Innisfil,Simcoe,catholic,B67091,Simcoe Muskoka Catholic District School Board,3,1380
+3543017,Innisfil,Simcoe,public,B66109,Simcoe County District School Board,7,4730
+3556031,Iroquois Falls,Cochrane,catholic,B29009,Northeastern Catholic District School Board,1,170
+3556031,Iroquois Falls,Cochrane,public,B28002,District School Board Ontario North East,3,355
+3554042,James,Timiskaming,public,B28002,District School Board Ontario North East,1,0
+3557016,Johnson,Algoma,public,B28010,Algoma District School Board,2,520
+3556066,Kapuskasing,Cochrane,catholic,B29009,Northeastern Catholic District School Board,1,140
+3556066,Kapuskasing,Cochrane,public,B28002,District School Board Ontario North East,2,405
+3516010,Kawartha Lakes,Kawartha Lakes,catholic,B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,6,1145
+3516010,Kawartha Lakes,Kawartha Lakes,public,B66087,Trillium Lakelands District School Board,23,9550
+3560010,Kenora,Kenora,catholic,B29050,Kenora Catholic District School Board,5,1120
+3560010,Kenora,Kenora,public,B28045,Keewatin-Patricia District School Board,6,1680
+3560010,Kenora,Kenora,public,B28053,Rainy River District School Board,1,0
+3554024,Kerns,Timiskaming,public,B28002,District School Board Ontario North East,1,65
+3547033,"Killaloe, Hagarty and Richards",Renfrew,catholic,B67199,Renfrew County Catholic District School Board,1,105
+3547033,"Killaloe, Hagarty and Richards",Renfrew,public,B66214,Renfrew County District School Board,1,110
+3552036,Killarney,Sudbury,catholic,B29033,Sudbury Catholic District School Board,1,0
+3541024,Kincardine,Bruce,catholic,B67008,Bruce-Grey Catholic District School Board,1,530
+3541024,Kincardine,Bruce,public,B66001,Bluewater District School Board,5,1700
+3519049,King,York,catholic,B67075,York Catholic District School Board,3,1460
+3519049,King,York,public,B66095,York Region District School Board,5,1915
+3510010,Kingston,Frontenac,catholic,B67202,Algonquin and Lakeshore Catholic District School Board,15,5890
+3510010,Kingston,Frontenac,public,B66206,Limestone District School Board,37,12700
+3537013,Kingsville,Essex,catholic,B67024,Windsor-Essex Catholic District School Board,1,495
+3537013,Kingsville,Essex,public,B66028,Greater Essex County District School Board,3,2170
+3554068,Kirkland Lake,Timiskaming,catholic,B29009,Northeastern Catholic District School Board,2,355
+3554068,Kirkland Lake,Timiskaming,public,B28002,District School Board Ontario North East,4,1040
+3530013,Kitchener,Waterloo,catholic,B67148,Waterloo Catholic District School Board,23,13400
+3530013,Kitchener,Waterloo,public,B66176,Waterloo Region District School Board,49,25660
+3559016,La Vallee,Rainy River,public,B28053,Rainy River District School Board,1,130
+3537034,LaSalle,Essex,catholic,B67024,Windsor-Essex Catholic District School Board,3,2330
+3537034,LaSalle,Essex,public,B66028,Greater Essex County District School Board,4,2730
+3544027,Lake of Bays,Muskoka,public,B66087,Trillium Lakelands District School Board,1,140
+3559047,Lake of the Woods,Rainy River,public,B28053,Rainy River District School Board,1,0
+3537064,Lakeshore,Essex,catholic,B67024,Windsor-Essex Catholic District School Board,5,1475
+3537064,Lakeshore,Essex,public,B66028,Greater Essex County District School Board,4,2530
+3538040,Lambton Shores,Lambton,catholic,B67040,St Clair Catholic District School Board,1,325
+3538040,Lambton Shores,Lambton,public,B66036,Lambton Kent District School Board,4,1320
+3547090,Laurentian Hills,Renfrew,catholic,B67199,Renfrew County Catholic District School Board,1,55
+3547075,Laurentian Valley,Renfrew,public,B66214,Renfrew County District School Board,1,395
+3537003,Leamington,Essex,catholic,B67024,Windsor-Essex Catholic District School Board,3,1495
+3537003,Leamington,Essex,public,B66028,Greater Essex County District School Board,6,2485
+3526057,Lincoln,Niagara,catholic,B67156,Niagara Catholic District School Board,3,1130
+3526057,Lincoln,Niagara,public,B66150,District School Board of Niagara,4,2650
+3539036,London,Middlesex,catholic,B67032,London District Catholic School Board,34,19430
+3539036,London,Middlesex,public,B66044,Thames Valley District School Board,86,49625
+3511005,Loyalist,Lennox and Addington,catholic,B67202,Algonquin and Lakeshore Catholic District School Board,1,405
+3511005,Loyalist,Lennox and Addington,public,B66206,Limestone District School Board,7,1980
+3539060,Lucan Biddulph,Middlesex,catholic,B67032,London District Catholic School Board,1,325
+3539060,Lucan Biddulph,Middlesex,public,B66044,Thames Valley District School Board,1,645
+3560021,Machin,Kenora,public,B28045,Keewatin-Patricia District School Board,1,105
+3547030,Madawaska Valley,Renfrew,catholic,B67199,Renfrew County Catholic District School Board,2,305
+3547030,Madawaska Valley,Renfrew,public,B66214,Renfrew County District School Board,2,320
+3512036,Madoc,Hastings,public,B66222,Hastings & Prince Edward District School Board,3,1085
+3549043,Magnetawan,Parry Sound,public,B28037,Near North District School Board,1,80
+3534010,Malahide,Elgin,public,B66044,Thames Valley District School Board,3,875
+3558066,Manitouwadge,Thunder Bay,catholic,B29076,Superior North Catholic District School Board,1,115
+3558066,Manitouwadge,Thunder Bay,public,B28070,Superior-Greenstone District School Board,2,70
+3523033,Mapleton,Wellington,public,B66117,Upper Grand District School Board,4,800
+3558059,Marathon,Thunder Bay,catholic,B29076,Superior North Catholic District School Board,1,120
+3558059,Marathon,Thunder Bay,public,B28070,Superior-Greenstone District School Board,2,335
+3519036,Markham,York,catholic,B67075,York Catholic District School Board,20,10985
+3519036,Markham,York,public,B66095,York Region District School Board,66,45465
+3552013,Markstay-Warren,Sudbury,public,B28029,Rainbow District School Board,1,175
+3512046,Marmora and Lake,Hastings,catholic,B67202,Algonquin and Lakeshore Catholic District School Board,1,140
+3512046,Marmora and Lake,Hastings,public,B66222,Hastings & Prince Edward District School Board,1,305
+3548021,Mattawa,Nipissing,catholic,B29017,Nipissing-Parry Sound Catholic District School Board,1,0
+3548021,Mattawa,Nipissing,public,B28037,Near North District School Board,2,230
+3549031,McDougall,Parry Sound,public,B28037,Near North District School Board,2,370
+3547003,McNab/Braeside,Renfrew,public,B66214,Renfrew County District School Board,1,285
+3542047,Meaford,Grey,public,B66001,Bluewater District School Board,2,1185
+3507052,Merrickville-Wolford,Leeds and Grenville,public,B66192,Upper Canada District School Board,1,140
+3539033,Middlesex Centre,Middlesex,catholic,B67032,London District Catholic School Board,1,570
+3539033,Middlesex Centre,Middlesex,public,B66044,Thames Valley District School Board,3,1075
+3543074,Midland,Simcoe,catholic,B67091,Simcoe Muskoka Catholic District School Board,3,1115
+3543074,Midland,Simcoe,public,B66109,Simcoe County District School Board,4,2325
+3524009,Milton,Halton,catholic,B67113,Halton Catholic District School Board,12,11025
+3524009,Milton,Halton,public,B66133,Halton District School Board,22,17335
+3546015,Minden Hills,Haliburton,public,B66087,Trillium Lakelands District School Board,1,460
+3523043,Minto,Wellington,public,B66117,Upper Grand District School Board,3,1660
+3521005,Mississauga,Peel,catholic,B67083,Dufferin-Peel Catholic District School Board,83,37480
+3521005,Mississauga,Peel,public,B66125,Peel District School Board,120,60915
+3509030,Mississippi Mills,Lanark,catholic,B67172,Catholic District School Board of Eastern Ontario,1,375
+3509030,Mississippi Mills,Lanark,public,B66192,Upper Canada District School Board,5,1360
+3522012,Mono,Dufferin,public,B66117,Upper Grand District School Board,1,295
+3559031,Morley,Rainy River,catholic,B29041,Northwest Catholic District School Board,1,0
+3522016,Mulmur,Dufferin,public,B66117,Upper Grand District School Board,1,550
+3544053,Muskoka Lakes,Muskoka,public,B66087,Trillium Lakelands District School Board,2,350
+3558001,Neebing,Thunder Bay,public,B28045,Keewatin-Patricia District School Board,2,0
+3558001,Neebing,Thunder Bay,public,B28061,Lakehead District School Board,2,215
+3543007,New Tecumseth,Simcoe,catholic,B67091,Simcoe Muskoka Catholic District School Board,6,3080
+3543007,New Tecumseth,Simcoe,public,B66109,Simcoe County District School Board,7,4540
+3519048,Newmarket,York,catholic,B67075,York Catholic District School Board,7,3440
+3519048,Newmarket,York,public,B66095,York Region District School Board,21,12270
+3526043,Niagara Falls,Niagara,catholic,B67156,Niagara Catholic District School Board,13,5920
+3526043,Niagara Falls,Niagara,public,B66150,District School Board of Niagara,18,8200
+3526047,Niagara-on-the-Lake,Niagara,catholic,B67156,Niagara Catholic District School Board,1,265
+3526047,Niagara-on-the-Lake,Niagara,public,B66150,District School Board of Niagara,2,865
+3558044,Nipigon,Thunder Bay,catholic,B29076,Superior North Catholic District School Board,1,120
+3558044,Nipigon,Thunder Bay,public,B28070,Superior-Greenstone District School Board,1,125
+3549071,Nipissing,Parry Sound,public,B28037,Near North District School Board,4,950
+3528052,Norfolk County,Norfolk,catholic,B67164,Brant Haldimand Norfolk Catholic District School Board,8,2680
+3528052,Norfolk County,Norfolk,public,B66168,Grand Erie District School Board,20,7145
+3548044,North Bay,Nipissing,catholic,B29017,Nipissing-Parry Sound Catholic District School Board,8,2520
+3548044,North Bay,Nipissing,public,B28037,Near North District School Board,8,3880
+3530004,North Dumfries,Waterloo,catholic,B67148,Waterloo Catholic District School Board,1,355
+3530004,North Dumfries,Waterloo,public,B66176,Waterloo Region District School Board,2,770
+3501030,North Dundas,"Stormont, Dundas and Glengarry",catholic,B67172,Catholic District School Board of Eastern Ontario,1,215
+3501030,North Dundas,"Stormont, Dundas and Glengarry",public,B66192,Upper Canada District School Board,5,1365
+3510045,North Frontenac,Frontenac,public,B66206,Limestone District School Board,1,0
+3501050,North Glengarry,"Stormont, Dundas and Glengarry",catholic,B67172,Catholic District School Board of Eastern Ontario,1,125
+3501050,North Glengarry,"Stormont, Dundas and Glengarry",public,B66192,Upper Canada District School Board,4,625
+3507065,North Grenville,Leeds and Grenville,catholic,B67172,Catholic District School Board of Eastern Ontario,3,1255
+3507065,North Grenville,Leeds and Grenville,public,B66192,Upper Canada District School Board,5,2005
+3540055,North Huron,Huron,catholic,B67016,Huron Perth Catholic District School Board,1,190
+3540055,North Huron,Huron,public,B66010,Avon Maitland District School Board,3,1070
+3515037,North Kawartha,Peterborough,public,B66079,Kawartha Pine Ridge District School Board,1,175
+3539041,North Middlesex,Middlesex,catholic,B67032,London District Catholic School Board,1,110
+3539041,North Middlesex,Middlesex,public,B66044,Thames Valley District School Board,4,660
+3531040,North Perth,Perth,public,B66010,Avon Maitland District School Board,4,2360
+3501042,North Stormont,"Stormont, Dundas and Glengarry",public,B66192,Upper Canada District School Board,2,880
+3541069,Northern Bruce Peninsula,Bruce,public,B66001,Bluewater District School Board,3,300
+3532002,Norwich,Oxford,public,B66044,Thames Valley District School Board,2,930
+3524001,Oakville,Halton,catholic,B67113,Halton Catholic District School Board,21,11070
+3524001,Oakville,Halton,public,B66133,Halton District School Board,35,25220
+3558011,Oliver Paipoonge,Thunder Bay,public,B28061,Lakehead District School Board,3,690
+3522014,Orangeville,Dufferin,catholic,B67083,Dufferin-Peel Catholic District School Board,3,1390
+3522014,Orangeville,Dufferin,public,B66117,Upper Grand District School Board,10,4940
+3543052,Orillia,Simcoe,catholic,B67091,Simcoe Muskoka Catholic District School Board,4,1975
+3543052,Orillia,Simcoe,public,B66109,Simcoe County District School Board,9,5145
+3543023,Oro-Medonte,Simcoe,public,B66109,Simcoe County District School Board,7,1795
+3518013,Oshawa,Durham,catholic,B67105,Durham Catholic District School Board,14,6880
+3518013,Oshawa,Durham,public,B66060,Durham District School Board,43,24130
+3515005,Otonabee-South Monaghan,Peterborough,public,B66079,Kawartha Pine Ridge District School Board,1,420
+3506008,Ottawa,Ottawa,catholic,B67180,Ottawa Catholic School Board,103,50880
+3506008,Ottawa,Ottawa,public,B66184,Ottawa-Carleton District School Board,157,76820
+3542059,Owen Sound,Grey,catholic,B67008,Bruce-Grey Catholic District School Board,3,1920
+3542059,Owen Sound,Grey,public,B66001,Bluewater District School Board,5,3340
+3549032,Parry Sound,Parry Sound,catholic,B67091,Simcoe Muskoka Catholic District School Board,1,215
+3549032,Parry Sound,Parry Sound,public,B28037,Near North District School Board,6,1235
+3537001,Pelee,Essex,public,B66028,Greater Essex County District School Board,1,0
+3526028,Pelham,Niagara,catholic,B67156,Niagara Catholic District School Board,2,640
+3526028,Pelham,Niagara,public,B66150,District School Board of Niagara,4,2025
+3547064,Pembroke,Renfrew,catholic,B67199,Renfrew County Catholic District School Board,5,1570
+3547064,Pembroke,Renfrew,public,B66214,Renfrew County District School Board,4,1780
+3543072,Penetanguishene,Simcoe,catholic,B67091,Simcoe Muskoka Catholic District School Board,2,360
+3543072,Penetanguishene,Simcoe,public,B66109,Simcoe County District School Board,1,355
+3549014,Perry,Parry Sound,public,B28037,Near North District School Board,1,265
+3509021,Perth,Lanark,catholic,B67172,Catholic District School Board of Eastern Ontario,3,865
+3509021,Perth,Lanark,public,B66192,Upper Canada District School Board,4,1470
+3531030,Perth East,Perth,catholic,B67016,Huron Perth Catholic District School Board,2,515
+3531030,Perth East,Perth,public,B66010,Avon Maitland District School Board,6,1045
+3531013,Perth South,Perth,public,B66010,Avon Maitland District School Board,2,340
+3547076,Petawawa,Renfrew,catholic,B67199,Renfrew County Catholic District School Board,1,265
+3547076,Petawawa,Renfrew,public,B66214,Renfrew County District School Board,4,1830
+3515014,Peterborough,Peterborough,catholic,B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,11,4955
+3515014,Peterborough,Peterborough,public,B66079,Kawartha Pine Ridge District School Board,21,9500
+3538019,Petrolia,Lambton,catholic,B67040,St Clair Catholic District School Board,1,210
+3538019,Petrolia,Lambton,public,B66036,Lambton Kent District School Board,3,1455
+3518001,Pickering,Durham,catholic,B67105,Durham Catholic District School Board,6,3985
+3518001,Pickering,Durham,public,B66060,Durham District School Board,20,12490
+3560049,Pickle Lake,Kenora,public,B28045,Keewatin-Patricia District School Board,2,70
+3538035,Plympton-Wyoming,Lambton,catholic,B67040,St Clair Catholic District School Board,1,100
+3538035,Plympton-Wyoming,Lambton,public,B66036,Lambton Kent District School Board,3,695
+3538031,Point Edward,Lambton,public,B66036,Lambton Kent District School Board,1,130
+3526011,Port Colborne,Niagara,catholic,B67156,Niagara Catholic District School Board,4,1260
+3526011,Port Colborne,Niagara,public,B66150,District School Board of Niagara,5,1720
+3514020,Port Hope,Northumberland,catholic,B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,1,345
+3514020,Port Hope,Northumberland,public,B66079,Kawartha Pine Ridge District School Board,5,1360
+3549060,Powassan,Parry Sound,catholic,B29017,Nipissing-Parry Sound Catholic District School Board,1,125
+3549060,Powassan,Parry Sound,public,B28037,Near North District School Board,1,280
+3507008,Prescott,Leeds and Grenville,catholic,B67172,Catholic District School Board of Eastern Ontario,1,350
+3507008,Prescott,Leeds and Grenville,public,B66192,Upper Canada District School Board,3,765
+3513020,Prince Edward County,Prince Edward,catholic,B67202,Algonquin and Lakeshore Catholic District School Board,1,215
+3513020,Prince Edward County,Prince Edward,public,B66222,Hastings & Prince Edward District School Board,7,2105
+3523001,Puslinch,Wellington,public,B66117,Upper Grand District School Board,1,375
+3512015,Quinte West,Hastings,catholic,B67202,Algonquin and Lakeshore Catholic District School Board,5,1620
+3512015,Quinte West,Hastings,public,B66222,Hastings & Prince Edward District School Board,8,2290
+3512015,Quinte West,Hastings,public,B66079,Kawartha Pine Ridge District School Board,2,785
+3559042,Rainy River,Rainy River,public,B28053,Rainy River District School Board,3,300
+3543019,Ramara,Simcoe,catholic,B67091,Simcoe Muskoka Catholic District School Board,1,60
+3543019,Ramara,Simcoe,public,B66109,Simcoe County District School Board,3,705
+3560042,Red Lake,Kenora,catholic,B29050,Kenora Catholic District School Board,1,135
+3560042,Red Lake,Kenora,public,B28045,Keewatin-Patricia District School Board,3,610
+3558041,Red Rock,Thunder Bay,catholic,B29076,Superior North Catholic District School Board,1,55
+3558041,Red Rock,Thunder Bay,public,B28070,Superior-Greenstone District School Board,1,185
+3547048,Renfrew,Renfrew,catholic,B67199,Renfrew County Catholic District School Board,5,1355
+3547048,Renfrew,Renfrew,public,B66214,Renfrew County District School Board,5,920
+3519038,Richmond Hill,York,catholic,B67075,York Catholic District School Board,15,6890
+3519038,Richmond Hill,York,public,B66095,York Region District School Board,33,20485
+3507040,Rideau Lakes,Leeds and Grenville,public,B66192,Upper Canada District School Board,5,1145
+3502048,Russell,Prescott and Russell,catholic,B67172,Catholic District School Board of Eastern Ontario,3,1300
+3502048,Russell,Prescott and Russell,public,B66192,Upper Canada District School Board,3,940
+3552023,Sables-Spanish Rivers,Sudbury,catholic,B29025,Huron-Superior Catholic District School Board,1,135
+3552023,Sables-Spanish Rivers,Sudbury,public,B28029,Rainbow District School Board,1,100
+3538030,Sarnia,Lambton,catholic,B67040,St Clair Catholic District School Board,8,3960
+3538030,Sarnia,Lambton,public,B66036,Lambton Kent District School Board,16,6980
+3541045,Saugeen Shores,Bruce,catholic,B67008,Bruce-Grey Catholic District School Board,1,290
+3541045,Saugeen Shores,Bruce,public,B66001,Bluewater District School Board,5,2500
+3557061,Sault Ste. Marie,Algoma,catholic,B29025,Huron-Superior Catholic District School Board,8,3520
+3557061,Sault Ste. Marie,Algoma,public,B28010,Algoma District School Board,26,7845
+3558051,Schreiber,Thunder Bay,catholic,B29076,Superior North Catholic District School Board,1,85
+3558051,Schreiber,Thunder Bay,public,B28070,Superior-Greenstone District School Board,1,0
+3518020,Scugog,Durham,catholic,B67105,Durham Catholic District School Board,1,230
+3518020,Scugog,Durham,public,B66060,Durham District School Board,4,2235
+3549003,Seguin,Parry Sound,public,B28037,Near North District School Board,1,210
+3543015,Severn,Simcoe,public,B66109,Simcoe County District School Board,1,555
+3522021,Shelburne,Dufferin,public,B66117,Upper Grand District School Board,4,2260
+3558028,Shuniah,Thunder Bay,public,B28061,Lakehead District School Board,2,380
+3560034,Sioux Lookout,Kenora,catholic,B29041,Northwest Catholic District School Board,1,270
+3560034,Sioux Lookout,Kenora,public,B28045,Keewatin-Patricia District School Board,2,775
+3560008,Sioux Narrows-Nestor Falls,Kenora,public,B28045,Keewatin-Patricia District School Board,1,0
+3509004,Smiths Falls,Lanark,catholic,B67172,Catholic District School Board of Eastern Ontario,4,540
+3509004,Smiths Falls,Lanark,public,B66192,Upper Canada District School Board,4,1760
+3556048,Smooth Rock Falls,Cochrane,public,B28002,District School Board Ontario North East,1,0
+3541004,South Bruce,Bruce,catholic,B67008,Bruce-Grey Catholic District School Board,3,590
+3541004,South Bruce,Bruce,public,B66001,Bluewater District School Board,2,310
+3501020,South Dundas,"Stormont, Dundas and Glengarry",catholic,B67172,Catholic District School Board of Eastern Ontario,1,245
+3501020,South Dundas,"Stormont, Dundas and Glengarry",public,B66192,Upper Canada District School Board,4,810
+3510020,South Frontenac,Frontenac,catholic,B67202,Algonquin and Lakeshore Catholic District School Board,1,245
+3510020,South Frontenac,Frontenac,public,B66206,Limestone District School Board,8,2530
+3501005,South Glengarry,"Stormont, Dundas and Glengarry",catholic,B67172,Catholic District School Board of Eastern Ontario,3,990
+3501005,South Glengarry,"Stormont, Dundas and Glengarry",public,B66192,Upper Canada District School Board,3,650
+3540005,South Huron,Huron,catholic,B67016,Huron Perth Catholic District School Board,2,365
+3540005,South Huron,Huron,public,B66010,Avon Maitland District School Board,4,1210
+3549056,South River,Parry Sound,public,B28037,Near North District School Board,2,740
+3501011,South Stormont,"Stormont, Dundas and Glengarry",catholic,B67172,Catholic District School Board of Eastern Ontario,1,250
+3501011,South Stormont,"Stormont, Dundas and Glengarry",public,B66192,Upper Canada District School Board,3,535
+3542005,Southgate,Grey,public,B66001,Bluewater District School Board,3,1180
+3539005,Southwest Middlesex,Middlesex,catholic,B67032,London District Catholic School Board,1,100
+3539005,Southwest Middlesex,Middlesex,public,B66044,Thames Valley District School Board,3,745
+3534024,Southwold,Elgin,public,B66044,Thames Valley District School Board,1,690
+3543009,Springwater,Simcoe,catholic,B67091,Simcoe Muskoka Catholic District School Board,1,240
+3543009,Springwater,Simcoe,public,B66109,Simcoe County District School Board,5,2155
+3526053,St. Catharines,Niagara,catholic,B67156,Niagara Catholic District School Board,16,5795
+3526053,St. Catharines,Niagara,public,B66150,District School Board of Niagara,32,13200
+3538003,St. Clair,Lambton,catholic,B67040,St Clair Catholic District School Board,1,125
+3538003,St. Clair,Lambton,public,B66036,Lambton Kent District School Board,5,1150
+3557008,St. Joseph,Algoma,public,B28010,Algoma District School Board,1,140
+3531016,St. Marys,Perth,catholic,B67016,Huron Perth Catholic District School Board,1,205
+3531016,St. Marys,Perth,public,B66010,Avon Maitland District School Board,3,1005
+3534021,St. Thomas,Elgin,catholic,B67032,London District Catholic School Board,2,1485
+3534021,St. Thomas,Elgin,public,B66044,Thames Valley District School Board,12,6045
+3512020,Stirling-Rawdon,Hastings,public,B66222,Hastings & Prince Edward District School Board,1,690
+3511030,Stone Mills,Lennox and Addington,catholic,B67202,Algonquin and Lakeshore Catholic District School Board,1,50
+3511030,Stone Mills,Lennox and Addington,public,B66206,Limestone District School Board,4,515
+3531011,Stratford,Perth,catholic,B67016,Huron Perth Catholic District School Board,5,1555
+3531011,Stratford,Perth,public,B66010,Avon Maitland District School Board,8,3765
+3539015,Strathroy-Caradoc,Middlesex,catholic,B67032,London District Catholic School Board,3,985
+3539015,Strathroy-Caradoc,Middlesex,public,B66044,Thames Valley District School Board,6,3220
+3549048,Sundridge,Parry Sound,public,B28037,Near North District School Board,1,250
+3543071,Tay,Simcoe,catholic,B67091,Simcoe Muskoka Catholic District School Board,1,290
+3543071,Tay,Simcoe,public,B66109,Simcoe County District School Board,1,630
+3509015,Tay Valley,Lanark,public,B66192,Upper Canada District School Board,1,105
+3537048,Tecumseh,Essex,catholic,B67024,Windsor-Essex Catholic District School Board,3,1385
+3537048,Tecumseh,Essex,public,B66028,Greater Essex County District School Board,4,2210
+3548069,Temagami,Nipissing,public,B28002,District School Board Ontario North East,1,0
+3558054,Terrace Bay,Thunder Bay,catholic,B29076,Superior North Catholic District School Board,1,60
+3558054,Terrace Bay,Thunder Bay,public,B28070,Superior-Greenstone District School Board,2,185
+3539027,Thames Centre,Middlesex,catholic,B67032,London District Catholic School Board,1,270
+3539027,Thames Centre,Middlesex,public,B66044,Thames Valley District School Board,4,1880
+3542045,The Blue Mountains,Grey,public,B66001,Bluewater District School Board,1,620
+3502025,The Nation / La Nation,Prescott and Russell,public,B66192,Upper Canada District School Board,1,535
+3557028,Thessalon,Algoma,public,B28010,Algoma District School Board,1,155
+3526037,Thorold,Niagara,catholic,B67156,Niagara Catholic District School Board,6,1005
+3526037,Thorold,Niagara,public,B66150,District School Board of Niagara,5,2285
+3558004,Thunder Bay,Thunder Bay,catholic,B29068,Thunder Bay Catholic District School Board,21,6850
+3558004,Thunder Bay,Thunder Bay,public,B28061,Lakehead District School Board,19,7785
+3532004,Tillsonburg,Oxford,catholic,B67032,London District Catholic School Board,2,540
+3532004,Tillsonburg,Oxford,public,B66044,Thames Valley District School Board,4,2315
+3556027,Timmins,Cochrane,catholic,B29009,Northeastern Catholic District School Board,4,985
+3556027,Timmins,Cochrane,public,B28002,District School Board Ontario North East,11,2940
+3543068,Tiny,Simcoe,public,B66109,Simcoe County District School Board,1,270
+3520005,Toronto,Toronto,catholic,B67059,Toronto Catholic District School Board,204,86705
+3520005,Toronto,Toronto,public,B66052,Toronto District School Board,579,236925
+3514045,Trent Hills,Northumberland,catholic,B67067,Peterborough Victoria Northumberland and Clarington Catholic District School Board,1,280
+3514045,Trent Hills,Northumberland,public,B66079,Kawartha Pine Ridge District School Board,5,1370
+3512030,Tweed,Hastings,catholic,B67202,Algonquin and Lakeshore Catholic District School Board,1,120
+3512030,Tweed,Hastings,public,B66222,Hastings & Prince Edward District School Board,1,395
+3512001,Tyendinaga,Hastings,catholic,B67202,Algonquin and Lakeshore Catholic District School Board,2,280
+3512001,Tyendinaga,Hastings,public,B66222,Hastings & Prince Edward District School Board,1,380
+3518029,Uxbridge,Durham,catholic,B67105,Durham Catholic District School Board,1,340
+3518029,Uxbridge,Durham,public,B66060,Durham District School Board,6,2810
+3519028,Vaughan,York,catholic,B67075,York Catholic District School Board,37,17055
+3519028,Vaughan,York,public,B66095,York Region District School Board,47,27495
+3526014,Wainfleet,Niagara,catholic,B67156,Niagara Catholic District School Board,1,95
+3526014,Wainfleet,Niagara,public,B66150,District School Board of Niagara,1,440
+3538043,Warwick,Lambton,catholic,B67040,St Clair Catholic District School Board,1,210
+3538043,Warwick,Lambton,public,B66036,Lambton Kent District School Board,1,225
+3543064,Wasaga Beach,Simcoe,catholic,B67091,Simcoe Muskoka Catholic District School Board,1,590
+3543064,Wasaga Beach,Simcoe,public,B66109,Simcoe County District School Board,3,1555
+3530016,Waterloo,Waterloo,catholic,B67148,Waterloo Catholic District School Board,13,5420
+3530016,Waterloo,Waterloo,public,B66176,Waterloo Region District School Board,29,16520
+3526032,Welland,Niagara,catholic,B67156,Niagara Catholic District School Board,8,3165
+3526032,Welland,Niagara,public,B66150,District School Board of Niagara,11,5250
+3530027,Wellesley,Waterloo,catholic,B67148,Waterloo Catholic District School Board,1,250
+3530027,Wellesley,Waterloo,public,B66176,Waterloo Region District School Board,2,990
+3523050,Wellington North,Wellington,catholic,B67130,Wellington Catholic District School Board,2,460
+3523050,Wellington North,Wellington,public,B66117,Upper Grand District School Board,4,1440
+3534042,West Elgin,Elgin,catholic,B67032,London District Catholic School Board,1,235
+3534042,West Elgin,Elgin,public,B66044,Thames Valley District School Board,2,630
+3542004,West Grey,Grey,catholic,B67008,Bruce-Grey Catholic District School Board,1,200
+3542004,West Grey,Grey,public,B66001,Bluewater District School Board,2,540
+3526021,West Lincoln,Niagara,catholic,B67156,Niagara Catholic District School Board,1,515
+3526021,West Lincoln,Niagara,public,B66150,District School Board of Niagara,4,1345
+3548055,West Nipissing / Nipissing Ouest,Nipissing,catholic,B29017,Nipissing-Parry Sound Catholic District School Board,1,210
+3548055,West Nipissing / Nipissing Ouest,Nipissing,public,B28037,Near North District School Board,3,565
+3531025,West Perth,Perth,catholic,B67016,Huron Perth Catholic District School Board,1,110
+3531025,West Perth,Perth,public,B66010,Avon Maitland District School Board,3,1095
+3507033,Westport,Leeds and Grenville,catholic,B67172,Catholic District School Board of Eastern Ontario,1,85
+3518009,Whitby,Durham,catholic,B67105,Durham Catholic District School Board,14,6780
+3518009,Whitby,Durham,public,B66060,Durham District School Board,31,20520
+3519044,Whitchurch-Stouffville,York,catholic,B67075,York Catholic District School Board,5,1575
+3519044,Whitchurch-Stouffville,York,public,B66095,York Region District School Board,9,5690
+3557091,White River,Algoma,catholic,B29025,Huron-Superior Catholic District School Board,1,70
+3549039,Whitestone,Parry Sound,public,B28037,Near North District School Board,1,55
+3547056,Whitewater Region,Renfrew,catholic,B67199,Renfrew County Catholic District School Board,1,0
+3547056,Whitewater Region,Renfrew,public,B66214,Renfrew County District School Board,2,630
+3530020,Wilmot,Waterloo,catholic,B67148,Waterloo Catholic District School Board,1,405
+3530020,Wilmot,Waterloo,public,B66176,Waterloo Region District School Board,6,3345
+3537039,Windsor,Essex,catholic,B67024,Windsor-Essex Catholic District School Board,24,13730
+3537039,Windsor,Essex,public,B66028,Greater Essex County District School Board,37,20020
+3512054,Wollaston,Hastings,public,B66222,Hastings & Prince Edward District School Board,1,65
+3532042,Woodstock,Oxford,catholic,B67032,London District Catholic School Board,4,1900
+3532042,Woodstock,Oxford,public,B66044,Thames Valley District School Board,11,5880
+3530035,Woolwich,Waterloo,catholic,B67148,Waterloo Catholic District School Board,1,225
+3530035,Woolwich,Waterloo,public,B66176,Waterloo Region District School Board,8,3565
+3532027,Zorra,Oxford,public,B66044,Thames Valley District School Board,3,1165

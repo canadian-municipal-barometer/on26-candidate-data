@@ -30,6 +30,12 @@ what the clerks themselves printed, which is the same evidence a person would us
               feed, an accordion page - whose race label named the board outright
   crawl       the municipality's own candidate page named the board
   sections    a trustee section extracted from that page carried a board heading
+  schools     the Ministry of Education's school list puts a school of that board in that
+              municipality (notes/board-municipalities.csv, built by
+              scripts/build-board-municipalities.py). This is the only source here that
+              does not depend on a clerk having named the board on a web page, and it is
+              the one that placed Temagami - whose public board is District School Board
+              Ontario North East and not, as its county would suggest, Near North.
   county      INFERRED, not read. See COUNTY INFERENCE below.
   override    notes/board-jurisdiction-overrides.csv - a hand row, with its reason, for a
               municipality whose clerk never names the board at all. Hamilton is the case:
@@ -41,7 +47,12 @@ Both are recorded per row in `evidence`, along with how many independent sources
 a single-source row can be told from a corroborated one. Rows are NOT invented for
 municipalities that named no board; they are simply absent, and the run reports how many.
 
-COUNTY INFERENCE fills the gap left by clerks who name only a system. Most Ontario school
+COUNTY INFERENCE still fills the gap left by clerks who name only a system, and the
+ministry school list has cut how much of the file it has to carry - from 329 rows to 88 -
+without making it redundant. A municipality with no school of its own is invisible to that
+list and can still only be placed from its county.
+
+COUNTY INFERENCE Most Ontario school
 board jurisdictions are built out of whole counties and districts, so where every
 municipality of a county that HAS been placed agrees on one board of a system, that board
 is inferred for the county's remaining municipalities. Without this, a municipality whose
@@ -91,6 +102,7 @@ BOARDS = os.path.join(REPO, "data", "boards", "boards.csv")
 SITES = os.path.join(REPO, "notes", "municipal-websites.csv")
 PAGES = os.path.join(REPO, "notes", "municipal-election-pages.csv")
 SECTIONS = os.path.join(REPO, "data", "raw", "trustees", "municipal-trustee-sections.json")
+SCHOOLS = os.path.join(REPO, "notes", "board-municipalities.csv")
 OVERRIDES = os.path.join(REPO, "notes", "board-jurisdiction-overrides.csv")
 DEST = os.path.join(REPO, "notes", "board-jurisdictions.csv")
 
@@ -142,6 +154,12 @@ def main():
                 bn = sec.get("board_number")
                 if bn in boards:
                     claims[(r["census_id"], boards[bn]["system"])][bn].add("sections")
+
+    if os.path.exists(SCHOOLS):
+        for r in csv.DictReader(open(SCHOOLS)):
+            if r["board_number"] in boards:
+                claims[(r["census_id"], boards[r["board_number"]]["system"])][
+                    r["board_number"]].add("schools")
 
     if os.path.exists(OVERRIDES):
         for r in csv.DictReader(open(OVERRIDES)):

@@ -42,11 +42,7 @@
     "system": "catholic",
     "heading": "English Catholic - Catholic District School Board of Eastern Ontario: Two to be elected",
     "names": [
-     "Compliance Audit Committee",
-     "Accessibility Advisory Committee",
-     "Accessible Transit",
-     "Scent Sensitivity Program",
-     "Business Licences"
+     "Compliance Audit Committee"
     ],
     "emails": [],
     "phones": [],
@@ -58,16 +54,55 @@
  {
   "census_id": "3501020",
   "csdname": "South Dundas",
-  "election_url": "http://www.southdundas.com/2026municipalelection",
-  "confidence": "low",
-  "sections": []
+  "election_url": "https://www.southdundas.com/municipalelection/list",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B67172",
+    "system": "catholic",
+    "heading": "(Catholic District School Board of Eastern Ontario)",
+    "names": [
+     "Job Opportunities"
+    ],
+    "emails": [],
+    "phones": [
+     "613-543-1076",
+     "613.543.2673",
+     "613.652.4028",
+     "800.265.0619"
+    ],
+    "links": [],
+    "section_lines": 20
+   }
+  ]
  },
  {
   "census_id": "3501030",
   "csdname": "North Dundas",
-  "election_url": "http://www.northdundas.com/local-government-bylaws/news-notices/2026-municipal-election-certified-candidates-list-now",
-  "confidence": "low",
-  "sections": []
+  "election_url": "http://www.northdundas.com/2026-municipal-election/certified-candidates",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B66192",
+    "system": "public",
+    "heading": "School Board Trustee \u2013 English Public (Upper Canada District School Board)",
+    "names": [
+     "Third-Party Advertisers",
+     "Winter Maintenance",
+     "Emergency Management",
+     "Open Air Burning",
+     "Burn Ban",
+     "Livestock Losses",
+     "Kennel Licenses"
+    ],
+    "emails": [
+     "scottcorden16@gmail.com"
+    ],
+    "phones": [],
+    "links": [],
+    "section_lines": 40
+   }
+  ]
  },
  {
   "census_id": "3501042",
@@ -167,7 +202,7 @@
  {
   "census_id": "3502010",
   "csdname": "Champlain",
-  "election_url": "http://www.champlain.ca/government-council/news/list-certified-candidates-2026-municipal-elections",
+  "election_url": "http://www.champlain.ca/2026election/list-candidates",
   "confidence": "high",
   "sections": [
    {
@@ -179,10 +214,17 @@
      "James Vorobej",
      "Marc-Antoine Gagnier"
     ],
-    "emails": [],
-    "phones": [],
+    "emails": [
+     "monsieur1992@hotmail.com",
+     "tbartonmaclaren@gmail.com"
+    ],
+    "phones": [
+     "613-501-3288",
+     "613-619-0041",
+     "613-678-7675"
+    ],
     "links": [],
-    "section_lines": 9
+    "section_lines": 21
    },
    {
     "board_number": "B67172",
@@ -191,16 +233,23 @@
     "names": [
      "Sue Wilson",
      "Andr\u00e9 Bonneau",
-     "F\u00e9licia Williams"
+     "F\u00e9licia Williams",
+     "Roch Pilon"
     ],
     "emails": [
-     "info@champlain.ca"
+     "andrebonneau@live.ca",
+     "feliciaamandawilliams@gmail.com",
+     "info@champlain.ca",
+     "wilsonfarms1980@xplornet.com"
     ],
     "phones": [
-     "613-678-3003"
+     "343-549-8681",
+     "613-678-1274",
+     "613-678-3003",
+     "613-678-6237"
     ],
     "links": [],
-    "section_lines": 27
+    "section_lines": 40
    }
   ]
  },
@@ -312,9 +361,9 @@
   "sections": []
  },
  {
-  "census_id": "3506008",
-  "csdname": "Ottawa",
-  "election_url": "",
+  "census_id": "3502044",
+  "csdname": "Casselman",
+  "election_url": "https://www.casselman.ca/en/my-municipality/democracy/2026-election",
   "confidence": "low",
   "sections": []
  },
@@ -354,8 +403,25 @@
   "census_id": "3507015",
   "csdname": "Brockville",
   "election_url": "http://www.brockville.com/local-government/municipal-election/",
-  "confidence": "low",
-  "sections": []
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B67172",
+    "system": "catholic",
+    "heading": "Trustee \u2013 CDSBEO Ward 4",
+    "names": [
+     "Lalonde Pankow"
+    ],
+    "emails": [
+     "jomoljosephtrustee@gmail.com"
+    ],
+    "phones": [
+     "613-265-1919"
+    ],
+    "links": [],
+    "section_lines": 4
+   }
+  ]
  },
  {
   "census_id": "3507021",
@@ -477,93 +543,9 @@
  {
   "census_id": "3509021",
   "csdname": "Perth",
-  "election_url": "http://www.perth.ca/our-government/elections/",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "B67172",
-    "system": "catholic",
-    "heading": "English Separate School Board Trustee - Catholic District School Board of Eastern Ontario",
-    "names": [
-     "Anab Yussuf Mohamed",
-     "Patrick Robert",
-     "Elizabeth Steinberg"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 11
-   },
-   {
-    "board_number": "B66192",
-    "system": "public",
-    "heading": "English Public School Board Trustee - Upper Canada District School Board",
-    "names": [
-     "Diane Burns",
-     "Revision Centre"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 40
-   },
-   {
-    "board_number": "B66192",
-    "system": "public",
-    "heading": "English Public School Board Trustee \u2013 Upper Canada District School Board",
-    "names": [
-     "Carole Dufort",
-     "Spoiled Ballots",
-     "Declined Ballots"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 13
-   },
-   {
-    "board_number": "B67172",
-    "system": "catholic",
-    "heading": "English Separate School Board Trustee \u2013 Catholic District School Board of Eastern Ontario",
-    "names": [
-     "Max Benda",
-     "Jennifer Cooney",
-     "Spoiled Ballots",
-     "Declined Ballots"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 13
-   },
-   {
-    "board_number": "B66192",
-    "system": "public",
-    "heading": "English Public School Board Trustee (Upper Canada District School Board)",
-    "names": [
-     "Financial Statement Filed",
-     "Carole Dufort"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 6
-   },
-   {
-    "board_number": "B67172",
-    "system": "catholic",
-    "heading": "English Separate School Board Trustee (Catholic District School Board of Eastern Ontario)",
-    "names": [
-     "Financial Statement Filed",
-     "Max Benda",
-     "Jennifer Cooney"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 6
-   }
-  ]
+  "election_url": "http://www.perth.ca/news/posts/notice-of-election-information-municipal-elections-act-1996-s-40/",
+  "confidence": "low",
+  "sections": []
  },
  {
   "census_id": "3509030",
@@ -573,103 +555,163 @@
   "sections": []
  },
  {
+  "census_id": "3510005",
+  "csdname": "Frontenac Islands",
+  "election_url": "https://www.frontenacislands.ca/township-services/elections/",
+  "confidence": "low",
+  "sections": []
+ },
+ {
   "census_id": "3510010",
   "csdname": "Kingston",
-  "election_url": "http://www.cityofkingston.ca/news/posts/municipal-election-2026-certified-candidates-and-acclamations/",
+  "election_url": "https://www.cityofkingston.ca/council-and-city-administration/elections/candidates/candidate-list/",
   "confidence": "high",
   "sections": [
    {
     "board_number": "B66206",
     "system": "public",
-    "heading": "English Language Public School Board Trustee (Limestone District School Board) -",
+    "heading": "Limestone District School Board - Trustee 1 - Countryside, Kingscourt-Rideau and Williamsville",
     "names": [
      "Tom Gingrich",
      "Chris Logstrup",
      "Joyce MacLeod-Kane"
     ],
-    "emails": [],
-    "phones": [],
+    "emails": [
+     "logstrupchristopher@gmail.com",
+     "macleodkanejoyce@gmail.com",
+     "tomgingrich1971@outlook.com"
+    ],
+    "phones": [
+     "613-546-9836",
+     "613-556-0622",
+     "613-876-2517"
+    ],
     "links": [],
-    "section_lines": 5
+    "section_lines": 16
    },
    {
     "board_number": "B66206",
     "system": "public",
-    "heading": "English Language Public School Board Trustee (Limestone District School Board) -",
+    "heading": "Limestone District School Board - Trustee 2 - Lakeside & Trillium",
     "names": [
      "Jennifer King"
     ],
-    "emails": [],
+    "emails": [
+     "jenniferkingtrustee@gmail.com"
+    ],
     "phones": [],
     "links": [],
-    "section_lines": 2
+    "section_lines": 8
    },
    {
     "board_number": "B66206",
     "system": "public",
-    "heading": "English Language Public School Board Trustee (Limestone District School Board) - Loyalist-Cataraqui, Collins-Bayridge & Meadowbrook-Strathcona",
+    "heading": "Limestone District School Board - Trustee 3 - Loyalist-Cataraqui, Collins-Bayridge & Meadowbrook-Strathcona",
     "names": [
      "Joseph Gratton",
      "Katherine Heikkila"
     ],
-    "emails": [],
-    "phones": [],
+    "emails": [
+     "josephgratton@northmail.ca",
+     "katherineheikkila@gmail.com"
+    ],
+    "phones": [
+     "613-770-1223"
+    ],
     "links": [],
-    "section_lines": 2
+    "section_lines": 12
    },
    {
     "board_number": "B66206",
     "system": "public",
-    "heading": "English Language Public School Board Trustee (Limestone District School Board) \u2013 Portsmouth & Sydenham",
+    "heading": "Limestone District School Board - Trustee 4 - Portsmouth and Sydenham",
     "names": [
      "Erin Clow",
      "Grant McMichael"
     ],
-    "emails": [],
-    "phones": [],
+    "emails": [
+     "erinmmclow@gmail.com",
+     "grant.a.mcmichael@gmail.com"
+    ],
+    "phones": [
+     "613-483-3429",
+     "613-985-8820"
+    ],
     "links": [],
-    "section_lines": 2
+    "section_lines": 12
    },
    {
     "board_number": "B66206",
     "system": "public",
-    "heading": "English Language Public School Board Trustee (Limestone District School Board) -",
+    "heading": "Limestone District School Board - Trustee 5 - King's Town, Pittsburgh & Frontenac Islands",
     "names": [
      "Bob Godkin",
-     "Ayden John Michael Layng"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 3
-   },
-   {
-    "board_number": "UNRESOLVED-catholic",
-    "system": "catholic",
-    "heading": "English Language Separate School Board Trustee (Algonquin & Lakeshore Catholic District School Board)",
-    "names": [
+     "Ayden John Michael Layng",
      "Brian Evoy",
      "Rob Gilmour",
      "Patrick Greenwood",
      "Glen Edward Perry",
      "Michael Sammon"
     ],
-    "emails": [],
-    "phones": [],
+    "emails": [
+     "ayden@aydenlayng.com",
+     "bobgodkin12@gmail.com",
+     "brianevoy@gmail.com",
+     "gperryvancouver@yahoo.ca",
+     "mikesammon4trustee@gmail.com",
+     "pggbroker@gmail.com",
+     "robgilmour3@gmail.com"
+    ],
+    "phones": [
+     "613-214-1140",
+     "613-329-9126",
+     "613-483-9990",
+     "613-561-6300",
+     "613-634-6589",
+     "613-766-7390"
+    ],
+    "links": [],
+    "section_lines": 40
+   }
+  ]
+ },
+ {
+  "census_id": "3510020",
+  "csdname": "South Frontenac",
+  "election_url": "https://www.southfrontenac.net/our-government/elections/",
+  "confidence": "medium",
+  "sections": [
+   {
+    "board_number": "UNRESOLVED-public",
+    "system": "public",
+    "heading": "English Language Public School Board Trustee (Acclaimed)",
+    "names": [
+     "Kim Thorne"
+    ],
+    "emails": [
+     "loreleakimthorne@gmail.com"
+    ],
+    "phones": [
+     "613-539-6833"
+    ],
     "links": [],
     "section_lines": 6
    },
    {
-    "board_number": "UNRESOLVED-public",
-    "system": "public",
-    "heading": "Language Public School Board Trustee (Le Conseil des \u00e9coles publiques de l'Est de l'Ontario \u2013 Geographic Region 2)",
+    "board_number": "UNRESOLVED-catholic",
+    "system": "catholic",
+    "heading": "English Language Separate School Board Trustee (Acclaimed)",
     "names": [
-     "Pascal Dussault"
+     "Ian Dick"
     ],
-    "emails": [],
-    "phones": [],
+    "emails": [
+     "ianmarshalldick@gmail.com"
+    ],
+    "phones": [
+     "613-331-2424"
+    ],
     "links": [],
-    "section_lines": 4
+    "section_lines": 6
    }
   ]
  },
@@ -677,22 +719,8 @@
   "census_id": "3510035",
   "csdname": "Central Frontenac",
   "election_url": "https://www.centralfrontenac.com/township-office/2026-municipal-elections/",
-  "confidence": "medium",
-  "sections": [
-   {
-    "board_number": "UNRESOLVED-catholic",
-    "system": "catholic",
-    "heading": "English Language Separate School Board Trustees (Algonquin & Lakeshore Catholic District School Board) Townships of Central Frontenac, North Frontenac and South Frontenac (Elected at Large)",
-    "names": [
-     "Hide Alert",
-     "Nicki Gowdy"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 25
-   }
-  ]
+  "confidence": "low",
+  "sections": []
  },
  {
   "census_id": "3511005",
@@ -707,9 +735,9 @@
     "names": [
      "Jacqueline Fernandes",
      "Louise Dorsett",
+     "Contested Competitions",
      "Paul Proderick",
-     "Mike Budarick",
-     "Larry Laird"
+     "Mike Budarick"
     ],
     "emails": [
      "jnandes@icloud.com",
@@ -781,13 +809,13 @@
  {
   "census_id": "3511030",
   "csdname": "Stone Mills",
-  "election_url": "http://www.stonemills.com/our-government/elections/",
+  "election_url": "https://www.stonemills.com/our-government/elections/",
   "confidence": "high",
   "sections": [
    {
     "board_number": "B66206",
     "system": "public",
-    "heading": "English Public Trustee (Limestone District School Board) - Nominations filed with Loyalist Township",
+    "heading": "English Public Trustee (Limestone District School Board) Nominations Certified by the Clerk for Loyalist Township",
     "names": [
      "Isabella Harpell",
      "Robin Hutcheon"
@@ -841,7 +869,7 @@
  {
   "census_id": "3512005",
   "csdname": "Belleville",
-  "election_url": "https://www.belleville.ca/council-and-administration/council/municipal-election/",
+  "election_url": "https://www.belleville.ca/council-and-administration/council/municipal-election/candidates/",
   "confidence": "low",
   "sections": []
  },
@@ -863,40 +891,12 @@
     "system": "public",
     "heading": "Hastings Prince Edward School Board Trustee",
     "names": [
-     "Pascal Dassault",
-     "Louise Dorsett"
-    ],
-    "emails": [],
-    "phones": [
-     "613-544-9750",
-     "613-929-9139"
-    ],
-    "links": [],
-    "section_lines": 7
-   },
-   {
-    "board_number": "UNRESOLVED-public",
-    "system": "public",
-    "heading": "Public School Board Trustee",
-    "names": [
-     "David Pickett"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 3
-   },
-   {
-    "board_number": "UNRESOLVED-public",
-    "system": "public",
-    "heading": "Public School Board Trustee",
-    "names": [
      "Peter Penlington"
     ],
     "emails": [],
     "phones": [],
     "links": [],
-    "section_lines": 4
+    "section_lines": 3
    }
   ]
  },
@@ -1016,30 +1016,7 @@
  {
   "census_id": "3514020",
   "csdname": "Port Hope",
-  "election_url": "http://www.porthope.ca/en/your-municipal-government/information-for-voters.aspx#Candidates-who-have-filed-Nomination-Papers",
-  "confidence": "medium",
-  "sections": [
-   {
-    "board_number": "UNRESOLVED-public",
-    "system": "public",
-    "heading": "Candidates for School Board: English Public School Trustee",
-    "names": [
-     "Terry BROWN",
-     "Jaine KLASSEN JENINGA",
-     "Elizabeth TERRELL",
-     "Lindsay WHITE"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 4
-   }
-  ]
- },
- {
-  "census_id": "3514021",
-  "csdname": "Cobourg",
-  "election_url": "http://www.cobourg.ca/news/posts/town-of-cobourg-confirms-list-of-certified-candidates-for-the-2026-municipal-and-school-board-election/",
+  "election_url": "http://www.porthope.ca/en/your-municipal-government/information-for-candidates.aspx",
   "confidence": "low",
   "sections": []
  },
@@ -1053,9 +1030,47 @@
  {
   "census_id": "3515003",
   "csdname": "Asphodel-Norwood",
-  "election_url": "https://www.antownship.ca/news/posts/certified-candidates-for-the-2026-municipal-election/",
-  "confidence": "low",
-  "sections": []
+  "election_url": "https://www.antownship.ca/township-services/municipal-elections/information-for-voters/certified-candidates/",
+  "confidence": "medium",
+  "sections": [
+   {
+    "board_number": "UNRESOLVED-public",
+    "system": "public",
+    "heading": "One (1) trustee to be elected by English public school electors in the Townships of Asphodel-Norwood, Cavan Monaghan, Douro-Dummer, and Otonabee-South Monaghan.",
+    "names": [
+     "Angela Lloyd"
+    ],
+    "emails": [
+     "alloyd671@gmail.com"
+    ],
+    "phones": [
+     "705-939-6967"
+    ],
+    "links": [],
+    "section_lines": 5
+   },
+   {
+    "board_number": "UNRESOLVED-catholic",
+    "system": "catholic",
+    "heading": "One (1) trustee to be elected by all English Separate School electors for the Municipality of Trent Lakes and the Townships of Asphodel-Norwood, Douro-Dummer, Cavan Monaghan, Havelock-Belmont-Methuen, Otonabee-South Monaghan, North Kawartha, and Selwyn.",
+    "names": [
+     "Aaron Dorris",
+     "Jennifer Leahy",
+     "Edward Leerdam"
+    ],
+    "emails": [
+     "fishineddie@gmail.com",
+     "jleahy1963@gmail.com"
+    ],
+    "phones": [
+     "416-453-4472",
+     "705-761-1806",
+     "705-772-4085"
+    ],
+    "links": [],
+    "section_lines": 10
+   }
+  ]
  },
  {
   "census_id": "3515005",
@@ -1070,57 +1085,6 @@
   "election_url": "http://www.cavanmonaghan.net/local-government/2026-municipal-election/",
   "confidence": "low",
   "sections": []
- },
- {
-  "census_id": "3515014",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "B66079",
-    "system": "public",
-    "heading": "Kawartha Pine Ridge District School Board",
-    "names": [
-     "Conseil Scolaire Viamonde",
-     "Erik LaPointe",
-     "Marcellin Kwilu Mondo"
-    ],
-    "emails": [
-     "alex@teamdelorey.com",
-     "braden.leal.ptbo@gmail.com",
-     "christinehaffie.PVNC@gmail.com",
-     "jackhenryforptbo@gmail.com",
-     "jacquelynroffeytrustee@gmail.com",
-     "julie.a.chatten@outlook.com",
-     "lorettadurst2@gmail.com",
-     "sblackwood.705music@gmail.com"
-    ],
-    "phones": [
-     "250-213-1936",
-     "705-201-2163",
-     "705-761-1113",
-     "705-875-1176"
-    ],
-    "links": [],
-    "section_lines": 40
-   },
-   {
-    "board_number": "B66079",
-    "system": null,
-    "heading": "In Peterborough, voters can support trustees for the Kawartha Pine Ridge District School Board, the Peterborough Victoria Northumberland and Clarington Catholic District School Board, or Conseil scolaire catholique MonAvenir.",
-    "names": [
-     "Compliance Audit Committee",
-     "Accessibility Policies",
-     "Lottery Licences",
-     "Asset Management"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 40
-   }
-  ]
  },
  {
   "census_id": "3515015",
@@ -1188,7 +1152,7 @@
  {
   "census_id": "3515044",
   "csdname": "Trent Lakes",
-  "election_url": "http://www.trentlakes.ca/government/election/official-list-of-candidates/",
+  "election_url": "https://www.trentlakes.ca/government/election/official-list-of-candidates/",
   "confidence": "medium",
   "sections": [
    {
@@ -1229,275 +1193,6 @@
     ],
     "links": [],
     "section_lines": 12
-   }
-  ]
- },
- {
-  "census_id": "3518001",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "B66060",
-    "system": "public",
-    "heading": "Trustee, Durham District School Board",
-    "names": [
-     "Walton Armstrong",
-     "Emma Cunningham",
-     "Sinthuja Kanageswaran",
-     "Khadiza Manjra",
-     "Amjad Muhammad",
-     "Hitesh Parikh"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 6
-   },
-   {
-    "board_number": "B67105",
-    "system": "catholic",
-    "heading": "Trustee, Durham Catholic District School Board",
-    "names": [
-     "Andre De Freitas",
-     "Ayeza Perez",
-     "Bessy Stergiou"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 3
-   },
-   {
-    "board_number": "B66060",
-    "system": "public",
-    "heading": "Trustee, Durham District School Board",
-    "names": [
-     "Walton ARMSTRONG",
-     "Emma CUNNINGHAM",
-     "Sinthuja KANAGESWARAN"
-    ],
-    "emails": [
-     "emmacunningham.ca@gmail.com",
-     "walton4trustee@gmail.com"
-    ],
-    "phones": [],
-    "links": [],
-    "section_lines": 15
-   },
-   {
-    "board_number": "B66060",
-    "system": "public",
-    "heading": "Facebook: Sinthuja Kanageswaran for DDSB Trustee Pickering",
-    "names": [
-     "Khadiza MANJRA",
-     "Amjad MUHAMMAD",
-     "Hitesh PARIKH"
-    ],
-    "emails": [
-     "amjad4mj@hotmail.com",
-     "khatijamanjra82@gmail.com",
-     "parikh4trustee@gmail.com"
-    ],
-    "phones": [
-     "416.559.9957",
-     "647.835.8864",
-     "647.893.4860"
-    ],
-    "links": [],
-    "section_lines": 19
-   },
-   {
-    "board_number": "B67105",
-    "system": "catholic",
-    "heading": "Trustee, Durham Catholic District School Board",
-    "names": [
-     "Andre DE FREITAS",
-     "Ayeza PEREZ",
-     "Bessy STERGIOU",
-     "Compliance Audit Committee",
-     "Key Dates",
-     "Voting Methods"
-    ],
-    "emails": [
-     "ayezaperez@gmail.com",
-     "campaign@drddurham.ca"
-    ],
-    "phones": [],
-    "links": [],
-    "section_lines": 40
-   }
-  ]
- },
- {
-  "census_id": "3518005",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "low",
-  "sections": []
- },
- {
-  "census_id": "3518009",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "low",
-  "sections": []
- },
- {
-  "census_id": "3518013",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "B66060",
-    "system": "public",
-    "heading": "Trustee, Durham District School Board",
-    "names": [
-     "Arjun Ariaran",
-     "Harry Clarke",
-     "Hamza Khan",
-     "Krista Laing",
-     "Sandra M. Lazarus",
-     "Penny Nugent",
-     "Sanjay Sarkar",
-     "Jim Van Allen"
-    ],
-    "emails": [
-     "KristaSLaing@gmail.com",
-     "arjunariaran@gmail.com",
-     "hamzasherkhanm@gmail.com",
-     "harrison.clarke182@live.ca",
-     "jamesrvanallen@gmail.com",
-     "pennynugent73@gmail.com",
-     "sanjay1981@gmail.com"
-    ],
-    "phones": [
-     "647-838-0894"
-    ],
-    "links": [],
-    "section_lines": 28
-   },
-   {
-    "board_number": "B67105",
-    "system": "catholic",
-    "heading": "Trustee, Durham Catholic District School Board",
-    "names": [
-     "Kim Beatty",
-     "John Rzeszut",
-     "Morgan Ste. Marie"
-    ],
-    "emails": [
-     "electKimBeatty@rogers.com",
-     "vote@morganstemarie.ca",
-     "votejohnrzeszut@gmail.com"
-    ],
-    "phones": [],
-    "links": [],
-    "section_lines": 13
-   }
-  ]
- },
- {
-  "census_id": "3518017",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "B66079",
-    "system": "public",
-    "heading": "Kawartha Pine Ridge District School Board Trustee",
-    "names": [
-     "Cathy Abraham",
-     "Pranay Gunti",
-     "Kurtis McAleer",
-     "Bunmi Oyinsan"
-    ],
-    "emails": [
-     "KurtisMcAleerTrustee@gmail.com",
-     "cathy.abraham2026@gmail.com",
-     "olubunmioyinsan@gmail.com",
-     "pranayfortrustee@gmail.com"
-    ],
-    "phones": [
-     "437-345-6353",
-     "647-286-0643",
-     "647-620-2877"
-    ],
-    "links": [],
-    "section_lines": 21
-   },
-   {
-    "board_number": "B67067",
-    "system": "catholic",
-    "heading": "Acclaimed Candidates for Peterborough Victoria Northumberland and Clarington Catholic District School Board Trustee",
-    "names": [
-     "Brad Jakobsen",
-     "Kevin MacKenzie",
-     "Erik Lapointe",
-     "Marcellin Kwilu Mondo",
-     "Quick Links",
-     "Connect With Us"
-    ],
-    "emails": [
-     "bradtrusteecandidate@gmail.com",
-     "consillermarcellin@gmail.com",
-     "kevin@yourtrustee.ca"
-    ],
-    "phones": [
-     "289-356-7838",
-     "844-790-1599",
-     "905-242-1221",
-     "905-623-3379"
-    ],
-    "links": [],
-    "section_lines": 40
-   }
-  ]
- },
- {
-  "census_id": "3518020",
-  "csdname": "Scugog",
-  "election_url": "https://www.scugog.ca/news/posts/2026-municipal-and-school-board-election/",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "B66060",
-    "system": "public",
-    "heading": "English Public: Durham District School Board",
-    "names": [
-     "Paul BREEZE",
-     "Dave BROWN",
-     "Netalia DUBOISKY",
-     "James BOUNTROGIANNIS"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 8
-   },
-   {
-    "board_number": "B67105",
-    "system": "catholic",
-    "heading": "English Separate: Durham Catholic District School Board",
-    "names": [
-     "Richard DAMIANOPOULOS",
-     "Erik LAPOINTE",
-     "Marcellin KWILU MONDO",
-     "Blair Labelle",
-     "All Categories",
-     "Burn Ban",
-     "Council Highlights",
-     "STAY UP TO DATE"
-    ],
-    "emails": [],
-    "phones": [
-     "905-985-7346"
-    ],
-    "links": [],
-    "section_lines": 40
    }
   ]
  },
@@ -1543,146 +1238,140 @@
   ]
  },
  {
-  "census_id": "3519028",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "low",
-  "sections": []
- },
- {
-  "census_id": "3519036",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "low",
-  "sections": []
- },
- {
-  "census_id": "3519038",
-  "csdname": "",
-  "election_url": "",
+  "census_id": "3519048",
+  "csdname": "Newmarket",
+  "election_url": "http://www.newmarket.ca/local-government/council/municipal-elections",
   "confidence": "high",
   "sections": [
    {
     "board_number": "B66095",
     "system": "public",
-    "heading": "York Region District School Board - Wards 1, 2, and 4",
+    "heading": "York Region District School Board",
     "names": [
-     "Social Media"
+     "Donald J Smith",
+     "Shameela Shakeel",
+     "Jessica Neto",
+     "Pamela McCarthy"
     ],
-    "emails": [
-     "info@RobertForTrustee.ca",
-     "nicole@ward124.ca"
-    ],
+    "emails": [],
     "phones": [],
     "links": [],
-    "section_lines": 18
-   },
-   {
-    "board_number": "B66095",
-    "system": "public",
-    "heading": "York Region District School Board - Wards 3, 5, and 6",
-    "names": [
-     "Social Media"
-    ],
-    "emails": [
-     "sadra4trustee@gmail.com"
-    ],
-    "phones": [
-     "647-572-1206"
-    ],
-    "links": [],
-    "section_lines": 16
+    "section_lines": 4
    },
    {
     "board_number": "B67075",
     "system": "catholic",
-    "heading": "York Catholic District School Board (two to be elected)",
+    "heading": "York Catholic District School Board",
     "names": [
-     "Social Media",
-     "Social Media",
-     "Social Media",
-     "Helpful Links"
+     "Theresa McNicol",
+     "Peter Fracassi",
+     "Third Party Advertiser",
+     "Michael Teper",
+     "John Taylor",
+     "Joan Stonehocker",
+     "Tom Vegh",
+     "Naqi Ahsan",
+     "Grace Simon",
+     "Bill Kukulewich",
+     "Victor Woodhouse",
+     "Jane Twinney",
+     "Jack Zangari",
+     "Trevor Morrison",
+     "Grant Waddell",
+     "Ron Eibel",
+     "Bob Kwapis",
+     "Kelly Broome",
+     "Christina Bisanz"
     ],
-    "emails": [
-     "access@richmondhill.ca"
-    ],
-    "phones": [
-     "905-771-8800"
-    ],
+    "emails": [],
+    "phones": [],
     "links": [],
-    "section_lines": 40
-   }
-  ]
- },
- {
-  "census_id": "3519046",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "B66095",
-    "system": "public",
-    "heading": "York Region District School Board - Trustees Important Information",
-    "names": [
-     "Your Government",
-     "Important Dates",
-     "Elections Jobs",
-     "Aurora Electoral System Review"
-    ],
-    "emails": [
-     "Elections@aurora.ca"
-    ],
-    "phones": [
-     "905-726-4769",
-     "905-727-1375",
-     "905-727-3123"
-    ],
-    "links": [],
-    "section_lines": 40
-   }
-  ]
- },
- {
-  "census_id": "3519048",
-  "csdname": "Newmarket",
-  "election_url": "http://www.newmarket.ca/local-government/news-notices/2026-08-25-list-certified-acclaimed-candidates-2026-newmarket",
-  "confidence": "high",
-  "sections": [
+    "section_lines": 37
+   },
    {
     "board_number": "B66095",
     "system": "public",
     "heading": "York Region District School Board Trustee",
     "names": [
-     "Darlene Morrison",
-     "Mehrdad Safizadeh",
-     "Colin Service"
+     "Kristine Carbis",
+     "Linda Gilbert"
     ],
     "emails": [],
     "phones": [],
     "links": [],
-    "section_lines": 3
+    "section_lines": 4
    },
    {
     "board_number": "B67075",
     "system": "catholic",
     "heading": "York Catholic District School Board Trustee",
     "names": [
-     "Rosa Calabres",
+     "Shawn Gaudet",
      "Theresa McNicol",
-     "Kevin Moore"
+     "Ron Eibel",
+     "Ron Eibel Financial Statement",
+     "Peter Craig Geibel",
+     "Wasim Jarrah",
+     "Wasim Jarrah Financial Statement",
+     "Ian Johnston",
+     "Ian Johnston Financial Statement"
     ],
     "emails": [],
     "phones": [],
     "links": [],
-    "section_lines": 3
+    "section_lines": 40
+   },
+   {
+    "board_number": "B67075",
+    "system": "catholic",
+    "heading": "Trustee - York Catholic District School Board",
+    "names": [
+     "Theresa McNicol"
+    ],
+    "emails": [],
+    "phones": [],
+    "links": [],
+    "section_lines": 1
+   },
+   {
+    "board_number": "B67075",
+    "system": "catholic",
+    "heading": "York Catholic District School Board Trustee",
+    "names": [
+     "Theresa McNicol"
+    ],
+    "emails": [],
+    "phones": [],
+    "links": [],
+    "section_lines": 1
+   },
+   {
+    "board_number": "B66095",
+    "system": "public",
+    "heading": "York Region District School Board Trustee",
+    "names": [
+     "Linda Gilbert",
+     "Martin Van Beek",
+     "Customer Service",
+     "Legal Disclaimer",
+     "Land Acknowledgement",
+     "Stay Connected"
+    ],
+    "emails": [
+     "info@newmarket.ca"
+    ],
+    "phones": [
+     "905-895-5193"
+    ],
+    "links": [],
+    "section_lines": 30
    }
   ]
  },
  {
   "census_id": "3519070",
   "csdname": "Georgina",
-  "election_url": "http://www.georgina.ca/article/town-georgina-2026-municipal-election-certified-candidates",
+  "election_url": "https://www.georgina.ca/municipal-government/elections/2026-candidate-information",
   "confidence": "high",
   "sections": [
    {
@@ -1734,21 +1423,7 @@
  {
   "census_id": "3520005",
   "csdname": "Toronto",
-  "election_url": "",
-  "confidence": "low",
-  "sections": []
- },
- {
-  "census_id": "3521005",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "low",
-  "sections": []
- },
- {
-  "census_id": "3521010",
-  "csdname": "",
-  "election_url": "",
+  "election_url": "https://www.toronto.ca/city-government/elections/",
   "confidence": "low",
   "sections": []
  },
@@ -1862,21 +1537,8 @@
   "census_id": "3522014",
   "csdname": "Orangeville",
   "election_url": "http://www.orangeville.ca/en/town-hall/elections.aspx",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "B66117",
-    "system": "public",
-    "heading": "English Public (Upper Grand District School Board - Orangeville ward) - Town of Orangeville",
-    "names": [
-     "Third Party Advertising"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 40
-   }
-  ]
+  "confidence": "low",
+  "sections": []
  },
  {
   "census_id": "3522019",
@@ -1952,72 +1614,6 @@
   "election_url": "https://puslinch.ca/list-of-candidates/",
   "confidence": "low",
   "sections": []
- },
- {
-  "census_id": "3523008",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "B67130",
-    "system": "catholic",
-    "heading": "Candidates for Wellington Catholic District School Board",
-    "names": [
-     "Additional Link",
-     "Not Available",
-     "Additional Link"
-    ],
-    "emails": [],
-    "phones": [
-     "226-706-4201"
-    ],
-    "links": [],
-    "section_lines": 40
-   },
-   {
-    "board_number": "B66117",
-    "system": "public",
-    "heading": "Candidates for Upper Grand District School Board",
-    "names": [
-     "Additional Link",
-     "Additional Link",
-     "Additional Link"
-    ],
-    "emails": [],
-    "phones": [
-     "416-697-1737",
-     "437-533-6603",
-     "519-803-4936"
-    ],
-    "links": [],
-    "section_lines": 40
-   },
-   {
-    "board_number": "B67130",
-    "system": "catholic",
-    "heading": "Candidates for Wellington Catholic District School Board",
-    "names": [
-     "Additional Link",
-     "Not Available",
-     "Additional Link",
-     "Not Available",
-     "Not Available",
-     "Additional Link",
-     "Not Available",
-     "Not Available"
-    ],
-    "emails": [],
-    "phones": [
-     "226-979-2008",
-     "519-822-9489",
-     "519-835-2353",
-     "519-837-5625"
-    ],
-    "links": [],
-    "section_lines": 40
-   }
-  ]
  },
  {
   "census_id": "3523009",
@@ -2114,8 +1710,8 @@
     ],
     "emails": [
      "andrew.finoro@gmail.com",
+     "chrisd4trustee@gmail.com",
      "mcgarvey4cwtrustee@icloud.com",
-     "mrsd1492@gmail.com",
      "rbarrima@laurentian.ca"
     ],
     "phones": [],
@@ -2200,340 +1796,6 @@
   ]
  },
  {
-  "census_id": "3524001",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "B66133",
-    "system": "public",
-    "heading": "Halton District School Board Trustee- Ward 1 & 2 candidates",
-    "names": [
-     "Carole Baxter",
-     "Zafar Kayani",
-     "Hamzah Khan"
-    ],
-    "emails": [
-     "carole4trustee@gmail.com",
-     "khanfortrustee@gmail.com",
-     "votezafarkayani@gmail.com"
-    ],
-    "phones": [
-     "289-400-1525",
-     "905-466-8110"
-    ],
-    "links": [],
-    "section_lines": 15
-   },
-   {
-    "board_number": "B66133",
-    "system": "public",
-    "heading": "Halton District School Board Trustee- Ward 3 & 6 candidates",
-    "names": [
-     "Rebecca Mayville",
-     "Vinay Paramanand",
-     "Tausif Sabir"
-    ],
-    "emails": [
-     "mayvilleHDSB@gmail.com",
-     "tsabir1@gmail.com",
-     "vinayforhdsb2026@gmail.com"
-    ],
-    "phones": [
-     "416-712-0595"
-    ],
-    "links": [],
-    "section_lines": 10
-   },
-   {
-    "board_number": "B66133",
-    "system": "public",
-    "heading": "Halton District School Board Trustee- Ward 4 candidates",
-    "names": [
-     "Ira Davidov",
-     "Virginia Nsitem",
-     "Deepak Pathania",
-     "Florin Cristian Vilcu"
-    ],
-    "emails": [
-     "deepak_pathania@hotmail.com",
-     "florincvilcu@gmail.com",
-     "iraoakville@gmail.com",
-     "kaur.harsimran0508@gmail.com",
-     "virginia4trustee@gmail.com"
-    ],
-    "phones": [
-     "(647) 765-5183"
-    ],
-    "links": [
-     "https://www.virginiansitem.ca"
-    ],
-    "section_lines": 19
-   },
-   {
-    "board_number": "B66133",
-    "system": "public",
-    "heading": "Halton District School Board Trustee- Ward 5 & 7 candidates",
-    "names": [
-     "Lily Bharat",
-     "Azra Ghumman",
-     "Ahmed Gohar",
-     "Ashish Maggo",
-     "Kim Tait",
-     "Jake Zhu"
-    ],
-    "emails": [
-     "ashish.maggo08@gmail.com",
-     "azraghumman@gmail.com",
-     "kimhdsbtrustee@gmail.com"
-    ],
-    "phones": [
-     "778-933-2827"
-    ],
-    "links": [],
-    "section_lines": 16
-   },
-   {
-    "board_number": "B67113",
-    "system": "catholic",
-    "heading": "Halton Catholic District School Board Trustee- Ward 1, 2 & 3 candidates",
-    "names": [
-     "Martin Gegus",
-     "Mario Jelic",
-     "Tom Murad"
-    ],
-    "emails": [
-     "dr.t.murad@ieee.org",
-     "mjelic91@gmail.com"
-    ],
-    "phones": [
-     "647-464-8411",
-     "647-960-0469",
-     "905-361-9162"
-    ],
-    "links": [],
-    "section_lines": 11
-   },
-   {
-    "board_number": "B67113",
-    "system": "catholic",
-    "heading": "Halton Catholic District School Board Trustee- Ward 5 & 6 candidates",
-    "names": [
-     "Helena Karabela",
-     "Sean McCarthy"
-    ],
-    "emails": [
-     "helena@karabela.ca"
-    ],
-    "phones": [
-     "226-377-3700",
-     "905-510-1849"
-    ],
-    "links": [],
-    "section_lines": 7
-   }
-  ]
- },
- {
-  "census_id": "3524002",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "B66133",
-    "system": "public",
-    "heading": "Halton District School Board Trustee - Wards 3 and 6",
-    "names": [
-     "Sukhwinder Singh",
-     "Xin Yi Zhang"
-    ],
-    "emails": [
-     "info.xinyizhang@gmail.com",
-     "sssandhu50@gmail.com"
-    ],
-    "phones": [
-     "289-812-6684",
-     "416-712-7931"
-    ],
-    "links": [],
-    "section_lines": 7
-   },
-   {
-    "board_number": "B66133",
-    "system": "public",
-    "heading": "Halton District School Board Trustee - Ward 4",
-    "names": [
-     "Ryan Marlow",
-     "Dania Thurman",
-     "Ahmed Zaki"
-    ],
-    "emails": [
-     "ahmedzaki.ca@gmail.com",
-     "dania4trustee@gmail.com"
-    ],
-    "phones": [
-     "416-659-5026",
-     "905-464-7485"
-    ],
-    "links": [],
-    "section_lines": 8
-   },
-   {
-    "board_number": "B67113",
-    "system": "catholic",
-    "heading": "Halton Catholic District School Board Trustee - Wards 1 and 2",
-    "names": [
-     "Vincent Iantomasi",
-     "Allison McKenzie"
-    ],
-    "emails": [
-     "vincent772@sympatico.ca"
-    ],
-    "phones": [
-     "905-529-6155"
-    ],
-    "links": [],
-    "section_lines": 4
-   },
-   {
-    "board_number": "B67113",
-    "system": "catholic",
-    "heading": "Halton Catholic District School Board Trustee - Wards 3 and 6",
-    "names": [
-     "Bernice Carvalho",
-     "Roman Soler"
-    ],
-    "emails": [
-     "bernice4trustee@gmail.com",
-     "roman@voteroman.ca"
-    ],
-    "phones": [
-     "416-729-1724",
-     "647-701-9410"
-    ],
-    "links": [],
-    "section_lines": 7
-   },
-   {
-    "board_number": "B67113",
-    "system": "catholic",
-    "heading": "Halton Catholic District School Board Trustee - Wards 4 and 5",
-    "names": [
-     "Bashar Haddaden",
-     "Katrina Vinka Kvenich",
-     "Tim O'Brien",
-     "For Voters",
-     "New Voting Wards",
-     "Voters' List",
-     "Voting Locations",
-     "STAY UP TO DATE"
-    ],
-    "emails": [
-     "city@burlington.ca",
-     "courchesne.diane@gmail.com",
-     "katrinakvenich@hotmail.com",
-     "sonia.macaluso@acfohamilton.com"
-    ],
-    "phones": [
-     "514-297-5684",
-     "647-464-0821",
-     "877-213-3609",
-     "905-308-6957",
-     "905-335-7777"
-    ],
-    "links": [],
-    "section_lines": 40
-   }
-  ]
- },
- {
-  "census_id": "3524009",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "B66133",
-    "system": "public",
-    "heading": "Halton District School Board Trustee Candidates",
-    "names": [
-     "Khdiga R. Metwally",
-     "Andrew J. Wood"
-    ],
-    "emails": [
-     "drkmetwally@gmail.com"
-    ],
-    "phones": [
-     "647-999-8516"
-    ],
-    "links": [],
-    "section_lines": 11
-   },
-   {
-    "board_number": "B67113",
-    "system": "catholic",
-    "heading": "Halton Catholic District School Board Trustee Candidates",
-    "names": [
-     "Joseph Brendan",
-     "Juan Cumming",
-     "Joseph Adams",
-     "Cecil Young",
-     "Withdrawn Candidates",
-     "Pat Scaduto"
-    ],
-    "emails": [
-     "brendanjoseph4hcdsb@gmail.com",
-     "cecyoung@sbg.ca",
-     "josephadams4hcdsbtrustee@gmail.com"
-    ],
-    "phones": [
-     "416-294-0416",
-     "416-997-9584"
-    ],
-    "links": [],
-    "section_lines": 40
-   },
-   {
-    "board_number": "B66133",
-    "system": "public",
-    "heading": "Halton District School Board Trustee",
-    "names": [
-     "Marvin Duarte"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 3
-   },
-   {
-    "board_number": "B67113",
-    "system": "catholic",
-    "heading": "Halton Catholic District School Board Trustee",
-    "names": [
-     "Cecil Young"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 3
-   },
-   {
-    "board_number": "B67113",
-    "system": "catholic",
-    "heading": "Halton Catholic District School Board Trustee",
-    "names": [
-     "Mohammad Tariq"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 3
-   }
-  ]
- },
- {
   "census_id": "3524015",
   "csdname": "Halton Hills",
   "election_url": "http://www.haltonhills.ca/filed-nominations",
@@ -2571,6 +1833,7 @@
     ],
     "emails": [],
     "phones": [
+     "416-543-2744",
      "905-308-6957",
      "905-630-3581",
      "905-873-2600"
@@ -2583,7 +1846,7 @@
  {
   "census_id": "3525005",
   "csdname": "Hamilton",
-  "election_url": "http://www.hamilton.ca/index%2ephp/city-council/municipal-election/candidates-third-party-advertisers/certified-candidates",
+  "election_url": "https://www.hamilton.ca/city-council/municipal-election/candidates-third-party-advertisers/candidates",
   "confidence": "low",
   "sections": []
  },
@@ -2639,51 +1902,69 @@
  {
   "census_id": "3526021",
   "csdname": "West Lincoln",
-  "election_url": "http://www.westlincoln.ca/news/posts/west-lincoln-certifies-candidates-for-2026-election/",
-  "confidence": "medium",
-  "sections": [
-   {
-    "board_number": "UNRESOLVED-public",
-    "system": "public",
-    "heading": "English Language Public School Board Trustee",
-    "names": [
-     "Edward Fulford",
-     "John Mollicone"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 2
-   },
-   {
-    "board_number": "UNRESOLVED-catholic",
-    "system": "catholic",
-    "heading": "English Language Catholic School Board Trustee",
-    "names": [
-     "Lynn Dudok",
-     "Alex Joyner",
-     "Leanne Prince"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 3
-   }
-  ]
+  "election_url": "https://www.westlincoln.ca/township-office/elections/2026-municipal-and-school-board-election/#",
+  "confidence": "low",
+  "sections": []
  },
  {
   "census_id": "3526028",
   "csdname": "Pelham",
-  "election_url": "http://www.pelham.ca/news/posts/pelham-certifies-candidates-for-the-2026-election/",
-  "confidence": "low",
-  "sections": []
+  "election_url": "http://www.pelham.ca/pelham-government/municipal-election/",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B66150",
+    "system": "public",
+    "heading": "Trustee, District School Board of Niagara",
+    "names": [
+     "A Better Niagara",
+     "Campaign Life Coalition"
+    ],
+    "emails": [],
+    "phones": [],
+    "links": [],
+    "section_lines": 39
+   },
+   {
+    "board_number": "B66150",
+    "system": "public",
+    "heading": "DSBN School Board Trustee",
+    "names": [
+     "Pelham Government",
+     "Civic Recognition",
+     "Council Calendar",
+     "Council Meetings",
+     "National Anthem Performances",
+     "Governance Review",
+     "Lottery Licencing",
+     "Mayor's Budget"
+    ],
+    "emails": [],
+    "phones": [],
+    "links": [],
+    "section_lines": 40
+   }
+  ]
  },
  {
   "census_id": "3526032",
   "csdname": "Welland",
-  "election_url": "https://www.welland.ca/city-hall/municipal-elections/registered-candidates/",
-  "confidence": "low",
-  "sections": []
+  "election_url": "https://www.welland.ca/city-hall/municipal-elections/",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B66150",
+    "system": "public",
+    "heading": "The local area municipalities in Niagara along with the District School Board of Niagara and Niagara Catholic District School Board are recruiting experienced professionals for appointment to the 2026 to 2030 Joint Election Compliance Audit Committee.",
+    "names": [
+     "Voting Day"
+    ],
+    "emails": [],
+    "phones": [],
+    "links": [],
+    "section_lines": 40
+   }
+  ]
  },
  {
   "census_id": "3526037",
@@ -2695,7 +1976,7 @@
  {
   "census_id": "3526043",
   "csdname": "Niagara Falls",
-  "election_url": "https://www.niagarafalls.ca/city-government/elections/municipal-election-candidates/",
+  "election_url": "https://niagarafalls.ca/city-government/elections/municipal-election-candidates/",
   "confidence": "high",
   "sections": [
    {
@@ -2749,9 +2030,78 @@
   ]
  },
  {
+  "census_id": "3526047",
+  "csdname": "Niagara-on-the-Lake",
+  "election_url": "https://www.notl.com/elections",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B66150",
+    "system": "public",
+    "heading": "Candidates for DSBN School Board Trustee",
+    "names": [
+     "Mike Brousseau",
+     "Jennifer Ajandi",
+     "Lauren Bubnic",
+     "Kate Baggott",
+     "Jonathan Fast",
+     "Matthew Bradman",
+     "Mark Matchem",
+     "M. Areeb Aijaz",
+     "Amir Ismael",
+     "Marwa Salih"
+    ],
+    "emails": [
+     "baggott.kate@gmail.com",
+     "jennajandi@hotmail.com",
+     "lauren.bubnicfortrustee@gmail.com",
+     "vote4mareebaijaz@gmail.com",
+     "vote@mikebrousseau.ca"
+    ],
+    "phones": [
+     "905-401-9825",
+     "905-933-6106"
+    ],
+    "links": [],
+    "section_lines": 23
+   },
+   {
+    "board_number": "B67156",
+    "system": "catholic",
+    "heading": "Candidates for NCDSB School Board Trustee",
+    "names": [
+     "Larry Huibers",
+     "Natalia Benoit",
+     "Alex McKee",
+     "Jake Scervino",
+     "Amanda Leduc",
+     "Matthew Graham",
+     "Marcel Tikeng",
+     "Melinda Chartrand"
+    ],
+    "emails": [
+     "LarryHuibersTrustee@gmail.com",
+     "alex@alexmckee.com",
+     "chartrand.melinda@gmail.com",
+     "jakescervino@gmail.com",
+     "leducCSVNiagara@gmail.com",
+     "nataliathetrustee@gmail.com",
+     "politikeng@gmail.com"
+    ],
+    "phones": [
+     "289-969-1798",
+     "647-768-9653",
+     "647-985-2637"
+    ],
+    "links": [],
+    "section_lines": 40
+   }
+  ]
+ },
+ {
   "census_id": "3526053",
   "csdname": "St. Catharines",
-  "election_url": "http://www.stcatharines.ca/council-and-administration/elections/certified-candidates/",
+  "election_url": "https://www.stcatharines.ca/council-and-administration/elections/registered-candidates/",
   "confidence": "high",
   "sections": [
    {
@@ -2775,6 +2125,7 @@
      "baggott.kate@gmail.com",
      "jennajandi@hotmail.com",
      "lauren.bubnicfortrustee@gmail.com",
+     "mark@markmatchem.ca",
      "vote4mareebaijaz@gmail.com",
      "vote@mikebrousseau.ca"
     ],
@@ -2783,7 +2134,7 @@
      "905.933.6106"
     ],
     "links": [],
-    "section_lines": 22
+    "section_lines": 23
    },
    {
     "board_number": "B67156",
@@ -2821,9 +2172,58 @@
   "sections": []
  },
  {
+  "census_id": "3526065",
+  "csdname": "Grimsby",
+  "election_url": "https://www.grimsby.ca/town-hall/elections/",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B66150",
+    "system": "public",
+    "heading": "District School Board of Niagara Trustee (English Public School)",
+    "names": [
+     "Nick Goater",
+     "Deb Pearce",
+     "Duncan Storey",
+     "Luca Vitali"
+    ],
+    "emails": [
+     "duncanstorey2@gmail.com",
+     "lucacasatoscana@gmail.com",
+     "nick.goater1@gmail.com"
+    ],
+    "phones": [],
+    "links": [],
+    "section_lines": 10
+   },
+   {
+    "board_number": "B67156",
+    "system": "catholic",
+    "heading": "Niagara Catholic District School Board Trustee (English Separate School)",
+    "names": [
+     "Lynn Dudok",
+     "Alex Joyner",
+     "Leanne Prince",
+     "Sonia Macaluso",
+     "Melinda Chartrand"
+    ],
+    "emails": [
+     "ajoyner@hotmail.ca",
+     "chartrand.melinda@gmail.com",
+     "leanneprince02@gmail.com",
+     "lynn@lynndudokcatholictrustee.ca",
+     "sonia.macaluso31@gmail.com"
+    ],
+    "phones": [],
+    "links": [],
+    "section_lines": 24
+   }
+  ]
+ },
+ {
   "census_id": "3528018",
   "csdname": "Haldimand County",
-  "election_url": "",
+  "election_url": "https://www.haldimandcounty.ca/government-administration/elections/2026-municipal-election/registered-candidates/",
   "confidence": "high",
   "sections": [
    {
@@ -2861,17 +2261,17 @@
  {
   "census_id": "3528052",
   "csdname": "Norfolk County",
-  "election_url": "https://www.norfolkcounty.ca/news-and-notices/posts/norfolk-county-announces-certified-candidates-for-the-2026-norfolk-county-municipal-election/",
+  "election_url": "https://www.norfolkcounty.ca/vote/certified-candidates/#",
   "confidence": "high",
   "sections": [
    {
     "board_number": "B66168",
     "system": "public",
-    "heading": "Grand Erie District School Board Trustee \u2013 Wards 1, 2, 4, 5 and 6",
+    "heading": "Grand Erie District School Board Trustee Wards 1, 2, 4, 5, and 6",
     "names": [
-     "Eva Dixon",
-     "John Harris",
-     "Liz Whiton"
+     "Eva DIXON",
+     "John HARRIS",
+     "Liz WHITON"
     ],
     "emails": [],
     "phones": [],
@@ -2881,12 +2281,12 @@
    {
     "board_number": "B66168",
     "system": "public",
-    "heading": "Grand Erie District School Board Trustee \u2013 Wards 3 and 7",
+    "heading": "Grand Erie District School Board Trustee Wards 3 and 7",
     "names": [
-     "Rita Collver",
-     "Lorraine DeJong",
-     "Jason Gemmill",
-     "Tom Waldschmidt"
+     "Rita COLLVER",
+     "Lorraine DeJONG",
+     "Jason GEMMILL",
+     "Tom WALDSCHMIDT"
     ],
     "emails": [],
     "phones": [],
@@ -2898,28 +2298,183 @@
  {
   "census_id": "3529005",
   "csdname": "Brant",
-  "election_url": "https://www.brant.ca/elections",
-  "confidence": "low",
-  "sections": []
+  "election_url": "https://www.brant.ca/council-and-county-administration/elections/certified-candidates/",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B66168",
+    "system": "public",
+    "heading": "Grand Erie District School Board Trustee for County of Brant/ Norfolk County (Wards 3 and 7)",
+    "names": [
+     "Rita Collver",
+     "Jason Gemmill",
+     "Tom Waldschmidt",
+     "Lorraine DeJong"
+    ],
+    "emails": [
+     "dejonglorraine61@gmail.com",
+     "jasongemmill573@gmail.com",
+     "ritacollver@explorenet.com",
+     "twaldschmidt@sympatico.ca"
+    ],
+    "phones": [
+     "519.582.4969",
+     "519.732.9195",
+     "519.757.7787",
+     "519.761.7053"
+    ],
+    "links": [],
+    "section_lines": 20
+   },
+   {
+    "board_number": "B67164",
+    "system": "catholic",
+    "heading": "Brant Haldimand Norfolk District Catholic School Board Trustee",
+    "names": [
+     "Dan Dignard",
+     "David Miller",
+     "Third-Party Advertiser",
+     "John Monkhouse",
+     "Voter Resources"
+    ],
+    "emails": [
+     "dan.dignard47@gmail.com",
+     "jedamiller32@gmail.com"
+    ],
+    "phones": [
+     "519.449.1240",
+     "519.449.5005",
+     "519.512.2022",
+     "519.732.6325"
+    ],
+    "links": [
+     "https://linktr.ee/brantvotes"
+    ],
+    "section_lines": 40
+   }
+  ]
  },
  {
   "census_id": "3529006",
   "csdname": "Brantford",
-  "election_url": "https://www.brantford.ca/news/posts/2026-municipal-election-notice-of-nomination-for-office/",
-  "confidence": "low",
-  "sections": []
+  "election_url": "https://www.brantford.ca/your-government/municipal-election/candidates/",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B66168",
+    "system": "public",
+    "heading": "Grand Erie District School Board Trustee (4 Trustees elected at large)",
+    "names": [
+     "Greg ANDERSON",
+     "John BRADFORD",
+     "Susan GIBSON",
+     "Naser HAMED",
+     "Dale RENOUT",
+     "Carol Ann SLOAT",
+     "John STEINBERG"
+    ],
+    "emails": [
+     "dalerenout@gmail.com",
+     "greg2217@gmail.com",
+     "janetandjohn@rogers.com",
+     "johnsteinberg@hotmail.com",
+     "naser.hamed@gmail.com",
+     "sgibson4trustee@rogers.com",
+     "tcasloat@gmail.com"
+    ],
+    "phones": [
+     "226-208-1101",
+     "289-933-1091",
+     "519-732-1993",
+     "519-755-9244",
+     "519-771-4871",
+     "519-771-9622",
+     "519-774-4391"
+    ],
+    "links": [],
+    "section_lines": 21
+   },
+   {
+    "board_number": "B67164",
+    "system": "catholic",
+    "heading": "Brant Haldimand Norfolk Catholic District School Board Trustee (2 Trustees elected at large)",
+    "names": [
+     "Wenda ALLICOCK",
+     "Birkin James CULP",
+     "Eryn RITTER",
+     "Stan VERSCHOORE"
+    ],
+    "emails": [
+     "birkinculp@gmail.com",
+     "etmritter@gmail.com",
+     "sverschoore@outlook.com",
+     "wendaa@hotmail.com"
+    ],
+    "phones": [
+     "226-388-1319",
+     "519-751-8624",
+     "519-755-7090",
+     "519-758-8117"
+    ],
+    "links": [],
+    "section_lines": 12
+   }
+  ]
  },
  {
   "census_id": "3530004",
   "csdname": "North Dumfries",
-  "election_url": "http://www.northdumfries.ca/news/posts/nomination-period-closes-for-the-2026-municipal-election/",
-  "confidence": "low",
-  "sections": []
+  "election_url": "https://www.northdumfries.ca/township-services/municipal-elections/",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B66176",
+    "system": "public",
+    "heading": "Waterloo Region District School Board (WRDSB) School Board Trustees (English Public)",
+    "names": [
+     "Shannon Adshade",
+     "Syed Ahmed",
+     "Naeem Awan",
+     "John J. Dideczek",
+     "Carla Johnson",
+     "Richard Pfeifle",
+     "Riaz Sial",
+     "Cindy Watson"
+    ],
+    "emails": [
+     "icanhelpu@gmail.com",
+     "johngolfer@sympatico.com",
+     "quasem65@gmail.com"
+    ],
+    "phones": [
+     "226-989-1194",
+     "437-696-8319"
+    ],
+    "links": [],
+    "section_lines": 31
+   },
+   {
+    "board_number": "B67148",
+    "system": "catholic",
+    "heading": "Waterloo Catholic District School Board (WCDSB) School Board Trustees (English Separate)",
+    "names": [
+     "Jennifer Allore",
+     "Winston Darryl Francis",
+     "Marisa Phillips",
+     "Robert Francis Sikora",
+     "Andrew Smutniak"
+    ],
+    "emails": [],
+    "phones": [],
+    "links": [],
+    "section_lines": 20
+   }
+  ]
  },
  {
   "census_id": "3530010",
   "csdname": "Cambridge",
-  "election_url": "http://www.cambridge.ca/news/posts/nomination-period-closes-for-the-2026-municipal-election/",
+  "election_url": "https://www.cambridge.ca/mayor-city-council-government/elections/nominations-candidate-profiles/",
   "confidence": "high",
   "sections": [
    {
@@ -2951,7 +2506,8 @@
      "Certification Status"
     ],
     "emails": [
-     "jennifer@jenniferallore.ca"
+     "jennifer@jenniferallore.ca",
+     "reelectmarisaphillips@gmail.com"
     ],
     "phones": [],
     "links": [],
@@ -2962,119 +2518,9 @@
  {
   "census_id": "3530013",
   "csdname": "Kitchener",
-  "election_url": "https://www.kitchener.ca/news/posts/city-of-kitchener-certifies-candidates-for-the-2026-municipal-election/",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "B66176",
-    "system": "public",
-    "heading": "Waterloo Region District School Board",
-    "names": [
-     "Marjorie A Brown",
-     "Mark Cairns",
-     "Uche Michael Emelife",
-     "Brent Hutzal",
-     "Ahmed Kassad",
-     "Mandy Kaur",
-     "Sajid Mohamed Farooq Kolsawala",
-     "Julia Malott",
-     "Rachel McQuail",
-     "Baboucarr Saidy",
-     "Ibtissam Soliman",
-     "Narine Dat Sookram",
-     "Sara Taghizadeh-Heroux"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 13
-   },
-   {
-    "board_number": "B67148",
-    "system": "catholic",
-    "heading": "Waterloo Catholic District School Board",
-    "names": [
-     "Harriet Cullen",
-     "Janice Fiaschetti",
-     "Ruthann Fisher",
-     "Jess Hutton",
-     "Suzanne Kearns",
-     "Ren\u00e9e Kraft",
-     "Josh Rivers",
-     "Sandra Wojcik",
-     "Visit KitchenerVotes.ca",
-     "All Categories"
-    ],
-    "emails": [
-     "Media@kitchener.ca"
-    ],
-    "phones": [],
-    "links": [],
-    "section_lines": 40
-   }
-  ]
- },
- {
-  "census_id": "3530016",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "B67148",
-    "system": "catholic",
-    "heading": "Waterloo Catholic District School Board trustee candidates",
-    "names": [
-     "Anna ACETO-GUERIN",
-     "Linda CUFF",
-     "Norman J. DAMAREN",
-     "Conrad STANLEY"
-    ],
-    "emails": [
-     "ReElectLindaCuff@gmail.com",
-     "vote4anna@outlook.com",
-     "voteconradstanley@outlook.com"
-    ],
-    "phones": [
-     "226-381-7975",
-     "519-841-4294"
-    ],
-    "links": [],
-    "section_lines": 17
-   },
-   {
-    "board_number": "B66176",
-    "system": "public",
-    "heading": "Waterloo Region District School Board trustee candidates",
-    "names": [
-     "Cristina BAIROS FERNANDES",
-     "Brian BEST",
-     "Brian BOURKE",
-     "Karen COVIELLO",
-     "Clinton HEFFERNAN",
-     "Geoff HORSMAN",
-     "Adam MALIK",
-     "Kathleen WOODCOCK"
-    ],
-    "emails": [
-     "brian@best4schoolboard.com",
-     "brianrbourke58@gmail.com",
-     "clinton.heffernan26@gmail.com",
-     "cristina.bf@pm.me",
-     "geoff.horsman@gmail.com",
-     "karen@karencoviello.ca",
-     "kathleenwoodcock2026@gmail.com"
-    ],
-    "phones": [
-     "226-600-9048",
-     "226-753-7260",
-     "226-929-3101",
-     "519-571-4942"
-    ],
-    "links": [],
-    "section_lines": 40
-   }
-  ]
+  "election_url": "https://app2.kitchener.ca/election/candidates.aspx",
+  "confidence": "low",
+  "sections": []
  },
  {
   "census_id": "3530020",
@@ -3225,42 +2671,16 @@
     ],
     "emails": [
      "a.vgilbert@yahoo.ca",
-     "burkholderjen4@gmail.com",
+     "jen4trustee@gmail.com",
      "votecarlenehawley@gmail.com"
     ],
     "phones": [
      "226-749-1079",
+     "519-222-2820",
      "647-703-9212"
     ],
     "links": [],
-    "section_lines": 18
-   }
-  ]
- },
- {
-  "census_id": "3531011",
-  "csdname": "Stratford",
-  "election_url": "https://www.stratford.ca/inside-city-hall/municipal-elections/candidates-for-the-2026-municipal-and-school-board-elections/",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "B67016",
-    "system": "catholic",
-    "heading": "Huron Perth Catholic District School Board Candidates",
-    "names": [
-     "Conseil Scolaire Viamonde Candidates"
-    ],
-    "emails": [
-     "d.charlesworth@mac.com",
-     "heathermarcy7@gmail.com",
-     "rbarrima@laurentian.ca"
-    ],
-    "phones": [
-     "519-271-0250",
-     "519-801-1234"
-    ],
-    "links": [],
-    "section_lines": 40
+    "section_lines": 21
    }
   ]
  },
@@ -3354,6 +2774,118 @@
   "election_url": "http://www.northperth.ca/news/posts/list-of-certified-candidates-2026-municipal-election/",
   "confidence": "low",
   "sections": []
+ },
+ {
+  "census_id": "3532002",
+  "csdname": "Norwich",
+  "election_url": "https://www.norwich.ca/our-township/elections/",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B66044",
+    "system": "public",
+    "heading": "Thames Valley District School Board",
+    "names": [
+     "Leanne Hopkins",
+     "Seth Allen",
+     "David Edward Cripps"
+    ],
+    "emails": [],
+    "phones": [],
+    "links": [],
+    "section_lines": 6
+   },
+   {
+    "board_number": "B67032",
+    "system": "catholic",
+    "heading": "London District Catholic School Board",
+    "names": [
+     "Mary Holmes"
+    ],
+    "emails": [],
+    "phones": [],
+    "links": [],
+    "section_lines": 9
+   },
+   {
+    "board_number": "B66044",
+    "system": "public",
+    "heading": "Thames Valley District School Board (2 Positions)",
+    "names": [
+     "Seth Allen",
+     "David Edward Cripps",
+     "Leeane Hopkins"
+    ],
+    "emails": [
+     "Hello@davecripps.ca",
+     "jrlehopkins@gmail.com",
+     "seth@sethfoxford.ca"
+    ],
+    "phones": [
+     "226-228-4199",
+     "226-268-1964",
+     "519-281-5882"
+    ],
+    "links": [],
+    "section_lines": 16
+   },
+   {
+    "board_number": "B67032",
+    "system": "catholic",
+    "heading": "London District Catholic School Board (1 Position)",
+    "names": [
+     "Ana Paula Alves",
+     "Mary Holmes",
+     "Alexandre Alary",
+     "David Andre Paradis",
+     "Important Guides"
+    ],
+    "emails": [
+     "LDCSB.oxfordcounty2022@gmail.com",
+     "alexandre_alary@hotmail.com",
+     "david.paradis@gmail.com",
+     "paquette.holmes@gmail.com"
+    ],
+    "phones": [
+     "226-228-7784",
+     "416-844-5549",
+     "519-537-5183",
+     "519-608-2576"
+    ],
+    "links": [],
+    "section_lines": 40
+   }
+  ]
+ },
+ {
+  "census_id": "3532004",
+  "csdname": "Tillsonburg",
+  "election_url": "https://www.tillsonburg.ca/town-hall/2026-municipal-election/notice-of-candidates-for-office/",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B67032",
+    "system": "catholic",
+    "heading": "London District Catholic School Board - Acclaimed",
+    "names": [
+     "Mary Holmes",
+     "Conseil Scolaire Viamonde",
+     "David Paradis",
+     "JOSEPH-GUY BOURBEAU",
+     "Advance Voting Period",
+     "Voting Day"
+    ],
+    "emails": [],
+    "phones": [
+     "226-228-7784",
+     "416-844-5549",
+     "519-332-0330",
+     "519-539-2382"
+    ],
+    "links": [],
+    "section_lines": 40
+   }
+  ]
  },
  {
   "census_id": "3532012",
@@ -3476,28 +3008,37 @@
   "confidence": "high",
   "sections": [
    {
-    "board_number": "B67032",
-    "system": "catholic",
-    "heading": "English Separate - London District Catholic School Board",
+    "board_number": "UNRESOLVED-public",
+    "system": "public",
+    "heading": "Two candidates were certified for the two available English Public School Board Trustee positions representing Elgin County. As the number of certified candidates does not exceed the number of positions to be elected, both candidates have been acclaimed and will not appear on the ballot.",
     "names": [
-     "Past Voter Turnout",
-     "Voter Turnout"
+     "Melissa Knott",
+     "Bob Pate"
     ],
     "emails": [],
     "phones": [],
-    "links": [
-     "https://www.cityofwoodstock.ca/your-government/elections/list-of-uncertified-candidates/",
-     "https://www.sarnia.ca/city-government/elections/2026-election/unofficial-list-of-candidates/",
-     "https://www.stthomas.ca/city_hall/city_clerk/election"
+    "links": [],
+    "section_lines": 5
+   },
+   {
+    "board_number": "B67032",
+    "system": "catholic",
+    "heading": "English Separate - London District Catholic School Board Trustee",
+    "names": [
+     "Stephen Huver",
+     "Mary Intven Wallace"
     ],
-    "section_lines": 40
+    "emails": [],
+    "phones": [],
+    "links": [],
+    "section_lines": 6
    }
   ]
  },
  {
   "census_id": "3534010",
   "csdname": "Malahide",
-  "election_url": "http://www.malahide.ca/modules/news/post/2026-municipal-election-official-list-of-certified-candidates",
+  "election_url": "http://www.malahide.ca/government/election",
   "confidence": "high",
   "sections": [
    {
@@ -3519,16 +3060,12 @@
     "heading": "English Separate - London District Catholic School Board Trustee",
     "names": [
      "Stephen Huver",
-     "Mary Intven Wallace",
-     "David Paradis",
-     "Popular Links"
+     "Mary Intven Wallace"
     ],
     "emails": [],
-    "phones": [
-     "519-773-5344"
-    ],
+    "phones": [],
     "links": [],
-    "section_lines": 17
+    "section_lines": 4
    }
   ]
  },
@@ -3571,6 +3108,33 @@
   ]
  },
  {
+  "census_id": "3534024",
+  "csdname": "Southwold",
+  "election_url": "https://www.southwold.ca/municipal-office/elections",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B67032",
+    "system": "catholic",
+    "heading": "London District Catholic School Board",
+    "names": [
+     "Conseil Scolaire Viamonde",
+     "Conseil Scolaire Catholique Providence",
+     "Voter\u2019s List Prepared",
+     "Council Term Begins"
+    ],
+    "emails": [],
+    "phones": [],
+    "links": [
+     "https://www.cityofwoodstock.ca/your-government/elections/list-of-uncertified-candidates/",
+     "https://www.sarnia.ca/city-government/elections/2026-election/unofficial-list-of-candidates/",
+     "https://www.stthomas.ca/city_hall/city_clerk/election"
+    ],
+    "section_lines": 40
+   }
+  ]
+ },
+ {
   "census_id": "3534030",
   "csdname": "Dutton/Dunwich",
   "election_url": "http://www.duttondunwich.on.ca/your-government/election-2026",
@@ -3583,8 +3147,11 @@
     "names": [
      "Conseil Scolaire Viamonde",
      "Conseil Scolaire Catholique Providence",
-     "Voting Eligibility",
-     "Temporary Service Disruptions Procedure"
+     "Temporary Service Disruptions Procedure",
+     "Elections Ontario",
+     "Elections Canada",
+     "Pay Bills",
+     "Book Your Event"
     ],
     "emails": [],
     "phones": [],
@@ -3597,13 +3164,6 @@
   "census_id": "3534042",
   "csdname": "West Elgin",
   "election_url": "https://www.westelgin.net/municipal-office/elections",
-  "confidence": "low",
-  "sections": []
- },
- {
-  "census_id": "3536020",
-  "csdname": "Chatham-Kent",
-  "election_url": "",
   "confidence": "low",
   "sections": []
  },
@@ -3646,7 +3206,7 @@
  {
   "census_id": "3537013",
   "csdname": "Kingsville",
-  "election_url": "https://www.kingsville.ca/news/posts/2026-municipal-election-list-of-certified-candidates/",
+  "election_url": "https://www.kingsville.ca/local-government/elections/",
   "confidence": "low",
   "sections": []
  },
@@ -3681,16 +3241,24 @@
  {
   "census_id": "3537028",
   "csdname": "Amherstburg",
-  "election_url": "http://www.amherstburg.ca/town-hall/elections/",
-  "confidence": "low",
-  "sections": []
- },
- {
-  "census_id": "3537039",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "low",
-  "sections": []
+  "election_url": "https://www.amherstburg.ca/town-hall/elections/candidate-information/candidates/",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B67024",
+    "system": "catholic",
+    "heading": "Windsor Essex Catholic District School Board (Trustee)",
+    "names": [
+     "Previous Elections",
+     "Short Term Rental",
+     "Temporary Patio Extension"
+    ],
+    "emails": [],
+    "phones": [],
+    "links": [],
+    "section_lines": 40
+   }
+  ]
  },
  {
   "census_id": "3537048",
@@ -3781,82 +3349,9 @@
  {
   "census_id": "3538030",
   "csdname": "Sarnia",
-  "election_url": "https://www.sarnia.ca/city-government/elections/2026-election/",
+  "election_url": "https://www.sarnia.ca/city-government/elections/2026-election/list-of-certified-candidates/",
   "confidence": "low",
   "sections": []
- },
- {
-  "census_id": "3538035",
-  "csdname": "Plympton-Wyoming",
-  "election_url": "http://plympton-wyoming.com/municipal-office/mayor-and-council/elections/",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "UNRESOLVED-public",
-    "system": "public",
-    "heading": "English Public School Board Trustee Nominations have been certified by the Clerk of the Municipality of Lambton Shores",
-    "names": [
-     "Roberta Northmore",
-     "David Paradis",
-     "Michael Salvatore",
-     "Gary L. Atkinson",
-     "Tim Wilkins",
-     "Netty McEwen",
-     "Brad Zantingh"
-    ],
-    "emails": [
-     "david.paradis@gmail.com",
-     "gla1@execulink.com",
-     "nettymcewen2010@gmail.com",
-     "rnorthmore1@gmail.com",
-     "tim@wyomingtreeservice.ca"
-    ],
-    "phones": [
-     "226-932-2515",
-     "416-844-5549",
-     "519-845-0302",
-     "519-899-4030",
-     "519-899-4148"
-    ],
-    "links": [],
-    "section_lines": 40
-   },
-   {
-    "board_number": "B67040",
-    "system": "catholic",
-    "heading": "Consult the table below for St. Clair Catholic District School Board Trustee candidates.",
-    "names": [
-     "Ian Murdoch",
-     "Mat Roop"
-    ],
-    "emails": [
-     "murdy1@gmail.com",
-     "violinsbyroop@yahoo.ca"
-    ],
-    "phones": [
-     "519-845-0228",
-     "519-845-3939",
-     "647-287-8006"
-    ],
-    "links": [],
-    "section_lines": 28
-   },
-   {
-    "board_number": "B67040",
-    "system": "catholic",
-    "heading": "Trustee - St. Clair Catholic District School Board (1)",
-    "names": [
-     "Joint Compliance Audit Committee",
-     "Gary Atkinson",
-     "Tim Wilkins",
-     "Muriel Wright"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 40
-   }
-  ]
  },
  {
   "census_id": "3538040",
@@ -3974,7 +3469,7 @@
    {
     "board_number": "B66044",
     "system": "public",
-    "heading": "Thames Valley District School Board - Two (2) Trustees to be Elected (English Public)",
+    "heading": "Thames Valley District School Board - Two (2) Trustees to be elected (English Public)",
     "names": [
      "Bev Noble",
      "Bill Tichenoff",
@@ -3997,7 +3492,7 @@
      "519-868-4174"
     ],
     "links": [],
-    "section_lines": 39
+    "section_lines": 40
    }
   ]
  },
@@ -4012,12 +3507,14 @@
     "system": "public",
     "heading": "Thames Valley District School Board \u2013 Two (2) members to be elected.",
     "names": [
+     "Voter's Guide",
+     "Candidates' Guide",
      "Voting Method"
     ],
     "emails": [],
     "phones": [],
     "links": [],
-    "section_lines": 29
+    "section_lines": 40
    },
    {
     "board_number": "B67032",
@@ -4111,13 +3608,6 @@
   ]
  },
  {
-  "census_id": "3539036",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "low",
-  "sections": []
- },
- {
   "census_id": "3539041",
   "csdname": "North Middlesex",
   "election_url": "https://www.northmiddlesex.on.ca/2026-municipal-election",
@@ -4147,15 +3637,19 @@
     "system": "catholic",
     "heading": "LONDON DISTRICT CATHOLIC SCHOOL BOARD \u2013 ACCLAIMED",
     "names": [
-     "Josh Lamb"
+     "Josh Lamb",
+     "Joseph-Guy Bourbeau",
+     "Rachid Barrima",
+     "Key Dates"
     ],
     "emails": [],
     "phones": [
      "519-245-1070",
+     "519-661-2489",
      "519-868-4174"
     ],
     "links": [],
-    "section_lines": 11
+    "section_lines": 40
    }
   ]
  },
@@ -4209,9 +3703,64 @@
  {
   "census_id": "3540010",
   "csdname": "Bluewater",
-  "election_url": "https://www.municipalityofbluewater.ca/news/notice-of-election-acclaimed-offices-and-official-list-of-certified-candidates-issued/",
-  "confidence": "low",
-  "sections": []
+  "election_url": "https://www.municipalityofbluewater.ca/municipal-office/municipal-election/official-list-of-certified-candidates-and-acclaimed-offices/",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B66010",
+    "system": "public",
+    "heading": "School Board Trustee \u2013 English Public (Avon Maitland District School Board)",
+    "names": [
+     "Graham Keys"
+    ],
+    "emails": [],
+    "phones": [],
+    "links": [],
+    "section_lines": 1
+   },
+   {
+    "board_number": "B67016",
+    "system": "catholic",
+    "heading": "School Board Trustee \u2013 English Separate (Huron Perth Catholic District School Board)",
+    "names": [
+     "Rachid Barrima"
+    ],
+    "emails": [],
+    "phones": [],
+    "links": [],
+    "section_lines": 1
+   },
+   {
+    "board_number": "B66010",
+    "system": "public",
+    "heading": "Trustee \u2013 Avon Maitland District School Board Board (English Public)",
+    "names": [
+     "Hensall ON",
+     "Graham Keys"
+    ],
+    "emails": [
+     "hello@rdmarnie.ca"
+    ],
+    "phones": [
+     "519-619-3995"
+    ],
+    "links": [],
+    "section_lines": 5
+   },
+   {
+    "board_number": "B67016",
+    "system": "catholic",
+    "heading": "Trustee \u2013 Huron Perth Catholic District School Board(English Separate)",
+    "names": [
+     "Bluewater ON",
+     "Rachid Barrima"
+    ],
+    "emails": [],
+    "phones": [],
+    "links": [],
+    "section_lines": 3
+   }
+  ]
  },
  {
   "census_id": "3540025",
@@ -4270,7 +3819,7 @@
  {
   "census_id": "3540040",
   "csdname": "Huron East",
-  "election_url": "http://www.huroneast.com/news/posts/2026-huron-east-municipal-election-candidate-list-certified/",
+  "election_url": "https://www.huroneast.com/news/posts/2026-huron-east-municipal-election-candidate-list-certified/",
   "confidence": "high",
   "sections": [
    {
@@ -4388,26 +3937,27 @@
  {
   "census_id": "3541024",
   "csdname": "Kincardine",
-  "election_url": "https://www.kincardine.ca/news/posts/media-release-august-24-2026-candidates-certified-for-2026-municipal-and-school-board-elections/",
+  "election_url": "https://www.kincardine.ca/our-services/elections/",
   "confidence": "high",
   "sections": [
    {
     "board_number": "B67008",
     "system": "catholic",
-    "heading": "Bruce-Grey Catholic District School Board",
+    "heading": "Bruce-Grey Catholic District School Board Trustee (Acclaimed)",
     "names": [
-     "All Categories",
-     "Emergency Alerts",
-     "Service Interruptions",
-     "Lagoon Sludge Project Updates"
+     "Conseil Scolaire Viamonde",
+     "Orangeville ON",
+     "Additional Key Dates",
+     "Candidates Financial Statements"
     ],
     "emails": [
-     "jlawrie@kincardine.ca",
-     "voterhelpdesk@kincardine.ca"
+     "dicastri@hurontel.on.ca",
+     "ericrlapointe@yahoo.com"
     ],
     "phones": [
-     "519-396-3468",
-     "519-396-8288"
+     "519-395-3156",
+     "647-884-3044",
+     "705-241-8909"
     ],
     "links": [],
     "section_lines": 40
@@ -4417,7 +3967,7 @@
  {
   "census_id": "3541032",
   "csdname": "Brockton",
-  "election_url": "http://www.brockton.ca/municipal-government/elections/list-of-candidates/",
+  "election_url": "https://www.brockton.ca/municipal-government/elections/list-of-candidates/",
   "confidence": "high",
   "sections": [
    {
@@ -4462,7 +4012,7 @@
  {
   "census_id": "3541045",
   "csdname": "Saugeen Shores",
-  "election_url": "http://www.saugeenshores.ca/news-and-notices/posts/list-of-certified-candidates/",
+  "election_url": "https://www.saugeenshores.ca/town-hall/elections/",
   "confidence": "high",
   "sections": [
    {
@@ -4473,25 +4023,31 @@
      "Julia Bates",
      "Katie Lutz"
     ],
-    "emails": [],
+    "emails": [
+     "juliaforboard@gmail.com",
+     "katielutzfortrustee@gmail.com"
+    ],
     "phones": [],
     "links": [],
-    "section_lines": 3
+    "section_lines": 8
    },
    {
     "board_number": "B67008",
     "system": "catholic",
-    "heading": "School Trustee - Bruce-Grey Catholic",
+    "heading": "School Trustee - Bruce-Grey Catholic District School Board",
     "names": [
-     "Lucie Desbiens",
-     "Eric Lapointe",
      "Rachael Golem",
-     "Conseil Scolaire Catholique"
+     "Eric Lapointe",
+     "Michael Salvatore",
+     "Voting Period",
+     "Inaugural Meeting"
     ],
-    "emails": [],
+    "emails": [
+     "ldesbiens1956@gmail.com"
+    ],
     "phones": [],
     "links": [],
-    "section_lines": 9
+    "section_lines": 40
    }
   ]
  },
@@ -4667,14 +4223,13 @@
      "Council Nominations",
      "Ejaye McComb",
      "Brad McRoberts",
+     "Facebook Campaign Page",
      "Rick Winters",
-     "Isaac Shouldice",
-     "Gary McMillan"
+     "Isaac Shouldice"
     ],
     "emails": [
      "bmcrober@alumni.uwo.ca",
      "ejayemccomb@gmail.com",
-     "gary4georgianbluffs@gmail.com",
      "isaacshouldice94@gmail.com",
      "kgpringle23@outlook.com",
      "rickwinters2022@gmail.com",
@@ -4805,13 +4360,13 @@
     "system": "catholic",
     "heading": "Please be advised that the Clerk of the Township of Springwater will be accepting nominations for Trustee (1 to be elected) for the Simcoe Muskoka Catholic District School Board for the 2026 Municipal Election to be held on October 26, 2026, for the area defined by the Board as Sector 8.",
     "names": [
-     "Acceptable Voter Identification",
-     "Resident Elector",
-     "Non-Resident Elector",
-     "People Without Housing"
+     "Elections Archive",
+     "Financial Statements",
+     "Financial Statements"
     ],
     "emails": [],
     "phones": [
+     "705-428-6230",
      "705-728-4784"
     ],
     "links": [],
@@ -4822,7 +4377,7 @@
  {
   "census_id": "3543007",
   "csdname": "New Tecumseth",
-  "election_url": "",
+  "election_url": "https://www.newtecumseth.ca/government/new-tecumseth-votes/",
   "confidence": "high",
   "sections": [
    {
@@ -4924,7 +4479,7 @@
      "905-715-4361"
     ],
     "links": [],
-    "section_lines": 18
+    "section_lines": 19
    },
    {
     "board_number": "B67091",
@@ -4945,9 +4500,45 @@
  {
   "census_id": "3543017",
   "csdname": "Innisfil",
-  "election_url": "https://innisfil.ca/government-administration/elections/candidate-information",
-  "confidence": "low",
-  "sections": []
+  "election_url": "https://www.innisfil.ca/government-administration/elections",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B66109",
+    "system": "public",
+    "heading": "Simcoe County District School Board Trustee Name",
+    "names": [
+     "Michael Cardwell"
+    ],
+    "emails": [
+     "michaelcardwell.innisfil@gmail.com"
+    ],
+    "phones": [
+     "647-291-6667"
+    ],
+    "links": [],
+    "section_lines": 5
+   },
+   {
+    "board_number": "B67091",
+    "system": "catholic",
+    "heading": "Simcoe Muskoka Catholic District School Board Trustee Name",
+    "names": [
+     "Tanya Da Silva",
+     "Alex Sikorski"
+    ],
+    "emails": [
+     "alex4smcdsbtrustee@gmail.com",
+     "tanyadasilva611@gmail.com"
+    ],
+    "phones": [
+     "416-779-7787",
+     "647-881-7482"
+    ],
+    "links": [],
+    "section_lines": 9
+   }
+  ]
  },
  {
   "census_id": "3543019",
@@ -4956,9 +4547,26 @@
   "confidence": "high",
   "sections": [
    {
+    "board_number": "B66109",
+    "system": "public",
+    "heading": "Simcoe County District School Board (English Public)",
+    "names": [
+     "Jodi M. Lloyd",
+     "Stephen Sopher"
+    ],
+    "emails": [
+     "jodilloyd4trustee@gmail.com"
+    ],
+    "phones": [
+     "705-955-4964"
+    ],
+    "links": [],
+    "section_lines": 4
+   },
+   {
     "board_number": "B67091",
     "system": "catholic",
-    "heading": "Member - Simcoe Muskoka Catholic District School Board",
+    "heading": "Member - Simcoe Muskoka Catholic District School Board (English Separate)",
     "names": [
      "Rachael Golem",
      "Eric Lapointe",
@@ -5018,124 +4626,6 @@
   "election_url": "http://www.oro-medonte.ca/our-government/elections/",
   "confidence": "low",
   "sections": []
- },
- {
-  "census_id": "3543042",
-  "csdname": "",
-  "election_url": "",
-  "confidence": "high",
-  "sections": [
-   {
-    "board_number": "B66109",
-    "system": "public",
-    "heading": "Simcoe County District School Board | Representing Barrie Wards 1, 2 and 3",
-    "names": [
-     "Wes Ayranto",
-     "David William O'Brien",
-     "Tim Ware"
-    ],
-    "emails": [
-     "davidwobrien4trustee@gmail.com",
-     "timothy.ware@gmail.com",
-     "wes_ayranto@hotmail.com"
-    ],
-    "phones": [
-     "705-716-5456",
-     "905-751-6605"
-    ],
-    "links": [],
-    "section_lines": 17
-   },
-   {
-    "board_number": "B66109",
-    "system": "public",
-    "heading": "Simcoe County District School Board | Representing Barrie Wards 4, 5 and 6",
-    "names": [
-     "Beth Mouratidis"
-    ],
-    "emails": [
-     "beth.mouratidis@yahoo.ca"
-    ],
-    "phones": [
-     "705-739-4739"
-    ],
-    "links": [],
-    "section_lines": 6
-   },
-   {
-    "board_number": "B66109",
-    "system": "public",
-    "heading": "Simcoe County District School Board | Representing Barrie Wards 7, 8, 9 and 10",
-    "names": [
-     "Kevin Berry",
-     "Sean Fitzgerald",
-     "Denise Ketching",
-     "Darren Steeves",
-     "Chaudhry Farooq Haider Virk"
-    ],
-    "emails": [
-     "darrensteeves@gmail.com",
-     "fitzgerald.sean@ymail.com",
-     "ketchingd@gmail.com",
-     "kevinberryfortrustee@gmail.com",
-     "votes4virk@gmail.com"
-    ],
-    "phones": [
-     "416-522-7798",
-     "705-241-6756",
-     "705-305-8786",
-     "705-794-2008"
-    ],
-    "links": [],
-    "section_lines": 26
-   },
-   {
-    "board_number": "B67091",
-    "system": "catholic",
-    "heading": "Simcoe Muskoka Catholic District School Board | Representing Barrie Wards 1, 2, 3 and 5",
-    "names": [
-     "Justin Heran"
-    ],
-    "emails": [
-     "justinheran@gmail.com",
-     "vanam4trustee@gmail.com"
-    ],
-    "phones": [
-     "705-791-2001"
-    ],
-    "links": [],
-    "section_lines": 10
-   },
-   {
-    "board_number": "B67091",
-    "system": "catholic",
-    "heading": "Simcoe Muskoka Catholic District School Board | Representing Barrie Wards 4, 6, 7, 8, 9 and 10",
-    "names": [
-     "Rob Chiaramida",
-     "Maria Hardie",
-     "Rachael Golem",
-     "Eric Lapointe",
-     "Donald Blais",
-     "Innocent Legrand"
-    ],
-    "emails": [
-     "Donaldjblais@bell.net",
-     "WNIBL@yahoo.com",
-     "ericrlapointe@yahoo.com",
-     "hardie.maria@gmail.com",
-     "robbiec2000@rogers.com"
-    ],
-    "phones": [
-     "416-688-4009",
-     "416-779-4241",
-     "647-884-3044",
-     "705-241-8909",
-     "705-896-9395"
-    ],
-    "links": [],
-    "section_lines": 40
-   }
-  ]
  },
  {
   "census_id": "3543052",
@@ -5223,12 +4713,15 @@
      "Julie Rose",
      "Jay Barron"
     ],
-    "emails": [],
+    "emails": [
+     "adamharrodtrustee@gmail.com"
+    ],
     "phones": [
-     "705.321.7505"
+     "705.321.7505",
+     "705.429.4150"
     ],
     "links": [],
-    "section_lines": 15
+    "section_lines": 17
    },
    {
     "board_number": "B67091",
@@ -5252,7 +4745,7 @@
  {
   "census_id": "3543071",
   "csdname": "Tay",
-  "election_url": "http://www.tay.ca/news/list-of-certified-candidates-for-the-2026-municipal-and-school-board-elections/",
+  "election_url": "http://www.tay.ca/municipal-government/elections/",
   "confidence": "low",
   "sections": []
  },
@@ -5342,7 +4835,7 @@
      "peter.penlington@gmail.com"
     ],
     "phones": [
-     "613-381-8686"
+     "613-318-8686"
     ],
     "links": [],
     "section_lines": 3
@@ -5596,45 +5089,25 @@
   "sections": []
  },
  {
-  "census_id": "3547064",
-  "csdname": "Pembroke",
-  "election_url": "http://www.pembrokeontario.com/city-government/elections/",
+  "census_id": "3548001",
+  "csdname": "South Algonquin",
+  "election_url": "https://www.southalgonquin.ca/2026-municipal-election/",
   "confidence": "medium",
   "sections": [
    {
-    "board_number": "UNRESOLVED-public",
-    "system": "public",
-    "heading": "School Board Trustee - English Public - One (1) to be elected",
-    "names": [
-     "DATE FILED",
-     "TIME FILED"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 6
-   },
-   {
     "board_number": "UNRESOLVED-catholic",
     "system": "catholic",
-    "heading": "School Board Trustee - English Separate - One (1) to be elected",
+    "heading": "Declaration of Acclamation \u2013 English Separate School Board Trustee",
     "names": [
-     "DATE FILED",
-     "TIME FILED"
+     "Registered Third Party",
+     "Unofficial Third-Party List"
     ],
     "emails": [],
     "phones": [],
     "links": [],
-    "section_lines": 6
+    "section_lines": 28
    }
   ]
- },
- {
-  "census_id": "3548001",
-  "csdname": "South Algonquin",
-  "election_url": "https://www.southalgonquin.ca/article/unofficial-list-of-candidates/",
-  "confidence": "low",
-  "sections": []
  },
  {
   "census_id": "3548021",
@@ -5683,7 +5156,7 @@
  {
   "census_id": "3548044",
   "csdname": "North Bay",
-  "election_url": "http://www.cityofnorthbay.ca/city-government/2026-elections/",
+  "election_url": "https://northbay.ca/city-government/2026-elections/registered-candidates-and-third-party-advertisers/",
   "confidence": "high",
   "sections": [
    {
@@ -5750,6 +5223,13 @@
   ]
  },
  {
+  "census_id": "3549003",
+  "csdname": "Seguin",
+  "election_url": "https://www.seguin.ca/elections",
+  "confidence": "low",
+  "sections": []
+ },
+ {
   "census_id": "3549005",
   "csdname": "The Archipelago",
   "election_url": "http://www.thearchipelago.on.ca/municipal_elections",
@@ -5791,6 +5271,31 @@
     ],
     "links": [],
     "section_lines": 15
+   }
+  ]
+ },
+ {
+  "census_id": "3549012",
+  "csdname": "McMurrich/Monteith",
+  "election_url": "http://www.mcmurrichmonteith.com/elections",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B29017",
+    "system": "catholic",
+    "heading": "Nipissing-Parry Sound Catholic District School Board - Area 2",
+    "names": [
+     "Sprucedale Community Centre"
+    ],
+    "emails": [
+     "connect@mcmurrichmonteith.com"
+    ],
+    "phones": [
+     "705-685-7393",
+     "705-685-7901"
+    ],
+    "links": [],
+    "section_lines": 40
    }
   ]
  },
@@ -5861,11 +5366,15 @@
     "heading": "Declaration of Acclamation to Office: Trustee English Public - August 21, 2026",
     "names": [
      "ELECTIONS BY-LAWS",
-     "Footer Info"
+     "Footer Info",
+     "Quick Links"
     ],
-    "emails": [],
+    "emails": [
+     "admin@ryersontownship.ca"
+    ],
     "phones": [
-     "866-242-3025"
+     "705-382-3232",
+     "705-382-3286"
     ],
     "links": [],
     "section_lines": 40
@@ -6046,7 +5555,7 @@
  {
   "census_id": "3552001",
   "csdname": "French River / Rivi\u00e8re des Fran\u00e7ais",
-  "election_url": "http://www.frenchriver.ca/index.asp?SEC=1B25CF27-B563-47CB-A0CB-1BCE24A96CA8",
+  "election_url": "http://www.frenchriver.ca/2026municipalelections",
   "confidence": "low",
   "sections": []
  },
@@ -6169,13 +5678,6 @@
   "sections": []
  },
  {
-  "census_id": "3553005",
-  "csdname": "Greater Sudbury / Grand Sudbury",
-  "election_url": "",
-  "confidence": "low",
-  "sections": []
- },
- {
   "census_id": "3554020",
   "csdname": "Temiskaming Shores",
   "election_url": "http://www.temiskamingshores.ca/city-hall/elections/",
@@ -6275,6 +5777,13 @@
   "sections": []
  },
  {
+  "census_id": "3556048",
+  "csdname": "Smooth Rock Falls",
+  "election_url": "https://smoothrockfalls.ca/municipal/elections/",
+  "confidence": "low",
+  "sections": []
+ },
+ {
   "census_id": "3556066",
   "csdname": "Kapuskasing",
   "election_url": "https://www.kapuskasing.ca/council-administration/elections/",
@@ -6345,9 +5854,7 @@
     ],
     "emails": [],
     "phones": [],
-    "links": [
-     "https://vreg.registertovoteon.ca/en/home"
-    ],
+    "links": [],
     "section_lines": 40
    }
   ]
@@ -6382,9 +5889,7 @@
     ],
     "emails": [],
     "phones": [],
-    "links": [
-     "https://vreg.registertovoteon.ca/en/home"
-    ],
+    "links": [],
     "section_lines": 40
    }
   ]
@@ -6433,51 +5938,120 @@
  {
   "census_id": "3558004",
   "csdname": "Thunder Bay",
-  "election_url": "http://www.thunderbay.ca/en/city-hall/2026-municipal-election.aspx",
+  "election_url": "https://www.thunderbay.ca/en/city-hall/2026-election-candidate-profiles.aspx",
   "confidence": "high",
   "sections": [
    {
     "board_number": "B28061",
     "system": "public",
-    "heading": "School Board Trustee - English Public - Lakehead District School Board",
+    "heading": "Gary Christian brings 37 years of public service and leadership experience to his campaign to serve Thunder Bay. Since 2022, he has served as Executive Director of the North Superior Workforce Planning Board, working with employers, educators, and governments to strengthen the local economy and create opportunities. Before joining the Board, Gary spent 34 years with the Ontario Ministry of Labour, Immigration, Training and Skills Development as a Community Development Officer in Thunder Bay, partnering with municipalities, businesses, Indigenous communities, and governments on practical local solutions. Gary also served 17 years with the Royal Canadian Navy, shaping the leadership, teamwork, and accountability he brings to public service. He currently serves as a Trustee with the Lakehead District School Board and holds an MBA and two degrees in political science/law from Lakehead University. In 2021, he received the City of Thunder Bay's Citizen of Exceptional Achievement Award for his community service. Gary believes Thunder Bay can be stronger, safer, and more prosperous. His priorities are safer streets, tackling homelessness, better roads, responsible spending, and economic growth. He\u2019ll bring a practical, accountable, results-focused approach to City Hall \u2014 listening, leading, and delivering for Thunder Bay.",
     "names": [
-     "Ellen Chambers",
-     "Gary Christian",
-     "Kelly Fettes",
-     "Pat Johansen",
-     "Gary Johnson",
-     "Donica LeBlanc",
-     "Ron Oikonen",
-     "George Saarinen",
-     "Paul David Sequeira",
-     "Ryan Sitch",
-     "Trudy Tuchenhagen",
-     "Leah Vanderwey"
+     "Julie Colquhoun",
+     "Patrick George Cully",
+     "Heather K. Dahlstrom",
+     "Stephanie Danylko",
+     "Kasey Taylor Etreni"
     ],
-    "emails": [],
-    "phones": [],
+    "emails": [
+     "hkdtbay2026@gmail.com",
+     "jaecolquhoun@outlook.com",
+     "p2pat@hotmail.com",
+     "sdanylko@yahoo.ca"
+    ],
+    "phones": [
+     "807-474-7050",
+     "807-630-1784",
+     "807-630-8198",
+     "807-633-7033"
+    ],
     "links": [],
-    "section_lines": 13
+    "section_lines": 40
    },
    {
-    "board_number": "B29068",
-    "system": "catholic",
-    "heading": "School Board Trustee - English Separate - Thunder Bay Catholic District School Board",
+    "board_number": "UNRESOLVED-public",
+    "system": "public",
+    "heading": "English Public School Board Trustee - Eight (8) to be elected",
     "names": [
-     "Eleanor Ashe",
-     "Lawrence Badanai",
-     "Anthony Foglia",
-     "Leanne Fonso",
-     "Gloria Gabrijelcic",
-     "Dina McFarlane",
-     "Matt Pearson",
-     "Tony Pucci",
-     "Tony Romeo",
-     "Adam Shaen",
-     "Francis Veneruz"
+     "Susan Frattaroli"
     ],
     "emails": [],
-    "phones": [],
+    "phones": [
+     "807-631-2159"
+    ],
+    "links": [],
+    "section_lines": 7
+   },
+   {
+    "board_number": "B28061",
+    "system": "public",
+    "heading": "As a Trustee, I hope to bring that experience to Lakehead Public Schools, listen, and work collaboratively to make meaningful improvements. I am particularly interested in contributing to committees such as the Equity and Inclusive Education Advisory Committee and the Special Education Advisory Committee.",
+    "names": [
+     "Lex MacArthur",
+     "Deborah Massaro",
+     "Ian Morgan"
+    ],
+    "emails": [
+     "dmassaro2010@hotmail.com",
+     "ianscottmorgan@gmail.com",
+     "lex.macarthur.public@gmail.com"
+    ],
+    "phones": [
+     "807-620-4060",
+     "807-628-3146"
+    ],
+    "links": [
+     "https://www.facebook.com/LexPublicProfile"
+    ],
+    "section_lines": 22
+   },
+   {
+    "board_number": "B28061",
+    "system": "public",
+    "heading": "I have had the honour to serve as a trustee with Lakehead District School Board since 2006 Serving on many of the committees and the provincial body Ontario Public School Boards Association I was chair of School Council Chairs prior to getting elected I am a community volunteer Age Friendly Thunder Bay United Way of Thunder Bay Thunder Bay Ringette when my children played the sport Special Education Funding there is never enough money for all the needs of the students in our system I continue to lobby the government to increase funding I care and want to see the best possible education for every student to succeed at Lakehead Public Schools Please vote for George Saarinen Trustee Lakehead District School Board",
+    "names": [
+     "Ryan Sitch"
+    ],
+    "emails": [],
+    "phones": [
+     "807-252-5485"
+    ],
+    "links": [],
+    "section_lines": 2
+   },
+   {
+    "board_number": "UNRESOLVED-catholic",
+    "system": "catholic",
+    "heading": "English Separate School Board Trustee - Six (6) to be elected",
+    "names": [
+     "Eleanor Ashe"
+    ],
+    "emails": [
+     "leash@tbaytel.net"
+    ],
+    "phones": [
+     "807-577-2204"
+    ],
+    "links": [],
+    "section_lines": 3
+   },
+   {
+    "board_number": "UNRESOLVED-catholic",
+    "system": "catholic",
+    "heading": "I am proud to seek re-election as a Catholic School Board Trustee, having served for the past four years, including two years as Vice-Chair.",
+    "names": [
+     "Olivia Kembel",
+     "Matt Pearson",
+     "Tony Romeo"
+    ],
+    "emails": [
+     "champainplace@shaw.ca",
+     "mwpearson76@gmail.com",
+     "oliviakembel@gmail.com"
+    ],
+    "phones": [
+     "807-476-5866",
+     "807-707-9722"
+    ],
     "links": [],
     "section_lines": 11
    }
@@ -6494,8 +6068,23 @@
   "census_id": "3558016",
   "csdname": "O'Connor",
   "election_url": "https://www.oconnortownship.ca/2026-municipal-elections",
-  "confidence": "low",
-  "sections": []
+  "confidence": "medium",
+  "sections": [
+   {
+    "board_number": "UNRESOLVED-catholic",
+    "system": "catholic",
+    "heading": "Certified Candidates \u2013 English Language Separate School Trustee",
+    "names": [
+     "LOCATION FOR VOTING DAYS"
+    ],
+    "emails": [],
+    "phones": [
+     "807-476-1451"
+    ],
+    "links": [],
+    "section_lines": 20
+   }
+  ]
  },
  {
   "census_id": "3558019",
@@ -6514,7 +6103,7 @@
  {
   "census_id": "3558054",
   "csdname": "Terrace Bay",
-  "election_url": "https://www.terracebay.ca/town-hall/town-council/2026-municipal-election/",
+  "election_url": "https://www.terracebay.ca/town-hall/town-council/2026-municipal-election/2026-municipal-election-nomination-information/",
   "confidence": "high",
   "sections": [
    {
@@ -6522,26 +6111,16 @@
     "system": "catholic",
     "heading": "Superior North Catholic District School Board (English Separate)",
     "names": [
-     "KEY DATES"
-    ],
-    "emails": [],
-    "phones": [],
-    "links": [],
-    "section_lines": 9
-   },
-   {
-    "board_number": "B29076",
-    "system": "catholic",
-    "heading": "Superior North Catholic District School Board (English Separate)",
-    "names": [
-     "Candidates' Guide"
+     "Jon Hall"
     ],
     "emails": [
      "breman22@shaw.ca",
      "bryanmcinnes77@gmail.com",
+     "clerk@terracebay.ca",
      "realdeschatelets@hotmail.com"
     ],
     "phones": [
+     "(807) 825-3315",
      "807-229-7208",
      "807-823-0369"
     ],
@@ -6571,7 +6150,7 @@
     "emails": [],
     "phones": [],
     "links": [],
-    "section_lines": 15
+    "section_lines": 14
    }
   ]
  },
@@ -6614,6 +6193,26 @@
   "sections": []
  },
  {
+  "census_id": "3559019",
+  "csdname": "Emo",
+  "election_url": "https://emo.ca/2026-elections/2026-candidates/",
+  "confidence": "high",
+  "sections": [
+   {
+    "board_number": "B28053",
+    "system": "public",
+    "heading": "Rainy River District School Board Trustee",
+    "names": [
+     "Barbara Kyro"
+    ],
+    "emails": [],
+    "phones": [],
+    "links": [],
+    "section_lines": 4
+   }
+  ]
+ },
+ {
   "census_id": "3559042",
   "csdname": "Rainy River",
   "election_url": "http://www.rainyriver.ca/en/our-community/community-news-alerts/show/list-of-certified-candidates",
@@ -6654,61 +6253,59 @@
  {
   "census_id": "3560010",
   "csdname": "Kenora",
-  "election_url": "http://www.kenora.ca/news-and-notices/posts/notice-of-filing-of-additional-nominations-for-keewatin-patricia-district-school-board-trustee/",
-  "confidence": "high",
+  "election_url": "http://www.kenora.ca/your-government/elections/candidates/certified-candidates/",
+  "confidence": "medium",
   "sections": [
    {
-    "board_number": "B28045",
+    "board_number": "UNRESOLVED-public",
     "system": "public",
-    "heading": "Notice of Filing of Additional Nominations for Keewatin-Patricia District School Board Trustee | City of Kenora",
+    "heading": "were accepted for English Public School Board Trustee on Wednesday, August 26, 2026 between 9 a.m. and 2 p.m. and were certified on Thursday, August 27.",
     "names": [
-     "Kenora Residents",
-     "Property Taxes",
-     "Community Calendar",
-     "Community Organizations"
+     "Mayor Andrew Poirier",
+     "Bryan Booth",
+     "Tyler Johnson",
+     "Richard Kurtz",
+     "Ron Malashewski",
+     "Cecile Marcino",
+     "Rod McKay",
+     "Michael O\u2019Flaherty",
+     "Daniel Reynard",
+     "Karla Treadway"
     ],
     "emails": [],
     "phones": [],
     "links": [],
-    "section_lines": 40
+    "section_lines": 18
    },
    {
-    "board_number": "B28045",
+    "board_number": "UNRESOLVED-public",
     "system": "public",
-    "heading": "Notice of Filing of Additional Nominations for Keewatin-Patricia District School Board Trustee",
+    "heading": "English Public School Board Trustee (3 seats)",
     "names": [
-     "Elections Notices"
+     "Anita Cameron",
+     "Grant Erickson",
+     "Rory McMillan"
     ],
     "emails": [],
     "phones": [],
     "links": [],
-    "section_lines": 4
+    "section_lines": 5
    },
    {
-    "board_number": "B28045",
-    "system": "public",
-    "heading": "Take Notice that the number of candidates for the office of Trustee, Keewatin-Patricia District School Board was not sufficient to fill the number of vacancies to which candidates may be elected as of August 21, 2026 at 2:00 p.m.",
+    "board_number": "UNRESOLVED-catholic",
+    "system": "catholic",
+    "heading": "English Catholic School Board Trustee (5 candidates)",
     "names": [
-     "Additional Nominations",
-     "All Categories",
-     "Coney Island Notices",
-     "COVID-19 Updates",
-     "Elections Notices",
-     "Evacuation Updates",
-     "Holiday Hours",
-     "Media Releases",
-     "Road Closures",
-     "Snow Removal",
-     "Transit Notices",
-     "Kenora ON P9N3X2"
+     "Derek Favreau",
+     "Teresa Gallik",
+     "Paul Landry",
+     "Marie Lundin",
+     "Irene Richards"
     ],
     "emails": [],
-    "phones": [
-     "807-467-2000",
-     "807-467-2080"
-    ],
+    "phones": [],
     "links": [],
-    "section_lines": 40
+    "section_lines": 6
    }
   ]
  },
@@ -6738,9 +6335,9 @@
   ]
  },
  {
-  "census_id": "3560034",
-  "csdname": "Sioux Lookout",
-  "election_url": "http://www.siouxlookout.ca/town-hall/2026-municipal-election",
+  "census_id": "3560032",
+  "csdname": "Ear Falls",
+  "election_url": "http://www.ear-falls.com/municipal-government/elections/",
   "confidence": "low",
   "sections": []
  }
