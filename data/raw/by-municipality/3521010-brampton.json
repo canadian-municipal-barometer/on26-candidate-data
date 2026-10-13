@@ -4,14 +4,15 @@
   "name_format": "last_first",
   "candidate_list_url": "https://www.brampton.ca/EN/City-Hall/Election/Candidates/Pages/candidateListing.aspx",
   "notes": {
-    "list_status": "unofficial; page says it is updated as nominations are received. Nominations close 2026-08-21 14:00.",
+    "list_status": "Certified, and amended after the 2026-08-24 collection. The page reads 'This is the list of certified candidates for the 2026 City of Brampton Municipal Election. The amended notice of certification has been signed by the City Clerk on Tuesday, August 25, 2026.' Re-read on 2026-10-13: the amendment added one candidate - see court_order - and every other name and count is unchanged. The listing is now in the page source and no longer needs a browser.",
     "source_note": "The listing is built by script behind 'Filter By Office / Filter By Ward / Sort By' controls and returns nothing to a plain fetch; read in the browser.",
     "name_quirk": "The bare-surname case is gone from Brampton: 'Gursimranjit Singh, -' — the mayoral nomination the town published with '-' in place of a given name — is one of the withdrawals. Toronto's Ward 21 'Nisha Kumari, ' is now the study's only name published without a given name.",
     "structure_match": "Both City and Regional councillors are elected from the five ward pairs 1&5, 2&6, 3&4, 7&8, 9&10, matching both structure-CSV rows.",
     "position": "The listing inverts its headings - 'Councillor, City - Wards 1, 5' and 'Councillor, Regional - Wards 1, 5' - so the titles are recorded the right way round, City Councillor and Regional Councillor, which is how they are spoken and the only way a piped question reads.",
-    "retrieved": "2026-08-24",
+    "retrieved": "2026-10-13",
     "withdrawals": "Seven nominations carry a '(Withdrawn)' suffix and the line 'This candidate has withdrawn from this year's municipal election', and are excluded here: Dhaliwal, Avi; 'Gursimranjit Singh, -'; and Patel, Tirth Vinodkumar for mayor; Campbell, Chris for city councillor Wards 3, 4; Power, Rod for city councillor Wards 7, 8; and Dhillon, Ripudaman Singh and Fortini, Pat for regional councillor Wards 7, 8. Three of them moved rather than left: Power is a certified regional councillor candidate in the same ward pair, Dhillon a city councillor candidate in it, and Campbell a Peel District School Board candidate.",
-    "name_changes": "Two Wards 7, 8 city councillor names changed form: 'Sharma, Rakesh Singh' is now 'Sharma, Rakesh', and 'Soares, Monica' is now 'Singh Soares, Monica'."
+    "name_changes": "Two Wards 7, 8 city councillor names changed form: 'Sharma, Rakesh Singh' is now 'Sharma, Rakesh', and 'Soares, Monica' is now 'Singh Soares, Monica'.",
+    "court_order": "Taran Chahal was added to City Councillor, Wards 7, 8 by the amended notice of certification, which the 2026-08-24 collection predates. The page reads '*Pursuant to the August 24, 2026, Order of the Ontario Superior Court of Justice, re: Court File No. CV-26-00006515-0000, Taran Chahal has been certified as a candidate for City Councillor for Wards 7 and 8', gives the filing date as 8/25/2026, and the amended notice lists seven candidates for the office where the first listed six. The page prints the name as 'Chahal, Taran*'; the asterisk is its footnote mark, not part of the name, and is not recorded."
   },
   "races": {
     "mayor": [
@@ -83,6 +84,7 @@
           ],
           "Wards 7, 8": [
             "Brahmbhatt, Nayan",
+            "Chahal, Taran",
             "Dhillon, Ripudaman Singh",
             "Kahlon, Ayanna",
             "Khan, Ali",

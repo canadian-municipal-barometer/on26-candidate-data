@@ -28,10 +28,10 @@ wards. The ballot structure of the parent race - how many districts it has, its 
 its max_votes - is not repeated here; it is in notes/councillor-election-structure.csv,
 one join on census_id + office away.
 
-The counts are a snapshot, not a final tally: nominations close 2026-08-21 and the
-certified lists follow on 2026-08-24, so every count here is a lower bound until then. The
-retrieved column carries the date each municipality's list was read, so a stale row is
-visible rather than implied.
+The counts were a lower bound while nominations were open. Nominations closed 2026-08-21
+and the certified lists followed on 2026-08-24, and every list has been read since, so
+they are now final. The retrieved column carries the date each municipality's list was
+read, so a stale row is visible rather than implied.
 """
 import csv
 import json

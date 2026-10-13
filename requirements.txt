@@ -6,7 +6,10 @@
 #
 # nameparser supplies the structure - parenthesised nicknames, suffixes, and the
 # particles that begin a surname ("Del Duca", "Van Meerbergen").
-nameparser>=1.1
+#
+# Not 2.0 to 2.2: those releases return no surname at all for "Mandy Rai", which the build
+# then serves whole as a surname with no given name ("MANDY RAI"). 2.3 fixed it.
+nameparser>=2.3
 # names-dataset supplies the corpus of given names and surnames used to decide
 # whether a leftover middle token belongs to the surname. It is a large download
 # (~50 MB installed) and loading it costs well over a gigabyte of memory, so the

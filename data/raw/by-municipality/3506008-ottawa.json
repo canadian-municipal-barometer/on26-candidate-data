@@ -9,7 +9,8 @@
     "structure_match": "24 ward pages published, matching n_districts=24 in the structure CSV.",
     "list_status": "Certified. The section is titled 'Certified and acclaimed candidates'; two ward pages are headed 'Acclaimed candidate for ...' — Ward 16 River (Riley Brockington) and Ward 21 Rideau-Jock (David Brown) — and each has the single candidate that heading implies, so the build derives the same result from the count.",
     "withdrawals": "Withdrawn nominations are on their own page and are already absent from the certified lists. Three of its six rows are council offices: Peter Westaway (Councillor, Ward 9), Adriana Galan (Councillor, Ward 6) and Michelle Groulx (Councillor, Ward 15). Westaway is a certified mayoral candidate, and Donna Blackburn, who withdrew as an OCDSB trustee, is a certified Ward 3 councillor candidate.",
-    "position": "Read from the office pages' own headings: 'Certified candidates for Mayor' and 'Certified and acclaimed candidates for City Councillor'. Ottawa's ward seat is a City Councillor, not a plain Councillor."
+    "position": "Read from the office pages' own headings: 'Certified candidates for Mayor' and 'Certified and acclaimed candidates for City Councillor'. Ottawa's ward seat is a City Councillor, not a plain Councillor.",
+    "retrieved": "2026-08-24"
   },
   "races": {
     "mayor": [

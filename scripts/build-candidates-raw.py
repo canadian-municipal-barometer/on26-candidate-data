@@ -76,9 +76,11 @@ except ImportError:
         "  python3 -m pip install -r requirements.txt"
     )
 
-# Default collection date, used for every municipality file that does not carry its own
-# notes.retrieved.
-RETRIEVED = "2026-08-11"
+# The date of the last full collection, the one made once nominations had closed. It is
+# what _meta.retrieved reports, and the default for any municipality file that does not
+# carry its own notes.retrieved. Move it with the next full run: the municipalities read
+# on some other day are named in _meta from their own dates, not from a list kept here.
+RETRIEVED = "2026-08-24"
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(REPO, "data", "raw", "by-municipality")
@@ -448,6 +450,26 @@ if problems:
     sys.exit(1)
 
 # ----------------------------------------------------------------------- emit
+# The municipalities read on a day other than RETRIEVED, grouped by that day, oldest first.
+# Worked out from the files rather than written into the sentence below, which is how that
+# sentence came to name 2026-08-11 for lists that had since been collected again.
+reread = {}
+for m in out.values():
+    if m["notes"]["retrieved"] != RETRIEVED:
+        reread.setdefault(m["notes"]["retrieved"], []).append(m["csdname"])
+if reread:
+    collected = (
+        f"{RETRIEVED} for all but those read again since: "
+        + "; ".join(
+            " and ".join(filter(None, [", ".join(sorted(names)[:-1]), sorted(names)[-1]]))
+            + f" on {day}"
+            for day, names in sorted(reread.items())
+        )
+        + "."
+    )
+else:
+    collected = f"{RETRIEVED} for all of them."
+
 doc = {
     "_meta": {
         "description": (
@@ -458,13 +480,12 @@ doc = {
         "retrieved": RETRIEVED,
         "municipalities": len(out),
         "provisional": (
-            "Ontario nominations for the 2026 cycle close 2026-08-21 at 14:00, and the clerk's "
-            "certified list follows by 16:00 on 2026-08-24. Every list here is an unofficial "
-            "snapshot and is therefore incomplete - candidates may still file. Each "
-            "municipality's collection date is its notes.retrieved: 2026-08-11 for all but "
-            "North Bay and New Tecumseth, which joined the study on 2026-08-12. Markham, "
-            "Vaughan and Waterloo each had only one mayoral candidate on file. Re-collect "
-            "after certification for a final list."
+            "No longer provisional. Ontario nominations for the 2026 cycle closed 2026-08-21 "
+            "at 14:00, and each clerk's certified list followed by 16:00 on 2026-08-24. Every "
+            "list here was read on or after 2026-08-24, so no candidate can still file. "
+            "Whether the source itself called its list certified is in the municipality's "
+            "notes.list_status. Each municipality's collection date is its notes.retrieved: "
+            + collected
         ),
         "schema": (
             "<census_id> -> {csdname, notes, races}. Each key under 'races' holds an ARRAY of "

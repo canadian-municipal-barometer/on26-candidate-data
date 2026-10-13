@@ -4,11 +4,11 @@
   "name_format": "last_first",
   "candidate_list_url": "https://www.aurora.ca/your-government/elections-2026/candidate-information/",
   "notes": {
-    "list_status": "unofficial; nominations open until 2026-08-21 14:00",
+    "list_status": "Certified. The section is now headed 'List of Certified Candidates' and reads 'Candidate nominations have now closed. The List of Certified Candidates is now available', linking the Clerk's certified list; it was the 'Unofficial List of Candidates' when first collected. Re-read on 2026-10-13, and every name and every count is unchanged from the 2026-08-24 collection.",
     "source_note": "district_source_url in councillor-election-structure.csv points to the ward-system and council-members pages, which carry no candidates. Candidates were taken from the town's 'Unofficial List of Candidates' accordion on the Candidate Information page, reached by a link from the ward-system page.",
     "structure_match": "6 ward tables published, matching n_districts=6 in the structure CSV.",
     "position": "From the page's headings, 'Office of Mayor' and 'Ward 1 Councillor'; the page also states 'One Councillor for Ward 1 to be elected by the eligible electors in Ward 1'.",
-    "retrieved": "2026-08-24"
+    "retrieved": "2026-10-13"
   },
   "races": {
     "mayor": [

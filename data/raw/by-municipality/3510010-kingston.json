@@ -4,12 +4,12 @@
   "name_format": "first_last",
   "candidate_list_url": "https://www.cityofkingston.ca/council-and-city-administration/elections/candidates/candidate-list/",
   "notes": {
-    "list_status": "Post-deadline list. Two withdrawals are marked '(withdrawn)' on the page and are excluded here: Stephen Cuthbertson from the mayoral race (he is a District 4 candidate) and Jago Garrett in District 10.",
+    "list_status": "Post-deadline list. Two withdrawals are marked '(withdrawn)' on the page and are excluded here: Stephen Cuthbertson from the mayoral race (he is a District 4 candidate) and Jago Garrett in District 10. Re-read on 2026-10-13: the source still does not call the list certified, and every name and every count is unchanged from the 2026-08-24 collection.",
     "source_note": "district_source_url is itself the candidate list; no extra hop needed.",
     "district_names": "Kingston's wards are called districts and carry names; recorded here as published, e.g. 'District 1 - Countryside'.",
     "structure_match": "12 district tables published, matching n_districts=12 in the structure CSV.",
     "position": "The page states the offices outright - 'Candidates may run for Mayor, District Councillor, or for School Board Trustee' - and heads each council table with the district alone ('District 1 - Countryside'). Kingston is the one municipality here whose council seat is a District Councillor.",
-    "retrieved": "2026-08-24",
+    "retrieved": "2026-10-13",
     "name_changes": "Three names are published differently than on 2026-08-11: 'Grant William Bedard' is now 'Grant Bedard', 'Ryan Boehme' is now 'Ryan Nelson Boehme', and District 6's 'Jamshed Hassan' is now 'Jimmy Hassan'."
   },
   "races": {

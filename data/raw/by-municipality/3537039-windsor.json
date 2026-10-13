@@ -4,11 +4,11 @@
   "name_format": "first_last",
   "candidate_list_url": "https://citywindsor.ca/city-hall/municipal-election/who-is-running",
   "notes": {
-    "list_status": "Post-deadline. None of the eleven pages contains the word withdrawn, and none marks a race acclaimed.",
+    "list_status": "Post-deadline. None of the eleven pages contains the word withdrawn, and none marks a race acclaimed. Re-read on 2026-10-13: the source still does not call the list certified, and every name and every count is unchanged from the 2026-08-24 collection.",
     "source_note": "The 'Who is Running' page carries no names of its own: it is an index linking one page per office, /who-is-running/Mayor and /who-is-running/councillor-ward-1..10, and each of those was fetched. On the office pages the candidates are headings, with contact lines and social links beneath, so the headings alone give the list. Every ward page states 'For this office, you are entitled to vote for 1 (one) candidate', confirming max_votes=1 across the 10 wards.",
     "structure_match": "Each ward page states 'For this office, you are entitled to vote for 1 (one) candidate', independently confirming max_votes=1 across all 10 wards in the structure CSV.",
     "position": "From the office pages' headings, 'Mayor' and 'Councillor Ward 1'.",
-    "retrieved": "2026-08-24"
+    "retrieved": "2026-10-13"
   },
   "races": {
     "mayor": [
