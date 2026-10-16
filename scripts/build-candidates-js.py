@@ -14,6 +14,9 @@ Inputs
   notes/councillor-election-structure.csv
       Its `provider` column says which fieldwork provider fields each municipality,
       which is what the output is split on. See PROVIDERS.
+  notes/large-city-mayor-filter.csv
+      The mayoral candidates vc_neg_mayor shows, in the municipalities where it does not
+      show them all. One row per candidate. See FLAG_FAMILIES.
 
 Output
   data/candidate-data-versions/candidates-{YYYY-MM-DD}-v{VERSION}-{provider}.js
@@ -49,11 +52,13 @@ acclaimed, how many names they may mark, what shape their ballot is - is decided
         name: "Ottawa",
         shared: {
           names:  { mayor: [...], coun_atlarge: [...], dep_mayor: [...] },
+          flags:  { mayor_vc_neg_flag: [1, 0, ...] },
           fields: { mayor_accl: 0, mayor_position: "MAYOR", atlarge: 1, ... }
         },
         wards: {
           "<ward label>"|"99": {
             names:  { coun_ward: [...], coun_reg: [...] },
+            flags:  {},
             fields: { ward: 1, ward_accl: 0, ward_max_votes: 1,
                       ward_position: "WARD COUNCILLOR", ... }
           }
@@ -157,6 +162,7 @@ from datetime import date
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(REPO, "data", "raw", "candidates-raw.json")
 STRUCT = os.path.join(REPO, "notes", "councillor-election-structure.csv")
+SHORTLIST = os.path.join(REPO, "notes", "large-city-mayor-filter.csv")
 VERSIONS = os.path.join(REPO, "data", "candidate-data-versions")
 VERSION_FILE = os.path.join(VERSIONS, "version.txt")
 
@@ -270,6 +276,29 @@ SERVED_FLAG_STEMS = {"ward", "atlarge", "reg_coun", "dep_mayor"}
 # the same field names as before. What changes is the size of the file the header loads.
 SHARED_STEMS = {"mayor", "atlarge", "dep_mayor"}
 
+# Per-candidate display flags: flag family -> the stem whose candidate list it runs
+# alongside. Each is a list of 1s and 0s the same length as that list, so the survey writes
+# `<family>1..` beside `mayor1..`, sized and blanked the same way, and a choice piping
+# __js_mayor7 is shown on `__js_mayor_vc_neg_flag7 = 1`.
+#
+# mayor_vc_neg_flag is for vc_neg_mayor ("any MAYORAL candidates you would NOT have voted
+# for?"), which in the largest cities asks about the leading candidates only - Toronto's
+# list runs to 53 names, and Ottawa's, Mississauga's and Hamilton's to 13 or 14. SHORTLIST
+# names those candidates; every other municipality flags its whole list, so the same choice
+# logic serves all 38, and since a flag past the end of the list is written blank, it also
+# does the job of `__js_mayorN Is Not Empty`.
+#
+# A flag per candidate rather than one field listing who is shown, because display logic
+# cannot compare one field with another, and a condition that names the choice's own flag
+# is one the next person to open the question can read. It keeps the choices on the full
+# list, too, so vc_neg_mayor's answer codes mean the same candidates as vc_mayor's.
+#
+# The flags are only meaningful against the sorted list they run beside, so they are worked
+# out here from that list rather than written into the CSV, and a shortlisted name that is
+# not on it exactly as served aborts the build: Toronto has two CHOWs, and Mississauga's list
+# carries its given names in capitals.
+FLAG_FAMILIES = {"mayor_vc_neg_flag": "mayor"}
+
 # The key for "no ward" - both an at-large race's only district and the ward value sent
 # when the ward question was skipped.
 AT_LARGE = "99"
@@ -366,6 +395,9 @@ if not os.path.exists(VERSION_FILE):
 
 if not os.path.exists(STRUCT):
     die(f"no such file: {STRUCT}")
+
+if not os.path.exists(SHORTLIST):
+    die(f"no such file: {SHORTLIST}")
 
 with open(SRC, encoding="utf-8") as fh:
     raw = json.load(fh)
@@ -568,6 +600,45 @@ for census_id, races in races_by_mun.items():
                     )
                 seen[label] = race["office"]
 
+# --- the mayoral shortlist ----------------------------------------------------------
+#
+# census_id -> the names vc_neg_mayor shows there. Checked against the mayoral list
+# as it will be served, since a name that matches nothing would quietly drop a candidate
+# from the question - and a municipality left with no match at all would show none.
+
+shortlist = {}
+with open(SHORTLIST, newline="", encoding="utf-8") as fh:
+    for row in csv.DictReader(fh):
+        census_id = row["census_id"].strip()
+        name = row["candidate"]
+        where = f"notes/large-city-mayor-filter.csv: {census_id} {name!r}"
+        if census_id not in races_by_mun:
+            problems.append(f"{where}: no such municipality in the study")
+            continue
+        if row["csdname"].strip() != raw[census_id]["csdname"]:
+            problems.append(
+                f"{where}: csdname {row['csdname']!r} is not {raw[census_id]['csdname']!r}, "
+                "so the census_id may be the wrong one"
+            )
+        names = shortlist.setdefault(census_id, [])
+        if name in names:
+            problems.append(f"{where}: listed twice")
+            continue
+        mayoral = [
+            n
+            for race in races_by_mun[census_id].get("mayor", [])
+            for district in race["districts"].values()
+            for n in district["names"]
+        ]
+        if name not in mayoral:
+            near = [n for n in mayoral if n.casefold() == name.casefold()]
+            problems.append(
+                f"{where}: not on its mayoral list as served"
+                + (f" - did you mean {near[0]!r}?" if near else "")
+            )
+            continue
+        names.append(name)
+
 if problems:
     print(f"{len(problems)} problem(s); nothing written:", file=sys.stderr)
     for p in problems:
@@ -608,8 +679,8 @@ def entry_for(census_id, ward):
     one of them - which is what makes the two disjoint by construction rather than by a
     second rule that could drift from the first. See SHARED_STEMS.
     """
-    shared = {"names": {}, "fields": {}}  # decided municipality-wide
-    own = {"names": {}, "fields": {}}  # decided by this ward
+    shared = {"names": {}, "flags": {}, "fields": {}}  # decided municipality-wide
+    own = {"names": {}, "flags": {}, "fields": {}}  # decided by this ward
 
     for stem in STEMS:
         half = shared if stem in SHARED_STEMS else own
@@ -681,6 +752,13 @@ def entry_for(census_id, ward):
             )
         fields[stem + "_position"] = titles[0].upper() if titles else ""
 
+        # One 1 or 0 per candidate on the list just sorted; see FLAG_FAMILIES.
+        for family, flag_stem in FLAG_FAMILIES.items():
+            if flag_stem == stem:
+                listed = names[NAME_FIELD[stem]]
+                keep = shortlist.get(census_id, listed)
+                half["flags"][family] = [int(name in keep) for name in listed]
+
     # The served-flags are written in the loop above, so each completes its stem's family
     # rather than standing outside it: ward, ward_accl, ward_max_votes.
     #
@@ -700,9 +778,10 @@ def entry_for(census_id, ward):
 
 
 def compact_entry(entry):
-    """One half, with its name lists and its scalars folded onto single output lines."""
+    """One half, with its name lists, flags and scalars folded onto single output lines."""
     return {
         "names": {field: compact(lst) for field, lst in entry["names"].items()},
+        "flags": {family: compact(lst) for family, lst in entry["flags"].items()},
         "fields": compact(entry["fields"]),
     }
 
@@ -784,6 +863,9 @@ for census_id, mun in municipalities.items():
         both = set(mun["shared"]["names"]) & set(entry["names"])
         if both:
             die(f"{census_id} {ward!r} lists {sorted(both)} in both halves")
+        both = set(mun["shared"]["flags"]) & set(entry["flags"])
+        if both:
+            die(f"{census_id} {ward!r} flags {sorted(both)} in both halves")
 
 for mun in municipalities.values():
     mun["shared"] = compact_entry(mun["shared"])
@@ -816,6 +898,9 @@ meta_tail = {
     # stem names both.
     "stems": compact(NAME_FIELD),
     "max_names": max_names,
+    # flag family -> the name field it runs alongside, which is what sizes it: the survey
+    # writes mayor_vc_neg_flag1..max_names.mayor. See FLAG_FAMILIES.
+    "flags": compact({family: NAME_FIELD[stem] for family, stem in FLAG_FAMILIES.items()}),
     # Split by where the scalar is decided, matching the two halves of every
     # municipality entry. The survey writes their union; nothing downstream has
     # to care which half a field came from, but a reader of this file does.
@@ -854,6 +939,11 @@ meta_tail = {
         "1 where the respondent is served that race, 0 where they are not, which is the "
         "same fact as a non-blank accl in a form a survey flow can pipe. mayor "
         "has no such flag, since every municipality in the study elects one. "
+        "`flags` holds lists of 1s and 0s, one per candidate on the name list that "
+        "meta.flags says each runs alongside, for the survey to write as numbered fields "
+        "beside it: mayor_vc_neg_flag7 is 1 where vc_neg_mayor shows mayor7. It is 1 for "
+        "every candidate except in the municipalities "
+        "notes/large-city-mayor-filter.csv shortlists. "
         "meta.stems maps one to the other, and is "
         "worth reading rather than guessing - the ward stem's candidate list is "
         "coun_ward1.., not ward1... Every ward entry "
@@ -972,5 +1062,12 @@ print(
 for stem in STEMS:
     field = NAME_FIELD[stem]
     print(f"  {field:<13} widest: {widest.get(field, '-')}")
+print(
+    "  plus the flags: "
+    + "  ".join(
+        f"{family}1..{max_names[NAME_FIELD[stem]]}"
+        for family, stem in FLAG_FAMILIES.items()
+    )
+)
 print("  plus the scalars, shared: " + " ".join(shared_field_keys))
 print("             and per ward: " + " ".join(ward_field_keys))

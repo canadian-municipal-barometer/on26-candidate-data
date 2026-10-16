@@ -870,6 +870,47 @@ test("an excluded contest reaches no respondent, in any ward", () => {
   }
 });
 
+test("meta.flags names the name list each flag family runs alongside", () => {
+  assert.deepEqual(DATA.meta.flags, { mayor_vc_neg_flag: "mayor" });
+  for (const family of Object.values(DATA.meta.flags)) {
+    assert.ok(family in DATA.meta.max_names, `${family} is not a name family`);
+  }
+});
+
+test("mayor_vc_neg_flag shows exactly the names the shortlist CSV gives", () => {
+  // Read from the CSV rather than listed here, as excluded-races.csv is above. The flags
+  // are only meaningful beside the list they run alongside, so they are read back into
+  // the names they show and compared with the CSV's — which is the reading the survey's
+  // choice display logic makes of them.
+  const rows = parseCsv(
+    readFileSync(path.join(ROOT, "notes", "large-city-mayor-filter.csv"), "utf8"),
+  );
+  assert.ok(rows.length, "large-city-mayor-filter.csv has no rows");
+  const listed = {};
+  for (const row of rows) (listed[row.census_id] ??= []).push(row.candidate);
+
+  for (const census_id of censusIds) {
+    const mun = DATA.municipalities[census_id];
+    const flags = mun.shared.flags.mayor_vc_neg_flag;
+    const mayors = mun.shared.names.mayor;
+
+    // One flag per candidate, so flag N always describes mayorN.
+    assert.equal(flags.length, mayors.length, mun.name);
+    assert.ok(flags.every((f) => f === 0 || f === 1), mun.name);
+    const shown = mayors.filter((_, i) => flags[i] === 1);
+
+    // The whole list where there is no shortlist, so one display condition serves all 38.
+    const want = listed[census_id] ?? mayors;
+    assert.deepEqual([...shown].sort(), [...want].sort(), mun.name);
+
+    // Flags live with the list they describe: the mayoral list is shared, so no ward
+    // entry carries any.
+    for (const [ward, entry] of Object.entries(mun.wards)) {
+      assert.deepEqual(entry.flags, {}, `${mun.name} ${ward}`);
+    }
+  }
+});
+
 test("the ward flag describes the ward councillor race actually served", () => {
   // The flag describes the ward councillor race only. Whether there is an at-large race is
   // read off atlarge_accl, not from here — see the stem split above.
