@@ -2331,9 +2331,9 @@
             "Ward 3": {
               "candidates": [
                 {
-                  "name_raw": "Robert (Bob) Chapman",
+                  "name_raw": "Bob Chapman",
                   "last_name": "CHAPMAN",
-                  "first_name": "Robert (Bob)"
+                  "first_name": "Bob"
                 },
                 {
                   "name_raw": "Timothy Dobson",
@@ -2346,9 +2346,9 @@
                   "first_name": "Katherine"
                 },
                 {
-                  "name_raw": "Javed Rizwan",
-                  "last_name": "RIZWAN",
-                  "first_name": "Javed"
+                  "name_raw": "Rizwan Javed",
+                  "last_name": "JAVED",
+                  "first_name": "Rizwan"
                 }
               ]
             },
@@ -7775,9 +7775,9 @@
                   "first_name": "Tony"
                 },
                 {
-                  "name_raw": "Tompkins, Bernard-",
+                  "name_raw": "Tompkins, Bernard",
                   "last_name": "TOMPKINS",
-                  "first_name": "Bernard-"
+                  "first_name": "Bernard"
                 }
               ]
             },
@@ -8592,11 +8592,6 @@
                   "name_raw": "Caleb Ratzlaff",
                   "last_name": "RATZLAFF",
                   "first_name": "Caleb"
-                },
-                {
-                  "name_raw": "Austin Shynal",
-                  "last_name": "SHYNAL",
-                  "first_name": "Austin"
                 }
               ]
             },
@@ -10443,11 +10438,6 @@
                   "first_name": "Paulo"
                 },
                 {
-                  "name_raw": "Martin, Deb",
-                  "last_name": "MARTIN",
-                  "first_name": "Deb"
-                },
-                {
                   "name_raw": "McGregor, Brock",
                   "last_name": "MCGREGOR",
                   "first_name": "Brock"
@@ -12269,9 +12259,9 @@
                   "first_name": "Kay"
                 },
                 {
-                  "name_raw": "Russell Tighe",
+                  "name_raw": "Russell J. Tighe",
                   "last_name": "TIGHE",
-                  "first_name": "Russell"
+                  "first_name": "Russell J."
                 }
               ]
             }
@@ -12428,9 +12418,9 @@
             "Ward 6": {
               "candidates": [
                 {
-                  "name_raw": "Nader Nasar George, he/him",
-                  "last_name": "GEORGE",
-                  "first_name": "Nader Nasar"
+                  "name_raw": "Nasar George Nader, he/him",
+                  "last_name": "NADER",
+                  "first_name": "Nasar George"
                 },
                 {
                   "name_raw": "Nigussie Nigussie",

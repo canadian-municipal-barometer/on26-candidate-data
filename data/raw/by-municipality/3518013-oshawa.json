@@ -108,15 +108,12 @@
             "Martin Franssen",
             "Selvan Sinnadurai"
           ],
-          "Ward 2": [
-            "Cameron Anderson",
-            "Bradley Marks"
-          ],
+          "Ward 2": ["Cameron Anderson", "Bradley Marks"],
           "Ward 3": [
-            "Robert (Bob) Chapman",
+            "Bob Chapman",
             "Timothy Dobson",
             "Katherine Pollard",
-            "Javed Rizwan"
+            "Rizwan Javed"
           ],
           "Ward 4": [
             "Jeff Davis",
@@ -124,10 +121,7 @@
             "Jack O'Donnell",
             "Doug Sanders"
           ],
-          "Ward 5": [
-            "Kristen McKinnon",
-            "Brian Charles Nicholson"
-          ]
+          "Ward 5": ["Kristen McKinnon", "Brian Charles Nicholson"]
         }
       }
     ]

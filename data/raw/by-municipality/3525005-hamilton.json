@@ -67,7 +67,7 @@
             "Lewis, Brian",
             "Oucharek, Kelly",
             "Sciara, Tony",
-            "Tompkins, Bernard-"
+            "Tompkins, Bernard"
           ],
           "Ward 3": [
             "Campbell, Wade",
@@ -86,16 +86,8 @@
             "Mamone, Tony",
             "Tuff, Tobin"
           ],
-          "Ward 5": [
-            "Francis, Matt",
-            "Khan, Ahmad",
-            "Maldonado, Juanita"
-          ],
-          "Ward 6": [
-            "Debicki, Melissa",
-            "Jackson, Tom",
-            "Werhun, Peter"
-          ],
+          "Ward 5": ["Francis, Matt", "Khan, Ahmad", "Maldonado, Juanita"],
+          "Ward 6": ["Debicki, Melissa", "Jackson, Tom", "Werhun, Peter"],
           "Ward 7": [
             "Beale, Heather",
             "Daly, Mark",
@@ -131,25 +123,15 @@
             "Rigitano, Vince",
             "Trombetta, Nicole"
           ],
-          "Ward 11": [
-            "Mombourquette, Damon",
-            "Post, Aaron",
-            "Tadeson, Mark"
-          ],
-          "Ward 12": [
-            "Bennink, Fred",
-            "Cassar, Craig"
-          ],
+          "Ward 11": ["Mombourquette, Damon", "Post, Aaron", "Tadeson, Mark"],
+          "Ward 12": ["Bennink, Fred", "Cassar, Craig"],
           "Ward 13": [
             "Aikema, Gary",
             "Kunc, Rick",
             "Lieberman, Loren",
             "Naylor, Spencer"
           ],
-          "Ward 14": [
-            "Damptey, Kojo",
-            "Spadafora, Mike"
-          ],
+          "Ward 14": ["Damptey, Kojo", "Spadafora, Mike"],
           "Ward 15": [
             "Alford, Chase",
             "Kovacs, Mary",

@@ -8,11 +8,11 @@ census_id,csdname,race,office,district_scope,district,n_candidates,retrieved
 3521005,Mississauga,ward,Councillor,Ward,Ward 7,17,2026-10-13
 3538030,Sarnia,regional councillor,"Councillor, City-County",At-large,At-large,17,2026-08-24
 3536020,Chatham-Kent,ward,Councillor,Ward,Ward 5 - Wallaceburg & Area,14,2026-08-24
-3536020,Chatham-Kent,ward,Councillor,Ward,Ward 8 - South Chatham,14,2026-08-24
 3521005,Mississauga,mayor,Mayor,At-large,At-large,14,2026-10-13
 3521005,Mississauga,ward,Councillor,Ward,Ward 2,14,2026-10-13
 3506008,Ottawa,mayor,Mayor,At-large,At-large,14,2026-08-24
 3558004,Thunder Bay,atlarge,"Councillor, At-Large",At-large,At-large,14,2026-08-27
+3536020,Chatham-Kent,ward,Councillor,Ward,Ward 8 - South Chatham,13,2026-08-24
 3525005,Hamilton,mayor,Mayor,At-large,At-large,13,2026-10-13
 3520005,Toronto,ward,Councillor,Ward,Ward 19 - Beaches-East York,13,2026-08-24
 3521010,Brampton,mayor,Mayor,At-large,At-large,12,2026-10-13
@@ -107,7 +107,6 @@ census_id,csdname,race,office,district_scope,district,n_candidates,retrieved
 3506008,Ottawa,ward,Councillor,Ward,Ward 12 Rideau-Vanier,6,2026-08-24
 3515014,Peterborough,ward,Councillor,Ward,Ward 2 - Monaghan,6,2026-10-13
 3526053,St. Catharines,ward,"Councillor, City",Ward,Ward 3 - St. George's,6,2026-08-24
-3526053,St. Catharines,ward,"Councillor, City",Ward,Ward 4 - St. Patrick's,6,2026-08-24
 3520005,Toronto,ward,Councillor,Ward,Ward 8 - Eglinton-Lawrence,6,2026-08-24
 3520005,Toronto,ward,Councillor,Ward,Ward 12 - Toronto-St. Paul's,6,2026-08-24
 3520005,Toronto,ward,Councillor,Ward,Ward 18 - Willowdale,6,2026-08-24
@@ -163,6 +162,7 @@ census_id,csdname,race,office,district_scope,district,n_candidates,retrieved
 3519038,Richmond Hill,ward,"Councillor, Ward",Ward,Ward 4,5,2026-08-24
 3538030,Sarnia,mayor,Mayor,At-large,At-large,5,2026-08-24
 3526053,St. Catharines,mayor,Mayor,At-large,At-large,5,2026-08-24
+3526053,St. Catharines,ward,"Councillor, City",Ward,Ward 4 - St. Patrick's,5,2026-08-24
 3526053,St. Catharines,ward,"Councillor, City",Ward,Ward 5 - Grantham,5,2026-08-24
 3558004,Thunder Bay,ward,"Councillor, Ward",Ward,McKellar,5,2026-08-27
 3558004,Thunder Bay,ward,"Councillor, Ward",Ward,Red River,5,2026-08-27
