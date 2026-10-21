@@ -70,6 +70,7 @@ import sys
 
 try:
     from nameparser import HumanName
+    from nameparser.config import Constants
 except ImportError:
     sys.exit(
         "missing dependency: nameparser. Install this script's requirements with\n"
@@ -206,6 +207,14 @@ def surname_like(tok):
     )
 
 
+# nameparser's word list of titles is switched off. These are names as the candidate filed
+# them, which carry no honorifics, and the list holds words that are also given names: it
+# read Ottawa's 'Queen Divine Priya Amber Bakshi' as the title 'Queen' and dropped it, so
+# the survey served 'BAKSHI, Divine Priya Amber'. A title written with a period ('Dr.') is
+# still recognised by nameparser's regex.
+NAME_CONSTANTS = Constants(titles=(), first_name_titles=())
+
+
 def split_first_last(raw):
     """'First Last', where the surname may be more than one token.
 
@@ -216,7 +225,7 @@ def split_first_last(raw):
     'Christeen Elizabeth Thornton' are the same shape. The corpus decides that, one token
     at a time from the right, stopping at the first token that reads as a given name.
     """
-    parsed = HumanName(raw)
+    parsed = HumanName(raw, constants=NAME_CONSTANTS)
     last, first, suffix = parsed.last, parsed.first, parsed.suffix
     if not last:
         return raw, ""
